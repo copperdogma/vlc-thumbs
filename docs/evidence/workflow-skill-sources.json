@@ -1,0 +1,478 @@
+{
+  "project": "vlc-thumbs",
+  "date": "2026-10-03",
+  "selection": "All Board Game Ingester skills; Ultima-only eval/golden skills; Ultima generic init-project replaces BGI domain intake. Shared files preserved byte-for-byte; VLC-local AGENTS/runbooks govern domain examples.",
+  "skills": [
+    {
+      "name": "align",
+      "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/align",
+      "files": [
+        {
+          "path": ".agents/skills/align/SKILL.md",
+          "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/align/SKILL.md",
+          "sha256": "1f1daf68fba883c481dcf56f8adc71624b27ab945b3a497a755698c124c8cb8a"
+        }
+      ]
+    },
+    {
+      "name": "build-story",
+      "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/build-story",
+      "files": [
+        {
+          "path": ".agents/skills/build-story/SKILL.md",
+          "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/build-story/SKILL.md",
+          "sha256": "5733c6501906dee93bf18d166476454541074d546b60d22dc58dc2dabb94c410"
+        }
+      ]
+    },
+    {
+      "name": "codebase-improvement-scout",
+      "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/codebase-improvement-scout",
+      "files": [
+        {
+          "path": ".agents/skills/codebase-improvement-scout/SKILL.md",
+          "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/codebase-improvement-scout/SKILL.md",
+          "sha256": "21d9212df8d2d0fe81e59f466d62b391c3f1cb78d95aadaa30a8cc073fb90932"
+        },
+        {
+          "path": ".agents/skills/codebase-improvement-scout/scripts/start-scan.sh",
+          "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/codebase-improvement-scout/scripts/start-scan.sh",
+          "sha256": "d59a23b8cf2713ffe0fc54586295ea0c193afb2cad523bb4b522f1f6915c16ad"
+        },
+        {
+          "path": ".agents/skills/codebase-improvement-scout/templates/report.md",
+          "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/codebase-improvement-scout/templates/report.md",
+          "sha256": "5e9bf2b895ef6127331cc55c3fa0e4415ee2b93dba069fd3edf23c478ed44357"
+        },
+        {
+          "path": ".agents/skills/codebase-improvement-scout/templates/state.yaml",
+          "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/codebase-improvement-scout/templates/state.yaml",
+          "sha256": "19b9bbd0b432548e75eede95c45cda1c6cb9ca8a61603fa8f117787496523464"
+        }
+      ]
+    },
+    {
+      "name": "create-adr",
+      "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/create-adr",
+      "files": [
+        {
+          "path": ".agents/skills/create-adr/SKILL.md",
+          "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/create-adr/SKILL.md",
+          "sha256": "c7e91f84bb5743e6d17355c61ee60e0893f0a3a3e8122b5d0217c455d2ae7d28"
+        },
+        {
+          "path": ".agents/skills/create-adr/scripts/start-adr.sh",
+          "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/create-adr/scripts/start-adr.sh",
+          "sha256": "bd0dbb327e8842e780281608614f4ebcbcc7c6666753516fbb3bf55aa15a700a"
+        },
+        {
+          "path": ".agents/skills/create-adr/templates/adr.md",
+          "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/create-adr/templates/adr.md",
+          "sha256": "42ce046b28f390932eca6606b6177f8740b9977f22f552ff9eafaf87685faa19"
+        },
+        {
+          "path": ".agents/skills/create-adr/templates/final-synthesis.md",
+          "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/create-adr/templates/final-synthesis.md",
+          "sha256": "8c74c65a6a6ccd7fd336544ad49db682e260809d11f890908ffff328daebf42c"
+        },
+        {
+          "path": ".agents/skills/create-adr/templates/research-prompt.md",
+          "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/create-adr/templates/research-prompt.md",
+          "sha256": "43a20e81813f13f037ea15e9854fe8dbc0bd576623719ef7490c376816ecb7ec"
+        }
+      ]
+    },
+    {
+      "name": "create-cross-cli-skill",
+      "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/create-cross-cli-skill",
+      "files": [
+        {
+          "path": ".agents/skills/create-cross-cli-skill/SKILL.md",
+          "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/create-cross-cli-skill/SKILL.md",
+          "sha256": "ab6a8abec8c735dbf30a8b703c54e8bbf39e9d4f79ae3c63c5e95dac8a6f56c8"
+        }
+      ]
+    },
+    {
+      "name": "create-eval",
+      "source": "/Users/cam/Documents/Projects/ultima-iv-web/.agents/skills/create-eval",
+      "files": [
+        {
+          "path": ".agents/skills/create-eval/SKILL.md",
+          "source": "/Users/cam/Documents/Projects/ultima-iv-web/.agents/skills/create-eval/SKILL.md",
+          "sha256": "aa0303cc5b27bfffdaff551636154445a26fb903a08bd2cde2fcef4d607c3ddc"
+        }
+      ]
+    },
+    {
+      "name": "create-story",
+      "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/create-story",
+      "files": [
+        {
+          "path": ".agents/skills/create-story/SKILL.md",
+          "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/create-story/SKILL.md",
+          "sha256": "d824431729b3f10deb2ee2af547e90c69f4a23202e99340adc44f85fb1c416c2"
+        },
+        {
+          "path": ".agents/skills/create-story/scripts/start-story.sh",
+          "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/create-story/scripts/start-story.sh",
+          "sha256": "1099d2c5fdc4f54fd4c6aa6d59da6a50c1d67fbf58c80583772136ef2902bb7a"
+        },
+        {
+          "path": ".agents/skills/create-story/templates/story.md",
+          "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/create-story/templates/story.md",
+          "sha256": "c42e278147ad2c8e3e63002bf94775a27ae37ca6ac5a971a08737c0f4d179e6d"
+        }
+      ]
+    },
+    {
+      "name": "discover-models",
+      "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/discover-models",
+      "files": [
+        {
+          "path": ".agents/skills/discover-models/SKILL.md",
+          "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/discover-models/SKILL.md",
+          "sha256": "1dc639ac65a307ff5d9a53a3f5aaf9702d1a0f665e5542604806f554a45610e2"
+        }
+      ]
+    },
+    {
+      "name": "finish-and-push",
+      "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/finish-and-push",
+      "files": [
+        {
+          "path": ".agents/skills/finish-and-push/SKILL.md",
+          "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/finish-and-push/SKILL.md",
+          "sha256": "2805622da7e195cacef321898fd7379abee9110462d0149fdcefbe9b56e9de1b"
+        }
+      ]
+    },
+    {
+      "name": "fix-difficult-issue",
+      "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/fix-difficult-issue",
+      "files": [
+        {
+          "path": ".agents/skills/fix-difficult-issue/SKILL.md",
+          "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/fix-difficult-issue/SKILL.md",
+          "sha256": "23264d6e22e16f5af256995f5b7eb812a78714a75688d298daff6d8d94f291dc"
+        }
+      ]
+    },
+    {
+      "name": "format-gap-analysis",
+      "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/format-gap-analysis",
+      "files": [
+        {
+          "path": ".agents/skills/format-gap-analysis/SKILL.md",
+          "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/format-gap-analysis/SKILL.md",
+          "sha256": "b9c5b46f9530eb82a40ac28a116a717be2863ac3107f991c772dd13cbd0e616b"
+        }
+      ]
+    },
+    {
+      "name": "golden-create",
+      "source": "/Users/cam/Documents/Projects/ultima-iv-web/.agents/skills/golden-create",
+      "files": [
+        {
+          "path": ".agents/skills/golden-create/SKILL.md",
+          "source": "/Users/cam/Documents/Projects/ultima-iv-web/.agents/skills/golden-create/SKILL.md",
+          "sha256": "36de1b52fad5659a672ec127e1e03b8bfce9823d9db25bc1775cd32bf20beb17"
+        }
+      ]
+    },
+    {
+      "name": "golden-verify",
+      "source": "/Users/cam/Documents/Projects/ultima-iv-web/.agents/skills/golden-verify",
+      "files": [
+        {
+          "path": ".agents/skills/golden-verify/SKILL.md",
+          "source": "/Users/cam/Documents/Projects/ultima-iv-web/.agents/skills/golden-verify/SKILL.md",
+          "sha256": "868e9c95377c63d3fe09c8bda3c902d9ab3b9ace21221f60d3c50ac1a7ed15ae"
+        }
+      ]
+    },
+    {
+      "name": "golden-verify-reset",
+      "source": "/Users/cam/Documents/Projects/ultima-iv-web/.agents/skills/golden-verify-reset",
+      "files": [
+        {
+          "path": ".agents/skills/golden-verify-reset/SKILL.md",
+          "source": "/Users/cam/Documents/Projects/ultima-iv-web/.agents/skills/golden-verify-reset/SKILL.md",
+          "sha256": "9c9811202fddfc75b33a280dfd97ba6a9bcb37b93863712ce4ced1d8cc3da270"
+        }
+      ]
+    },
+    {
+      "name": "ideation",
+      "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/ideation",
+      "files": [
+        {
+          "path": ".agents/skills/ideation/SKILL.md",
+          "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/ideation/SKILL.md",
+          "sha256": "469c363447a0e18947b774e8d937c1a922c5991c69621d07b5a8b3d632a26015"
+        },
+        {
+          "path": ".agents/skills/ideation/references/open-collider-pattern.md",
+          "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/ideation/references/open-collider-pattern.md",
+          "sha256": "cf838c3b783d4b5fcb053e0877dd9e47b7d4a86c9aaf7c12311b613de23753e9"
+        },
+        {
+          "path": ".agents/skills/ideation/templates/ideation-report.md",
+          "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/ideation/templates/ideation-report.md",
+          "sha256": "1044fc01a460dbfff985a198efebfa3f241cbf14e049f3c74e9bd1ded19e052d"
+        }
+      ]
+    },
+    {
+      "name": "improve-eval",
+      "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/improve-eval",
+      "files": [
+        {
+          "path": ".agents/skills/improve-eval/SKILL.md",
+          "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/improve-eval/SKILL.md",
+          "sha256": "f1aef36974b936962fdb379bee956c305c93ce6142139b1175f7cc3d9787ac86"
+        }
+      ]
+    },
+    {
+      "name": "init-project",
+      "source": "/Users/cam/Documents/Projects/ultima-iv-web/.agents/skills/init-project",
+      "files": [
+        {
+          "path": ".agents/skills/init-project/SKILL.md",
+          "source": "/Users/cam/Documents/Projects/ultima-iv-web/.agents/skills/init-project/SKILL.md",
+          "sha256": "15eadb8150920ea58b66a80949778bafb89559bc4c59446e499d7e1c573d6ce9"
+        }
+      ]
+    },
+    {
+      "name": "learning-candidate",
+      "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/learning-candidate",
+      "files": [
+        {
+          "path": ".agents/skills/learning-candidate/SKILL.md",
+          "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/learning-candidate/SKILL.md",
+          "sha256": "7571747bbf21976d3cb04c58c8c0da80af5769589adc0cbc692f52fc2d96a411"
+        }
+      ]
+    },
+    {
+      "name": "learning-review",
+      "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/learning-review",
+      "files": [
+        {
+          "path": ".agents/skills/learning-review/SKILL.md",
+          "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/learning-review/SKILL.md",
+          "sha256": "5bdc3f1f2306ea6be88107147d1420a15e28221b587765df00ee0497d9f0caa5"
+        }
+      ]
+    },
+    {
+      "name": "loop-review",
+      "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/loop-review",
+      "files": [
+        {
+          "path": ".agents/skills/loop-review/SKILL.md",
+          "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/loop-review/SKILL.md",
+          "sha256": "311751103c5f2c0124a7bd5c807796fe3ce6e09b77bfe1d8039e2401a8a0d104"
+        },
+        {
+          "path": ".agents/skills/loop-review/agents/openai.yaml",
+          "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/loop-review/agents/openai.yaml",
+          "sha256": "149d0338f88b35e66440377bc3349b59572691e3f24880f4718d8dd539bd101a"
+        }
+      ]
+    },
+    {
+      "name": "loop-verify",
+      "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/loop-verify",
+      "files": [
+        {
+          "path": ".agents/skills/loop-verify/SKILL.md",
+          "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/loop-verify/SKILL.md",
+          "sha256": "774bda95f734307efc2946fc8ef649e2e9ec92516412e22039a9a21aba583bf7"
+        }
+      ]
+    },
+    {
+      "name": "mark-story-done",
+      "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/mark-story-done",
+      "files": [
+        {
+          "path": ".agents/skills/mark-story-done/SKILL.md",
+          "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/mark-story-done/SKILL.md",
+          "sha256": "c4fcdf0716af66ff372282965cc2fca3f0926e541f7c1d22aeb6eabd99f2db61"
+        }
+      ]
+    },
+    {
+      "name": "scout",
+      "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/scout",
+      "files": [
+        {
+          "path": ".agents/skills/scout/SKILL.md",
+          "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/scout/SKILL.md",
+          "sha256": "752a8d3648a4cf5041b8b595ae8f61569f4e2eb52b87d0c777dc6963e07b8665"
+        },
+        {
+          "path": ".agents/skills/scout/scripts/start-scouting.sh",
+          "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/scout/scripts/start-scouting.sh",
+          "sha256": "abd1ee50092173049682233169c66a4d676a2bc7ad59030a6d7ceac44b21ed06"
+        },
+        {
+          "path": ".agents/skills/scout/templates/scout-expedition.md",
+          "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/scout/templates/scout-expedition.md",
+          "sha256": "08c80fb7a68c78ef1cb9a3765e78512ae85e676ff2643e8caf509be98a775ce2"
+        },
+        {
+          "path": ".agents/skills/scout/templates/scout-index.md",
+          "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/scout/templates/scout-index.md",
+          "sha256": "e04282f33e47045f0302134d228af4dbac17ddca6fc5cd96869065b11cb02c84"
+        }
+      ]
+    },
+    {
+      "name": "setup-methodology",
+      "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/setup-methodology",
+      "files": [
+        {
+          "path": ".agents/skills/setup-methodology/SKILL.md",
+          "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/setup-methodology/SKILL.md",
+          "sha256": "f5f1b5c467b8395b74b69ebe7e66b32b147366a8ee82eeda5c0e2f3c057a4bd0"
+        },
+        {
+          "path": ".agents/skills/setup-methodology/references/modes.md",
+          "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/setup-methodology/references/modes.md",
+          "sha256": "f0c4a0368a0f0318545ab3ba68e84a73c5a4847eaacea5d06e00810571ab5995"
+        },
+        {
+          "path": ".agents/skills/setup-methodology/templates/setup-checklist.md",
+          "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/setup-methodology/templates/setup-checklist.md",
+          "sha256": "21a252774cfb45a4061c154fa070cc22da9c1c1c185dc7eaf7427a603ec5fd38"
+        }
+      ]
+    },
+    {
+      "name": "triage",
+      "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/triage",
+      "files": [
+        {
+          "path": ".agents/skills/triage/SKILL.md",
+          "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/triage/SKILL.md",
+          "sha256": "f99f5ddb3005703bc12686faf2b8953acdb6de99b9c024e1cbe3f7bf54031ee0"
+        }
+      ]
+    },
+    {
+      "name": "triage-adr",
+      "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/triage-adr",
+      "files": [
+        {
+          "path": ".agents/skills/triage-adr/SKILL.md",
+          "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/triage-adr/SKILL.md",
+          "sha256": "03843cb5db6e0a0226cdae6ffaa95e2f64fd4684ec9d5315fa0907961d633b8e"
+        }
+      ]
+    },
+    {
+      "name": "triage-architecture",
+      "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/triage-architecture",
+      "files": [
+        {
+          "path": ".agents/skills/triage-architecture/SKILL.md",
+          "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/triage-architecture/SKILL.md",
+          "sha256": "9f694df4cb18af9b3793828d58ca21985fda5e66ea84c9873b382f09b1d2994e"
+        }
+      ]
+    },
+    {
+      "name": "triage-evals",
+      "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/triage-evals",
+      "files": [
+        {
+          "path": ".agents/skills/triage-evals/SKILL.md",
+          "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/triage-evals/SKILL.md",
+          "sha256": "758e889020ccdeac8836ec5ea167a91699f67e4b06306753767fa4c8adc8538b"
+        }
+      ]
+    },
+    {
+      "name": "triage-health",
+      "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/triage-health",
+      "files": [
+        {
+          "path": ".agents/skills/triage-health/SKILL.md",
+          "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/triage-health/SKILL.md",
+          "sha256": "ed41e25a01b95601c001de48c764590a666f10e7aa9acfd13a973f4198698250"
+        }
+      ]
+    },
+    {
+      "name": "triage-inbox",
+      "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/triage-inbox",
+      "files": [
+        {
+          "path": ".agents/skills/triage-inbox/SKILL.md",
+          "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/triage-inbox/SKILL.md",
+          "sha256": "e15ba9fa90e8ab34545590cffc72bcbb6c8533f7b1b30dbd69cd332797bd7ac4"
+        }
+      ]
+    },
+    {
+      "name": "triage-stories",
+      "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/triage-stories",
+      "files": [
+        {
+          "path": ".agents/skills/triage-stories/SKILL.md",
+          "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/triage-stories/SKILL.md",
+          "sha256": "27cdc7d918f06154ee6628887e14d663ae860aed39f4654265285e55ada9ad49"
+        }
+      ]
+    },
+    {
+      "name": "validate",
+      "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/validate",
+      "files": [
+        {
+          "path": ".agents/skills/validate/SKILL.md",
+          "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/validate/SKILL.md",
+          "sha256": "cb1642bbf5da0ecef138b7c59db6e3a2d997090eb0efc8aba98d45dc288207f9"
+        }
+      ]
+    },
+    {
+      "name": "visual-inspect-loop",
+      "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/visual-inspect-loop",
+      "files": [
+        {
+          "path": ".agents/skills/visual-inspect-loop/SKILL.md",
+          "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/visual-inspect-loop/SKILL.md",
+          "sha256": "2ab8115cff0ce86cb6e9b3f37d28a0dac06b416ed43f523426814fad44ffa433"
+        }
+      ]
+    }
+  ],
+  "tooling": [
+    {
+      "path": "scripts/methodology-graph.mjs",
+      "source": "/Users/cam/Documents/Projects/ultima-iv-web/scripts/methodology-graph.mjs",
+      "source_sha256": "3e8ac0eca9173c404b5dc35b99af8686d8579cc4be9d7faf1750eb2f083aaced",
+      "sha256": "6f84e356de00fe4977e1dd6319c1cad9ffadb0e5f524b8bc674780826a8f239f",
+      "adaptation": "VLC project identity; fact status scoped to this project."
+    },
+    {
+      "path": "scripts/triage-facts.mjs",
+      "source": "/Users/cam/Documents/Projects/ultima-iv-web/scripts/triage-facts.mjs",
+      "source_sha256": "98b2f6738863590304748d29f49438a4eba1829c8fd3a0dd4bdd961257f2ed6a",
+      "sha256": "8cffef6dcd35bd785ba80cc66fdcf732b71ce4b83cb1a4b1f40eb0586c42189b",
+      "adaptation": "VLC project identity; fact status scoped to this project."
+    },
+    {
+      "path": "scripts/sync-agent-skills.sh",
+      "source": "/Users/cam/Documents/Projects/ultima-iv-web/scripts/sync-agent-skills.sh",
+      "source_sha256": "85332805086a3ab064bd23f6aa59e9f567e4c686c2b0d1508acaf3f66d88bf39",
+      "sha256": "85332805086a3ab064bd23f6aa59e9f567e4c686c2b0d1508acaf3f66d88bf39",
+      "adaptation": "VLC project identity; fact status scoped to this project."
+    }
+  ]
+}

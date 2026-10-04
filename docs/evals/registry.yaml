@@ -1,0 +1,13 @@
+- id: root-timeline-experience
+  name: Integrated VLC previews and persistent annotations
+  type: quality
+  status: deferred
+  ladder: root-ideal
+  command: not implemented
+  contract: docs/evals/root-timeline-experience.md
+  ideal_refs: [ideal:req:previews, ideal:req:annotations, ideal:req:persistence, ideal:req:navigation, ideal:req:media-integrity, ideal:req:playback-quality, ideal:req:evidence]
+  spec_refs: [spec:1, spec:2, spec:3, spec:4]
+  story_refs: ["001"]
+  defer_reason: No VLC candidate build, legal media fixture or UI runner exists.
+  trigger: A pinned candidate supports both interactions on the actual timeline.
+  measured_failure: none recorded

@@ -1,0 +1,76 @@
+version: 1
+project: vlc-thumbs
+seeded_at: 2026-10-03
+seeded_from:
+  concept: docs/idea-intake.md
+  current_plan: docs/plan.md
+  methodology_source: Board Game Ingester and Ultima IV Web
+active_focus:
+  story_id: "001"
+  summary: Establish macOS VLC timeline integration and reproducible build feasibility.
+  reason: Both requested interactions need actual timeline access; excerpt claims are unverified.
+  current_command: Read Story 001 and establish its research/build plan.
+  status: draft
+planning_inputs:
+  - path: docs/idea-intake.md
+    status: preserved-intake
+    role: User overview and explicit skill/setup authorization.
+  - path: docs/plan.md
+    status: active
+    role: Provisional path to the integrated floor.
+categories:
+  - id: spec:1
+    title: VLC integration and delivery
+    substrate_status: missing
+    phase: climb
+    story_refs: ["001"]
+    eval_refs: [root-timeline-experience]
+    note: No pinned source or verified native timeline/build path.
+  - id: spec:2
+    title: Thumbnail correspondence and responsiveness
+    substrate_status: missing
+    phase: climb
+    story_refs: ["001"]
+    eval_refs: [root-timeline-experience]
+    note: Decoder/cache approach and measurable thresholds unselected.
+  - id: spec:3
+    title: Annotation persistence and media identity
+    substrate_status: missing
+    phase: climb
+    story_refs: ["001"]
+    eval_refs: [root-timeline-experience]
+    note: No schema or media identity chosen; same-file persistence is initial scope.
+  - id: spec:4
+    title: Interaction quality and behavioral proof
+    substrate_status: missing
+    phase: climb
+    story_refs: ["001"]
+    eval_refs: [root-timeline-experience]
+    note: Root contract exists; no runner or fixture/build evidence.
+  - id: spec:5
+    title: Project workflow and source obligations
+    substrate_status: partial
+    phase: climb
+    story_refs: []
+    eval_refs: []
+    note: Local workflow installed; source licensing/build provenance remain to verify.
+runtime:
+  status: deferred
+  reason: No VLC build or helper runtime exists; no Conductor port range allocated.
+  trigger: Pinned native build exists; allocate ports only if a web/API helper is introduced.
+eval_harness:
+  status: deferred
+  reason: Root contract exists but no legal media fixture or candidate UI runner.
+  trigger: Candidate implements both requested interactions on a pinned build.
+ui_scout:
+  status: deferred
+  reason: No project VLC UI candidate exists.
+  trigger: Runnable native timeline slice exists.
+architecture_audits:
+  status: deferred
+  reason: No product architecture exists.
+  trigger: Real integration/storage/decoder boundaries present a material question.
+codebase_improvement:
+  status: deferred
+  reason: Only setup/tooling exists.
+  trigger: Meaningful VLC implementation exists.

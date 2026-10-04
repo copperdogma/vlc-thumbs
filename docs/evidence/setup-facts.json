@@ -1,0 +1,144 @@
+{
+  "project": "vlc-thumbs",
+  "methodology": {
+    "graph_exists": true,
+    "current": true,
+    "error": null
+  },
+  "planning_inputs": [
+    {
+      "path": "docs/idea-intake.md",
+      "status": "preserved-intake",
+      "role": "User overview and explicit skill/setup authorization.",
+      "exists": true
+    },
+    {
+      "path": "docs/plan.md",
+      "status": "active",
+      "role": "Provisional path to the integrated floor.",
+      "exists": true
+    }
+  ],
+  "next_step": {
+    "story_id": "001",
+    "summary": "Establish macOS VLC timeline integration and reproducible build feasibility.",
+    "source": "docs/methodology/state.yaml active_focus",
+    "executed": false
+  },
+  "git": {
+    "branch": "unknown",
+    "head": "unknown",
+    "dirty": true
+  },
+  "stories": {
+    "total": 1,
+    "by_status": {
+      "Draft": 1
+    },
+    "open_count": 1,
+    "open_ids": [
+      "001"
+    ]
+  },
+  "evals": {
+    "total": 1,
+    "by_status": {
+      "deferred": 1
+    },
+    "implemented_count": 0,
+    "run_by_facts": false,
+    "results_claim": "Registry declarations only; this facts command does not execute evals or establish fidelity.",
+    "planned_count": 0,
+    "planned_ids": []
+  },
+  "state": {
+    "active_focus": {
+      "story_id": "001",
+      "summary": "Establish macOS VLC timeline integration and reproducible build feasibility.",
+      "reason": "Both requested interactions need actual timeline access; excerpt claims are unverified.",
+      "current_command": "Read Story 001 and establish its research/build plan.",
+      "status": "draft"
+    },
+    "category_count": 5,
+    "substrate_statuses": {
+      "missing": 4,
+      "partial": 1
+    },
+    "climb_pressure_count": 5,
+    "climb_pressure_ids": [
+      "spec:1",
+      "spec:2",
+      "spec:3",
+      "spec:4",
+      "spec:5"
+    ]
+  },
+  "inbox": {
+    "path": "docs/inbox.md",
+    "untriaged_count": 3,
+    "sample": [
+      "Colors and tags: optional intake suggestion; deferred until the integrated floor works.",
+      "Move/rename identity and annotation export: decide after same-file persistence proof.",
+      "Packaging/upstream contribution: research obligations after a source route is selected."
+    ]
+  },
+  "health": {
+    "runtime": {
+      "status": "deferred",
+      "reason": "No VLC build or helper runtime exists; no Conductor port range allocated.",
+      "trigger": "Pinned native build exists; allocate ports only if a web/API helper is introduced."
+    },
+    "eval_harness": {
+      "status": "deferred",
+      "reason": "Root contract exists but no legal media fixture or candidate UI runner.",
+      "trigger": "Candidate implements both requested interactions on a pinned build."
+    },
+    "ui_scout": {
+      "status": "deferred",
+      "reason": "No project VLC UI candidate exists.",
+      "trigger": "Runnable native timeline slice exists."
+    },
+    "architecture_audits": {
+      "status": "deferred",
+      "reason": "No product architecture exists.",
+      "trigger": "Real integration/storage/decoder boundaries present a material question."
+    },
+    "codebase_improvement": {
+      "status": "deferred",
+      "reason": "Only setup/tooling exists.",
+      "trigger": "Meaningful VLC implementation exists.",
+      "latest_report": null
+    }
+  },
+  "lanes": {
+    "expected": [
+      "triage",
+      "triage-stories",
+      "triage-inbox",
+      "triage-evals",
+      "triage-architecture",
+      "triage-health",
+      "loop-verify",
+      "codebase-improvement-scout"
+    ],
+    "present": [
+      "triage",
+      "triage-stories",
+      "triage-inbox",
+      "triage-evals",
+      "triage-architecture",
+      "triage-health",
+      "loop-verify",
+      "codebase-improvement-scout"
+    ],
+    "absent": []
+  },
+  "wrappers": {
+    "status": "ok",
+    "drift_count": 0
+  },
+  "churn": {
+    "changed_file_count": 0,
+    "top_dirs": []
+  }
+}

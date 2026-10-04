@@ -1,0 +1,243 @@
+{
+  "project": "vlc-thumbs",
+  "ideal_requirements": [
+    {
+      "id": "ideal:req:previews",
+      "text": "See the corresponding moment immediately while exploring the timeline, without interrupting current viewing."
+    },
+    {
+      "id": "ideal:req:annotations",
+      "text": "Attach brief personal labels to any moment and discover those notes in context whenever the timeline appears."
+    },
+    {
+      "id": "ideal:req:persistence",
+      "text": "Remembered moments are already present whenever the same video is revisited, without separate saving or organization."
+    },
+    {
+      "id": "ideal:req:navigation",
+      "text": "Return effortlessly to a remembered moment, and correct or remove its note when desired."
+    },
+    {
+      "id": "ideal:req:media-integrity",
+      "text": "Original videos stay intact, and videos and personal notes remain private by default."
+    },
+    {
+      "id": "ideal:req:playback-quality",
+      "text": "Exploring and remembering moments preserves comfortable, accessible playback and control."
+    },
+    {
+      "id": "ideal:req:evidence",
+      "text": "The experience is dependable, and what the product can actually do is clear and trustworthy."
+    }
+  ],
+  "spec_categories": [
+    {
+      "id": "spec:1",
+      "title": "VLC integration and delivery",
+      "ideal_refs": [
+        "ideal:req:annotations",
+        "ideal:req:playback-quality",
+        "ideal:req:previews"
+      ]
+    },
+    {
+      "id": "spec:2",
+      "title": "Thumbnail correspondence and responsiveness",
+      "ideal_refs": [
+        "ideal:req:playback-quality",
+        "ideal:req:previews"
+      ]
+    },
+    {
+      "id": "spec:3",
+      "title": "Annotation persistence and media identity",
+      "ideal_refs": [
+        "ideal:req:annotations",
+        "ideal:req:media-integrity",
+        "ideal:req:navigation",
+        "ideal:req:persistence"
+      ]
+    },
+    {
+      "id": "spec:4",
+      "title": "Interaction quality and behavioral proof",
+      "ideal_refs": [
+        "ideal:req:evidence",
+        "ideal:req:navigation",
+        "ideal:req:playback-quality"
+      ]
+    },
+    {
+      "id": "spec:5",
+      "title": "Project workflow and source obligations",
+      "ideal_refs": [
+        "ideal:req:evidence",
+        "ideal:req:media-integrity"
+      ]
+    }
+  ],
+  "stories": [
+    {
+      "id": "001",
+      "title": "Story 001 — VLC macOS timeline feasibility",
+      "status": "Draft",
+      "priority": "High",
+      "path": "docs/stories/story-001-vlc-macos-feasibility.md",
+      "ideal_refs": [
+        "ideal:req:previews",
+        "ideal:req:annotations",
+        "ideal:req:persistence",
+        "ideal:req:playback-quality",
+        "ideal:req:evidence"
+      ],
+      "spec_refs": [
+        "spec:1",
+        "spec:2",
+        "spec:3",
+        "spec:4"
+      ],
+      "depends_on": [],
+      "decision_refs": [],
+      "eval_refs": [
+        "root-timeline-experience"
+      ]
+    }
+  ],
+  "evals": [
+    {
+      "id": "root-timeline-experience",
+      "name": "Integrated VLC previews and persistent annotations",
+      "type": "quality",
+      "status": "deferred",
+      "spec_refs": [
+        "spec:1",
+        "spec:2",
+        "spec:3",
+        "spec:4"
+      ],
+      "ideal_refs": [
+        "ideal:req:annotations",
+        "ideal:req:evidence",
+        "ideal:req:media-integrity",
+        "ideal:req:navigation",
+        "ideal:req:persistence",
+        "ideal:req:playback-quality",
+        "ideal:req:previews"
+      ],
+      "command": "not implemented",
+      "parent_id": ""
+    }
+  ],
+  "state": {
+    "exists": true,
+    "active_focus": {
+      "story_id": "001",
+      "summary": "Establish macOS VLC timeline integration and reproducible build feasibility.",
+      "reason": "Both requested interactions need actual timeline access; excerpt claims are unverified.",
+      "current_command": "Read Story 001 and establish its research/build plan.",
+      "status": "draft"
+    },
+    "categories": [
+      {
+        "id": "spec:1",
+        "title": "VLC integration and delivery",
+        "substrate_status": "missing",
+        "phase": "climb",
+        "story_refs": [
+          "001"
+        ],
+        "eval_refs": [
+          "root-timeline-experience"
+        ],
+        "note": "No pinned source or verified native timeline/build path."
+      },
+      {
+        "id": "spec:2",
+        "title": "Thumbnail correspondence and responsiveness",
+        "substrate_status": "missing",
+        "phase": "climb",
+        "story_refs": [
+          "001"
+        ],
+        "eval_refs": [
+          "root-timeline-experience"
+        ],
+        "note": "Decoder/cache approach and measurable thresholds unselected."
+      },
+      {
+        "id": "spec:3",
+        "title": "Annotation persistence and media identity",
+        "substrate_status": "missing",
+        "phase": "climb",
+        "story_refs": [
+          "001"
+        ],
+        "eval_refs": [
+          "root-timeline-experience"
+        ],
+        "note": "No schema or media identity chosen; same-file persistence is initial scope."
+      },
+      {
+        "id": "spec:4",
+        "title": "Interaction quality and behavioral proof",
+        "substrate_status": "missing",
+        "phase": "climb",
+        "story_refs": [
+          "001"
+        ],
+        "eval_refs": [
+          "root-timeline-experience"
+        ],
+        "note": "Root contract exists; no runner or fixture/build evidence."
+      },
+      {
+        "id": "spec:5",
+        "title": "Project workflow and source obligations",
+        "substrate_status": "partial",
+        "phase": "climb",
+        "story_refs": [],
+        "eval_refs": [],
+        "note": "Local workflow installed; source licensing/build provenance remain to verify."
+      }
+    ],
+    "planning_inputs": [
+      {
+        "path": "docs/idea-intake.md",
+        "status": "preserved-intake",
+        "role": "User overview and explicit skill/setup authorization."
+      },
+      {
+        "path": "docs/plan.md",
+        "status": "active",
+        "role": "Provisional path to the integrated floor."
+      }
+    ],
+    "lanes": {
+      "runtime": {
+        "status": "deferred",
+        "reason": "No VLC build or helper runtime exists; no Conductor port range allocated.",
+        "trigger": "Pinned native build exists; allocate ports only if a web/API helper is introduced."
+      },
+      "eval_harness": {
+        "status": "deferred",
+        "reason": "Root contract exists but no legal media fixture or candidate UI runner.",
+        "trigger": "Candidate implements both requested interactions on a pinned build."
+      },
+      "ui_scout": {
+        "status": "deferred",
+        "reason": "No project VLC UI candidate exists.",
+        "trigger": "Runnable native timeline slice exists."
+      },
+      "architecture_audits": {
+        "status": "deferred",
+        "reason": "No product architecture exists.",
+        "trigger": "Real integration/storage/decoder boundaries present a material question."
+      },
+      "codebase_improvement": {
+        "status": "deferred",
+        "reason": "Only setup/tooling exists.",
+        "trigger": "Meaningful VLC implementation exists."
+      }
+    }
+  }
+}

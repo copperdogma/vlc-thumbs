@@ -1,0 +1,17 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
+node_modules/
+.runtime/
+.venv/
+work/
+build/
+dist/
+output/
+cache/
+input/*
+!input/README.md
+tests/fixtures/golden/media/
