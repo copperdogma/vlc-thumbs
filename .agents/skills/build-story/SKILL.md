@@ -29,6 +29,13 @@ code, or hybrid implementation honestly.
 
 ## Phase 1 — Explore (story-file edits allowed, code changes forbidden)
 
+Before choosing a workaround for an unfamiliar material obstacle, apply
+AGENTS' problem-class research rule: diagnose from local evidence, reuse
+applicable research or compare established techniques, then select the smallest
+local applicability check. Record useful sources, assumptions, the decision,
+local result and uncertainty in the existing story work log. Obvious fixes
+need no research ceremony; preserve local reuse and acceptance boundaries.
+
 1. **Resolve story** — Read `docs/stories/story-{NNN}-*.md` (or resolve from `docs/methodology/graph.json`). Verify status is Draft, Pending, In Progress, or Blocked.
    - If status is **Draft**, do not stop yet. Continue through the required-section and substrate checks first.
    - If the Draft story is still skeletal or unverified after those checks, STOP and recommend keeping it `Draft`.
@@ -171,6 +178,12 @@ context. Keep routine small stories single-threaded.
   run the same work sequentially and note the fallback.
 
 ## Phase 3 — Implement
+
+Keep the research trigger active after planning. When a new uncertain
+obstacle appears or an approach keeps failing, revisit the diagnosis and
+established practices before more retries, sleeps or special cases. Record the
+selected technique and smallest local check in the existing work log; this
+check does not expand the approved plan or weaken its acceptance criteria.
 
 12. **Implement** — Work through tasks in order:
     - If the story status is `Draft` and the exploration proved it honestly buildable, first promote it to `Pending` and regenerate the graph/index so the status matches reality

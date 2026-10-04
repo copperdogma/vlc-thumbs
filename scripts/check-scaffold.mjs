@@ -1,7 +1,8 @@
 #!/usr/bin/env node
-import { existsSync, readFileSync, readdirSync, lstatSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { createHash } from 'node:crypto';
-import { join } from 'node:path';
+import { join, resolve } from 'node:path';
+import { execFileSync } from 'node:child_process';
 import { buildGraph } from './methodology-graph.mjs';
 
 const root = process.cwd();
@@ -36,5 +37,5 @@ for (const [name, lane] of Object.entries(graph.state.lanes)) {
   if (lane.status === 'deferred' && (!lane.reason || !lane.trigger)) fail(`Deferred lane needs reason/trigger: ${name}`);
 }
 if (graph.project !== 'vlc-thumbs') fail('Wrong project identity');
-if (!lstatSync(join(root, '.git')).isDirectory()) fail('Independent local Git repository missing');
+if (resolve(execFileSync('git', ['rev-parse', '--show-toplevel'], { cwd: root, encoding: 'utf8' }).trim()) !== resolve(root)) fail('Independent local Git repository or worktree missing');
 console.log(`scaffold-check: OK (${actualSkills.length} sourced skills; contracts and deferred lanes valid)`);

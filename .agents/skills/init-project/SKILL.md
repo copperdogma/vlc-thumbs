@@ -88,6 +88,18 @@ the spec. If it creates tension, pause and ask a targeted question. Keep
 documents cohesive; do not append ideas in the order the user happened to say
 them unless that order is conceptually right.
 
+## Research and reuse at kickoff
+
+When shaping the project, apply AGENTS' problem-class research rule before
+inventing a workaround for an unfamiliar material obstacle. Reuse applicable
+prior research or inspect a few primary sources; stop when a small local check
+can distinguish the options. Ordinary understood fixes need no research pass.
+Include the concise research rule in the first project `AGENTS.md`, even when
+the user selects a lean package or defers full methodology setup. Derive reuse
+boundaries from intake and preserve them; ask only if a material boundary is
+unclear. Record useful sources, decision, local result and uncertainty in the
+existing project notes. This does not authorize a broad methodology import.
+
 ## Flow
 
 ### 1. Orient

@@ -10,6 +10,16 @@ user-invocable: true
 
 Thoroughly analyze what was done and how it compares to the original instructions using git diff and file analysis.
 
+## Research before unexplained validation retries
+
+For an unfamiliar material failure or repeatedly unexplained failure, apply
+AGENTS' problem-class research rule before adding retries, sleeps, special
+cases or weaker assertions. Diagnose locally, reuse applicable research or
+compare established techniques, then verify the smallest permitted correction.
+Record useful sources, decision, local result and uncertainty in the existing
+validation/story notes. Preserve acceptance criteria and proportional evidence
+reuse; understood fixes and unchanged passing evidence need no research pass.
+
 ## Analysis Process
 
 1. **Review Changes**

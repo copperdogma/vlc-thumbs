@@ -73,3 +73,12 @@
 ## Check evidence
 
 See `docs/evidence/setup-validation.md` for exact workflow checks and scope.
+
+## Research rule refresh — 2026-10-04
+
+- [x] Portable research rule and budget-preserving cadence installed in AGENTS.
+- [x] Kickoff and setup preserve the rule through lean/project refresh paths.
+- [x] Build planning/implementation and validation retain bounded research hooks.
+- [x] Coordinator strategy checkpoints and systemic-stop precedence preserved.
+- [x] Loop review compares established alternatives, including proxy gains.
+- [x] Original reuse, fidelity, private-input and owner approval gates preserved.

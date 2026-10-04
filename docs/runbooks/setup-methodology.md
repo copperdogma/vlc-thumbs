@@ -12,8 +12,9 @@ intake, and align Ideal/spec/state/graph, story and root eval. Include absent
 runtime, audit, UI, codebase and golden lanes with reasons/triggers.
 
 Copy exact source skills with support files; record selected paths and hashes.
-Use `docs/runbooks/skills.md` for domain overrides and routing. Shared core
-contracts remain byte-identical. Optional imported skills do not require provider
+Use `docs/runbooks/skills.md` for domain overrides and routing. Unchanged shared core
+contracts remain byte-identical; deliberate local adaptations retain original
+provenance and record their adopted source and current hashes. Optional imported skills do not require provider
 setup or model evaluation. Compatibility links expose canonical skills.
 
 Run `make methodology-compile`, `make skills-sync`, `make validate`, and direct
@@ -25,3 +26,15 @@ No ports are allocated or reserved for this project. Native app work needs no
 web launcher. If a web/API runtime appears, obtain Conductor allocation before
 binding. Dependency/Codex setup hook is deferred until a real build needs it;
 source/lockfiles/user data must not be rewritten by a hydration hook.
+
+## Research rule refresh — 2026-10-04
+
+Preserve the portable research rule in `AGENTS.md`, including lean kickoff.
+Keep planning and mid-implementation research hooks in `/build-story` and the
+unexplained-failure hook in `/validate`. Refresh `/loop-verify` coordinator
+checkpoints and `/loop-review` strategy comparison without adding a schedule,
+expanding budgets, weakening proof or changing owner reuse boundaries.
+The local `/loop-verify` strict reset contract remains authoritative: material
+fixes reset the original scope within existing convergence and budget limits.
+Do not import another verifier phase model implicitly from setup examples.
+See `docs/research-before-reinvention.md` for adopted source and check scope.
