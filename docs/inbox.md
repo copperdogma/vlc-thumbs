@@ -2,4 +2,4 @@
 
 - Colors and tags: optional intake suggestion; deferred until the integrated floor works.
 - Move/rename identity and annotation export: decide after same-file persistence proof.
-- Packaging/upstream contribution: research obligations after a source route is selected.
+- Upstream contribution to VLC (Cam, 2026-10-04): consider giving these useful, generic timeline enhancements back to the community by packaging them for submission to the VLC project, in hopes they are accepted. Cam is willing to invest substantial work and tokens in studying VLC's contribution guidelines and existing code so the submission meets or exceeds upstream standards. We own the preparation burden: review the architecture and code carefully, refine the implementation to fit upstream conventions, provide appropriate tests and behavioral evidence, verify licensing, and prepare focused, reviewable patches and clear documentation. Be a good open source citizen: resolve avoidable defects and cleanup ourselves before submission, rather than handing maintainers a large, low-quality commit that creates work for them. Future planning item; upstream acceptance remains uncertain.
