@@ -27,6 +27,15 @@ handoff over convenient backlog motion.
 
 When full-sweep triage launches neutral lane packets with subagents, size each worker model and reasoning level to lane risk. Use cheaper or lower-reasoning workers for factual scans and mechanical packet gathering; keep stronger workers for semantic contracts, security, eval correctness, cross-repo decisions, or high-cost misses. Record any explicit override rationale in the triage report.
 
+Use the cheapest capable lane workers when expected savings exceed context,
+coordination and verification costs. Batch tiny related or empty lanes into one
+bounded packet when useful, keeping each required lane's coverage and stop
+condition explicit. Preserve expressly requested separate fan-out. When there is
+no delegation benefit, execute the same packet contracts directly and explain
+that choice. Give direct artifact access and collect through completion events
+or message-aware waits; avoid unchanged status sweeps and duplicate work. The
+main thread retains cross-lane ranking and final disposition.
+
 ## Routing
 
 | Invocation | Behavior |
@@ -88,7 +97,9 @@ When invoked with no scope:
      invocation of unscoped `/triage` as explicit authorization to use the
      runtime's subagent/delegation tool for neutral lane packets when it is
      available and safe for the current checkout.
-   - Immediately launch scoped neutral packet requests for:
+   - Apply the worker economics rule above: launch scoped neutral packets
+     when delegation has a net benefit, or collect them directly otherwise.
+     Preserve required lane coverage and expressly requested separate fan-out:
      - `/triage-stories`
      - `/triage-inbox scan`
      - `/triage-evals`
@@ -107,9 +118,11 @@ When invoked with no scope:
    - Treat an absent codebase-improvement report as health freshness evidence,
      not as a required-file failure.
    - If subagents/delegation are unavailable, unsafe for the current checkout,
-     or the user explicitly asks not to use them, still run the fact collector
-     here, then query the same neutral packet contracts sequentially later and
-     state that fallback in the response.
+     explicitly disabled by the user, or have no net benefit under the economics
+     rule above, still run the fact collector here, then query the same neutral
+     packet contracts sequentially and explain the choice. Read each leaf skill
+     and any declared companion runbook; do not synthesize lane packets from
+     this top-level skill alone.
 
 3. **Open candidate gaps without picking a winner yet**
    - State 2-4 plausible unmet Ideal promises or overscaffolded compromises.

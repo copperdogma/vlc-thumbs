@@ -37,7 +37,8 @@ unverified until supported by current primary documentation or pinned source.
 - Include actual macOS UI interaction validation for user-facing stories and
   restart/media-identity proof for persistence changes. Preserve playback and
   accessible controls. Browser verification applies only if a browser UI exists.
-- Keep imported core skills exact where shared. Use local runbooks below for
+- Keep unchanged shared core skills exact; approved local adaptations retain
+  original provenance and current hashes. Use local runbooks below for
   domain terms, commands, fixtures and priorities. Do not execute source-repo
   commands, paid calls or model discovery solely because a skill mentions them.
 - Do not commit, push, publish, create remote repositories, change other projects,
@@ -105,6 +106,21 @@ node scripts/triage-facts.mjs --json
 
 `make validate` checks graph currency, skill wiring/source hashes and local
 workflow references. It is not VLC functionality, performance or licensing proof.
+
+## Agent staffing and event waits
+
+For strategic loop reviews, use the strongest available eligible model at its
+maximum supported thinking level, resolved from current runtime capabilities.
+Follow `/loop-review` for selection evidence and one bounded read-only reviewer
+when the main agent is not already suitably configured. Existing scope, access,
+privacy, budgets, deadlines and clean-stop rules prevail.
+
+Use the cheapest capable workers when delegation saves more than context,
+coordination and verification overhead. Give bounded packets and direct artifact
+access. Do independent work or use message-aware completion waits; avoid unchanged
+status sweeps, duplicate work and watcher agents when native events suffice.
+Child mailboxes and separate user-owned chats have distinct authorization and
+continuation contracts. The main agent retains integration and final judgment.
 
 ## Research and strategy checkpoints
 

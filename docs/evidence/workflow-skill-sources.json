@@ -21,17 +21,26 @@
         {
           "path": ".agents/skills/build-story/SKILL.md",
           "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/build-story/SKILL.md",
-          "sha256": "7c203343635f382f967e435098b3a4d7ddc7eb9077565e5e994ef367b836464d",
+          "sha256": "5b0de45ae2ea3dba3bd56bfb28c4e68aeba57c968ecafe36e9e3b7f333074ea2",
           "original_provenance": {
             "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/build-story/SKILL.md",
             "sha256": "5733c6501906dee93bf18d166476454541074d546b60d22dc58dc2dabb94c410"
           },
           "adopted_update": {
-            "date": "2026-10-04",
-            "source": "/Users/cam/Documents/Projects/conductor/.agents/skills/build-story/SKILL.md",
-            "source_sha256": "144b58c9792ec9dee98bcfcfff6714830867c45a397a45f40aa05a74ad6b796b",
-            "disposition": "scoped local research-rule adaptation"
-          }
+            "date": "2026-10-06",
+            "alignment": "Conductor Alignment 055",
+            "source": "/Users/cam/Documents/Projects/conductor-align-055/.agents/skills/build-story/SKILL.md",
+            "source_sha256": "9da8c6c21b92210273c258d43349635d57e65c41426ccdd7512b5c2b5171a26b",
+            "disposition": "selective local staffing and event-wait adaptation; owner contracts retained"
+          },
+          "adopted_update_history": [
+            {
+              "date": "2026-10-04",
+              "source": "/Users/cam/Documents/Projects/conductor/.agents/skills/build-story/SKILL.md",
+              "source_sha256": "144b58c9792ec9dee98bcfcfff6714830867c45a397a45f40aa05a74ad6b796b",
+              "disposition": "scoped local research-rule adaptation"
+            }
+          ]
         }
       ]
     },
@@ -68,7 +77,19 @@
         {
           "path": ".agents/skills/create-adr/SKILL.md",
           "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/create-adr/SKILL.md",
-          "sha256": "c7e91f84bb5743e6d17355c61ee60e0893f0a3a3e8122b5d0217c455d2ae7d28"
+          "sha256": "da131c28dd0ccc8ddd9ad8279acf38eb8f626370fecffd9b1f381f2dd9ccb0a8",
+          "original_provenance": {
+            "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/create-adr/SKILL.md",
+            "sha256": "c7e91f84bb5743e6d17355c61ee60e0893f0a3a3e8122b5d0217c455d2ae7d28"
+          },
+          "adopted_update_history": [],
+          "adopted_update": {
+            "date": "2026-10-06",
+            "alignment": "Conductor Alignment 055",
+            "source": "/Users/cam/Documents/Projects/conductor-align-055/.agents/skills/create-adr/SKILL.md",
+            "source_sha256": "66055295b54888d17704d55d92a01d0cfe83ad6dd318e1c34ff22dcb86c1eded",
+            "disposition": "selective local staffing and event-wait adaptation; owner contracts retained"
+          }
         },
         {
           "path": ".agents/skills/create-adr/scripts/start-adr.sh",
@@ -153,7 +174,19 @@
         {
           "path": ".agents/skills/finish-and-push/SKILL.md",
           "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/finish-and-push/SKILL.md",
-          "sha256": "2805622da7e195cacef321898fd7379abee9110462d0149fdcefbe9b56e9de1b"
+          "sha256": "47d408a36cc542de6918445ad2a33411e44c43b783631c6ec167dd13e59054ba",
+          "original_provenance": {
+            "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/finish-and-push/SKILL.md",
+            "sha256": "2805622da7e195cacef321898fd7379abee9110462d0149fdcefbe9b56e9de1b"
+          },
+          "adopted_update_history": [],
+          "adopted_update": {
+            "date": "2026-10-06",
+            "alignment": "Conductor Alignment 055",
+            "source": "/Users/cam/Documents/Projects/conductor-align-055/.agents/skills/finish-and-push/SKILL.md",
+            "source_sha256": "47d408a36cc542de6918445ad2a33411e44c43b783631c6ec167dd13e59054ba",
+            "disposition": "selective local staffing and event-wait adaptation; owner contracts retained"
+          }
         }
       ]
     },
@@ -219,7 +252,19 @@
         {
           "path": ".agents/skills/ideation/SKILL.md",
           "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/ideation/SKILL.md",
-          "sha256": "469c363447a0e18947b774e8d937c1a922c5991c69621d07b5a8b3d632a26015"
+          "sha256": "fd510999167e94fac8aef2bcd4e3be54710e3248982fe6ba2bceee5ecc6bbdca",
+          "original_provenance": {
+            "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/ideation/SKILL.md",
+            "sha256": "469c363447a0e18947b774e8d937c1a922c5991c69621d07b5a8b3d632a26015"
+          },
+          "adopted_update_history": [],
+          "adopted_update": {
+            "date": "2026-10-06",
+            "alignment": "Conductor Alignment 055",
+            "source": "/Users/cam/Documents/Projects/conductor-align-055/.agents/skills/ideation/SKILL.md",
+            "source_sha256": "fd510999167e94fac8aef2bcd4e3be54710e3248982fe6ba2bceee5ecc6bbdca",
+            "disposition": "selective local staffing and event-wait adaptation; owner contracts retained"
+          }
         },
         {
           "path": ".agents/skills/ideation/references/open-collider-pattern.md",
@@ -294,17 +339,26 @@
         {
           "path": ".agents/skills/loop-review/SKILL.md",
           "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/loop-review/SKILL.md",
-          "sha256": "52a32470060f815a7d273aff44831a25464138ca046e168069baa1b9eedc2870",
+          "sha256": "d6567ab3bb164cf3d234fb9fc6c37cf061ec9bf25f13ec9f920f62a5f7eb56b6",
           "original_provenance": {
             "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/loop-review/SKILL.md",
             "sha256": "311751103c5f2c0124a7bd5c807796fe3ce6e09b77bfe1d8039e2401a8a0d104"
           },
           "adopted_update": {
-            "date": "2026-10-04",
-            "source": "/Users/cam/Documents/Projects/conductor/.agents/skills/loop-review/SKILL.md",
-            "source_sha256": "2a17e4152daec8dd40fa648b864b6c2ca22b627733794ae58c17eb043e22526c",
-            "disposition": "scoped local research-rule adaptation"
-          }
+            "date": "2026-10-06",
+            "alignment": "Conductor Alignment 055",
+            "source": "/Users/cam/Documents/Projects/conductor-align-055/.agents/skills/loop-review/SKILL.md",
+            "source_sha256": "6158049fc9fe13e25c79e401cfe87f85fea115a095d9ee9cf9160534bc6c0b0c",
+            "disposition": "selective local staffing and event-wait adaptation; owner contracts retained"
+          },
+          "adopted_update_history": [
+            {
+              "date": "2026-10-04",
+              "source": "/Users/cam/Documents/Projects/conductor/.agents/skills/loop-review/SKILL.md",
+              "source_sha256": "2a17e4152daec8dd40fa648b864b6c2ca22b627733794ae58c17eb043e22526c",
+              "disposition": "scoped local research-rule adaptation"
+            }
+          ]
         },
         {
           "path": ".agents/skills/loop-review/agents/openai.yaml",
@@ -320,17 +374,26 @@
         {
           "path": ".agents/skills/loop-verify/SKILL.md",
           "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/loop-verify/SKILL.md",
-          "sha256": "37acb2b7d89c17ad06c0a75d0f78ed730a2065f840588dc975ec5cb819cbc057",
+          "sha256": "c07a73d21bd40c398390c056bba381bb8c1a6937f01460f78bc2058d180fe8f8",
           "original_provenance": {
             "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/loop-verify/SKILL.md",
             "sha256": "774bda95f734307efc2946fc8ef649e2e9ec92516412e22039a9a21aba583bf7"
           },
           "adopted_update": {
-            "date": "2026-10-04",
-            "source": "/Users/cam/Documents/Projects/conductor/.agents/skills/loop-verify/SKILL.md",
-            "source_sha256": "1d7b722ed4c08a3e0c7647a9155d16d248a22ac2b0bb26cf6c3e3181a2875967",
-            "disposition": "scoped local research-rule adaptation"
-          }
+            "date": "2026-10-06",
+            "alignment": "Conductor Alignment 055",
+            "source": "/Users/cam/Documents/Projects/conductor-align-055/.agents/skills/loop-verify/SKILL.md",
+            "source_sha256": "336d791fea35753f54dd1d98cbd7cf15615b8e0c4fbdf9c9edd50c75e9769e41",
+            "disposition": "selective local staffing and event-wait adaptation; owner contracts retained"
+          },
+          "adopted_update_history": [
+            {
+              "date": "2026-10-04",
+              "source": "/Users/cam/Documents/Projects/conductor/.agents/skills/loop-verify/SKILL.md",
+              "source_sha256": "1d7b722ed4c08a3e0c7647a9155d16d248a22ac2b0bb26cf6c3e3181a2875967",
+              "disposition": "scoped local research-rule adaptation"
+            }
+          ]
         }
       ]
     },
@@ -378,17 +441,26 @@
         {
           "path": ".agents/skills/setup-methodology/SKILL.md",
           "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/setup-methodology/SKILL.md",
-          "sha256": "34ec636b6e52fd7c1daaea3b5ae76a2eb772634034c7a344d3e81a59ed631d57",
+          "sha256": "f60b30e8ca47a5fd375cb6b3352ca0bbbe4639df85377928f4f622cf3ac01eee",
           "original_provenance": {
             "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/setup-methodology/SKILL.md",
             "sha256": "f5f1b5c467b8395b74b69ebe7e66b32b147366a8ee82eeda5c0e2f3c057a4bd0"
           },
           "adopted_update": {
-            "date": "2026-10-04",
-            "source": "/Users/cam/Documents/Projects/conductor/.agents/skills/setup-methodology/SKILL.md",
-            "source_sha256": "3188419488a1c7b257447a46399f8c7907ced94dd1510e903e5ad859c35b439a",
-            "disposition": "current shared source with owner strict-reset contract preserved"
-          }
+            "date": "2026-10-06",
+            "alignment": "Conductor Alignment 055",
+            "source": "/Users/cam/Documents/Projects/conductor-align-055/.agents/skills/setup-methodology/SKILL.md",
+            "source_sha256": "33a2b416f69c3aee079c57a06fa91f51595bc0a233f17a0900abcd31e51d9872",
+            "disposition": "selective local staffing and event-wait adaptation; owner contracts retained"
+          },
+          "adopted_update_history": [
+            {
+              "date": "2026-10-04",
+              "source": "/Users/cam/Documents/Projects/conductor/.agents/skills/setup-methodology/SKILL.md",
+              "source_sha256": "3188419488a1c7b257447a46399f8c7907ced94dd1510e903e5ad859c35b439a",
+              "disposition": "current shared source with owner strict-reset contract preserved"
+            }
+          ]
         },
         {
           "path": ".agents/skills/setup-methodology/references/modes.md",
@@ -419,7 +491,19 @@
         {
           "path": ".agents/skills/triage/SKILL.md",
           "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/triage/SKILL.md",
-          "sha256": "f99f5ddb3005703bc12686faf2b8953acdb6de99b9c024e1cbe3f7bf54031ee0"
+          "sha256": "ce5ca2fa11a714b0f18f5e4325c106706097eddaa82b8721d4e514dcbec00382",
+          "original_provenance": {
+            "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/triage/SKILL.md",
+            "sha256": "f99f5ddb3005703bc12686faf2b8953acdb6de99b9c024e1cbe3f7bf54031ee0"
+          },
+          "adopted_update_history": [],
+          "adopted_update": {
+            "date": "2026-10-06",
+            "alignment": "Conductor Alignment 055",
+            "source": "/Users/cam/Documents/Projects/conductor-align-055/.agents/skills/triage/SKILL.md",
+            "source_sha256": "c96272542a02ec109e749f48e83782b66a2f224ecdb7e2110d8378d5ad69a41a",
+            "disposition": "selective local staffing and event-wait adaptation; owner contracts retained"
+          }
         }
       ]
     },
@@ -496,17 +580,26 @@
         {
           "path": ".agents/skills/validate/SKILL.md",
           "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/validate/SKILL.md",
-          "sha256": "61cdff5bdba697541dc81a99a790cf85e4a197674b1cfa36ca0cdd5a66ec41f8",
+          "sha256": "bb24ba112814427836f0d19efba5755ba2adaddcf7cfdead25bfd10a89725111",
           "original_provenance": {
             "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/validate/SKILL.md",
             "sha256": "cb1642bbf5da0ecef138b7c59db6e3a2d997090eb0efc8aba98d45dc288207f9"
           },
           "adopted_update": {
-            "date": "2026-10-04",
-            "source": "/Users/cam/Documents/Projects/conductor/.agents/skills/validate/SKILL.md",
-            "source_sha256": "0114dfe1756f9707470e57f62ae5c08259b8f3168da15a53baec531b266ba6dd",
-            "disposition": "scoped local research-rule adaptation"
-          }
+            "date": "2026-10-06",
+            "alignment": "Conductor Alignment 055",
+            "source": "/Users/cam/Documents/Projects/conductor-align-055/.agents/skills/validate/SKILL.md",
+            "source_sha256": "619c41beee0c811c45628d4310d015192360eb4147b81884faa0a9b9278d3c44",
+            "disposition": "selective local staffing and event-wait adaptation; owner contracts retained"
+          },
+          "adopted_update_history": [
+            {
+              "date": "2026-10-04",
+              "source": "/Users/cam/Documents/Projects/conductor/.agents/skills/validate/SKILL.md",
+              "source_sha256": "0114dfe1756f9707470e57f62ae5c08259b8f3168da15a53baec531b266ba6dd",
+              "disposition": "scoped local research-rule adaptation"
+            }
+          ]
         }
       ]
     },
@@ -557,6 +650,23 @@
       ".agents/skills/setup-methodology/SKILL.md",
       ".agents/skills/setup-methodology/templates/setup-checklist.md",
       ".agents/skills/validate/SKILL.md"
+    ]
+  },
+  "agent_staffing_and_event_waits": {
+    "date": "2026-10-06",
+    "source": "/Users/cam/Documents/Projects/conductor-align-055/docs/alignments/align-055-agent-staffing-and-event-waits.md",
+    "receipt": "docs/agent-staffing-and-event-waits.md",
+    "policy": "Original provenance and prior adopted-update history retained; current local hashes describe authorized selective adaptations.",
+    "changed_files": [
+      ".agents/skills/loop-review/SKILL.md",
+      ".agents/skills/loop-verify/SKILL.md",
+      ".agents/skills/build-story/SKILL.md",
+      ".agents/skills/validate/SKILL.md",
+      ".agents/skills/finish-and-push/SKILL.md",
+      ".agents/skills/triage/SKILL.md",
+      ".agents/skills/ideation/SKILL.md",
+      ".agents/skills/create-adr/SKILL.md",
+      ".agents/skills/setup-methodology/SKILL.md"
     ]
   }
 }

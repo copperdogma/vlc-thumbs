@@ -38,3 +38,19 @@ The local `/loop-verify` strict reset contract remains authoritative: material
 fixes reset the original scope within existing convergence and budget limits.
 Do not import another verifier phase model implicitly from setup examples.
 See `docs/research-before-reinvention.md` for adopted source and check scope.
+
+## Agent staffing and event waits — 2026-10-06
+
+Preserve the short common policy in `AGENTS.md` and focused leaf decisions in
+installed skills. Strategic `/loop-review` resolves the strongest eligible model
+and highest supported effort at runtime, records requested versus verified served
+identity, and dispatches one bounded read-only reviewer when needed. Respect fork
+schemas, scope, privacy, budgets, deadlines, clean stops and chat authorization.
+Routine workers use the cheapest capable configuration only when overhead is
+justified, with bounded packets, artifact access and native completion or
+message-aware waits. Preserve tiny-lane coverage, existing delegation authority,
+plan gates, one Git owner and proportional checks. Never alter frozen evaluation
+subjects, prompts or judges through staffing policy; enforce aggregate paid-work
+caps before concurrent dispatch. Retain sparse/no-code exceptions and local
+verification/reset contracts; do not install absent evaluation leaves just for
+this policy. See `docs/agent-staffing-and-event-waits.md` for the adoption receipt.

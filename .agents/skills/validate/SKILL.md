@@ -114,6 +114,13 @@ reuse; understood fixes and unchanged passing evidence need no research pass.
 
 2.9 **Use optional parallel validation only when warranted**
    - When launching parallel validation packets, size each worker model and reasoning level to shard risk. Use cheaper or lower-reasoning workers for lookup, compatibility-link or optional-alias checks, and mechanical scans; keep stronger workers for semantic contracts, security, eval correctness, cross-repo decisions, or high-cost misses. Record any explicit override rationale in the validation report.
+   - Choose the cheapest capable worker when delegation's benefit exceeds
+     context, coordination and verification overhead. Collect through completion
+     events or message-aware waits; avoid unchanged sweeps and duplicate work.
+     Genuinely strategic outcome/architecture review follows `/loop-review`'s
+     runtime strongest/maximum policy. Routine validation needs no compulsory
+     strategic reviewer; existing validation scope, stops and final disposition
+     remain with the main thread.
    - Parallel packets are useful for non-trivial validation slices such as
      findings-first defect review, changed-file review, story requirement
      review, repo-native check/test execution, schema/artifact/eval review,
