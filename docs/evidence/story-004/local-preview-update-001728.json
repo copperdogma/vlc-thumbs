@@ -1,0 +1,44 @@
+{
+  "development_build": "001728",
+  "development_manifest": "app-build-correction-001728.json",
+  "destination": "/Users/cam/Applications/VLC Timeline Preview.app",
+  "previous_app_preserved": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/VLCPreviewBeforeCorrection222506.app",
+  "bundle_id": "org.videolan.vlc-thumbs.preview",
+  "automatic_updates": false,
+  "signature": "Outer ad hoc signature; deep strict verified; qualified nested components unchanged",
+  "same_qualified_components": {
+    "Contents/MacOS/plugins/libmacosx_plugin.dylib": {
+      "qualified": "4ee53e757ac1f6e29c58d7377a1945bb666a06d0df42df0ac1ccca7260f7a6c5",
+      "delivered": "4ee53e757ac1f6e29c58d7377a1945bb666a06d0df42df0ac1ccca7260f7a6c5"
+    },
+    "Contents/MacOS/vlc-thumbnail-helper": {
+      "qualified": "ae7795d6fe67d64f2d770a1f75d7db6302f6d22fedf20cd448a604a5b575d07e",
+      "delivered": "ae7795d6fe67d64f2d770a1f75d7db6302f6d22fedf20cd448a604a5b575d07e"
+    },
+    "Contents/MacOS/plugins/plugins.dat": {
+      "qualified": "3fcc1bf23f8df698262e2d786b72acbc40d1e1e973a0f6409ce7bc0e4dba5674",
+      "delivered": "3fcc1bf23f8df698262e2d786b72acbc40d1e1e973a0f6409ce7bc0e4dba5674"
+    },
+    "Contents/Resources/English.lproj/SimplePreferences.nib/keyedobjects.nib": {
+      "qualified": "f880315841fb4c405a99e438b07079d6cbbf147eaefa6d2c59cc1691213f03a9",
+      "delivered": "f880315841fb4c405a99e438b07079d6cbbf147eaefa6d2c59cc1691213f03a9"
+    }
+  },
+  "ordinary_vlc": "untouched",
+  "preferences": "No defaults/config edits; existing daily profile retained",
+  "native_delivery_check": {
+    "passed": true,
+    "actual_pointer": true,
+    "normal_daily_profile": true,
+    "diagnostics_enabled": false,
+    "preview_preference_observed_on": true,
+    "preferences_cancelled_without_save": true,
+    "paused_time": "54:01",
+    "volume": 256,
+    "observed_caption": "Hover54:01 / Keyframe54:00 with useful corresponding cemetery image",
+    "screenshot_inspected": "CUA owned app screenshot after actual pointer motion; capture retained under work/validation/story004/installed-normal-priority/",
+    "acquisition_limits": "First automated owned runner attempt rejected by development-only pointer guard; retained. Normal daily window extended below display until bounded resize; resize then pointer delivered image. Neither failed setup is a feature pass.",
+    "pointer_guard": "Ignored helper compiled with exact preview identifier; original development-only source unchanged"
+  },
+  "daily_app_left": "Open, paused on tested movie, normal profile without diagnostics; earlier diagnostic test closed"
+}

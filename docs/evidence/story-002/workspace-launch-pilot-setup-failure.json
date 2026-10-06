@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "run": "workspace-launch-pilot-001",
+  "scope": "One baseline app launch via NSWorkspace new-instance API; setup applicability only, no scored response comparison",
+  "qualified": false,
+  "launch": {
+    "app": "VLCBaseline.app",
+    "pid": 67263,
+    "returned_bundle_id": "org.videolan.vlc-thumbs.development",
+    "process_argv_verified": true,
+    "argument_validation_returncode": 0
+  },
+  "capture_count": 0,
+  "setup_error": "Could not establish stable paused time-zero input; RC returned state=stop, media_time_seconds=0, and empty counters",
+  "cleanup_adapter_error": "Returned PID argv/config/socket ownership mismatch",
+  "post_cleanup_observation": "A separate ps check at 07:01 found PID 67263 absent; exact process exit status was unavailable",
+  "integrity_unchanged": true,
+  "interpretation": "NSWorkspace returned a PID and argv remained intact, but setup failed before scoring. Cleanup ownership mismatch and later process absence do not establish a clean exit status or identify the setup cause.",
+  "raw_result": "work/validation/story002/workspace-launch-pilot-001/raw/results.json"
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "run": "control-complete-frame-v3-001",
+  "scope": "Observer-v3 qualification setup only; no UI qualification or performance result",
+  "qualified": false,
+  "observer_version": 3,
+  "observer_contract": {
+    "ax_reads": "Only on SCFrameStatusComplete callbacks",
+    "every_callback": "Frontmost, CGWindow/crop, and routing guards remain active",
+    "idle_ax": "Null/unmeasured",
+    "phases": "Separate and unqualified"
+  },
+  "qualification_attempt": {
+    "result": "Stopped before capture geometry",
+    "error": "Unexpected fixed native geometry; app_active=false",
+    "independent_frontmost_observation": "Codex foreground transitions occurred during setup; focus interference is established, its cause is unknown",
+    "completed_interactions": false,
+    "ui_qualification": false
+  },
+  "checks": {
+    "pixel_self_test": "5 cases passed",
+    "python_compile": "passed",
+    "headless_v2_replay": "rejected for observer-version mismatch; not v3 evidence",
+    "input_fingerprints_unchanged": true,
+    "owned_process_cleanup": 0
+  },
+  "frozen_previous_versions": [
+    "work/validation/story002/control-complete-frame-v3-001/observer-before-v3.m",
+    "work/validation/story002/control-complete-frame-v3-001/runner-before-v3.py"
+  ],
+  "raw_result": "work/validation/story002/control-complete-frame-v3-001/raw/results.json",
+  "loop_review": "work/validation/story002/loop-review-20261005T1309.md",
+  "interpretation": "The v3 observer contract has prospective strong review acceptance and implementation-level checks, but this qualification attempt is invalid because frontmost focus changed during setup before capture geometry. It does not qualify the UI, observer behavior under a clean control window, the candidate, or performance; it does not establish who caused the transitions or why.",
+  "next_milestone": "Wait for the coordinated clean idle window, then run clean v3 controls before any pilot or matched cohort.",
+  "later_user_context": "Cam later confirmed they had been using mouse/keyboard during the observed Codex foreground transitions, then finished. This contextualizes those actual transitions only; it does not explain any earlier unexplained false-guard observations."
+}

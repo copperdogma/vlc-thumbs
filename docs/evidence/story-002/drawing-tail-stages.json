@@ -1,0 +1,330 @@
+{
+  "scope": "20 heavy RAM demands on drawing-only candidate; descriptive stage attribution, not qualification or causality",
+  "source": "work/validation/story002/paired-visible-draw-diagnostic-001/summary.json",
+  "all_demands": [
+    {
+      "name": "033-heavy-memory-085",
+      "bucket": 85,
+      "input_to_mouse_ms": 25.84854164160788,
+      "mouse_to_hover_ms": 3.6475417437031865,
+      "hover_to_assignment_ms": 26.72799990978092,
+      "assignment_to_visible_ms": 77.4141667643562,
+      "visible_ms": 133.63825005944818,
+      "time_visible_ms": 133.63825005944818,
+      "service_elapsed_ms": 26.550541631877422,
+      "draw_duration_ms": [
+        0.08795829489827156,
+        0.06466673221439123
+      ]
+    },
+    {
+      "name": "058-heavy-memory-066",
+      "bucket": 66,
+      "input_to_mouse_ms": 24.404000025242567,
+      "mouse_to_hover_ms": 0.4829999525099993,
+      "hover_to_assignment_ms": 1.0203750571236014,
+      "assignment_to_visible_ms": 99.47920823469758,
+      "visible_ms": 125.38658326957375,
+      "time_visible_ms": 125.38658326957375,
+      "service_elapsed_ms": 0.8707082597538829,
+      "draw_duration_ms": [
+        0.09408337064087391,
+        0.04512490704655647
+      ]
+    },
+    {
+      "name": "025-heavy-memory-037",
+      "bucket": 37,
+      "input_to_mouse_ms": 24.62558343540877,
+      "mouse_to_hover_ms": 7.1460416074842215,
+      "hover_to_assignment_ms": 30.057750060223043,
+      "assignment_to_visible_ms": 63.20233317092061,
+      "visible_ms": 125.03170827403665,
+      "time_visible_ms": 125.03170827403665,
+      "service_elapsed_ms": 29.869124991819263,
+      "draw_duration_ms": [
+        0.0822083093225956,
+        0.07320835720747709
+      ]
+    },
+    {
+      "name": "046-heavy-memory-044",
+      "bucket": 44,
+      "input_to_mouse_ms": 23.577625048346817,
+      "mouse_to_hover_ms": 0.49875001423060894,
+      "hover_to_assignment_ms": 0.9154166327789426,
+      "assignment_to_visible_ms": 83.7854165583849,
+      "visible_ms": 108.77720825374126,
+      "time_visible_ms": 108.77720825374126,
+      "service_elapsed_ms": 0.7866249652579427,
+      "draw_duration_ms": [
+        0.08670834358781576,
+        0.030083348974585533
+      ]
+    },
+    {
+      "name": "042-heavy-memory-070",
+      "bucket": 70,
+      "input_to_mouse_ms": 21.333624958060682,
+      "mouse_to_hover_ms": 0.4447082756087184,
+      "hover_to_assignment_ms": 0.9518750011920929,
+      "assignment_to_visible_ms": 86.0351249575615,
+      "visible_ms": 108.76533319242299,
+      "time_visible_ms": 108.76533319242299,
+      "service_elapsed_ms": 0.8084999863058329,
+      "draw_duration_ms": [
+        0.10020844638347626,
+        0.04683330189436674
+      ]
+    },
+    {
+      "name": "057-heavy-memory-029",
+      "bucket": 29,
+      "input_to_mouse_ms": 26.572124916128814,
+      "mouse_to_hover_ms": 0.43812510557472706,
+      "hover_to_assignment_ms": 0.8691248949617147,
+      "assignment_to_visible_ms": 70.76483336277306,
+      "visible_ms": 98.64420827943832,
+      "time_visible_ms": 98.64420827943832,
+      "service_elapsed_ms": 0.745000084862113,
+      "draw_duration_ms": [
+        0.07800001185387373,
+        0.028833281248807907
+      ]
+    },
+    {
+      "name": "049-heavy-memory-081",
+      "bucket": 81,
+      "input_to_mouse_ms": 26.146166608668864,
+      "mouse_to_hover_ms": 0.5131250945851207,
+      "hover_to_assignment_ms": 0.932374969124794,
+      "assignment_to_visible_ms": 64.54866658896208,
+      "visible_ms": 92.14033326134086,
+      "time_visible_ms": 92.14033326134086,
+      "service_elapsed_ms": 0.7885416271165013,
+      "draw_duration_ms": [
+        0.09129173122346401,
+        0.04600000102072954
+      ]
+    },
+    {
+      "name": "054-heavy-memory-092",
+      "bucket": 92,
+      "input_to_mouse_ms": 23.559583351016045,
+      "mouse_to_hover_ms": 0.4512498853728175,
+      "hover_to_assignment_ms": 0.8117500692605972,
+      "assignment_to_visible_ms": 67.11162498686463,
+      "visible_ms": 91.93420829251409,
+      "time_visible_ms": 91.93420829251409,
+      "service_elapsed_ms": 0.6834999658167362,
+      "draw_duration_ms": [
+        0.0910833477973938,
+        0.028541660867631435
+      ]
+    },
+    {
+      "name": "041-heavy-memory-033",
+      "bucket": 33,
+      "input_to_mouse_ms": 25.49270843155682,
+      "mouse_to_hover_ms": 0.4914583405479789,
+      "hover_to_assignment_ms": 2.618375001475215,
+      "assignment_to_visible_ms": 54.56129158847034,
+      "visible_ms": 83.16383336205035,
+      "time_visible_ms": 83.16383336205035,
+      "service_elapsed_ms": 2.4594583082944155,
+      "draw_duration_ms": [
+        0.09216659236699343,
+        0.05537504330277443
+      ]
+    },
+    {
+      "name": "061-heavy-memory-003",
+      "bucket": 3,
+      "input_to_mouse_ms": 25.030041695572436,
+      "mouse_to_hover_ms": 10.74858324136585,
+      "hover_to_assignment_ms": 13.692208449356258,
+      "assignment_to_visible_ms": 25.861666537821293,
+      "visible_ms": 75.33249992411584,
+      "time_visible_ms": 75.33249992411584,
+      "service_elapsed_ms": 13.51016666740179,
+      "draw_duration_ms": [
+        0.1116250641644001,
+        0.07687509059906006
+      ]
+    },
+    {
+      "name": "030-heavy-memory-048",
+      "bucket": 48,
+      "input_to_mouse_ms": 21.102791652083397,
+      "mouse_to_hover_ms": 0.4311667289584875,
+      "hover_to_assignment_ms": 0.915041659027338,
+      "assignment_to_visible_ms": 37.25112497340888,
+      "visible_ms": 59.7001250134781,
+      "time_visible_ms": 34.70016655046493,
+      "service_elapsed_ms": 0.7742916932329535,
+      "draw_duration_ms": [
+        0.07962493691593409,
+        0.043500098399817944
+      ]
+    },
+    {
+      "name": "026-heavy-memory-074",
+      "bucket": 74,
+      "input_to_mouse_ms": 21.35087491478771,
+      "mouse_to_hover_ms": 0.4493333399295807,
+      "hover_to_assignment_ms": 0.8615833939984441,
+      "assignment_to_visible_ms": 36.823541624471545,
+      "visible_ms": 59.48533327318728,
+      "time_visible_ms": 42.81870822887868,
+      "service_elapsed_ms": 0.7416666485369205,
+      "draw_duration_ms": [
+        0.08533336222171783,
+        0.02970825880765915
+      ]
+    },
+    {
+      "name": "034-heavy-memory-022",
+      "bucket": 22,
+      "input_to_mouse_ms": 21.195333334617317,
+      "mouse_to_hover_ms": 4.942291649058461,
+      "hover_to_assignment_ms": 5.783500033430755,
+      "assignment_to_visible_ms": 27.460291632451117,
+      "visible_ms": 59.38141664955765,
+      "time_visible_ms": 59.38141664955765,
+      "service_elapsed_ms": 5.61916665174067,
+      "draw_duration_ms": [
+        0.09637500625103712,
+        0.05975004751235247
+      ]
+    },
+    {
+      "name": "038-heavy-memory-096",
+      "bucket": 96,
+      "input_to_mouse_ms": 20.658166729845107,
+      "mouse_to_hover_ms": 0.45508332550525665,
+      "hover_to_assignment_ms": 0.8162499871104956,
+      "assignment_to_visible_ms": 37.36591665074229,
+      "visible_ms": 59.29541669320315,
+      "time_visible_ms": 34.29545823018998,
+      "service_elapsed_ms": 0.6945834029465914,
+      "draw_duration_ms": [
+        0.09400001727044582,
+        0.02720835618674755
+      ]
+    },
+    {
+      "name": "045-heavy-memory-007",
+      "bucket": 7,
+      "input_to_mouse_ms": 21.61737496498972,
+      "mouse_to_hover_ms": 0.4171250620856881,
+      "hover_to_assignment_ms": 0.9371249470859766,
+      "assignment_to_visible_ms": 36.32183338049799,
+      "visible_ms": 59.29345835465938,
+      "time_visible_ms": 59.29345835465938,
+      "service_elapsed_ms": 0.7982917595654726,
+      "draw_duration_ms": [
+        0.08800008799880743,
+        0.04166667349636555
+      ]
+    },
+    {
+      "name": "053-heavy-memory-055",
+      "bucket": 55,
+      "input_to_mouse_ms": 21.691791713237762,
+      "mouse_to_hover_ms": 0.5387916462495923,
+      "hover_to_assignment_ms": 0.940458383411169,
+      "assignment_to_visible_ms": 36.09524993225932,
+      "visible_ms": 59.266291675157845,
+      "time_visible_ms": 42.59966663084924,
+      "service_elapsed_ms": 0.7960833609104156,
+      "draw_duration_ms": [
+        0.09033328387886286,
+        0.03204168751835823
+      ]
+    },
+    {
+      "name": "029-heavy-memory-011",
+      "bucket": 11,
+      "input_to_mouse_ms": 25.909583317115903,
+      "mouse_to_hover_ms": 0.48595841508358717,
+      "hover_to_assignment_ms": 0.9093333501368761,
+      "assignment_to_visible_ms": 31.954624922946095,
+      "visible_ms": 59.25950000528246,
+      "time_visible_ms": 59.25950000528246,
+      "service_elapsed_ms": 0.7660416886210442,
+      "draw_duration_ms": [
+        0.08745829109102488,
+        0.04687509499490261
+      ]
+    },
+    {
+      "name": "037-heavy-memory-059",
+      "bucket": 59,
+      "input_to_mouse_ms": 20.74079168960452,
+      "mouse_to_hover_ms": 0.43433334212750196,
+      "hover_to_assignment_ms": 0.9204166708514094,
+      "assignment_to_visible_ms": 37.03412495087832,
+      "visible_ms": 59.129666653461754,
+      "time_visible_ms": 42.46304160915315,
+      "service_elapsed_ms": 0.7740000728517771,
+      "draw_duration_ms": [
+        0.09062502067536116,
+        0.0431666849181056
+      ]
+    },
+    {
+      "name": "022-heavy-memory-000",
+      "bucket": 0,
+      "input_to_mouse_ms": 19.17262503411621,
+      "mouse_to_hover_ms": 0.3897499991580844,
+      "hover_to_assignment_ms": 0.8836248889565468,
+      "assignment_to_visible_ms": 36.208624951541424,
+      "visible_ms": 56.65462487377226,
+      "time_visible_ms": 39.99229159671813,
+      "service_elapsed_ms": 0.7410416146740317,
+      "draw_duration_ms": [
+        0.08120841812342405,
+        0.03945839125663042
+      ]
+    },
+    {
+      "name": "050-heavy-memory-018",
+      "bucket": 18,
+      "input_to_mouse_ms": 20.589124993421137,
+      "mouse_to_hover_ms": 0.44795835856348276,
+      "hover_to_assignment_ms": 0.9077083086594939,
+      "assignment_to_visible_ms": 20.172708318568766,
+      "visible_ms": 42.11749997921288,
+      "time_visible_ms": 42.11749997921288,
+      "service_elapsed_ms": 0.7616666844114661,
+      "draw_duration_ms": [
+        0.08654175326228142,
+        0.04258332774043083
+      ]
+    }
+  ],
+  "stage_summary": {
+    "input_to_mouse_ms": {
+      "median_ms": 21.691791713237762,
+      "p95_diagnostic_ms": 26.146166608668864
+    },
+    "mouse_to_hover_ms": {
+      "median_ms": 0.45508332550525665,
+      "p95_diagnostic_ms": 7.1460416074842215
+    },
+    "hover_to_assignment_ms": {
+      "median_ms": 0.9204166708514094,
+      "p95_diagnostic_ms": 26.72799990978092
+    },
+    "assignment_to_visible_ms": {
+      "median_ms": 37.25112497340888,
+      "p95_diagnostic_ms": 86.0351249575615
+    },
+    "visible_ms": {
+      "median_ms": 59.7001250134781,
+      "p95_diagnostic_ms": 125.38658326957375
+    }
+  },
+  "conclusion": "In all four >100ms demands, assignment-to-visible is the largest measured stage (about63\u201399ms). Service scheduling is an additional26\u201330ms in two of them and <1ms in the others. QoS can address only part of these tails; compositor/capture presentation latency remains unproven.",
+  "quantile_method": "Nearest-rank descriptive stage summaries; previous paired report uses interpolated median. Do not compare different estimators as a change in performance."
+}

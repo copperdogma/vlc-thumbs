@@ -1,0 +1,178 @@
+{
+  "scope": "Single codec sparse-keyframe diagnostic; not a format-wide qualification or fallback implementation",
+  "generator_command": [
+    "/usr/local/bin/ffmpeg",
+    "-nostdin",
+    "-hide_banner",
+    "-loglevel",
+    "error",
+    "-y",
+    "-f",
+    "lavfi",
+    "-i",
+    "testsrc2=size=320x180:rate=12:duration=24",
+    "-c:v",
+    "libx264",
+    "-preset",
+    "ultrafast",
+    "-crf",
+    "27",
+    "-pix_fmt",
+    "yuv420p",
+    "-threads",
+    "2",
+    "-g",
+    "10000",
+    "-keyint_min",
+    "10000",
+    "-sc_threshold",
+    "0",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/story-002/single-initial-keyframe.mp4"
+  ],
+  "research_ffmpeg_version": "ffmpeg version 8.0 Copyright (c) 2000-2025 the FFmpeg developers\nbuilt with Apple clang version 16.0.0 (clang-1600.0.26.6)\nconfiguration: --prefix=/usr/local/Cellar/ffmpeg/8.0_1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags='-Wl,-ld_classic' --enable-ffplay --enable-gnutls --enable-gpl --enable-libaom --enable-libaribb24 --enable-libbluray --enable-libdav1d --enable-libharfbuzz --enable-libjxl --enable-libmp3lame --enable-libopus --enable-librav1e --enable-librist --enable-librubberband --enable-libsnappy --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtesseract --enable-libtheora --enable-libvidstab --enable-libvmaf --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libxvid --enable-lzma --enable-libfontconfig --enable-libfreetype --enable-frei0r --enable-libass --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-libspeex --enable-libsoxr --enable-libzmq --enable-libzimg --disable-libjack --disable-indev=jack --enable-videotoolbox --enable-audiotoolbox\nlibavutil      60.  8.100 / 60.  8.100\nlibavcodec     62. 11.100 / 62. 11.100\nlibavformat    62.  3.100 / 62.  3.100\nlibavdevice    62.  1.100 / 62.  1.100\nlibavfilter    11.  4.100 / 11.  4.100\nlibswscale      9.  1.100 /  9.  1.100\nlibswresample   6.  1.100 /  6.  1.100\n\nExiting with exit code 0\n",
+  "media": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/story-002/single-initial-keyframe.mp4",
+  "source_sha256": "a8e77c573fd2582fa72265ff674e3e9fd225c3710ead849f6f298cb30714e7dc",
+  "bytes": 907586,
+  "decoded_frame_count": 288,
+  "keyframe_probe_command": [
+    "/usr/local/bin/ffprobe",
+    "-v",
+    "error",
+    "-select_streams",
+    "v:0",
+    "-show_frames",
+    "-show_entries",
+    "frame=best_effort_timestamp_time,key_frame,pict_type",
+    "-of",
+    "json",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/story-002/single-initial-keyframe.mp4"
+  ],
+  "keyframe_count": 1,
+  "keyframes": [
+    {
+      "key_frame": 1,
+      "best_effort_timestamp_time": "0.000000",
+      "pict_type": "I",
+      "side_data_list": [
+        {
+          "side_data_type": "H.26[45] User Data Unregistered SEI message"
+        }
+      ]
+    }
+  ],
+  "helper": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/thumbnail-helper/thumbnail-helper",
+  "helper_sha256": "23fe2f7d8a04aa27f4ee4ddb098d01d2a97edfda59c3a1b2880b462fc473eaa5",
+  "trials": [
+    {
+      "header": {
+        "version": 2,
+        "ok": true,
+        "sampling": "keyframe",
+        "requested_us": 12000000,
+        "actual_us": 0,
+        "width": 320,
+        "height": 180,
+        "channels": 4,
+        "payload_bytes": 230400,
+        "video_ordinal": 0,
+        "decoded_frames": 1,
+        "timeline_origin_us": 0
+      },
+      "elapsed_ms": 268.29941710457206,
+      "peak_sampled_rss_kib": 7696,
+      "peak_sampled_cpu_percent": 0.1,
+      "payload_sha256": "3c413f2643f45eadca346df6f60c03bb7692c93bb7e3fdd8e9ba3f4ec7e65a67",
+      "requested_s": 12.0,
+      "actual_s": 0.0,
+      "pointer_delta_s": -12.0,
+      "command": [
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/thumbnail-helper/thumbnail-helper",
+        "--input",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/story-002/single-initial-keyframe.mp4",
+        "--time-us",
+        "12000000",
+        "--video-ordinal",
+        "0",
+        "--max-width",
+        "320",
+        "--max-height",
+        "180"
+      ]
+    },
+    {
+      "header": {
+        "version": 2,
+        "ok": true,
+        "sampling": "keyframe",
+        "requested_us": 23900000,
+        "actual_us": 0,
+        "width": 320,
+        "height": 180,
+        "channels": 4,
+        "payload_bytes": 230400,
+        "video_ordinal": 0,
+        "decoded_frames": 1,
+        "timeline_origin_us": 0
+      },
+      "elapsed_ms": 33.73500006273389,
+      "peak_sampled_rss_kib": 5312,
+      "peak_sampled_cpu_percent": 0.0,
+      "payload_sha256": "3c413f2643f45eadca346df6f60c03bb7692c93bb7e3fdd8e9ba3f4ec7e65a67",
+      "requested_s": 23.9,
+      "actual_s": 0.0,
+      "pointer_delta_s": -23.9,
+      "command": [
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/thumbnail-helper/thumbnail-helper",
+        "--input",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/story-002/single-initial-keyframe.mp4",
+        "--time-us",
+        "23900000",
+        "--video-ordinal",
+        "0",
+        "--max-width",
+        "320",
+        "--max-height",
+        "180"
+      ]
+    },
+    {
+      "header": {
+        "version": 2,
+        "ok": true,
+        "sampling": "keyframe",
+        "requested_us": 24000000,
+        "actual_us": 0,
+        "width": 320,
+        "height": 180,
+        "channels": 4,
+        "payload_bytes": 230400,
+        "video_ordinal": 0,
+        "decoded_frames": 1,
+        "timeline_origin_us": 0
+      },
+      "elapsed_ms": 33.091875026002526,
+      "peak_sampled_rss_kib": 5072,
+      "peak_sampled_cpu_percent": 0.0,
+      "payload_sha256": "3c413f2643f45eadca346df6f60c03bb7692c93bb7e3fdd8e9ba3f4ec7e65a67",
+      "requested_s": 24.0,
+      "actual_s": 0.0,
+      "pointer_delta_s": -24.0,
+      "command": [
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/thumbnail-helper/thumbnail-helper",
+        "--input",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/story-002/single-initial-keyframe.mp4",
+        "--time-us",
+        "24000000",
+        "--video-ordinal",
+        "0",
+        "--max-width",
+        "320",
+        "--max-height",
+        "180"
+      ]
+    }
+  ],
+  "source_hash_unchanged": true,
+  "helper_hash_unchanged": true,
+  "conclusion": "Valid 24-second H264 with only one initial keyframe decodes all288frames in independent ffprobe. Current helper succeeds promptly at midpoint/end/EOF using actual keyframe0; coarseness24seconds reported, no fallback gap filling occurs. This demonstrates sparse-but-valid content, not a playable stream with no random-access/keyframe flags."
+}

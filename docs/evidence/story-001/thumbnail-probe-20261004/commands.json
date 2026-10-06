@@ -1,0 +1,126 @@
+[
+  {
+    "argv": [
+      "/usr/local/bin/ffmpeg",
+      "-version"
+    ],
+    "elapsed_seconds": 12.119000541977584,
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "ffmpeg version 8.0 Copyright (c) 2000-2025 the FFmpeg developers\nbuilt with Apple clang version 16.0.0 (clang-1600.0.26.6)\nconfiguration: --prefix=/usr/local/Cellar/ffmpeg/8.0_1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags='-Wl,-ld_classic' --enable-ffplay --enable-gnutls --enable-gpl --enable-libaom --enable-libaribb24 --enable-libbluray --enable-libdav1d --enable-libharfbuzz --enable-libjxl --enable-libmp3lame --enable-libopus --enable-librav1e --enable-librist --enable-librubberband --enable-libsnappy --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtesseract --enable-libtheora --enable-libvidstab --enable-libvmaf --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libxvid --enable-lzma --enable-libfontconfig --enable-libfreetype --enable-frei0r --enable-libass --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-libspeex --enable-libsoxr --enable-libzmq --enable-libzimg --disable-libjack --disable-indev=jack --enable-videotoolbox --enable-audiotoolbox\nlibavutil      60.  8.100 / 60.  8.100\nlibavcodec     62. 11.100 / 62. 11.100\nlibavformat    62.  3.100 / 62.  3.100\nlibavdevice    62.  1.100 / 62.  1.100\nlibavfilter    11.  4.100 / 11.  4.100\nlibswscale      9.  1.100 /  9.  1.100\nlibswresample   6.  1.100 /  6.  1.100\n\nExiting with exit code 0\n"
+  },
+  {
+    "argv": [
+      "/usr/local/bin/ffmpeg",
+      "-hide_banner",
+      "-loglevel",
+      "error",
+      "-f",
+      "lavfi",
+      "-i",
+      "testsrc2=size=320x180:rate=24",
+      "-t",
+      "8",
+      "-vf",
+      "drawtext=fontfile=/System/Library/Fonts/Supplemental/Arial.ttf:text='frame %{n}  t %{pts\\:hms}':x=8:y=8:fontsize=18:fontcolor=white:box=1:boxcolor=black@0.8",
+      "-an",
+      "-c:v",
+      "libx264",
+      "-preset",
+      "veryfast",
+      "-crf",
+      "22",
+      "-g",
+      "48",
+      "-pix_fmt",
+      "yuv420p",
+      "-movflags",
+      "+faststart",
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/probes/thumbnail-plan/known-h264.mp4"
+    ],
+    "elapsed_seconds": 0.21121729200240225,
+    "returncode": 0,
+    "stderr": "",
+    "stdout": ""
+  },
+  {
+    "argv": [
+      "/usr/local/bin/ffmpeg",
+      "-hide_banner",
+      "-loglevel",
+      "error",
+      "-i",
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/probes/thumbnail-plan/known-h264.mp4",
+      "-map",
+      "0:v:0",
+      "-c",
+      "copy",
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/probes/thumbnail-plan/known-h264.mkv"
+    ],
+    "elapsed_seconds": 0.14255908399354666,
+    "returncode": 0,
+    "stderr": "",
+    "stdout": ""
+  },
+  {
+    "argv": [
+      "xcrun",
+      "clang",
+      "-fobjc-arc",
+      "-fblocks",
+      "-Wno-deprecated-declarations",
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/probes/thumbnail-plan/probe.m",
+      "-framework",
+      "Foundation",
+      "-framework",
+      "AVFoundation",
+      "-framework",
+      "CoreMedia",
+      "-framework",
+      "CoreGraphics",
+      "-framework",
+      "ImageIO",
+      "-framework",
+      "CoreServices",
+      "-o",
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/probes/thumbnail-plan/probe"
+    ],
+    "elapsed_seconds": 0.6944465409033,
+    "returncode": 0,
+    "stderr": "",
+    "stdout": ""
+  },
+  {
+    "argv": [
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/probes/thumbnail-plan/probe",
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/probes/thumbnail-plan/known-h264.mp4",
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/probes/thumbnail-plan"
+    ],
+    "elapsed_seconds": 0.5595195839414373,
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "{\n  \"maximum_height\" : 180,\n  \"input\" : \"\\/Users\\/cam\\/Documents\\/Projects\\/ultima-iv-web\\/vlc-thumbs\\/work\\/probes\\/thumbnail-plan\\/known-h264.mp4\",\n  \"maximum_width\" : 320,\n  \"requests\" : [\n    {\n      \"result\" : 0,\n      \"height\" : 180,\n      \"image_path\" : \"\\/Users\\/cam\\/Documents\\/Projects\\/ultima-iv-web\\/vlc-thumbs\\/work\\/probes\\/thumbnail-plan\\/known-h264.mp4-0.png\",\n      \"requested_seconds\" : 0.5,\n      \"width\" : 320,\n      \"success\" : 1,\n      \"elapsed_ms\" : 179.57312508951873,\n      \"actual_seconds\" : 0.5,\n      \"open_to_callback_ms\" : 197.23541662096977,\n      \"png_written\" : true\n    },\n    {\n      \"result\" : 0,\n      \"height\" : 180,\n      \"image_path\" : \"\\/Users\\/cam\\/Documents\\/Projects\\/ultima-iv-web\\/vlc-thumbs\\/work\\/probes\\/thumbnail-plan\\/known-h264.mp4-1.png\",\n      \"requested_seconds\" : 7.25,\n      \"width\" : 320,\n      \"success\" : 1,\n      \"elapsed_ms\" : 53.351541631855071,\n      \"actual_seconds\" : 7.25,\n      \"open_to_callback_ms\" : 253.95425001624972,\n      \"png_written\" : true\n    },\n    {\n      \"result\" : 0,\n      \"height\" : 180,\n      \"image_path\" : \"\\/Users\\/cam\\/Documents\\/Projects\\/ultima-iv-web\\/vlc-thumbs\\/work\\/probes\\/thumbnail-plan\\/known-h264.mp4-2.png\",\n      \"requested_seconds\" : 2.2999999999999998,\n      \"width\" : 320,\n      \"success\" : 1,\n      \"elapsed_ms\" : 26.219708262942731,\n      \"actual_seconds\" : 2.2916666666666665,\n      \"open_to_callback_ms\" : 282.13566658087075,\n      \"png_written\" : true\n    },\n    {\n      \"result\" : 0,\n      \"height\" : 180,\n      \"image_path\" : \"\\/Users\\/cam\\/Documents\\/Projects\\/ultima-iv-web\\/vlc-thumbs\\/work\\/probes\\/thumbnail-plan\\/known-h264.mp4-3.png\",\n      \"requested_seconds\" : 6.75,\n      \"width\" : 320,\n      \"success\" : 1,\n      \"elapsed_ms\" : 36.409208201803267,\n      \"actual_seconds\" : 6.75,\n      \"open_to_callback_ms\" : 320.21620823070407,\n      \"png_written\" : true\n    },\n    {\n      \"result\" : 0,\n      \"height\" : 180,\n      \"image_path\" : \"\\/Users\\/cam\\/Documents\\/Projects\\/ultima-iv-web\\/vlc-thumbs\\/work\\/probes\\/thumbnail-plan\\/known-h264.mp4-4.png\",\n      \"requested_seconds\" : 2.2999999999999998,\n      \"width\" : 320,\n      \"success\" : 1,\n      \"elapsed_ms\" : 26.731666643172503,\n      \"actual_seconds\" : 2.2916666666666665,\n      \"open_to_callback_ms\" : 349.06012495048344,\n      \"png_written\" : true\n    }\n  ],\n  \"tolerance_seconds\" : 0.050000000000000003\n}\n"
+  },
+  {
+    "argv": [
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/probes/thumbnail-plan/probe",
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/probes/thumbnail-plan/known-h264.mkv",
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/probes/thumbnail-plan"
+    ],
+    "elapsed_seconds": 0.022340000024996698,
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "{\n  \"maximum_height\" : 180,\n  \"input\" : \"\\/Users\\/cam\\/Documents\\/Projects\\/ultima-iv-web\\/vlc-thumbs\\/work\\/probes\\/thumbnail-plan\\/known-h264.mkv\",\n  \"maximum_width\" : 320,\n  \"requests\" : [\n    {\n      \"result\" : 1,\n      \"error_domain\" : \"AVFoundationErrorDomain\",\n      \"requested_seconds\" : 0.5,\n      \"error_code\" : -11828,\n      \"success\" : 0,\n      \"elapsed_ms\" : 4.1492083109915257,\n      \"error\" : \"Cannot Open\",\n      \"open_to_callback_ms\" : 16.516583389602602\n    },\n    {\n      \"result\" : 1,\n      \"error_domain\" : \"AVFoundationErrorDomain\",\n      \"requested_seconds\" : 7.25,\n      \"error_code\" : -11828,\n      \"success\" : 0,\n      \"elapsed_ms\" : 0.087750027887523174,\n      \"error\" : \"Cannot Open\",\n      \"open_to_callback_ms\" : 16.614166786894202\n    },\n    {\n      \"result\" : 1,\n      \"error_domain\" : \"AVFoundationErrorDomain\",\n      \"requested_seconds\" : 2.2999999999999998,\n      \"error_code\" : -11828,\n      \"success\" : 0,\n      \"elapsed_ms\" : 0.060458434745669365,\n      \"error\" : \"Cannot Open\",\n      \"open_to_callback_ms\" : 16.679791733622551\n    },\n    {\n      \"result\" : 1,\n      \"error_domain\" : \"AVFoundationErrorDomain\",\n      \"requested_seconds\" : 6.75,\n      \"error_code\" : -11828,\n      \"success\" : 0,\n      \"elapsed_ms\" : 0.057416618801653385,\n      \"error\" : \"Cannot Open\",\n      \"open_to_callback_ms\" : 16.742083360441029\n    },\n    {\n      \"result\" : 1,\n      \"error_domain\" : \"AVFoundationErrorDomain\",\n      \"requested_seconds\" : 2.2999999999999998,\n      \"error_code\" : -11828,\n      \"success\" : 0,\n      \"elapsed_ms\" : 0.05495839286595583,\n      \"error\" : \"Cannot Open\",\n      \"open_to_callback_ms\" : 16.803374979645014\n    }\n  ],\n  \"tolerance_seconds\" : 0.050000000000000003\n}\n"
+  },
+  {
+    "argv": [
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/probes/thumbnail-plan/probe",
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/build-smoke.mp4",
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/probes/thumbnail-plan"
+    ],
+    "elapsed_seconds": 0.4264348750002682,
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "{\n  \"maximum_height\" : 180,\n  \"input\" : \"\\/Users\\/cam\\/Documents\\/Projects\\/ultima-iv-web\\/vlc-thumbs\\/work\\/fixtures\\/build-smoke.mp4\",\n  \"maximum_width\" : 320,\n  \"requests\" : [\n    {\n      \"result\" : 0,\n      \"height\" : 180,\n      \"image_path\" : \"\\/Users\\/cam\\/Documents\\/Projects\\/ultima-iv-web\\/vlc-thumbs\\/work\\/probes\\/thumbnail-plan\\/build-smoke.mp4-0.png\",\n      \"requested_seconds\" : 0.5,\n      \"width\" : 320,\n      \"success\" : 1,\n      \"elapsed_ms\" : 288.20966661442071,\n      \"actual_seconds\" : 0.5,\n      \"open_to_callback_ms\" : 304.48866670485586,\n      \"png_written\" : true\n    },\n    {\n      \"result\" : 0,\n      \"height\" : 180,\n      \"image_path\" : \"\\/Users\\/cam\\/Documents\\/Projects\\/ultima-iv-web\\/vlc-thumbs\\/work\\/probes\\/thumbnail-plan\\/build-smoke.mp4-1.png\",\n      \"requested_seconds\" : 2.25,\n      \"width\" : 320,\n      \"success\" : 1,\n      \"elapsed_ms\" : 28.51650002412498,\n      \"actual_seconds\" : 2.25,\n      \"open_to_callback_ms\" : 335.55245830211788,\n      \"png_written\" : true\n    },\n    {\n      \"result\" : 0,\n      \"height\" : 180,\n      \"image_path\" : \"\\/Users\\/cam\\/Documents\\/Projects\\/ultima-iv-web\\/vlc-thumbs\\/work\\/probes\\/thumbnail-plan\\/build-smoke.mp4-2.png\",\n      \"requested_seconds\" : 1.3,\n      \"width\" : 320,\n      \"success\" : 1,\n      \"elapsed_ms\" : 23.251083446666598,\n      \"actual_seconds\" : 1.25,\n      \"open_to_callback_ms\" : 361.29895830526948,\n      \"png_written\" : true\n    },\n    {\n      \"result\" : 0,\n      \"height\" : 180,\n      \"image_path\" : \"\\/Users\\/cam\\/Documents\\/Projects\\/ultima-iv-web\\/vlc-thumbs\\/work\\/probes\\/thumbnail-plan\\/build-smoke.mp4-3.png\",\n      \"requested_seconds\" : 1.75,\n      \"width\" : 320,\n      \"success\" : 1,\n      \"elapsed_ms\" : 29.278500005602837,\n      \"actual_seconds\" : 1.75,\n      \"open_to_callback_ms\" : 392.64954172540456,\n      \"png_written\" : true\n    },\n    {\n      \"result\" : 0,\n      \"height\" : 180,\n      \"image_path\" : \"\\/Users\\/cam\\/Documents\\/Projects\\/ultima-iv-web\\/vlc-thumbs\\/work\\/probes\\/thumbnail-plan\\/build-smoke.mp4-4.png\",\n      \"requested_seconds\" : 1.3,\n      \"width\" : 320,\n      \"success\" : 1,\n      \"elapsed_ms\" : 22.958375047892332,\n      \"actual_seconds\" : 1.25,\n      \"open_to_callback_ms\" : 417.47508337721229,\n      \"png_written\" : true\n    }\n  ],\n  \"tolerance_seconds\" : 0.050000000000000003\n}\n"
+  }
+]

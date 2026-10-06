@@ -29,7 +29,9 @@ unverified until supported by current primary documentation or pinned source.
 - Preserve videos. Work on copies in ignored `work/`; do not change installed
   VLC, real annotation stores or source projects during experiments.
 - Keep caching, media identity, annotations and UI boundaries inspectable.
-  No extraction engine, storage schema, or maintained fork is selected yet.
+  ADR-001 accepts durable Application Support labels and separate Caches
+  thumbnails. ADR-002 selects a private existing-contrib libav helper with keyframe-first
+  MVP sampling. Annotation schema/identity and a maintained fork remain undecided.
 - Record source/build provenance, hypotheses, actual measurements, failures and
   tested scope. Compile or screenshot success alone is not functional proof.
 - Include actual macOS UI interaction validation for user-facing stories and
@@ -67,10 +69,25 @@ dormant until there is relevant substrate. Source hashes live in
 
 ## Current stage and commands
 
-Local setup only. No VLC source/build, product code, video golden, product runner,
-benchmark, or accepted architecture exists. Story 001 is Draft feasibility.
-Root eval is deferred. Native app work has no web port; no Conductor range is
-allocated. Defer web launcher/dependency setup hooks until real tooling needs them.
+Stories001 and002 are Done within their declared scopes. Story004 corrections are Done on001728: track-count guard and bounded demand retention pass. Story003 short
+bookmarks remains planned; integrated root and public distribution are deferred.
+VLC3.0.24 is pinned. Corrected candidate001728 is installed at Cam's requested local preview
+app; previous app is preserved under ignored work. Persistent private worker,
+finite progressive/hover preparation and32MiBRAM/256MiBdisk cache are implemented.
+ADR003 accepts metadata plus sampled SHA256 freshness, with its unsampled-change
+limitation. Current-session RAM images may show Checking source provisionally;
+shared15s expiry cannot be renewed by pointer movement. Fresh reopen qualifies
+before reuse; source failure/change clears provisional images.
+
+See docs/evidence/story-004/current-acceptance-ledger.md for current source/build,
+3410cache/40service contracts, final NAS/restart and explicitly inherited unchanged native four surfaces/MP4/MKV/preferences,
+20/arm control comparison and three active-preparation playback pairs. Control
+medians37.612/37.635ms meet baseline+20%; audio/drop checks pass while sampled
+CPU/RSS overhead is reported. Reader-focus proof is explicitly inherited from
+unchanged accessibility behavior; latest actual-reader startup was inconclusive.
+No universal/p95 latency, causal-stall attribution, exhaustive formats, forced
+NAS reconnect or public packaging is qualified. Bookmarks need separate durable
+identity/schema decisions. No new commit/push authorization is implied.
 
 `docs/methodology/state.yaml`, story files and eval registry are writable truth.
 Graph and `docs/stories.md` are generated; never edit them manually.

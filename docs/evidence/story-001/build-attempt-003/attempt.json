@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-03",
+  "source_revision": "6de05adcbaf2e8b85fe86aad4169393098628119",
+  "command": [
+    "bash",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/extras/package/macosx/build.sh",
+    "-a",
+    "aarch64",
+    "-c",
+    "-j",
+    "4",
+    "-C",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64"
+  ],
+  "cwd": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build",
+  "environment_overrides": {
+    "VLC_PATH": "/usr/local/bin",
+    "PKG_CONFIG_LIBDIR": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/pkgconfig",
+    "PKG_CONFIG_PATH": ""
+  },
+  "initial_free_bytes": 12707459072,
+  "disk_stop_floor_bytes": 1073741824,
+  "status": "finished",
+  "elapsed_seconds": 218.3,
+  "minimum_free_bytes": 12074549248,
+  "workspace_bytes": 3113598976,
+  "pid": 57585,
+  "exit_code": 2,
+  "workspace_bytes_before_cleanup": 3121422336,
+  "final_free_bytes": 12104916992
+}

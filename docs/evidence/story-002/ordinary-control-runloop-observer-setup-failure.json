@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "run": "control-runloop-001",
+  "scope": "Observer applicability / ordinary-control setup only; no latency comparison or qualification",
+  "qualified": false,
+  "observer_candidate": {
+    "revision": "main-runloop pump with a 1ms no-op timer",
+    "pixel_self_test": "5 passed"
+  },
+  "outcome": {
+    "phase": "first baseline template, before the negative attempt",
+    "scored_responses": 0,
+    "diagnostic": "At t0+0.302s display_frame index17/status1; collapsed target-app guard read false while crop containment and AX ownership were true. Tagged routing and after-owned checks were true.",
+    "independent_notification": "Collector recorded target activation, then no transition before cleanup; absence is not causal proof.",
+    "setup_result": "Failed before the first scored/negative template; no performance comparison was made."
+  },
+  "review_limits": [
+    "The negative harness has reviewed latent issues: kind=frame versus display_frame handling and no independent negative interval; these were not exercised in this run.",
+    "The run does not establish that the application failed to respond or identify the earlier guard discrepancy."
+  ],
+  "integrity_unchanged": true,
+  "source_scope": "Ignored experimental observer only; frozen tracked probe and canonical 022512 inputs unchanged",
+  "raw_result": "work/validation/story002/control-runloop-001/raw/results.json"
+}

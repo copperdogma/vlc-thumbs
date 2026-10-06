@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "scope": "Matched paused main-window ordinary light-style knob response; not hover-to-thumbnail latency or completed seek",
+  "measurement": "First independent new light-style knob center within2pt on owned complete WindowServer frame: display_time minus physical input t0; PTS/display>=t0; no subtraction",
+  "pilot": true,
+  "samples_per_arm": 8,
+  "allowed_percent": 0.0,
+  "knob_metric_scope": "Pinned VLCSliderCell light appearance,2x sRGB BGRA; five rows around inputY; unique white6..32px cluster in>=3rows; center spread<=2px; target tolerance2pt; old/new>100pt",
+  "orders": [
+    [
+      "baseline",
+      "feature"
+    ],
+    [
+      "feature",
+      "baseline"
+    ],
+    [
+      "feature",
+      "baseline"
+    ],
+    [
+      "baseline",
+      "feature"
+    ]
+  ],
+  "collection_valid": true,
+  "method_pilot_passed": true,
+  "qualified": false,
+  "observed_counts": {
+    "baseline": 8,
+    "feature": 8
+  },
+  "diagnostic_range_ms": {
+    "baseline": {
+      "min": 135.65037492662668,
+      "max": 372.46270827017725
+    },
+    "feature": {
+      "min": 319.6620416129008,
+      "max": 727.3913332028314
+    }
+  },
+  "integrity_unchanged": true,
+  "changed_inputs": [],
+  "raw_results": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/control-paired-pilot-003/results.json",
+  "raw_sha256": "5c56d070aa9f231c546d8ec16884161c201069abc4decf81e2d0c31c45459b69",
+  "visual_inspection": {
+    "baseline_right": "White knob at expected global1090pt; root viewed original crop",
+    "feature_left": "White knob at expected global950pt; root viewed original crop"
+  },
+  "observer_pixel_exercise": "5 bounded synthetic pixel cases pass; not native UI proof",
+  "excluded_setup_attempts": [
+    "control-paired-pilot-001: fresh legacy RC reply barrier incomplete, no timings",
+    "control-paired-pilot-002: exact whole-crop appearance hashes overly strict, no qualified comparison"
+  ],
+  "conclusion": "Measurement setup valid;8 per arm is a pilot, no p95 performance qualification or regression verdict"
+}

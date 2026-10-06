@@ -1,0 +1,58 @@
+{
+  "scope": "Actual VoiceOver on saved pre-thumbnail baseline, paused main window; baseline comparison of accessibility increment without actual seek",
+  "baseline_module_sha256": "43e7d6da115cf83209869e51942528d14de9089d73ba4da31790b5bf04b0e1b5",
+  "reader_caption_after_increments": [
+    "5%",
+    "10%"
+  ],
+  "ax_values": [
+    500,
+    1000
+  ],
+  "actual_frame_after_each_increment": 1,
+  "actual_source_time_seconds_after_each_increment": 0.042,
+  "player_time_display_after_each_increment": "00:00",
+  "focus_after": {
+    "window_position": [
+      42,
+      33
+    ],
+    "focused_role": "AXSlider",
+    "app_active": true,
+    "window_size": [
+      1680,
+      1013
+    ]
+  },
+  "initial": {
+    "pid": 10134,
+    "source": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/story-002/standard-cache-pressure.mp4",
+    "initial": {
+      "state": "pause",
+      "media_time_seconds": 0,
+      "counters": {
+        "video decoded": 45,
+        "frames displayed": 1,
+        "frames lost": 0,
+        "audio decoded": 30,
+        "buffers played": 15,
+        "buffers lost": 0
+      }
+    },
+    "reader_initial_running": false
+  },
+  "reader_restored_off": true,
+  "welcome_dialog_restored": 1,
+  "applescript_control": 0,
+  "baseline_player_stopped": true,
+  "conclusion": "Inherited main-window VoiceOver slider increment fails to seek; accessible numeric value alone is insufficient proof. Feature changes do not alter the seek handlers; ordinary keyboard seeking remains separately qualified. No general accessibility repair claimed.",
+  "evidence_files": {
+    "caption-increment.png": "b3e8da8d64d6a4b6f4840cb2802987503136a6feb4bda4c30d7a55e5eaa0c1d2",
+    "caption-position.png": "cc53508176972177260d0c59acefe2bfae446031cb1879657821cf26f1e1d70a",
+    "caption-navigation.png": "e43ebc7a624c76a9fa949cb54f1e3cfefa11d271b902692c19f6a5d65c952917",
+    "caption-second-increment.png": "306d2cb7a747a6b025fba87761c394a569dd3be033342ceb22ffea05c47fc364",
+    "video-after-second-increment.png": "10fc68ed21cc1ef67960aae5d9e16f78cf0919bc6d90e31e03eafe16f2342de8",
+    "caption-navigation-eight.png": "40eb0a3d1e43e14e762119c80cb33c4d3b77e186ca2330a574b3874ea2b8e1a6",
+    "video-after-increment.png": "f01c33d37c67eecec366c1bcaa178de230a0d2ab6c9cae0b83f4a44ecafb0196"
+  }
+}

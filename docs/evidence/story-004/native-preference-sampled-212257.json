@@ -1,0 +1,22 @@
+{
+  "scope": "CUA native preference/seek observations on isolated sampled-policy candidate212257; hover not proved",
+  "build_manifest": "work/validation/story002/app-build-20261005T212257.558307Z.json",
+  "observations": {
+    "initial_checked": true,
+    "save_off_config": "macosx-timeline-previews=0",
+    "save_off_worker_stopped": true,
+    "cancel_does_not_save": true,
+    "full_restart_retains_off": true,
+    "restored_on": true,
+    "position_accessibility_title_preserved": "Position",
+    "ordinary_pointer_seek_changed_time": "00:06 to02:39",
+    "volume_preserved": 256,
+    "local_playback_visible": true,
+    "nas_loaded_and_playing": true
+  },
+  "limits": [
+    "No native hover delivery or latency result; CUA exposed click/drag did not produce a preview",
+    "No CLI override, four-surface, audio/dropped-frame or playback baseline comparison in this attempt",
+    "No installed daily app change"
+  ]
+}

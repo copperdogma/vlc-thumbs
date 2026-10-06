@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/VLC",
+    "--ignore-config",
+    "--config=/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/gui-vlcrc",
+    "--no-media-library",
+    "--macosx-control-itunes=0",
+    "--no-macosx-mediakeys",
+    "--no-macosx-recentitems",
+    "--no-audio",
+    "--loop",
+    "--no-metadata-network-access",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/build-smoke.mp4"
+  ],
+  "pid": 27035,
+  "bundle_identifier": "org.videolan.vlc-thumbs.development",
+  "first_run": "Development-only defaults seeded to skip online metadata prompt; metadata-network-access disabled."
+}

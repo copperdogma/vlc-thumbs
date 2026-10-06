@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "run": "control-paired-frontmost-strip-001",
+  "scope": "Fresh matched ordinary-control baseline/feature comparison; collection failure, no qualification",
+  "qualified": false,
+  "observed_counts": {
+    "baseline": 10,
+    "feature": 0,
+    "failure_at": "baseline click010"
+  },
+  "failure": {
+    "collection_error": "Missing complete readiness or post-input presentation",
+    "probe_exit_code": 0,
+    "guard_routing_after_owned": "All checks passed",
+    "capture_callbacks": "Three ScreenCaptureKit callbacks were SCFrameStatusIdle with no pixels; no scored complete response was observed by the 900ms bound.",
+    "held_slider_ax": "Changed from 6651 before input to 5586 after input.",
+    "serial_capture_queue_ax_queries_ms": [422.24, 429.69, 505.22]
+  },
+  "fingerprints_unchanged": true,
+  "cleanup_owned_processes": 0,
+  "interpretation": "Invalid incomplete cohort. Guard and input routing succeeded, but no complete presented frame was available to score. AX latency is an observer-backpressure lead, not proof of application or feature failure. No partial performance result is salvaged.",
+  "screen_capture_guidance": [
+    "https://developer.apple.com/documentation/screencapturekit/scframestatus/complete",
+    "https://developer.apple.com/documentation/screencapturekit/capturing-screen-content-in-macos"
+  ],
+  "raw_result": "work/validation/story002/control-paired-frontmost-strip-001/raw/results.json"
+}

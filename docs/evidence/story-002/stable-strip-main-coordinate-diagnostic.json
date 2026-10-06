@@ -1,0 +1,295 @@
+{
+  "scope": "Prototype061929 main-window physical hover, stable host, endpoint appearance and clearing applicability; no performance qualification",
+  "qualified": false,
+  "captures": [],
+  "arms": {
+    "prototype": {
+      "app": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/VLCStableStrip061929.app",
+      "scope": "Owned paused ordinary-control arm",
+      "argument_validation": {
+        "returncode": 0,
+        "missing_options": []
+      },
+      "pid": 9235,
+      "argv": [
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/VLCStableStrip061929.app/Contents/MacOS/VLC",
+        "--ignore-config",
+        "--config=/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/stable-strip-visual-002/raw/prototype/vlcrc",
+        "--intf=macosx",
+        "--extraintf=oldrc",
+        "--rc-unix=/tmp/vlc002-control-9200-prototype.sock",
+        "--rc-fake-tty",
+        "--stats",
+        "--play-and-pause",
+        "--start-time=0",
+        "--no-media-library",
+        "--no-metadata-network-access",
+        "--macosx-control-itunes=0",
+        "--no-macosx-mediakeys",
+        "--no-macosx-recentitems",
+        "--macosx-continue-playback=2",
+        "--no-macosx-nativefullscreenmode",
+        "--no-video-title-show",
+        "--no-loop",
+        "--no-repeat",
+        "--no-random",
+        "--verbose=2",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/story-002/standard-cache-pressure.mp4"
+      ],
+      "timeline_diagnostics_enabled": false,
+      "initial_paused_zero": {
+        "state": "pause",
+        "media_time_seconds": 0,
+        "counters": {
+          "video decoded": 19,
+          "frames displayed": 1,
+          "frames lost": 0,
+          "audio decoded": 30,
+          "buffers played": 15,
+          "buffers lost": 0
+        }
+      },
+      "exit_code": 0,
+      "cleanup_errors": []
+    }
+  },
+  "started": {
+    "unix_s": 1791182114.336585,
+    "monotonic_s": 941538.360136833
+  },
+  "environment_keys": [
+    "HOME",
+    "LANG",
+    "LC_CTYPE",
+    "LOGNAME",
+    "PATH",
+    "TMPDIR",
+    "USER"
+  ],
+  "observations": [
+    {
+      "label": "left-endpoint",
+      "point": [
+        209,
+        1028
+      ],
+      "focus": {
+        "window_position": [
+          42,
+          33
+        ],
+        "focused_role": "AXWindow",
+        "app_active": true,
+        "window_size": [
+          1680,
+          1013
+        ]
+      },
+      "windows": [
+        {
+          "id": 22394,
+          "layer": 3,
+          "name": "",
+          "bounds": {
+            "X": 41,
+            "Height": 240,
+            "Y": 777,
+            "Width": 1672
+          }
+        },
+        {
+          "id": 22395,
+          "layer": 0,
+          "name": "standard-cache-pressure.mp4",
+          "bounds": {
+            "X": 42,
+            "Height": 1013,
+            "Y": 33,
+            "Width": 1680
+          }
+        }
+      ],
+      "fresh_pause": {
+        "state": "pause",
+        "media_time_seconds": 0,
+        "counters": {
+          "video decoded": 19,
+          "frames displayed": 1,
+          "frames lost": 0,
+          "audio decoded": 30,
+          "buffers played": 15,
+          "buffers lost": 0
+        }
+      },
+      "panel": {
+        "id": 22394,
+        "layer": 3,
+        "name": "",
+        "bounds": {
+          "X": 41,
+          "Height": 240,
+          "Y": 777,
+          "Width": 1672
+        }
+      },
+      "screenshot_returncode": 0,
+      "screenshot": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/stable-strip-visual-002/raw/left-endpoint.png"
+    },
+    {
+      "label": "middle",
+      "point": [
+        873,
+        1028
+      ],
+      "focus": {
+        "window_position": [
+          42,
+          33
+        ],
+        "focused_role": "AXWindow",
+        "app_active": true,
+        "window_size": [
+          1680,
+          1013
+        ]
+      },
+      "windows": [
+        {
+          "id": 22394,
+          "layer": 3,
+          "name": "",
+          "bounds": {
+            "X": 41,
+            "Height": 240,
+            "Y": 777,
+            "Width": 1672
+          }
+        },
+        {
+          "id": 22395,
+          "layer": 0,
+          "name": "standard-cache-pressure.mp4",
+          "bounds": {
+            "X": 42,
+            "Height": 1013,
+            "Y": 33,
+            "Width": 1680
+          }
+        }
+      ],
+      "fresh_pause": {
+        "state": "pause",
+        "media_time_seconds": 0,
+        "counters": {
+          "video decoded": 19,
+          "frames displayed": 1,
+          "frames lost": 0,
+          "audio decoded": 30,
+          "buffers played": 15,
+          "buffers lost": 0
+        }
+      },
+      "panel": {
+        "id": 22394,
+        "layer": 3,
+        "name": "",
+        "bounds": {
+          "X": 41,
+          "Height": 240,
+          "Y": 777,
+          "Width": 1672
+        }
+      },
+      "screenshot_returncode": 0,
+      "screenshot": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/stable-strip-visual-002/raw/middle.png"
+    },
+    {
+      "label": "right-edge-diagnostic",
+      "point": [
+        1537,
+        1028
+      ],
+      "focus": {
+        "window_position": [
+          42,
+          33
+        ],
+        "focused_role": "AXWindow",
+        "app_active": true,
+        "window_size": [
+          1680,
+          1013
+        ]
+      },
+      "windows": [
+        {
+          "id": 22395,
+          "layer": 0,
+          "name": "standard-cache-pressure.mp4",
+          "bounds": {
+            "X": 42,
+            "Height": 1013,
+            "Y": 33,
+            "Width": 1680
+          }
+        }
+      ],
+      "fresh_pause": {
+        "state": "pause",
+        "media_time_seconds": 0,
+        "counters": {
+          "video decoded": 19,
+          "frames displayed": 1,
+          "frames lost": 0,
+          "audio decoded": 30,
+          "buffers played": 15,
+          "buffers lost": 0
+        }
+      }
+    }
+  ],
+  "before": {
+    "media": "37e1e1ebf58d44d0a38f4ac3f6f621dca2547307f9429a404bfccfd475d94c84",
+    "prototype_source": "4c8170c228906dfc5ec24d05e9c5c806534d10fa35a6a76f49c7a933cc4506c5",
+    "pointer": "bfc48a37b90fc9aefda36735b36f9c239dea1f3c021046f7039d9e29691abd8e",
+    "recorder": "350cb66905f29529392cad3da76d15da363a8cd60be52cbd810131355f2f6207",
+    "runner": "7a5ca2a20a7313cda6d22c820ca636cdc54e85adf29cd6d7497f54ebf9e40c8e",
+    "app_tree": "147859ff582886c89d23043f20b1ee3f403a0ce679c089d2112dbd12dc305222"
+  },
+  "geometry": {
+    "slider_rect": [
+      208.0,
+      1020.0,
+      1330.0,
+      16.0
+    ],
+    "focus": {
+      "window_position": [
+        42,
+        33
+      ],
+      "focused_role": "AXWindow",
+      "app_active": true,
+      "window_size": [
+        1680,
+        1013
+      ]
+    },
+    "ax_inventory": "window_index 0\nslider 208.000 1020.000 1330.000 16.000 value 0 title Position\nslider 1612.000 1021.000 50.000 14.000 value 256 title \n"
+  },
+  "collection_error": "One visible stable-strip host required",
+  "recorder_exit_code": 0,
+  "after": {
+    "media": "37e1e1ebf58d44d0a38f4ac3f6f621dca2547307f9429a404bfccfd475d94c84",
+    "prototype_source": "4c8170c228906dfc5ec24d05e9c5c806534d10fa35a6a76f49c7a933cc4506c5",
+    "pointer": "bfc48a37b90fc9aefda36735b36f9c239dea1f3c021046f7039d9e29691abd8e",
+    "recorder": "350cb66905f29529392cad3da76d15da363a8cd60be52cbd810131355f2f6207",
+    "runner": "7a5ca2a20a7313cda6d22c820ca636cdc54e85adf29cd6d7497f54ebf9e40c8e",
+    "app_tree": "147859ff582886c89d23043f20b1ee3f403a0ce679c089d2112dbd12dc305222"
+  },
+  "integrity_unchanged": true,
+  "finished": {
+    "unix_s": 1791182155.0520508,
+    "monotonic_s": 941579.075391833
+  }
+}

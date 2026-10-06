@@ -1,0 +1,308 @@
+{
+  "schema_version": 1,
+  "revision": "6de05adcbaf2e8b85fe86aad4169393098628119",
+  "scope": "Configured default make check plus top-level check-am after recursion stopped at TLS. Disabled checkall extras and native GUI behavior are not covered.",
+  "counts": {
+    "PASS": 51,
+    "SKIP": 1,
+    "FAIL": 1,
+    "ERROR": 0
+  },
+  "total": 53,
+  "suite_passed": false,
+  "run": {
+    "command": [
+      "make",
+      "-C",
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64",
+      "-j4",
+      "check"
+    ],
+    "scope": "Configured upstream default suite; no disabled checkall/network extras enabled",
+    "started_utc": "2026-10-04T21:51:14Z",
+    "module_sha256_before": "444e2b06959729cb7aa7df1ce85b52c35d1fc54a63427b1c267ce6986d02434f",
+    "pinned_revision": "6de05adcbaf2e8b85fe86aad4169393098628119",
+    "exit_code": 2,
+    "module_sha256_after": "444e2b06959729cb7aa7df1ce85b52c35d1fc54a63427b1c267ce6986d02434f",
+    "module_unchanged": true,
+    "finished_utc": "2026-10-04T21:51:53Z"
+  },
+  "top_level": {
+    "command": [
+      "make",
+      "-C",
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64",
+      "check-am"
+    ],
+    "returncode": 0
+  },
+  "baseline_tls": {
+    "scope": "Same upstream test executable with saved pre-feature baseline core/libvlc and TLS modules; no GUI module used",
+    "executable_sha256": "0283501eead74c631319195576841338855b74636fd5ca5722694022b3695196",
+    "binary_comparisons": {
+      "lib/libvlc.5.dylib": {
+        "baseline": "23160704d1fb17d70fcbe9575bad1e9d38c282ec7d385a5eaf71baec29541141",
+        "feature": "23160704d1fb17d70fcbe9575bad1e9d38c282ec7d385a5eaf71baec29541141",
+        "identical": true
+      },
+      "lib/libvlccore.9.dylib": {
+        "baseline": "4dbd36d5bfeacfc8b980d525a77aa840941ecfb4f54b4668f154fd31023690e9",
+        "feature": "4dbd36d5bfeacfc8b980d525a77aa840941ecfb4f54b4668f154fd31023690e9",
+        "identical": true
+      },
+      "plugins/libgnutls_plugin.dylib": {
+        "baseline": "e86361984215fdd07885d248caa002ab06d641bcc2f38b1e7af14115ef83a6c2",
+        "feature": "e86361984215fdd07885d248caa002ab06d641bcc2f38b1e7af14115ef83a6c2",
+        "identical": true
+      },
+      "plugins/libsecuretransport_plugin.dylib": {
+        "baseline": "c11d43d670ce2edb6c14fa334b3dbd04609807829094593458df8829c92e1f6e",
+        "feature": "c11d43d670ce2edb6c14fa334b3dbd04609807829094593458df8829c92e1f6e",
+        "identical": true
+      }
+    },
+    "returncode": -6,
+    "baseline_libvlc_loaded": true,
+    "baseline_core_loaded": true,
+    "baseline_securetransport_loaded": true,
+    "baseline_gnutls_loaded": true,
+    "same_assertion": true
+  },
+  "skip": "test_url returns77 when URL-host conversion encounters ENOSYS (url.c:129).",
+  "failure": "test_modules_tls asserts tls!=NULL at tls.c:182 during trusted-certificate handshake. Same failure with saved baseline binaries, verified by dyld logs; exact backend/trust cause remains unqualified.",
+  "directories": [
+    {
+      "directory": "src",
+      "tests": [
+        {
+          "test": "test_headers",
+          "result": "PASS"
+        },
+        {
+          "test": "test_interrupt",
+          "result": "PASS"
+        },
+        {
+          "test": "test_dictionary",
+          "result": "PASS"
+        },
+        {
+          "test": "test_timer",
+          "result": "PASS"
+        },
+        {
+          "test": "test_block",
+          "result": "PASS"
+        },
+        {
+          "test": "test_sort",
+          "result": "PASS"
+        },
+        {
+          "test": "test_i18n_atof",
+          "result": "PASS"
+        },
+        {
+          "test": "test_md5",
+          "result": "PASS"
+        },
+        {
+          "test": "test_xmlent",
+          "result": "PASS"
+        },
+        {
+          "test": "test_mrl_helpers",
+          "result": "PASS"
+        },
+        {
+          "test": "test_url",
+          "result": "SKIP"
+        },
+        {
+          "test": "check_symbols",
+          "result": "PASS"
+        },
+        {
+          "test": "test_utf8",
+          "result": "PASS"
+        },
+        {
+          "test": "test_picture_pool",
+          "result": "PASS"
+        }
+      ]
+    },
+    {
+      "directory": "modules",
+      "tests": [
+        {
+          "test": "h2frame_test",
+          "result": "PASS"
+        },
+        {
+          "test": "srtp-test-aes",
+          "result": "PASS"
+        },
+        {
+          "test": "h1conn_test",
+          "result": "PASS"
+        },
+        {
+          "test": "http_file_test",
+          "result": "PASS"
+        },
+        {
+          "test": "http_msg_test",
+          "result": "PASS"
+        },
+        {
+          "test": "chroma_copy_test",
+          "result": "PASS"
+        },
+        {
+          "test": "http_tunnel_test",
+          "result": "PASS"
+        },
+        {
+          "test": "hpack_test",
+          "result": "PASS"
+        },
+        {
+          "test": "h2output_test",
+          "result": "PASS"
+        },
+        {
+          "test": "adaptive_test",
+          "result": "PASS"
+        },
+        {
+          "test": "h1chunked_test",
+          "result": "PASS"
+        },
+        {
+          "test": "hpackenc_test",
+          "result": "PASS"
+        },
+        {
+          "test": "srtp-test-recv",
+          "result": "PASS"
+        },
+        {
+          "test": "h2conn_test",
+          "result": "PASS"
+        }
+      ]
+    },
+    {
+      "directory": "test",
+      "tests": [
+        {
+          "test": "test_libvlc_media_player",
+          "result": "PASS"
+        },
+        {
+          "test": "test_src_misc_bits",
+          "result": "PASS"
+        },
+        {
+          "test": "test_libvlc_slaves",
+          "result": "PASS"
+        },
+        {
+          "test": "test_src_interface_dialog",
+          "result": "PASS"
+        },
+        {
+          "test": "test_modules_tls",
+          "result": "FAIL"
+        },
+        {
+          "test": "check_POTFILES.sh",
+          "result": "PASS"
+        },
+        {
+          "test": "test_src_input_stream_fifo",
+          "result": "PASS"
+        },
+        {
+          "test": "test_libvlc_equalizer",
+          "result": "PASS"
+        },
+        {
+          "test": "test_src_misc_epg",
+          "result": "PASS"
+        },
+        {
+          "test": "test_src_misc_keystore",
+          "result": "PASS"
+        },
+        {
+          "test": "test_libvlc_media",
+          "result": "PASS"
+        },
+        {
+          "test": "test_libvlc_core",
+          "result": "PASS"
+        },
+        {
+          "test": "test_src_input_stream",
+          "result": "PASS"
+        },
+        {
+          "test": "test_modules_keystore",
+          "result": "PASS"
+        },
+        {
+          "test": "test_modules_demux_ts_pes",
+          "result": "PASS"
+        },
+        {
+          "test": "test_libvlc_media_list",
+          "result": "PASS"
+        },
+        {
+          "test": "test_libvlc_renderer_discoverer",
+          "result": "PASS"
+        },
+        {
+          "test": "test_libvlc_media_discoverer",
+          "result": "PASS"
+        },
+        {
+          "test": "test_modules_demux_libmp4",
+          "result": "PASS"
+        },
+        {
+          "test": "test_modules_packetizer_hxxx",
+          "result": "PASS"
+        },
+        {
+          "test": "test_src_config_chain",
+          "result": "PASS"
+        },
+        {
+          "test": "test_modules_demux_timestamps",
+          "result": "PASS"
+        },
+        {
+          "test": "test_src_misc_variables",
+          "result": "PASS"
+        },
+        {
+          "test": "test_src_misc_renderer_discovery",
+          "result": "PASS"
+        }
+      ]
+    },
+    {
+      "directory": "top-level",
+      "tests": [
+        {
+          "test": "run_vlc.sh",
+          "result": "PASS"
+        }
+      ]
+    }
+  ],
+  "raw_evidence": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/upstream-check-001"
+}

@@ -1,0 +1,6 @@
+{
+  "helper_output_absent_during_check": true,
+  "check_exit": 0,
+  "output": "Preflight passed: pinned checkout, existing arm64 app, owned paths, stopped app, free space.\n",
+  "restoration": "finally restores the same owned helper; no installed app changed"
+}

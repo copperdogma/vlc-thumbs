@@ -1,0 +1,54 @@
+{
+  "schema": 1,
+  "source_analysis": "work/validation/story002/playback-cadence-16ms-001/analysis.json",
+  "source_invocation": "work/validation/story002/playback-cadence-16ms-001/invocation.json",
+  "candidate_manifest": "app-build-controller-16ms-experiment-132643.json",
+  "scope": "Three fresh matched 60-second standard.mp4 main-window playback pairs on frozen candidate 132643, with baseline/feature order alternating. Timeline diagnostics were disabled; this is playback integrity evidence, not visible-hover or latency qualification.",
+  "collection": {
+    "all_six_complete_and_pair_eligible": true,
+    "source_hash_unchanged_all_six": true,
+    "matched_fixture_settings_all_three_pairs": true,
+    "diagnostics_cohort": "disabled",
+    "pair_order": [
+      "baseline-feature",
+      "feature-baseline",
+      "baseline-feature"
+    ],
+    "paired_dropped_frame_increase_within_one_percentage_point": true
+  },
+  "pairs": [
+    {
+      "pair": 1,
+      "lost_picture_rate_increase_percentage_points": -1.9642043541,
+      "baseline_unchanged_roi_candidates_over_100ms": 12,
+      "feature_unchanged_roi_candidates_over_100ms": 13
+    },
+    {
+      "pair": 2,
+      "lost_picture_rate_increase_percentage_points": 0.7833709482,
+      "baseline_unchanged_roi_candidates_over_100ms": 14,
+      "feature_unchanged_roi_candidates_over_100ms": 14
+    },
+    {
+      "pair": 3,
+      "lost_picture_rate_increase_percentage_points": -5.905171793,
+      "baseline_unchanged_roi_candidates_over_100ms": 27,
+      "feature_unchanged_roi_candidates_over_100ms": 6
+    }
+  ],
+  "playback_observations": {
+    "final_state_all_six": "Final observed pause at whole-second media time59 near the end of each60second collection; not proof of the exact cause or tiny-seek absence",
+    "interior_digital_audio_below_threshold_duration_seconds_all_six": 0,
+    "source_integrity": "Preserved in all six collections",
+    "successful_pointer_moves_per_run": 80,
+    "failed_pointer_moves_all_six": 0,
+    "timeline_diagnostics": "disabled; no preview-delivery count inferred"
+  },
+  "interpretation": "Numerical matched playback evidence only. The unchanged-ROI detector labels these intervals as candidates, not VLC-attributed stalls; candidates occur in both arms. There is no causal stall attribution or automatic pass/fail. RC time is whole seconds and does not exclude small seeks. The run establishes no hover correspondence, no visible-preview behavior, and no latency percentile.",
+  "limitations": [
+    "Screen repetition is not proof of a playback stall; capture gaps and attribution remain separate.",
+    "Three-pair aggregate or per-pair numbers do not establish a general host guarantee.",
+    "The run does not replace native control/accessibility or feature-visible hover evidence.",
+    "Resource sampling is diagnostic and does not enforce worker/cache bounds."
+  ]
+}

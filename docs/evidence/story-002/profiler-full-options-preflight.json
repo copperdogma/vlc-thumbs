@@ -1,0 +1,24 @@
+{
+  "scope": "Full generated option-schema read/record preflight on newly owned idle Python child, not VLC/UI latency",
+  "owned_pid": 37429,
+  "started_monotonic": 934603.764207708,
+  "argv": [
+    "xcrun",
+    "xctrace",
+    "record",
+    "--template",
+    "Time Profiler",
+    "--attach",
+    "37429",
+    "--time-limit",
+    "100ms",
+    "--recording-options",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/xctrace-full-recording-options.json",
+    "--no-prompt",
+    "--output",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/xctrace-options-preflight-001/options-test.trace"
+  ],
+  "returncode": 0,
+  "owned_child_returncode": -15,
+  "finished_monotonic": 934610.286535208
+}

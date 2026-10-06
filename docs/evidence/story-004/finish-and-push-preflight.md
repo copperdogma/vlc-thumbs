@@ -1,0 +1,11 @@
+# Thumbnail source landing preflight — 2026-10-05
+
+Scope: this independent VLC repository only, completed Stories001/002/004, their source/build/test/provenance and reviewed planned003/inbox documentation. Neighboring projects and other task worktrees are excluded. Existing remote workflow/history/upstream-contribution inbox commits are retained during integration. No public binary release or private media is included.
+
+The final001728 build input hashes still match every current runtime/patch/build input. Reuse applicable cache3410/service40/helper/count/source-identity proof, final10/10NAS pointer images,20/arm baseline comparison and3matched playback pairs; no implementation changes since that qualification. Native delivered normal-profile image and component/signature parity already verified. Limits remain in current acceptance ledger. New close-out edits only redact a mount name and add source-license notices/copy; no app rebuild warranted.
+
+Publication inventory: all tracked changes and400nonignored files reviewed,36.7MiB approximate evidence/source inventory, nine inspected synthetic-fixture screenshots. No credentials/private movie paths/video/executable/dependency archives. Ignored work/build/media remains local. New source GPL notices/text and VLC/FFmpeg patch provenance/license text included. Assembled-app dependency redistribution remains deferred.
+
+Checks: `git status --short`, `git diff --stat`, `git diff`, untracked inventory, qualified input SHA256 comparison, passing final artifact flags; `make validate` and `git diff --check`. Clean integration with latest origin/main will repeat methodology/source-record checks after resolving only affected documentation. Original validation and correction reviews remain the runtime-review authority; another unchanged-code review would add no coverage. Story004 is already closed; no duplicate closure/changelog or product-suite rerun.
+
+Candidate commits, exact destination and verified landing results are retained in ignored `work/validation/story004/finish-and-push-result.json` and reported to Cam after remote confirmation. No cleanup requested; retain task branches/worktrees and useful ignored build artifacts.

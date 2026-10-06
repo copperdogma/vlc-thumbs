@@ -1,0 +1,354 @@
+{
+  "candidate_manifest": "docs/evidence/story-002/app-build-original-presentation-restored-012354.json",
+  "scope": "Physical timeline click/CG drag, isolated wheel and keyboard seeking, keyboard volume decrement, expanded-target/endpoints/leave check. Native CG actions verify owned active PID. Host records lifecycle only; passed=false is not the behavior verdict. Folder drawing name predates restoration; candidate is012354.",
+  "controls": {
+    "after-click": {
+      "state": "pause",
+      "media_time_seconds": 53,
+      "counters": {
+        "video decoded": 54,
+        "frames displayed": 3,
+        "frames lost": 0,
+        "audio decoded": 30,
+        "buffers played": 15,
+        "buffers lost": 0
+      }
+    },
+    "after-native-drag": {
+      "state": "pause",
+      "media_time_seconds": 29,
+      "counters": {
+        "video decoded": 940,
+        "frames displayed": 989,
+        "frames lost": 0,
+        "audio decoded": 30,
+        "buffers played": 15,
+        "buffers lost": 0
+      }
+    },
+    "wheel-isolated": {
+      "state": "pause",
+      "media_time_seconds": 45,
+      "counters": {
+        "video decoded": 1014,
+        "frames displayed": 1113,
+        "frames lost": 0,
+        "audio decoded": 30,
+        "buffers played": 15,
+        "buffers lost": 0
+      }
+    },
+    "keyboard-isolated": {
+      "state": "pause",
+      "media_time_seconds": 55,
+      "counters": {
+        "video decoded": 1085,
+        "frames displayed": 1453,
+        "frames lost": 0,
+        "audio decoded": 30,
+        "buffers played": 15,
+        "buffers lost": 0
+      }
+    }
+  },
+  "volume_before": 256,
+  "volume_after": 243,
+  "hover": [
+    {
+      "label": "above",
+      "pointer": {
+        "requested": [
+          800.0,
+          1014.0
+        ],
+        "pointer": [
+          800.0,
+          1014.0
+        ]
+      },
+      "focus": {
+        "window_position": [
+          42,
+          33
+        ],
+        "focused_role": "AXWindow",
+        "app_active": true,
+        "window_size": [
+          1680,
+          1013
+        ]
+      },
+      "ax": "window_index 0\nwindow_index 1\nslider 208.000 1020.000 1330.000 16.000 value 6124.17626953125 title Position\nslider 1612.000 1021.000 50.000 14.000 value 243 title \n",
+      "windows": [
+        {
+          "id": 20735,
+          "layer": 3,
+          "name": "",
+          "bounds": {
+            "X": 632,
+            "Height": 224,
+            "Y": 785,
+            "Width": 336
+          }
+        },
+        {
+          "id": 20753,
+          "layer": 0,
+          "name": "Window",
+          "bounds": {
+            "X": 48,
+            "Height": 20,
+            "Y": 39,
+            "Width": 66
+          }
+        },
+        {
+          "id": 20736,
+          "layer": 0,
+          "name": "standard-cache-pressure.mp4",
+          "bounds": {
+            "X": 42,
+            "Height": 1013,
+            "Y": 33,
+            "Width": 1680
+          }
+        }
+      ]
+    },
+    {
+      "label": "below",
+      "pointer": {
+        "requested": [
+          1100.0,
+          1042.0
+        ],
+        "pointer": [
+          1100.0,
+          1042.0
+        ]
+      },
+      "focus": {
+        "window_position": [
+          42,
+          33
+        ],
+        "focused_role": "AXWindow",
+        "app_active": true,
+        "window_size": [
+          1680,
+          1013
+        ]
+      },
+      "ax": "window_index 0\nwindow_index 1\nslider 208.000 1020.000 1330.000 16.000 value 6124.17626953125 title Position\nslider 1612.000 1021.000 50.000 14.000 value 243 title \n",
+      "windows": [
+        {
+          "id": 20735,
+          "layer": 3,
+          "name": "",
+          "bounds": {
+            "X": 932,
+            "Height": 224,
+            "Y": 785,
+            "Width": 336
+          }
+        },
+        {
+          "id": 20753,
+          "layer": 0,
+          "name": "Window",
+          "bounds": {
+            "X": 48,
+            "Height": 20,
+            "Y": 39,
+            "Width": 66
+          }
+        },
+        {
+          "id": 20736,
+          "layer": 0,
+          "name": "standard-cache-pressure.mp4",
+          "bounds": {
+            "X": 42,
+            "Height": 1013,
+            "Y": 33,
+            "Width": 1680
+          }
+        }
+      ]
+    },
+    {
+      "label": "left-end",
+      "pointer": {
+        "requested": [
+          210.0,
+          1028.0
+        ],
+        "pointer": [
+          210.0,
+          1028.0
+        ]
+      },
+      "focus": {
+        "window_position": [
+          42,
+          33
+        ],
+        "focused_role": "AXWindow",
+        "app_active": true,
+        "window_size": [
+          1680,
+          1013
+        ]
+      },
+      "ax": "window_index 0\nwindow_index 1\nslider 208.000 1020.000 1330.000 16.000 value 6124.17626953125 title Position\nslider 1612.000 1021.000 50.000 14.000 value 243 title \n",
+      "windows": [
+        {
+          "id": 20735,
+          "layer": 3,
+          "name": "",
+          "bounds": {
+            "X": 42,
+            "Height": 224,
+            "Y": 785,
+            "Width": 336
+          }
+        },
+        {
+          "id": 20753,
+          "layer": 0,
+          "name": "Window",
+          "bounds": {
+            "X": 48,
+            "Height": 20,
+            "Y": 39,
+            "Width": 66
+          }
+        },
+        {
+          "id": 20736,
+          "layer": 0,
+          "name": "standard-cache-pressure.mp4",
+          "bounds": {
+            "X": 42,
+            "Height": 1013,
+            "Y": 33,
+            "Width": 1680
+          }
+        }
+      ]
+    },
+    {
+      "label": "right-end",
+      "pointer": {
+        "requested": [
+          1536.0,
+          1028.0
+        ],
+        "pointer": [
+          1536.0,
+          1028.0
+        ]
+      },
+      "focus": {
+        "window_position": [
+          42,
+          33
+        ],
+        "focused_role": "AXWindow",
+        "app_active": true,
+        "window_size": [
+          1680,
+          1013
+        ]
+      },
+      "ax": "window_index 0\nwindow_index 1\nslider 208.000 1020.000 1330.000 16.000 value 6124.17626953125 title Position\nslider 1612.000 1021.000 50.000 14.000 value 243 title \n",
+      "windows": [
+        {
+          "id": 20735,
+          "layer": 3,
+          "name": "",
+          "bounds": {
+            "X": 1368,
+            "Height": 224,
+            "Y": 785,
+            "Width": 336
+          }
+        },
+        {
+          "id": 20753,
+          "layer": 0,
+          "name": "Window",
+          "bounds": {
+            "X": 48,
+            "Height": 20,
+            "Y": 39,
+            "Width": 66
+          }
+        },
+        {
+          "id": 20736,
+          "layer": 0,
+          "name": "standard-cache-pressure.mp4",
+          "bounds": {
+            "X": 42,
+            "Height": 1013,
+            "Y": 33,
+            "Width": 1680
+          }
+        }
+      ]
+    },
+    {
+      "label": "leave",
+      "pointer": {
+        "requested": [
+          1000.0,
+          700.0
+        ],
+        "pointer": [
+          1000.0,
+          700.0
+        ]
+      },
+      "focus": {
+        "window_position": [
+          42,
+          33
+        ],
+        "focused_role": "AXWindow",
+        "app_active": true,
+        "window_size": [
+          1680,
+          1013
+        ]
+      },
+      "ax": "window_index 0\nwindow_index 1\nslider 208.000 1020.000 1330.000 16.000 value 6124.17626953125 title Position\nslider 1612.000 1021.000 50.000 14.000 value 243 title \n",
+      "windows": [
+        {
+          "id": 20753,
+          "layer": 0,
+          "name": "Window",
+          "bounds": {
+            "X": 48,
+            "Height": 20,
+            "Y": 39,
+            "Width": 66
+          }
+        },
+        {
+          "id": 20736,
+          "layer": 0,
+          "name": "standard-cache-pressure.mp4",
+          "bounds": {
+            "X": 42,
+            "Height": 1013,
+            "Y": 33,
+            "Width": 1680
+          }
+        }
+      ]
+    }
+  ],
+  "source_unchanged": true,
+  "excluded_sky_drag": "No time or AX change from Sky drag; retained after-drag snapshot, replaced with guarded native CG drag. Initial combined wheel/keyboard snapshot not used to qualify isolated actions."
+}

@@ -1,0 +1,137 @@
+[
+  {
+    "argv": [
+      "pkg-config",
+      "--static",
+      "--cflags",
+      "--libs",
+      "libavformat",
+      "libavcodec",
+      "libavutil",
+      "libswscale"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 0.19067791593261063,
+    "stdout": "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include -L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib -lavformat -lavcodec -pthread -lm -framework AudioToolbox -lgsm -lmp3lame -lm -L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib -lopenjp2 -lm -L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib -lz -lswscale -lavutil -lm -lz -framework CoreFoundation -framework CoreVideo -framework CoreMedia -pthread\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "xcrun",
+      "clang",
+      "-arch",
+      "arm64",
+      "-mmacosx-version-min=11.0",
+      "-Os",
+      "-Wl,-dead_strip",
+      "-Wl,-S",
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/probes/thumbnail-plan/libav-probe.c",
+      "-o",
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/probes/thumbnail-plan/libav-probe",
+      "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include",
+      "-L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib",
+      "-lavformat",
+      "-lavcodec",
+      "-pthread",
+      "-lm",
+      "-framework",
+      "AudioToolbox",
+      "-lgsm",
+      "-lmp3lame",
+      "-lm",
+      "-L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib",
+      "-lopenjp2",
+      "-lm",
+      "-L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib",
+      "-lz",
+      "-lswscale",
+      "-lavutil",
+      "-lm",
+      "-lz",
+      "-framework",
+      "CoreFoundation",
+      "-framework",
+      "CoreVideo",
+      "-framework",
+      "CoreMedia",
+      "-pthread"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 0.4261355840135366,
+    "stdout": "",
+    "stderr": "ld: warning: ignoring duplicate libraries: '-lm', '-lz'\n"
+  },
+  {
+    "argv": [
+      "strip",
+      "-x",
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/probes/thumbnail-plan/libav-probe"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 0.031390583026222885,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/probes/thumbnail-plan/libav-probe",
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/probes/thumbnail-plan/known-h264.mp4"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 0.485670082969591,
+    "stdout": "{\"version\":\"8.1.2\",\"license\":\"LGPL version 2.1 or later\",\"decoder\":\"h264\",\"time_base\":[1,12288],\"stream_start\":0,\"open_ms\":2.351,\"requests\":[{\"requested_seconds\":0.500000,\"seek_result\":0,\"success\":true,\"decoded_frames\":13,\"best_effort_timestamp\":6144,\"actual_seconds\":0.500000000,\"elapsed_ms\":2.597,\"width\":320,\"height\":180,\"scaled_rows\":180,\"rgb_md5\":\"b33364ec9e29dc1a82c0c1779a42e44b\"},{\"requested_seconds\":7.250000,\"seek_result\":0,\"success\":true,\"decoded_frames\":31,\"best_effort_timestamp\":89088,\"actual_seconds\":7.250000000,\"elapsed_ms\":5.138,\"width\":320,\"height\":180,\"scaled_rows\":180,\"rgb_md5\":\"6876e9dd36153164c72029a0aab59cac\"},{\"requested_seconds\":2.300000,\"seek_result\":0,\"success\":true,\"decoded_frames\":9,\"best_effort_timestamp\":28672,\"actual_seconds\":2.333333333,\"elapsed_ms\":1.922,\"width\":320,\"height\":180,\"scaled_rows\":180,\"rgb_md5\":\"c0fe8215bde948affdb41919c03c932e\"},{\"requested_seconds\":6.750000,\"seek_result\":0,\"success\":true,\"decoded_frames\":19,\"best_effort_timestamp\":82944,\"actual_seconds\":6.750000000,\"elapsed_ms\":3.357,\"width\":320,\"height\":180,\"scaled_rows\":180,\"rgb_md5\":\"f7084263e9d9ef25a8df314b485b7fca\"},{\"requested_seconds\":2.300000,\"seek_result\":0,\"success\":true,\"decoded_frames\":9,\"best_effort_timestamp\":28672,\"actual_seconds\":2.333333333,\"elapsed_ms\":1.814,\"width\":320,\"height\":180,\"scaled_rows\":180,\"rgb_md5\":\"c0fe8215bde948affdb41919c03c932e\"}]}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/probes/thumbnail-plan/libav-probe",
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/probes/thumbnail-plan/known-h264.mkv"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 0.020950166042894125,
+    "stdout": "{\"version\":\"8.1.2\",\"license\":\"LGPL version 2.1 or later\",\"decoder\":\"h264\",\"time_base\":[1,1000],\"stream_start\":0,\"open_ms\":0.733,\"requests\":[{\"requested_seconds\":0.500000,\"seek_result\":0,\"success\":true,\"decoded_frames\":13,\"best_effort_timestamp\":500,\"actual_seconds\":0.500000000,\"elapsed_ms\":2.382,\"width\":320,\"height\":180,\"scaled_rows\":180,\"rgb_md5\":\"b33364ec9e29dc1a82c0c1779a42e44b\"},{\"requested_seconds\":7.250000,\"seek_result\":0,\"success\":true,\"decoded_frames\":31,\"best_effort_timestamp\":7250,\"actual_seconds\":7.250000000,\"elapsed_ms\":4.656,\"width\":320,\"height\":180,\"scaled_rows\":180,\"rgb_md5\":\"6876e9dd36153164c72029a0aab59cac\"},{\"requested_seconds\":2.300000,\"seek_result\":0,\"success\":true,\"decoded_frames\":9,\"best_effort_timestamp\":2333,\"actual_seconds\":2.333000000,\"elapsed_ms\":1.819,\"width\":320,\"height\":180,\"scaled_rows\":180,\"rgb_md5\":\"c0fe8215bde948affdb41919c03c932e\"},{\"requested_seconds\":6.750000,\"seek_result\":0,\"success\":true,\"decoded_frames\":19,\"best_effort_timestamp\":6750,\"actual_seconds\":6.750000000,\"elapsed_ms\":4.007,\"width\":320,\"height\":180,\"scaled_rows\":180,\"rgb_md5\":\"f7084263e9d9ef25a8df314b485b7fca\"},{\"requested_seconds\":2.300000,\"seek_result\":0,\"success\":true,\"decoded_frames\":9,\"best_effort_timestamp\":2333,\"actual_seconds\":2.333000000,\"elapsed_ms\":1.772,\"width\":320,\"height\":180,\"scaled_rows\":180,\"rgb_md5\":\"c0fe8215bde948affdb41919c03c932e\"}]}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/probes/thumbnail-plan/libav-probe",
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/build-smoke.mp4"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 0.009630208020098507,
+    "stdout": "{\"version\":\"8.1.2\",\"license\":\"LGPL version 2.1 or later\",\"decoder\":\"mpeg4\",\"time_base\":[1,12288],\"stream_start\":0,\"open_ms\":0.611,\"requests\":[{\"requested_seconds\":0.500000,\"seek_result\":0,\"success\":true,\"decoded_frames\":7,\"best_effort_timestamp\":6144,\"actual_seconds\":0.500000000,\"elapsed_ms\":0.781,\"width\":320,\"height\":180,\"scaled_rows\":180,\"rgb_md5\":\"6327f43cfa2b1922263ea29f3b1a0441\"},{\"requested_seconds\":2.250000,\"seek_result\":0,\"success\":true,\"decoded_frames\":4,\"best_effort_timestamp\":27648,\"actual_seconds\":2.250000000,\"elapsed_ms\":0.585,\"width\":320,\"height\":180,\"scaled_rows\":180,\"rgb_md5\":\"3472aea0cf4c7f18e0ced091a9ea047c\"},{\"requested_seconds\":1.300000,\"seek_result\":0,\"success\":true,\"decoded_frames\":5,\"best_effort_timestamp\":16384,\"actual_seconds\":1.333333333,\"elapsed_ms\":0.560,\"width\":320,\"height\":180,\"scaled_rows\":180,\"rgb_md5\":\"204cdb9e046f6677205c4c4dab6f41d3\"},{\"requested_seconds\":1.750000,\"seek_result\":0,\"success\":true,\"decoded_frames\":10,\"best_effort_timestamp\":21504,\"actual_seconds\":1.750000000,\"elapsed_ms\":0.654,\"width\":320,\"height\":180,\"scaled_rows\":180,\"rgb_md5\":\"1fe7704c2bc171d0f631170cc375c122\"},{\"requested_seconds\":1.300000,\"seek_result\":0,\"success\":true,\"decoded_frames\":5,\"best_effort_timestamp\":16384,\"actual_seconds\":1.333333333,\"elapsed_ms\":0.430,\"width\":320,\"height\":180,\"scaled_rows\":180,\"rgb_md5\":\"204cdb9e046f6677205c4c4dab6f41d3\"}]}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "otool",
+      "-L",
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/probes/thumbnail-plan/libav-probe"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 0.013775166007690132,
+    "stdout": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/probes/thumbnail-plan/libav-probe:\n\t/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1359.0.0)\n\t/System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox (compatibility version 1.0.0, current version 1000.0.0)\n\t/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 5027.0.69)\n\t/System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo (compatibility version 1.2.0, current version 758.27.0)\n\t/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia (compatibility version 1.0.0, current version 3350.77.5)\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "otool",
+      "-l",
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/probes/thumbnail-plan/libav-probe"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 0.014297834015451372,
+    "stdout": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/probes/thumbnail-plan/libav-probe:\nLoad command 0\n      cmd LC_SEGMENT_64\n  cmdsize 72\n  segname __PAGEZERO\n   vmaddr 0x0000000000000000\n   vmsize 0x0000000100000000\n  fileoff 0\n filesize 0\n  maxprot 0x00000000\n initprot 0x00000000\n   nsects 0\n    flags 0x0\nLoad command 1\n      cmd LC_SEGMENT_64\n  cmdsize 712\n  segname __TEXT\n   vmaddr 0x0000000100000000\n   vmsize 0x0000000000f3c000\n  fileoff 0\n filesize 15974400\n  maxprot 0x00000005\n initprot 0x00000005\n   nsects 8\n    flags 0x0\nSection\n  sectname __text\n   segname __TEXT\n      addr 0x0000000100000940\n      size 0x0000000000c1e5cc\n    offset 2368\n     align 2^5 (32)\n    reloff 0\n    nreloc 0\n     flags 0x80000400\n reserved1 0\n reserved2 0\nSection\n  sectname __stubs\n   segname __TEXT\n      addr 0x0000000100c1ef0c\n      size 0x000000000000081c\n    offset 12709644\n     align 2^2 (4)\n    reloff 0\n    nreloc 0\n     flags 0x80000408\n reserved1 0 (index into indirect symbol table)\n reserved2 12 (size of stubs)\nSection\n  sectname __stub_helper\n   segname __TEXT\n      addr 0x0000000100c1f728\n      size 0x0000000000000834\n    offset 12711720\n     align 2^2 (4)\n    reloff 0\n    nreloc 0\n     flags 0x80000400\n reserved1 0\n reserved2 0\nSection\n  sectname __const\n   segname __TEXT\n      addr 0x0000000100c1ff60\n      size 0x00000000002081f0\n    offset 12713824\n     align 2^4 (16)\n    reloff 0\n    nreloc 0\n     flags 0x00000000\n reserved1 0\n reserved2 0\nSection\n  sectname __cstring\n   segname __TEXT\n      addr 0x0000000100e28150\n      size 0x0000000000089f33\n    offset 14844240\n     align 2^0 (1)\n    reloff 0\n    nreloc 0\n     flags 0x00000002\n reserved1 0\n reserved2 0\nSection\n  sectname __ustring\n   segname __TEXT\n      addr 0x0000000100eb2084\n      size 0x00000000000000b2\n    offset 15409284\n     align 2^1 (2)\n    reloff 0\n    nreloc 0\n     flags 0x00000000\n reserved1 0\n reserved2 0\nSection\n  sectname __unwind_info\n   segname __TEXT\n      addr 0x0000000100eb2138\n      size 0x0000000000018a40\n    offset 15409464\n     align 2^2 (4)\n    reloff 0\n    nreloc 0\n     flags 0x00000000\n reserved1 0\n reserved2 0\nSection\n  sectname __eh_frame\n   segname __TEXT\n      addr 0x0000000100ecab78\n      size 0x000000000007115c\n    offset 15510392\n     align 2^3 (8)\n    reloff 0\n    nreloc 0\n     flags 0x6800000b\n reserved1 0\n reserved2 0\nLoad command 2\n      cmd LC_SEGMENT_64\n  cmdsize 232\n  segname __DATA_CONST\n   vmaddr 0x0000000100f3c000\n   vmsize 0x0000000000098000\n  fileoff 15974400\n filesize 622592\n  maxprot 0x00000003\n initprot 0x00000003\n   nsects 2\n    flags 0x10\nSection\n  sectname __const\n   segname __DATA_CONST\n      addr 0x0000000100f3c000\n      size 0x0000000000095a30\n    offset 15974400\n     align 2^4 (16)\n    reloff 0\n    nreloc 0\n     flags 0x00000000\n reserved1 0\n reserved2 0\nSection\n  sectname __got\n   segname __DATA_CONST\n      addr 0x0000000100fd1a30\n      size 0x0000000000000088\n    offset 16587312\n     align 2^3 (8)\n    reloff 0\n    nreloc 0\n     flags 0x00000006\n reserved1 173 (index into indirect symbol table)\n reserved2 0\nLoad command 3\n      cmd LC_SEGMENT_64\n  cmdsize 392\n  segname __DATA\n   vmaddr 0x0000000100fd4000\n   vmsize 0x0000000000804000\n  fileoff 16596992\n filesize 16384\n  maxprot 0x00000003\n initprot 0x00000003\n   nsects 4\n    flags 0x0\nSection\n  sectname __la_symbol_ptr\n   segname __DATA\n      addr 0x0000000100fd4000\n      size 0x0000000000000568\n    offset 16596992\n     align 2^3 (8)\n    reloff 0\n    nreloc 0\n     flags 0x00000007\n reserved1 190 (index into indirect symbol table)\n reserved2 0\nSection\n  sectname __data\n   segname __DATA\n      addr 0x0000000100fd4568\n      size 0x0000000000001c00\n    offset 16598376\n     align 2^3 (8)\n    reloff 0\n    nreloc 0\n     flags 0x00000000\n reserved1 0\n reserved2 0\nSection\n  sectname __bss\n   segname __DATA\n      addr 0x0000000100fd6170\n      size 0x0000000000696144\n    offset 0\n     align 2^4 (16)\n    reloff 0\n    nreloc 0\n     flags 0x00000001\n reserved1 0\n reserved2 0\nSection\n  sectname __common\n   segname __DATA\n      addr 0x000000010166c2c0\n      size 0x0000000000168ef0\n    offset 0\n     align 2^4 (16)\n    reloff 0\n    nreloc 0\n     flags 0x00000001\n reserved1 0\n reserved2 0\nLoad command 4\n      cmd LC_SEGMENT_64\n  cmdsize 72\n  segname __LINKEDIT\n   vmaddr 0x00000001017d8000\n   vmsize 0x0000000000090000\n  fileoff 16613376\n filesize 586328\n  maxprot 0x00000001\n initprot 0x00000001\n   nsects 0\n    flags 0x0\nLoad command 5\n            cmd LC_DYLD_INFO_ONLY\n        cmdsize 48\n     rebase_off 16613376\n    rebase_size 17376\n       bind_off 16630752\n      bind_size 184\n  weak_bind_off 0\n weak_bind_size 0\n  lazy_bind_off 16630936\n lazy_bind_size 3072\n     export_off 16634008\n    export_size 147016\nLoad command 6\n     cmd LC_SYMTAB\n cmdsize 24\n  symoff 16808000\n   nsyms 6594\n  stroff 16914960\n strsize 151272\nLoad command 7\n            cmd LC_DYSYMTAB\n        cmdsize 80\n      ilocalsym 0\n      nlocalsym 1\n     iextdefsym 1\n     nextdefsym 6408\n      iundefsym 6409\n      nundefsym 185\n         tocoff 0\n           ntoc 0\n      modtaboff 0\n        nmodtab 0\n   extrefsymoff 0\n    nextrefsyms 0\n indirectsymoff 16913504\n  nindirectsyms 363\n      extreloff 0\n        nextrel 0\n      locreloff 0\n        nlocrel 0\nLoad command 8\n          cmd LC_LOAD_DYLINKER\n      cmdsize 32\n         name /usr/lib/dyld (offset 12)\nLoad command 9\n     cmd LC_UUID\n cmdsize 24\n    uuid 1405CD69-7EC3-304F-A872-7A475FB5B9F6\nLoad command 10\n      cmd LC_BUILD_VERSION\n  cmdsize 32\n platform 1\n    minos 11.0\n      sdk 27.0\n   ntools 1\n     tool 3\n  version 27037.1\nLoad command 11\n      cmd LC_SOURCE_VERSION\n  cmdsize 16\n  version 0.0\nLoad command 12\n       cmd LC_MAIN\n   cmdsize 24\n  entryoff 2368\n stacksize 0\nLoad command 13\n          cmd LC_LOAD_DYLIB\n      cmdsize 56\n         name /usr/lib/libSystem.B.dylib (offset 24)\n   time stamp 2 Wed Dec 31 17:00:02 1969\n      current version 1359.0.0\ncompatibility version 1.0.0\nLoad command 14\n          cmd LC_LOAD_DYLIB\n      cmdsize 104\n         name /System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox (offset 24)\n   time stamp 2 Wed Dec 31 17:00:02 1969\n      current version 1000.0.0\ncompatibility version 1.0.0\nLoad command 15\n          cmd LC_LOAD_DYLIB\n      cmdsize 104\n         name /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (offset 24)\n   time stamp 2 Wed Dec 31 17:00:02 1969\n      current version 5027.0.69\ncompatibility version 150.0.0\nLoad command 16\n          cmd LC_LOAD_DYLIB\n      cmdsize 96\n         name /System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo (offset 24)\n   time stamp 2 Wed Dec 31 17:00:02 1969\n      current version 758.27.0\ncompatibility version 1.2.0\nLoad command 17\n          cmd LC_LOAD_DYLIB\n      cmdsize 96\n         name /System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia (offset 24)\n   time stamp 2 Wed Dec 31 17:00:02 1969\n      current version 3350.77.5\ncompatibility version 1.0.0\nLoad command 18\n      cmd LC_FUNCTION_STARTS\n  cmdsize 16\n  dataoff 16781024\n datasize 26968\nLoad command 19\n      cmd LC_DATA_IN_CODE\n  cmdsize 16\n  dataoff 16807992\n datasize 8\nLoad command 20\n      cmd LC_CODE_SIGNATURE\n  cmdsize 16\n  dataoff 17066240\n datasize 133464\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "file",
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/probes/thumbnail-plan/libav-probe"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 0.0036369169829413295,
+    "stdout": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/probes/thumbnail-plan/libav-probe: Mach-O 64-bit executable arm64\n",
+    "stderr": ""
+  }
+]

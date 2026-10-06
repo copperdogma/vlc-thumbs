@@ -1,0 +1,3 @@
+# Initial synthesis
+
+Retained libav contexts and a single bounded worker match existing dependency and isolation seams. Standard seek/flush contracts need local regression checks. Progressive subdivision has an existing mpv-thumbnailer precedent; hover plus largest-gap coverage is our adaptation. Fresh full hashes require whole-file reads; metadata plus 1 MiB sampled fingerprints offers practical but weaker freshness. Cam delegated the choice; selected metadata plus sampled verification for disposable thumbnails with that limitation retained. See ../adr.md and ../../../research/nas-thumbnail-latency.md for sources and simulation. No performance qualification is claimed.

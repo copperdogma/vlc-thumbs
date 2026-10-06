@@ -1,0 +1,42 @@
+{
+  "candidate": "app-build-tracknumber-022512.json",
+  "passed": true,
+  "scope": "Native unavailable presentation for generated multiple-program TS, no stale pixels or seek; direct installed-helper ambiguity independently confirmed",
+  "native_error_metadata": {
+    "result": {
+      "error": "malformed-reply",
+      "elapsed_ms": 86.03658329229802,
+      "requested_us": 2500000
+    },
+    "generation": "140BF8CE-D1F5-4D44-B5AB-1BDC96AB69D7-2",
+    "event": "service",
+    "monotonic": 928449.303147875
+  },
+  "visible_capture": "work/validation/story002/program-unavailable-current-001/unavailable-ready.png",
+  "visible_text": "00:02 / Preview unavailable",
+  "paused_after": {
+    "state": "pause",
+    "media_time_seconds": 0,
+    "counters": {
+      "video decoded": 28,
+      "frames displayed": 1,
+      "frames lost": 0,
+      "audio decoded": 0,
+      "buffers played": 0,
+      "buffers lost": 0
+    }
+  },
+  "source_preserved": true,
+  "installed_helper_result": {
+    "header": {
+      "version": 2,
+      "ok": false,
+      "error": "ambiguous_track_mapping"
+    },
+    "elapsed_ms": 29.220583965070546,
+    "peak_sampled_rss_kib": 15600,
+    "peak_sampled_cpu_percent": 0.0,
+    "payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "classification_limit": "Native service diagnostic returned malformed-reply rather than decode-unavailable; unavailable user-facing behavior passed. Exact service diagnostic attribution not established by this test."
+}

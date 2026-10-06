@@ -1,0 +1,22 @@
+[0000000103580180] main libvlc: Running vlc with the default interface. Use 'cvlc' to use vlc without interface.
+[000000756c6838f0] videotoolbox decoder: Using Video Toolbox to decode 'h264'
+[000000756c6838f0] videotoolbox decoder: vt cvpx chroma: 420v
+[000000756c6838f0] videotoolbox decoder: Raising max DPB to 3
+[000000756b0928f0] videotoolbox decoder: Using Video Toolbox to decode 'h264'
+[000000756b0928f0] videotoolbox decoder: vt cvpx chroma: 420v
+[000000756b0928f0] videotoolbox decoder: Raising max DPB to 3
+[000000756b0928f0] videotoolbox decoder: Using Video Toolbox to decode 'h264'
+[000000756b0928f0] videotoolbox decoder: vt cvpx chroma: 420v
+[000000756b0928f0] videotoolbox decoder: Raising max DPB to 3
+[000000756b0928f0] videotoolbox decoder: Using Video Toolbox to decode 'h264'
+[000000756b0928f0] videotoolbox decoder: vt cvpx chroma: 420v
+[000000756b0928f0] videotoolbox decoder: Raising max DPB to 3
+[000000756b0928f0] videotoolbox decoder: Using Video Toolbox to decode 'h264'
+[000000756b0928f0] videotoolbox decoder: vt cvpx chroma: 420v
+[000000756b0928f0] videotoolbox decoder: Raising max DPB to 3
+[000000756b0910f0] videotoolbox decoder: Using Video Toolbox to decode 'h264'
+[000000756b0910f0] videotoolbox decoder: vt cvpx chroma: 420v
+[000000756b0910f0] videotoolbox decoder: Raising max DPB to 3
+[000000756b0910f0] videotoolbox decoder: Using Video Toolbox to decode 'h264'
+[000000756b0910f0] videotoolbox decoder: vt cvpx chroma: 420v
+[000000756b0910f0] videotoolbox decoder: Raising max DPB to 3

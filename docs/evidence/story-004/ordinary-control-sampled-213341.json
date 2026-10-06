@@ -1,0 +1,74 @@
+{
+  "status": "valid",
+  "method": "phase AX; validated-frontmost-instance acquisition; actual pixel render; 20 per arm; AB BA BA AB",
+  "median_allowance_percent": 20,
+  "results": {
+    "baseline": {
+      "count": 20,
+      "median_ms": 41.38187499847845,
+      "min_ms": 35.68004166663741,
+      "max_ms": 45.914291662484175,
+      "samples_ms": [
+        41.127999997115694,
+        41.64295833106735,
+        42.102208331925794,
+        45.914291662484175,
+        41.72512500008452,
+        41.83079166250536,
+        40.83770832949085,
+        38.283416666672565,
+        39.52283332910156,
+        40.999833330715774,
+        35.68004166663741,
+        40.84083333509625,
+        41.67845833217143,
+        42.63558332968387,
+        41.63574999984121,
+        43.33875000156695,
+        39.2835416678281,
+        38.09937500045635,
+        41.68966666475171,
+        39.31383333110716
+      ]
+    },
+    "feature": {
+      "count": 20,
+      "median_ms": 40.68049999841605,
+      "min_ms": 35.43954166525509,
+      "max_ms": 44.66362499806564,
+      "samples_ms": [
+        35.43954166525509,
+        38.08566666702973,
+        41.17216666418244,
+        41.86695833413978,
+        36.77820833036094,
+        38.88362499856157,
+        38.15162499813596,
+        44.66362499806564,
+        36.91195833380334,
+        41.375124998012325,
+        41.62449999785167,
+        41.123625000182074,
+        41.683249997731764,
+        39.0706666657934,
+        38.851333330967464,
+        40.8531666653289,
+        41.90641666355077,
+        40.50783333150321,
+        38.28258333305712,
+        42.13562500081025
+      ]
+    }
+  },
+  "median_delta_percent": -1.6948845360153175,
+  "within_allowance": true,
+  "raw_evidence": "work/validation/story004/ordinary-control-sampled-002/summary.json",
+  "scope": "Shared-host actual rendered ordinary knob feedback; phase AX, 20 observations per arm in AB BA BA AB blocks. No completed-seek, p95, causal speedup or universal-host guarantee.",
+  "inputs_unchanged": true,
+  "retained_invalid_attempt": {
+    "path": "work/validation/story004/ordinary-control-sampled-001/summary.json",
+    "status": "invalid",
+    "error": "Frozen inputs changed",
+    "reason": "Owner changed shared native_hover_trial.py during collection; cohort discarded and rerun with frozen inputs."
+  }
+}

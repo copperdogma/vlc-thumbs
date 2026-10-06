@@ -1,0 +1,272 @@
+{
+  "schema": 1,
+  "passed": true,
+  "uid": 501,
+  "started_utc": "2026-10-04T07:41:53.411781+00:00",
+  "scope": "Native service NSImage delivery and disk recovery under actual permission denial and ENOSPC. No pointer UI or playback proof.",
+  "volume_size_bytes": 20971520,
+  "maximum_filler_bytes": 25165824,
+  "checks": {
+    "unwritable": {
+      "permission_errno": 13,
+      "fault": {
+        "phase": "fault",
+        "passed": true,
+        "first": {
+          "video_ordinal": 0,
+          "measured_ms": 18.929624930024147,
+          "payload_bytes": 230400,
+          "version": 2,
+          "width": 320,
+          "actual_us": 0,
+          "channels": 4,
+          "cache": "miss",
+          "elapsed_ms": 18.767458386719227,
+          "requested_us": 1000000,
+          "ok": true,
+          "height": 180,
+          "decoded_frames": 1,
+          "timeline_origin_us": 0,
+          "sampling": "keyframe",
+          "has_image": 1
+        },
+        "next": {
+          "video_ordinal": 0,
+          "measured_ms": 17.093374975956976,
+          "payload_bytes": 230400,
+          "version": 2,
+          "width": 320,
+          "actual_us": 2000000,
+          "channels": 4,
+          "cache": "miss",
+          "elapsed_ms": 17.00558327138424,
+          "requested_us": 2000000,
+          "ok": true,
+          "height": 180,
+          "decoded_frames": 1,
+          "timeline_origin_us": 0,
+          "sampling": "keyframe",
+          "has_image": 1
+        },
+        "disk_entries": 0,
+        "exit_status": 0
+      },
+      "recovery": {
+        "phase": "recovery",
+        "passed": true,
+        "first": {
+          "video_ordinal": 0,
+          "measured_ms": 18.882208387367427,
+          "payload_bytes": 230400,
+          "version": 2,
+          "width": 320,
+          "actual_us": 2000000,
+          "channels": 4,
+          "cache": "miss",
+          "elapsed_ms": 18.74466659501195,
+          "requested_us": 3000000,
+          "ok": true,
+          "height": 180,
+          "decoded_frames": 1,
+          "timeline_origin_us": 0,
+          "sampling": "keyframe",
+          "has_image": 1
+        },
+        "next": {
+          "video_ordinal": 0,
+          "measured_ms": 0.2646249486133456,
+          "payload_bytes": 230400,
+          "version": 2,
+          "width": 320,
+          "actual_us": 2000000,
+          "channels": 4,
+          "cache": "disk",
+          "elapsed_ms": 0.1910417340695858,
+          "requested_us": 3000000,
+          "ok": true,
+          "height": 180,
+          "decoded_frames": 1,
+          "timeline_origin_us": 0,
+          "sampling": "keyframe",
+          "has_image": 1
+        },
+        "disk_entries": 1,
+        "exit_status": 0
+      }
+    },
+    "enospc": {
+      "fill_errno": 28,
+      "filler_bytes": 20381696,
+      "available_bytes_when_full": 57344,
+      "fault": {
+        "phase": "fault",
+        "passed": true,
+        "first": {
+          "video_ordinal": 0,
+          "measured_ms": 18.99258338380605,
+          "payload_bytes": 230400,
+          "version": 2,
+          "width": 320,
+          "actual_us": 0,
+          "channels": 4,
+          "cache": "miss",
+          "elapsed_ms": 18.86862493120134,
+          "requested_us": 1000000,
+          "ok": true,
+          "height": 180,
+          "decoded_frames": 1,
+          "timeline_origin_us": 0,
+          "sampling": "keyframe",
+          "has_image": 1
+        },
+        "next": {
+          "video_ordinal": 0,
+          "measured_ms": 18.41620833147317,
+          "payload_bytes": 230400,
+          "version": 2,
+          "width": 320,
+          "actual_us": 2000000,
+          "channels": 4,
+          "cache": "miss",
+          "elapsed_ms": 18.31129170022905,
+          "requested_us": 2000000,
+          "ok": true,
+          "height": 180,
+          "decoded_frames": 1,
+          "timeline_origin_us": 0,
+          "sampling": "keyframe",
+          "has_image": 1
+        },
+        "disk_entries": 0,
+        "exit_status": 0
+      },
+      "available_bytes_after_free": 20439040,
+      "recovery": {
+        "phase": "recovery",
+        "passed": true,
+        "first": {
+          "video_ordinal": 0,
+          "measured_ms": 19.84620839357376,
+          "payload_bytes": 230400,
+          "version": 2,
+          "width": 320,
+          "actual_us": 2000000,
+          "channels": 4,
+          "cache": "miss",
+          "elapsed_ms": 19.72279162146151,
+          "requested_us": 3000000,
+          "ok": true,
+          "height": 180,
+          "decoded_frames": 1,
+          "timeline_origin_us": 0,
+          "sampling": "keyframe",
+          "has_image": 1
+        },
+        "next": {
+          "video_ordinal": 0,
+          "measured_ms": 0.25812501553446054,
+          "payload_bytes": 230400,
+          "version": 2,
+          "width": 320,
+          "actual_us": 2000000,
+          "channels": 4,
+          "cache": "disk",
+          "elapsed_ms": 0.18408335745334625,
+          "requested_us": 3000000,
+          "ok": true,
+          "height": 180,
+          "decoded_frames": 1,
+          "timeline_origin_us": 0,
+          "sampling": "keyframe",
+          "has_image": 1
+        },
+        "disk_entries": 1,
+        "exit_status": 0
+      }
+    }
+  },
+  "sha256": {
+    "src/macosx/VLCThumbnailService.m": "1e7eaec868eb4ef1020e3b672b7debdf9eaf703c64f0f5d8de2b724162e2b20e",
+    "src/macosx/VLCThumbnailService.h": "5205b25c43b7c720f8efad036f4e003b3002c70c044660171e4056be7c522bb0",
+    "tests/story-002/cache_fault_contract.m": "9c77b5822318973e001b6314be288947790cfdb07e1e08c568415aa26106f19d",
+    "scripts/test-thumbnail-cache-faults.py": "6d3203705d9934655ff5849690506bc6c43ff3d54d2b2c88c9b44ead102f5a62",
+    "work/build/thumbnail-helper/thumbnail-helper": "23fe2f7d8a04aa27f4ee4ddb098d01d2a97edfda59c3a1b2880b462fc473eaa5",
+    "work/fixtures/story-002/standard.mp4": "346784501f5764cd36a31bb187d25844f500ef958a1a97952eeca28859d5f234",
+    "tests/story-002/fake-helper.py": "908c77efcb4e3581de74faedf380d0e4a186e986f5797b8f81429ce213a8ae5e"
+  },
+  "compile": {
+    "exit_status": 0,
+    "stderr": ""
+  },
+  "contract_sha256": "47bb3f29b35359b6b74450dfee93de0ead7fff56ebee5a1ec1242ca069434ee8",
+  "identity_replacement": {
+    "passed": true,
+    "phase": "identity",
+    "seed": {
+      "video_ordinal": 0,
+      "payload_bytes": 230400,
+      "version": 2,
+      "width": 320,
+      "actual_us": 0,
+      "channels": 4,
+      "cache": "miss",
+      "elapsed_ms": 399.55945836845785,
+      "height": 180,
+      "ok": true,
+      "requested_us": 0,
+      "has_image": 1,
+      "measured_ms": 399.72662506625056,
+      "sampling": "keyframe"
+    },
+    "reopened": {
+      "video_ordinal": 0,
+      "payload_bytes": 230400,
+      "version": 2,
+      "width": 320,
+      "actual_us": 0,
+      "channels": 4,
+      "cache": "miss",
+      "elapsed_ms": 45.00024998560548,
+      "height": 180,
+      "ok": true,
+      "requested_us": 0,
+      "has_image": 1,
+      "measured_ms": 45.118916663341224,
+      "sampling": "keyframe"
+    },
+    "atomic_replacement": true,
+    "same_size_and_exact_nanosecond_mtime": true,
+    "inflight": {
+      "has_image": 0,
+      "elapsed_ms": 338.7394166784361,
+      "measured_ms": 338.8463333249092,
+      "error": "changed-or-cancelled",
+      "requested_us": 1000000
+    },
+    "exit_status": 0
+  },
+  "image_create": {
+    "exit_status": 0,
+    "stderr": "hdiutil: WARNING: 'hdiutil create -size -volname ...' is deprecated. Please use 'diskutil image create from/blank -size --volumeName ...' instead.\n"
+  },
+  "mount_verification": {
+    "image": "work/validation/story002/cache-faults/20261004T074153-411223/bounded-enospc.dmg",
+    "device": "/dev/disk4s1",
+    "mountpoint": "work/validation/story002/cache-faults/20261004T074153-411223/mount",
+    "filesystem_bytes": 20930560
+  },
+  "detach": {
+    "exit_status": 0,
+    "stderr": "hdiutil: WARNING: 'hdiutil detach ...' is deprecated. Please use 'diskutil eject ...' instead.\n"
+  },
+  "inputs_unchanged": {
+    "src/macosx/VLCThumbnailService.m": true,
+    "src/macosx/VLCThumbnailService.h": true,
+    "tests/story-002/cache_fault_contract.m": true,
+    "scripts/test-thumbnail-cache-faults.py": true,
+    "work/build/thumbnail-helper/thumbnail-helper": true,
+    "work/fixtures/story-002/standard.mp4": true,
+    "tests/story-002/fake-helper.py": true
+  },
+  "finished_utc": "2026-10-04T07:41:57.189969+00:00"
+}

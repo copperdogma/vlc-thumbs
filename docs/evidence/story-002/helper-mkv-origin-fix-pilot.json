@@ -1,0 +1,82 @@
+[
+  {
+    "header": {
+      "version": 2,
+      "ok": true,
+      "sampling": "keyframe",
+      "requested_us": 0,
+      "actual_us": 5000000,
+      "width": 320,
+      "height": 180,
+      "channels": 4,
+      "payload_bytes": 230400,
+      "video_ordinal": 0,
+      "decoded_frames": 1,
+      "timeline_origin_us": 0
+    },
+    "elapsed_ms": 403.06366700679064,
+    "peak_sampled_rss_kib": 13216,
+    "peak_sampled_cpu_percent": 0.1,
+    "payload_sha256": "a77655d0b08effa1d6bdbd17efb113847829192432eeeef972c9e3605c032c38"
+  },
+  {
+    "header": {
+      "version": 2,
+      "ok": true,
+      "sampling": "keyframe",
+      "requested_us": 6125000,
+      "actual_us": 5000000,
+      "width": 320,
+      "height": 180,
+      "channels": 4,
+      "payload_bytes": 230400,
+      "video_ordinal": 0,
+      "decoded_frames": 1,
+      "timeline_origin_us": 0
+    },
+    "elapsed_ms": 28.581042075529695,
+    "peak_sampled_rss_kib": 4688,
+    "peak_sampled_cpu_percent": 0.1,
+    "payload_sha256": "a77655d0b08effa1d6bdbd17efb113847829192432eeeef972c9e3605c032c38"
+  },
+  {
+    "header": {
+      "version": 2,
+      "ok": true,
+      "sampling": "keyframe",
+      "requested_us": 11125000,
+      "actual_us": 5000000,
+      "width": 320,
+      "height": 180,
+      "channels": 4,
+      "payload_bytes": 230400,
+      "video_ordinal": 0,
+      "decoded_frames": 1,
+      "timeline_origin_us": 0
+    },
+    "elapsed_ms": 29.188374988734722,
+    "peak_sampled_rss_kib": 13344,
+    "peak_sampled_cpu_percent": 0.0,
+    "payload_sha256": "a77655d0b08effa1d6bdbd17efb113847829192432eeeef972c9e3605c032c38"
+  },
+  {
+    "header": {
+      "version": 2,
+      "ok": true,
+      "sampling": "keyframe",
+      "requested_us": 16125000,
+      "actual_us": 15000000,
+      "width": 320,
+      "height": 180,
+      "channels": 4,
+      "payload_bytes": 230400,
+      "video_ordinal": 0,
+      "decoded_frames": 1,
+      "timeline_origin_us": 0
+    },
+    "elapsed_ms": 29.852124978788197,
+    "peak_sampled_rss_kib": 5152,
+    "peak_sampled_cpu_percent": 0.0,
+    "payload_sha256": "fe287032f839715aeaf8fa812b89e5d2118d9b2eba986968d9ae6b6defd0d04d"
+  }
+]

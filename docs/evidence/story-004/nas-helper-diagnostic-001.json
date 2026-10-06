@@ -1,0 +1,482 @@
+{
+  "scope": "Isolated helper repeated initialization and requested sample delivery, not native UI/playback or cold-NAS timing. AB then BA, OS/source cache warmth uncontrolled.",
+  "inputs": {
+    "baseline_sha256": "cbbd6784deb18501eddccf4d695dbd7b39c3ef27b14374fa34209d638d6b836f",
+    "candidate_sha256": "44a9939879205147775aa736b8e0d577cddffcc84fd1a0e737cb0645a6a7ec6a",
+    "targets_us": [
+      1493000000,
+      3200000000,
+      6000000000,
+      4600000000
+    ],
+    "helper_hashes_unchanged": true
+  },
+  "arms": [
+    {
+      "block": 0,
+      "arm": "baseline",
+      "requests": [
+        {
+          "target_us": 1493000000,
+          "elapsed_ms": 5357.6494160006405,
+          "header": {
+            "version": 2,
+            "ok": false,
+            "error": "timeout",
+            "process_exit": 1
+          },
+          "pixels_sha256": null,
+          "usable": false
+        },
+        {
+          "target_us": 3200000000,
+          "elapsed_ms": 6860.949457999595,
+          "header": {
+            "version": 2,
+            "ok": false,
+            "error": "timeout",
+            "process_exit": 1
+          },
+          "pixels_sha256": null,
+          "usable": false
+        },
+        {
+          "target_us": 6000000000,
+          "elapsed_ms": 4431.951000000481,
+          "header": {
+            "version": 2,
+            "ok": true,
+            "sampling": "keyframe",
+            "requested_us": 6000000000,
+            "actual_us": 5998409078,
+            "width": 320,
+            "height": 172,
+            "channels": 4,
+            "payload_bytes": 220160,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0,
+            "video_track_number": -1,
+            "process_exit": 0
+          },
+          "pixels_sha256": "300a6db061d391bb89132c345cf7a699c4498a99b6f4150d21ebd1ba412f3375",
+          "usable": true
+        },
+        {
+          "target_us": 4600000000,
+          "elapsed_ms": 4513.247208999019,
+          "header": {
+            "version": 2,
+            "ok": true,
+            "sampling": "keyframe",
+            "requested_us": 4600000000,
+            "actual_us": 4596425167,
+            "width": 320,
+            "height": 172,
+            "channels": 4,
+            "payload_bytes": 220160,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0,
+            "video_track_number": -1,
+            "process_exit": 0
+          },
+          "pixels_sha256": "1bd9cfe1606ffd607ade53b2fbcf6c94e6e19fabc3fe3d2fafded3a0c61bba69",
+          "usable": true
+        }
+      ],
+      "total_ms": 21165.423084001304
+    },
+    {
+      "block": 0,
+      "arm": "candidate",
+      "requests": [
+        {
+          "target_us": 1493000000,
+          "elapsed_ms": 8445.861125001102,
+          "header": {
+            "version": 3,
+            "id": 1,
+            "ok": true,
+            "sampling": "keyframe",
+            "requested_us": 1493000000,
+            "actual_us": 1488570411,
+            "width": 320,
+            "height": 172,
+            "channels": 4,
+            "payload_bytes": 220160,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0,
+            "video_track_number": -1,
+            "bytes_read": 22622762,
+            "read_calls": 529,
+            "seek_calls": 5,
+            "request_bytes_read": 16065816,
+            "request_read_calls": 382,
+            "request_seek_calls": 1,
+            "open_count": 1,
+            "operation_us": 8444212
+          },
+          "pixels_sha256": "ad9dc4574f8e0c887520df714aad38c527f9d55bb6db84130f11150b2080e67a",
+          "usable": true
+        },
+        {
+          "target_us": 3200000000,
+          "elapsed_ms": 55.65516700153239,
+          "header": {
+            "version": 3,
+            "id": 2,
+            "ok": true,
+            "sampling": "keyframe",
+            "requested_us": 3200000000,
+            "actual_us": 3199905033,
+            "width": 320,
+            "height": 172,
+            "channels": 4,
+            "payload_bytes": 220160,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0,
+            "video_track_number": -1,
+            "bytes_read": 32103574,
+            "read_calls": 727,
+            "seek_calls": 6,
+            "request_bytes_read": 9480812,
+            "request_read_calls": 198,
+            "request_seek_calls": 1,
+            "open_count": 1,
+            "operation_us": 54994
+          },
+          "pixels_sha256": "391bdb897f66147a0b108bdd4082493311fdcd909530b6a74e43ab3684206404",
+          "usable": true
+        },
+        {
+          "target_us": 6000000000,
+          "elapsed_ms": 42.87412499979837,
+          "header": {
+            "version": 3,
+            "id": 3,
+            "ok": true,
+            "sampling": "keyframe",
+            "requested_us": 6000000000,
+            "actual_us": 5998409078,
+            "width": 320,
+            "height": 172,
+            "channels": 4,
+            "payload_bytes": 220160,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0,
+            "video_track_number": -1,
+            "bytes_read": 38014795,
+            "read_calls": 872,
+            "seek_calls": 7,
+            "request_bytes_read": 5911221,
+            "request_read_calls": 145,
+            "request_seek_calls": 1,
+            "open_count": 1,
+            "operation_us": 42221
+          },
+          "pixels_sha256": "300a6db061d391bb89132c345cf7a699c4498a99b6f4150d21ebd1ba412f3375",
+          "usable": true
+        },
+        {
+          "target_us": 4600000000,
+          "elapsed_ms": 31.82391600057599,
+          "header": {
+            "version": 3,
+            "id": 4,
+            "ok": true,
+            "sampling": "keyframe",
+            "requested_us": 4600000000,
+            "actual_us": 4596425167,
+            "width": 320,
+            "height": 172,
+            "channels": 4,
+            "payload_bytes": 220160,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0,
+            "video_track_number": -1,
+            "bytes_read": 43457078,
+            "read_calls": 1030,
+            "seek_calls": 8,
+            "request_bytes_read": 5442283,
+            "request_read_calls": 158,
+            "request_seek_calls": 1,
+            "open_count": 1,
+            "operation_us": 31112
+          },
+          "pixels_sha256": "1bd9cfe1606ffd607ade53b2fbcf6c94e6e19fabc3fe3d2fafded3a0c61bba69",
+          "usable": true
+        }
+      ],
+      "startup_ms": 472.8602499999397,
+      "ready": {
+        "version": 3,
+        "type": "ready",
+        "ok": true,
+        "duration_us": 6483796000,
+        "bytes_read": 6556946,
+        "read_calls": 147,
+        "seek_calls": 4,
+        "open_count": 1,
+        "operation_us": 63017
+      },
+      "startup_or_shutdown_error": "EOF cleanup exceeded runner3s exit wait; killed. Guard fix follows this historical attempt.",
+      "total_ms": 14110.867874998803
+    },
+    {
+      "block": 1,
+      "arm": "candidate",
+      "requests": [
+        {
+          "target_us": 1493000000,
+          "elapsed_ms": 57.389333996979985,
+          "header": {
+            "version": 3,
+            "id": 1,
+            "ok": true,
+            "sampling": "keyframe",
+            "requested_us": 1493000000,
+            "actual_us": 1488570411,
+            "width": 320,
+            "height": 172,
+            "channels": 4,
+            "payload_bytes": 220160,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0,
+            "video_track_number": -1,
+            "bytes_read": 22622762,
+            "read_calls": 529,
+            "seek_calls": 5,
+            "request_bytes_read": 16065816,
+            "request_read_calls": 382,
+            "request_seek_calls": 1,
+            "open_count": 1,
+            "operation_us": 56672
+          },
+          "pixels_sha256": "ad9dc4574f8e0c887520df714aad38c527f9d55bb6db84130f11150b2080e67a",
+          "usable": true
+        },
+        {
+          "target_us": 3200000000,
+          "elapsed_ms": 50.890915998024866,
+          "header": {
+            "version": 3,
+            "id": 2,
+            "ok": true,
+            "sampling": "keyframe",
+            "requested_us": 3200000000,
+            "actual_us": 3199905033,
+            "width": 320,
+            "height": 172,
+            "channels": 4,
+            "payload_bytes": 220160,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0,
+            "video_track_number": -1,
+            "bytes_read": 32103574,
+            "read_calls": 727,
+            "seek_calls": 6,
+            "request_bytes_read": 9480812,
+            "request_read_calls": 198,
+            "request_seek_calls": 1,
+            "open_count": 1,
+            "operation_us": 50239
+          },
+          "pixels_sha256": "391bdb897f66147a0b108bdd4082493311fdcd909530b6a74e43ab3684206404",
+          "usable": true
+        },
+        {
+          "target_us": 6000000000,
+          "elapsed_ms": 41.741208002349595,
+          "header": {
+            "version": 3,
+            "id": 3,
+            "ok": true,
+            "sampling": "keyframe",
+            "requested_us": 6000000000,
+            "actual_us": 5998409078,
+            "width": 320,
+            "height": 172,
+            "channels": 4,
+            "payload_bytes": 220160,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0,
+            "video_track_number": -1,
+            "bytes_read": 38014795,
+            "read_calls": 872,
+            "seek_calls": 7,
+            "request_bytes_read": 5911221,
+            "request_read_calls": 145,
+            "request_seek_calls": 1,
+            "open_count": 1,
+            "operation_us": 41165
+          },
+          "pixels_sha256": "300a6db061d391bb89132c345cf7a699c4498a99b6f4150d21ebd1ba412f3375",
+          "usable": true
+        },
+        {
+          "target_us": 4600000000,
+          "elapsed_ms": 32.25683299751836,
+          "header": {
+            "version": 3,
+            "id": 4,
+            "ok": true,
+            "sampling": "keyframe",
+            "requested_us": 4600000000,
+            "actual_us": 4596425167,
+            "width": 320,
+            "height": 172,
+            "channels": 4,
+            "payload_bytes": 220160,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0,
+            "video_track_number": -1,
+            "bytes_read": 43457078,
+            "read_calls": 1030,
+            "seek_calls": 8,
+            "request_bytes_read": 5442283,
+            "request_read_calls": 158,
+            "request_seek_calls": 1,
+            "open_count": 1,
+            "operation_us": 31638
+          },
+          "pixels_sha256": "1bd9cfe1606ffd607ade53b2fbcf6c94e6e19fabc3fe3d2fafded3a0c61bba69",
+          "usable": true
+        }
+      ],
+      "startup_ms": 112.65737500070827,
+      "ready": {
+        "version": 3,
+        "type": "ready",
+        "ok": true,
+        "duration_us": 6483796000,
+        "bytes_read": 6556946,
+        "read_calls": 147,
+        "seek_calls": 4,
+        "open_count": 1,
+        "operation_us": 105736
+      },
+      "total_ms": 334.7902499990596
+    },
+    {
+      "block": 1,
+      "arm": "baseline",
+      "requests": [
+        {
+          "target_us": 1493000000,
+          "elapsed_ms": 140.10158300152398,
+          "header": {
+            "version": 2,
+            "ok": true,
+            "sampling": "keyframe",
+            "requested_us": 1493000000,
+            "actual_us": 1488570411,
+            "width": 320,
+            "height": 172,
+            "channels": 4,
+            "payload_bytes": 220160,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0,
+            "video_track_number": -1,
+            "process_exit": 0
+          },
+          "pixels_sha256": "ad9dc4574f8e0c887520df714aad38c527f9d55bb6db84130f11150b2080e67a",
+          "usable": true
+        },
+        {
+          "target_us": 3200000000,
+          "elapsed_ms": 102.26145799970254,
+          "header": {
+            "version": 2,
+            "ok": true,
+            "sampling": "keyframe",
+            "requested_us": 3200000000,
+            "actual_us": 3199905033,
+            "width": 320,
+            "height": 172,
+            "channels": 4,
+            "payload_bytes": 220160,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0,
+            "video_track_number": -1,
+            "process_exit": 0
+          },
+          "pixels_sha256": "391bdb897f66147a0b108bdd4082493311fdcd909530b6a74e43ab3684206404",
+          "usable": true
+        },
+        {
+          "target_us": 6000000000,
+          "elapsed_ms": 96.13787499984028,
+          "header": {
+            "version": 2,
+            "ok": true,
+            "sampling": "keyframe",
+            "requested_us": 6000000000,
+            "actual_us": 5998409078,
+            "width": 320,
+            "height": 172,
+            "channels": 4,
+            "payload_bytes": 220160,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0,
+            "video_track_number": -1,
+            "process_exit": 0
+          },
+          "pixels_sha256": "300a6db061d391bb89132c345cf7a699c4498a99b6f4150d21ebd1ba412f3375",
+          "usable": true
+        },
+        {
+          "target_us": 4600000000,
+          "elapsed_ms": 82.28904099814827,
+          "header": {
+            "version": 2,
+            "ok": true,
+            "sampling": "keyframe",
+            "requested_us": 4600000000,
+            "actual_us": 4596425167,
+            "width": 320,
+            "height": 172,
+            "channels": 4,
+            "payload_bytes": 220160,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0,
+            "video_track_number": -1,
+            "process_exit": 0
+          },
+          "pixels_sha256": "1bd9cfe1606ffd607ade53b2fbcf6c94e6e19fabc3fe3d2fafded3a0c61bba69",
+          "usable": true
+        }
+      ],
+      "total_ms": 422.9267920018174
+    }
+  ],
+  "proposed_sampled_fingerprint": {
+    "elapsed_ms": 875.2743329969235,
+    "exit": 0,
+    "reply": {
+      "version": 3,
+      "type": "identity",
+      "ok": true,
+      "fingerprint": "7591763f13c56abbc905ee2c3917e9224eb87a712eb462bc14e5d78c9bf44777",
+      "policy": "sampled",
+      "bytes_read": 1048576,
+      "read_calls": 16,
+      "payload_bytes": 0
+    },
+    "scope": "Read-only proposed-policy cost measurement; not app enablement or complete-content equality"
+  },
+  "successful_paired_pixel_and_actual_time_matches": "6/6",
+  "limits": "AB/BA source-cache warmth uncontrolled; longer15s candidate request budget versus5s baseline explains some cold success. Candidate first-block EOF cleanup failed3s wait. No native/NAS general speedup, playback or final-build qualification."
+}

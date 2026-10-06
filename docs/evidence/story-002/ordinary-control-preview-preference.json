@@ -1,0 +1,201 @@
+{
+  "status": "valid",
+  "results": {
+    "baseline": {
+      "count": 20,
+      "median_ms": 308.0443750368431,
+      "min_ms": 126.35366665199399,
+      "max_ms": 428.4674583468586,
+      "samples_ms": [
+        350.81462492235005,
+        280.61058337334543,
+        342.50924992375076,
+        317.8627915913239,
+        350.6881665671244,
+        313.44904168508947,
+        126.35366665199399,
+        421.8411248875782,
+        425.56191666517407,
+        284.08462496008724,
+        175.3168333088979,
+        302.6397083885968,
+        279.5839582104236,
+        318.0871249642223,
+        428.4674583468586,
+        287.73408324923366,
+        284.4987082062289,
+        280.7241666596383,
+        320.67004160489887,
+        272.2414582967758
+      ]
+    },
+    "feature": {
+      "count": 20,
+      "median_ms": 299.9586040969007,
+      "min_ms": 91.80358320008963,
+      "max_ms": 392.1070833457634,
+      "samples_ms": [
+        284.7157083451748,
+        142.57374999579042,
+        288.04129164200276,
+        304.1077082743868,
+        300.5264167441055,
+        296.6424999758601,
+        305.08954159449786,
+        221.6762499883771,
+        301.85016663745046,
+        367.4642082769424,
+        91.80358320008963,
+        341.425291611813,
+        299.7557499911636,
+        313.43183328863233,
+        299.46433333680034,
+        392.1070833457634,
+        297.2938750172034,
+        267.3612083308399,
+        300.16145820263773,
+        342.2836249228567
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "block": 0,
+      "arm": "baseline",
+      "samples_ms": [
+        350.81462492235005,
+        280.61058337334543,
+        342.50924992375076,
+        317.8627915913239,
+        350.6881665671244
+      ],
+      "median_ms": 342.50924992375076
+    },
+    {
+      "block": 0,
+      "arm": "feature",
+      "samples_ms": [
+        284.7157083451748,
+        142.57374999579042,
+        288.04129164200276,
+        304.1077082743868,
+        300.5264167441055
+      ],
+      "median_ms": 288.04129164200276
+    },
+    {
+      "block": 1,
+      "arm": "feature",
+      "samples_ms": [
+        296.6424999758601,
+        305.08954159449786,
+        221.6762499883771,
+        301.85016663745046,
+        367.4642082769424
+      ],
+      "median_ms": 301.85016663745046
+    },
+    {
+      "block": 1,
+      "arm": "baseline",
+      "samples_ms": [
+        313.44904168508947,
+        126.35366665199399,
+        421.8411248875782,
+        425.56191666517407,
+        284.08462496008724
+      ],
+      "median_ms": 313.44904168508947
+    },
+    {
+      "block": 2,
+      "arm": "feature",
+      "samples_ms": [
+        91.80358320008963,
+        341.425291611813,
+        299.7557499911636,
+        313.43183328863233,
+        299.46433333680034
+      ],
+      "median_ms": 299.7557499911636
+    },
+    {
+      "block": 2,
+      "arm": "baseline",
+      "samples_ms": [
+        175.3168333088979,
+        302.6397083885968,
+        279.5839582104236,
+        318.0871249642223,
+        428.4674583468586
+      ],
+      "median_ms": 302.6397083885968
+    },
+    {
+      "block": 3,
+      "arm": "baseline",
+      "samples_ms": [
+        287.73408324923366,
+        284.4987082062289,
+        280.7241666596383,
+        320.67004160489887,
+        272.2414582967758
+      ],
+      "median_ms": 284.4987082062289
+    },
+    {
+      "block": 3,
+      "arm": "feature",
+      "samples_ms": [
+        392.1070833457634,
+        297.2938750172034,
+        267.3612083308399,
+        300.16145820263773,
+        342.2836249228567
+      ],
+      "median_ms": 300.16145820263773
+    }
+  ],
+  "median_allowance_percent": 20,
+  "median_delta_percent": -2.624872127262623,
+  "within_allowance": true,
+  "fingerprints_before": {
+    "media": "37e1e1ebf58d44d0a38f4ac3f6f621dca2547307f9429a404bfccfd475d94c84",
+    "probe": "0d844721b517ec313e44daf88ad7a53515aa6104c193f4e9399b21ca6e8bd9f9",
+    "pointer": "bfc48a37b90fc9aefda36735b36f9c239dea1f3c021046f7039d9e29691abd8e",
+    "baseline_app_tree": "7f834b0bd597aa9729f1c64f8f0e16c40459fcaf954e255d66a0c3e532d0ba7d",
+    "baseline_plugin": "43e7d6da115cf83209869e51942528d14de9089d73ba4da31790b5bf04b0e1b5",
+    "baseline_helper": "830d9857bbcd04b1b58462b3025fbbf09662dbcd80eb539be2e3ba45ab4da348",
+    "feature_app_tree": "44f235dfde647bf5418015f0c6a175806fe2c85e0401a752bdac36cc16260da1",
+    "feature_plugin": "8fa30ddd7921644b29ad57d26901d713085645e7558ed93861fed492934238ee",
+    "feature_helper": "cbbd6784deb18501eddccf4d695dbd7b39c3ef27b14374fa34209d638d6b836f",
+    "test:baseline_control_trial.py": "8be05884d7cdb9a640d260acc17f63a425c963e73ad368933504c847cf1cb8d2",
+    "test:control_response_probe.m": "0489b5656e03e5531794fbfed4f783cfc9c8ffbb7f476bf534f3e3d7a6435bb1",
+    "test:native_hover_trial.py": "2706ac8366f1ce98daadaf6f2c4d310648d99a78ffe8b3b47df4feb13d76c8e9",
+    "test:native_hover_benchmark.py": "295c192d9ca1c5800821a158b018f2ad57510de0894883e1f0d04557206ec379",
+    "test:playback_benchmark.py": "588295e4b74dfbd611179d9b4ccd03e013596ef2a07f32f899d5e739d4f3c6bd",
+    "test:native-pointer.m": "ecedbe0903ba7fc2eba9fd1c784c973387b2eef7d0cd574220eddc8ca6e33c1d"
+  },
+  "fingerprints_after": {
+    "media": "37e1e1ebf58d44d0a38f4ac3f6f621dca2547307f9429a404bfccfd475d94c84",
+    "probe": "0d844721b517ec313e44daf88ad7a53515aa6104c193f4e9399b21ca6e8bd9f9",
+    "pointer": "bfc48a37b90fc9aefda36735b36f9c239dea1f3c021046f7039d9e29691abd8e",
+    "baseline_app_tree": "7f834b0bd597aa9729f1c64f8f0e16c40459fcaf954e255d66a0c3e532d0ba7d",
+    "baseline_plugin": "43e7d6da115cf83209869e51942528d14de9089d73ba4da31790b5bf04b0e1b5",
+    "baseline_helper": "830d9857bbcd04b1b58462b3025fbbf09662dbcd80eb539be2e3ba45ab4da348",
+    "feature_app_tree": "44f235dfde647bf5418015f0c6a175806fe2c85e0401a752bdac36cc16260da1",
+    "feature_plugin": "8fa30ddd7921644b29ad57d26901d713085645e7558ed93861fed492934238ee",
+    "feature_helper": "cbbd6784deb18501eddccf4d695dbd7b39c3ef27b14374fa34209d638d6b836f",
+    "test:baseline_control_trial.py": "8be05884d7cdb9a640d260acc17f63a425c963e73ad368933504c847cf1cb8d2",
+    "test:control_response_probe.m": "0489b5656e03e5531794fbfed4f783cfc9c8ffbb7f476bf534f3e3d7a6435bb1",
+    "test:native_hover_trial.py": "2706ac8366f1ce98daadaf6f2c4d310648d99a78ffe8b3b47df4feb13d76c8e9",
+    "test:native_hover_benchmark.py": "295c192d9ca1c5800821a158b018f2ad57510de0894883e1f0d04557206ec379",
+    "test:playback_benchmark.py": "588295e4b74dfbd611179d9b4ccd03e013596ef2a07f32f899d5e739d4f3c6bd",
+    "test:native-pointer.m": "ecedbe0903ba7fc2eba9fd1c784c973387b2eef7d0cd574220eddc8ca6e33c1d"
+  },
+  "raw_summary": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/control-pragmatic-preference-001/summary.json",
+  "build_manifest": "app-build-preview-preference-154102.json",
+  "all_52_sessions_audited": true,
+  "clean_exit_both": true,
+  "scope": "Same prospectively declared20% median allowance; approximate paused native knob render under shared host load, not causal speedup/p95/completed seek"
+}

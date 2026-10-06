@@ -1,0 +1,405 @@
+{
+  "note": "Final retained source tarballs and Git revision sidecars; upstream fetch checksum verification is in attempt logs. Not a dependency licensing audit.",
+  "files": [
+    {
+      "file": ".gitignore",
+      "bytes": 40,
+      "sha256": "8f52085127cbd13520a72083b2feac85ad9dff47f9a98662c76fc514b64ffb88"
+    },
+    {
+      "file": "LibVNCServer-0.9.15.tar.gz",
+      "bytes": 600387,
+      "sha256": "62352c7795e231dfce044beb96156065a05a05c974e5de9e023d688d8ff675d7"
+    },
+    {
+      "file": "a52dec-0.7.4.tar.gz",
+      "bytes": 241507,
+      "sha256": "a21d724ab3b3933330194353687df82c475b5dfb997513eef4c25de6c865ec33"
+    },
+    {
+      "file": "aribb24-1.0.3.tar.gz",
+      "bytes": 57378,
+      "sha256": "f61560738926e57f9173510389634d8c06cabedfa857db4b28fb7704707ff128"
+    },
+    {
+      "file": "asdcplib-rel_2_13_2.tar.gz",
+      "bytes": 443888,
+      "sha256": "ee40998f737d5751cf9157c4c416f2ef4f63fc5bdae579afefbb91a3265e6039"
+    },
+    {
+      "file": "chromaprint-1.6.0.tar.gz",
+      "bytes": 1577695,
+      "sha256": "9d33482e56a1389a37a0d6742c376139fa43e3b8a63d29003222b93db2cb40da"
+    },
+    {
+      "file": "dav1d-1.5.4.tar.xz",
+      "bytes": 1038852,
+      "sha256": "686616b7c69eb88d44459391ab25cac13b6647a3b288835c5784e71c1514a5c5"
+    },
+    {
+      "file": "faad2-2.11.3.tar.gz",
+      "bytes": 659176,
+      "sha256": "860ab62087e336c1844a70e33196c1790b525fb9a9e7b6ac4fab1a1a4e4d5ce8"
+    },
+    {
+      "file": "ffmpeg-8.1.2.tar.xz",
+      "bytes": 11710924,
+      "sha256": "464beb5e7bf0c311e68b45ae2f04e9cc2af88851abb4082231742a74d97b524c"
+    },
+    {
+      "file": "flac-1.4.2.tar.xz",
+      "bytes": 1013700,
+      "sha256": "e322d58a1f48d23d9dd38f432672865f6f79e73a6f9cc5a5f57fcaa83eb5a8e4"
+    },
+    {
+      "file": "fluidsynth-2.1.8.tar.gz",
+      "bytes": 1369567,
+      "sha256": "a254efceff5d99f8d658d12d25318317f37307e6df852ec9baeb7da173496967"
+    },
+    {
+      "file": "fontconfig-2.12.3.tar.gz",
+      "bytes": 1903035,
+      "sha256": "ffc3cbf6dd9fcd516ee42f48306a715e66698b238933d6fa7cef02ea8b3b818e"
+    },
+    {
+      "file": "freetype-2.14.3.tar.xz",
+      "bytes": 2670220,
+      "sha256": "36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f"
+    },
+    {
+      "file": "fribidi-1.0.12.tar.xz",
+      "bytes": 1154912,
+      "sha256": "0cd233f97fc8c67bb3ac27ce8440def5d3ffacf516765b91c2cc654498293495"
+    },
+    {
+      "file": "game-music-emu-0.6.5.tar.gz",
+      "bytes": 349606,
+      "sha256": "8531678502451c2cf04248cda45c8b4645e19fcfb63e6a7ec2549641c47bb392"
+    },
+    {
+      "file": "gettext-0.26.tar.xz",
+      "bytes": 10061740,
+      "sha256": "d1fb86e260cfe7da6031f94d2e44c0da55903dbae0a2fa0fae78c91ae1b56f00"
+    },
+    {
+      "file": "gmp-6.3.0.tar.xz",
+      "bytes": 2094196,
+      "sha256": "a3c2b80201b89e68616f4ad30bc66aee4927c3ce50e33929ca819d5c43538898"
+    },
+    {
+      "file": "gnutls-3.8.13.tar.xz",
+      "bytes": 7275324,
+      "sha256": "ffed8ec1bf09c2426d4f14aae377de4753b53e537d685e604e99a8b16ca9c97e"
+    },
+    {
+      "file": "goom-2k4-0-src.tar.gz",
+      "bytes": 757058,
+      "sha256": "d993c904c05faba87fd7f159291fa1cb7aadcff2edd28454d8e967880a8a0c85"
+    },
+    {
+      "file": "harfbuzz-14.2.1.tar.xz",
+      "bytes": 19559952,
+      "sha256": "a54a5d8e9380a41fbb762ce367bcbf7704792dfca0d93f1bbca86c5a57902e0e"
+    },
+    {
+      "file": "jpegsrc.v10.tar.gz",
+      "bytes": 1099508,
+      "sha256": "8b9eaa13242690ebd03e1728ab1edf97a81a78ed6e83624d493655f31ac95ab5"
+    },
+    {
+      "file": "lame-3.100.tar.gz",
+      "bytes": 1524133,
+      "sha256": "ddfe36cab873794038ae2c1210557ad34857a4b6bdc515785d1da9e175b1da1e"
+    },
+    {
+      "file": "libaom-3.15.0.tar.gz",
+      "bytes": 6622801,
+      "sha256": "ea08c38ecc078bc85bb1b691020e52b06250f1a81fe7ca5b624629225081af96"
+    },
+    {
+      "file": "libarchive-3.8.9.tar.xz",
+      "bytes": 6617696,
+      "sha256": "888c934f9d95648ecb9163dc8e23ab80a476ecb81a8f1154704a227b5b676dde"
+    },
+    {
+      "file": "libass-0.17.5.tar.xz",
+      "bytes": 460148,
+      "sha256": "2dca25c0e0c837ddf00b52011b3f82cac1e4ddd3ad018227806b0c2288864acc"
+    },
+    {
+      "file": "libbluray-1.4.1.tar.xz",
+      "bytes": 468052,
+      "sha256": "76b5dc40097f28dca4ebb009c98ed51321b2927453f75cc72cf74acd09b9f449"
+    },
+    {
+      "file": "libcddb-1.3.2.tar.bz2",
+      "bytes": 352909,
+      "sha256": "35ce0ee1741ea38def304ddfe84a958901413aa829698357f0bee5bb8f0a223b"
+    },
+    {
+      "file": "libdca-0.0.7.tar.bz2",
+      "bytes": 158232,
+      "sha256": "3a0b13815f582c661d2388ffcabc2f1ea82f471783c400f765f2ec6c81065f6a"
+    },
+    {
+      "file": "libdvbpsi-1.3.3.tar.bz2",
+      "bytes": 488020,
+      "sha256": "02b5998bcf289cdfbd8757bedd5987e681309b0a25b3ffe6cebae599f7a00112"
+    },
+    {
+      "file": "libdvdcss-1.4.3.tar.bz2",
+      "bytes": 388404,
+      "sha256": "233cc92f5dc01c5d3a96f5b3582be7d5cee5a35a52d3a08158745d3d86070079"
+    },
+    {
+      "file": "libdvdnav-6.1.1.tar.bz2",
+      "bytes": 367606,
+      "sha256": "c191a7475947d323ff7680cf92c0fb1be8237701885f37656c64d04e98d18d48"
+    },
+    {
+      "file": "libdvdread-6.1.3.tar.bz2",
+      "bytes": 395439,
+      "sha256": "ce35454997a208cbe50e91232f0e73fb1ac3471965813a13b8730a8f18a15369"
+    },
+    {
+      "file": "libebml-1.4.6.tar.xz",
+      "bytes": 52424,
+      "sha256": "d06cf1d5ad89390389eeb1eb7d50f70b55ac7538b19aeac8859eed3f2a9908dc"
+    },
+    {
+      "file": "libgcrypt-1.12.2.tar.bz2",
+      "bytes": 4441855,
+      "sha256": "7ce33c2492221a0436f96a8500215e9f3e3dcb5fd26a757cd415e7a843babd5e"
+    },
+    {
+      "file": "libgpg-error-1.61.tar.bz2",
+      "bytes": 1124751,
+      "sha256": "7a85413f2bc354f4f8aa832b718af122e48965e9e0eb9012ee659c13c6385c93"
+    },
+    {
+      "file": "libgsm_1.0.13.tar.gz",
+      "bytes": 65318,
+      "sha256": "52c518244d428c2e56c543b98c9135f4a76ff780c32455580b793f60a0a092ad"
+    },
+    {
+      "file": "libkate-0.4.1.tar.gz",
+      "bytes": 906896,
+      "sha256": "c40e81d5866c3d4bf744e76ce0068d8f388f0e25f7e258ce0c8e76d7adc87b68"
+    },
+    {
+      "file": "libmad-0.16.4.tar.gz",
+      "bytes": 204446,
+      "sha256": "f4eb229452252600ce48f3c2704c9e6d97b789f81e31c37b0c67dd66f445ea35"
+    },
+    {
+      "file": "libmatroska-1.7.2.tar.xz",
+      "bytes": 63016,
+      "sha256": "f3e4d406daf7f1399962c43940e4a87de089474d5bcfbf2e6ca516e98bb87cfc"
+    },
+    {
+      "file": "libmodplug-0.8.9.0.tar.gz",
+      "bytes": 576566,
+      "sha256": "457ca5a6c179656d66c01505c0d95fafaead4329b9dbaa0f997d00a3508ad9de"
+    },
+    {
+      "file": "libmpeg2-0.5.1.tar.gz",
+      "bytes": 524776,
+      "sha256": "dee22e893cb5fc2b2b6ebd60b88478ab8556cb3b93f9a0d7ce8f3b61851871d4"
+    },
+    {
+      "file": "libmysofa-1.2.1.tar.gz",
+      "bytes": 200011479,
+      "sha256": "94cb02e488de4dc0860c8d23b29d93d290bb0a004d4aa17e1642985bba158ee9"
+    },
+    {
+      "file": "libnfs-6.0.2.tar.gz",
+      "bytes": 338988,
+      "sha256": "4e5459cc3e0242447879004e9ad28286d4d27daa42cbdcde423248fad911e747"
+    },
+    {
+      "file": "libogg-1.3.6.tar.xz",
+      "bytes": 439952,
+      "sha256": "5c8253428e181840cd20d41f3ca16557a9cc04bad4a3d04cce84808677fa1061"
+    },
+    {
+      "file": "libplacebo-0.2.1.tar.gz",
+      "bytes": 169802,
+      "sha256": "d5d920a1745e4209287d32e8b96a85127b61b843304813980e11104cd9f15e82"
+    },
+    {
+      "file": "libpng-1.6.58.tar.xz",
+      "bytes": 1070096,
+      "sha256": "28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775"
+    },
+    {
+      "file": "librist-v0.2.20.tar.gz",
+      "bytes": 3507334,
+      "sha256": "9e40eeb87f014790531ad41326cc271b930a65962e4b15231b301fc59b29fe31"
+    },
+    {
+      "file": "libsamplerate-0.1.9.tar.gz",
+      "bytes": 4336641,
+      "sha256": "0a7eb168e2f21353fb6d84da152e4512126f7dc48ccb0be80578c565413444c1"
+    },
+    {
+      "file": "libshout-2.4.6.tar.gz",
+      "bytes": 571153,
+      "sha256": "39cbd4f0efdfddc9755d88217e47f8f2d7108fa767f9d58a2ba26a16d8f7c910"
+    },
+    {
+      "file": "libssh2-1.11.1.tar.xz",
+      "bytes": 721700,
+      "sha256": "9954cb54c4f548198a7cbebad248bdc87dd64bd26185708a294b2b50771e3769"
+    },
+    {
+      "file": "libtheora-1.1.1.tar.xz",
+      "bytes": 1434496,
+      "sha256": "f36da409947aa2b3dcc6af0a8c2e3144bc19db2ed547d64e9171c59c66561c61"
+    },
+    {
+      "file": "libtiger-0.3.4.tar.gz",
+      "bytes": 383685,
+      "sha256": "7342b255fb476d75b08dd4c56d5ce580f39b1c71c42e99fb7af9d999725d4166"
+    },
+    {
+      "file": "libvorbis-1.3.7.tar.xz",
+      "bytes": 1203792,
+      "sha256": "b33cc4934322bcbf6efcbacf49e3ca01aadbea4114ec9589d1b1e9d20f72954b"
+    },
+    {
+      "file": "libvpx-1.16.0.tar.gz",
+      "bytes": 5635379,
+      "sha256": "7a479a3c66b9f5d5542a4c6a1b7d3768a983b1e5c14c60a9396edc9b649e015c"
+    },
+    {
+      "file": "libxml2-2.15.3.tar.xz",
+      "bytes": 3152452,
+      "sha256": "78262a6e7ac170d6528ebfe2efccdf220191a5af6a6cd61ea4a9a9a5042c7a07"
+    },
+    {
+      "file": "live.2026.06.24.tar.gz",
+      "bytes": 693632,
+      "sha256": "b22182db20fe554be886f74c453f6b900e471de9585a401b0b60228aebc27ef7"
+    },
+    {
+      "file": "lua-5.1.5.tar.gz",
+      "bytes": 221213,
+      "sha256": "2640fc56a795f29d28ef15e13c34a47e223960b0240e8cb0a82d9b0738695333"
+    },
+    {
+      "file": "mpg123-1.33.6.tar.bz2",
+      "bytes": 1123797,
+      "sha256": "929a7c18ba662b8927aed4de229ad9ae8ab2b4806dd0f30b90113eb1b4e2195a"
+    },
+    {
+      "file": "musepack_src_r481.tar.gz",
+      "bytes": 200318,
+      "sha256": "8988bc1f05ecdf6067ed06c576dc9ed03760361ae6190952ac29b5953c49dbc6"
+    },
+    {
+      "file": "ncurses-6.3.tar.gz",
+      "bytes": 3583550,
+      "sha256": "97fc51ac2b085d4cde31ef4d2c3122c21abc217e9090a43a30fc5ec21684e059"
+    },
+    {
+      "file": "nettle-3.10.2.tar.gz",
+      "bytes": 2644644,
+      "sha256": "fe9ff51cb1f2abb5e65a6b8c10a92da0ab5ab6eaf26e7fc2b675c45f1fb519b5"
+    },
+    {
+      "file": "openjpeg-2.5.4.tar.gz",
+      "bytes": 2157028,
+      "sha256": "a695fbe19c0165f295a8531b1e4e855cd94d0875d2f88ec4b61080677e27188a"
+    },
+    {
+      "file": "opus-1.6.1.tar.gz",
+      "bytes": 10472813,
+      "sha256": "6ffcb593207be92584df15b32466ed64bbec99109f007c82205f0194572411a1"
+    },
+    {
+      "file": "postproc-e4982b227779f24f7c54d699d2e247652f69c475.githash",
+      "bytes": 110,
+      "sha256": "483bce9317bf8594eb78c60b85c845a4bda6d9ae527cbd01c74c9176ce1786bb"
+    },
+    {
+      "file": "postproc-e4982b227779f24f7c54d699d2e247652f69c475.tar.xz",
+      "bytes": 2069744,
+      "sha256": "58a2592d8c5c2e0c157523adf486692e921dc96f5f7ec69c1417d568080853b6"
+    },
+    {
+      "file": "protobuf-3.4.1-cpp.tar.gz",
+      "bytes": 4274863,
+      "sha256": "2bb34b4a8211a30d12ef29fd8660995023d119c99fbab2e5fe46f17528c9cc78"
+    },
+    {
+      "file": "pupnp-release-1.14.31.tar.gz",
+      "bytes": 826590,
+      "sha256": "ce1dd3da7268ad61a56041af0ee80a3d067e7fbd197e2a387ae53942f70068bd"
+    },
+    {
+      "file": "sidplay-libs-2.1.1.tar.gz",
+      "bytes": 1900252,
+      "sha256": "e9a24ada48215a46d2c232a70c5601bc9505e997f120e8f2ba3713e09e28d1f9"
+    },
+    {
+      "file": "spatialaudio-0.3.0.tar.bz2",
+      "bytes": 934033,
+      "sha256": "284c1dbd8efd46c03be84ac7070bc87cae81b7125352b143a70be3e2b96988e3"
+    },
+    {
+      "file": "speex-1.2.1.tar.gz",
+      "bytes": 1043278,
+      "sha256": "4b44d4f2b38a370a2d98a78329fefc56a0cf93d1c1be70029217baae6628feea"
+    },
+    {
+      "file": "speexdsp-1.2.1.tar.gz",
+      "bytes": 922584,
+      "sha256": "8c777343e4a6399569c72abc38a95b24db56882c83dbdb6c6424a5f4aeb54d3d"
+    },
+    {
+      "file": "srt-1.5.6.tar.gz",
+      "bytes": 1785147,
+      "sha256": "2c4980c2c4cfd142d21b829d939dc51db9c6628af5967fff62fd7290769569c7"
+    },
+    {
+      "file": "taglib-1.13.1.tar.gz",
+      "bytes": 1372618,
+      "sha256": "c8da2b10f1bfec2cd7dbfcd33f4a2338db0765d851a50583d410bacf055cfd0b"
+    },
+    {
+      "file": "twolame-0.4.0.tar.gz",
+      "bytes": 890908,
+      "sha256": "cc35424f6019a88c6f52570b63e1baf50f62963a3eac52a03a800bb070d7c87d"
+    },
+    {
+      "file": "utfcpp-3.2.5.tar.gz",
+      "bytes": 28865,
+      "sha256": "14fd1b3c466814cb4c40771b7f207b61d2c7a0aa6a5e620ca05c00df27f25afd"
+    },
+    {
+      "file": "x264-e067ab0b530395f90b578f6d05ab0a225e2efdf9.githash",
+      "bytes": 106,
+      "sha256": "8a1ea900ef332526f014ce55c5909ddcaa0783100f58ea2a1e3ea860d9fb2475"
+    },
+    {
+      "file": "x264-e067ab0b530395f90b578f6d05ab0a225e2efdf9.tar.xz",
+      "bytes": 687984,
+      "sha256": "6ecfdff1dbeda7b19e33c31c3d392fd5462abf355e7ef28a036f0c3d0d967526"
+    },
+    {
+      "file": "x265_4.1.tar.gz",
+      "bytes": 1725279,
+      "sha256": "a31699c6a89806b74b0151e5e6a7df65de4b49050482fe5ebf8a4379d7af8f29"
+    },
+    {
+      "file": "zlib-1.3.2.tar.xz",
+      "bytes": 1320064,
+      "sha256": "d7a0654783a4da529d1bb793b7ad9c3318020af77667bcae35f95d0e42a792f3"
+    },
+    {
+      "file": "zvbi-0.2.45.tar.gz",
+      "bytes": 943158,
+      "sha256": "e6c954fde2a5a635187f19e1ab870a88c1a982012c5f1b33b8f2513e0ab7a50e"
+    }
+  ]
+}

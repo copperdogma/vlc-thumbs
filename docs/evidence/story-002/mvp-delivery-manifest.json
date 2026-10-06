@@ -1,0 +1,103 @@
+{
+  "scope": "Selection of unchanged signed132643 build for functionalMVP delivery; not new build/public release/performance qualification",
+  "checked_at_utc": "2026-10-05T14:53:58.360126+00:00",
+  "build_manifest": "docs/evidence/story-002/app-build-controller-16ms-experiment-132643.json",
+  "build_manifest_sha256": "431783639d0743eee957ea2a5a02213d551ba1733a3e97e1f76902ed7d42d7fc",
+  "app_path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app",
+  "source_pin": "6de05adcbaf2e8b85fe86aad4169393098628119",
+  "bundle_id": "org.videolan.vlc-thumbs.development",
+  "inputs": {
+    "patches/vlc-3.0.24/0001-native-timeline-previews.patch": {
+      "expected": "e8bad970905206203cd41a8fee09ffa0b18d8a2e09dcc2cee32921be4624a85e",
+      "actual": "e8bad970905206203cd41a8fee09ffa0b18d8a2e09dcc2cee32921be4624a85e",
+      "match": true
+    },
+    "scripts/apply-vlc-patches.py": {
+      "expected": "d8a7e741e2989ba35acf2d5ccd08b272760a69d4f853056424dd40baa1d4c724",
+      "actual": "d8a7e741e2989ba35acf2d5ccd08b272760a69d4f853056424dd40baa1d4c724",
+      "match": true
+    },
+    "scripts/build-timeline-app.py": {
+      "expected": "fdd18d0b0dc8d3f869aa79020ce9e31744a4781427bec53297d6375c5cc23a9b",
+      "actual": "fdd18d0b0dc8d3f869aa79020ce9e31744a4781427bec53297d6375c5cc23a9b",
+      "match": true
+    },
+    "src/macosx/VLCThumbnailService.h": {
+      "expected": "4bf5a2e3b4d4658c7da9be7b8eb7a0175323bb5c30d9a79512ffe61db791ff73",
+      "actual": "4bf5a2e3b4d4658c7da9be7b8eb7a0175323bb5c30d9a79512ffe61db791ff73",
+      "match": true
+    },
+    "src/macosx/VLCThumbnailService.m": {
+      "expected": "9bad453b6419b692a9ef7f833181e52e35c165e2dc04901424868396a5699d30",
+      "actual": "9bad453b6419b692a9ef7f833181e52e35c165e2dc04901424868396a5699d30",
+      "match": true
+    },
+    "src/macosx/VLCTimelineContext.h": {
+      "expected": "651c0dcf20eb90eeda70b1547bf51689b3fdd6fefd7a5cd74507a02d79b73244",
+      "actual": "651c0dcf20eb90eeda70b1547bf51689b3fdd6fefd7a5cd74507a02d79b73244",
+      "match": true
+    },
+    "src/macosx/VLCTimelineContext.m": {
+      "expected": "01fef72b89060281dba6bfc9940e26b3e67e143c2666e3029cd54129efa94847",
+      "actual": "01fef72b89060281dba6bfc9940e26b3e67e143c2666e3029cd54129efa94847",
+      "match": true
+    },
+    "src/macosx/VLCTimelineGeometry.h": {
+      "expected": "3b2de60bba6b5feade74387816aa0406d7fbd085469810e1eeafbe7594d07334",
+      "actual": "3b2de60bba6b5feade74387816aa0406d7fbd085469810e1eeafbe7594d07334",
+      "match": true
+    },
+    "src/macosx/VLCTimelineInteractionController.h": {
+      "expected": "cd13975b82961511db69cde96c7dcf68221a576999376944e23dfb021c9789fc",
+      "actual": "cd13975b82961511db69cde96c7dcf68221a576999376944e23dfb021c9789fc",
+      "match": true
+    },
+    "src/macosx/VLCTimelineInteractionController.m": {
+      "expected": "47b31fa472d778e0c48b304b6c07cf6e7f7a7a62cade31f42943093f4d093690",
+      "actual": "47b31fa472d778e0c48b304b6c07cf6e7f7a7a62cade31f42943093f4d093690",
+      "match": true
+    },
+    "src/thumbnail-helper/thumbnail-helper.c": {
+      "expected": "089928f8facd6802078ce0979ae2421473eff0c51e8e1192a5929c1a9d572184",
+      "actual": "089928f8facd6802078ce0979ae2421473eff0c51e8e1192a5929c1a9d572184",
+      "match": true
+    }
+  },
+  "outputs": {
+    "work/build/vlc-arm64/VLC.app/Contents/MacOS/VLC": {
+      "expected": "2618990d37e4b16be6ca7e44eeb522e9ec07ac69a653afdcf75f8d34814746db",
+      "actual": "2618990d37e4b16be6ca7e44eeb522e9ec07ac69a653afdcf75f8d34814746db",
+      "match": true
+    },
+    "work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libmacosx_plugin.dylib": {
+      "expected": "c6e450ad19d07b9844593c4a66b3e5909dec170f24157f6cbb324939a23c869d",
+      "actual": "c6e450ad19d07b9844593c4a66b3e5909dec170f24157f6cbb324939a23c869d",
+      "match": true
+    },
+    "work/build/vlc-arm64/VLC.app/Contents/MacOS/vlc-thumbnail-helper": {
+      "expected": "cbbd6784deb18501eddccf4d695dbd7b39c3ef27b14374fa34209d638d6b836f",
+      "actual": "cbbd6784deb18501eddccf4d695dbd7b39c3ef27b14374fa34209d638d6b836f",
+      "match": true
+    },
+    "work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/plugins.dat": {
+      "expected": "1fc066f16bb178bed083e2ee1819b9fe9f586054c8c0d354e09d44dc606667cc",
+      "actual": "1fc066f16bb178bed083e2ee1819b9fe9f586054c8c0d354e09d44dc606667cc",
+      "match": true
+    },
+    "work/build/vlc-arm64/VLC.app/Contents/Info.plist": {
+      "expected": "f0b04a366f281e8a793da8bbefdd76227e384f8cf73d8bfd0f53a3a886c07db1",
+      "actual": "f0b04a366f281e8a793da8bbefdd76227e384f8cf73d8bfd0f53a3a886c07db1",
+      "match": true
+    }
+  },
+  "all_manifest_inputs_and_app_outputs_match": true,
+  "fresh_checks": {
+    "patch_application_check": "PASS",
+    "build_recipe_preflight": "PASS",
+    "codesign_deep_strict": "PASS"
+  },
+  "functional_acceptance_review": "shared-load-acceptance-review.md",
+  "validation_report": "mvp-shared-load-validation.md",
+  "precision_performance": "unqualified/deferred under user-approved shared-loadMVP policy",
+  "distribution": "local development app only"
+}

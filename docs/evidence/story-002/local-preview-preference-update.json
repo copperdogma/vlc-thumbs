@@ -1,0 +1,16 @@
+{
+  "destination": "/Users/cam/Applications/VLC Timeline Preview.app",
+  "previous_app_preserved": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/VLCPreviewBeforePreference.app",
+  "bundle_id": "org.videolan.vlc-thumbs.preview",
+  "development_manifest": "app-build-preview-preference-final-155231.json",
+  "signature": "Final155231 dailycopy deep strict verified",
+  "user_preferences": "preserved; no defaults/config changes during final update",
+  "desktop_shortcut": false,
+  "original_vlc": "untouched",
+  "scope": "Local requested preference update; not public distribution",
+  "prior_preference_candidate_manifest": "app-build-preview-preference-154102.json",
+  "previous_preference_app_preserved": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/VLCPreviewBeforeInheritance.app",
+  "native_installed_checkbox": 1,
+  "installed_preferences_window": "opened and left visible for Cam",
+  "installed_pid": 18515
+}

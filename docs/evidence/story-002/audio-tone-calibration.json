@@ -1,0 +1,19 @@
+{
+  "source": "work/validation/story002/capture-smoke-counter-002/audio-mono-f32le.pcm",
+  "source_sha256": "3c141e0260133197bdb4c0666840e9cfd5a9119447d9f38069c37ed9d9def04e",
+  "method": "Goertzel on one second of known playing 48kHz float32 mono capture; reference fixture is synthetic 440Hz",
+  "samples": 48000,
+  "rms": 0.08836871508162099,
+  "dbfs": -21.074029195710153,
+  "tested_frequencies_hz_power": {
+    "220": 7.428895079230474e-05,
+    "430": 0.037348226657080374,
+    "439": 3.7395522763056306,
+    "440": 8995989.89354229,
+    "441": 3.7531144105364547,
+    "450": 0.037754930771461304,
+    "880": 2.4555682671155172e-05
+  },
+  "peak_among_tested_hz": "440",
+  "scope": "Observer tone/level calibration only; not playback-pair continuity proof"
+}

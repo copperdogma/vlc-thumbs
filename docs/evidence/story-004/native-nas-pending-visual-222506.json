@@ -1,0 +1,128 @@
+{
+  "build": "222506",
+  "scope": "Supplemental actual-pointer visual/restart NAS cohort, no paired latency score",
+  "raw_evidence": "work/validation/story004/native-nas-pending-visual-001/summary.json",
+  "raw_sha256": "8323494dceb2dd000a656a9491daa16bbb54e522c9acf448513d0e3126efc1d9",
+  "frozen_inputs_unchanged": true,
+  "sampled_media_unchanged": true,
+  "passed": true,
+  "full_app_restart": "New owned process and service after prior222506 cohort: first requested image fresh validated disk149.43ms,0 decoder bytes/opens",
+  "pending_visual_inspected": "settled-4 Checking source image visible with hover24:50 and Keyframe24:48; private screenshot stays ignored",
+  "rows": [
+    {
+      "label": "settled-0",
+      "outcome": "matching-image",
+      "first_useful_assignment_ms": 149.4310416674125,
+      "final_matching_assignment_ms": 149.4310416674125,
+      "final_cache": "disk",
+      "final_request_bytes_read": 0,
+      "final_open_count": 0,
+      "final_actual_us": 1488570411,
+      "faults": []
+    },
+    {
+      "label": "settled-1",
+      "outcome": "matching-image",
+      "first_useful_assignment_ms": 1.4338333312480245,
+      "final_matching_assignment_ms": 21.911124997131992,
+      "final_cache": "memory",
+      "final_request_bytes_read": 0,
+      "final_open_count": 0,
+      "final_actual_us": 3199905033,
+      "faults": []
+    },
+    {
+      "label": "settled-2",
+      "outcome": "matching-image",
+      "first_useful_assignment_ms": 1.2669166681007482,
+      "final_matching_assignment_ms": 59.00054166704649,
+      "final_cache": "memory",
+      "final_request_bytes_read": 0,
+      "final_open_count": 0,
+      "final_actual_us": 6003747744,
+      "faults": []
+    },
+    {
+      "label": "settled-3",
+      "outcome": "matching-image",
+      "first_useful_assignment_ms": 1.2497916650318075,
+      "final_matching_assignment_ms": 59.27495833384455,
+      "final_cache": "memory",
+      "final_request_bytes_read": 0,
+      "final_open_count": 0,
+      "final_actual_us": 4601888956,
+      "faults": []
+    },
+    {
+      "label": "settled-4",
+      "outcome": "matching-image",
+      "first_useful_assignment_ms": 1.2446666660252959,
+      "final_matching_assignment_ms": 1150.0367916669347,
+      "final_cache": "memory",
+      "final_request_bytes_read": 0,
+      "final_open_count": 0,
+      "final_actual_us": 1488570411,
+      "faults": []
+    },
+    {
+      "label": "settled-5",
+      "outcome": "matching-image",
+      "first_useful_assignment_ms": 1.3922500002081506,
+      "final_matching_assignment_ms": 55.41774999801419,
+      "final_cache": "memory",
+      "final_request_bytes_read": 0,
+      "final_open_count": 0,
+      "final_actual_us": 3199905033,
+      "faults": []
+    },
+    {
+      "label": "settled-6",
+      "outcome": "matching-image",
+      "first_useful_assignment_ms": 1.2354166647128295,
+      "final_matching_assignment_ms": 61.122458333557006,
+      "final_cache": "memory",
+      "final_request_bytes_read": 0,
+      "final_open_count": 0,
+      "final_actual_us": 6003747744,
+      "faults": []
+    },
+    {
+      "label": "settled-7",
+      "outcome": "matching-image",
+      "first_useful_assignment_ms": 1.2372499986668117,
+      "final_matching_assignment_ms": 22.98033333136118,
+      "final_cache": "memory",
+      "final_request_bytes_read": 0,
+      "final_open_count": 0,
+      "final_actual_us": 4601888956,
+      "faults": []
+    },
+    {
+      "label": "rapid-sweep-jump",
+      "outcome": "matching-image",
+      "first_useful_assignment_ms": 1.1246249996474944,
+      "final_matching_assignment_ms": 56.4731666672742,
+      "final_cache": "memory",
+      "final_request_bytes_read": 0,
+      "final_open_count": 0,
+      "final_actual_us": 3199905033,
+      "faults": []
+    },
+    {
+      "label": "leave-reenter",
+      "outcome": "matching-image",
+      "first_useful_assignment_ms": 3.1807916675461456,
+      "final_matching_assignment_ms": 523.7942916683096,
+      "final_cache": "memory",
+      "final_request_bytes_read": 0,
+      "final_open_count": 0,
+      "final_actual_us": 3199905033,
+      "faults": []
+    }
+  ],
+  "limits": [
+    "Screenshot capture can add host load; supplemental timings not a matched comparison",
+    "Initial timing from eligible hover; private video unchanged, not copied",
+    "No native NAS disconnection was forced; retry/recovery is isolated-contract proof"
+  ]
+}

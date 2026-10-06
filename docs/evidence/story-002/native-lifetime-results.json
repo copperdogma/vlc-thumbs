@@ -1,0 +1,79 @@
+{
+  "completed": true,
+  "inflight_at_transition": true,
+  "old_hover": {
+    "window": "standard.mp4",
+    "monotonic": 900470.8335411667,
+    "bucket_us": 55000000,
+    "generation": "92CF27DB-951F-4FF0-88DD-DEA5754CB9E2-9",
+    "event": "hover",
+    "requested_us": 54897957,
+    "duration_us": 60000000,
+    "point_x": 1215.6700439453125,
+    "left": 7,
+    "right": 1328
+  },
+  "stale_display_after_new_hover": [],
+  "hover_generations": [
+    "92CF27DB-951F-4FF0-88DD-DEA5754CB9E2-9",
+    "92CF27DB-951F-4FF0-88DD-DEA5754CB9E2-16",
+    "92CF27DB-951F-4FF0-88DD-DEA5754CB9E2-16",
+    "92CF27DB-951F-4FF0-88DD-DEA5754CB9E2-22"
+  ],
+  "display_events": [
+    {
+      "ok": 1,
+      "monotonic": 900471.0377733334,
+      "generation": "92CF27DB-951F-4FF0-88DD-DEA5754CB9E2-16",
+      "event": "display",
+      "requested_us": 7560093,
+      "actual_us": 0,
+      "cache": "miss",
+      "elapsed_ms": 112.95545834582299
+    },
+    {
+      "ok": 1,
+      "monotonic": 900472.3284048333,
+      "generation": "92CF27DB-951F-4FF0-88DD-DEA5754CB9E2-16",
+      "event": "display",
+      "requested_us": 4846715,
+      "actual_us": 0,
+      "cache": "miss",
+      "elapsed_ms": 95.05254158284515
+    },
+    {
+      "ok": 1,
+      "monotonic": 900475.2640520834,
+      "generation": "92CF27DB-951F-4FF0-88DD-DEA5754CB9E2-22",
+      "event": "display",
+      "requested_us": 36072672,
+      "actual_us": 36000000,
+      "cache": "miss",
+      "elapsed_ms": 100.85704165976495
+    }
+  ],
+  "focus": {
+    "window_position": [
+      41,
+      33
+    ],
+    "focused_role": "AXWindow",
+    "app_active": true,
+    "window_size": [
+      1687,
+      1084
+    ]
+  },
+  "final": {
+    "state": "pause",
+    "media_time_seconds": 0,
+    "counters": {
+      "video decoded": 77,
+      "frames displayed": 14,
+      "frames lost": 0,
+      "audio decoded": 42,
+      "buffers played": 21,
+      "buffers lost": 0
+    }
+  }
+}

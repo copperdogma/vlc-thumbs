@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "diagnostic_only": true,
+  "qualification_eligible": false,
+  "guard_equivalence_proven": false,
+  "scope": "Main-window20 paired prewarmed-RAM heavy/buffered ScreenCaptureKit observer-load experiment",
+  "limits": [
+    "Buffered ownership is pre/post only; transient changes unobserved",
+    "System-generated pointer and WindowServer display_time; not physical scanout",
+    "Uncontrolled OS/cache/scheduling effects",
+    "No overhead subtraction or product threshold changes"
+  ],
+  "app": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app",
+  "media": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/story-002/standard-cache-pressure.mp4",
+  "duration_seconds": 90.037333,
+  "requested_pairs": 20,
+  "target_buckets": [
+    0,
+    37,
+    74,
+    11,
+    48,
+    85,
+    22,
+    59,
+    96,
+    33,
+    70,
+    7,
+    44,
+    81,
+    18,
+    55,
+    92,
+    29,
+    66,
+    3
+  ],
+  "attempts": [],
+  "started": {
+    "unix_s": 1791158967.827487,
+    "monotonic_s": 918391.962437125
+  },
+  "source_sha256_before": "37e1e1ebf58d44d0a38f4ac3f6f621dca2547307f9429a404bfccfd475d94c84",
+  "module_sha256_before": "f0a7fa1a8c8d6cc5af20f7238772db1297b25b8d275692d77f8b988c908554e9",
+  "app_tree_sha256_before": "c33a2313735b94fcc633d22e42acd913d83602d1abdf3889582dfb9fd7bb09b0",
+  "pointer_sha256_before": "bfc48a37b90fc9aefda36735b36f9c239dea1f3c021046f7039d9e29691abd8e",
+  "heavy_probe_sha256_before": "a9a81373644de69a8613665e3bf8332e3644fd877deff08cc69f27bddd6cc611",
+  "buffered_probe_sha256_before": "0d9bc50a7f09bcddba4825f64003ceb438e2ed0dee15a36686f6e25a71a10ee3",
+  "media_json_sha256": "6d3e0a1ce57652c8b62f8fdf90e999855c54be3d60616e67cb5a060c15c8f9ab",
+  "runner_sha256": "2867876d3c534c7765e12ab8140afe547f5f7706ae5d9cf68b82be318a470a35",
+  "observer_source_sha256": "04d144d5a3aca3cf3162512980545d49b14df3c42ff0b8c8e725c4af088b4a3c",
+  "imported_runner_sha256": "22c1114611f18e02e2ec7c5a02f871634550ab2e6f7169537df2ef43950f08db",
+  "argument_validation": {
+    "returncode": 0,
+    "missing_options": []
+  },
+  "pid": 32688,
+  "app_command": [
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/VLC",
+    "--ignore-config",
+    "--config=/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-transition-ordering-001/vlcrc",
+    "--intf=macosx",
+    "--extraintf=oldrc",
+    "--rc-unix=/tmp/vlc002-continuous-hover-32682.sock",
+    "--rc-fake-tty",
+    "--stats",
+    "--play-and-pause",
+    "--start-time=0",
+    "--no-media-library",
+    "--no-metadata-network-access",
+    "--macosx-control-itunes=0",
+    "--no-macosx-mediakeys",
+    "--no-macosx-recentitems",
+    "--macosx-continue-playback=2",
+    "--no-video-title-show",
+    "--no-loop",
+    "--no-repeat",
+    "--no-random",
+    "--verbose=2",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/story-002/standard-cache-pressure.mp4"
+  ],
+  "startup_paused": {
+    "state": "pause",
+    "media_time_seconds": 0,
+    "counters": {
+      "video decoded": 63,
+      "frames displayed": 7,
+      "frames lost": 0,
+      "audio decoded": 36,
+      "buffers played": 18,
+      "buffers lost": 0
+    }
+  },
+  "timeline_rect": [
+    208.0,
+    1020.0,
+    1330.0,
+    16.0
+  ],
+  "ax_inventory": "window_index 0\nslider 208.000 1020.000 1330.000 16.000 value 0 title Position\nslider 1612.000 1021.000 50.000 14.000 value 256 title \n",
+  "fresh_reopens": [
+    {
+      "prior_generations": [
+        "DD1D3B3B-5E40-44B7-822B-FDCA828D4309-2"
+      ],
+      "trace_offset_before": 3719,
+      "play_snapshot": {
+        "state": "play",
+        "media_time_seconds": 0,
+        "counters": {
+          "video decoded": 63,
+          "frames displayed": 7,
+          "frames lost": 0,
+          "audio decoded": 36,
+          "buffers played": 18,
+          "buffers lost": 0
+        }
+      },
+      "stop_snapshot": {
+        "state": "stop",
+        "media_time_seconds": 0,
+        "counters": {
+          "video decoded": 63,
+          "frames displayed": 7,
+          "frames lost": 0,
+          "audio decoded": 36,
+          "buffers played": 18,
+          "buffers lost": 0
+        }
+      },
+      "reopened_paused_zero": {
+        "state": "pause",
+        "media_time_seconds": 0,
+        "counters": {
+          "video decoded": 68,
+          "frames displayed": 10,
+          "frames lost": 0,
+          "audio decoded": 42,
+          "buffers played": 21,
+          "buffers lost": 0
+        }
+      }
+    }
+  ],
+  "completed_collection": false,
+  "collection_error": "Exactly one owned 336x224 preview panel required",
+  "source_sha256_after": "37e1e1ebf58d44d0a38f4ac3f6f621dca2547307f9429a404bfccfd475d94c84",
+  "source_unchanged": true,
+  "module_sha256_after": "f0a7fa1a8c8d6cc5af20f7238772db1297b25b8d275692d77f8b988c908554e9",
+  "module_unchanged": true,
+  "pointer_sha256_after": "bfc48a37b90fc9aefda36735b36f9c239dea1f3c021046f7039d9e29691abd8e",
+  "pointer_unchanged": true,
+  "heavy_probe_sha256_after": "a9a81373644de69a8613665e3bf8332e3644fd877deff08cc69f27bddd6cc611",
+  "heavy_probe_unchanged": true,
+  "buffered_probe_sha256_after": "0d9bc50a7f09bcddba4825f64003ceb438e2ed0dee15a36686f6e25a71a10ee3",
+  "buffered_probe_unchanged": true,
+  "app_tree_sha256_after": "c33a2313735b94fcc633d22e42acd913d83602d1abdf3889582dfb9fd7bb09b0",
+  "app_unchanged": true,
+  "pair_summary": {
+    "pairs": [],
+    "complete_correct_pairs": 0,
+    "no_qualification_claim": true
+  },
+  "diagnostic_collection_passed": false,
+  "all_attempts_retained": true,
+  "qualified": false,
+  "finished": {
+    "unix_s": 1791158973.330079,
+    "monotonic_s": 918397.465005291
+  }
+}

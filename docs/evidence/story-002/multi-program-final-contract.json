@@ -1,0 +1,165 @@
+{
+  "scope": "Generated MPEG-TS program/ordinal regression; not broad TS qualification",
+  "helper_sha256": "4feff444b0b764c727144bf9472d343f9de0f8079cbbd12326efa6e1082a600e",
+  "fixtures": [
+    {
+      "path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/program-contract-final-002/single.ts",
+      "sha256": "7bea63b4a7c2e0c54b7cdd3e26eb7253abfabd0e797631bc4ccf9537864169a8",
+      "argv": [
+        "/usr/local/bin/ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-f",
+        "lavfi",
+        "-i",
+        "color=c=red:s=640x360:r=12:d=4",
+        "-f",
+        "lavfi",
+        "-i",
+        "color=c=blue:s=640x360:r=12:d=4",
+        "-map",
+        "0:v",
+        "-map",
+        "1:v",
+        "-c:v",
+        "libx264",
+        "-preset",
+        "ultrafast",
+        "-g",
+        "1",
+        "-threads",
+        "2",
+        "-program",
+        "program_num=1:st=0:st=1",
+        "-f",
+        "mpegts",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/program-contract-final-002/single.ts"
+      ]
+    },
+    {
+      "path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/program-contract-final-002/multiple.ts",
+      "sha256": "dff2dd700e748c0eaa3e4b45247af31e614045c625dd2008112e8b8268de90a2",
+      "argv": [
+        "/usr/local/bin/ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-f",
+        "lavfi",
+        "-i",
+        "color=c=red:s=640x360:r=12:d=4",
+        "-f",
+        "lavfi",
+        "-i",
+        "color=c=blue:s=640x360:r=12:d=4",
+        "-map",
+        "0:v",
+        "-map",
+        "1:v",
+        "-c:v",
+        "libx264",
+        "-preset",
+        "ultrafast",
+        "-g",
+        "1",
+        "-threads",
+        "2",
+        "-program",
+        "program_num=1:st=0",
+        "-program",
+        "program_num=2:st=1",
+        "-f",
+        "mpegts",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/program-contract-final-002/multiple.ts"
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "multiple_programs": false,
+      "ordinal": 0,
+      "pass": true,
+      "header": {
+        "version": 2,
+        "ok": true,
+        "sampling": "keyframe",
+        "requested_us": 1500000,
+        "actual_us": 1500000,
+        "width": 320,
+        "height": 180,
+        "channels": 4,
+        "payload_bytes": 230400,
+        "video_ordinal": 0,
+        "decoded_frames": 1,
+        "timeline_origin_us": 1400000
+      },
+      "elapsed_ms": 33.464042004197836,
+      "peak_sampled_rss_kib": 5264,
+      "peak_sampled_cpu_percent": 0.0,
+      "payload_sha256": "d6e4fa051e063ccce3f7eb0b5d61cef12e94a88d6adaa80d9539a3f623aee914",
+      "center_rgb": [
+        252,
+        0,
+        0
+      ]
+    },
+    {
+      "multiple_programs": false,
+      "ordinal": 1,
+      "pass": true,
+      "header": {
+        "version": 2,
+        "ok": true,
+        "sampling": "keyframe",
+        "requested_us": 1500000,
+        "actual_us": 1500000,
+        "width": 320,
+        "height": 180,
+        "channels": 4,
+        "payload_bytes": 230400,
+        "video_ordinal": 1,
+        "decoded_frames": 1,
+        "timeline_origin_us": 1400000
+      },
+      "elapsed_ms": 19.814624916762114,
+      "peak_sampled_rss_kib": 5152,
+      "peak_sampled_cpu_percent": 0.0,
+      "payload_sha256": "62bed08f4af765d15f6c1c1d746338062e6342486681e1396045df0ef49d3a0c",
+      "center_rgb": [
+        0,
+        0,
+        253
+      ]
+    },
+    {
+      "multiple_programs": true,
+      "ordinal": 0,
+      "pass": true,
+      "header": {
+        "version": 2,
+        "ok": false,
+        "error": "ambiguous_track_mapping"
+      },
+      "elapsed_ms": 31.48320794571191,
+      "peak_sampled_rss_kib": 5072,
+      "peak_sampled_cpu_percent": 0.0,
+      "payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "multiple_programs": true,
+      "ordinal": 1,
+      "pass": true,
+      "header": {
+        "version": 2,
+        "ok": false,
+        "error": "ambiguous_track_mapping"
+      },
+      "elapsed_ms": 36.22562496457249,
+      "peak_sampled_rss_kib": 5296,
+      "peak_sampled_cpu_percent": 0.0,
+      "payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "pass": true
+}

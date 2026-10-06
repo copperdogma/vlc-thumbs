@@ -1,0 +1,118 @@
+{
+  "candidate_manifest": "docs/evidence/story-002/app-build-drawing-restored-001302.json",
+  "scope": "Actual VoiceOver pointer-to-slider navigation, followed by 10 physical hover movements per surface with settled caption/focus/slider/window samples. Not continuous speech recording or proof of VoiceOver increment seeking.",
+  "modes": {
+    "detached": {
+      "physical_pointer_movements": 10,
+      "active_all": true,
+      "focused_roles": [
+        "AXSlider"
+      ],
+      "slider_state_unchanged": true,
+      "ax_state": "window_index 0\nslider 142.000 1020.000 1476.000 16.000 value 1294.288208007812 title Position\nwindow_index 1\nslider 208.000 1065.000 1330.000 16.000 value 1294.288208007812 title Position\nslider 1612.000 1066.000 50.000 14.000 value 256 title \n",
+      "owned_preview_panel_count_each": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "caption_frames": 11,
+      "unique_caption_pixel_hashes": 1,
+      "caption_pixel_sha256": "006693b03c807d18736b6675d3f0adb2da2efc6aa9251912a7a1438b30eb06c7",
+      "raw_records": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/voiceover-current-001/detached-hover.json",
+      "source_unchanged": true
+    },
+    "native": {
+      "physical_pointer_movements": 10,
+      "active_all": true,
+      "focused_roles": [
+        "AXWindow"
+      ],
+      "slider_state_unchanged": true,
+      "ax_state": "window_index 0\nslider 641.000 925.000 445.000 17.000 value 0 title \nslider 671.000 957.000 82.000 14.000 value 256 title \nwindow_index 1\n",
+      "owned_preview_panel_count_each": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "caption_frames": 11,
+      "unique_caption_pixel_hashes": 1,
+      "caption_pixel_sha256": "3ff8ed6a0ffb6bc33905009d8d94195255933cf22c15f5b9fd9e8d4d64c9a445",
+      "raw_records": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/voiceover-current-native-001/native-hover.json",
+      "source_unchanged": true
+    },
+    "main": {
+      "physical_pointer_movements": 10,
+      "active_all": true,
+      "focused_roles": [
+        "AXSlider"
+      ],
+      "slider_state_unchanged": true,
+      "ax_state": "window_index 0\nslider 208.000 1020.000 1330.000 16.000 value 0 title Position\nslider 1612.000 1021.000 50.000 14.000 value 256 title \n",
+      "owned_preview_panel_count_each": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "caption_frames": 11,
+      "unique_caption_pixel_hashes": 1,
+      "caption_pixel_sha256": "6c0e76cd1cc8c5894bfd673b71bfc794bbddf08d9e9cd8f7e36659d51a2d8970",
+      "raw_records": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/voiceover-current-main-custom-001/main-hover.json",
+      "source_unchanged": true
+    },
+    "custom": {
+      "physical_pointer_movements": 10,
+      "active_all": true,
+      "focused_roles": [
+        "AXWindow"
+      ],
+      "slider_state_unchanged": true,
+      "ax_state": "window_index 0\nslider 641.000 918.000 445.000 17.000 value 0 title \nslider 671.000 950.000 82.000 14.000 value 256 title \nwindow_index 1\n",
+      "owned_preview_panel_count_each": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "caption_frames": 11,
+      "unique_caption_pixel_hashes": 1,
+      "caption_pixel_sha256": "6c0e76cd1cc8c5894bfd673b71bfc794bbddf08d9e9cd8f7e36659d51a2d8970",
+      "raw_records": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/voiceover-current-main-custom-001/custom-hover.json",
+      "source_unchanged": true
+    }
+  },
+  "setup_exclusion": "Detached initial pointer fell under VoiceOver caption overlay and could not navigate to slider. Retained screenshot; move to x1000 outside overlay before scored samples. No unsupported caption counted as success.",
+  "reader_restored_off": true,
+  "settings_restored": {
+    "welcome_dialog": 1,
+    "applescript_control": 0,
+    "utility_quit": true
+  },
+  "host_result_note": "Host intentionally records passed=false/count=0 because it owns app lifecycle only. Behavioral judgments are the guarded samples summarized here."
+}

@@ -1,0 +1,47 @@
+{
+  "scope": "Reuse applicability audit for unchanged helper in experiment221228; source and linked static dependencies verified against current files",
+  "source_report": "helper-keyframe-origin-fixed-results.json",
+  "candidate_manifest": "app-build-221228-experiment.json",
+  "helper_unsigned_sha256": "b3f0c2a216629046b2ad7c9f801e56750a445c983c2f51623e09431e62777d01",
+  "current_inputs_match_manifest": {
+    "src/thumbnail-helper/thumbnail-helper.c": true,
+    "scripts/build-thumbnail-helper.sh": true,
+    "work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/libavcodec.a": true,
+    "work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/libavformat.a": true,
+    "work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/libavutil.a": true,
+    "work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/libswscale.a": true,
+    "work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/libgsm.a": true,
+    "work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/libmp3lame.a": true,
+    "work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/libopenjp2.a": true
+  },
+  "benchmarks": [
+    {
+      "fixture": "standard.mp4",
+      "requests": 100,
+      "errors": 0,
+      "max_sampled_rss_kib": 21696,
+      "max_sampled_cpu_percent": 0.9
+    },
+    {
+      "fixture": "standard.mkv",
+      "requests": 100,
+      "errors": 0,
+      "max_sampled_rss_kib": 27728,
+      "max_sampled_cpu_percent": 4.8
+    }
+  ],
+  "resource_limits": {
+    "process_rss_and_footprint_mib": 512,
+    "watchdog_interval_ms": 10,
+    "individual_av_allocation_mib": 128,
+    "live_decoder_frame_buffer_mib": 320,
+    "deadline_seconds": 5,
+    "decoder_threads": 1,
+    "cpu_seconds_rlimit": 5
+  },
+  "limitations": [
+    "10ms process watchdog permits brief overshoot; allocation caps prevent specific oversized allocations",
+    "Short-lived helper process CPU sampling can miss work; zero samples do not prove zero CPU",
+    "This unchanged-helper proof does not transfer UI/service scheduling or playback qualification"
+  ]
+}

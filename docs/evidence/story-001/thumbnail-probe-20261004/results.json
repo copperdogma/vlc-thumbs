@@ -1,0 +1,196 @@
+[
+  {
+    "maximum_height": 180,
+    "input": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/probes/thumbnail-plan/known-h264.mp4",
+    "maximum_width": 320,
+    "requests": [
+      {
+        "result": 0,
+        "height": 180,
+        "image_path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/probes/thumbnail-plan/known-h264.mp4-0.png",
+        "requested_seconds": 0.5,
+        "width": 320,
+        "success": 1,
+        "elapsed_ms": 179.57312508951873,
+        "actual_seconds": 0.5,
+        "open_to_callback_ms": 197.23541662096977,
+        "png_written": true
+      },
+      {
+        "result": 0,
+        "height": 180,
+        "image_path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/probes/thumbnail-plan/known-h264.mp4-1.png",
+        "requested_seconds": 7.25,
+        "width": 320,
+        "success": 1,
+        "elapsed_ms": 53.35154163185507,
+        "actual_seconds": 7.25,
+        "open_to_callback_ms": 253.95425001624972,
+        "png_written": true
+      },
+      {
+        "result": 0,
+        "height": 180,
+        "image_path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/probes/thumbnail-plan/known-h264.mp4-2.png",
+        "requested_seconds": 2.3,
+        "width": 320,
+        "success": 1,
+        "elapsed_ms": 26.21970826294273,
+        "actual_seconds": 2.2916666666666665,
+        "open_to_callback_ms": 282.13566658087075,
+        "png_written": true
+      },
+      {
+        "result": 0,
+        "height": 180,
+        "image_path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/probes/thumbnail-plan/known-h264.mp4-3.png",
+        "requested_seconds": 6.75,
+        "width": 320,
+        "success": 1,
+        "elapsed_ms": 36.40920820180327,
+        "actual_seconds": 6.75,
+        "open_to_callback_ms": 320.21620823070407,
+        "png_written": true
+      },
+      {
+        "result": 0,
+        "height": 180,
+        "image_path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/probes/thumbnail-plan/known-h264.mp4-4.png",
+        "requested_seconds": 2.3,
+        "width": 320,
+        "success": 1,
+        "elapsed_ms": 26.731666643172503,
+        "actual_seconds": 2.2916666666666665,
+        "open_to_callback_ms": 349.06012495048344,
+        "png_written": true
+      }
+    ],
+    "tolerance_seconds": 0.05
+  },
+  {
+    "maximum_height": 180,
+    "input": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/probes/thumbnail-plan/known-h264.mkv",
+    "maximum_width": 320,
+    "requests": [
+      {
+        "result": 1,
+        "error_domain": "AVFoundationErrorDomain",
+        "requested_seconds": 0.5,
+        "error_code": -11828,
+        "success": 0,
+        "elapsed_ms": 4.149208310991526,
+        "error": "Cannot Open",
+        "open_to_callback_ms": 16.5165833896026
+      },
+      {
+        "result": 1,
+        "error_domain": "AVFoundationErrorDomain",
+        "requested_seconds": 7.25,
+        "error_code": -11828,
+        "success": 0,
+        "elapsed_ms": 0.08775002788752317,
+        "error": "Cannot Open",
+        "open_to_callback_ms": 16.614166786894202
+      },
+      {
+        "result": 1,
+        "error_domain": "AVFoundationErrorDomain",
+        "requested_seconds": 2.3,
+        "error_code": -11828,
+        "success": 0,
+        "elapsed_ms": 0.060458434745669365,
+        "error": "Cannot Open",
+        "open_to_callback_ms": 16.67979173362255
+      },
+      {
+        "result": 1,
+        "error_domain": "AVFoundationErrorDomain",
+        "requested_seconds": 6.75,
+        "error_code": -11828,
+        "success": 0,
+        "elapsed_ms": 0.057416618801653385,
+        "error": "Cannot Open",
+        "open_to_callback_ms": 16.74208336044103
+      },
+      {
+        "result": 1,
+        "error_domain": "AVFoundationErrorDomain",
+        "requested_seconds": 2.3,
+        "error_code": -11828,
+        "success": 0,
+        "elapsed_ms": 0.05495839286595583,
+        "error": "Cannot Open",
+        "open_to_callback_ms": 16.803374979645014
+      }
+    ],
+    "tolerance_seconds": 0.05
+  },
+  {
+    "maximum_height": 180,
+    "input": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/build-smoke.mp4",
+    "maximum_width": 320,
+    "requests": [
+      {
+        "result": 0,
+        "height": 180,
+        "image_path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/probes/thumbnail-plan/build-smoke.mp4-0.png",
+        "requested_seconds": 0.5,
+        "width": 320,
+        "success": 1,
+        "elapsed_ms": 288.2096666144207,
+        "actual_seconds": 0.5,
+        "open_to_callback_ms": 304.48866670485586,
+        "png_written": true
+      },
+      {
+        "result": 0,
+        "height": 180,
+        "image_path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/probes/thumbnail-plan/build-smoke.mp4-1.png",
+        "requested_seconds": 2.25,
+        "width": 320,
+        "success": 1,
+        "elapsed_ms": 28.51650002412498,
+        "actual_seconds": 2.25,
+        "open_to_callback_ms": 335.5524583021179,
+        "png_written": true
+      },
+      {
+        "result": 0,
+        "height": 180,
+        "image_path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/probes/thumbnail-plan/build-smoke.mp4-2.png",
+        "requested_seconds": 1.3,
+        "width": 320,
+        "success": 1,
+        "elapsed_ms": 23.2510834466666,
+        "actual_seconds": 1.25,
+        "open_to_callback_ms": 361.2989583052695,
+        "png_written": true
+      },
+      {
+        "result": 0,
+        "height": 180,
+        "image_path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/probes/thumbnail-plan/build-smoke.mp4-3.png",
+        "requested_seconds": 1.75,
+        "width": 320,
+        "success": 1,
+        "elapsed_ms": 29.278500005602837,
+        "actual_seconds": 1.75,
+        "open_to_callback_ms": 392.64954172540456,
+        "png_written": true
+      },
+      {
+        "result": 0,
+        "height": 180,
+        "image_path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/probes/thumbnail-plan/build-smoke.mp4-4.png",
+        "requested_seconds": 1.3,
+        "width": 320,
+        "success": 1,
+        "elapsed_ms": 22.958375047892332,
+        "actual_seconds": 1.25,
+        "open_to_callback_ms": 417.4750833772123,
+        "png_written": true
+      }
+    ],
+    "tolerance_seconds": 0.05
+  }
+]

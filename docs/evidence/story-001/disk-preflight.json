@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-03",
+  "local_disk": {
+    "free_bytes": 12092178432,
+    "free_gib": 11.26
+  },
+  "source_checkout_du": "163 MiB allocated per du -sh; includes 25 MiB Git data",
+  "prebuilt_head_probe": {
+    "url": "https://download.videolan.org/pub/videolan/contrib/aarch64-apple-darwin27/vlc-contrib-aarch64-apple-darwin27-latest.tar.zst",
+    "status": 404,
+    "content_length": "153"
+  },
+  "build_started": false,
+  "large_downloads_started": false,
+  "peak_build_requirement": "unknown; no measured build exists"
+}

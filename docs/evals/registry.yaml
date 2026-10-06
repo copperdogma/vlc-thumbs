@@ -7,7 +7,138 @@
   contract: docs/evals/root-timeline-experience.md
   ideal_refs: [ideal:req:previews, ideal:req:annotations, ideal:req:persistence, ideal:req:navigation, ideal:req:media-integrity, ideal:req:playback-quality, ideal:req:evidence]
   spec_refs: [spec:1, spec:2, spec:3, spec:4]
-  story_refs: ["001"]
-  defer_reason: No VLC candidate build, legal media fixture or UI runner exists.
+  story_refs: ["001", "002", "003", "004"]
+  defer_reason: Native preview capability evidence exists; bookmarks and the integrated root runner remain absent.
   trigger: A pinned candidate supports both interactions on the actual timeline.
   measured_failure: none recorded
+
+- id: story-002-preview-capability
+  name: Native macOS keyframe previews
+  type: quality
+  status: partial
+  functional_mvp_status: passed
+  pragmatic_comparison_status: passed
+  precise_performance_status: deferred-unqualified
+  ladder: capability
+  parent_id: root-timeline-experience
+  command: See tests/story-002/README.md for candidate-specific fixture and native runners
+  contract: docs/stories/story-002-timeline-thumbnails.md
+  ideal_refs: [ideal:req:previews, ideal:req:media-integrity, ideal:req:playback-quality, ideal:req:evidence]
+  spec_refs: [spec:1, spec:2, spec:4]
+  story_refs: ["002"]
+  verified_scores:
+    helper_correctness: 25/25
+    helper_requests: 200/200
+    service_non_latency_contracts: 25/25
+    service_cache_requests: 600/600
+    program_mapping_regressions: 4/4
+    matroska_mapping_regressions: 5/5
+    fixture_preservation_regressions: 3/3
+    historical_absolute_rescore_phases: 6/6
+    native_selected_track_menus: 4/4
+    native_program_unavailable: 1/1
+  evidence:
+    - docs/evidence/story-002/native-preview-preference-final.json
+    - docs/evidence/story-002/ordinary-control-preview-preference-final.json
+    - docs/evidence/story-002/app-build-preview-preference-final-155231.json
+    - docs/evidence/story-002/local-preview-preference-update.json
+    - docs/evidence/story-002/helper-tracknumber-results.json
+    - docs/evidence/story-002/service-tracknumber-results.json
+    - docs/evidence/story-002/service-track-count-cache-contract.json
+    - docs/evidence/story-002/multi-program-final-contract.json
+    - docs/evidence/story-002/matroska-track-mapped-contract.json
+    - docs/evidence/story-002/fixture-preservation-final-contract.json
+    - docs/evidence/story-002/mvp-threshold-rescore.json
+    - docs/evidence/story-002/current-acceptance-ledger.md
+    - docs/evidence/story-002/native-final-guards.json
+    - docs/evidence/story-002/current-cohort-foreground-setup-failure.json
+    - docs/evidence/story-002/continuous-tracknumber-mp4-results.json
+    - docs/evidence/story-002/ordinary-control-baseline-pilot.json
+    - docs/evidence/story-002/ordinary-control-baseline-incomplete.json
+    - docs/evidence/story-002/native-selected-track-results.json
+    - docs/evidence/story-002/native-program-unavailable-results.json
+    - docs/evidence/story-002/playback-cadence-16ms-current-summary.json
+    - docs/evidence/story-002/shared-load-acceptance-review.md
+    - docs/evidence/story-002/mvp-shared-load-validation.md
+    - docs/evidence/story-002/mvp-delivery-manifest.json
+    - docs/evidence/story-002/ordinary-control-shared-load-20pct-inconclusive.json
+  measured_result: >-
+    Final155231 native preference proof passed: default checked; Save-off wrote
+    config 0 and hid previews; Cancel left the value unchanged; restart retained
+    unchecked state; Save-on displayed a preview; explicit CLI-off suppressed
+    preview events; ordinary seek changed AX position while preserving the
+    Position title and volume. The fresh valid 20-per-arm ordinary-control
+    comparison measured baseline median 222.039 ms (range 158.141–617.109) and
+    feature median 236.531 ms (range 113.493–526.612), +6.527%, within the
+    prospective baseline-median +20% allowance. See native-preview-preference-final.json,
+    ordinary-control-preview-preference-final.json and
+    app-build-preview-preference-final-155231.json. This is approximate
+    shared-host knob-render evidence, not causal speedup, p95, completed-seek
+    latency or a general-host guarantee.
+  remaining: >-
+    Story 002 bounded functional MVP and the basic Interface preference follow-up
+    are Done. The 132643 functional evidence and three valid matched playback
+    pairs remain dated/inherited; reader/helper/service proof is unchanged. No
+    fresh four-surface preference toggle or reader rerun is claimed. The earlier
+    premature functional-only Done disposition remains withdrawn history.
+    Precise tail/causal-stall qualification remains deferred; repeated ROI
+    candidates in both arms remain unattributed and do not establish no stalls.
+    Reproducible feature-attributable stalls remain must-fix. Broader formats,
+    MKV latency distributions, public packaging, bookmarks and integrated root
+    remain deferred.
+  limits: Historical absolute response targets and retrospective scores are preserved, not current comparative qualification. The 20% allowance applies to the pragmatic median comparison; noise does not expand it. Fewer than 20 valid responses per arm, invalid ownership/setup/pixels, or censored capture would make a comparison incomplete/inconclusive, not passing. Block variability is descriptive; the current median comparison establishes only that run's declared threshold outcome, not causality or a general host guarantee. Thumbnail delay has no vanilla denominator and remains descriptive. The unavailable-program native service diagnostic label was malformed-reply rather than decode-unavailable, so exact diagnostic classification is unproven. Integrated bookmarks/root remains deferred.
+
+- id: story-004-responsive-preview-capability
+  name: Responsive preparation and reusable previews
+  type: quality
+  status: passed
+  ladder: capability
+  parent_id: root-timeline-experience
+  command: See tests/story-004/README.md for local contracts and native comparison commands
+  contract: docs/stories/story-004-responsive-reusable-thumbnails.md
+  ideal_refs: [ideal:req:previews, ideal:req:media-integrity, ideal:req:playback-quality, ideal:req:evidence]
+  spec_refs: [spec:1, spec:2, spec:4]
+  story_refs: ["004"]
+  verified_scores:
+    service_contracts: 40/40
+    cache_contracts: 3410/3410
+    worker_fixture_parity: 35/35
+    native_nas_final_images: 10/10
+    supplemental_nas_images: 10/10
+    ordinary_control_valid_per_arm: 20/20
+    matched_playback_pairs: 3/3
+  evidence:
+    - docs/evidence/story-004/current-acceptance-ledger.md
+    - docs/evidence/story-004/local-contracts-correction-001728.json
+    - docs/evidence/story-004/native-correction-235648.json
+    - docs/evidence/story-004/native-nas-correction-001728.json
+    - docs/evidence/story-004/ordinary-controls-correction-001728.json
+    - docs/evidence/story-004/playback-correction-001728.json
+    - docs/evidence/story-004/local-preview-update-001728.json
+    - docs/evidence/story-004/validate-corrections-001728.md
+    - docs/evidence/story-004/local-contract-results.json
+    - docs/evidence/story-004/native-surfaces-provisional-222506.json
+    - docs/evidence/story-004/native-nas-provisional-222506.json
+    - docs/evidence/story-004/native-nas-pending-visual-222506.json
+    - docs/evidence/story-004/native-preference-provisional-222506.json
+    - docs/evidence/story-004/ordinary-control-provisional-222506.json
+    - docs/evidence/story-004/playback-provisional-222506.json
+    - docs/evidence/story-004/local-preview-update-222506.json
+  measured_result: >-
+    Corrected001728 passes3410cache/40service/current packaged count contracts and
+    final NAS10/10cached matching images. Mapping namespace invalidates unsafe old
+    entries; bounded demand tier survives newer-background quota pressure.
+    Controls37.612/37.635ms,+0.062%,meet baseline+20%; three matched60s playback
+    pairs with130–138background jobs pass audio/drop checks and report resource costs.
+    Exact signed components installed; normal-profile actual NAS image inspected.
+    Unchanged235648 four-surface/malformed UI and prior preference/reader evidence inherited explicitly.
+  remaining: >-
+    No remaining declared Story004 gaps. Integrated root awaits bookmarks.
+    Broader formats, public packaging, universal/p95 and causal stall characterization remain deferred.
+  limits: >-
+    Single host/NAS source with uncontrolled warmth; helper old/new timeout
+    budgets differ. Assignment timing is not compositor latency. CPU/RSS overhead
+    is reported. Reader evidence inherited for unchanged interface; fresh reader
+    startup inconclusive. Recovery is fault-contract proof, no forced NAS disconnect.
+    Sampled hashing has an explicit unsampled-change blind spot. Packaged helper
+    fault interposition inconclusive; unsigned equivalent TEXT fault suite passes.

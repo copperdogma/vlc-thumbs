@@ -1,0 +1,11 @@
+{
+  "numer": 125,
+  "denom": 3,
+  "scope": "Current host mach_timebase_info; raw WindowServer displayTime converted to uptime seconds independent of callback.",
+  "frames": 3925,
+  "display_time_minus_pts_s": {
+    "median": 3.4924596548080444e-10,
+    "min": 0.0,
+    "max": 6.984919309616089e-10
+  }
+}

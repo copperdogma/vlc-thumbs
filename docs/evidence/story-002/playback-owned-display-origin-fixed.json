@@ -1,0 +1,6034 @@
+{
+  "runs": {
+    "pair-001-baseline": {
+      "completed": true,
+      "collection_error": null,
+      "delta": {
+        "video decoded": 2877,
+        "frames displayed": 1415,
+        "frames lost": 0,
+        "audio decoded": 1409,
+        "buffers played": 704,
+        "buffers lost": 0
+      },
+      "dropped_percent": 0.0,
+      "screen": {
+        "frames_in_active_interval": 3397,
+        "status_counts": {
+          "0": 1437,
+          "1": 1960
+        },
+        "roi_pixel_rectangles": [
+          [
+            0,
+            0,
+            588,
+            90
+          ]
+        ],
+        "capture_spacing_median_s": 0.016666749957948923,
+        "unchanged_roi_intervals_at_least_100ms": [
+          {
+            "start_relative_s": 59.7333410839783,
+            "end_relative_s": 59.99167849996593,
+            "duration_s": 0.2583374159876257,
+            "end_reason": "active_interval_ended",
+            "classification": "unchanged_roi_candidate_not_vlc_attribution"
+          }
+        ],
+        "timestamp_discontinuities": [],
+        "observer_callback_gaps": [],
+        "callback_arrival_minus_pts_s": {
+          "median": 0.0042567921336740255,
+          "p95": 0.007795875077135861,
+          "max": 0.011375000118277967
+        }
+      },
+      "audio": {
+        "threshold_dbfs": -60,
+        "rms_windows_overlapping_active_interval": 6001,
+        "covered_audio_window_s": 60.000693347887136,
+        "first_audible_relative_s": 0.01651624997612089,
+        "last_audible_relative_s": 60.00069329200778,
+        "below_threshold_intervals": [
+          {
+            "start_relative_s": 0.0,
+            "end_relative_s": 0.01651624997612089,
+            "duration_s": 0.01651624997612089,
+            "location": "leading_boundary",
+            "classification": "low_digital_app_audio_candidate_not_vlc_attribution"
+          }
+        ],
+        "interior_below_threshold_total_s": 0,
+        "formats": [
+          {
+            "bits_per_channel": 32,
+            "channels": 1,
+            "format_flags": 41,
+            "format_id": 1819304813,
+            "rms_supported": true,
+            "sample_rate": 48000
+          }
+        ],
+        "analysis_error_count_all_capture": 0,
+        "timestamp_discontinuities": [],
+        "observer_callback_gaps": [],
+        "callback_arrival_minus_pts_s": {
+          "median": 0.037517209071666,
+          "p95": 0.048209709115326405,
+          "max": 0.051318458979949355
+        }
+      },
+      "source_unchanged": true,
+      "window": [
+        42,
+        33,
+        1680,
+        1013
+      ],
+      "track": [
+        208.0,
+        1020.0,
+        1330.0,
+        16.0
+      ],
+      "focus_checks": 56,
+      "capture_errors": [],
+      "pointer_events": 80,
+      "media_states": [
+        {
+          "state": "play",
+          "monotonic_s": 907394.14029425
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907394.237895
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907394.238157583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907394.49166025
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907394.747204666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907395.002209333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907395.329241666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907395.584377208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907395.835643375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907396.087356958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907396.405910375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907396.660561
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907396.917195291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907397.171931541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907397.49666725
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907397.748581875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907398.003561291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907398.258672416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907398.589862333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907398.841527916
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907399.092617
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907399.347732083
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907399.708778041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907399.959473666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907400.214705083
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907400.469495125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907400.796667958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907401.050555083
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907401.301535666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907401.556632583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907401.878813916
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907402.133535208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907402.38400425
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907402.639103125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907402.968361208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907403.221605833
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907403.476657666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907403.731280791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907404.051645541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907404.306872541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907404.560883291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907404.811502166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907405.136794125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907405.391578166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907405.642540208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907405.897715666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907406.222631708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907406.4728285
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907406.728036541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907406.980788208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907407.307259875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907407.55866925
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907407.813663083
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907408.068468291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907408.391575416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907408.645566625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907408.900637166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907409.151106916
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907409.473754333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907409.728657291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907409.9815365
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907410.238281666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907410.568154291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907410.818548125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907411.070598458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907411.321506333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907411.652871041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907411.907781791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907412.158532541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907412.41302025
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907412.74053575
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907412.991347625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907413.246154208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907413.497502291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907413.823646583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907414.074490166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907414.3274865
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907414.578683125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907414.908519583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907415.162502041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907415.417944791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907415.67287825
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907416.000733875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907416.252873791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907416.504515416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907416.759855208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907417.082971791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907417.337517041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907417.592567041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907417.845519375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907418.175693666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907418.426522416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907418.681738708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907418.9369735
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907419.256742791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907419.508549791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907419.762582875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907420.017689541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907420.340934625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907420.594632166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907420.84652
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907421.09766925
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907421.417506291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907421.67054925
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907421.924056708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907422.177578875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907422.502146
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907422.754642875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907423.006542166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907423.257554625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907423.581576041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907423.835570166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907424.088314625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907424.338484333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907424.655621958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907424.906574625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907425.160509416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907425.41456325
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907425.73500325
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907425.986689041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907426.24178475
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907426.495540041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907426.852371791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907427.10270775
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907427.356366666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907427.611312541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907427.937203625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907428.187552208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907428.441887625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907428.694503625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907429.015977708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907429.268495333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907429.519534291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907429.774584375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907430.106669625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907430.361814
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907430.612517291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907430.863166666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907431.198914625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907431.4528595
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907431.703547041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907431.958582333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907432.282170708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907432.535682291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907432.789608708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907433.044748166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907433.368064416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907433.623037291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907433.878287583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907434.133364833
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907434.464229333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907434.71939
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907434.96962675
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907435.22263225
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907435.542464833
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907435.792466708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907436.047707541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907436.30052975
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907436.622481333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907436.87364075
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907437.128693291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907437.379611708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907437.700832291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907437.9525445
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907438.204732666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907438.455401875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907438.774517375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907439.027932291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907439.278513458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907439.529554875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907439.855458833
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907440.107218958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907440.361540541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907440.616719458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907440.944386458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907441.195557208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907441.450536291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907441.704631375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907442.03121025
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907442.2862565
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907442.537773083
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907442.792650791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907443.114827291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907443.369699291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907443.624482125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907443.876555041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907444.214315708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907444.469407791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907444.724800708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907444.977569416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907445.304679833
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907445.55551375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907445.807525125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907446.059546958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907446.391625541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907446.644117333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907446.89620325
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907447.151052666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907447.475526625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907447.729669291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907447.9805785
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907448.23582025
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907448.559978541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907448.810513583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907449.065798458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907449.320786791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907449.643451375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907449.894593875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907450.145525041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907450.400784541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907450.7258395
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907450.978781958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907451.233692916
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907451.486540958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907451.816413833
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907452.069572583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907452.320519375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907452.572660833
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907452.902027541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907453.156544041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907453.411585
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907453.66555325
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907453.988774083
+        }
+      ]
+    },
+    "pair-001-feature": {
+      "completed": true,
+      "collection_error": null,
+      "delta": {
+        "video decoded": 2877,
+        "frames displayed": 1415,
+        "frames lost": 0,
+        "audio decoded": 1409,
+        "buffers played": 704,
+        "buffers lost": 0
+      },
+      "dropped_percent": 0.0,
+      "screen": {
+        "frames_in_active_interval": 3384,
+        "status_counts": {
+          "0": 1437,
+          "1": 1947
+        },
+        "roi_pixel_rectangles": [
+          [
+            0,
+            0,
+            588,
+            90
+          ]
+        ],
+        "capture_spacing_median_s": 0.016666791983880103,
+        "unchanged_roi_intervals_at_least_100ms": [
+          {
+            "start_relative_s": 59.73325074999593,
+            "end_relative_s": 59.99991650006268,
+            "duration_s": 0.26666575006674975,
+            "end_reason": "active_interval_ended",
+            "classification": "unchanged_roi_candidate_not_vlc_attribution"
+          }
+        ],
+        "timestamp_discontinuities": [],
+        "observer_callback_gaps": [],
+        "callback_arrival_minus_pts_s": {
+          "median": 0.004235604777932167,
+          "p95": 0.007801666739396751,
+          "max": 0.012749833636917174
+        }
+      },
+      "audio": {
+        "threshold_dbfs": -60,
+        "rms_windows_overlapping_active_interval": 6001,
+        "covered_audio_window_s": 60.004625513916835,
+        "first_audible_relative_s": 0.008977500023320317,
+        "last_audible_relative_s": 60.00462545803748,
+        "below_threshold_intervals": [
+          {
+            "start_relative_s": 0.0,
+            "end_relative_s": 0.008977500023320317,
+            "duration_s": 0.008977500023320317,
+            "location": "leading_boundary",
+            "classification": "low_digital_app_audio_candidate_not_vlc_attribution"
+          }
+        ],
+        "interior_below_threshold_total_s": 0,
+        "formats": [
+          {
+            "bits_per_channel": 32,
+            "channels": 1,
+            "format_flags": 41,
+            "format_id": 1819304813,
+            "rms_supported": true,
+            "sample_rate": 48000
+          }
+        ],
+        "analysis_error_count_all_capture": 0,
+        "timestamp_discontinuities": [],
+        "observer_callback_gaps": [],
+        "callback_arrival_minus_pts_s": {
+          "median": 0.03617812495213002,
+          "p95": 0.04688129178248346,
+          "max": 0.05006275011692196
+        }
+      },
+      "source_unchanged": true,
+      "window": [
+        42,
+        33,
+        1680,
+        1013
+      ],
+      "track": [
+        208.0,
+        1020.0,
+        1330.0,
+        16.0
+      ],
+      "focus_checks": 56,
+      "capture_errors": [],
+      "pointer_events": 80,
+      "media_states": [
+        {
+          "state": "play",
+          "monotonic_s": 907468.687361541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907468.799566083
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907468.7997635
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907469.051285833
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907469.305072875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907469.555550583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907469.884131
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907470.139319333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907470.392648916
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907470.644682458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907470.986476458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907471.237683208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907471.492698
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907471.746562666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907472.072485708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907472.3277905
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907472.583050541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907472.836963583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907473.163785625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907473.416688958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907473.671090333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907473.921678
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907474.240012333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907474.491532041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907474.745858833
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907475.000731791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907475.327795958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907475.58267375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907475.834521958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907476.0897035
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907476.40868375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907476.663856
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907476.9154905
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907477.169511
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907477.494443208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907477.748644416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907478.000522083
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907478.251620791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907478.577156875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907478.828930208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907479.082100333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907479.332605291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907479.651317875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907479.903270666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907480.157638833
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907480.411285291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907480.735024166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907480.985487541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907481.237745416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907481.4894285
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907481.811052
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907482.061556333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907482.312688666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907482.563590625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907482.891479958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907483.143547875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907483.398108333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907483.648519666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907483.978373208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907484.231531708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907484.485579666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907484.736537833
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907485.064527583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907485.31785475
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907485.568945041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907485.820544041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907486.144019875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907486.394575125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907486.649623625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907486.901085291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907487.222986708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907487.477931541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907487.728642916
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907487.981428958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907488.306822666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907488.561117
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907488.81358225
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907489.066731875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907489.3910015
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907489.644694625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907489.895780583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907490.147747041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907490.476995375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907490.727996125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907490.981483375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907491.235633416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907491.564625708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907491.817766416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907492.071480708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907492.323558166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907492.648869625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907492.902740166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907493.153543958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907493.404896125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907493.744683166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907493.995580875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907494.248624208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907494.503829416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907494.83077425
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907495.081658541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907495.335887166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907495.589833833
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907495.918095875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907496.173698208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907496.426817833
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907496.679662
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907497.005878291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907497.256672666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907497.511925625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907497.765072916
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907498.0953545
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907498.348544833
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907498.601640416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907498.854903333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907499.177831791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907499.431486166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907499.686898291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907499.942028458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907500.269680666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907500.5233275
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907500.776152791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907501.026594
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907501.381653666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907501.632903083
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907501.887428541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907502.138436333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907502.469524458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907502.723716583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907502.97902075
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907503.231792708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907503.559600791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907503.810686708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907504.065756041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907504.316596583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907504.652314708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907504.902877625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907505.156265708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907505.411256208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907505.739373291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907505.9897175
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907506.2445385
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907506.495750708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907506.818562666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907507.073588166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907507.325725916
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907507.580879125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907507.904849666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907508.156860375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907508.409733541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907508.663946791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907509.023228375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907509.278339875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907509.532068875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907509.7871555
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907510.121139666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907510.372609041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907510.627863541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907510.881667583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907511.203811041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907511.455839541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907511.707618458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907511.962782541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907512.287812458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907512.539625416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907512.79482
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907513.049497291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907513.37770225
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907513.631655208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907513.886523333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907514.140597041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907514.468868208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907514.720562666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907514.975673833
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907515.226611583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907515.554736291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907515.806551041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907516.061629375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907516.314757541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907516.634560375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907516.888149458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907517.139636375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907517.393558666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907517.730711458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907517.982505
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907518.235663291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907518.48742425
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907518.818538166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907519.073744125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907519.326789416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907519.582072083
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907519.905644
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907520.15689225
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907520.411539333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907520.663842
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907520.994844833
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907521.2475565
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907521.502634708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907521.7564795
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907522.075009166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907522.327616625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907522.58255425
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907522.837620416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907523.162380083
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907523.415615875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907523.66863775
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907523.919528125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907524.242163791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907524.496725958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907524.751707
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907525.003485833
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907525.330065375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907525.583132458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907525.83401575
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907526.08444575
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907526.413636458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907526.665693166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907526.919504541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907527.173362833
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907527.495860166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907527.749539875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907528.001868166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907528.257169333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907528.579644708
+        }
+      ]
+    },
+    "pair-002-baseline": {
+      "completed": true,
+      "collection_error": null,
+      "delta": {
+        "video decoded": 2877,
+        "frames displayed": 1415,
+        "frames lost": 0,
+        "audio decoded": 1409,
+        "buffers played": 704,
+        "buffers lost": 0
+      },
+      "dropped_percent": 0.0,
+      "screen": {
+        "frames_in_active_interval": 3415,
+        "status_counts": {
+          "0": 1437,
+          "1": 1978
+        },
+        "roi_pixel_rectangles": [
+          [
+            0,
+            0,
+            588,
+            90
+          ]
+        ],
+        "capture_spacing_median_s": 0.016666749957948923,
+        "unchanged_roi_intervals_at_least_100ms": [
+          {
+            "start_relative_s": 59.732543999911286,
+            "end_relative_s": 59.99088099994697,
+            "duration_s": 0.25833700003568083,
+            "end_reason": "active_interval_ended",
+            "classification": "unchanged_roi_candidate_not_vlc_attribution"
+          }
+        ],
+        "timestamp_discontinuities": [],
+        "observer_callback_gaps": [],
+        "callback_arrival_minus_pts_s": {
+          "median": 0.0032790000550448895,
+          "p95": 0.00775404239539057,
+          "max": 0.018423625151626766
+        }
+      },
+      "audio": {
+        "threshold_dbfs": -60,
+        "rms_windows_overlapping_active_interval": 6001,
+        "covered_audio_window_s": 60.003780180821195,
+        "first_audible_relative_s": 0.008872709004208446,
+        "last_audible_relative_s": 60.00378012494184,
+        "below_threshold_intervals": [
+          {
+            "start_relative_s": 0.0,
+            "end_relative_s": 0.008872709004208446,
+            "duration_s": 0.008872709004208446,
+            "location": "leading_boundary",
+            "classification": "low_digital_app_audio_candidate_not_vlc_attribution"
+          }
+        ],
+        "interior_below_threshold_total_s": 0,
+        "formats": [
+          {
+            "bits_per_channel": 32,
+            "channels": 1,
+            "format_flags": 41,
+            "format_id": 1819304813,
+            "rms_supported": true,
+            "sample_rate": 48000
+          }
+        ],
+        "analysis_error_count_all_capture": 0,
+        "timestamp_discontinuities": [],
+        "observer_callback_gaps": [],
+        "callback_arrival_minus_pts_s": {
+          "median": 0.03749091678764671,
+          "p95": 0.048204041784629226,
+          "max": 0.05102362507022917
+        }
+      },
+      "source_unchanged": true,
+      "window": [
+        42,
+        33,
+        1680,
+        1013
+      ],
+      "track": [
+        208.0,
+        1020.0,
+        1330.0,
+        16.0
+      ],
+      "focus_checks": 56,
+      "capture_errors": [],
+      "pointer_events": 80,
+      "media_states": [
+        {
+          "state": "play",
+          "monotonic_s": 907542.521113416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907542.5969235
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907542.59716275
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907542.851927708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907543.107017291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907543.36066325
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907543.68775825
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907543.940130916
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907544.191526791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907544.446631416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907544.76593325
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907545.017906708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907545.269387791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907545.52162875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907545.867954833
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907546.123176291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907546.3782705
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907546.63093525
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907546.951439208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907547.203632416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907547.458693583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907547.713502625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907548.036468666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907548.2875675
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907548.541359333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907548.794543791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907549.117193541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907549.36802725
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907549.620141166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907549.871554083
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907550.194177166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907550.44465575
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907550.696511208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907550.948553458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907551.270625875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907551.522565291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907551.776821375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907552.027594291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907552.351244166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907552.60601175
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907552.856557958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907553.112850125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907553.439001625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907553.690188708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907553.940521041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907554.192566875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907554.518624458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907554.773975166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907555.028462041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907555.2794965
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907555.600791208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907555.855865208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907556.109302583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907556.35949525
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907556.68432025
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907556.934590375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907557.184677875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907557.43550425
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907557.75635425
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907558.010425083
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907558.262343791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907558.513635
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907558.837716958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907559.09102825
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907559.342457291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907559.593178041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907559.913941583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907560.166603916
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907560.420157833
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907560.673570083
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907560.994723291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907561.249467208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907561.50461375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907561.758778083
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907562.07801575
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907562.328512875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907562.583564416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907562.835488416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907563.158190708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907563.412218291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907563.665890291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907563.916598166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907564.242431125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907564.493494
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907564.744609875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907564.995679916
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907565.324957416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907565.580294125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907565.831532625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907566.083727958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907566.407190916
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907566.660687041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907566.915359375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907567.167479666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907567.487742958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907567.740543333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907567.991486125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907568.2423665
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907568.562699166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907568.817868041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907569.072285208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907569.327344916
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907569.6460315
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907569.900611666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907570.155650666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907570.40885625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907570.734327666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907570.988946416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907571.241435583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907571.495640916
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907571.817058041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907572.069078625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907572.321478833
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907572.57572425
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907572.895746666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907573.150835583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907573.402636541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907573.655888708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907573.980233416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907574.235166125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907574.489665333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907574.74172425
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907575.073236041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907575.324641958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907575.578402291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907575.833535583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907576.188630041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907576.439432791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907576.69259725
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907576.943599833
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907577.266711666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907577.520863583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907577.774524708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907578.026618875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907578.35273225
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907578.607965625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907578.862864083
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907579.114684458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907579.43526025
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907579.68558775
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907579.94069425
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907580.194555333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907580.518757375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907580.771521583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907581.026921791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907581.279049166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907581.60629625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907581.86136475
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907582.111508625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907582.367555
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907582.689266666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907582.945357333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907583.195566666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907583.446609083
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907583.768514041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907584.019441125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907584.274947833
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907584.526642416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907584.846960541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907585.097499125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907585.349496125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907585.601671541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907585.922428458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907586.172484625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907586.426974583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907586.682202541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907587.008930625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907587.259719541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907587.511648916
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907587.762509291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907588.086349666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907588.339509666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907588.594626416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907588.846904458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907589.168858208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907589.423663625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907589.677536166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907589.928679625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907590.255362166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907590.510535708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907590.763127291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907591.014607333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907591.338035708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907591.589928666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907591.845152291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907592.095580583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907592.417630416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907592.672489583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907592.926487375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907593.177497041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907593.497477125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907593.749645958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907594.000492166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907594.25576225
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907594.572984041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907594.827939458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907595.079655958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907595.332729541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907595.651466125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907595.902730666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907596.157271125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907596.410709666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907596.739289125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907596.992392166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907597.2473815
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907597.498521958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907597.819578791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907598.072849541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907598.324496166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907598.579700041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907598.904920458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907599.156657375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907599.408579166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907599.660621083
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907599.9861435
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907600.239177208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907600.494304833
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907600.747549833
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907601.070464833
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907601.323548541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907601.577597958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907601.829929916
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907602.150082708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907602.403727625
+        }
+      ]
+    },
+    "pair-002-feature": {
+      "completed": true,
+      "collection_error": null,
+      "delta": {
+        "video decoded": 2877,
+        "frames displayed": 1415,
+        "frames lost": 0,
+        "audio decoded": 1409,
+        "buffers played": 704,
+        "buffers lost": 0
+      },
+      "dropped_percent": 0.0,
+      "screen": {
+        "frames_in_active_interval": 3386,
+        "status_counts": {
+          "0": 1436,
+          "1": 1950
+        },
+        "roi_pixel_rectangles": [
+          [
+            0,
+            0,
+            588,
+            90
+          ]
+        ],
+        "capture_spacing_median_s": 0.016666792100295424,
+        "unchanged_roi_intervals_at_least_100ms": [
+          {
+            "start_relative_s": 59.74311554210726,
+            "end_relative_s": 59.993115417077206,
+            "duration_s": 0.24999987496994436,
+            "end_reason": "active_interval_ended",
+            "classification": "unchanged_roi_candidate_not_vlc_attribution"
+          }
+        ],
+        "timestamp_discontinuities": [],
+        "observer_callback_gaps": [],
+        "callback_arrival_minus_pts_s": {
+          "median": 0.004198437731247395,
+          "p95": 0.00781425042077899,
+          "max": 0.014770916663110256
+        }
+      },
+      "audio": {
+        "threshold_dbfs": -60,
+        "rms_windows_overlapping_active_interval": 6001,
+        "covered_audio_window_s": 60.00086684792768,
+        "first_audible_relative_s": 0.018235000083222985,
+        "last_audible_relative_s": 60.00086679204833,
+        "below_threshold_intervals": [
+          {
+            "start_relative_s": 0.0,
+            "end_relative_s": 0.018235000083222985,
+            "duration_s": 0.018235000083222985,
+            "location": "leading_boundary",
+            "classification": "low_digital_app_audio_candidate_not_vlc_attribution"
+          }
+        ],
+        "interior_below_threshold_total_s": 0,
+        "formats": [
+          {
+            "bits_per_channel": 32,
+            "channels": 1,
+            "format_flags": 41,
+            "format_id": 1819304813,
+            "rms_supported": true,
+            "sample_rate": 48000
+          }
+        ],
+        "analysis_error_count_all_capture": 0,
+        "timestamp_discontinuities": [],
+        "observer_callback_gaps": [],
+        "callback_arrival_minus_pts_s": {
+          "median": 0.0361768341390416,
+          "p95": 0.046859042486175895,
+          "max": 0.04983862582594156
+        }
+      },
+      "source_unchanged": true,
+      "window": [
+        42,
+        33,
+        1680,
+        1013
+      ],
+      "track": [
+        208.0,
+        1020.0,
+        1330.0,
+        16.0
+      ],
+      "focus_checks": 56,
+      "capture_errors": [],
+      "pointer_events": 80,
+      "media_states": [
+        {
+          "state": "play",
+          "monotonic_s": 907616.3810795
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907616.4617615
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907616.46195575
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907616.717214041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907616.969547958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907617.220655
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907617.554070666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907617.808317
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907618.06187375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907618.312601208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907618.634848666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907618.889782375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907619.144952333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907619.398536333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907619.727742041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907619.982691583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907620.236795833
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907620.488728125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907620.80447125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907621.059362041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907621.313718833
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907621.567826083
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907621.8865505
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907622.137800416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907622.389479291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907622.6438785
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907622.966434916
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907623.219562458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907623.474761125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907623.72559325
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907624.047595791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907624.298850333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907624.553940708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907624.807614458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907625.130416125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907625.380721416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907625.635793416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907625.890803
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907626.218669833
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907626.469844791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907626.724549291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907626.975969333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907627.303022791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907627.558175458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907627.8105925
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907628.065711291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907628.395242041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907628.647662708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907628.902779875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907629.157596208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907629.480452083
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907629.73456125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907629.989991708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907630.241553583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907630.569398583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907630.824603791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907631.07660825
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907631.331663875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907631.652780791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907631.905767166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907632.156088625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907632.411488
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907632.73886525
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907632.993672375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907633.245827708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907633.499732875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907633.824646291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907634.079547708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907634.330620625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907634.585581708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907634.914578458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907635.16592425
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907635.420968958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907635.6714475
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907635.997539958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907636.24859225
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907636.503679916
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907636.756497916
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907637.083131291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907637.3345125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907637.5880315
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907637.838537375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907638.159027041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907638.412795208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907638.665170083
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907638.917589041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907639.247428291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907639.499674291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907639.75488625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907640.005101708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907640.333587416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907640.588207875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907640.838937583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907641.091929416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907641.42624825
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907641.679705
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907641.930660666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907642.184519916
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907642.5155615
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907642.769688416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907643.0215345
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907643.276974
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907643.601799916
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907643.853523375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907644.108300541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907644.360710291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907644.679195541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907644.930623
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907645.184718125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907645.436703458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907645.764426083
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907646.016500708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907646.271221916
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907646.525590791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907646.85115525
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907647.102673333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907647.355005458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907647.610061208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907647.934787083
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907648.189606166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907648.444832333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907648.69759575
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907649.059021958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907649.313286166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907649.565784708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907649.818594375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907650.138108833
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907650.389148666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907650.643401291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907650.894644791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907651.22303375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907651.477521958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907651.728421375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907651.978820291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907652.308352333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907652.563092541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907652.814514291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907653.068666416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907653.399165041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907653.652633125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907653.904838125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907654.159340333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907654.47844625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907654.731887625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907654.985983375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907655.240849666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907655.564544875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907655.819527
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907656.0724465
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907656.323577375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907656.648694958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907656.902818791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907657.157801
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907657.411522958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907657.73961875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907657.990639416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907658.242384958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907658.496038791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907658.823565208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907659.074556166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907659.329584375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907659.584698125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907659.906816333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907660.160466375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907660.41136225
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907660.668158083
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907660.9902835
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907661.244581875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907661.49601075
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907661.75117175
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907662.099393666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907662.348552375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907662.600061583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907662.855119916
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907663.187206708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907663.439004916
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907663.689544416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907663.942632083
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907664.276751291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907664.531691458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907664.784393583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907665.037585666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907665.370761583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907665.621569375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907665.876547208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907666.131688125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907666.465153666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907666.718408166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907666.973709875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907667.228699875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907667.588049375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907667.843285083
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907668.097702541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907668.352880583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907668.676839958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907668.929613541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907669.179985
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907669.435040875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907669.776024083
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907670.027660875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907670.278542833
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907670.531788958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907670.855827916
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907671.108544208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907671.363668708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907671.615467625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907671.939830208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907672.190213041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907672.440536583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907672.692051875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907673.018764958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907673.269769166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907673.523383125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907673.776532291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907674.096263666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907674.349462416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907674.600537208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907674.855545333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907675.187543708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907675.438598208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907675.690633
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907675.941140416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907676.273675125
+        }
+      ]
+    },
+    "pair-003-baseline": {
+      "completed": true,
+      "collection_error": null,
+      "delta": {
+        "video decoded": 2875,
+        "frames displayed": 1413,
+        "frames lost": 0,
+        "audio decoded": 1409,
+        "buffers played": 704,
+        "buffers lost": 0
+      },
+      "dropped_percent": 0.0,
+      "screen": {
+        "frames_in_active_interval": 3396,
+        "status_counts": {
+          "0": 1437,
+          "1": 1959
+        },
+        "roi_pixel_rectangles": [
+          [
+            0,
+            0,
+            588,
+            90
+          ]
+        ],
+        "capture_spacing_median_s": 0.016666791983880103,
+        "unchanged_roi_intervals_at_least_100ms": [
+          {
+            "start_relative_s": 59.72738641593605,
+            "end_relative_s": 59.994049249915406,
+            "duration_s": 0.2666628339793533,
+            "end_reason": "active_interval_ended",
+            "classification": "unchanged_roi_candidate_not_vlc_attribution"
+          }
+        ],
+        "timestamp_discontinuities": [],
+        "observer_callback_gaps": [],
+        "callback_arrival_minus_pts_s": {
+          "median": 0.0043107710662297904,
+          "p95": 0.007797958678565919,
+          "max": 0.017159958952106535
+        }
+      },
+      "audio": {
+        "threshold_dbfs": -60,
+        "rms_windows_overlapping_active_interval": 6001,
+        "covered_audio_window_s": 60.005114180850796,
+        "first_audible_relative_s": 0.0074196659261360765,
+        "last_audible_relative_s": 60.00511412497144,
+        "below_threshold_intervals": [
+          {
+            "start_relative_s": 0.0,
+            "end_relative_s": 0.0074196659261360765,
+            "duration_s": 0.0074196659261360765,
+            "location": "leading_boundary",
+            "classification": "low_digital_app_audio_candidate_not_vlc_attribution"
+          }
+        ],
+        "interior_below_threshold_total_s": 0,
+        "formats": [
+          {
+            "bits_per_channel": 32,
+            "channels": 1,
+            "format_flags": 41,
+            "format_id": 1819304813,
+            "rms_supported": true,
+            "sample_rate": 48000
+          }
+        ],
+        "analysis_error_count_all_capture": 0,
+        "timestamp_discontinuities": [],
+        "observer_callback_gaps": [],
+        "callback_arrival_minus_pts_s": {
+          "median": 0.036204000702127814,
+          "p95": 0.04689770902041346,
+          "max": 0.0500172923784703
+        }
+      },
+      "source_unchanged": true,
+      "window": [
+        42,
+        33,
+        1680,
+        1013
+      ],
+      "track": [
+        208.0,
+        1020.0,
+        1330.0,
+        16.0
+      ],
+      "focus_checks": 56,
+      "capture_errors": [],
+      "pointer_events": 80,
+      "media_states": [
+        {
+          "state": "play",
+          "monotonic_s": 907690.453585041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907690.532064916
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907690.532252125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907690.785801125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907691.035939375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907691.288913166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907691.612297791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907691.863559916
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907692.118698
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907692.369001041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907692.693598291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907692.948178791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907693.200479083
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907693.45566225
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907693.789726833
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907694.039961083
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907694.291629333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907694.545598125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907694.869634
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907695.122554666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907695.373443333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907695.624691
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907695.954440541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907696.204762666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907696.459879708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907696.710507291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907697.033885333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907697.284935791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907697.535513208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907697.7907835
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907698.109609291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907698.359858208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907698.614618291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907698.867481208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907699.183608125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907699.434879333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907699.689129333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907699.940616291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907700.26334925
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907700.516580708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907700.771720916
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907701.022543583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907701.345562708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907701.597775291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907701.850530291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907702.100736291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907702.430329291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907702.685537541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907702.937502625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907703.190011875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907703.516360958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907703.770501041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907704.021510875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907704.272562458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907704.597612875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907704.852698541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907705.107487333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907705.36163675
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907705.685732291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907705.93653025
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907706.190995208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907706.444541291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907706.772423625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907707.0275405
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907707.278831458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907707.529758833
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907707.855830125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907708.106704875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907708.357626
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907708.610548208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907708.9316945
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907709.183691458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907709.43680475
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907709.691965
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907710.012432416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907710.2635185
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907710.517982458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907710.769436416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907711.093730458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907711.348909875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907711.599498583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907711.851535458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907712.178670458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907712.429112625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907712.679631208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907712.93277575
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907713.26503725
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907713.516603916
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907713.771692625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907714.023553166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907714.350600541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907714.605932958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907714.858388
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907715.110997166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907715.434590083
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907715.689559083
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907715.94254425
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907716.193543958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907716.51909175
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907716.773354458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907717.02846325
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907717.281208916
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907717.599400208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907717.852858375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907718.104572458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907718.356609708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907718.680072125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907718.934632041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907719.189729541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907719.442911291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907719.765904125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907720.020989583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907720.271701041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907720.524668958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907720.843763
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907721.095230625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907721.35027325
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907721.603957333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907721.930015291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907722.185094458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907722.43771575
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907722.692686041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907723.018958916
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907723.274104125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907723.527496208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907723.781730791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907724.099698625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907724.349986458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907724.600686333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907724.851548125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907725.169181666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907725.42332975
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907725.673574166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907725.928736166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907726.251616166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907726.505889583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907726.756402833
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907727.00953775
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907727.329735666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907727.581669458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907727.83551675
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907728.0896975
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907728.418243208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907728.673246416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907728.926847416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907729.177814791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907729.498752958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907729.753960166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907730.006503458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907730.259585125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907730.582006333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907730.836915791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907731.090027708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907731.341229208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907731.665228791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907731.916653208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907732.168499916
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907732.422496875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907732.753995375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907733.006539375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907733.258550541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907733.509523916
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907733.830740125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907734.083585625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907734.336541291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907734.589615208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907734.913402833
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907735.165734708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907735.41921775
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907735.673225166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907735.995490916
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907736.248707375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907736.499519666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907736.751707541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907737.079163541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907737.333012791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907737.583658833
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907737.838899916
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907738.161149958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907738.412634166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907738.665507083
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907738.918713875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907739.246570791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907739.501631875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907739.753818625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907740.007542166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907740.331797583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907740.583515166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907740.839005375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907741.093864041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907741.427706041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907741.681732375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907741.936893791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907742.190106291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907742.513561333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907742.76463525
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907743.017584958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907743.26953675
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907743.593612625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907743.847882916
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907744.098411416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907744.34862
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907744.673878208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907744.925618875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907745.180837208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907745.435624
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907745.760872208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907746.011556666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907746.262514375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907746.516639583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907746.837483916
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907747.088565333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907747.343735583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907747.594795
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907747.917943958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907748.168635708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907748.419584166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907748.6717995
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907748.998092541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907749.249780666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907749.502149958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907749.753617166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907750.081232666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907750.335661208
+        }
+      ]
+    },
+    "pair-003-feature": {
+      "completed": true,
+      "collection_error": null,
+      "delta": {
+        "video decoded": 2877,
+        "frames displayed": 1415,
+        "frames lost": 0,
+        "audio decoded": 1409,
+        "buffers played": 704,
+        "buffers lost": 0
+      },
+      "dropped_percent": 0.0,
+      "screen": {
+        "frames_in_active_interval": 3384,
+        "status_counts": {
+          "0": 1437,
+          "1": 1947
+        },
+        "roi_pixel_rectangles": [
+          [
+            0,
+            0,
+            588,
+            90
+          ]
+        ],
+        "capture_spacing_median_s": 0.016666832962073386,
+        "unchanged_roi_intervals_at_least_100ms": [
+          {
+            "start_relative_s": 59.73002008406911,
+            "end_relative_s": 59.980019417009316,
+            "duration_s": 0.24999933294020593,
+            "end_reason": "active_interval_ended",
+            "classification": "unchanged_roi_candidate_not_vlc_attribution"
+          }
+        ],
+        "timestamp_discontinuities": [],
+        "observer_callback_gaps": [],
+        "callback_arrival_minus_pts_s": {
+          "median": 0.004167854494880885,
+          "p95": 0.007740292465314269,
+          "max": 0.013123792363330722
+        }
+      },
+      "audio": {
+        "threshold_dbfs": -60,
+        "rms_windows_overlapping_active_interval": 6002,
+        "covered_audio_window_s": 60.00471826491412,
+        "first_audible_relative_s": 0.011965792044065893,
+        "last_audible_relative_s": 60.00471820903476,
+        "below_threshold_intervals": [
+          {
+            "start_relative_s": 0.0,
+            "end_relative_s": 0.011965792044065893,
+            "duration_s": 0.011965792044065893,
+            "location": "leading_boundary",
+            "classification": "low_digital_app_audio_candidate_not_vlc_attribution"
+          }
+        ],
+        "interior_below_threshold_total_s": 0,
+        "formats": [
+          {
+            "bits_per_channel": 32,
+            "channels": 1,
+            "format_flags": 41,
+            "format_id": 1819304813,
+            "rms_supported": true,
+            "sample_rate": 48000
+          }
+        ],
+        "analysis_error_count_all_capture": 0,
+        "timestamp_discontinuities": [],
+        "observer_callback_gaps": [],
+        "callback_arrival_minus_pts_s": {
+          "median": 0.03619364619953558,
+          "p95": 0.04688116710167378,
+          "max": 0.049795625382103026
+        }
+      },
+      "source_unchanged": true,
+      "window": [
+        42,
+        33,
+        1680,
+        1013
+      ],
+      "track": [
+        208.0,
+        1020.0,
+        1330.0,
+        16.0
+      ],
+      "focus_checks": 56,
+      "capture_errors": [],
+      "pointer_events": 80,
+      "media_states": [
+        {
+          "state": "play",
+          "monotonic_s": 907764.271568333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907764.3471895
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907764.347384583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907764.601714
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907764.855634833
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907765.110704708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907765.4396075
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907765.694641541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907765.945568166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907766.197975166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907766.522548541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907766.778003833
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907767.029526583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907767.284243833
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907767.614714375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907767.868602708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907768.119354041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907768.37155725
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907768.698911791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907768.952529708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907769.20773575
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907769.46058675
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907769.778698375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907770.033769416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907770.284502916
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907770.535498458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907770.864290208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907771.119421333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907771.371429375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907771.621531791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907771.943541541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907772.193962125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907772.444526833
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907772.697393791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907773.023384333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907773.275236458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907773.527639583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907773.778504583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907774.104973583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907774.359121875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907774.610562958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907774.861689791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907775.181585416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907775.432611
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907775.68654375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907775.936823208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907776.272246208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907776.524093166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907776.77655375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907777.0275625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907777.365052416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907777.618578916
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907777.87374975
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907778.128553416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907778.456383625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907778.707362
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907778.963960791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907779.21453025
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907779.539277708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907779.79395975
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907780.049036666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907780.304068125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907780.623099666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907780.873530583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907781.125930583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907781.380701583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907781.701414666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907781.952599166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907782.205470041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907782.457518791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907782.777787
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907783.031843833
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907783.286787583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907783.541897375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907783.862635
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907784.116188041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907784.36873275
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907784.624783333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907784.952093041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907785.206599333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907785.460588375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907785.714865833
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907786.037892916
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907786.293074
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907786.543508166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907786.797636291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907787.120492291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907787.372331541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907787.627528708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907787.881631583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907788.205386625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907788.458603208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907788.709515375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907788.964767416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907789.293165083
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907789.546513416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907789.801785583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907790.052627458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907790.375959208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907790.626623958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907790.8785255
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907791.131614041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907791.461007291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907791.711512958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907791.966787083
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907792.220477833
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907792.542644958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907792.793768208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907793.048585083
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907793.302695166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907793.622364166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907793.873490541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907794.128665291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907794.380502458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907794.703254375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907794.958935708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907795.2115715
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907795.466775291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907795.796536583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907796.047242583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907796.298948208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907796.552884916
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907796.918664041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907797.170630125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907797.424760416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907797.67705375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907798.001978416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907798.255602958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907798.510541708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907798.762667208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907799.106026458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907799.360498208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907799.611323708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907799.863652625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907800.190126541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907800.440600791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907800.6945165
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907800.946647208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907801.279793875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907801.5315385
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907801.786855333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907802.040033166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907802.362637333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907802.617940958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907802.87300975
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907803.124636708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907803.449215791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907803.704327416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907803.955717541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907804.208224083
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907804.530575
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907804.7853065
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907805.040350333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907805.290612583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907805.618883416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907805.869548791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907806.120745416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907806.371573625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907806.698456041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907806.951678125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907807.203540083
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907807.455570583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907807.777115291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907808.029918458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907808.28202925
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907808.536622833
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907808.863513375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907809.115599833
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907809.370502958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907809.623696458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907809.9523045
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907810.202528541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907810.453522583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907810.704813
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907811.032955708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907811.285633708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907811.540633541
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907811.793580833
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907812.119480916
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907812.370599291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907812.621615458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907812.876260416
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907813.20140925
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907813.456277208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907813.708679583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907813.9605175
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907814.279092375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907814.530050791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907814.783534916
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907815.038174583
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907815.359867125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907815.610646875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907815.864021791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907816.114763625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907816.443827875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907816.69522125
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907816.9481295
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907817.1987655
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907817.527075041
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907817.777649083
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907818.029232708
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907818.281665083
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907818.62072375
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907818.873620083
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907819.128065291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907819.381450625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907819.705943083
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907819.961031458
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907820.2153505
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907820.470068791
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907820.788965625
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907821.043097666
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907821.295599875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907821.550734333
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907821.884663208
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907822.1362955
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907822.386496291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907822.641236958
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907822.967912833
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907823.219468291
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907823.473185875
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907823.726831166
+        },
+        {
+          "state": "play",
+          "monotonic_s": 907824.050858
+        }
+      ]
+    }
+  },
+  "pairs": [
+    {
+      "pair": 1,
+      "geometry_matched": true,
+      "dropped_rate_delta_pp": 0.0,
+      "baseline_repeats": [
+        {
+          "start_relative_s": 59.7333410839783,
+          "end_relative_s": 59.99167849996593,
+          "duration_s": 0.2583374159876257,
+          "end_reason": "active_interval_ended",
+          "classification": "unchanged_roi_candidate_not_vlc_attribution"
+        }
+      ],
+      "feature_repeats": [
+        {
+          "start_relative_s": 59.73325074999593,
+          "end_relative_s": 59.99991650006268,
+          "duration_s": 0.26666575006674975,
+          "end_reason": "active_interval_ended",
+          "classification": "unchanged_roi_candidate_not_vlc_attribution"
+        }
+      ]
+    },
+    {
+      "pair": 2,
+      "geometry_matched": true,
+      "dropped_rate_delta_pp": 0.0,
+      "baseline_repeats": [
+        {
+          "start_relative_s": 59.732543999911286,
+          "end_relative_s": 59.99088099994697,
+          "duration_s": 0.25833700003568083,
+          "end_reason": "active_interval_ended",
+          "classification": "unchanged_roi_candidate_not_vlc_attribution"
+        }
+      ],
+      "feature_repeats": [
+        {
+          "start_relative_s": 59.74311554210726,
+          "end_relative_s": 59.993115417077206,
+          "duration_s": 0.24999987496994436,
+          "end_reason": "active_interval_ended",
+          "classification": "unchanged_roi_candidate_not_vlc_attribution"
+        }
+      ]
+    },
+    {
+      "pair": 3,
+      "geometry_matched": true,
+      "dropped_rate_delta_pp": 0.0,
+      "baseline_repeats": [
+        {
+          "start_relative_s": 59.72738641593605,
+          "end_relative_s": 59.994049249915406,
+          "duration_s": 0.2666628339793533,
+          "end_reason": "active_interval_ended",
+          "classification": "unchanged_roi_candidate_not_vlc_attribution"
+        }
+      ],
+      "feature_repeats": [
+        {
+          "start_relative_s": 59.73002008406911,
+          "end_relative_s": 59.980019417009316,
+          "duration_s": 0.24999933294020593,
+          "end_reason": "active_interval_ended",
+          "classification": "unchanged_roi_candidate_not_vlc_attribution"
+        }
+      ]
+    }
+  ],
+  "scope": "Actual owned-display filtered counter plus VLC app audio; all outcomes retained. No automatic feature-attribution verdict.",
+  "qualification": {
+    "candidate_manifest": "docs/evidence/story-002/app-build-20261004T205111.756594Z.json",
+    "scope": "Three matched 60s1080p24 standard MP4 baseline/feature pairs; observed counter repeats only after59.7s with EOF pause logged in all six apps; nofeature-attributable >100ms stall withinobserved counter/audio scope. This isnot perhovervisible-image latency or broaderformat/surface qualification.",
+    "passed": true,
+    "dropped_delta_pp": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  }
+}

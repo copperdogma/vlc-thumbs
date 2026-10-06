@@ -1,0 +1,27 @@
+{
+  "scope": "Offline exported-main-stack applicability and bounded source attribution; profiler perturbs scheduling, not performance acceptance",
+  "exact_owned_pid": 38897,
+  "recording_toc_gate_passed": true,
+  "main_stack_interpretability_established": true,
+  "rows_all": 1394,
+  "main_rows": 214,
+  "main_rows_with_nonempty_backtrace": 213,
+  "input_to_visible_main_rows": 10,
+  "observed_control_response_ms": 350.35733331460506,
+  "response_scope": "One instrumented transition; no latency qualification",
+  "preview_path": "updatePreview -> NSTextField.setStringValue -> view invalidation -> NSDisplayCycle/NSCGSTransaction -> CA add_commit_handler -> unfair lock wait",
+  "preview_wait_sample_weight_ms": 163.285667,
+  "other_path": "AX accessibilityWindowsAttribute -> NSCGSWindowOrdering -> SkyLight transaction wait",
+  "other_wait_sample_weight_ms": 122.948833,
+  "weight_scope": "Prior sample-interval attribution, not CPU time or proven continuous duration; Running labels do not override blocking stack semantics",
+  "uncertainty": "Exact label not resolved; one recorded transition does not establish component cause or exclude WindowServer contribution. Next paired clean-environment recordings compare paths, not p95.",
+  "fingerprints_unchanged": true,
+  "owned_cleanup": 0,
+  "private_raw_directory": "work/validation/story002/control-xctrace-applicability-002/raw",
+  "raw_artifact_sha256": {
+    "results.json": "1c17697a0f0c97481f74a878bd03a6919f6d887e71842ec57a235ae9fd049cd3",
+    "time-profile.xml": "a0d7e42519e2324c56ced6d0f14542598fb5c34cd29d8f29df90d1cd42a19666",
+    "trace-toc-sanitized.xml": "32b94e6366adf3ebb10154420cdd92fb9f761b314ac0765b4aa9d1c382418e0d"
+  },
+  "raw_trace_policy": "Private ignored work only; unsanitized TOC contains inherited environment and must never be published. No raw environment values appear in this summary."
+}

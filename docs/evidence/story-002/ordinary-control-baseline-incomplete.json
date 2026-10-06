@@ -1,0 +1,49 @@
+{
+  "scope": "Matched paused main-window ordinary light-style knob response; not hover-to-thumbnail latency or completed seek",
+  "measurement": "First independent new light-style knob center within2pt on owned complete WindowServer frame: display_time minus physical input t0; PTS/display>=t0; no subtraction",
+  "allowed_percent": 0.0,
+  "observed_counts": {
+    "baseline": 25,
+    "feature": 22
+  },
+  "collection_valid": false,
+  "qualified": false,
+  "collection_error": "Settled pixel knob does not identify expected physical control point",
+  "integrity_unchanged": true,
+  "changed_inputs": [],
+  "raw_results": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/control-paired-mp4-001/results.json",
+  "raw_sha256": "07a239958334aeb7445d75e5c177a588a6dafd4be155126565146ae89e8f3da6",
+  "failed_capture": {
+    "arm": "feature",
+    "label": "round-00-click-022",
+    "target": "left",
+    "raw": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/control-paired-mp4-001/feature/round-00-click-022.jsonl",
+    "argv": [
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/control-response-probe",
+      "--pid",
+      "98518",
+      "--rect",
+      "900,1016,240,28",
+      "--point",
+      "950,1028",
+      "--click",
+      "--count",
+      "90",
+      "--duration-ms",
+      "900",
+      "--output",
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/control-paired-mp4-001/feature/round-00-click-022.jsonl"
+    ],
+    "stdout": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/control-paired-mp4-001/feature/round-00-click-022.stdout",
+    "stderr": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/control-paired-mp4-001/feature/round-00-click-022.stderr",
+    "faults": [
+      "Settled pixel knob does not identify expected physical control point"
+    ],
+    "returncode": 0,
+    "readiness_hash": "09cf72cbfd2704d5",
+    "settled_hash": "09cf72cbfd2704d5",
+    "readiness_center_x": 1090,
+    "settled_center_x": 1090
+  },
+  "conclusion": "Incomplete paired cohort; no p95 qualification or demonstrated regression. Last feature click remained at old knob position during900ms; input handling and observer effects unestablished. No relaxation of performance allowance."
+}

@@ -1,0 +1,838 @@
+{
+  "schema_version": 1,
+  "scope": "Four/arm diagnostic with existing feature trace and one3s owned-PID sample.\n\nInstrumentation changes scheduling; these values never qualify p95 or serve\nas the production comparison. The frozen player and control observer remain.",
+  "measurement": "First independent new light-style knob center within2pt on owned complete WindowServer frame: display_time minus physical input t0; PTS/display>=t0; no subtraction",
+  "samples_per_arm": 4,
+  "pilot": true,
+  "observer_diagnostic": false,
+  "diagnostic_samples_per_condition": null,
+  "observation_bound_ms": 900,
+  "phase_guard_equivalence_proven": false,
+  "routing_receipt_scope": "Exact PID nonce-filtered passive tap; routing only, not AppKit handling",
+  "allowed_percent": 0.0,
+  "allowance_origin": "Cam: pre-change baseline comparison; default no additional latency",
+  "os_cache_condition": "Warm/uncontrolled host caches; two templates and repeated two-position clicks, no cache clearing",
+  "knob_metric_scope": "Pinned VLCSliderCell light appearance,2x sRGB BGRA; five rows around inputY; unique white6..32px cluster in>=3rows; center spread<=2px; target tolerance2pt; old/new>100pt",
+  "geometry": [
+    42,
+    33,
+    1680,
+    1013
+  ],
+  "slider_rect": [
+    208.0,
+    1020.0,
+    1330.0,
+    16.0
+  ],
+  "crop": [
+    900,
+    1016,
+    240,
+    28
+  ],
+  "points": {
+    "left": [
+      950,
+      1028
+    ],
+    "right": [
+      1090,
+      1028
+    ]
+  },
+  "orders": [
+    [
+      "baseline",
+      "feature"
+    ],
+    [
+      "feature",
+      "baseline"
+    ],
+    [
+      "feature",
+      "baseline"
+    ],
+    [
+      "baseline",
+      "feature"
+    ]
+  ],
+  "captures": [
+    {
+      "arm": "baseline",
+      "label": "template-left",
+      "target": "left",
+      "raw": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/control-phase-diagnostic-001/baseline/template-left.jsonl",
+      "argv": [
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/control-response-probe",
+        "--pid",
+        "99056",
+        "--rect",
+        "900,1016,240,28",
+        "--point",
+        "950,1028",
+        "--click",
+        "--count",
+        "90",
+        "--duration-ms",
+        "900",
+        "--ax-mode",
+        "per-frame",
+        "--output",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/control-phase-diagnostic-001/baseline/template-left.jsonl",
+        "--save-last-image",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/control-phase-diagnostic-001/baseline/template-left.png"
+      ],
+      "stdout": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/control-phase-diagnostic-001/baseline/template-left.stdout",
+      "stderr": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/control-phase-diagnostic-001/baseline/template-left.stderr",
+      "faults": [],
+      "ax_mode": "per-frame",
+      "scored": false,
+      "observation_bound_ms": 900,
+      "returncode": 0,
+      "ax_phases": [
+        {
+          "kind": "ax_phase",
+          "owned": 1,
+          "phase": "pre",
+          "point_hit_error": 0,
+          "point_hit_owned": 1,
+          "point_hit_pid": 99056,
+          "point_hit_role": "AXSlider",
+          "point_hit_role_error": 0,
+          "queries_held_pre_slider": 0,
+          "query_begin_uptime_s": 933054.6076434584,
+          "query_end_uptime_s": 933054.6083982501,
+          "resolved_parent_depth": 0,
+          "slider_element_identity": "0x75e1023ba0",
+          "slider_pid": 99056,
+          "slider_pid_error": 0,
+          "slider_role": true,
+          "slider_role_error": 0,
+          "slider_value": 0,
+          "value_error": 0
+        },
+        {
+          "kind": "ax_phase",
+          "owned": 1,
+          "phase": "post",
+          "point_hit_error": 0,
+          "point_hit_owned": 1,
+          "point_hit_pid": 99056,
+          "point_hit_role": "AXValueIndicator",
+          "point_hit_role_error": 0,
+          "queries_held_pre_slider": 1,
+          "query_begin_uptime_s": 933055.796845,
+          "query_end_uptime_s": 933055.7980287917,
+          "resolved_parent_depth": -1,
+          "slider_element_identity": "0x75e1023ba0",
+          "slider_pid": 99056,
+          "slider_pid_error": 0,
+          "slider_role": true,
+          "slider_role_error": 0,
+          "slider_value": 5585.9970703125,
+          "value_error": 0
+        }
+      ],
+      "input_routed": [
+        {
+          "event_tag": 447801236297262,
+          "event_timestamp_ns": 933054848911458,
+          "kind": "input_routed",
+          "location": [
+            950,
+            1028
+          ],
+          "pid": 99056,
+          "received_uptime_s": 933054.8502995417,
+          "sequence_index": 0,
+          "type": 5
+        },
+        {
+          "event_tag": 447801236297262,
+          "event_timestamp_ns": 933054850519625,
+          "kind": "input_routed",
+          "location": [
+            950,
+            1028
+          ],
+          "pid": 99056,
+          "received_uptime_s": 933054.851156,
+          "sequence_index": 1,
+          "type": 1
+        },
+        {
+          "event_tag": 447801236297262,
+          "event_timestamp_ns": 933054851773375,
+          "kind": "input_routed",
+          "location": [
+            950,
+            1028
+          ],
+          "pid": 99056,
+          "received_uptime_s": 933054.8525285834,
+          "sequence_index": 2,
+          "type": 2
+        }
+      ],
+      "input_routed_sequence": true,
+      "observation_end_uptime_s": 933055.7275662917,
+      "observation_bound_reached": 1,
+      "readiness_hash": "a5b7bf5f5654e1dd",
+      "settled_hash": "83630a6417c3711a",
+      "readiness_center_x": null,
+      "settled_center_x": 950,
+      "post_input_centers": [
+        950,
+        950
+      ],
+      "complete_presentations": 2
+    },
+    {
+      "arm": "baseline",
+      "label": "template-right",
+      "target": "right",
+      "raw": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/control-phase-diagnostic-001/baseline/template-right.jsonl",
+      "argv": [
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/control-response-probe",
+        "--pid",
+        "99056",
+        "--rect",
+        "900,1016,240,28",
+        "--point",
+        "1090,1028",
+        "--click",
+        "--count",
+        "90",
+        "--duration-ms",
+        "900",
+        "--ax-mode",
+        "per-frame",
+        "--output",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/control-phase-diagnostic-001/baseline/template-right.jsonl",
+        "--save-last-image",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/control-phase-diagnostic-001/baseline/template-right.png"
+      ],
+      "stdout": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/control-phase-diagnostic-001/baseline/template-right.stdout",
+      "stderr": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/control-phase-diagnostic-001/baseline/template-right.stderr",
+      "faults": [],
+      "ax_mode": "per-frame",
+      "scored": false,
+      "observation_bound_ms": 900,
+      "returncode": 0,
+      "ax_phases": [
+        {
+          "kind": "ax_phase",
+          "owned": 1,
+          "phase": "pre",
+          "point_hit_error": 0,
+          "point_hit_owned": 1,
+          "point_hit_pid": 99056,
+          "point_hit_role": "AXSlider",
+          "point_hit_role_error": 0,
+          "queries_held_pre_slider": 0,
+          "query_begin_uptime_s": 933056.1673988751,
+          "query_end_uptime_s": 933056.1680461251,
+          "resolved_parent_depth": 0,
+          "slider_element_identity": "0x7c85407ba0",
+          "slider_pid": 99056,
+          "slider_pid_error": 0,
+          "slider_role": true,
+          "slider_role_error": 0,
+          "slider_value": 5585.9970703125,
+          "value_error": 0
+        },
+        {
+          "kind": "ax_phase",
+          "owned": 1,
+          "phase": "post",
+          "point_hit_error": 0,
+          "point_hit_owned": 1,
+          "point_hit_pid": 99056,
+          "point_hit_role": "AXValueIndicator",
+          "point_hit_role_error": 0,
+          "queries_held_pre_slider": 1,
+          "query_begin_uptime_s": 933057.333093125,
+          "query_end_uptime_s": 933057.3339566668,
+          "resolved_parent_depth": -1,
+          "slider_element_identity": "0x7c85407ba0",
+          "slider_pid": 99056,
+          "slider_pid_error": 0,
+          "slider_role": true,
+          "slider_role_error": 0,
+          "slider_value": 6651.44580078125,
+          "value_error": 0
+        }
+      ],
+      "input_routed": [
+        {
+          "event_tag": 440255015562687,
+          "event_timestamp_ns": 933056383131791,
+          "kind": "input_routed",
+          "location": [
+            1090,
+            1028
+          ],
+          "pid": 99056,
+          "received_uptime_s": 933056.384535375,
+          "sequence_index": 0,
+          "type": 5
+        },
+        {
+          "event_tag": 440255015562687,
+          "event_timestamp_ns": 933056386881125,
+          "kind": "input_routed",
+          "location": [
+            1090,
+            1028
+          ],
+          "pid": 99056,
+          "received_uptime_s": 933056.3875327917,
+          "sequence_index": 1,
+          "type": 1
+        },
+        {
+          "event_tag": 440255015562687,
+          "event_timestamp_ns": 933056388154208,
+          "kind": "input_routed",
+          "location": [
+            1090,
+            1028
+          ],
+          "pid": 99056,
+          "received_uptime_s": 933056.3884980833,
+          "sequence_index": 2,
+          "type": 2
+        }
+      ],
+      "input_routed_sequence": true,
+      "observation_end_uptime_s": 933057.2601005001,
+      "observation_bound_reached": 1,
+      "readiness_hash": "83630a6417c3711a",
+      "settled_hash": "4f4a602ceea9f8ce",
+      "readiness_center_x": 950,
+      "settled_center_x": 1090,
+      "post_input_centers": [
+        1090,
+        1090
+      ],
+      "complete_presentations": 2
+    },
+    {
+      "arm": "feature",
+      "label": "template-left",
+      "target": "left",
+      "raw": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/control-phase-diagnostic-001/feature/template-left.jsonl",
+      "argv": [
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/control-response-probe",
+        "--pid",
+        "99065",
+        "--rect",
+        "900,1016,240,28",
+        "--point",
+        "950,1028",
+        "--click",
+        "--count",
+        "90",
+        "--duration-ms",
+        "900",
+        "--ax-mode",
+        "per-frame",
+        "--output",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/control-phase-diagnostic-001/feature/template-left.jsonl",
+        "--save-last-image",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/control-phase-diagnostic-001/feature/template-left.png"
+      ],
+      "stdout": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/control-phase-diagnostic-001/feature/template-left.stdout",
+      "stderr": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/control-phase-diagnostic-001/feature/template-left.stderr",
+      "faults": [],
+      "ax_mode": "per-frame",
+      "scored": false,
+      "observation_bound_ms": 900,
+      "returncode": 0,
+      "ax_phases": [
+        {
+          "kind": "ax_phase",
+          "owned": 1,
+          "phase": "pre",
+          "point_hit_error": 0,
+          "point_hit_owned": 1,
+          "point_hit_pid": 99065,
+          "point_hit_role": "AXSlider",
+          "point_hit_role_error": 0,
+          "queries_held_pre_slider": 0,
+          "query_begin_uptime_s": 933058.7969539583,
+          "query_end_uptime_s": 933058.79760125,
+          "resolved_parent_depth": 0,
+          "slider_element_identity": "0x77f1407ba0",
+          "slider_pid": 99065,
+          "slider_pid_error": 0,
+          "slider_role": true,
+          "slider_role_error": 0,
+          "slider_value": 0,
+          "value_error": 0
+        },
+        {
+          "kind": "ax_phase",
+          "owned": 1,
+          "phase": "post",
+          "point_hit_error": 0,
+          "point_hit_owned": 1,
+          "point_hit_pid": 99065,
+          "point_hit_role": "AXValueIndicator",
+          "point_hit_role_error": 0,
+          "queries_held_pre_slider": 1,
+          "query_begin_uptime_s": 933059.9547806667,
+          "query_end_uptime_s": 933059.9556469584,
+          "resolved_parent_depth": -1,
+          "slider_element_identity": "0x77f1407ba0",
+          "slider_pid": 99065,
+          "slider_pid_error": 0,
+          "slider_role": true,
+          "slider_role_error": 0,
+          "slider_value": 5585.9970703125,
+          "value_error": 0
+        }
+      ],
+      "input_routed": [
+        {
+          "event_tag": 439890006241302,
+          "event_timestamp_ns": 933059007974208,
+          "kind": "input_routed",
+          "location": [
+            950,
+            1028
+          ],
+          "pid": 99065,
+          "received_uptime_s": 933059.0090783751,
+          "sequence_index": 0,
+          "type": 5
+        },
+        {
+          "event_tag": 439890006241302,
+          "event_timestamp_ns": 933059012063250,
+          "kind": "input_routed",
+          "location": [
+            950,
+            1028
+          ],
+          "pid": 99065,
+          "received_uptime_s": 933059.0126928751,
+          "sequence_index": 1,
+          "type": 1
+        },
+        {
+          "event_tag": 439890006241302,
+          "event_timestamp_ns": 933059013133166,
+          "kind": "input_routed",
+          "location": [
+            950,
+            1028
+          ],
+          "pid": 99065,
+          "received_uptime_s": 933059.0134414583,
+          "sequence_index": 2,
+          "type": 2
+        }
+      ],
+      "input_routed_sequence": true,
+      "observation_end_uptime_s": 933059.8864647917,
+      "observation_bound_reached": 1,
+      "readiness_hash": "3f9a7a58fbfa71ff",
+      "settled_hash": "124efcffa3d50303",
+      "readiness_center_x": null,
+      "settled_center_x": 950,
+      "post_input_centers": [
+        null,
+        null,
+        null,
+        950,
+        950,
+        950,
+        950,
+        950,
+        950,
+        950,
+        950,
+        950,
+        950,
+        950,
+        950,
+        950
+      ],
+      "complete_presentations": 16
+    },
+    {
+      "arm": "feature",
+      "label": "template-right",
+      "target": "right",
+      "raw": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/control-phase-diagnostic-001/feature/template-right.jsonl",
+      "argv": [
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/control-response-probe",
+        "--pid",
+        "99065",
+        "--rect",
+        "900,1016,240,28",
+        "--point",
+        "1090,1028",
+        "--click",
+        "--count",
+        "90",
+        "--duration-ms",
+        "900",
+        "--ax-mode",
+        "per-frame",
+        "--output",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/control-phase-diagnostic-001/feature/template-right.jsonl",
+        "--save-last-image",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/control-phase-diagnostic-001/feature/template-right.png"
+      ],
+      "stdout": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/control-phase-diagnostic-001/feature/template-right.stdout",
+      "stderr": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/control-phase-diagnostic-001/feature/template-right.stderr",
+      "faults": [
+        "Settled pixel knob does not identify expected physical control point"
+      ],
+      "ax_mode": "per-frame",
+      "scored": false,
+      "observation_bound_ms": 900,
+      "returncode": 0,
+      "ax_phases": [
+        {
+          "kind": "ax_phase",
+          "owned": 1,
+          "phase": "pre",
+          "point_hit_error": 0,
+          "point_hit_owned": 1,
+          "point_hit_pid": 99065,
+          "point_hit_role": "AXSlider",
+          "point_hit_role_error": 0,
+          "queries_held_pre_slider": 0,
+          "query_begin_uptime_s": 933060.3312605417,
+          "query_end_uptime_s": 933060.3319192501,
+          "resolved_parent_depth": 0,
+          "slider_element_identity": "0x7c7b407ba0",
+          "slider_pid": 99065,
+          "slider_pid_error": 0,
+          "slider_role": true,
+          "slider_role_error": 0,
+          "slider_value": 5585.9970703125,
+          "value_error": 0
+        },
+        {
+          "kind": "ax_phase",
+          "owned": 1,
+          "phase": "post",
+          "point_hit_error": 0,
+          "point_hit_owned": 1,
+          "point_hit_pid": 99065,
+          "point_hit_role": "AXValueIndicator",
+          "point_hit_role_error": 0,
+          "queries_held_pre_slider": 1,
+          "query_begin_uptime_s": 933061.498365125,
+          "query_end_uptime_s": 933061.4993622084,
+          "resolved_parent_depth": -1,
+          "slider_element_identity": "0x7c7b407ba0",
+          "slider_pid": 99065,
+          "slider_pid_error": 0,
+          "slider_role": true,
+          "slider_role_error": 0,
+          "slider_value": 6651.44580078125,
+          "value_error": 0
+        }
+      ],
+      "input_routed": [
+        {
+          "event_tag": 439842798731749,
+          "event_timestamp_ns": 933060551792333,
+          "kind": "input_routed",
+          "location": [
+            1090,
+            1028
+          ],
+          "pid": 99065,
+          "received_uptime_s": 933060.5533138334,
+          "sequence_index": 0,
+          "type": 5
+        },
+        {
+          "event_tag": 439842798731749,
+          "event_timestamp_ns": 933060552409625,
+          "kind": "input_routed",
+          "location": [
+            1090,
+            1028
+          ],
+          "pid": 99065,
+          "received_uptime_s": 933060.5534642917,
+          "sequence_index": 1,
+          "type": 1
+        },
+        {
+          "event_tag": 439842798731749,
+          "event_timestamp_ns": 933060556786625,
+          "kind": "input_routed",
+          "location": [
+            1090,
+            1028
+          ],
+          "pid": 99065,
+          "received_uptime_s": 933060.55731675,
+          "sequence_index": 2,
+          "type": 2
+        }
+      ],
+      "input_routed_sequence": true,
+      "observation_end_uptime_s": 933061.4328741668,
+      "observation_bound_reached": 1,
+      "readiness_hash": "124efcffa3d50303",
+      "settled_hash": "a7279233b9db32f2",
+      "readiness_center_x": 950,
+      "settled_center_x": 950,
+      "post_input_centers": [
+        950,
+        950,
+        950,
+        950,
+        950,
+        950,
+        950,
+        950,
+        950,
+        950,
+        950,
+        950,
+        950,
+        950
+      ],
+      "complete_presentations": 14
+    }
+  ],
+  "blocks": [],
+  "arms": {
+    "baseline": {
+      "app": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/VLCBaseline.app",
+      "scope": "Owned paused ordinary-control arm",
+      "argument_validation": {
+        "returncode": 0,
+        "missing_options": []
+      },
+      "pid": 99056,
+      "argv": [
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/VLCBaseline.app/Contents/MacOS/VLC",
+        "--ignore-config",
+        "--config=/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/control-phase-diagnostic-001/baseline/vlcrc",
+        "--intf=macosx",
+        "--extraintf=oldrc",
+        "--rc-unix=/tmp/vlc002-control-99049-baseline.sock",
+        "--rc-fake-tty",
+        "--stats",
+        "--play-and-pause",
+        "--start-time=0",
+        "--no-media-library",
+        "--no-metadata-network-access",
+        "--macosx-control-itunes=0",
+        "--no-macosx-mediakeys",
+        "--no-macosx-recentitems",
+        "--macosx-continue-playback=2",
+        "--no-macosx-nativefullscreenmode",
+        "--no-video-title-show",
+        "--no-loop",
+        "--no-repeat",
+        "--no-random",
+        "--verbose=2",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/story-002/standard-cache-pressure.mp4"
+      ],
+      "timeline_diagnostics_enabled": false,
+      "initial_paused_zero": {
+        "state": "pause",
+        "media_time_seconds": 0,
+        "counters": {
+          "video decoded": 59,
+          "frames displayed": 5,
+          "frames lost": 0,
+          "audio decoded": 36,
+          "buffers played": 18,
+          "buffers lost": 0
+        }
+      },
+      "template_geometry": {
+        "slider_rect": [
+          208.0,
+          1020.0,
+          1330.0,
+          16.0
+        ],
+        "focus": {
+          "window_position": [
+            42,
+            33
+          ],
+          "focused_role": "AXWindow",
+          "app_active": true,
+          "window_size": [
+            1680,
+            1013
+          ]
+        },
+        "ax_inventory": "window_index 0\nslider 208.000 1020.000 1330.000 16.000 value 0 title Position\nslider 1612.000 1021.000 50.000 14.000 value 256 title \n"
+      },
+      "template_pause": {
+        "state": "pause",
+        "media_time_seconds": 0,
+        "counters": {
+          "video decoded": 59,
+          "frames displayed": 5,
+          "frames lost": 0,
+          "audio decoded": 36,
+          "buffers played": 18,
+          "buffers lost": 0
+        }
+      },
+      "templates": {
+        "left": 950,
+        "right": 1090
+      },
+      "exit_code": 0,
+      "cleanup_errors": []
+    },
+    "feature": {
+      "app": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app",
+      "scope": "Owned paused ordinary-control arm",
+      "argument_validation": {
+        "returncode": 0,
+        "missing_options": []
+      },
+      "pid": 99065,
+      "argv": [
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/VLC",
+        "--ignore-config",
+        "--config=/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/control-phase-diagnostic-001/feature/vlcrc",
+        "--intf=macosx",
+        "--extraintf=oldrc",
+        "--rc-unix=/tmp/vlc002-control-99049-feature.sock",
+        "--rc-fake-tty",
+        "--stats",
+        "--play-and-pause",
+        "--start-time=0",
+        "--no-media-library",
+        "--no-metadata-network-access",
+        "--macosx-control-itunes=0",
+        "--no-macosx-mediakeys",
+        "--no-macosx-recentitems",
+        "--macosx-continue-playback=2",
+        "--no-macosx-nativefullscreenmode",
+        "--no-video-title-show",
+        "--no-loop",
+        "--no-repeat",
+        "--no-random",
+        "--verbose=2",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/story-002/standard-cache-pressure.mp4"
+      ],
+      "timeline_diagnostics_enabled": false,
+      "initial_paused_zero": {
+        "state": "pause",
+        "media_time_seconds": 0,
+        "counters": {
+          "video decoded": 53,
+          "frames displayed": 2,
+          "frames lost": 0,
+          "audio decoded": 30,
+          "buffers played": 15,
+          "buffers lost": 0
+        }
+      },
+      "template_geometry": {
+        "slider_rect": [
+          208.0,
+          1020.0,
+          1330.0,
+          16.0
+        ],
+        "focus": {
+          "window_position": [
+            42,
+            33
+          ],
+          "focused_role": "AXWindow",
+          "app_active": true,
+          "window_size": [
+            1680,
+            1013
+          ]
+        },
+        "ax_inventory": "window_index 0\nslider 208.000 1020.000 1330.000 16.000 value 0 title Position\nslider 1612.000 1021.000 50.000 14.000 value 256 title \n"
+      },
+      "template_pause": {
+        "state": "pause",
+        "media_time_seconds": 0,
+        "counters": {
+          "video decoded": 53,
+          "frames displayed": 2,
+          "frames lost": 0,
+          "audio decoded": 30,
+          "buffers played": 15,
+          "buffers lost": 0
+        }
+      },
+      "exit_code": 0,
+      "cleanup_errors": []
+    }
+  },
+  "started": {
+    "unix_s": 1791173625.298312,
+    "monotonic_s": 933049.365339958
+  },
+  "completed_collection": false,
+  "qualified": false,
+  "method_pilot_passed": false,
+  "fingerprints_before": {
+    "media": "37e1e1ebf58d44d0a38f4ac3f6f621dca2547307f9429a404bfccfd475d94c84",
+    "probe": "2c5e1dcf37374f57757d405cece016f9c636134615533178564981dd468817cb",
+    "pointer": "bfc48a37b90fc9aefda36735b36f9c239dea1f3c021046f7039d9e29691abd8e",
+    "baseline_app_tree": "7f834b0bd597aa9729f1c64f8f0e16c40459fcaf954e255d66a0c3e532d0ba7d",
+    "baseline_plugin": "43e7d6da115cf83209869e51942528d14de9089d73ba4da31790b5bf04b0e1b5",
+    "baseline_helper": "830d9857bbcd04b1b58462b3025fbbf09662dbcd80eb539be2e3ba45ab4da348",
+    "feature_app_tree": "87004d751a318fffbd6c37462bd1d2b519112a4a46e21d755430d234ddad5383",
+    "feature_plugin": "69a933b654845e59f76af0dadb0af2b2ed08f738a1bcfe2f0f4bb9787aca2cff",
+    "feature_helper": "cbbd6784deb18501eddccf4d695dbd7b39c3ef27b14374fa34209d638d6b836f",
+    "test:baseline_control_trial.py": "70ee3377dfe5a889fefb18d09107ec5797d772797cc6ad203e24ec45eafd3c2e",
+    "test:control_response_probe.m": "4865268d5b67ba28df15fa9e55a7041a0042792aa0b100c4f17d73b0f560cb75",
+    "test:native_hover_trial.py": "2706ac8366f1ce98daadaf6f2c4d310648d99a78ffe8b3b47df4feb13d76c8e9",
+    "test:native_hover_benchmark.py": "295c192d9ca1c5800821a158b018f2ad57510de0894883e1f0d04557206ec379",
+    "test:playback_benchmark.py": "588295e4b74dfbd611179d9b4ccd03e013596ef2a07f32f899d5e739d4f3c6bd",
+    "test:native-pointer.m": "ecedbe0903ba7fc2eba9fd1c784c973387b2eef7d0cd574220eddc8ca6e33c1d",
+    "test:control_phase_diagnostic.py": "421122ab63e4efec5dcba938204fd2f12a143517e2d1d29abae2549d36db87bc"
+  },
+  "collection_error": "Settled pixel knob does not identify expected physical control point",
+  "fingerprints_after": {
+    "media": "37e1e1ebf58d44d0a38f4ac3f6f621dca2547307f9429a404bfccfd475d94c84",
+    "probe": "2c5e1dcf37374f57757d405cece016f9c636134615533178564981dd468817cb",
+    "pointer": "bfc48a37b90fc9aefda36735b36f9c239dea1f3c021046f7039d9e29691abd8e",
+    "baseline_app_tree": "7f834b0bd597aa9729f1c64f8f0e16c40459fcaf954e255d66a0c3e532d0ba7d",
+    "baseline_plugin": "43e7d6da115cf83209869e51942528d14de9089d73ba4da31790b5bf04b0e1b5",
+    "baseline_helper": "830d9857bbcd04b1b58462b3025fbbf09662dbcd80eb539be2e3ba45ab4da348",
+    "feature_app_tree": "87004d751a318fffbd6c37462bd1d2b519112a4a46e21d755430d234ddad5383",
+    "feature_plugin": "69a933b654845e59f76af0dadb0af2b2ed08f738a1bcfe2f0f4bb9787aca2cff",
+    "feature_helper": "cbbd6784deb18501eddccf4d695dbd7b39c3ef27b14374fa34209d638d6b836f",
+    "test:baseline_control_trial.py": "70ee3377dfe5a889fefb18d09107ec5797d772797cc6ad203e24ec45eafd3c2e",
+    "test:control_response_probe.m": "4865268d5b67ba28df15fa9e55a7041a0042792aa0b100c4f17d73b0f560cb75",
+    "test:native_hover_trial.py": "2706ac8366f1ce98daadaf6f2c4d310648d99a78ffe8b3b47df4feb13d76c8e9",
+    "test:native_hover_benchmark.py": "295c192d9ca1c5800821a158b018f2ad57510de0894883e1f0d04557206ec379",
+    "test:playback_benchmark.py": "588295e4b74dfbd611179d9b4ccd03e013596ef2a07f32f899d5e739d4f3c6bd",
+    "test:native-pointer.m": "ecedbe0903ba7fc2eba9fd1c784c973387b2eef7d0cd574220eddc8ca6e33c1d",
+    "test:control_phase_diagnostic.py": "421122ab63e4efec5dcba938204fd2f12a143517e2d1d29abae2549d36db87bc"
+  },
+  "integrity_unchanged": true,
+  "changed_inputs": [],
+  "observed_counts": {
+    "baseline": 0,
+    "feature": 0
+  },
+  "collection_valid": false,
+  "finished": {
+    "unix_s": 1791173638.6457841,
+    "monotonic_s": 933062.712746375
+  }
+}

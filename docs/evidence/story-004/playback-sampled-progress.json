@@ -1,0 +1,301 @@
+{
+  "scope": "First two matched60s pairs; third in progress. Shared host and diagnostic tracing, no universal speed/stall attribution. Full details in ignored raw evidence.",
+  "pairs": [
+    {
+      "pair": 1,
+      "both_collections_eligible": true,
+      "baseline": "work/validation/story004/playback-analysis-inputs/playback-pair-1-baseline-001",
+      "feature": "work/validation/story004/playback-analysis-inputs/playback-pair-1-feature-001",
+      "matched_conditions": {
+        "fixture_sha256": true,
+        "timeline_diagnostics_enabled": true,
+        "requested_playback_s": true,
+        "capture_fps": true,
+        "normalized_roi": true,
+        "silence_threshold": true,
+        "capture_window_size": true,
+        "timeline_rect_size": true
+      },
+      "diagnostics_cohort": "enabled",
+      "baseline_lost_picture_percent": 0.1049317943336831,
+      "feature_lost_picture_percent": 0.11337868480725624,
+      "lost_picture_increase_percentage_points": 0.008446890473573138,
+      "baseline_decoded_denominator_percent": 0.06702412868632708,
+      "feature_decoded_denominator_percent": 0.0670690811535882,
+      "interpretation": "Numerical paired comparison only; no attribution or passing verdict."
+    },
+    {
+      "pair": 2,
+      "both_collections_eligible": true,
+      "baseline": "work/validation/story004/playback-analysis-inputs/playback-pair-2-baseline-001",
+      "feature": "work/validation/story004/playback-analysis-inputs/playback-pair-2-feature-001",
+      "matched_conditions": {
+        "fixture_sha256": true,
+        "timeline_diagnostics_enabled": true,
+        "requested_playback_s": true,
+        "capture_fps": true,
+        "normalized_roi": true,
+        "silence_threshold": true,
+        "capture_window_size": true,
+        "timeline_rect_size": true
+      },
+      "diagnostics_cohort": "enabled",
+      "baseline_lost_picture_percent": 0.102880658436214,
+      "feature_lost_picture_percent": 0.1001001001001001,
+      "lost_picture_increase_percentage_points": -0.002780558336113889,
+      "baseline_decoded_denominator_percent": 0.06680026720106881,
+      "feature_decoded_denominator_percent": 0.06684491978609626,
+      "interpretation": "Numerical paired comparison only; no attribution or passing verdict."
+    }
+  ],
+  "runs": [
+    {
+      "pair": 1,
+      "variant": "baseline",
+      "eligible": true,
+      "interior_audio_silence_s": 0,
+      "audio_timestamp_gap_count": 0,
+      "audio_callback_gap_count": 0,
+      "screen_repeat_candidates": [
+        {
+          "start_relative_s": 0.011854624997795327,
+          "end_relative_s": 0.17852087500068592,
+          "duration_s": 0.1666662500028906,
+          "end_reason": "roi_changed",
+          "classification": "unchanged_roi_candidate_not_vlc_attribution"
+        },
+        {
+          "start_relative_s": 0.27852079199874424,
+          "end_relative_s": 0.4285204999978305,
+          "duration_s": 0.14999970799908624,
+          "end_reason": "roi_changed",
+          "classification": "unchanged_roi_candidate_not_vlc_attribution"
+        }
+      ],
+      "process_costs": [
+        {
+          "pid": 25261,
+          "kind": "app",
+          "command": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/VLCBaseline.app/Contents/MacOS/VLC",
+          "sample_count": 577,
+          "first_sample_relative_s": 0.09183104199837544,
+          "last_sample_relative_s": 59.9337617079982,
+          "sampled_cpu_percent_mean": 1.579896013864818,
+          "sampled_cpu_percent_p95": 2.2,
+          "sampled_cpu_percent_max": 4.6,
+          "sampled_rss_mib_max": 237.734375,
+          "cpu_time_s_between_first_last_samples": 1.46,
+          "lifetime_cpu_s_at_last_sample": 2.3
+        },
+        {
+          "pid": 25317,
+          "kind": "observer",
+          "command": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/playback-capture",
+          "sample_count": 577,
+          "first_sample_relative_s": 0.09183104199837544,
+          "last_sample_relative_s": 59.9337617079982,
+          "sampled_cpu_percent_mean": 2.423570190641248,
+          "sampled_cpu_percent_p95": 5.1,
+          "sampled_cpu_percent_max": 5.4,
+          "sampled_rss_mib_max": 31.21875,
+          "cpu_time_s_between_first_last_samples": 1.51,
+          "lifetime_cpu_s_at_last_sample": 1.55
+        }
+      ],
+      "limitations": "Sampled peaks only. ps percent CPU is a moving statistic; cumulative CPU deltas omit window edges. Short helper lifetimes may have no samples; helper last-seen lifetime CPU is not an exact active-window aggregate."
+    },
+    {
+      "pair": 1,
+      "variant": "feature",
+      "eligible": true,
+      "interior_audio_silence_s": 0,
+      "audio_timestamp_gap_count": 0,
+      "audio_callback_gap_count": 0,
+      "screen_repeat_candidates": [
+        {
+          "start_relative_s": 0.0014252080000005662,
+          "end_relative_s": 0.18475816600039252,
+          "duration_s": 0.18333295800039195,
+          "end_reason": "roi_changed",
+          "classification": "unchanged_roi_candidate_not_vlc_attribution"
+        },
+        {
+          "start_relative_s": 0.29309133300193935,
+          "end_relative_s": 0.42642433299988625,
+          "duration_s": 0.1333329999979469,
+          "end_reason": "roi_changed",
+          "classification": "unchanged_roi_candidate_not_vlc_attribution"
+        }
+      ],
+      "process_costs": [
+        {
+          "pid": 31933,
+          "kind": "app",
+          "command": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/VLC",
+          "sample_count": 577,
+          "first_sample_relative_s": 0.016696582999429666,
+          "last_sample_relative_s": 59.96601175000251,
+          "sampled_cpu_percent_mean": 6.669324090121317,
+          "sampled_cpu_percent_p95": 9.5,
+          "sampled_cpu_percent_max": 11.2,
+          "sampled_rss_mib_max": 278.9375,
+          "cpu_time_s_between_first_last_samples": 4.640000000000001,
+          "lifetime_cpu_s_at_last_sample": 5.65
+        },
+        {
+          "pid": 32149,
+          "kind": "thumbnail_helper",
+          "command": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/vlc-thumbnail-helper",
+          "sample_count": 577,
+          "first_sample_relative_s": 0.016696582999429666,
+          "last_sample_relative_s": 59.96601175000251,
+          "sampled_cpu_percent_mean": 1.2495667244367419,
+          "sampled_cpu_percent_p95": 1.9,
+          "sampled_cpu_percent_max": 2.4,
+          "sampled_rss_mib_max": 46.71875,
+          "cpu_time_s_between_first_last_samples": 0.81,
+          "lifetime_cpu_s_at_last_sample": 0.87
+        },
+        {
+          "pid": 32315,
+          "kind": "observer",
+          "command": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/playback-capture",
+          "sample_count": 577,
+          "first_sample_relative_s": 0.016696582999429666,
+          "last_sample_relative_s": 59.96601175000251,
+          "sampled_cpu_percent_mean": 2.4719237435008665,
+          "sampled_cpu_percent_p95": 5.1,
+          "sampled_cpu_percent_max": 5.5,
+          "sampled_rss_mib_max": 31.234375,
+          "cpu_time_s_between_first_last_samples": 1.54,
+          "lifetime_cpu_s_at_last_sample": 1.58
+        }
+      ],
+      "limitations": "Sampled peaks only. ps percent CPU is a moving statistic; cumulative CPU deltas omit window edges. Short helper lifetimes may have no samples; helper last-seen lifetime CPU is not an exact active-window aggregate."
+    },
+    {
+      "pair": 2,
+      "variant": "baseline",
+      "eligible": true,
+      "interior_audio_silence_s": 0,
+      "audio_timestamp_gap_count": 0,
+      "audio_callback_gap_count": 0,
+      "screen_repeat_candidates": [
+        {
+          "start_relative_s": 0.013026832999457838,
+          "end_relative_s": 0.17135983299885993,
+          "duration_s": 0.1583329999994021,
+          "end_reason": "roi_changed",
+          "classification": "unchanged_roi_candidate_not_vlc_attribution"
+        },
+        {
+          "start_relative_s": 0.2880291250003211,
+          "end_relative_s": 0.42969254099807586,
+          "duration_s": 0.14166341599775478,
+          "end_reason": "roi_changed",
+          "classification": "unchanged_roi_candidate_not_vlc_attribution"
+        }
+      ],
+      "process_costs": [
+        {
+          "pid": 46706,
+          "kind": "app",
+          "command": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/VLCBaseline.app/Contents/MacOS/VLC",
+          "sample_count": 577,
+          "first_sample_relative_s": 0.07527333300095052,
+          "last_sample_relative_s": 59.915400458001386,
+          "sampled_cpu_percent_mean": 1.4823223570190642,
+          "sampled_cpu_percent_p95": 2.0,
+          "sampled_cpu_percent_max": 4.3,
+          "sampled_rss_mib_max": 236.5625,
+          "cpu_time_s_between_first_last_samples": 1.4100000000000001,
+          "lifetime_cpu_s_at_last_sample": 2.24
+        },
+        {
+          "pid": 47029,
+          "kind": "observer",
+          "command": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/playback-capture",
+          "sample_count": 577,
+          "first_sample_relative_s": 0.07527333300095052,
+          "last_sample_relative_s": 59.915400458001386,
+          "sampled_cpu_percent_mean": 2.2655112651646445,
+          "sampled_cpu_percent_p95": 4.9,
+          "sampled_cpu_percent_max": 5.2,
+          "sampled_rss_mib_max": 31.140625,
+          "cpu_time_s_between_first_last_samples": 1.42,
+          "lifetime_cpu_s_at_last_sample": 1.46
+        }
+      ],
+      "limitations": "Sampled peaks only. ps percent CPU is a moving statistic; cumulative CPU deltas omit window edges. Short helper lifetimes may have no samples; helper last-seen lifetime CPU is not an exact active-window aggregate."
+    },
+    {
+      "pair": 2,
+      "variant": "feature",
+      "eligible": true,
+      "interior_audio_silence_s": 0,
+      "audio_timestamp_gap_count": 0,
+      "audio_callback_gap_count": 0,
+      "screen_repeat_candidates": [
+        {
+          "start_relative_s": 0.008948583003075328,
+          "end_relative_s": 0.18394808300217846,
+          "duration_s": 0.17499949999910314,
+          "end_reason": "roi_changed",
+          "classification": "unchanged_roi_candidate_not_vlc_attribution"
+        },
+        {
+          "start_relative_s": 0.27561454200258595,
+          "end_relative_s": 0.43394741700103623,
+          "duration_s": 0.15833287499845028,
+          "end_reason": "roi_changed",
+          "classification": "unchanged_roi_candidate_not_vlc_attribution"
+        }
+      ],
+      "process_costs": [
+        {
+          "pid": 39816,
+          "kind": "app",
+          "command": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/VLC",
+          "sample_count": 578,
+          "first_sample_relative_s": 0.015380583001388004,
+          "last_sample_relative_s": 60.02240754200102,
+          "sampled_cpu_percent_mean": 6.5432525951557095,
+          "sampled_cpu_percent_p95": 9.4,
+          "sampled_cpu_percent_max": 12.4,
+          "sampled_rss_mib_max": 278.921875,
+          "cpu_time_s_between_first_last_samples": 4.5600000000000005,
+          "lifetime_cpu_s_at_last_sample": 5.57
+        },
+        {
+          "pid": 39856,
+          "kind": "thumbnail_helper",
+          "command": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/vlc-thumbnail-helper",
+          "sample_count": 578,
+          "first_sample_relative_s": 0.015380583001388004,
+          "last_sample_relative_s": 60.02240754200102,
+          "sampled_cpu_percent_mean": 1.2302768166089966,
+          "sampled_cpu_percent_p95": 2.1,
+          "sampled_cpu_percent_max": 2.7,
+          "sampled_rss_mib_max": 49.609375,
+          "cpu_time_s_between_first_last_samples": 0.81,
+          "lifetime_cpu_s_at_last_sample": 0.87
+        },
+        {
+          "pid": 40285,
+          "kind": "observer",
+          "command": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/playback-capture",
+          "sample_count": 578,
+          "first_sample_relative_s": 0.015380583001388004,
+          "last_sample_relative_s": 60.02240754200102,
+          "sampled_cpu_percent_mean": 2.5186851211072665,
+          "sampled_cpu_percent_p95": 5.0,
+          "sampled_cpu_percent_max": 5.4,
+          "sampled_rss_mib_max": 31.375,
+          "cpu_time_s_between_first_last_samples": 1.57,
+          "lifetime_cpu_s_at_last_sample": 1.61
+        }
+      ],
+      "limitations": "Sampled peaks only. ps percent CPU is a moving statistic; cumulative CPU deltas omit window edges. Short helper lifetimes may have no samples; helper last-seen lifetime CPU is not an exact active-window aggregate."
+    }
+  ]
+}

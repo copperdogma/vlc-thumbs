@@ -1,0 +1,267 @@
+{
+  "schema_version": 1,
+  "app": "work/build/vlc-arm64/VLC.app",
+  "media": "work/fixtures/story-002/standard-cache-pressure.mkv",
+  "duration_seconds": 90.037,
+  "runner_sha256": "0d1e9d8d6a08fea799050b87aa1cbbd2fd3e9933a72eca9d3e4e954778d426d5",
+  "source_sha256_before": "28769b96c6344c781c07fbd6a350b9d3cd045331a58b19f6aadd1f941b13bb19",
+  "app_tree_sha256_before": "1f4f9b94114df887c30612301f46d27afaf5db91f657901228ac3a41c1e9b654",
+  "module_sha256_before": "9e8f29d2377caa745c4f42202785dfc971442cdf6a1163d368fbc275ae426be8",
+  "pointer_sha256": "f080e1616df72f5f8b7e3358e4e4a80f8e35e8690bb6c52193b7c924cdc8ae12",
+  "scope": "One native paused-hover collection; screenshot correspondence and threshold judgment belong to owner.",
+  "argument_validation": {
+    "help_exit_code": 0,
+    "missing_options": [],
+    "requested_options": [
+      "ignore-config",
+      "config",
+      "intf",
+      "extraintf",
+      "rc-unix",
+      "rc-fake-tty",
+      "stats",
+      "play-and-pause",
+      "start-time",
+      "no-media-library",
+      "no-metadata-network-access",
+      "macosx-control-itunes",
+      "no-macosx-mediakeys",
+      "no-macosx-recentitems",
+      "macosx-continue-playback",
+      "no-video-title-show",
+      "no-loop",
+      "no-repeat",
+      "no-random",
+      "verbose"
+    ]
+  },
+  "pid": 55427,
+  "app_command": [
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/VLC",
+    "--ignore-config",
+    "--config=/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/native-hover-mkv-001/vlcrc",
+    "--intf=macosx",
+    "--extraintf=oldrc",
+    "--rc-unix=/tmp/vlc002-hover-55409.sock",
+    "--rc-fake-tty",
+    "--stats",
+    "--play-and-pause",
+    "--start-time=0",
+    "--no-media-library",
+    "--no-metadata-network-access",
+    "--macosx-control-itunes=0",
+    "--no-macosx-mediakeys",
+    "--no-macosx-recentitems",
+    "--macosx-continue-playback=2",
+    "--no-video-title-show",
+    "--no-loop",
+    "--no-repeat",
+    "--no-random",
+    "--verbose=2",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/story-002/standard-cache-pressure.mkv"
+  ],
+  "prepared": {
+    "state": "pause",
+    "media_time_seconds": 0,
+    "counters": {
+      "video decoded": 8,
+      "frames displayed": 0,
+      "frames lost": 0,
+      "audio decoded": 2,
+      "buffers played": 1,
+      "buffers lost": 0
+    }
+  },
+  "timeline_global_rect": [
+    207.0,
+    1091.0,
+    1337.0,
+    16.0
+  ],
+  "ax_position_inventory": "window_index 0\nslider 207.000 1091.000 1337.000 16.000 value 0 title Position\nslider 1618.000 1092.000 50.000 14.000 value 256 title \n",
+  "window_inventory": [
+    {
+      "id": 19119,
+      "layer": 0,
+      "name": "",
+      "bounds": {
+        "X": 510,
+        "Height": 224,
+        "Y": 856,
+        "Width": 336
+      }
+    },
+    {
+      "id": 19122,
+      "layer": 0,
+      "name": "standard-cache-pressure.mkv",
+      "bounds": {
+        "X": 42,
+        "Height": 1084,
+        "Y": 33,
+        "Width": 1686
+      }
+    }
+  ],
+  "freshness": {
+    "reason": "A pointer retained from a preceding trial can prewarm startup hover buckets.",
+    "method": "Move onto owned video center, ordinary RC stop then add the same fixture, establish paused zero twice; no cache clearing or product test seam.",
+    "pre_reopen_hover_count": 1,
+    "pre_reopen_hover_generations": [
+      "4D38F8E4-90B8-4A24-A71B-A45B54BCB6C2-2"
+    ],
+    "pointer_off_timeline": {
+      "requested": [
+        885.0,
+        412.4
+      ],
+      "pointer": [
+        885.0,
+        412.4
+      ]
+    },
+    "pre_reopen_trace_offset": 3295,
+    "stopped_snapshot": {
+      "state": "stop",
+      "media_time_seconds": 0,
+      "counters": {
+        "video decoded": 8,
+        "frames displayed": 0,
+        "frames lost": 0,
+        "audio decoded": 2,
+        "buffers played": 1,
+        "buffers lost": 0
+      }
+    },
+    "generation": "4D38F8E4-90B8-4A24-A71B-A45B54BCB6C2-8",
+    "calibration_generation_is_new": true,
+    "generation_hover_count_before_benchmark": 1,
+    "unexpected_generation_hovers": [],
+    "miss_bank_hovers_before_benchmark": []
+  },
+  "reopened_paused": {
+    "state": "pause",
+    "media_time_seconds": 0,
+    "counters": {
+      "video decoded": 67,
+      "frames displayed": 9,
+      "frames lost": 0,
+      "audio decoded": 38,
+      "buffers played": 19,
+      "buffers lost": 0
+    }
+  },
+  "initial": {
+    "state": "pause",
+    "media_time_seconds": 0,
+    "counters": {
+      "video decoded": 67,
+      "frames displayed": 9,
+      "frames lost": 0,
+      "audio decoded": 38,
+      "buffers played": 19,
+      "buffers lost": 0
+    }
+  },
+  "calibration": {
+    "target_seconds": 80.1,
+    "expected_bucket_us": 80000000,
+    "expected_actual_keyframe_us": 80000000,
+    "fixture_note": "The 90-second stream-copy derivative loops its 60-second source; at PTS 80 seconds the burnt source counter is 20 seconds. Owner inspects correspondence.",
+    "pointer_result": {
+      "requested": [
+        1390.986,
+        1099.0
+      ],
+      "pointer": [
+        1390.986,
+        1099.0
+      ]
+    },
+    "hover": {
+      "window": "standard-cache-pressure.mkv",
+      "monotonic": 897591.6443349167,
+      "bucket_us": 80000000,
+      "generation": "4D38F8E4-90B8-4A24-A71B-A45B54BCB6C2-8",
+      "event": "hover",
+      "requested_us": 80153110,
+      "duration_us": 90037000,
+      "point_x": 1182.986083984375,
+      "left": 7,
+      "right": 1328
+    },
+    "display": {
+      "ok": 1,
+      "monotonic": 897591.6828459167,
+      "generation": "4D38F8E4-90B8-4A24-A71B-A45B54BCB6C2-8",
+      "event": "display",
+      "requested_us": 80153110,
+      "actual_us": 80000000,
+      "cache": "miss",
+      "elapsed_ms": 39.443125016987324
+    }
+  },
+  "calibration_image": {
+    "path": "work/validation/story002/native-hover-mkv-001/calibration-main-window.png",
+    "sha256": "85a402e9454764366b6a466debecf5770dd477fe11873be72df385ce72e44e70",
+    "command": [
+      "/usr/sbin/screencapture",
+      "-x",
+      "-o",
+      "-R42,33,1686,1084",
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/native-hover-mkv-001/calibration-main-window.png"
+    ],
+    "scope": "Main owned window rectangle only, including its displayed preview; no desktop union."
+  },
+  "prebenchmark": {
+    "state": "pause",
+    "media_time_seconds": 0,
+    "counters": {
+      "video decoded": 67,
+      "frames displayed": 9,
+      "frames lost": 0,
+      "audio decoded": 38,
+      "buffers played": 19,
+      "buffers lost": 0
+    }
+  },
+  "benchmark_command": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/tests/story-002/native_hover_benchmark.py",
+    "--pid",
+    "55427",
+    "--rect",
+    "207.0,1091.0,1337.0,16.0",
+    "--duration",
+    "90.037",
+    "--trace",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/native-hover-mkv-001/timeline.jsonl",
+    "--output",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/native-hover-mkv-001/benchmark"
+  ],
+  "benchmark_exit_code": 0,
+  "final_pause": {
+    "state": "pause",
+    "media_time_seconds": 0,
+    "counters": {
+      "video decoded": 67,
+      "frames displayed": 9,
+      "frames lost": 0,
+      "audio decoded": 38,
+      "buffers played": 19,
+      "buffers lost": 0
+    }
+  },
+  "completed_collection": true,
+  "app_exit_code": 0,
+  "source_sha256_after": "28769b96c6344c781c07fbd6a350b9d3cd045331a58b19f6aadd1f941b13bb19",
+  "app_tree_sha256_after": "1f4f9b94114df887c30612301f46d27afaf5db91f657901228ac3a41c1e9b654",
+  "module_sha256_after": "9e8f29d2377caa745c4f42202785dfc971442cdf6a1163d368fbc275ae426be8",
+  "source_hash_unchanged": true,
+  "app_hash_unchanged": true,
+  "module_hash_unchanged": true,
+  "finished": {
+    "unix_s": 1791138266.603128,
+    "monotonic_s": 897690.834516583
+  }
+}

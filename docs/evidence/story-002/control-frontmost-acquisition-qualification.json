@@ -1,0 +1,21 @@
+{
+  "scope": "Prospective readiness acquisition correction; no product change or historical sample salvage",
+  "acquisition": "validated-frontmost-instance",
+  "qualification": {
+    "completed_interactions": true,
+    "termination_control_completed": true,
+    "collection_error": null,
+    "notification_count": 10,
+    "notification_delivery_proven": true,
+    "integrity_unchanged": true,
+    "recorder_exit_code": 0,
+    "positive_controls_completed": true,
+    "negative_foreign_activation_observed": true,
+    "negative_finder_frame_observed": true
+  },
+  "raw": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/control-frontmost-qualification-001/raw/results.json",
+  "source_sha256": "0489b5656e03e5531794fbfed4f783cfc9c8ffbb7f476bf534f3e3d7a6435bb1",
+  "binary_sha256": "0d844721b517ec313e44daf88ad7a53515aa6104c193f4e9399b21ca6e8bd9f9",
+  "failed_cohort": "work/validation/story002/control-pragmatic-current-001/summary.json",
+  "failed_cohort_disposition": "invalid; three baseline scored observations; not pooled"
+}

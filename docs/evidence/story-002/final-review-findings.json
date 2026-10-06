@@ -1,0 +1,114 @@
+{
+  "date_local": "2026-10-04",
+  "review_scope": "All modified and untracked project files; codex review --uncommitted as extra signal, main-agent findings verification.",
+  "reviews": [
+    {
+      "path": "work/validation/story002/final-codex-review-20261004.log",
+      "accepted_p2": 3
+    },
+    {
+      "path": "work/validation/story002/final-codex-review-fixed-20261004.log",
+      "accepted_p2": 1
+    },
+    {
+      "path": "work/validation/story002/final-codex-review-geometry-fixed-20261004.log",
+      "status": "completed; one accepted P2"
+    },
+    {
+      "path": "work/validation/story002/final-codex-review-track-fixed-20261004.log",
+      "status": "completed; one accepted P2"
+    },
+    {
+      "path": "work/validation/story002/final-codex-review-fixture-fixed-20261004.log",
+      "status": "completed; no concrete regression in affected fixture-preservation scope",
+      "scope": "Only affected fixture generator/preservation regression"
+    },
+    {
+      "path": "work/validation/story002/final-codex-review-track-mapping-20261004.log",
+      "status": "completed; no concrete defect in TrackNumber mapping, count forwarding, cache and private build scope"
+    }
+  ],
+  "findings": [
+    {
+      "severity": "P2",
+      "class": "program-local vs file-global video ordinal",
+      "accepted": true,
+      "fix": "Reject multiple AVPrograms with ambiguous_track_mapping before ordinal selection. No guessed frame.",
+      "evidence": "multi-program-final-contract.json",
+      "status": "Automated guard passed; current022512 native explicit Preview unavailable and paused/source-preserving route passed. Internal native error-label attribution remains unqualified.",
+      "native_evidence": "native-program-unavailable-results.json"
+    },
+    {
+      "severity": "P2",
+      "class": "inactive app hover reopens decorative panel",
+      "accepted": true,
+      "fix": "NSApp.active guard before context, panel and demand; existing hide cancels outstanding token.",
+      "status": "physical native inactive delivered mouse moves suppressed demand/panel; reactivate recovered",
+      "evidence": "native-final-guards.json"
+    },
+    {
+      "severity": "P2",
+      "class": "initial helper binary absent during build preflight",
+      "accepted": true,
+      "fix": "Conservative 32MiB first-build estimate when helper is absent; retained file/space/bundle guards.",
+      "evidence": "first-helper-build-preflight.json",
+      "status": "focused preflight passed, full subsequent rebuild passed"
+    },
+    {
+      "severity": "P2",
+      "class": "geometry changes under stationary pointer",
+      "accepted": true,
+      "fix": "refreshTracking recomputes current pointer demand and panel position while already hovering, including unchanged tracking rectangle.",
+      "status": "stationary physical cursor resize recalculated requested time and correct displayed keyframe; OS-generated mouse events retained",
+      "evidence": "native-final-guards.json"
+    },
+    {
+      "severity": "P2",
+      "class": "Matroska TrackEntry order differs from VLC TrackNumber order",
+      "accepted": true,
+      "fix": "Helper-private public AVStream.id exposes Matroska TrackNumber. Sort eligible AVC videos by unique positive TrackNumber; require native video count correspondence; reject ambiguous unsupported mappings.",
+      "evidence": "matroska-track-mapped-contract.json",
+      "status": "Five helper mapping cases and current service count/cache contract passed; four actual native original/reversed red/blue selected-track checks passed on022512. No latency qualification from these checks.",
+      "native_evidence": "native-selected-track-results.json"
+    },
+    {
+      "severity": "P2",
+      "class": "existing fixture link redirects overwrite into source media",
+      "accepted": true,
+      "fix": "Require a new output directory before encoder invocation; FFmpeg -n; exclusive Python file/sidecar writes. Preserve existing sets rather than overwrite.",
+      "evidence": "fixture-preservation-final-contract.json",
+      "status": "three generated preservation regressions passed; targeted final review clean"
+    }
+  ],
+  "review_limit": "Initial independent review missed the first three P2s and was corrected by follow-up review. Source review is advisory, never native behavioral proof.",
+  "candidate": "app-build-tracknumber-022512.json",
+  "proportional_reuse": {
+    "changed_paths": [
+      "multi-program ambiguity rejection",
+      "inactive guard",
+      "stationary pointer geometry refresh",
+      "absent-helper preflight",
+      "Matroska public TrackNumber mapping",
+      "native videoCount service/IPC forwarding and v3 cache key",
+      "fixture exclusive output guard"
+    ],
+    "unchanged_paths": [
+      "successful MP4/single-video MKV sampling and clock policy",
+      "service scheduling and resource enforcement",
+      "ordinary AppKit preview presentation",
+      "upstream seek/core/audio/playback libraries"
+    ],
+    "timing": "Prior cohorts are historical. Full fresh 022512 visible cohorts remain required. First current MP4 run stopped during templates after foreground loss: zero scored attempts.",
+    "playback": "Reuse three matched original-presentation pairs only for stable-geometry active playback. Geometry-change regression must receive new focused interaction proof; inherited TLS and VoiceOver seek limits remain disclosed."
+  },
+  "learning_review": {
+    "considered": true,
+    "decision": "No live skill or workflow promotion. Existing findings-first review and applicability gates caught the defects; record the program-ordinal assumption and geometry edge cases locally as regressions."
+  },
+  "source_review_disposition": "Six accepted P2s corrected; affected source reviews clean. Physical background/reactivate and resize regressions pass on 020311. Current selected-track native and full visible timing proof remain pending.",
+  "owned_session_cleanup": {
+    "failed_ui_host": "final-guards-001 terminated and source hashes preserved",
+    "wake_assertion": "owned caffeinate PID49778 terminated; session47546 exit143",
+    "reader_settings": "untouched during failed final host attempt"
+  }
+}

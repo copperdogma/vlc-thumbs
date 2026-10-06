@@ -1,0 +1,3597 @@
+{
+  "schema_version": 1,
+  "diagnostic_only": true,
+  "qualification_eligible": false,
+  "guard_equivalence_proven": false,
+  "scope": "Main-window20 paired prewarmed-RAM heavy/buffered ScreenCaptureKit observer-load experiment",
+  "limits": [
+    "Buffered ownership is pre/post only; transient changes unobserved",
+    "System-generated pointer and WindowServer display_time; not physical scanout",
+    "Uncontrolled OS/cache/scheduling effects",
+    "No overhead subtraction or product threshold changes"
+  ],
+  "app": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app",
+  "media": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/story-002/standard-cache-pressure.mp4",
+  "duration_seconds": 90.037333,
+  "requested_pairs": 20,
+  "target_buckets": [
+    0,
+    37,
+    74,
+    11,
+    48,
+    85,
+    22,
+    59,
+    96,
+    33,
+    70,
+    7,
+    44,
+    81,
+    18,
+    55,
+    92,
+    29,
+    66,
+    3
+  ],
+  "attempts": [
+    {
+      "phase": "template",
+      "bucket": 160,
+      "bucket_us": 80000000,
+      "target_seconds": 80.1,
+      "name": "001-heavy-template-160",
+      "faults": [],
+      "observer_arm": "heavy",
+      "command": [
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/continuous-visible-capture-probe",
+        "--pid",
+        "1245",
+        "--rect",
+        "1218,785,336,224",
+        "--point",
+        "1386,1028",
+        "--output",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/001-heavy-template-160.jsonl",
+        "--save-last-image",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/001-heavy-template-160.png",
+        "--settle-ms",
+        "1000"
+      ],
+      "raw_jsonl": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/001-heavy-template-160.jsonl",
+      "last_image": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/001-heavy-template-160.png",
+      "pointer_target": [
+        1386,
+        1028
+      ],
+      "crop": [
+        1218,
+        785,
+        336,
+        224
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "raw_row_count": 59,
+      "trace": {
+        "hover": {
+          "window": "standard-cache-pressure.mp4",
+          "monotonic": 917428.6249320417,
+          "bucket_us": 80000000,
+          "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+          "event": "hover",
+          "requested_us": 80170821,
+          "duration_us": 90038000,
+          "point_x": 1177,
+          "left": 7,
+          "right": 1321
+        },
+        "service": {
+          "result": {
+            "video_ordinal": 0,
+            "payload_bytes": 230400,
+            "version": 2,
+            "width": 320,
+            "actual_us": 80000000,
+            "channels": 4,
+            "cache": "miss",
+            "elapsed_ms": 245.34933338873088,
+            "requested_us": 80000000,
+            "ok": true,
+            "height": 180,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0,
+            "sampling": "keyframe"
+          },
+          "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+          "event": "service",
+          "monotonic": 917428.8703473334
+        },
+        "display": {
+          "ok": 1,
+          "monotonic": 917428.8705418333,
+          "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+          "event": "display",
+          "requested_us": 80170821,
+          "actual_us": 80000000,
+          "cache": "miss",
+          "elapsed_ms": 246.20362499263138
+        },
+        "events": [
+          {
+            "bounds": "{{0, 0}, {1328, 14}}",
+            "monotonic": 917428.6241,
+            "event_point": "{1177, 7}",
+            "event": "input-observation",
+            "visible_rect": "{{0, 0}, {1328, 14}}",
+            "tracking_attached": true,
+            "type": 5,
+            "pointer_point": "{1177, 7}"
+          },
+          {
+            "event": "mouse-enter",
+            "monotonic": 917428.6242497917
+          },
+          {
+            "bounds": "{{0, 0}, {1328, 14}}",
+            "hidden": false,
+            "enabled": true,
+            "event_point": "{1177, 7}",
+            "event": "mouse-move",
+            "monotonic": 917428.6243005417,
+            "visible_rect": "{{0, 0}, {1328, 14}}",
+            "tracking_attached": true,
+            "hit_bounds": "{{0, -9}, {1328, 32}}",
+            "window_set": 1,
+            "pointer_point": "{1177, 7}"
+          },
+          {
+            "monotonic": 917428.6243464584,
+            "eligible": true,
+            "event": "context",
+            "ordinal": 0,
+            "duration": 90038000
+          },
+          {
+            "event": "draw-submitted",
+            "duration_ms": 0.071666669100523,
+            "monotonic": 917428.6249005
+          },
+          {
+            "window": "standard-cache-pressure.mp4",
+            "monotonic": 917428.6249320417,
+            "bucket_us": 80000000,
+            "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+            "event": "hover",
+            "requested_us": 80170821,
+            "duration_us": 90038000,
+            "point_x": 1177,
+            "left": 7,
+            "right": 1321
+          },
+          {
+            "result": {
+              "video_ordinal": 0,
+              "payload_bytes": 230400,
+              "version": 2,
+              "width": 320,
+              "actual_us": 80000000,
+              "channels": 4,
+              "cache": "miss",
+              "elapsed_ms": 245.34933338873088,
+              "requested_us": 80000000,
+              "ok": true,
+              "height": 180,
+              "decoded_frames": 1,
+              "timeline_origin_us": 0,
+              "sampling": "keyframe"
+            },
+            "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+            "event": "service",
+            "monotonic": 917428.8703473334
+          },
+          {
+            "ok": 1,
+            "monotonic": 917428.8705418333,
+            "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+            "event": "display",
+            "requested_us": 80170821,
+            "actual_us": 80000000,
+            "cache": "miss",
+            "elapsed_ms": 246.20362499263138
+          },
+          {
+            "event": "draw-submitted",
+            "duration_ms": 0.12441666331142187,
+            "monotonic": 917428.870705625
+          }
+        ]
+      },
+      "template": {
+        "bucket": 160,
+        "opaque_image_hash": "8ada5d05ccf6bef9",
+        "time_mask_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e0e01e1c0000000000000000001b1e33236000000000000000000119632323000000000000000000118600223000000000000000000318600663000000000000000000118600c230000000000000000001106318220000000000000000001b0603f360000000000000000000e0603f1c000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "state_mask_hex": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000098001000000006078f000000000000000000000000000000000012000200000001cc8930000000000000000000000000000000000287a2e779fe78080122000000000000000000000000000000000071124881265901004c40000000000000000000000000000000000a3e5111e44bf02010880000000000000000000000000000000001240a2224894004c611000000000000000000000000000000000026c8c4449124808183400000000000000000000000000000000004661088f22460103e380000000000000000000000000000000000000200000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "time_glyph_count": 115,
+        "state_glyph_count": 183,
+        "pointer_caption": "01:20",
+        "actual_keyframe_us": 80000000,
+        "ready_caption": "Keyframe 1:20",
+        "prior_generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+        "stable_final_samples": 3,
+        "reference_frame": {
+          "actual_panel_rect": [
+            1218,
+            785,
+            336,
+            224
+          ],
+          "actual_panel_window_id": 20238,
+          "app_active": true,
+          "callback_received_uptime_s": 917430.1306279168,
+          "crop_screen_points": [
+            1218,
+            785,
+            336,
+            224
+          ],
+          "display_time_mach_ticks": 22018323178182,
+          "display_time_present": 1,
+          "display_time_uptime_seconds": 917430.13242425,
+          "expected_image_hash_match": null,
+          "expected_time_mask_hamming": null,
+          "expected_time_mask_match_within_22_bits": null,
+          "expected_time_nearer_than_previous": null,
+          "expected_visible_match": 0,
+          "frame_status": 0,
+          "index": 56,
+          "input_t0_uptime_s": 917429.1369868334,
+          "input_to_callback_ms": 993.641083361581,
+          "kind": "display_frame",
+          "opaque_image_hash_matches_expected": null,
+          "panel_rect_matches_crop": true,
+          "parent_window_contains_crop": true,
+          "post_input_complete_presentation": true,
+          "presentation_pts_seconds": 917430.13242425,
+          "presentation_pts_timescale": 1000000000,
+          "presentation_pts_value": 917430132424250,
+          "previous_time_mask_hamming": null,
+          "result": {
+            "image_roi_points": [
+              8,
+              9,
+              320,
+              180
+            ],
+            "image_sample_hash_fnv1a64": "8ada5d05ccf6bef9",
+            "image_sample_mean": 125.70164437012264,
+            "panel_sample_hash_fnv1a64": "a32ab6f3ca6e630d",
+            "pixel_height": 448,
+            "pixel_width": 672,
+            "scale_from_336_points": 2,
+            "state_glyph_count": 183,
+            "state_mask_hex": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000098001000000006078f000000000000000000000000000000000012000200000001cc8930000000000000000000000000000000000287a2e779fe78080122000000000000000000000000000000000071124881265901004c40000000000000000000000000000000000a3e5111e44bf02010880000000000000000000000000000000001240a2224894004c611000000000000000000000000000000000026c8c4449124808183400000000000000000000000000000000004661088f22460103e380000000000000000000000000000000000000200000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "state_roi_points": [
+              117,
+              196,
+              211,
+              20
+            ],
+            "state_sample_hash_fnv1a64": "7990e735ae202456",
+            "state_sample_mean": 41.785703001579776,
+            "time_glyph_count": 115,
+            "time_mask_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e0e01e1c0000000000000000001b1e33236000000000000000000119632323000000000000000000118600223000000000000000000318600663000000000000000000118600c230000000000000000001106318220000000000000000001b0603f360000000000000000000e0603f1c000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "time_roi_points": [
+              8,
+              196,
+              108,
+              20
+            ],
+            "time_sample_hash_fnv1a64": "30f25491b891f425",
+            "time_sample_mean": 42.95516975308642
+          }
+        },
+        "raw_jsonl": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/001-heavy-template-160.jsonl"
+      },
+      "wall_ms": 1253.6378749646246
+    },
+    {
+      "phase": "template",
+      "bucket": 0,
+      "bucket_us": 0,
+      "target_seconds": 0.1,
+      "name": "002-heavy-template-000",
+      "faults": [],
+      "observer_arm": "heavy",
+      "command": [
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/continuous-visible-capture-probe",
+        "--pid",
+        "1245",
+        "--rect",
+        "48,785,336,224",
+        "--point",
+        "216,1028",
+        "--output",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/002-heavy-template-000.jsonl",
+        "--save-last-image",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/002-heavy-template-000.png",
+        "--settle-ms",
+        "1000"
+      ],
+      "raw_jsonl": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/002-heavy-template-000.jsonl",
+      "last_image": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/002-heavy-template-000.png",
+      "pointer_target": [
+        216,
+        1028
+      ],
+      "crop": [
+        48,
+        785,
+        336,
+        224
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "raw_row_count": 59,
+      "trace": {
+        "hover": {
+          "window": "standard-cache-pressure.mp4",
+          "monotonic": 917430.4602281251,
+          "bucket_us": 0,
+          "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+          "event": "hover",
+          "requested_us": 0,
+          "duration_us": 90038000,
+          "point_x": 7,
+          "left": 7,
+          "right": 1321
+        },
+        "service": {
+          "result": {
+            "video_ordinal": 0,
+            "payload_bytes": 230400,
+            "version": 2,
+            "width": 320,
+            "actual_us": 0,
+            "channels": 4,
+            "cache": "miss",
+            "elapsed_ms": 115.87512504775077,
+            "requested_us": 0,
+            "ok": true,
+            "height": 180,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0,
+            "sampling": "keyframe"
+          },
+          "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+          "event": "service",
+          "monotonic": 917430.5761712084
+        },
+        "display": {
+          "ok": 1,
+          "monotonic": 917430.5763190418,
+          "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+          "event": "display",
+          "requested_us": 0,
+          "actual_us": 0,
+          "cache": "miss",
+          "elapsed_ms": 132.96783331315964
+        },
+        "events": [
+          {
+            "bounds": "{{0, 0}, {1328, 14}}",
+            "monotonic": 917430.4432169584,
+            "event_point": "{7, 7}",
+            "event": "input-observation",
+            "visible_rect": "{{0, 0}, {1328, 14}}",
+            "tracking_attached": true,
+            "type": 5,
+            "pointer_point": "{7, 7}"
+          },
+          {
+            "bounds": "{{0, 0}, {1328, 14}}",
+            "hidden": false,
+            "enabled": true,
+            "event_point": "{7, 7}",
+            "event": "mouse-move",
+            "monotonic": 917430.4433143334,
+            "visible_rect": "{{0, 0}, {1328, 14}}",
+            "tracking_attached": true,
+            "hit_bounds": "{{0, -9}, {1328, 32}}",
+            "window_set": 1,
+            "pointer_point": "{7, 7}"
+          },
+          {
+            "monotonic": 917430.4433626668,
+            "eligible": true,
+            "event": "context",
+            "ordinal": 0,
+            "duration": 90038000
+          },
+          {
+            "event": "draw-submitted",
+            "duration_ms": 0.09766663424670696,
+            "monotonic": 917430.46019
+          },
+          {
+            "window": "standard-cache-pressure.mp4",
+            "monotonic": 917430.4602281251,
+            "bucket_us": 0,
+            "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+            "event": "hover",
+            "requested_us": 0,
+            "duration_us": 90038000,
+            "point_x": 7,
+            "left": 7,
+            "right": 1321
+          },
+          {
+            "result": {
+              "video_ordinal": 0,
+              "payload_bytes": 230400,
+              "version": 2,
+              "width": 320,
+              "actual_us": 0,
+              "channels": 4,
+              "cache": "miss",
+              "elapsed_ms": 115.87512504775077,
+              "requested_us": 0,
+              "ok": true,
+              "height": 180,
+              "decoded_frames": 1,
+              "timeline_origin_us": 0,
+              "sampling": "keyframe"
+            },
+            "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+            "event": "service",
+            "monotonic": 917430.5761712084
+          },
+          {
+            "ok": 1,
+            "monotonic": 917430.5763190418,
+            "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+            "event": "display",
+            "requested_us": 0,
+            "actual_us": 0,
+            "cache": "miss",
+            "elapsed_ms": 132.96783331315964
+          },
+          {
+            "event": "draw-submitted",
+            "duration_ms": 0.09358336683362722,
+            "monotonic": 917430.5764438751
+          }
+        ]
+      },
+      "template": {
+        "bucket": 0,
+        "opaque_image_hash": "33aee6ccccf5e207",
+        "time_mask_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e1e01e1c0000000000000000001b133323600000000000000000011b33232300000000000000000011b10232300000000000000000031a10216300000000000000000011b1023230000000000000000001133333220000000000000000001b1b036360000000000000000000e0e01c1c000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "state_mask_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000066000400000001e078f0000000000000000000000000000000000d80008000000064c9930000000000000000000000000000000001e1e8b9de7f9e0881122000000000000000000000000000000000384492204996411862c400000000000000000000000000000000068f94447912fc2204488000000000000000000000000000000000d90288892250044c89100000000000000000000000000000000019b23111244920d81a3400000000000000000000000000000000021184223c89180e01c380000000000000000000000000000000000000800000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "time_glyph_count": 123,
+        "state_glyph_count": 207,
+        "pointer_caption": "00:00",
+        "actual_keyframe_us": 0,
+        "ready_caption": "Keyframe 0:00",
+        "prior_generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+        "stable_final_samples": 3,
+        "reference_frame": {
+          "actual_panel_rect": [
+            48,
+            785,
+            336,
+            224
+          ],
+          "actual_panel_window_id": 20238,
+          "app_active": true,
+          "callback_received_uptime_s": 917431.4133375417,
+          "crop_screen_points": [
+            48,
+            785,
+            336,
+            224
+          ],
+          "display_time_mach_ticks": 22018353978053,
+          "display_time_present": 1,
+          "display_time_uptime_seconds": 917431.4157522083,
+          "expected_image_hash_match": null,
+          "expected_time_mask_hamming": null,
+          "expected_time_mask_match_within_22_bits": null,
+          "expected_time_nearer_than_previous": null,
+          "expected_visible_match": 0,
+          "frame_status": 0,
+          "index": 56,
+          "input_t0_uptime_s": 917430.4224887501,
+          "input_to_callback_ms": 990.8487916691229,
+          "kind": "display_frame",
+          "opaque_image_hash_matches_expected": null,
+          "panel_rect_matches_crop": true,
+          "parent_window_contains_crop": true,
+          "post_input_complete_presentation": true,
+          "presentation_pts_seconds": 917431.415752208,
+          "presentation_pts_timescale": 1000000000,
+          "presentation_pts_value": 917431415752208,
+          "previous_time_mask_hamming": null,
+          "result": {
+            "image_roi_points": [
+              8,
+              9,
+              320,
+              180
+            ],
+            "image_sample_hash_fnv1a64": "33aee6ccccf5e207",
+            "image_sample_mean": 125.69774247491638,
+            "panel_sample_hash_fnv1a64": "525944b7f3a4989b",
+            "pixel_height": 448,
+            "pixel_width": 672,
+            "scale_from_336_points": 2,
+            "state_glyph_count": 207,
+            "state_mask_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000066000400000001e078f0000000000000000000000000000000000d80008000000064c9930000000000000000000000000000000001e1e8b9de7f9e0881122000000000000000000000000000000000384492204996411862c400000000000000000000000000000000068f94447912fc2204488000000000000000000000000000000000d90288892250044c89100000000000000000000000000000000019b23111244920d81a3400000000000000000000000000000000021184223c89180e01c380000000000000000000000000000000000000800000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "state_roi_points": [
+              117,
+              196,
+              211,
+              20
+            ],
+            "state_sample_hash_fnv1a64": "e9e6dff2714baabe",
+            "state_sample_mean": 39.98933649289099,
+            "time_glyph_count": 123,
+            "time_mask_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e1e01e1c0000000000000000001b133323600000000000000000011b33232300000000000000000011b10232300000000000000000031a10216300000000000000000011b1023230000000000000000001133333220000000000000000001b1b036360000000000000000000e0e01c1c000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "time_roi_points": [
+              8,
+              196,
+              108,
+              20
+            ],
+            "time_sample_hash_fnv1a64": "25d63baa08147bdd",
+            "time_sample_mean": 42.11157407407408
+          }
+        },
+        "raw_jsonl": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/002-heavy-template-000.jsonl"
+      },
+      "wall_ms": 1282.5149579439312
+    },
+    {
+      "phase": "template",
+      "bucket": 37,
+      "bucket_us": 18500000,
+      "target_seconds": 18.6,
+      "name": "003-heavy-template-037",
+      "faults": [],
+      "observer_arm": "heavy",
+      "command": [
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/continuous-visible-capture-probe",
+        "--pid",
+        "1245",
+        "--rect",
+        "319,785,336,224",
+        "--point",
+        "487,1028",
+        "--output",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/003-heavy-template-037.jsonl",
+        "--save-last-image",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/003-heavy-template-037.png",
+        "--settle-ms",
+        "1000"
+      ],
+      "raw_jsonl": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/003-heavy-template-037.jsonl",
+      "last_image": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/003-heavy-template-037.png",
+      "pointer_target": [
+        487,
+        1028
+      ],
+      "crop": [
+        319,
+        785,
+        336,
+        224
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "raw_row_count": 59,
+      "trace": {
+        "hover": {
+          "window": "standard-cache-pressure.mp4",
+          "monotonic": 917431.7491494167,
+          "bucket_us": 18500000,
+          "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+          "event": "hover",
+          "requested_us": 18569481,
+          "duration_us": 90038000,
+          "point_x": 278,
+          "left": 7,
+          "right": 1321
+        },
+        "service": {
+          "result": {
+            "video_ordinal": 0,
+            "payload_bytes": 230400,
+            "version": 2,
+            "width": 320,
+            "actual_us": 18000000,
+            "channels": 4,
+            "cache": "miss",
+            "elapsed_ms": 123.42025001998991,
+            "requested_us": 18500000,
+            "ok": true,
+            "height": 180,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0,
+            "sampling": "keyframe"
+          },
+          "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+          "event": "service",
+          "monotonic": 917431.8726298334
+        },
+        "display": {
+          "ok": 1,
+          "monotonic": 917431.872766625,
+          "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+          "event": "display",
+          "requested_us": 18569481,
+          "actual_us": 18000000,
+          "cache": "miss",
+          "elapsed_ms": 136.76066673360765
+        },
+        "events": [
+          {
+            "bounds": "{{0, 0}, {1328, 14}}",
+            "hidden": false,
+            "enabled": true,
+            "event_point": "{278, 7}",
+            "event": "mouse-move",
+            "monotonic": 917431.7359654168,
+            "visible_rect": "{{0, 0}, {1328, 14}}",
+            "tracking_attached": true,
+            "hit_bounds": "{{0, -9}, {1328, 32}}",
+            "window_set": 1,
+            "pointer_point": "{278, 7}"
+          },
+          {
+            "monotonic": 917431.7360253751,
+            "eligible": true,
+            "event": "context",
+            "ordinal": 0,
+            "duration": 90038000
+          },
+          {
+            "event": "draw-submitted",
+            "duration_ms": 0.10041671339422464,
+            "monotonic": 917431.7491096667
+          },
+          {
+            "window": "standard-cache-pressure.mp4",
+            "monotonic": 917431.7491494167,
+            "bucket_us": 18500000,
+            "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+            "event": "hover",
+            "requested_us": 18569481,
+            "duration_us": 90038000,
+            "point_x": 278,
+            "left": 7,
+            "right": 1321
+          },
+          {
+            "result": {
+              "video_ordinal": 0,
+              "payload_bytes": 230400,
+              "version": 2,
+              "width": 320,
+              "actual_us": 18000000,
+              "channels": 4,
+              "cache": "miss",
+              "elapsed_ms": 123.42025001998991,
+              "requested_us": 18500000,
+              "ok": true,
+              "height": 180,
+              "decoded_frames": 1,
+              "timeline_origin_us": 0,
+              "sampling": "keyframe"
+            },
+            "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+            "event": "service",
+            "monotonic": 917431.8726298334
+          },
+          {
+            "ok": 1,
+            "monotonic": 917431.872766625,
+            "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+            "event": "display",
+            "requested_us": 18569481,
+            "actual_us": 18000000,
+            "cache": "miss",
+            "elapsed_ms": 136.76066673360765
+          },
+          {
+            "event": "draw-submitted",
+            "duration_ms": 0.08470832835882902,
+            "monotonic": 917431.8728874584
+          }
+        ]
+      },
+      "template": {
+        "bucket": 37,
+        "opaque_image_hash": "b7265c54616dc049",
+        "time_mask_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e1e00c1e0000000000000000001b1331c3200000000000000000011b33142300000000000000000011b10043600000000000000000031a10043e00000000000000000011b1004230000000000000000001133304630000000000000000001b1b004370000000000000000000e0e0041c000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "state_mask_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000011000100000000f018f00000000000000000000000000000000002600020000000112533000000000000000000000000000000000058722ee79fe782202240000000000000000000000000000000000e116c981245104404780000000000000000000000000000000001e3e5121e48be08809980000000000000000000000000000000002640a24649140112121000000000000000000000000000000000046d9c48d922c8360266000000000000000000000000000000000084e1090d244603804780000000000000000000000000000000000000600000000000000000000000000000000000000000000000000018000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "time_glyph_count": 112,
+        "state_glyph_count": 199,
+        "pointer_caption": "00:18",
+        "actual_keyframe_us": 18000000,
+        "ready_caption": "Keyframe 0:18",
+        "prior_generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+        "stable_final_samples": 3,
+        "reference_frame": {
+          "actual_panel_rect": [
+            319,
+            785,
+            336,
+            224
+          ],
+          "actual_panel_window_id": 20238,
+          "app_active": true,
+          "callback_received_uptime_s": 917432.7011498751,
+          "crop_screen_points": [
+            319,
+            785,
+            336,
+            224
+          ],
+          "display_time_mach_ticks": 22018384978015,
+          "display_time_present": 1,
+          "display_time_uptime_seconds": 917432.7074172916,
+          "expected_image_hash_match": null,
+          "expected_time_mask_hamming": null,
+          "expected_time_mask_match_within_22_bits": null,
+          "expected_time_nearer_than_previous": null,
+          "expected_visible_match": 0,
+          "frame_status": 0,
+          "index": 56,
+          "input_t0_uptime_s": 917431.7137209584,
+          "input_to_callback_ms": 987.428916618228,
+          "kind": "display_frame",
+          "opaque_image_hash_matches_expected": null,
+          "panel_rect_matches_crop": true,
+          "parent_window_contains_crop": true,
+          "post_input_complete_presentation": true,
+          "presentation_pts_seconds": 917432.707417291,
+          "presentation_pts_timescale": 1000000000,
+          "presentation_pts_value": 917432707417291,
+          "previous_time_mask_hamming": null,
+          "result": {
+            "image_roi_points": [
+              8,
+              9,
+              320,
+              180
+            ],
+            "image_sample_hash_fnv1a64": "b7265c54616dc049",
+            "image_sample_mean": 125.69620958751393,
+            "panel_sample_hash_fnv1a64": "29928e51cef98201",
+            "pixel_height": 448,
+            "pixel_width": 672,
+            "scale_from_336_points": 2,
+            "state_glyph_count": 199,
+            "state_mask_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000011000100000000f018f00000000000000000000000000000000002600020000000112533000000000000000000000000000000000058722ee79fe782202240000000000000000000000000000000000e116c981245104404780000000000000000000000000000000001e3e5121e48be08809980000000000000000000000000000000002640a24649140112121000000000000000000000000000000000046d9c48d922c8360266000000000000000000000000000000000084e1090d244603804780000000000000000000000000000000000000600000000000000000000000000000000000000000000000000018000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "state_roi_points": [
+              117,
+              196,
+              211,
+              20
+            ],
+            "state_sample_hash_fnv1a64": "751bba2a3abd1d38",
+            "state_sample_mean": 39.512401263823065,
+            "time_glyph_count": 112,
+            "time_mask_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e1e00c1e0000000000000000001b1331c3200000000000000000011b33142300000000000000000011b10043600000000000000000031a10043e00000000000000000011b1004230000000000000000001133304630000000000000000001b1b004370000000000000000000e0e0041c000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "time_roi_points": [
+              8,
+              196,
+              108,
+              20
+            ],
+            "time_sample_hash_fnv1a64": "9dc33c8fd38ba050",
+            "time_sample_mean": 39.75636574074074
+          }
+        },
+        "raw_jsonl": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/003-heavy-template-037.jsonl"
+      },
+      "wall_ms": 1288.4972500614822
+    },
+    {
+      "phase": "template",
+      "bucket": 74,
+      "bucket_us": 37000000,
+      "target_seconds": 37.1,
+      "name": "004-heavy-template-074",
+      "faults": [],
+      "observer_arm": "heavy",
+      "command": [
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/continuous-visible-capture-probe",
+        "--pid",
+        "1245",
+        "--rect",
+        "589,785,336,224",
+        "--point",
+        "757,1028",
+        "--output",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/004-heavy-template-074.jsonl",
+        "--save-last-image",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/004-heavy-template-074.png",
+        "--settle-ms",
+        "1000"
+      ],
+      "raw_jsonl": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/004-heavy-template-074.jsonl",
+      "last_image": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/004-heavy-template-074.png",
+      "pointer_target": [
+        757,
+        1028
+      ],
+      "crop": [
+        589,
+        785,
+        336,
+        224
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "raw_row_count": 59,
+      "trace": {
+        "hover": {
+          "window": "standard-cache-pressure.mp4",
+          "monotonic": 917433.0539916251,
+          "bucket_us": 37000000,
+          "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+          "event": "hover",
+          "requested_us": 37070439,
+          "duration_us": 90038000,
+          "point_x": 548,
+          "left": 7,
+          "right": 1321
+        },
+        "service": {
+          "result": {
+            "video_ordinal": 0,
+            "payload_bytes": 230400,
+            "version": 2,
+            "width": 320,
+            "actual_us": 36000000,
+            "channels": 4,
+            "cache": "miss",
+            "elapsed_ms": 89.49208329431713,
+            "requested_us": 37000000,
+            "ok": true,
+            "height": 180,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0,
+            "sampling": "keyframe"
+          },
+          "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+          "event": "service",
+          "monotonic": 917433.1435504167
+        },
+        "display": {
+          "ok": 1,
+          "monotonic": 917433.1437189584,
+          "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+          "event": "display",
+          "requested_us": 37070439,
+          "actual_us": 36000000,
+          "cache": "miss",
+          "elapsed_ms": 106.96179163642228
+        },
+        "events": [
+          {
+            "bounds": "{{0, 0}, {1328, 14}}",
+            "hidden": false,
+            "enabled": true,
+            "event_point": "{548, 7}",
+            "event": "mouse-move",
+            "monotonic": 917433.0367155834,
+            "visible_rect": "{{0, 0}, {1328, 14}}",
+            "tracking_attached": true,
+            "hit_bounds": "{{0, -9}, {1328, 32}}",
+            "window_set": 1,
+            "pointer_point": "{548, 7}"
+          },
+          {
+            "monotonic": 917433.0367737084,
+            "eligible": true,
+            "event": "context",
+            "ordinal": 0,
+            "duration": 90038000
+          },
+          {
+            "event": "draw-submitted",
+            "duration_ms": 0.09158335160464048,
+            "monotonic": 917433.0539484584
+          },
+          {
+            "window": "standard-cache-pressure.mp4",
+            "monotonic": 917433.0539916251,
+            "bucket_us": 37000000,
+            "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+            "event": "hover",
+            "requested_us": 37070439,
+            "duration_us": 90038000,
+            "point_x": 548,
+            "left": 7,
+            "right": 1321
+          },
+          {
+            "result": {
+              "video_ordinal": 0,
+              "payload_bytes": 230400,
+              "version": 2,
+              "width": 320,
+              "actual_us": 36000000,
+              "channels": 4,
+              "cache": "miss",
+              "elapsed_ms": 89.49208329431713,
+              "requested_us": 37000000,
+              "ok": true,
+              "height": 180,
+              "decoded_frames": 1,
+              "timeline_origin_us": 0,
+              "sampling": "keyframe"
+            },
+            "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+            "event": "service",
+            "monotonic": 917433.1435504167
+          },
+          {
+            "ok": 1,
+            "monotonic": 917433.1437189584,
+            "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+            "event": "display",
+            "requested_us": 37070439,
+            "actual_us": 36000000,
+            "cache": "miss",
+            "elapsed_ms": 106.96179163642228
+          },
+          {
+            "event": "draw-submitted",
+            "duration_ms": 0.10629161261022091,
+            "monotonic": 917433.1438581251
+          }
+        ]
+      },
+      "template": {
+        "bucket": 74,
+        "opaque_image_hash": "3fa1768b8ff5c190",
+        "time_mask_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e1e01e3f0000000000000000001b133330300000000000000000011b33030600000000000000000011b10060600000000000000000031a100e0c00000000000000000011b1003080000000000000000001133323180000000000000000001b1b03f100000000000000000000e0e01e30000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "state_mask_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000066000400000001e078f0000000000000000000000000000000000d80008000000064d9310000000000000000000000000000000001e1e8b9de7f9e088024800000000000000000000000000000000038449220499641181cf800000000000000000000000000000000068f94447912fc2200d88000000000000000000000000000000000d90288892250044d0b100000000000000000000000000000000019b23111644920d8322600000000000000000000000000000000021184223c89180e038380000000000000000000000000000000000000800000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "time_glyph_count": 115,
+        "state_glyph_count": 211,
+        "pointer_caption": "00:37",
+        "actual_keyframe_us": 36000000,
+        "ready_caption": "Keyframe 0:36",
+        "prior_generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+        "stable_final_samples": 3,
+        "reference_frame": {
+          "actual_panel_rect": [
+            589,
+            785,
+            336,
+            224
+          ],
+          "actual_panel_window_id": 20238,
+          "app_active": true,
+          "callback_received_uptime_s": 917434.0059475,
+          "crop_screen_points": [
+            589,
+            785,
+            336,
+            224
+          ],
+          "display_time_mach_ticks": 22018416177976,
+          "display_time_present": 1,
+          "display_time_uptime_seconds": 917434.0074156666,
+          "expected_image_hash_match": null,
+          "expected_time_mask_hamming": null,
+          "expected_time_mask_match_within_22_bits": null,
+          "expected_time_nearer_than_previous": null,
+          "expected_visible_match": 0,
+          "frame_status": 0,
+          "index": 56,
+          "input_t0_uptime_s": 917433.0140835,
+          "input_to_callback_ms": 991.8639999814332,
+          "kind": "display_frame",
+          "opaque_image_hash_matches_expected": null,
+          "panel_rect_matches_crop": true,
+          "parent_window_contains_crop": true,
+          "post_input_complete_presentation": true,
+          "presentation_pts_seconds": 917434.007415666,
+          "presentation_pts_timescale": 1000000000,
+          "presentation_pts_value": 917434007415666,
+          "previous_time_mask_hamming": null,
+          "result": {
+            "image_roi_points": [
+              8,
+              9,
+              320,
+              180
+            ],
+            "image_sample_hash_fnv1a64": "3fa1768b8ff5c190",
+            "image_sample_mean": 125.6583751393534,
+            "panel_sample_hash_fnv1a64": "46e89c7cc4d8c2fb",
+            "pixel_height": 448,
+            "pixel_width": 672,
+            "scale_from_336_points": 2,
+            "state_glyph_count": 211,
+            "state_mask_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000066000400000001e078f0000000000000000000000000000000000d80008000000064d9310000000000000000000000000000000001e1e8b9de7f9e088024800000000000000000000000000000000038449220499641181cf800000000000000000000000000000000068f94447912fc2200d88000000000000000000000000000000000d90288892250044d0b100000000000000000000000000000000019b23111644920d8322600000000000000000000000000000000021184223c89180e038380000000000000000000000000000000000000800000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "state_roi_points": [
+              117,
+              196,
+              211,
+              20
+            ],
+            "state_sample_hash_fnv1a64": "dce125708b68d895",
+            "state_sample_mean": 41.809004739336494,
+            "time_glyph_count": 115,
+            "time_mask_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e1e01e3f0000000000000000001b133330300000000000000000011b33030600000000000000000011b10060600000000000000000031a100e0c00000000000000000011b1003080000000000000000001133323180000000000000000001b1b03f100000000000000000000e0e01e30000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "time_roi_points": [
+              8,
+              196,
+              108,
+              20
+            ],
+            "time_sample_hash_fnv1a64": "fd791e680be3c4fc",
+            "time_sample_mean": 42.4147762345679
+          }
+        },
+        "raw_jsonl": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/004-heavy-template-074.jsonl"
+      },
+      "wall_ms": 1300.8943749591708
+    },
+    {
+      "phase": "template",
+      "bucket": 11,
+      "bucket_us": 5500000,
+      "target_seconds": 5.6,
+      "name": "005-heavy-template-011",
+      "faults": [],
+      "observer_arm": "heavy",
+      "command": [
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/continuous-visible-capture-probe",
+        "--pid",
+        "1245",
+        "--rect",
+        "129,785,336,224",
+        "--point",
+        "297,1028",
+        "--output",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/005-heavy-template-011.jsonl",
+        "--save-last-image",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/005-heavy-template-011.png",
+        "--settle-ms",
+        "1000"
+      ],
+      "raw_jsonl": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/005-heavy-template-011.jsonl",
+      "last_image": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/005-heavy-template-011.png",
+      "pointer_target": [
+        297,
+        1028
+      ],
+      "crop": [
+        129,
+        785,
+        336,
+        224
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "raw_row_count": 59,
+      "trace": {
+        "hover": {
+          "window": "standard-cache-pressure.mp4",
+          "monotonic": 917434.332745875,
+          "bucket_us": 5500000,
+          "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+          "event": "hover",
+          "requested_us": 5550288,
+          "duration_us": 90038000,
+          "point_x": 88,
+          "left": 7,
+          "right": 1321
+        },
+        "service": {
+          "result": {
+            "video_ordinal": 0,
+            "payload_bytes": 230400,
+            "version": 2,
+            "width": 320,
+            "actual_us": 4000000,
+            "channels": 4,
+            "cache": "miss",
+            "elapsed_ms": 119.23416669014841,
+            "requested_us": 5500000,
+            "ok": true,
+            "height": 180,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0,
+            "sampling": "keyframe"
+          },
+          "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+          "event": "service",
+          "monotonic": 917434.4520406667
+        },
+        "display": {
+          "ok": 1,
+          "monotonic": 917434.4521934583,
+          "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+          "event": "display",
+          "requested_us": 5550288,
+          "actual_us": 4000000,
+          "cache": "miss",
+          "elapsed_ms": 135.3055000072345
+        },
+        "events": [
+          {
+            "bounds": "{{0, 0}, {1328, 14}}",
+            "hidden": false,
+            "enabled": true,
+            "event_point": "{88, 7}",
+            "event": "mouse-move",
+            "monotonic": 917434.316847,
+            "visible_rect": "{{0, 0}, {1328, 14}}",
+            "tracking_attached": true,
+            "hit_bounds": "{{0, -9}, {1328, 32}}",
+            "window_set": 1,
+            "pointer_point": "{88, 7}"
+          },
+          {
+            "monotonic": 917434.316905125,
+            "eligible": true,
+            "event": "context",
+            "ordinal": 0,
+            "duration": 90038000
+          },
+          {
+            "event": "draw-submitted",
+            "duration_ms": 0.1004999503493309,
+            "monotonic": 917434.3327066667
+          },
+          {
+            "window": "standard-cache-pressure.mp4",
+            "monotonic": 917434.332745875,
+            "bucket_us": 5500000,
+            "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+            "event": "hover",
+            "requested_us": 5550288,
+            "duration_us": 90038000,
+            "point_x": 88,
+            "left": 7,
+            "right": 1321
+          },
+          {
+            "result": {
+              "video_ordinal": 0,
+              "payload_bytes": 230400,
+              "version": 2,
+              "width": 320,
+              "actual_us": 4000000,
+              "channels": 4,
+              "cache": "miss",
+              "elapsed_ms": 119.23416669014841,
+              "requested_us": 5500000,
+              "ok": true,
+              "height": 180,
+              "decoded_frames": 1,
+              "timeline_origin_us": 0,
+              "sampling": "keyframe"
+            },
+            "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+            "event": "service",
+            "monotonic": 917434.4520406667
+          },
+          {
+            "ok": 1,
+            "monotonic": 917434.4521934583,
+            "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+            "event": "display",
+            "requested_us": 5550288,
+            "actual_us": 4000000,
+            "cache": "miss",
+            "elapsed_ms": 135.3055000072345
+          },
+          {
+            "event": "draw-submitted",
+            "duration_ms": 0.09845837485045195,
+            "monotonic": 917434.45232225
+          }
+        ]
+      },
+      "template": {
+        "bucket": 11,
+        "opaque_image_hash": "f0c3c0f27e90f629",
+        "time_mask_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e1e01e3e0000000000000000001b133322000000000000000000011b33232000000000000000000011b10233e00000000000000000031a10213200000000000000000011b1023030000000000000000001133333230000000000000000001b1b036360000000000000000000e0e01c1c000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "state_mask_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000066000400000001e07830000000000000000000000000000000000d80008000000064d90e0000000000000000000000000000000001e1c8b9de7f9e08823140000000000000000000000000000000003845b22049164118424800000000000000000000000000000000068f94447922fc2208590000000000000000000000000000000000d90288892450044d9bf00000000000000000000000000000000019b67111248920d8120400000000000000000000000000000000021384223c91180e018080000000000000000000000000000000000001800000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "time_glyph_count": 121,
+        "state_glyph_count": 210,
+        "pointer_caption": "00:05",
+        "actual_keyframe_us": 4000000,
+        "ready_caption": "Keyframe 0:04",
+        "prior_generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+        "stable_final_samples": 3,
+        "reference_frame": {
+          "actual_panel_rect": [
+            129,
+            785,
+            336,
+            224
+          ],
+          "actual_panel_window_id": 20238,
+          "app_active": true,
+          "callback_received_uptime_s": 917435.2874519584,
+          "crop_screen_points": [
+            129,
+            785,
+            336,
+            224
+          ],
+          "display_time_mach_ticks": 22018446777936,
+          "display_time_present": 1,
+          "display_time_uptime_seconds": 917435.282414,
+          "expected_image_hash_match": null,
+          "expected_time_mask_hamming": null,
+          "expected_time_mask_match_within_22_bits": null,
+          "expected_time_nearer_than_previous": null,
+          "expected_visible_match": 0,
+          "frame_status": 0,
+          "index": 56,
+          "input_t0_uptime_s": 917434.296365875,
+          "input_to_callback_ms": 991.0860833479092,
+          "kind": "display_frame",
+          "opaque_image_hash_matches_expected": null,
+          "panel_rect_matches_crop": true,
+          "parent_window_contains_crop": true,
+          "post_input_complete_presentation": true,
+          "presentation_pts_seconds": 917435.282414,
+          "presentation_pts_timescale": 1000000000,
+          "presentation_pts_value": 917435282414000,
+          "previous_time_mask_hamming": null,
+          "result": {
+            "image_roi_points": [
+              8,
+              9,
+              320,
+              180
+            ],
+            "image_sample_hash_fnv1a64": "f0c3c0f27e90f629",
+            "image_sample_mean": 125.71084169453735,
+            "panel_sample_hash_fnv1a64": "0e6cb31c2126d5c6",
+            "pixel_height": 448,
+            "pixel_width": 672,
+            "scale_from_336_points": 2,
+            "state_glyph_count": 210,
+            "state_mask_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000066000400000001e07830000000000000000000000000000000000d80008000000064d90e0000000000000000000000000000000001e1c8b9de7f9e08823140000000000000000000000000000000003845b22049164118424800000000000000000000000000000000068f94447922fc2208590000000000000000000000000000000000d90288892450044d9bf00000000000000000000000000000000019b67111248920d8120400000000000000000000000000000000021384223c91180e018080000000000000000000000000000000000001800000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "state_roi_points": [
+              117,
+              196,
+              211,
+              20
+            ],
+            "state_sample_hash_fnv1a64": "345a23454ce3ed9f",
+            "state_sample_mean": 39.375039494470776,
+            "time_glyph_count": 121,
+            "time_mask_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e1e01e3e0000000000000000001b133322000000000000000000011b33232000000000000000000011b10233e00000000000000000031a10213200000000000000000011b1023030000000000000000001133333230000000000000000001b1b036360000000000000000000e0e01c1c000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "time_roi_points": [
+              8,
+              196,
+              108,
+              20
+            ],
+            "time_sample_hash_fnv1a64": "ba565e0a430d0b10",
+            "time_sample_mean": 41.98375771604938
+          }
+        },
+        "raw_jsonl": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/005-heavy-template-011.jsonl"
+      },
+      "wall_ms": 1286.8204170372337
+    },
+    {
+      "phase": "template",
+      "bucket": 48,
+      "bucket_us": 24000000,
+      "target_seconds": 24.1,
+      "name": "006-heavy-template-048",
+      "faults": [],
+      "observer_arm": "heavy",
+      "command": [
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/continuous-visible-capture-probe",
+        "--pid",
+        "1245",
+        "--rect",
+        "399,785,336,224",
+        "--point",
+        "567,1028",
+        "--output",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/006-heavy-template-048.jsonl",
+        "--save-last-image",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/006-heavy-template-048.png",
+        "--settle-ms",
+        "1000"
+      ],
+      "raw_jsonl": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/006-heavy-template-048.jsonl",
+      "last_image": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/006-heavy-template-048.png",
+      "pointer_target": [
+        567,
+        1028
+      ],
+      "crop": [
+        399,
+        785,
+        336,
+        224
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "raw_row_count": 60,
+      "trace": {
+        "hover": {
+          "window": "standard-cache-pressure.mp4",
+          "monotonic": 917435.6443159584,
+          "bucket_us": 24000000,
+          "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+          "event": "hover",
+          "requested_us": 24051246,
+          "duration_us": 90038000,
+          "point_x": 358,
+          "left": 7,
+          "right": 1321
+        },
+        "service": {
+          "result": {
+            "video_ordinal": 0,
+            "payload_bytes": 230400,
+            "version": 2,
+            "width": 320,
+            "actual_us": 24000000,
+            "channels": 4,
+            "cache": "miss",
+            "elapsed_ms": 125.87808328680694,
+            "requested_us": 24000000,
+            "ok": true,
+            "height": 180,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0,
+            "sampling": "keyframe"
+          },
+          "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+          "event": "service",
+          "monotonic": 917435.7702672083
+        },
+        "display": {
+          "ok": 1,
+          "monotonic": 917435.7704155834,
+          "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+          "event": "display",
+          "requested_us": 24051246,
+          "actual_us": 24000000,
+          "cache": "miss",
+          "elapsed_ms": 145.8891249494627
+        },
+        "events": [
+          {
+            "bounds": "{{0, 0}, {1328, 14}}",
+            "hidden": false,
+            "enabled": true,
+            "event_point": "{358, 7}",
+            "event": "mouse-move",
+            "monotonic": 917435.6244826667,
+            "visible_rect": "{{0, 0}, {1328, 14}}",
+            "tracking_attached": true,
+            "hit_bounds": "{{0, -9}, {1328, 32}}",
+            "window_set": 1,
+            "pointer_point": "{358, 7}"
+          },
+          {
+            "monotonic": 917435.6245475,
+            "eligible": true,
+            "event": "context",
+            "ordinal": 0,
+            "duration": 90038000
+          },
+          {
+            "event": "draw-submitted",
+            "duration_ms": 0.09600003249943256,
+            "monotonic": 917435.6442770001
+          },
+          {
+            "window": "standard-cache-pressure.mp4",
+            "monotonic": 917435.6443159584,
+            "bucket_us": 24000000,
+            "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+            "event": "hover",
+            "requested_us": 24051246,
+            "duration_us": 90038000,
+            "point_x": 358,
+            "left": 7,
+            "right": 1321
+          },
+          {
+            "result": {
+              "video_ordinal": 0,
+              "payload_bytes": 230400,
+              "version": 2,
+              "width": 320,
+              "actual_us": 24000000,
+              "channels": 4,
+              "cache": "miss",
+              "elapsed_ms": 125.87808328680694,
+              "requested_us": 24000000,
+              "ok": true,
+              "height": 180,
+              "decoded_frames": 1,
+              "timeline_origin_us": 0,
+              "sampling": "keyframe"
+            },
+            "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+            "event": "service",
+            "monotonic": 917435.7702672083
+          },
+          {
+            "ok": 1,
+            "monotonic": 917435.7704155834,
+            "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+            "event": "display",
+            "requested_us": 24051246,
+            "actual_us": 24000000,
+            "cache": "miss",
+            "elapsed_ms": 145.8891249494627
+          },
+          {
+            "event": "draw-submitted",
+            "duration_ms": 0.10304164607077837,
+            "monotonic": 917435.770552375
+          }
+        ]
+      },
+      "template": {
+        "bucket": 48,
+        "opaque_image_hash": "c1fcf177e9481ed6",
+        "time_mask_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e1e01e0e0000000000000000001b133320e00000000000000000011b33231e00000000000000000011b10021600000000000000000031a10063600000000000000000011b100c6600000000000000000011333187f0000000000000000001b1b03f060000000000000000000e0e03f06000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "state_mask_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000018000000000000000000000000000000000000000000000026000600000001e07830000000000000000000000000000000000480008000000064c88e0000000000000000000000000000000000a1ecbdde7f9e08c01140000000000000000000000000000000001c6492206c926108044800000000000000000000000000000000028fd2443d127c210119000000000000000000000000000000000049018889a248066c63f0000000000000000000000000000000000992311134493048180400000000000000000000000000000000011986221e891c0603e080000000000000000000000000000000000000800000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "time_glyph_count": 126,
+        "state_glyph_count": 202,
+        "pointer_caption": "00:24",
+        "actual_keyframe_us": 24000000,
+        "ready_caption": "Keyframe 0:24",
+        "prior_generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+        "stable_final_samples": 3,
+        "reference_frame": {
+          "actual_panel_rect": [
+            399,
+            785,
+            336,
+            224
+          ],
+          "actual_panel_window_id": 20238,
+          "app_active": true,
+          "callback_received_uptime_s": 917436.5951477501,
+          "crop_screen_points": [
+            399,
+            785,
+            336,
+            224
+          ],
+          "display_time_mach_ticks": 22018478377991,
+          "display_time_present": 1,
+          "display_time_uptime_seconds": 917436.5990829584,
+          "expected_image_hash_match": null,
+          "expected_time_mask_hamming": null,
+          "expected_time_mask_match_within_22_bits": null,
+          "expected_time_nearer_than_previous": null,
+          "expected_visible_match": 0,
+          "frame_status": 0,
+          "index": 57,
+          "input_t0_uptime_s": 917435.5991162084,
+          "input_to_callback_ms": 996.031541726552,
+          "kind": "display_frame",
+          "opaque_image_hash_matches_expected": null,
+          "panel_rect_matches_crop": true,
+          "parent_window_contains_crop": true,
+          "post_input_complete_presentation": true,
+          "presentation_pts_seconds": 917436.599082958,
+          "presentation_pts_timescale": 1000000000,
+          "presentation_pts_value": 917436599082958,
+          "previous_time_mask_hamming": null,
+          "result": {
+            "image_roi_points": [
+              8,
+              9,
+              320,
+              180
+            ],
+            "image_sample_hash_fnv1a64": "c1fcf177e9481ed6",
+            "image_sample_mean": 125.64109531772576,
+            "panel_sample_hash_fnv1a64": "34c8c701c71e9fbe",
+            "pixel_height": 448,
+            "pixel_width": 672,
+            "scale_from_336_points": 2,
+            "state_glyph_count": 202,
+            "state_mask_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000018000000000000000000000000000000000000000000000026000600000001e07830000000000000000000000000000000000480008000000064c88e0000000000000000000000000000000000a1ecbdde7f9e08c01140000000000000000000000000000000001c6492206c926108044800000000000000000000000000000000028fd2443d127c210119000000000000000000000000000000000049018889a248066c63f0000000000000000000000000000000000992311134493048180400000000000000000000000000000000011986221e891c0603e080000000000000000000000000000000000000800000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "state_roi_points": [
+              117,
+              196,
+              211,
+              20
+            ],
+            "state_sample_hash_fnv1a64": "f32fbe0f918807e3",
+            "state_sample_mean": 40.35734597156398,
+            "time_glyph_count": 126,
+            "time_mask_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e1e01e0e0000000000000000001b133320e00000000000000000011b33231e00000000000000000011b10021600000000000000000031a10063600000000000000000011b100c6600000000000000000011333187f0000000000000000001b1b03f060000000000000000000e0e03f06000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "time_roi_points": [
+              8,
+              196,
+              108,
+              20
+            ],
+            "time_sample_hash_fnv1a64": "b7e7a87ad18e4722",
+            "time_sample_mean": 40.06608796296296
+          }
+        },
+        "raw_jsonl": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/006-heavy-template-048.jsonl"
+      },
+      "wall_ms": 1301.02029198315
+    },
+    {
+      "phase": "template",
+      "bucket": 85,
+      "bucket_us": 42500000,
+      "target_seconds": 42.6,
+      "name": "007-heavy-template-085",
+      "faults": [],
+      "observer_arm": "heavy",
+      "command": [
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/continuous-visible-capture-probe",
+        "--pid",
+        "1245",
+        "--rect",
+        "670,785,336,224",
+        "--point",
+        "838,1028",
+        "--output",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/007-heavy-template-085.jsonl",
+        "--save-last-image",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/007-heavy-template-085.png",
+        "--settle-ms",
+        "1000"
+      ],
+      "raw_jsonl": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/007-heavy-template-085.jsonl",
+      "last_image": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/007-heavy-template-085.png",
+      "pointer_target": [
+        838,
+        1028
+      ],
+      "crop": [
+        670,
+        785,
+        336,
+        224
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "raw_row_count": 59,
+      "trace": {
+        "hover": {
+          "window": "standard-cache-pressure.mp4",
+          "monotonic": 917436.9595138751,
+          "bucket_us": 42500000,
+          "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+          "event": "hover",
+          "requested_us": 42620727,
+          "duration_us": 90038000,
+          "point_x": 629,
+          "left": 7,
+          "right": 1321
+        },
+        "service": {
+          "result": {
+            "video_ordinal": 0,
+            "payload_bytes": 230400,
+            "version": 2,
+            "width": 320,
+            "actual_us": 42000000,
+            "channels": 4,
+            "cache": "miss",
+            "elapsed_ms": 117.44866659864783,
+            "requested_us": 42500000,
+            "ok": true,
+            "height": 180,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0,
+            "sampling": "keyframe"
+          },
+          "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+          "event": "service",
+          "monotonic": 917437.077028375
+        },
+        "display": {
+          "ok": 1,
+          "monotonic": 917437.0771815417,
+          "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+          "event": "display",
+          "requested_us": 42620727,
+          "actual_us": 42000000,
+          "cache": "miss",
+          "elapsed_ms": 132.5364166405052
+        },
+        "events": [
+          {
+            "bounds": "{{0, 0}, {1328, 14}}",
+            "hidden": false,
+            "enabled": true,
+            "event_point": "{629, 7}",
+            "event": "mouse-move",
+            "monotonic": 917436.94460175,
+            "visible_rect": "{{0, 0}, {1328, 14}}",
+            "tracking_attached": true,
+            "hit_bounds": "{{0, -9}, {1328, 32}}",
+            "window_set": 1,
+            "pointer_point": "{629, 7}"
+          },
+          {
+            "monotonic": 917436.9446596667,
+            "eligible": true,
+            "event": "context",
+            "ordinal": 0,
+            "duration": 90038000
+          },
+          {
+            "event": "draw-submitted",
+            "duration_ms": 0.09879167191684246,
+            "monotonic": 917436.9594704584
+          },
+          {
+            "window": "standard-cache-pressure.mp4",
+            "monotonic": 917436.9595138751,
+            "bucket_us": 42500000,
+            "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+            "event": "hover",
+            "requested_us": 42620727,
+            "duration_us": 90038000,
+            "point_x": 629,
+            "left": 7,
+            "right": 1321
+          },
+          {
+            "result": {
+              "video_ordinal": 0,
+              "payload_bytes": 230400,
+              "version": 2,
+              "width": 320,
+              "actual_us": 42000000,
+              "channels": 4,
+              "cache": "miss",
+              "elapsed_ms": 117.44866659864783,
+              "requested_us": 42500000,
+              "ok": true,
+              "height": 180,
+              "decoded_frames": 1,
+              "timeline_origin_us": 0,
+              "sampling": "keyframe"
+            },
+            "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+            "event": "service",
+            "monotonic": 917437.077028375
+          },
+          {
+            "ok": 1,
+            "monotonic": 917437.0771815417,
+            "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+            "event": "display",
+            "requested_us": 42620727,
+            "actual_us": 42000000,
+            "cache": "miss",
+            "elapsed_ms": 132.5364166405052
+          },
+          {
+            "event": "draw-submitted",
+            "duration_ms": 0.08475000504404306,
+            "monotonic": 917437.0773032918
+          }
+        ]
+      },
+      "template": {
+        "bucket": 85,
+        "opaque_image_hash": "1003b753836eba99",
+        "time_mask_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e1e0061e0000000000000000001b1330e3600000000000000000011b331a2200000000000000000011b10120600000000000000000031a10320600000000000000000011b10220c000000000000000000113333f180000000000000000001b1b0023e0000000000000000000e0e0023f000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "state_mask_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000018000000000000000000000000000000000000000000000026000600000001e018f0000000000000000000000000000000000480008000000064c7110000000000000000000000000000000000a1e8bdde7f9e08c0a020000000000000000000000000000000001c44922069926108240800000000000000000000000000000000028f94443d127c210482000000000000000000000000000000000049028889a248066df8c00000000000000000000000000000000009b2311134493048023000000000000000000000000000000000011984221a891c060047c0000000000000000000000000000000000000800000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "time_glyph_count": 117,
+        "state_glyph_count": 197,
+        "pointer_caption": "00:42",
+        "actual_keyframe_us": 42000000,
+        "ready_caption": "Keyframe 0:42",
+        "prior_generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+        "stable_final_samples": 3,
+        "reference_frame": {
+          "actual_panel_rect": [
+            670,
+            785,
+            336,
+            224
+          ],
+          "actual_panel_window_id": 20238,
+          "app_active": true,
+          "callback_received_uptime_s": 917437.91885925,
+          "crop_screen_points": [
+            670,
+            785,
+            336,
+            224
+          ],
+          "display_time_mach_ticks": 22018509977857,
+          "display_time_present": 1,
+          "display_time_uptime_seconds": 917437.9157440417,
+          "expected_image_hash_match": null,
+          "expected_time_mask_hamming": null,
+          "expected_time_mask_match_within_22_bits": null,
+          "expected_time_nearer_than_previous": null,
+          "expected_visible_match": 0,
+          "frame_status": 0,
+          "index": 56,
+          "input_t0_uptime_s": 917436.9220081667,
+          "input_to_callback_ms": 996.8510833568871,
+          "kind": "display_frame",
+          "opaque_image_hash_matches_expected": null,
+          "panel_rect_matches_crop": true,
+          "parent_window_contains_crop": true,
+          "post_input_complete_presentation": true,
+          "presentation_pts_seconds": 917437.915744041,
+          "presentation_pts_timescale": 1000000000,
+          "presentation_pts_value": 917437915744041,
+          "previous_time_mask_hamming": null,
+          "result": {
+            "image_roi_points": [
+              8,
+              9,
+              320,
+              180
+            ],
+            "image_sample_hash_fnv1a64": "1003b753836eba99",
+            "image_sample_mean": 125.72171125975474,
+            "panel_sample_hash_fnv1a64": "7aeaa981d7c0f014",
+            "pixel_height": 448,
+            "pixel_width": 672,
+            "scale_from_336_points": 2,
+            "state_glyph_count": 197,
+            "state_mask_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000018000000000000000000000000000000000000000000000026000600000001e018f0000000000000000000000000000000000480008000000064c7110000000000000000000000000000000000a1e8bdde7f9e08c0a020000000000000000000000000000000001c44922069926108240800000000000000000000000000000000028f94443d127c210482000000000000000000000000000000000049028889a248066df8c00000000000000000000000000000000009b2311134493048023000000000000000000000000000000000011984221a891c060047c0000000000000000000000000000000000000800000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "state_roi_points": [
+              117,
+              196,
+              211,
+              20
+            ],
+            "state_sample_hash_fnv1a64": "928f4980343c2178",
+            "state_sample_mean": 40.78712480252764,
+            "time_glyph_count": 117,
+            "time_mask_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e1e0061e0000000000000000001b1330e3600000000000000000011b331a2200000000000000000011b10120600000000000000000031a10320600000000000000000011b10220c000000000000000000113333f180000000000000000001b1b0023e0000000000000000000e0e0023f000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "time_roi_points": [
+              8,
+              196,
+              108,
+              20
+            ],
+            "time_sample_hash_fnv1a64": "e42a3d014ea9be8a",
+            "time_sample_mean": 43.195717592592594
+          }
+        },
+        "raw_jsonl": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/007-heavy-template-085.jsonl"
+      },
+      "wall_ms": 1322.681124904193
+    },
+    {
+      "phase": "template",
+      "bucket": 22,
+      "bucket_us": 11000000,
+      "target_seconds": 11.1,
+      "name": "008-heavy-template-022",
+      "faults": [],
+      "observer_arm": "heavy",
+      "command": [
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/continuous-visible-capture-probe",
+        "--pid",
+        "1245",
+        "--rect",
+        "209,785,336,224",
+        "--point",
+        "377,1028",
+        "--output",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/008-heavy-template-022.jsonl",
+        "--save-last-image",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/008-heavy-template-022.png",
+        "--settle-ms",
+        "1000"
+      ],
+      "raw_jsonl": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/008-heavy-template-022.jsonl",
+      "last_image": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/008-heavy-template-022.png",
+      "pointer_target": [
+        377,
+        1028
+      ],
+      "crop": [
+        209,
+        785,
+        336,
+        224
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "raw_row_count": 59,
+      "trace": {
+        "hover": {
+          "window": "standard-cache-pressure.mp4",
+          "monotonic": 917438.2632530833,
+          "bucket_us": 11000000,
+          "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+          "event": "hover",
+          "requested_us": 11032053,
+          "duration_us": 90038000,
+          "point_x": 168,
+          "left": 7,
+          "right": 1321
+        },
+        "service": {
+          "result": {
+            "video_ordinal": 0,
+            "payload_bytes": 230400,
+            "version": 2,
+            "width": 320,
+            "actual_us": 10000000,
+            "channels": 4,
+            "cache": "miss",
+            "elapsed_ms": 121.02383328601718,
+            "requested_us": 11000000,
+            "ok": true,
+            "height": 180,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0,
+            "sampling": "keyframe"
+          },
+          "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+          "event": "service",
+          "monotonic": 917438.3843415417
+        },
+        "display": {
+          "ok": 1,
+          "monotonic": 917438.3845539168,
+          "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+          "event": "display",
+          "requested_us": 11032053,
+          "actual_us": 10000000,
+          "cache": "miss",
+          "elapsed_ms": 141.46708336193115
+        },
+        "events": [
+          {
+            "bounds": "{{0, 0}, {1328, 14}}",
+            "hidden": false,
+            "enabled": true,
+            "event_point": "{168, 7}",
+            "event": "mouse-move",
+            "monotonic": 917438.2430023334,
+            "visible_rect": "{{0, 0}, {1328, 14}}",
+            "tracking_attached": true,
+            "hit_bounds": "{{0, -9}, {1328, 32}}",
+            "window_set": 1,
+            "pointer_point": "{168, 7}"
+          },
+          {
+            "monotonic": 917438.2430635,
+            "eligible": true,
+            "event": "context",
+            "ordinal": 0,
+            "duration": 90038000
+          },
+          {
+            "event": "draw-submitted",
+            "duration_ms": 0.10725005995482206,
+            "monotonic": 917438.2632090001
+          },
+          {
+            "window": "standard-cache-pressure.mp4",
+            "monotonic": 917438.2632530833,
+            "bucket_us": 11000000,
+            "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+            "event": "hover",
+            "requested_us": 11032053,
+            "duration_us": 90038000,
+            "point_x": 168,
+            "left": 7,
+            "right": 1321
+          },
+          {
+            "result": {
+              "video_ordinal": 0,
+              "payload_bytes": 230400,
+              "version": 2,
+              "width": 320,
+              "actual_us": 10000000,
+              "channels": 4,
+              "cache": "miss",
+              "elapsed_ms": 121.02383328601718,
+              "requested_us": 11000000,
+              "ok": true,
+              "height": 180,
+              "decoded_frames": 1,
+              "timeline_origin_us": 0,
+              "sampling": "keyframe"
+            },
+            "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+            "event": "service",
+            "monotonic": 917438.3843415417
+          },
+          {
+            "ok": 1,
+            "monotonic": 917438.3845539168,
+            "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+            "event": "display",
+            "requested_us": 11032053,
+            "actual_us": 10000000,
+            "cache": "miss",
+            "elapsed_ms": 141.46708336193115
+          },
+          {
+            "event": "draw-submitted",
+            "duration_ms": 0.10691676288843155,
+            "monotonic": 917438.3847073751
+          }
+        ]
+      },
+      "template": {
+        "bucket": 22,
+        "opaque_image_hash": "9c93721eb2f2a9bb",
+        "time_mask_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e1e00c0c0000000000000000001b1331c3c00000000000000000011b33142400000000000000000011b10040400000000000000000031a10040400000000000000000011b1004040000000000000000001133304040000000000000000001b1b004040000000000000000000e0e00404000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "state_mask_hex": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000198001000000007818f00000000000000000000000000000000003600020000000193713000000000000000000000000000000000078722ee79fe782202220000000000000000000000000000000000e116c981245904604c40000000000000000000000000000000001a3e5121e48bf08808880000000000000000000000000000000003640a24649140113111000000000000000000000000000000000066d9c48d92248360234000000000000000000000000000000000084e1090d244603804380000000000000000000000000000000000000600000000000000000000000000000000000000000000000000018000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "time_glyph_count": 92,
+        "state_glyph_count": 204,
+        "pointer_caption": "00:11",
+        "actual_keyframe_us": 10000000,
+        "ready_caption": "Keyframe 0:10",
+        "prior_generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+        "stable_final_samples": 3,
+        "reference_frame": {
+          "actual_panel_rect": [
+            209,
+            785,
+            336,
+            224
+          ],
+          "actual_panel_window_id": 20238,
+          "app_active": true,
+          "callback_received_uptime_s": 917439.2195587917,
+          "crop_screen_points": [
+            209,
+            785,
+            336,
+            224
+          ],
+          "display_time_mach_ticks": 22018541177816,
+          "display_time_present": 1,
+          "display_time_uptime_seconds": 917439.2157423333,
+          "expected_image_hash_match": null,
+          "expected_time_mask_hamming": null,
+          "expected_time_mask_match_within_22_bits": null,
+          "expected_time_nearer_than_previous": null,
+          "expected_visible_match": 0,
+          "frame_status": 0,
+          "index": 56,
+          "input_t0_uptime_s": 917438.22169375,
+          "input_to_callback_ms": 997.8650417178869,
+          "kind": "display_frame",
+          "opaque_image_hash_matches_expected": null,
+          "panel_rect_matches_crop": true,
+          "parent_window_contains_crop": true,
+          "post_input_complete_presentation": true,
+          "presentation_pts_seconds": 917439.215742333,
+          "presentation_pts_timescale": 1000000000,
+          "presentation_pts_value": 917439215742333,
+          "previous_time_mask_hamming": null,
+          "result": {
+            "image_roi_points": [
+              8,
+              9,
+              320,
+              180
+            ],
+            "image_sample_hash_fnv1a64": "9c93721eb2f2a9bb",
+            "image_sample_mean": 125.65635451505017,
+            "panel_sample_hash_fnv1a64": "b799ade46f6984ff",
+            "pixel_height": 448,
+            "pixel_width": 672,
+            "scale_from_336_points": 2,
+            "state_glyph_count": 204,
+            "state_mask_hex": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000198001000000007818f00000000000000000000000000000000003600020000000193713000000000000000000000000000000000078722ee79fe782202220000000000000000000000000000000000e116c981245904604c40000000000000000000000000000000001a3e5121e48bf08808880000000000000000000000000000000003640a24649140113111000000000000000000000000000000000066d9c48d92248360234000000000000000000000000000000000084e1090d244603804380000000000000000000000000000000000000600000000000000000000000000000000000000000000000000018000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "state_roi_points": [
+              117,
+              196,
+              211,
+              20
+            ],
+            "state_sample_hash_fnv1a64": "ad53ff4735d72d25",
+            "state_sample_mean": 38.36003159557662,
+            "time_glyph_count": 92,
+            "time_mask_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e1e00c0c0000000000000000001b1331c3c00000000000000000011b33142400000000000000000011b10040400000000000000000031a10040400000000000000000011b1004040000000000000000001133304040000000000000000001b1b004040000000000000000000e0e00404000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "time_roi_points": [
+              8,
+              196,
+              108,
+              20
+            ],
+            "time_sample_hash_fnv1a64": "6c5cea841a46d1ec",
+            "time_sample_mean": 39.02935956790123
+          }
+        },
+        "raw_jsonl": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/008-heavy-template-022.jsonl"
+      },
+      "wall_ms": 1295.7002909388393
+    },
+    {
+      "phase": "template",
+      "bucket": 59,
+      "bucket_us": 29500000,
+      "target_seconds": 29.6,
+      "name": "009-heavy-template-059",
+      "faults": [],
+      "observer_arm": "heavy",
+      "command": [
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/continuous-visible-capture-probe",
+        "--pid",
+        "1245",
+        "--rect",
+        "480,785,336,224",
+        "--point",
+        "648,1028",
+        "--output",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/009-heavy-template-059.jsonl",
+        "--save-last-image",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/009-heavy-template-059.png",
+        "--settle-ms",
+        "1000"
+      ],
+      "raw_jsonl": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/009-heavy-template-059.jsonl",
+      "last_image": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/009-heavy-template-059.png",
+      "pointer_target": [
+        648,
+        1028
+      ],
+      "crop": [
+        480,
+        785,
+        336,
+        224
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "raw_row_count": 59,
+      "trace": {
+        "hover": {
+          "window": "standard-cache-pressure.mp4",
+          "monotonic": 917439.5600412084,
+          "bucket_us": 29500000,
+          "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+          "event": "hover",
+          "requested_us": 29601534,
+          "duration_us": 90038000,
+          "point_x": 439,
+          "left": 7,
+          "right": 1321
+        },
+        "service": {
+          "result": {
+            "video_ordinal": 0,
+            "payload_bytes": 230400,
+            "version": 2,
+            "width": 320,
+            "actual_us": 28000000,
+            "channels": 4,
+            "cache": "miss",
+            "elapsed_ms": 124.23837499227375,
+            "requested_us": 29500000,
+            "ok": true,
+            "height": 180,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0,
+            "sampling": "keyframe"
+          },
+          "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+          "event": "service",
+          "monotonic": 917439.6843417501
+        },
+        "display": {
+          "ok": 1,
+          "monotonic": 917439.6844901667,
+          "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+          "event": "display",
+          "requested_us": 29601534,
+          "actual_us": 28000000,
+          "cache": "miss",
+          "elapsed_ms": 141.6365415789187
+        },
+        "events": [
+          {
+            "bounds": "{{0, 0}, {1328, 14}}",
+            "hidden": false,
+            "enabled": true,
+            "event_point": "{439, 7}",
+            "event": "mouse-move",
+            "monotonic": 917439.5428122918,
+            "visible_rect": "{{0, 0}, {1328, 14}}",
+            "tracking_attached": true,
+            "hit_bounds": "{{0, -9}, {1328, 32}}",
+            "window_set": 1,
+            "pointer_point": "{439, 7}"
+          },
+          {
+            "monotonic": 917439.5428753333,
+            "eligible": true,
+            "event": "context",
+            "ordinal": 0,
+            "duration": 90038000
+          },
+          {
+            "event": "draw-submitted",
+            "duration_ms": 0.08762499783188105,
+            "monotonic": 917439.5600011251
+          },
+          {
+            "window": "standard-cache-pressure.mp4",
+            "monotonic": 917439.5600412084,
+            "bucket_us": 29500000,
+            "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+            "event": "hover",
+            "requested_us": 29601534,
+            "duration_us": 90038000,
+            "point_x": 439,
+            "left": 7,
+            "right": 1321
+          },
+          {
+            "result": {
+              "video_ordinal": 0,
+              "payload_bytes": 230400,
+              "version": 2,
+              "width": 320,
+              "actual_us": 28000000,
+              "channels": 4,
+              "cache": "miss",
+              "elapsed_ms": 124.23837499227375,
+              "requested_us": 29500000,
+              "ok": true,
+              "height": 180,
+              "decoded_frames": 1,
+              "timeline_origin_us": 0,
+              "sampling": "keyframe"
+            },
+            "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+            "event": "service",
+            "monotonic": 917439.6843417501
+          },
+          {
+            "ok": 1,
+            "monotonic": 917439.6844901667,
+            "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+            "event": "display",
+            "requested_us": 29601534,
+            "actual_us": 28000000,
+            "cache": "miss",
+            "elapsed_ms": 141.6365415789187
+          },
+          {
+            "event": "draw-submitted",
+            "duration_ms": 0.09158335160464048,
+            "monotonic": 917439.6846118334
+          }
+        ]
+      },
+      "template": {
+        "bucket": 59,
+        "opaque_image_hash": "d39a4f2c81a8872f",
+        "time_mask_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e1e01e1c0000000000000000001b133323600000000000000000011b33236300000000000000000011b10022300000000000000000031a10063700000000000000000011b100c1b0000000000000000001133318030000000000000000001b1b03f360000000000000000000e0e03f1c000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "state_mask_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000018000000000000000000000000000000000000000000000026000600000001e078f0000000000000000000000000000000000480008000000064c9b30000000000000000000000000000000000a1e8bdde7f9e08c02240000000000000000000000000000000001c44922069926108047800000000000000000000000000000000028f94443d127c210119800000000000000000000000000000000049028889a248066c42100000000000000000000000000000000009b2311134493048106600000000000000000000000000000000011984221e891c0603e780000000000000000000000000000000000000800000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "time_glyph_count": 126,
+        "state_glyph_count": 206,
+        "pointer_caption": "00:29",
+        "actual_keyframe_us": 28000000,
+        "ready_caption": "Keyframe 0:28",
+        "prior_generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+        "stable_final_samples": 3,
+        "reference_frame": {
+          "actual_panel_rect": [
+            480,
+            785,
+            336,
+            224
+          ],
+          "actual_panel_window_id": 20238,
+          "app_active": true,
+          "callback_received_uptime_s": 917440.5141487501,
+          "crop_screen_points": [
+            480,
+            785,
+            336,
+            224
+          ],
+          "display_time_mach_ticks": 22018572377774,
+          "display_time_present": 1,
+          "display_time_uptime_seconds": 917440.5157405834,
+          "expected_image_hash_match": null,
+          "expected_time_mask_hamming": null,
+          "expected_time_mask_match_within_22_bits": null,
+          "expected_time_nearer_than_previous": null,
+          "expected_visible_match": 0,
+          "frame_status": 0,
+          "index": 56,
+          "input_t0_uptime_s": 917439.5219002084,
+          "input_to_callback_ms": 992.248541675508,
+          "kind": "display_frame",
+          "opaque_image_hash_matches_expected": null,
+          "panel_rect_matches_crop": true,
+          "parent_window_contains_crop": true,
+          "post_input_complete_presentation": true,
+          "presentation_pts_seconds": 917440.515740583,
+          "presentation_pts_timescale": 1000000000,
+          "presentation_pts_value": 917440515740583,
+          "previous_time_mask_hamming": null,
+          "result": {
+            "image_roi_points": [
+              8,
+              9,
+              320,
+              180
+            ],
+            "image_sample_hash_fnv1a64": "d39a4f2c81a8872f",
+            "image_sample_mean": 125.72672798216277,
+            "panel_sample_hash_fnv1a64": "64beb1d29495c2f7",
+            "pixel_height": 448,
+            "pixel_width": 672,
+            "scale_from_336_points": 2,
+            "state_glyph_count": 206,
+            "state_mask_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000018000000000000000000000000000000000000000000000026000600000001e078f0000000000000000000000000000000000480008000000064c9b30000000000000000000000000000000000a1e8bdde7f9e08c02240000000000000000000000000000000001c44922069926108047800000000000000000000000000000000028f94443d127c210119800000000000000000000000000000000049028889a248066c42100000000000000000000000000000000009b2311134493048106600000000000000000000000000000000011984221e891c0603e780000000000000000000000000000000000000800000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "state_roi_points": [
+              117,
+              196,
+              211,
+              20
+            ],
+            "state_sample_hash_fnv1a64": "722997754c34513f",
+            "state_sample_mean": 41.95813586097946,
+            "time_glyph_count": 126,
+            "time_mask_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e1e01e1c0000000000000000001b133323600000000000000000011b33236300000000000000000011b10022300000000000000000031a10063700000000000000000011b100c1b0000000000000000001133318030000000000000000001b1b03f360000000000000000000e0e03f1c000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "time_roi_points": [
+              8,
+              196,
+              108,
+              20
+            ],
+            "time_sample_hash_fnv1a64": "20da2daec0c5e3e3",
+            "time_sample_mean": 40.72222222222222
+          }
+        },
+        "raw_jsonl": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/009-heavy-template-059.jsonl"
+      },
+      "wall_ms": 1297.7162080351263
+    },
+    {
+      "phase": "template",
+      "bucket": 96,
+      "bucket_us": 48000000,
+      "target_seconds": 48.1,
+      "name": "010-heavy-template-096",
+      "faults": [],
+      "observer_arm": "heavy",
+      "command": [
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/continuous-visible-capture-probe",
+        "--pid",
+        "1245",
+        "--rect",
+        "750,785,336,224",
+        "--point",
+        "918,1028",
+        "--output",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/010-heavy-template-096.jsonl",
+        "--save-last-image",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/010-heavy-template-096.png",
+        "--settle-ms",
+        "1000"
+      ],
+      "raw_jsonl": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/010-heavy-template-096.jsonl",
+      "last_image": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/010-heavy-template-096.png",
+      "pointer_target": [
+        918,
+        1028
+      ],
+      "crop": [
+        750,
+        785,
+        336,
+        224
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "raw_row_count": 59,
+      "trace": {
+        "hover": {
+          "window": "standard-cache-pressure.mp4",
+          "monotonic": 917440.887068875,
+          "bucket_us": 48000000,
+          "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+          "event": "hover",
+          "requested_us": 48102493,
+          "duration_us": 90038000,
+          "point_x": 709,
+          "left": 7,
+          "right": 1321
+        },
+        "service": {
+          "result": {
+            "video_ordinal": 0,
+            "payload_bytes": 230400,
+            "version": 2,
+            "width": 320,
+            "actual_us": 48000000,
+            "channels": 4,
+            "cache": "miss",
+            "elapsed_ms": 122.95270839240402,
+            "requested_us": 48000000,
+            "ok": true,
+            "height": 180,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0,
+            "sampling": "keyframe"
+          },
+          "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+          "event": "service",
+          "monotonic": 917441.0100883751
+        },
+        "display": {
+          "ok": 1,
+          "monotonic": 917441.0102456667,
+          "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+          "event": "display",
+          "requested_us": 48102493,
+          "actual_us": 48000000,
+          "cache": "miss",
+          "elapsed_ms": 142.73149997461587
+        },
+        "events": [
+          {
+            "bounds": "{{0, 0}, {1328, 14}}",
+            "hidden": false,
+            "enabled": true,
+            "event_point": "{709, 7}",
+            "event": "mouse-move",
+            "monotonic": 917440.8674705834,
+            "visible_rect": "{{0, 0}, {1328, 14}}",
+            "tracking_attached": true,
+            "hit_bounds": "{{0, -9}, {1328, 32}}",
+            "window_set": 1,
+            "pointer_point": "{709, 7}"
+          },
+          {
+            "monotonic": 917440.8675334584,
+            "eligible": true,
+            "event": "context",
+            "ordinal": 0,
+            "duration": 90038000
+          },
+          {
+            "event": "draw-submitted",
+            "duration_ms": 0.09720842353999615,
+            "monotonic": 917440.8870294167
+          },
+          {
+            "window": "standard-cache-pressure.mp4",
+            "monotonic": 917440.887068875,
+            "bucket_us": 48000000,
+            "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+            "event": "hover",
+            "requested_us": 48102493,
+            "duration_us": 90038000,
+            "point_x": 709,
+            "left": 7,
+            "right": 1321
+          },
+          {
+            "result": {
+              "video_ordinal": 0,
+              "payload_bytes": 230400,
+              "version": 2,
+              "width": 320,
+              "actual_us": 48000000,
+              "channels": 4,
+              "cache": "miss",
+              "elapsed_ms": 122.95270839240402,
+              "requested_us": 48000000,
+              "ok": true,
+              "height": 180,
+              "decoded_frames": 1,
+              "timeline_origin_us": 0,
+              "sampling": "keyframe"
+            },
+            "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+            "event": "service",
+            "monotonic": 917441.0100883751
+          },
+          {
+            "ok": 1,
+            "monotonic": 917441.0102456667,
+            "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+            "event": "display",
+            "requested_us": 48102493,
+            "actual_us": 48000000,
+            "cache": "miss",
+            "elapsed_ms": 142.73149997461587
+          },
+          {
+            "event": "draw-submitted",
+            "duration_ms": 0.09829166810959578,
+            "monotonic": 917441.0103774167
+          }
+        ]
+      },
+      "template": {
+        "bucket": 96,
+        "opaque_image_hash": "c48d9e31711c76ec",
+        "time_mask_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e1e0061e0000000000000000001b1330e3200000000000000000011b331a2300000000000000000011b10123600000000000000000031a10323e00000000000000000011b102223000000000000000000113333f630000000000000000001b1b002370000000000000000000e0e0021c000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "state_mask_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000044000400000003c018f00000000000000000000000000000000009800080000000448733000000000000000000000000000000000161c8bb9e7f9e0880a240000000000000000000000000000000003845b26049144110247800000000000000000000000000000000078f94487922f8220c9980000000000000000000000000000000009902891924500449fa100000000000000000000000000000000011b67123648b20d8026600000000000000000000000000000000021384243491180e004780000000000000000000000000000000000001800000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "time_glyph_count": 122,
+        "state_glyph_count": 209,
+        "pointer_caption": "00:48",
+        "actual_keyframe_us": 48000000,
+        "ready_caption": "Keyframe 0:48",
+        "prior_generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+        "stable_final_samples": 3,
+        "reference_frame": {
+          "actual_panel_rect": [
+            750,
+            785,
+            336,
+            224
+          ],
+          "actual_panel_window_id": 20238,
+          "app_active": true,
+          "callback_received_uptime_s": 917441.8355296667,
+          "crop_screen_points": [
+            750,
+            785,
+            336,
+            224
+          ],
+          "display_time_mach_ticks": 22018604177734,
+          "display_time_present": 1,
+          "display_time_uptime_seconds": 917441.8407389167,
+          "expected_image_hash_match": null,
+          "expected_time_mask_hamming": null,
+          "expected_time_mask_match_within_22_bits": null,
+          "expected_time_nearer_than_previous": null,
+          "expected_visible_match": 0,
+          "frame_status": 0,
+          "index": 56,
+          "input_t0_uptime_s": 917440.840338125,
+          "input_to_callback_ms": 995.1915417332202,
+          "kind": "display_frame",
+          "opaque_image_hash_matches_expected": null,
+          "panel_rect_matches_crop": true,
+          "parent_window_contains_crop": true,
+          "post_input_complete_presentation": true,
+          "presentation_pts_seconds": 917441.840738916,
+          "presentation_pts_timescale": 1000000000,
+          "presentation_pts_value": 917441840738916,
+          "previous_time_mask_hamming": null,
+          "result": {
+            "image_roi_points": [
+              8,
+              9,
+              320,
+              180
+            ],
+            "image_sample_hash_fnv1a64": "c48d9e31711c76ec",
+            "image_sample_mean": 125.64722686733556,
+            "panel_sample_hash_fnv1a64": "8560fe6c6947c88e",
+            "pixel_height": 448,
+            "pixel_width": 672,
+            "scale_from_336_points": 2,
+            "state_glyph_count": 209,
+            "state_mask_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000044000400000003c018f00000000000000000000000000000000009800080000000448733000000000000000000000000000000000161c8bb9e7f9e0880a240000000000000000000000000000000003845b26049144110247800000000000000000000000000000000078f94487922f8220c9980000000000000000000000000000000009902891924500449fa100000000000000000000000000000000011b67123648b20d8026600000000000000000000000000000000021384243491180e004780000000000000000000000000000000000001800000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "state_roi_points": [
+              117,
+              196,
+              211,
+              20
+            ],
+            "state_sample_hash_fnv1a64": "5fa1521250e694f9",
+            "state_sample_mean": 40.53080568720379,
+            "time_glyph_count": 122,
+            "time_mask_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e1e0061e0000000000000000001b1330e3200000000000000000011b331a2300000000000000000011b10123600000000000000000031a10323e00000000000000000011b102223000000000000000000113333f630000000000000000001b1b002370000000000000000000e0e0021c000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "time_roi_points": [
+              8,
+              196,
+              108,
+              20
+            ],
+            "time_sample_hash_fnv1a64": "38c25cd539e0a3f9",
+            "time_sample_mean": 44.07793209876543
+          }
+        },
+        "raw_jsonl": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/010-heavy-template-096.jsonl"
+      },
+      "wall_ms": 1328.084666049108
+    },
+    {
+      "phase": "template",
+      "bucket": 33,
+      "bucket_us": 16500000,
+      "target_seconds": 16.6,
+      "name": "011-heavy-template-033",
+      "faults": [],
+      "observer_arm": "heavy",
+      "command": [
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/continuous-visible-capture-probe",
+        "--pid",
+        "1245",
+        "--rect",
+        "290,785,336,224",
+        "--point",
+        "458,1028",
+        "--output",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/011-heavy-template-033.jsonl",
+        "--save-last-image",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/011-heavy-template-033.png",
+        "--settle-ms",
+        "1000"
+      ],
+      "raw_jsonl": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/011-heavy-template-033.jsonl",
+      "last_image": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/011-heavy-template-033.png",
+      "pointer_target": [
+        458,
+        1028
+      ],
+      "crop": [
+        290,
+        785,
+        336,
+        224
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "raw_row_count": 59,
+      "trace": {
+        "hover": {
+          "window": "standard-cache-pressure.mp4",
+          "monotonic": 917442.1779329584,
+          "bucket_us": 16500000,
+          "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+          "event": "hover",
+          "requested_us": 16582341,
+          "duration_us": 90038000,
+          "point_x": 249,
+          "left": 7,
+          "right": 1321
+        },
+        "service": {
+          "result": {
+            "video_ordinal": 0,
+            "payload_bytes": 230400,
+            "version": 2,
+            "width": 320,
+            "actual_us": 16000000,
+            "channels": 4,
+            "cache": "miss",
+            "elapsed_ms": 128.24358337093145,
+            "requested_us": 16500000,
+            "ok": true,
+            "height": 180,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0,
+            "sampling": "keyframe"
+          },
+          "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+          "event": "service",
+          "monotonic": 917442.3062433334
+        },
+        "display": {
+          "ok": 1,
+          "monotonic": 917442.3064018334,
+          "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+          "event": "display",
+          "requested_us": 16582341,
+          "actual_us": 16000000,
+          "cache": "miss",
+          "elapsed_ms": 146.0534583311528
+        },
+        "events": [
+          {
+            "bounds": "{{0, 0}, {1328, 14}}",
+            "hidden": false,
+            "enabled": true,
+            "event_point": "{249, 7}",
+            "event": "mouse-move",
+            "monotonic": 917442.160302625,
+            "visible_rect": "{{0, 0}, {1328, 14}}",
+            "tracking_attached": true,
+            "hit_bounds": "{{0, -9}, {1328, 32}}",
+            "window_set": 1,
+            "pointer_point": "{249, 7}"
+          },
+          {
+            "monotonic": 917442.160360125,
+            "eligible": true,
+            "event": "context",
+            "ordinal": 0,
+            "duration": 90038000
+          },
+          {
+            "event": "draw-submitted",
+            "duration_ms": 0.1103751128539443,
+            "monotonic": 917442.17789275
+          },
+          {
+            "window": "standard-cache-pressure.mp4",
+            "monotonic": 917442.1779329584,
+            "bucket_us": 16500000,
+            "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+            "event": "hover",
+            "requested_us": 16582341,
+            "duration_us": 90038000,
+            "point_x": 249,
+            "left": 7,
+            "right": 1321
+          },
+          {
+            "result": {
+              "video_ordinal": 0,
+              "payload_bytes": 230400,
+              "version": 2,
+              "width": 320,
+              "actual_us": 16000000,
+              "channels": 4,
+              "cache": "miss",
+              "elapsed_ms": 128.24358337093145,
+              "requested_us": 16500000,
+              "ok": true,
+              "height": 180,
+              "decoded_frames": 1,
+              "timeline_origin_us": 0,
+              "sampling": "keyframe"
+            },
+            "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+            "event": "service",
+            "monotonic": 917442.3062433334
+          },
+          {
+            "ok": 1,
+            "monotonic": 917442.3064018334,
+            "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+            "event": "display",
+            "requested_us": 16582341,
+            "actual_us": 16000000,
+            "cache": "miss",
+            "elapsed_ms": 146.0534583311528
+          },
+          {
+            "event": "draw-submitted",
+            "duration_ms": 0.09495834819972515,
+            "monotonic": 917442.3065326667
+          }
+        ]
+      },
+      "template": {
+        "bucket": 33,
+        "opaque_image_hash": "61f4c32a3b435951",
+        "time_mask_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e1e00c1e0000000000000000001b1331c3200000000000000000011b33142000000000000000000011b10047e00000000000000000031a10047300000000000000000011b1004230000000000000000001133304230000000000000000001b1b004360000000000000000000e0e0041c000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "state_mask_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000011000100000000f018f00000000000000000000000000000000002600020000000112731000000000000000000000000000000000058722ee79fe782202480000000000000000000000000000000000e116c981245104404f80000000000000000000000000000000001e3e5121e48be08809880000000000000000000000000000000002640a24649140112131000000000000000000000000000000000046d9c48d922c8360226000000000000000000000000000000000084e1090d244603804380000000000000000000000000000000000000600000000000000000000000000000000000000000000000000018000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "time_glyph_count": 110,
+        "state_glyph_count": 198,
+        "pointer_caption": "00:16",
+        "actual_keyframe_us": 16000000,
+        "ready_caption": "Keyframe 0:16",
+        "prior_generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+        "stable_final_samples": 3,
+        "reference_frame": {
+          "actual_panel_rect": [
+            290,
+            785,
+            336,
+            224
+          ],
+          "actual_panel_window_id": 20238,
+          "app_active": true,
+          "callback_received_uptime_s": 917443.1235475834,
+          "crop_screen_points": [
+            290,
+            785,
+            336,
+            224
+          ],
+          "display_time_mach_ticks": 22018634777695,
+          "display_time_present": 1,
+          "display_time_uptime_seconds": 917443.1157372916,
+          "expected_image_hash_match": null,
+          "expected_time_mask_hamming": null,
+          "expected_time_mask_match_within_22_bits": null,
+          "expected_time_nearer_than_previous": null,
+          "expected_visible_match": 0,
+          "frame_status": 0,
+          "index": 56,
+          "input_t0_uptime_s": 917442.1387245418,
+          "input_to_callback_ms": 984.8230415955186,
+          "kind": "display_frame",
+          "opaque_image_hash_matches_expected": null,
+          "panel_rect_matches_crop": true,
+          "parent_window_contains_crop": true,
+          "post_input_complete_presentation": true,
+          "presentation_pts_seconds": 917443.115737291,
+          "presentation_pts_timescale": 1000000000,
+          "presentation_pts_value": 917443115737291,
+          "previous_time_mask_hamming": null,
+          "result": {
+            "image_roi_points": [
+              8,
+              9,
+              320,
+              180
+            ],
+            "image_sample_hash_fnv1a64": "61f4c32a3b435951",
+            "image_sample_mean": 125.69411928651058,
+            "panel_sample_hash_fnv1a64": "e38b94ba0734252a",
+            "pixel_height": 448,
+            "pixel_width": 672,
+            "scale_from_336_points": 2,
+            "state_glyph_count": 198,
+            "state_mask_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000011000100000000f018f00000000000000000000000000000000002600020000000112731000000000000000000000000000000000058722ee79fe782202480000000000000000000000000000000000e116c981245104404f80000000000000000000000000000000001e3e5121e48be08809880000000000000000000000000000000002640a24649140112131000000000000000000000000000000000046d9c48d922c8360226000000000000000000000000000000000084e1090d244603804380000000000000000000000000000000000000600000000000000000000000000000000000000000000000000018000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "state_roi_points": [
+              117,
+              196,
+              211,
+              20
+            ],
+            "state_sample_hash_fnv1a64": "7d6c04b2b149e61f",
+            "state_sample_mean": 38.909478672985784,
+            "time_glyph_count": 110,
+            "time_mask_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e1e00c1e0000000000000000001b1331c3200000000000000000011b33142000000000000000000011b10047e00000000000000000031a10047300000000000000000011b1004230000000000000000001133304230000000000000000001b1b004360000000000000000000e0e0041c000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "time_roi_points": [
+              8,
+              196,
+              108,
+              20
+            ],
+            "time_sample_hash_fnv1a64": "e2adc4a903661795",
+            "time_sample_mean": 39.90702160493827
+          }
+        },
+        "raw_jsonl": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/011-heavy-template-033.jsonl"
+      },
+      "wall_ms": 1291.8824999360368
+    },
+    {
+      "phase": "template",
+      "bucket": 70,
+      "bucket_us": 35000000,
+      "target_seconds": 35.1,
+      "name": "012-heavy-template-070",
+      "faults": [],
+      "observer_arm": "heavy",
+      "command": [
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/continuous-visible-capture-probe",
+        "--pid",
+        "1245",
+        "--rect",
+        "560,785,336,224",
+        "--point",
+        "728,1028",
+        "--output",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/012-heavy-template-070.jsonl",
+        "--save-last-image",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/012-heavy-template-070.png",
+        "--settle-ms",
+        "1000"
+      ],
+      "raw_jsonl": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/012-heavy-template-070.jsonl",
+      "last_image": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/012-heavy-template-070.png",
+      "pointer_target": [
+        728,
+        1028
+      ],
+      "crop": [
+        560,
+        785,
+        336,
+        224
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "raw_row_count": 59,
+      "trace": {
+        "hover": {
+          "window": "standard-cache-pressure.mp4",
+          "monotonic": 917443.4651839167,
+          "bucket_us": 35000000,
+          "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+          "event": "hover",
+          "requested_us": 35083299,
+          "duration_us": 90038000,
+          "point_x": 519,
+          "left": 7,
+          "right": 1321
+        },
+        "service": {
+          "result": {
+            "video_ordinal": 0,
+            "payload_bytes": 230400,
+            "version": 2,
+            "width": 320,
+            "actual_us": 34000000,
+            "channels": 4,
+            "cache": "miss",
+            "elapsed_ms": 123.62037494312972,
+            "requested_us": 35000000,
+            "ok": true,
+            "height": 180,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0,
+            "sampling": "keyframe"
+          },
+          "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+          "event": "service",
+          "monotonic": 917443.5888685001
+        },
+        "display": {
+          "ok": 1,
+          "monotonic": 917443.5890105,
+          "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+          "event": "display",
+          "requested_us": 35083299,
+          "actual_us": 34000000,
+          "cache": "miss",
+          "elapsed_ms": 147.31420832686126
+        },
+        "events": [
+          {
+            "bounds": "{{0, 0}, {1328, 14}}",
+            "hidden": false,
+            "enabled": true,
+            "event_point": "{519, 7}",
+            "event": "mouse-move",
+            "monotonic": 917443.4416559584,
+            "visible_rect": "{{0, 0}, {1328, 14}}",
+            "tracking_attached": true,
+            "hit_bounds": "{{0, -9}, {1328, 32}}",
+            "window_set": 1,
+            "pointer_point": "{519, 7}"
+          },
+          {
+            "monotonic": 917443.4417137083,
+            "eligible": true,
+            "event": "context",
+            "ordinal": 0,
+            "duration": 90038000
+          },
+          {
+            "event": "draw-submitted",
+            "duration_ms": 0.09779166430234909,
+            "monotonic": 917443.4651479584
+          },
+          {
+            "window": "standard-cache-pressure.mp4",
+            "monotonic": 917443.4651839167,
+            "bucket_us": 35000000,
+            "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+            "event": "hover",
+            "requested_us": 35083299,
+            "duration_us": 90038000,
+            "point_x": 519,
+            "left": 7,
+            "right": 1321
+          },
+          {
+            "result": {
+              "video_ordinal": 0,
+              "payload_bytes": 230400,
+              "version": 2,
+              "width": 320,
+              "actual_us": 34000000,
+              "channels": 4,
+              "cache": "miss",
+              "elapsed_ms": 123.62037494312972,
+              "requested_us": 35000000,
+              "ok": true,
+              "height": 180,
+              "decoded_frames": 1,
+              "timeline_origin_us": 0,
+              "sampling": "keyframe"
+            },
+            "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+            "event": "service",
+            "monotonic": 917443.5888685001
+          },
+          {
+            "ok": 1,
+            "monotonic": 917443.5890105,
+            "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+            "event": "display",
+            "requested_us": 35083299,
+            "actual_us": 34000000,
+            "cache": "miss",
+            "elapsed_ms": 147.31420832686126
+          },
+          {
+            "event": "draw-submitted",
+            "duration_ms": 0.0849999487400055,
+            "monotonic": 917443.5891288334
+          }
+        ]
+      },
+      "template": {
+        "bucket": 70,
+        "opaque_image_hash": "6b05db05795b9772",
+        "time_mask_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e1e01e3e0000000000000000001b133332000000000000000000011b33032000000000000000000011b10063e00000000000000000031a100e3200000000000000000011b1003030000000000000000001133323230000000000000000001b1b03f360000000000000000000e0e01e1c000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "state_mask_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000066000400000001e07830000000000000000000000000000000000d80008000000064d90e0000000000000000000000000000000001e1e8b9de7f9e088021400000000000000000000000000000000038449220491641181c4800000000000000000000000000000000068f94447922fc2200d90000000000000000000000000000000000d90288892450044d0bf00000000000000000000000000000000019b23111648920d8320400000000000000000000000000000000021184223c91180e038080000000000000000000000000000000000000800000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "time_glyph_count": 122,
+        "state_glyph_count": 204,
+        "pointer_caption": "00:35",
+        "actual_keyframe_us": 34000000,
+        "ready_caption": "Keyframe 0:34",
+        "prior_generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+        "stable_final_samples": 3,
+        "reference_frame": {
+          "actual_panel_rect": [
+            560,
+            785,
+            336,
+            224
+          ],
+          "actual_panel_window_id": 20238,
+          "app_active": true,
+          "callback_received_uptime_s": 917444.415732875,
+          "crop_screen_points": [
+            560,
+            785,
+            336,
+            224
+          ],
+          "display_time_mach_ticks": 22018665977654,
+          "display_time_present": 1,
+          "display_time_uptime_seconds": 917444.4157355834,
+          "expected_image_hash_match": null,
+          "expected_time_mask_hamming": null,
+          "expected_time_mask_match_within_22_bits": null,
+          "expected_time_nearer_than_previous": null,
+          "expected_visible_match": 0,
+          "frame_status": 0,
+          "index": 56,
+          "input_t0_uptime_s": 917443.42166925,
+          "input_to_callback_ms": 994.0636249957606,
+          "kind": "display_frame",
+          "opaque_image_hash_matches_expected": null,
+          "panel_rect_matches_crop": true,
+          "parent_window_contains_crop": true,
+          "post_input_complete_presentation": true,
+          "presentation_pts_seconds": 917444.415735583,
+          "presentation_pts_timescale": 1000000000,
+          "presentation_pts_value": 917444415735583,
+          "previous_time_mask_hamming": null,
+          "result": {
+            "image_roi_points": [
+              8,
+              9,
+              320,
+              180
+            ],
+            "image_sample_hash_fnv1a64": "6b05db05795b9772",
+            "image_sample_mean": 125.66297380156075,
+            "panel_sample_hash_fnv1a64": "86953f2a26df30dd",
+            "pixel_height": 448,
+            "pixel_width": 672,
+            "scale_from_336_points": 2,
+            "state_glyph_count": 204,
+            "state_mask_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000066000400000001e07830000000000000000000000000000000000d80008000000064d90e0000000000000000000000000000000001e1e8b9de7f9e088021400000000000000000000000000000000038449220491641181c4800000000000000000000000000000000068f94447922fc2200d90000000000000000000000000000000000d90288892450044d0bf00000000000000000000000000000000019b23111648920d8320400000000000000000000000000000000021184223c91180e038080000000000000000000000000000000000000800000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "state_roi_points": [
+              117,
+              196,
+              211,
+              20
+            ],
+            "state_sample_hash_fnv1a64": "23290ba0ca24fb1e",
+            "state_sample_mean": 41.98633491311217,
+            "time_glyph_count": 122,
+            "time_mask_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e1e01e3e0000000000000000001b133332000000000000000000011b33032000000000000000000011b10063e00000000000000000031a100e3200000000000000000011b1003030000000000000000001133323230000000000000000001b1b03f360000000000000000000e0e01e1c000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "time_roi_points": [
+              8,
+              196,
+              108,
+              20
+            ],
+            "time_sample_hash_fnv1a64": "0fa60163ba961fd3",
+            "time_sample_mean": 42.687422839506176
+          }
+        },
+        "raw_jsonl": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/012-heavy-template-070.jsonl"
+      },
+      "wall_ms": 1282.6825419906527
+    },
+    {
+      "phase": "template",
+      "bucket": 7,
+      "bucket_us": 3500000,
+      "target_seconds": 3.6,
+      "name": "013-heavy-template-007",
+      "faults": [],
+      "observer_arm": "heavy",
+      "command": [
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/continuous-visible-capture-probe",
+        "--pid",
+        "1245",
+        "--rect",
+        "100,785,336,224",
+        "--point",
+        "268,1028",
+        "--output",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/013-heavy-template-007.jsonl",
+        "--save-last-image",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/013-heavy-template-007.png",
+        "--settle-ms",
+        "1000"
+      ],
+      "raw_jsonl": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/013-heavy-template-007.jsonl",
+      "last_image": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/013-heavy-template-007.png",
+      "pointer_target": [
+        268,
+        1028
+      ],
+      "crop": [
+        100,
+        785,
+        336,
+        224
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "raw_row_count": 59,
+      "trace": {
+        "hover": {
+          "window": "standard-cache-pressure.mp4",
+          "monotonic": 917444.7729340834,
+          "bucket_us": 3500000,
+          "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+          "event": "hover",
+          "requested_us": 3563148,
+          "duration_us": 90038000,
+          "point_x": 59,
+          "left": 7,
+          "right": 1321
+        },
+        "service": {
+          "result": {
+            "video_ordinal": 0,
+            "payload_bytes": 230400,
+            "version": 2,
+            "width": 320,
+            "actual_us": 2000000,
+            "channels": 4,
+            "cache": "miss",
+            "elapsed_ms": 124.26879163831472,
+            "requested_us": 3500000,
+            "ok": true,
+            "height": 180,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0,
+            "sampling": "keyframe"
+          },
+          "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+          "event": "service",
+          "monotonic": 917444.8972666668
+        },
+        "display": {
+          "ok": 1,
+          "monotonic": 917444.8974233334,
+          "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+          "event": "display",
+          "requested_us": 3563148,
+          "actual_us": 2000000,
+          "cache": "miss",
+          "elapsed_ms": 153.77791656646878
+        },
+        "events": [
+          {
+            "bounds": "{{0, 0}, {1328, 14}}",
+            "hidden": false,
+            "enabled": true,
+            "event_point": "{59, 7}",
+            "event": "mouse-move",
+            "monotonic": 917444.7436016251,
+            "visible_rect": "{{0, 0}, {1328, 14}}",
+            "tracking_attached": true,
+            "hit_bounds": "{{0, -9}, {1328, 32}}",
+            "window_set": 1,
+            "pointer_point": "{59, 7}"
+          },
+          {
+            "monotonic": 917444.7436624584,
+            "eligible": true,
+            "event": "context",
+            "ordinal": 0,
+            "duration": 90038000
+          },
+          {
+            "event": "draw-submitted",
+            "duration_ms": 0.08775002788752317,
+            "monotonic": 917444.7728910417
+          },
+          {
+            "window": "standard-cache-pressure.mp4",
+            "monotonic": 917444.7729340834,
+            "bucket_us": 3500000,
+            "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+            "event": "hover",
+            "requested_us": 3563148,
+            "duration_us": 90038000,
+            "point_x": 59,
+            "left": 7,
+            "right": 1321
+          },
+          {
+            "result": {
+              "video_ordinal": 0,
+              "payload_bytes": 230400,
+              "version": 2,
+              "width": 320,
+              "actual_us": 2000000,
+              "channels": 4,
+              "cache": "miss",
+              "elapsed_ms": 124.26879163831472,
+              "requested_us": 3500000,
+              "ok": true,
+              "height": 180,
+              "decoded_frames": 1,
+              "timeline_origin_us": 0,
+              "sampling": "keyframe"
+            },
+            "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+            "event": "service",
+            "monotonic": 917444.8972666668
+          },
+          {
+            "ok": 1,
+            "monotonic": 917444.8974233334,
+            "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+            "event": "display",
+            "requested_us": 3563148,
+            "actual_us": 2000000,
+            "cache": "miss",
+            "elapsed_ms": 153.77791656646878
+          },
+          {
+            "event": "draw-submitted",
+            "duration_ms": 0.09858328849077225,
+            "monotonic": 917444.8975551251
+          }
+        ]
+      },
+      "template": {
+        "bucket": 7,
+        "opaque_image_hash": "25155c4d30a6458a",
+        "time_mask_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e1e01e1e0000000000000000001b133323200000000000000000011b33230200000000000000000011b10230600000000000000000031a10210e00000000000000000011b1023030000000000000000001133333230000000000000000001b1b036360000000000000000000e0e01c1c000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "state_mask_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000018000000000000000000000000000000000000000000000026000600000001e078f0000000000000000000000000000000000480008000000064c8910000000000000000000000000000000000a1e4bdde7f9e08c11020000000000000000000000000000000001c6492206c926108220800000000000000000000000000000000028fd2443d127c210442000000000000000000000000000000000049018889a248066c88c00000000000000000000000000000000009923111344930481b3000000000000000000000000000000000011986221a891c0601c7c0000000000000000000000000000000000000800000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "time_glyph_count": 119,
+        "state_glyph_count": 201,
+        "pointer_caption": "00:03",
+        "actual_keyframe_us": 2000000,
+        "ready_caption": "Keyframe 0:02",
+        "prior_generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+        "stable_final_samples": 3,
+        "reference_frame": {
+          "actual_panel_rect": [
+            100,
+            785,
+            336,
+            224
+          ],
+          "actual_panel_window_id": 20238,
+          "app_active": true,
+          "callback_received_uptime_s": 917445.7116723751,
+          "crop_screen_points": [
+            100,
+            785,
+            336,
+            224
+          ],
+          "display_time_mach_ticks": 22018697177613,
+          "display_time_present": 1,
+          "display_time_uptime_seconds": 917445.715733875,
+          "expected_image_hash_match": null,
+          "expected_time_mask_hamming": null,
+          "expected_time_mask_match_within_22_bits": null,
+          "expected_time_nearer_than_previous": null,
+          "expected_visible_match": 0,
+          "frame_status": 0,
+          "index": 56,
+          "input_t0_uptime_s": 917444.7220142084,
+          "input_to_callback_ms": 989.658166654408,
+          "kind": "display_frame",
+          "opaque_image_hash_matches_expected": null,
+          "panel_rect_matches_crop": true,
+          "parent_window_contains_crop": true,
+          "post_input_complete_presentation": true,
+          "presentation_pts_seconds": 917445.715733875,
+          "presentation_pts_timescale": 1000000000,
+          "presentation_pts_value": 917445715733875,
+          "previous_time_mask_hamming": null,
+          "result": {
+            "image_roi_points": [
+              8,
+              9,
+              320,
+              180
+            ],
+            "image_sample_hash_fnv1a64": "25155c4d30a6458a",
+            "image_sample_mean": 125.70185340022296,
+            "panel_sample_hash_fnv1a64": "61ae377323a398fb",
+            "pixel_height": 448,
+            "pixel_width": 672,
+            "scale_from_336_points": 2,
+            "state_glyph_count": 201,
+            "state_mask_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000018000000000000000000000000000000000000000000000026000600000001e078f0000000000000000000000000000000000480008000000064c8910000000000000000000000000000000000a1e4bdde7f9e08c11020000000000000000000000000000000001c6492206c926108220800000000000000000000000000000000028fd2443d127c210442000000000000000000000000000000000049018889a248066c88c00000000000000000000000000000000009923111344930481b3000000000000000000000000000000000011986221a891c0601c7c0000000000000000000000000000000000000800000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "state_roi_points": [
+              117,
+              196,
+              211,
+              20
+            ],
+            "state_sample_hash_fnv1a64": "07fa2edbfacd26f8",
+            "state_sample_mean": 39.32488151658768,
+            "time_glyph_count": 119,
+            "time_mask_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e1e01e1e0000000000000000001b133323200000000000000000011b33230200000000000000000011b10230600000000000000000031a10210e00000000000000000011b1023030000000000000000001133333230000000000000000001b1b036360000000000000000000e0e01c1c000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "time_roi_points": [
+              8,
+              196,
+              108,
+              20
+            ],
+            "time_sample_hash_fnv1a64": "b0490334dd036fd8",
+            "time_sample_mean": 41.80760030864197
+          }
+        },
+        "raw_jsonl": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/013-heavy-template-007.jsonl"
+      },
+      "wall_ms": 1303.578041959554
+    },
+    {
+      "phase": "template",
+      "bucket": 44,
+      "bucket_us": 22000000,
+      "target_seconds": 22.1,
+      "name": "014-heavy-template-044",
+      "faults": [
+        "Capture error: target_app_inactive_or_crop_left_owned_main_window"
+      ],
+      "observer_arm": "heavy",
+      "command": [
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/continuous-visible-capture-probe",
+        "--pid",
+        "1245",
+        "--rect",
+        "370,785,336,224",
+        "--point",
+        "538,1028",
+        "--output",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/014-heavy-template-044.jsonl",
+        "--save-last-image",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/014-heavy-template-044.png",
+        "--settle-ms",
+        "1000"
+      ],
+      "raw_jsonl": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/014-heavy-template-044.jsonl",
+      "last_image": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/014-heavy-template-044.png",
+      "pointer_target": [
+        538,
+        1028
+      ],
+      "crop": [
+        370,
+        785,
+        336,
+        224
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "",
+      "raw_row_count": 55,
+      "wall_ms": 1229.5909579843283
+    }
+  ],
+  "started": {
+    "unix_s": 1791157998.363106,
+    "monotonic_s": 917422.502949666
+  },
+  "source_sha256_before": "37e1e1ebf58d44d0a38f4ac3f6f621dca2547307f9429a404bfccfd475d94c84",
+  "module_sha256_before": "264db8f06487fab5f6d6adcd55360eb93833f828d7691127f0f5decdd44c9c9b",
+  "app_tree_sha256_before": "d80393b549ba22e20196a1adf84146802e98c76031ef732a8491cb993acba854",
+  "pointer_sha256_before": "bfc48a37b90fc9aefda36735b36f9c239dea1f3c021046f7039d9e29691abd8e",
+  "heavy_probe_sha256_before": "a9a81373644de69a8613665e3bf8332e3644fd877deff08cc69f27bddd6cc611",
+  "buffered_probe_sha256_before": "0d9bc50a7f09bcddba4825f64003ceb438e2ed0dee15a36686f6e25a71a10ee3",
+  "media_json_sha256": "6d3e0a1ce57652c8b62f8fdf90e999855c54be3d60616e67cb5a060c15c8f9ab",
+  "runner_sha256": "2867876d3c534c7765e12ab8140afe547f5f7706ae5d9cf68b82be318a470a35",
+  "observer_source_sha256": "04d144d5a3aca3cf3162512980545d49b14df3c42ff0b8c8e725c4af088b4a3c",
+  "imported_runner_sha256": "22c1114611f18e02e2ec7c5a02f871634550ab2e6f7169537df2ef43950f08db",
+  "argument_validation": {
+    "returncode": 0,
+    "missing_options": []
+  },
+  "pid": 1245,
+  "app_command": [
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/VLC",
+    "--ignore-config",
+    "--config=/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/paired-visible-interactive-qos-002/vlcrc",
+    "--intf=macosx",
+    "--extraintf=oldrc",
+    "--rc-unix=/tmp/vlc002-continuous-hover-1235.sock",
+    "--rc-fake-tty",
+    "--stats",
+    "--play-and-pause",
+    "--start-time=0",
+    "--no-media-library",
+    "--no-metadata-network-access",
+    "--macosx-control-itunes=0",
+    "--no-macosx-mediakeys",
+    "--no-macosx-recentitems",
+    "--macosx-continue-playback=2",
+    "--no-video-title-show",
+    "--no-loop",
+    "--no-repeat",
+    "--no-random",
+    "--verbose=2",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/story-002/standard-cache-pressure.mp4"
+  ],
+  "startup_paused": {
+    "state": "pause",
+    "media_time_seconds": 0,
+    "counters": {
+      "video decoded": 10,
+      "frames displayed": 1,
+      "frames lost": 0,
+      "audio decoded": 2,
+      "buffers played": 1,
+      "buffers lost": 0
+    }
+  },
+  "timeline_rect": [
+    208.0,
+    1020.0,
+    1330.0,
+    16.0
+  ],
+  "ax_inventory": "window_index 0\nslider 208.000 1020.000 1330.000 16.000 value 0 title Position\nslider 1612.000 1021.000 50.000 14.000 value 256 title \n",
+  "fresh_reopens": [
+    {
+      "prior_generations": [],
+      "trace_offset_before": 2091,
+      "play_snapshot": {
+        "state": "play",
+        "media_time_seconds": 0,
+        "counters": {
+          "video decoded": 10,
+          "frames displayed": 1,
+          "frames lost": 0,
+          "audio decoded": 2,
+          "buffers played": 1,
+          "buffers lost": 0
+        }
+      },
+      "stop_snapshot": {
+        "state": "stop",
+        "media_time_seconds": 0,
+        "counters": {
+          "video decoded": 10,
+          "frames displayed": 1,
+          "frames lost": 0,
+          "audio decoded": 2,
+          "buffers played": 1,
+          "buffers lost": 0
+        }
+      },
+      "reopened_paused_zero": {
+        "state": "pause",
+        "media_time_seconds": 0,
+        "counters": {
+          "video decoded": 59,
+          "frames displayed": 5,
+          "frames lost": 0,
+          "audio decoded": 36,
+          "buffers played": 18,
+          "buffers lost": 0
+        }
+      }
+    }
+  ],
+  "calibrations": [
+    {
+      "label": "prior-template-generation",
+      "hover": {
+        "window": "standard-cache-pressure.mp4",
+        "monotonic": 917428.6249320417,
+        "bucket_us": 80000000,
+        "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+        "event": "hover",
+        "requested_us": 80170821,
+        "duration_us": 90038000,
+        "point_x": 1177,
+        "left": 7,
+        "right": 1321
+      },
+      "service": {
+        "result": {
+          "video_ordinal": 0,
+          "payload_bytes": 230400,
+          "version": 2,
+          "width": 320,
+          "actual_us": 80000000,
+          "channels": 4,
+          "cache": "miss",
+          "elapsed_ms": 245.34933338873088,
+          "requested_us": 80000000,
+          "ok": true,
+          "height": 180,
+          "decoded_frames": 1,
+          "timeline_origin_us": 0,
+          "sampling": "keyframe"
+        },
+        "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+        "event": "service",
+        "monotonic": 917428.8703473334
+      },
+      "display": {
+        "ok": 1,
+        "monotonic": 917428.8705418333,
+        "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+        "event": "display",
+        "requested_us": 80170821,
+        "actual_us": 80000000,
+        "cache": "miss",
+        "elapsed_ms": 246.20362499263138
+      },
+      "events": [
+        {
+          "bounds": "{{0, 0}, {1328, 14}}",
+          "monotonic": 917428.6241,
+          "event_point": "{1177, 7}",
+          "event": "input-observation",
+          "visible_rect": "{{0, 0}, {1328, 14}}",
+          "tracking_attached": true,
+          "type": 5,
+          "pointer_point": "{1177, 7}"
+        },
+        {
+          "event": "mouse-enter",
+          "monotonic": 917428.6242497917
+        },
+        {
+          "bounds": "{{0, 0}, {1328, 14}}",
+          "hidden": false,
+          "enabled": true,
+          "event_point": "{1177, 7}",
+          "event": "mouse-move",
+          "monotonic": 917428.6243005417,
+          "visible_rect": "{{0, 0}, {1328, 14}}",
+          "tracking_attached": true,
+          "hit_bounds": "{{0, -9}, {1328, 32}}",
+          "window_set": 1,
+          "pointer_point": "{1177, 7}"
+        },
+        {
+          "monotonic": 917428.6243464584,
+          "eligible": true,
+          "event": "context",
+          "ordinal": 0,
+          "duration": 90038000
+        },
+        {
+          "event": "draw-submitted",
+          "duration_ms": 0.071666669100523,
+          "monotonic": 917428.6249005
+        },
+        {
+          "window": "standard-cache-pressure.mp4",
+          "monotonic": 917428.6249320417,
+          "bucket_us": 80000000,
+          "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+          "event": "hover",
+          "requested_us": 80170821,
+          "duration_us": 90038000,
+          "point_x": 1177,
+          "left": 7,
+          "right": 1321
+        },
+        {
+          "result": {
+            "video_ordinal": 0,
+            "payload_bytes": 230400,
+            "version": 2,
+            "width": 320,
+            "actual_us": 80000000,
+            "channels": 4,
+            "cache": "miss",
+            "elapsed_ms": 245.34933338873088,
+            "requested_us": 80000000,
+            "ok": true,
+            "height": 180,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0,
+            "sampling": "keyframe"
+          },
+          "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+          "event": "service",
+          "monotonic": 917428.8703473334
+        },
+        {
+          "ok": 1,
+          "monotonic": 917428.8705418333,
+          "generation": "00FDB8C4-68E5-4D70-B175-EEA2BA62D003-8",
+          "event": "display",
+          "requested_us": 80170821,
+          "actual_us": 80000000,
+          "cache": "miss",
+          "elapsed_ms": 246.20362499263138
+        },
+        {
+          "event": "draw-submitted",
+          "duration_ms": 0.12441666331142187,
+          "monotonic": 917428.870705625
+        }
+      ],
+      "panel": {
+        "id": 20238,
+        "layer": 3,
+        "name": "",
+        "bounds": {
+          "X": 1218,
+          "Height": 224,
+          "Y": 785,
+          "Width": 336
+        }
+      }
+    }
+  ],
+  "completed_collection": false,
+  "collection_error": "Capture error: target_app_inactive_or_crop_left_owned_main_window",
+  "source_sha256_after": "37e1e1ebf58d44d0a38f4ac3f6f621dca2547307f9429a404bfccfd475d94c84",
+  "source_unchanged": true,
+  "module_sha256_after": "264db8f06487fab5f6d6adcd55360eb93833f828d7691127f0f5decdd44c9c9b",
+  "module_unchanged": true,
+  "pointer_sha256_after": "bfc48a37b90fc9aefda36735b36f9c239dea1f3c021046f7039d9e29691abd8e",
+  "pointer_unchanged": true,
+  "heavy_probe_sha256_after": "a9a81373644de69a8613665e3bf8332e3644fd877deff08cc69f27bddd6cc611",
+  "heavy_probe_unchanged": true,
+  "buffered_probe_sha256_after": "0d9bc50a7f09bcddba4825f64003ceb438e2ed0dee15a36686f6e25a71a10ee3",
+  "buffered_probe_unchanged": true,
+  "app_tree_sha256_after": "d80393b549ba22e20196a1adf84146802e98c76031ef732a8491cb993acba854",
+  "app_unchanged": true,
+  "pair_summary": {
+    "pairs": [],
+    "complete_correct_pairs": 0,
+    "no_qualification_claim": true
+  },
+  "diagnostic_collection_passed": false,
+  "all_attempts_retained": true,
+  "qualified": false,
+  "finished": {
+    "unix_s": 1791158023.1684248,
+    "monotonic_s": 917447.308169583
+  }
+}

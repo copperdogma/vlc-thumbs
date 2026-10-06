@@ -1,0 +1,99 @@
+{
+  "scope": "Diagnostic-only individual ownership guard components; baseline only; no failing guard reproduced",
+  "completed_interactions": true,
+  "collection_error": null,
+  "analysis_error_in_original_wrapper": "'affected_pid'",
+  "integrity_unchanged": true,
+  "recorder_exit_code": 0,
+  "sampler_count": 5996,
+  "requested_interval_ms": 10,
+  "observed_gap_ms": {
+    "median": 10.033249971456826,
+    "max": 19.83795827254653
+  },
+  "sampler_timestamp_limit": "query_end is captured before dictionary getter evaluations finish; only callback begin/successive-begin bounds are interpretable, not a complete query interval",
+  "captures": [
+    {
+      "label": "template-left",
+      "frame_count": 175,
+      "guard_component_false_counts": {
+        "app_exists": 0,
+        "bundle_expected": 0,
+        "target_active": 0
+      },
+      "collector_samples_during_input": 300,
+      "collector_target_active_false": 0,
+      "collector_frontmost_other_pid": 0,
+      "faults": []
+    },
+    {
+      "label": "template-right",
+      "frame_count": 176,
+      "guard_component_false_counts": {
+        "app_exists": 0,
+        "bundle_expected": 0,
+        "target_active": 0
+      },
+      "collector_samples_during_input": 300,
+      "collector_target_active_false": 0,
+      "collector_frontmost_other_pid": 0,
+      "faults": []
+    },
+    {
+      "label": "diagnostic-0",
+      "frame_count": 174,
+      "guard_component_false_counts": {
+        "app_exists": 0,
+        "bundle_expected": 0,
+        "target_active": 0
+      },
+      "collector_samples_during_input": 301,
+      "collector_target_active_false": 0,
+      "collector_frontmost_other_pid": 0,
+      "faults": []
+    },
+    {
+      "label": "diagnostic-1",
+      "frame_count": 174,
+      "guard_component_false_counts": {
+        "app_exists": 0,
+        "bundle_expected": 0,
+        "target_active": 0
+      },
+      "collector_samples_during_input": 300,
+      "collector_target_active_false": 0,
+      "collector_frontmost_other_pid": 0,
+      "faults": []
+    },
+    {
+      "label": "diagnostic-2",
+      "frame_count": 175,
+      "guard_component_false_counts": {
+        "app_exists": 0,
+        "bundle_expected": 0,
+        "target_active": 0
+      },
+      "collector_samples_during_input": 300,
+      "collector_target_active_false": 0,
+      "collector_frontmost_other_pid": 0,
+      "faults": []
+    },
+    {
+      "label": "diagnostic-3",
+      "frame_count": 174,
+      "guard_component_false_counts": {
+        "app_exists": 0,
+        "bundle_expected": 0,
+        "target_active": 0
+      },
+      "collector_samples_during_input": 300,
+      "collector_target_active_false": 0,
+      "collector_frontmost_other_pid": 0,
+      "faults": []
+    }
+  ],
+  "qualified": false,
+  "root_conclusion": "All six probe interactions passed; individual components did not reproduce the transient baseline guard failure. Existing failed guards remain invalid. Dynamic API discrepancy hypothesis remains unproven.",
+  "original_source_sha256": "4865268d5b67ba28df15fa9e55a7041a0042792aa0b100c4f17d73b0f560cb75",
+  "diagnostic_source_sha256": "1465dc41bf89ca810a72b2fead347d2fa828d4303ab4d7262b3f3d361a17d125"
+}

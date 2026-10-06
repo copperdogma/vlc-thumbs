@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "run": "control-complete-frame-v3-002",
+  "scope": "Observer-v3 and prospective frontmost-PID/bundle policy applicability controls only; no latency qualification",
+  "qualified_for_performance": false,
+  "positive_controls": {
+    "completed": true,
+    "count": 4,
+    "records": ["template-left", "template-right", "diagnostic-0", "diagnostic-1"],
+    "probe_exit_codes": [0, 0, 0, 0],
+    "faults": 0
+  },
+  "known_foreground_negative": {
+    "probe_rejected": true,
+    "probe_exit_code": 1,
+    "expected_probe_rejection": "target_inactive_or_crop_left_owned_main_window",
+    "independent_frames_observed": 39,
+    "finder_foreground_frames": 1,
+    "finder_pid": 759,
+    "finder_bundle_id": "com.apple.finder",
+    "foreign_activation_and_target_deactivation_observed": true,
+    "restore_owned_target_action_succeeded": true,
+    "notification_delivery_proven": true
+  },
+  "integrity_unchanged": true,
+  "completed_interactions": true,
+  "candidate": "072539 unchanged; this is observer/control applicability, not candidate performance proof",
+  "raw_result": "work/validation/story002/control-complete-frame-v3-002/raw/results.json",
+  "prior_setup_failure": {
+    "record": "ordinary-control-complete-frame-v3-setup-failure.json",
+    "user_context": "Cam confirmed they had been using mouse/keyboard during the actual Codex foreground transitions, then finished. This contextualizes those transitions only and does not explain prior unexplained false-guard observations."
+  },
+  "next_stage": {
+    "status": "running",
+    "run": "work/validation/story002/control-pilot-complete-strip-002/raw",
+    "scope": "Balanced eight-per-arm method pilot; no outcome available yet"
+  }
+}

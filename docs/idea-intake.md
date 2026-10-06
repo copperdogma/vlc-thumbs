@@ -106,3 +106,62 @@ point. So just when we get around to the design, that's what I'm after.”
 Design intent: moment annotations are brief labels of one to three words.
 Design entry, markers and hover presentation around that scale. This is a
 content/design preference; no hard word-count validator is requested.
+
+
+## Initial build authorization after disk check — 2026-10-03
+
+Cam: “Okay, whatever. Just try the initial build like you were planning to do
+and we'll see what happens. If I don't have enough space, we'll just delete the
+build artifacts and we'll figure it out.”
+
+This supersedes the earlier capacity deferral: attempt the unmodified build in
+a disposable project-owned workspace, monitor free space, and remove that
+attempt's generated workspace if disk runs short. Preserve pristine source,
+project files, logs and unrelated data. The earlier 30 GiB suggestion was an
+unmeasured planning allowance, not a demonstrated VLC requirement.
+
+## Feature planning request — 2026-10-04
+
+Cam: “Go for it. Deep dive and planning out the work. Make it into one story
+for thumbnails and one for bookmarks, I'd think.”
+
+Plan two complete user-facing feature stories, supported by source/build and
+bounded feasibility evidence. Keep implementation in spec/stories/ADRs and
+preserve the short-label intent. This request authorizes planning, not a new
+feature implementation, commit or push.
+
+## 2026-10-04 — MVP preview sampling clarification
+
+> As a MVP we could just use keyframes. It’s not like the requirement was
+> “render every single frame at every single point on the timeline”. It’s just
+> a way to get a sense of what’s around there so you can find the general spot
+> on the timeline you’re after. If keyframes are too coarse we can render
+> additional ones at greater expense.
+
+This authorizes keyframe-first MVP sampling. The Ideal remains the North Star;
+implementation and acceptance tradeoffs are recorded in spec:2, ADR-002 and
+Story 002. No extra sampling is required before trying the MVP.
+
+
+### 2026-10-04 — preview responsiveness MVP acceptance
+
+After trying the native previews, Cam approved changing the initial engineering
+criteria to150ms cached-preview p95 and200ms initial time/loading p95. Disk
+previews150ms and uncached images1s stay unchanged. Original100ms failures are
+preserved; this changes the MVP contract, not the implementation-free Ideal.
+
+## NAS preview follow-up story request — 2026-10-05
+
+After reviewing the large SMB-file investigation and proposed reusable worker,
+cache, preparation and error-state changes, Cam said:
+
+> I like all of that. Write that up as a new story.
+
+Cam proposed prioritizing the current hover, then expanding in both directions,
+letting active thumbnail work finish, and filling from the beginning when there
+is no hover. Cam also requested inspiration from established players without
+copying their choices uncritically, and asked for stored thumbnails to be reused
+after closing and reopening a video. Story 004 records that direction, finite
+sparse coverage, persistent disposable-cache retention and explicit identity/
+lifecycle decisions. This request creates the story; implementation has not
+started. Original Story 002 validation remains scoped historical evidence.

@@ -1,0 +1,16 @@
+Window: "known-h264.mp4", App: VLC Timeline Development.
+0 standard window known-h264.mp4, Secondary Actions: Raise, URL: file:///Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/probes/thumbnail-plan/known-h264.mp4
+	1 text known-h264.mp4
+2 menu bar
+	3 VLC Timeline Development
+	4 File
+	5 Edit
+	6 View
+	7 Playback
+	8 Audio
+	9 Video
+	10 Subtitles
+	11 Window
+	12 Help
+
+The focused UI element is 0 standard window known-h264.mp4, Secondary Actions: Raise, URL: file:///Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/probes/thumbnail-plan/known-h264.mp4

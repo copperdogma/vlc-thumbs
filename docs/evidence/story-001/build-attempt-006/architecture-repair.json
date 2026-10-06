@@ -1,0 +1,34 @@
+{
+  "reason": "Intel Python made Meson host_machine x86_64 despite clang arm64 flags; dav1d produced arm64 code referring to x86 assembly symbols.",
+  "python": "/usr/bin/python3 (3.9.6, observed arm64)",
+  "rebuild_packages": [
+    "freetype",
+    "bluray",
+    "harfbuzz",
+    "fribidi",
+    "librist",
+    "dav1d"
+  ],
+  "removed_installed_archives_and_pkgconfig": [
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/libfreetype.a",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/pkgconfig/freetype2.pc",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/libbluray.a",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/pkgconfig/libbluray.pc",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/libharfbuzz.a",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/libharfbuzz-subset.a",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/libharfbuzz-raster.a",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/libharfbuzz-vector.a",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/libharfbuzz-gpu.a",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/pkgconfig/harfbuzz-raster.pc",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/pkgconfig/harfbuzz-vector.pc",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/pkgconfig/harfbuzz-gpu.pc",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/pkgconfig/harfbuzz.pc",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/pkgconfig/harfbuzz-subset.pc",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/libfribidi.a",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/pkgconfig/fribidi.pc",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/librist.a",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/pkgconfig/librist.pc",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/libdav1d.a",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/pkgconfig/dav1d.pc"
+  ]
+}

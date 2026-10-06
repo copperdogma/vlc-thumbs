@@ -1,0 +1,242 @@
+diff --git a/modules/gui/macosx/Makefile.am b/modules/gui/macosx/Makefile.am
+index 8cd23c2..ba61ef5 100644
+--- a/modules/gui/macosx/Makefile.am
++++ b/modules/gui/macosx/Makefile.am
+@@ -1,6 +1,6 @@
+ SUFFIXES += .xib
+ 
+-libmacosx_plugin_la_OBJCFLAGS = $(AM_OBJCFLAGS) -fobjc-exceptions -fobjc-arc
++libmacosx_plugin_la_OBJCFLAGS = $(AM_OBJCFLAGS) -fobjc-exceptions -fobjc-arc -mmacosx-version-min=11.0
+ libmacosx_plugin_la_LDFLAGS = $(AM_LDFLAGS) -rpath '$(guidir)' \
+ 	-Wl,-framework,Cocoa -Wl,-framework,CoreServices \
+ 	-Wl,-framework,AVFoundation -Wl,-framework,CoreMedia -Wl,-framework,IOKit \
+@@ -13,6 +13,19 @@ libmacosx_plugin_la_LDFLAGS += -Wl,-framework,Sparkle
+ endif
+ 
+ libmacosx_plugin_la_SOURCES = \
++	gui/macosx/VLCThumbnailService.h \
++	gui/macosx/VLCThumbnailService.m \
++	gui/macosx/VLCThumbnailWorker.h \
++	gui/macosx/VLCThumbnailWorker.m \
++	gui/macosx/VLCThumbnailCache.h \
++	gui/macosx/VLCThumbnailCache.m \
++	gui/macosx/VLCThumbnailScheduler.h \
++	gui/macosx/VLCThumbnailScheduler.m \
++	gui/macosx/VLCTimelineContext.h \
++	gui/macosx/VLCTimelineContext.m \
++	gui/macosx/VLCTimelineGeometry.h \
++	gui/macosx/VLCTimelineInteractionController.h \
++	gui/macosx/VLCTimelineInteractionController.m \
+ 	gui/macosx/helpers.h \
+ 	gui/macosx/VLCAboutWindowController.h gui/macosx/VLCAboutWindowController.m \
+ 	gui/macosx/VLCAddonListItem.h gui/macosx/VLCAddonListItem.m \
+diff --git a/modules/gui/macosx/UI/SimplePreferences.xib b/modules/gui/macosx/UI/SimplePreferences.xib
+index a05e65c..caeacd2 100644
+--- a/modules/gui/macosx/UI/SimplePreferences.xib
++++ b/modules/gui/macosx/UI/SimplePreferences.xib
+@@ -66,6 +66,7 @@
+                 <outlet property="intf_continueplaybackLabel" destination="3919" id="ZJO-qY-UCq"/>
+                 <outlet property="intf_continueplaybackPopup" destination="3920" id="dZ3-SI-SCp"/>
+                 <outlet property="intf_enableNotificationsCheckbox" destination="3564" id="IIA-ce-g61"/>
++                <outlet property="intf_timelinePreviewsCheckbox" destination="codex-timeline-previews" id="codex-timeline-outlet"/>
+                 <outlet property="intf_enableluahttpCheckbox" destination="lpZ-9y-Vfn" id="ieR-ZH-mcd"/>
+                 <outlet property="intf_generalSettingsBox" destination="kup-aY-Wqq" id="eyf-Su-MYG"/>
+                 <outlet property="intf_languageLabel" destination="3892" id="klM-r2-XKf"/>
+@@ -493,6 +494,16 @@ Gw
+                                     <action selector="interfaceSettingChanged:" target="-2" id="qeG-Iu-Gee"/>
+                                 </connections>
+                             </popUpButton>
++                            <button verticalHuggingPriority="750" mirrorLayoutDirectionWhenInternationalizing="always" translatesAutoresizingMaskIntoConstraints="NO" id="codex-timeline-previews">
++                                <rect key="frame" x="16" y="-20" width="280" height="18"/>
++                                <buttonCell key="cell" type="check" title="Show timeline thumbnail previews" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="codex-timeline-previews-cell">
++                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
++                                    <font key="font" metaFont="system"/>
++                                </buttonCell>
++                                <connections>
++                                    <action selector="interfaceSettingChanged:" target="-2" id="codex-timeline-previews-action"/>
++                                </connections>
++                            </button>
+                         </subviews>
+                         <constraints>
+                             <constraint firstAttribute="trailing" secondItem="3911" secondAttribute="trailing" constant="19" id="1MP-Ce-ABs"/>
+@@ -506,7 +517,10 @@ Gw
+                         </constraints>
+                     </view>
+                     <constraints>
+-                        <constraint firstAttribute="bottom" secondItem="3911" secondAttribute="bottom" constant="11" id="PWH-HQ-Y6B"/>
++                            <constraint firstItem="codex-timeline-previews" firstAttribute="top" secondItem="3911" secondAttribute="bottom" constant="13" id="codex-timeline-top"/>
++                            <constraint firstItem="codex-timeline-previews" firstAttribute="leading" secondItem="3564" secondAttribute="leading" id="codex-timeline-leading"/>
++                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="codex-timeline-previews" secondAttribute="trailing" constant="17" id="codex-timeline-trailing"/>
++                            <constraint firstAttribute="bottom" secondItem="codex-timeline-previews" secondAttribute="bottom" constant="11" id="PWH-HQ-Y6B"/>
+                     </constraints>
+                 </box>
+                 <box borderType="line" title="Privacy / Network Interaction" translatesAutoresizingMaskIntoConstraints="NO" id="2318">
+diff --git a/modules/gui/macosx/VLCControlsBarCommon.m b/modules/gui/macosx/VLCControlsBarCommon.m
+index 9d4ff14..a99068b 100644
+--- a/modules/gui/macosx/VLCControlsBarCommon.m
++++ b/modules/gui/macosx/VLCControlsBarCommon.m
+@@ -23,6 +23,7 @@
+  *****************************************************************************/
+ 
+ #import "VLCControlsBarCommon.h"
++#import "VLCTimelineInteractionController.h"
+ #import "VLCMain.h"
+ #import "VLCCoreInteraction.h"
+ #import "VLCMainMenu.h"
+@@ -43,6 +44,7 @@
+     NSImage * _playImage;
+     NSImage * _pressedPlayImage;
+     BOOL _paused;
++    VLCTimelineInteractionController *_timelineInteraction;
+ 
+     NSTimeInterval last_fwd_event;
+     NSTimeInterval last_bwd_event;
+@@ -89,9 +91,10 @@
+     [[self.forwardButton cell] accessibilitySetOverrideValue:_NS("Seek forward") forAttribute:NSAccessibilityDescriptionAttribute];
+     [[self.forwardButton cell] accessibilitySetOverrideValue:[self.forwardButton toolTip] forAttribute:NSAccessibilityTitleAttribute];
+ 
+-    [self.timeSlider setToolTip: _NS("Position")];
++    [self.timeSlider setToolTip:_NS("Position")];
++    _timelineInteraction = [[VLCTimelineInteractionController alloc] initWithSlider:self.timeSlider];
+     [[self.timeSlider cell] accessibilitySetOverrideValue:_NS("Playback position") forAttribute:NSAccessibilityDescriptionAttribute];
+-    [[self.timeSlider cell] accessibilitySetOverrideValue:[self.timeSlider toolTip] forAttribute:NSAccessibilityTitleAttribute];
++    [[self.timeSlider cell] accessibilitySetOverrideValue:_NS("Position") forAttribute:NSAccessibilityTitleAttribute];
+     if (_darkInterface)
+         [self.timeSlider setSliderStyleDark];
+ 
+diff --git a/modules/gui/macosx/VLCFSPanelController.m b/modules/gui/macosx/VLCFSPanelController.m
+index d200071..5e11726 100644
+--- a/modules/gui/macosx/VLCFSPanelController.m
++++ b/modules/gui/macosx/VLCFSPanelController.m
+@@ -28,8 +28,10 @@
+ #import "VLCCoreInteraction.h"
+ #import "CompatibilityFixes.h"
+ #import "VLCMain.h"
++#import "VLCTimelineInteractionController.h"
+ 
+ @interface VLCFSPanelController () {
++    VLCTimelineInteractionController *_timelineInteraction;
+     BOOL _isCounting;
+     BOOL _isFadingIn;
+ 
+@@ -106,6 +108,7 @@ static NSString *kAssociatedFullscreenRect = @"VLCFullscreenAssociatedWindowRect
+ #endif
+ 
+     [self setupControls];
++    _timelineInteraction = [[VLCTimelineInteractionController alloc] initWithSlider:self.timeSlider];
+ }
+ 
+ #define setupButton(target, title, desc)                                              \
+@@ -349,6 +352,7 @@ static NSString *kAssociatedFullscreenRect = @"VLCFullscreenAssociatedWindowRect
+ 
+ - (void)fadeOut
+ {
++    [_timelineInteraction hide];
+     [NSAnimationContext runAnimationGroup:^(NSAnimationContext * _Nonnull context) {
+         [context setDuration:0.4f];
+         [[self.window animator] setAlphaValue:0.0f];
+@@ -394,6 +398,7 @@ static NSString *kAssociatedFullscreenRect = @"VLCFullscreenAssociatedWindowRect
+ 
+ - (void)setNonActive
+ {
++    [_timelineInteraction hide];
+     [self.window orderOut:self];
+ }
+ 
+diff --git a/modules/gui/macosx/VLCInputManager.m b/modules/gui/macosx/VLCInputManager.m
+index bba1d93..c75e23a 100644
+--- a/modules/gui/macosx/VLCInputManager.m
++++ b/modules/gui/macosx/VLCInputManager.m
+@@ -20,6 +20,7 @@
+  *****************************************************************************/
+ 
+ #import "VLCInputManager.h"
++#import "VLCTimelineContext.h"
+ 
+ #include <vlc_url.h>
+ 
+@@ -99,7 +100,9 @@ static int InputEvent(vlc_object_t *p_this, const char *psz_var,
+                     [[[VLCMain sharedInstance] currentMediaInfoPanel] updateStatistics];
+                 });
+                 break;
++            case INPUT_EVENT_LENGTH:
+             case INPUT_EVENT_ES:
++                [[VLCTimelineContext sharedContext] performSelectorOnMainThread:@selector(refresh) withObject:nil waitUntilDone:NO];
+                 break;
+             case INPUT_EVENT_TELETEXT:
+                 break;
+@@ -247,6 +250,7 @@ static int InputEvent(vlc_object_t *p_this, const char *psz_var,
+ 
+ - (void)inputThreadChanged
+ {
++    [[VLCTimelineContext sharedContext] invalidate];
+     if (p_current_input) {
+         var_DelCallback(p_current_input, "intf-event", InputEvent, (__bridge void *)self);
+         vlc_object_release(p_current_input);
+diff --git a/modules/gui/macosx/VLCSimplePrefsController.h b/modules/gui/macosx/VLCSimplePrefsController.h
+index ba4c5db..cd123ad 100644
+--- a/modules/gui/macosx/VLCSimplePrefsController.h
++++ b/modules/gui/macosx/VLCSimplePrefsController.h
+@@ -115,6 +115,7 @@
+ // intf pane - behaviour box
+ @property (readwrite, weak) IBOutlet NSBox *intf_playbackBehaviourBox;
+ @property (readwrite, weak) IBOutlet NSButton *intf_enableNotificationsCheckbox;
++@property (readwrite, weak) IBOutlet NSButton *intf_timelinePreviewsCheckbox;
+ @property (readwrite, weak) IBOutlet NSTextField *intf_pauseitunesLabel;
+ @property (readwrite, weak) IBOutlet NSPopUpButton *intf_pauseitunesPopup;
+ 
+diff --git a/modules/gui/macosx/VLCSimplePrefsController.m b/modules/gui/macosx/VLCSimplePrefsController.m
+index 261fdde..9cc23d2 100644
+--- a/modules/gui/macosx/VLCSimplePrefsController.m
++++ b/modules/gui/macosx/VLCSimplePrefsController.m
+@@ -336,6 +336,7 @@ create_toolbar_item(NSString *itemIdent, NSString *name, NSString *desc, NSStrin
+ 
+     [_intf_playbackBehaviourBox setTitle:_NS("Playback behaviour")];
+     [_intf_enableNotificationsCheckbox setTitle: _NS("Enable notifications on playlist item change")];
++    [_intf_timelinePreviewsCheckbox setTitle: _NS("Show timeline thumbnail previews")];
+     [_intf_pauseitunesLabel setStringValue:_NS("Control external music players")];
+ 
+     [_intf_networkBox setTitle: _NS("Privacy / Network Interaction")];
+@@ -592,6 +593,7 @@ static inline const char * __config_GetLabel(vlc_object_t *p_this, const char *p
+ 
+     BOOL growlEnabled = [self hasModule:@"growl" inConfig:@"control"];
+     [_intf_enableNotificationsCheckbox setState: growlEnabled ? NSOnState : NSOffState];
++    [self setupButton:_intf_timelinePreviewsCheckbox forBoolValue: "macosx-timeline-previews"];
+ 
+     if (config_GetInt(p_intf, "macosx-interfacestyle")) {
+         [_intf_style_darkButtonCell setState: YES];
+@@ -933,6 +935,7 @@ static inline void save_string_list(intf_thread_t * p_intf, id object, const cha
+         config_PutInt(p_intf, "macosx-appleremote-sysvol", [_intf_appleremote_sysvolCheckbox state]);
+         config_PutInt(p_intf, "macosx-statusicon", [_intf_statusIconCheckbox state]);
+         config_PutInt(p_intf, "macosx-mediakeys", [_intf_mediakeysCheckbox state]);
++        config_PutInt(p_intf, "macosx-timeline-previews", [_intf_timelinePreviewsCheckbox state]);
+         config_PutInt(p_intf, "macosx-interfacestyle", [_intf_style_darkButtonCell state]);
+ 
+         [self changeModule:@"growl" inConfig:@"control" enable:[_intf_enableNotificationsCheckbox state] == NSOnState];
+diff --git a/modules/gui/macosx/VLCVoutView.m b/modules/gui/macosx/VLCVoutView.m
+index 658c193..f17a286 100644
+--- a/modules/gui/macosx/VLCVoutView.m
++++ b/modules/gui/macosx/VLCVoutView.m
+@@ -87,7 +87,8 @@
+ {
+     // Draw black area in case first frame is not drawn yet
+     [[NSColor blackColor] setFill];
+-    NSRectFill(rect);
++    // Modern AppKit dirty rectangles may extend beyond the video view.
++    NSRectFill(NSIntersectionRect(rect, self.bounds));
+ }
+ 
+ - (void)addVoutLayer:(CALayer *)aLayer
+diff --git a/modules/gui/macosx/macosx.m b/modules/gui/macosx/macosx.m
+index 3c93acf..ad30d76 100644
+--- a/modules/gui/macosx/macosx.m
++++ b/modules/gui/macosx/macosx.m
+@@ -161,6 +161,8 @@ vlc_module_begin()
+         add_bool("macosx-show-playback-buttons", false, JUMPBUTTONS_TEXT, JUMPBUTTONS_LONGTEXT, false)
+         add_bool("macosx-show-playmode-buttons", false, PLAYMODEBUTTONS_TEXT, PLAYMODEBUTTONS_LONGTEXT, false)
+         add_bool("macosx-show-effects-button", false, EFFECTSBUTTON_TEXT, EFFECTSBUTTON_LONGTEXT, false)
++        add_bool("macosx-timeline-previews", true, N_("Show timeline thumbnail previews"),
++                 N_("Show nearby video keyframes when hovering over the playback timeline."), false)
+         add_integer_with_range("macosx-max-volume", 125, 60, 200, VOLUME_MAX_TEXT, VOLUME_MAX_TEXT, true)
+         add_bool("macosx-large-text", false, LARGE_LISTFONT_TEXT, LARGE_LISTFONT_TEXT, false)
+ 

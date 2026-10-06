@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "run": "control-frontmost-v2-001",
+  "scope": "Prospective frontmost-PID-and-bundle guard applicability, baseline only; no latency qualification",
+  "qualified": false,
+  "observer_contract": "Documented key recipient: expected frontmost PID plus bundle identifier, alongside retained OS process existence/kill(0), object PID, bundle, not-terminated, CG AX, crop, pixel and nonce routing checks. Legacy active-and-visible checks remain a distinct prospective policy; no prior failure is waived or attributed.",
+  "positive_controls": {
+    "count": 4,
+    "pixel_self_test": "5 passed",
+    "callbacks": 696,
+    "failures": 0,
+    "legacy_disagreements": 0
+  },
+  "deliberate_foreground_loss_negative": {
+    "known_foreground_app": "Finder",
+    "pid": 759,
+    "bundle_id": "com.apple.finder",
+    "foreign_frames_observed": 2,
+    "activation_and_target_deactivation_notifications": true,
+    "foreground_change_actions_succeeded": true,
+    "negative_probe_exit_code": 1,
+    "interpretation": "Negative control was rejected by the prospective guard with independent Finder PID/bundle and notification evidence. This tests the new observer policy only; it does not explain prior failures."
+  },
+  "recorder_exit_code": 0,
+  "integrity_unchanged": true,
+  "input_versioning": {
+    "prospective_v2": [
+      "tests/story-002/control_response_probe.m",
+      "tests/story-002/baseline_control_trial.py"
+    ],
+    "frozen_v1": [
+      "work/validation/story002/control-response-probe-pre-frontmost-v1.m",
+      "work/validation/story002/baseline-control-trial-pre-frontmost-v1.py"
+    ]
+  },
+  "raw_result": "work/validation/story002/control-frontmost-v2-001/raw/results.json"
+}

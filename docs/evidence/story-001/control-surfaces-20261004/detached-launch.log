@@ -1,0 +1,99 @@
+[0000000105336260] main libvlc: Running vlc with the default interface. Use 'cvlc' to use vlc without interface.
+[00000079f4fc58f0] videotoolbox decoder: Using Video Toolbox to decode 'h264'
+[00000079f4fc58f0] videotoolbox decoder: vt cvpx chroma: 420v
+[00000079f4fc58f0] videotoolbox decoder: Raising max DPB to 3
+[00000079f4fc58f0] videotoolbox decoder: Using Video Toolbox to decode 'h264'
+[00000079f4fc58f0] videotoolbox decoder: vt cvpx chroma: 420v
+[00000079f4fc58f0] videotoolbox decoder: Raising max DPB to 3
+[00000079f30becf0] videotoolbox decoder: Using Video Toolbox to decode 'h264'
+[00000079f30becf0] videotoolbox decoder: vt cvpx chroma: 420v
+[00000079f30becf0] videotoolbox decoder: Raising max DPB to 3
+[00000079f376b4f0] videotoolbox decoder: Using Video Toolbox to decode 'h264'
+[00000079f376b4f0] videotoolbox decoder: vt cvpx chroma: 420v
+[00000079f376b4f0] videotoolbox decoder: Raising max DPB to 3
+[00000079f30be8f0] videotoolbox decoder: Using Video Toolbox to decode 'h264'
+[00000079f30be8f0] videotoolbox decoder: vt cvpx chroma: 420v
+[00000079f30be8f0] videotoolbox decoder: Raising max DPB to 3
+[00000079f4fc58f0] videotoolbox decoder: Using Video Toolbox to decode 'h264'
+[00000079f4fc58f0] videotoolbox decoder: vt cvpx chroma: 420v
+[00000079f4fc58f0] videotoolbox decoder: Raising max DPB to 3
+[00000079f30bf4f0] videotoolbox decoder: Using Video Toolbox to decode 'h264'
+[00000079f30bf4f0] videotoolbox decoder: vt cvpx chroma: 420v
+[00000079f30bf4f0] videotoolbox decoder: Raising max DPB to 3
+[00000079f30bf4f0] videotoolbox decoder: Using Video Toolbox to decode 'h264'
+[00000079f30bf4f0] videotoolbox decoder: vt cvpx chroma: 420v
+[00000079f30bf4f0] videotoolbox decoder: Raising max DPB to 3
+[00000079f30bf4f0] videotoolbox decoder: Using Video Toolbox to decode 'h264'
+[00000079f30bf4f0] videotoolbox decoder: vt cvpx chroma: 420v
+[00000079f30bf4f0] videotoolbox decoder: Raising max DPB to 3
+[00000079f4fc58f0] videotoolbox decoder: Using Video Toolbox to decode 'h264'
+[00000079f4fc58f0] videotoolbox decoder: vt cvpx chroma: 420v
+[00000079f4fc58f0] videotoolbox decoder: Raising max DPB to 3
+[00000079f4fc58f0] videotoolbox decoder: Using Video Toolbox to decode 'h264'
+[00000079f4fc58f0] videotoolbox decoder: vt cvpx chroma: 420v
+[00000079f4fc58f0] videotoolbox decoder: Raising max DPB to 3
+[00000079f30bf8f0] videotoolbox decoder: Using Video Toolbox to decode 'h264'
+[00000079f30bf8f0] videotoolbox decoder: vt cvpx chroma: 420v
+[00000079f30bf8f0] videotoolbox decoder: Raising max DPB to 3
+[00000079f4fc58f0] videotoolbox decoder: Using Video Toolbox to decode 'h264'
+[00000079f4fc58f0] videotoolbox decoder: vt cvpx chroma: 420v
+[00000079f4fc58f0] videotoolbox decoder: Raising max DPB to 3
+[00000079f30be8f0] videotoolbox decoder: Using Video Toolbox to decode 'h264'
+[00000079f30be8f0] videotoolbox decoder: vt cvpx chroma: 420v
+[00000079f30be8f0] videotoolbox decoder: Raising max DPB to 3
+[00000079f4fc58f0] videotoolbox decoder: Using Video Toolbox to decode 'h264'
+[00000079f4fc58f0] videotoolbox decoder: vt cvpx chroma: 420v
+[00000079f4fc58f0] videotoolbox decoder: Raising max DPB to 3
+[00000079f30becf0] videotoolbox decoder: Using Video Toolbox to decode 'h264'
+[00000079f30becf0] videotoolbox decoder: vt cvpx chroma: 420v
+[00000079f30becf0] videotoolbox decoder: Raising max DPB to 3
+[00000079f376b0f0] videotoolbox decoder: Using Video Toolbox to decode 'h264'
+[00000079f376b0f0] videotoolbox decoder: vt cvpx chroma: 420v
+[00000079f376b0f0] videotoolbox decoder: Raising max DPB to 3
+[00000079f30bf4f0] videotoolbox decoder: Using Video Toolbox to decode 'h264'
+[00000079f30bf4f0] videotoolbox decoder: vt cvpx chroma: 420v
+[00000079f30bf4f0] videotoolbox decoder: Raising max DPB to 3
+[00000079f30bf4f0] videotoolbox decoder: Using Video Toolbox to decode 'h264'
+[00000079f30bf4f0] videotoolbox decoder: vt cvpx chroma: 420v
+[00000079f30bf4f0] videotoolbox decoder: Raising max DPB to 3
+[00000079f30bf4f0] videotoolbox decoder: Using Video Toolbox to decode 'h264'
+[00000079f30bf4f0] videotoolbox decoder: vt cvpx chroma: 420v
+[00000079f30bf4f0] videotoolbox decoder: Raising max DPB to 3
+[00000079f31bbcf0] videotoolbox decoder: Using Video Toolbox to decode 'h264'
+[00000079f31bbcf0] videotoolbox decoder: vt cvpx chroma: 420v
+[00000079f31bbcf0] videotoolbox decoder: Raising max DPB to 3
+[00000079f30bf4f0] videotoolbox decoder: Using Video Toolbox to decode 'h264'
+[00000079f30bf4f0] videotoolbox decoder: vt cvpx chroma: 420v
+[00000079f30bf4f0] videotoolbox decoder: Raising max DPB to 3
+[00000079f31bb0f0] videotoolbox decoder: Using Video Toolbox to decode 'h264'
+[00000079f31bb0f0] videotoolbox decoder: vt cvpx chroma: 420v
+[00000079f31bb0f0] videotoolbox decoder: Raising max DPB to 3
+[00000079f30bfcf0] videotoolbox decoder: Using Video Toolbox to decode 'h264'
+[00000079f30bfcf0] videotoolbox decoder: vt cvpx chroma: 420v
+[00000079f30bfcf0] videotoolbox decoder: Raising max DPB to 3
+[00000079f31bacf0] videotoolbox decoder: Using Video Toolbox to decode 'h264'
+[00000079f31bacf0] videotoolbox decoder: vt cvpx chroma: 420v
+[00000079f31bacf0] videotoolbox decoder: Raising max DPB to 3
+[00000079f30be8f0] videotoolbox decoder: Using Video Toolbox to decode 'h264'
+[00000079f30be8f0] videotoolbox decoder: vt cvpx chroma: 420v
+[00000079f30be8f0] videotoolbox decoder: Raising max DPB to 3
+[00000079f31bb4f0] videotoolbox decoder: Using Video Toolbox to decode 'h264'
+[00000079f31bb4f0] videotoolbox decoder: vt cvpx chroma: 420v
+[00000079f31bb4f0] videotoolbox decoder: Raising max DPB to 3
+[00000079f31bb4f0] videotoolbox decoder: Using Video Toolbox to decode 'h264'
+[00000079f31bb4f0] videotoolbox decoder: vt cvpx chroma: 420v
+[00000079f31bb4f0] videotoolbox decoder: Raising max DPB to 3
+[00000079f31bb4f0] videotoolbox decoder: Using Video Toolbox to decode 'h264'
+[00000079f31bb4f0] videotoolbox decoder: vt cvpx chroma: 420v
+[00000079f31bb4f0] videotoolbox decoder: Raising max DPB to 3
+[00000079f31bb4f0] videotoolbox decoder: Using Video Toolbox to decode 'h264'
+[00000079f31bb4f0] videotoolbox decoder: vt cvpx chroma: 420v
+[00000079f31bb4f0] videotoolbox decoder: Raising max DPB to 3
+[00000079f31bb4f0] videotoolbox decoder: Using Video Toolbox to decode 'h264'
+[00000079f31bb4f0] videotoolbox decoder: vt cvpx chroma: 420v
+[00000079f31bb4f0] videotoolbox decoder: Raising max DPB to 3
+[00000079f31bb4f0] videotoolbox decoder: Using Video Toolbox to decode 'h264'
+[00000079f31bb4f0] videotoolbox decoder: vt cvpx chroma: 420v
+[00000079f31bb4f0] videotoolbox decoder: Raising max DPB to 3
+[000000010533cb60] auhal audio output error: AudioObjectAddPropertyListener failed, device id 75, prop: [atfp], OSStatus: 1852797029
+[000000010533cb60] auhal audio output error: AudioObjectAddPropertyListener failed, device id 87, prop: [atfp], OSStatus: 1852797029

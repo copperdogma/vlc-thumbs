@@ -1,0 +1,64 @@
+{
+  "candidate": "app-build-tracknumber-022512.json",
+  "raw": "work/validation/story002/continuous-hover-tracknumber-mp4-002/summary.json",
+  "raw_sha256": "eb6b3531cdfd5b64729cbd3db9a9cbb95002d55ee62c9c30e87246e3a2a00c67",
+  "scope": "Main-window paused native continuous-display settled-hover standard fixture trial",
+  "qualified": false,
+  "completed_collection": true,
+  "collection_error": null,
+  "phases": {
+    "miss": {
+      "attempts": 100,
+      "faulted_attempts": 0,
+      "visible_image_and_time_count": 100,
+      "time_caption_count": 100,
+      "percentile_qualification_eligible": true,
+      "image_and_time_p95_ms": 666.1649581510574,
+      "time_caption_p95_ms": 666.1649581510574,
+      "available_image_and_time_p95_ms_diagnostic_only": 666.1649581510574,
+      "available_time_caption_p95_ms_diagnostic_only": 666.1649581510574,
+      "image_and_time_target_ms": 1000,
+      "time_caption_target_ms": 200,
+      "meets_targets": false
+    },
+    "memory": {
+      "attempts": 100,
+      "faulted_attempts": 0,
+      "visible_image_and_time_count": 100,
+      "time_caption_count": 100,
+      "percentile_qualification_eligible": true,
+      "image_and_time_p95_ms": 648.1419582851231,
+      "time_caption_p95_ms": 648.1419582851231,
+      "available_image_and_time_p95_ms_diagnostic_only": 648.1419582851231,
+      "available_time_caption_p95_ms_diagnostic_only": 648.1419582851231,
+      "image_and_time_target_ms": 150,
+      "time_caption_target_ms": 200,
+      "meets_targets": false
+    },
+    "disk": {
+      "attempts": 100,
+      "faulted_attempts": 0,
+      "visible_image_and_time_count": 100,
+      "time_caption_count": 100,
+      "percentile_qualification_eligible": true,
+      "image_and_time_p95_ms": 722.1359582617879,
+      "time_caption_p95_ms": 722.1359582617879,
+      "available_image_and_time_p95_ms_diagnostic_only": 722.1359582617879,
+      "available_time_caption_p95_ms_diagnostic_only": 722.1359582617879,
+      "image_and_time_target_ms": 150,
+      "time_caption_target_ms": 200,
+      "meets_targets": false
+    }
+  },
+  "attempt_count": 452,
+  "faulted_attempts": 0,
+  "integrity": {
+    "source_unchanged": true,
+    "module_unchanged": true,
+    "probe_unchanged": true,
+    "pointer_unchanged": true,
+    "app_unchanged": true
+  },
+  "system_context": "work/validation/story002/continuous-hover-tracknumber-mp4-002/system-context.json",
+  "interpretation": "Complete correctness/focus/state observations; literal visible latency fails approved limits. Host contention plausible, unproven. Full MKV timing deferred for bounded diagnostic."
+}

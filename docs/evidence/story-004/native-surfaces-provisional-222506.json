@@ -1,0 +1,311 @@
+{
+  "build_manifest": "work/validation/story002/app-build-20261005T222506.861213Z.json",
+  "scope": "Actual-pointer current222506 functional hover on four native surfaces plus MP4/MKV main and CLI-off; no absolute latency or general-host guarantee",
+  "surfaces": {
+    "detached": {
+      "raw": "work/validation/story004/native-detached-provisional-002/results.json",
+      "sha256": "b7e2de24a5afbc18af8378c787e888434e6b94a9805d2d7a9884e8631b77bd61",
+      "passed": true,
+      "leave_hidden": true,
+      "points": [
+        {
+          "label": "left",
+          "actual_us": 0,
+          "requested_us": 0,
+          "verification_pending": false,
+          "error": null
+        },
+        {
+          "label": "middle",
+          "actual_us": 44000000,
+          "requested_us": 45019000,
+          "verification_pending": false,
+          "error": null
+        },
+        {
+          "label": "right",
+          "actual_us": 88000000,
+          "requested_us": 90037999,
+          "verification_pending": false,
+          "error": null
+        },
+        {
+          "label": "return-middle",
+          "actual_us": 44000000,
+          "requested_us": 45019000,
+          "verification_pending": false,
+          "error": null
+        },
+        {
+          "label": "above",
+          "actual_us": 44000000,
+          "requested_us": 45019000,
+          "verification_pending": false,
+          "error": null
+        },
+        {
+          "label": "below",
+          "actual_us": 44000000,
+          "requested_us": 45019000,
+          "verification_pending": false,
+          "error": null
+        }
+      ],
+      "reentry_actual_us": 54000000,
+      "visual_inspection": "Middle screenshot inspected; image/hover time and actual keyframe time visible, paused controls intact."
+    },
+    "native-fullscreen": {
+      "raw": "work/validation/story004/native-fullscreen-provisional-001/results.json",
+      "sha256": "849a628cc34be3321d50837422c0254dd935ae324fcb19cb252a145e31d7246b",
+      "passed": true,
+      "leave_hidden": true,
+      "points": [
+        {
+          "label": "left",
+          "actual_us": 0,
+          "requested_us": 0,
+          "verification_pending": false,
+          "error": null
+        },
+        {
+          "label": "middle",
+          "actual_us": 44000000,
+          "requested_us": 45124927,
+          "verification_pending": false,
+          "error": null
+        },
+        {
+          "label": "right",
+          "actual_us": 88000000,
+          "requested_us": 90037999,
+          "verification_pending": false,
+          "error": null
+        },
+        {
+          "label": "return-middle",
+          "actual_us": 44000000,
+          "requested_us": 45124927,
+          "verification_pending": false,
+          "error": null
+        },
+        {
+          "label": "above",
+          "actual_us": 44000000,
+          "requested_us": 45124927,
+          "verification_pending": false,
+          "error": null
+        },
+        {
+          "label": "below",
+          "actual_us": 44000000,
+          "requested_us": 45124927,
+          "verification_pending": false,
+          "error": null
+        }
+      ],
+      "reentry_actual_us": 54000000,
+      "visual_inspection": "Middle screenshot inspected; image/hover time and actual keyframe time visible, paused controls intact."
+    },
+    "custom-fullscreen": {
+      "raw": "work/validation/story004/custom-fullscreen-provisional-001/results.json",
+      "sha256": "d400b7b4fdb4a610c164d5f4fdcc0037ad2c84931e89a5da14ee50bd9205dd18",
+      "passed": true,
+      "leave_hidden": true,
+      "points": [
+        {
+          "label": "left",
+          "actual_us": 0,
+          "requested_us": 0,
+          "verification_pending": false,
+          "error": null
+        },
+        {
+          "label": "middle",
+          "actual_us": 44000000,
+          "requested_us": 45124927,
+          "verification_pending": false,
+          "error": null
+        },
+        {
+          "label": "right",
+          "actual_us": 88000000,
+          "requested_us": 90037999,
+          "verification_pending": false,
+          "error": null
+        },
+        {
+          "label": "return-middle",
+          "actual_us": 44000000,
+          "requested_us": 45124927,
+          "verification_pending": false,
+          "error": null
+        },
+        {
+          "label": "above",
+          "actual_us": 44000000,
+          "requested_us": 45124927,
+          "verification_pending": false,
+          "error": null
+        },
+        {
+          "label": "below",
+          "actual_us": 44000000,
+          "requested_us": 45124927,
+          "verification_pending": false,
+          "error": null
+        }
+      ],
+      "reentry_actual_us": 54000000,
+      "visual_inspection": "Middle screenshot inspected; image/hover time and actual keyframe time visible, paused controls intact."
+    },
+    "main-mp4": {
+      "raw": "work/validation/story004/native-main-provisional-001/summary.json",
+      "sha256": "e8423df66150c4f984eb305ee87bb80b3c15d63239a5a82a04edcfababd0d5b7",
+      "passed": true,
+      "requests": 10,
+      "rows": [
+        {
+          "label": "settled-0",
+          "passed": true,
+          "actual_us": 6000000,
+          "final_cache": "memory"
+        },
+        {
+          "label": "settled-1",
+          "passed": true,
+          "actual_us": 0,
+          "final_cache": "memory"
+        },
+        {
+          "label": "settled-2",
+          "passed": true,
+          "actual_us": 8000000,
+          "final_cache": "memory"
+        },
+        {
+          "label": "settled-3",
+          "passed": true,
+          "actual_us": 0,
+          "final_cache": "memory"
+        },
+        {
+          "label": "settled-4",
+          "passed": true,
+          "actual_us": 6000000,
+          "final_cache": "memory"
+        },
+        {
+          "label": "settled-5",
+          "passed": true,
+          "actual_us": 0,
+          "final_cache": "memory"
+        },
+        {
+          "label": "settled-6",
+          "passed": true,
+          "actual_us": 8000000,
+          "final_cache": "memory"
+        },
+        {
+          "label": "settled-7",
+          "passed": true,
+          "actual_us": 0,
+          "final_cache": "memory"
+        },
+        {
+          "label": "rapid-latest",
+          "passed": true,
+          "actual_us": 14000000,
+          "final_cache": "memory"
+        },
+        {
+          "label": "reenter-tall-target",
+          "passed": true,
+          "actual_us": 14000000,
+          "final_cache": "memory"
+        }
+      ]
+    },
+    "main-mkv": {
+      "raw": "work/validation/story004/native-main-mkv-provisional-001/summary.json",
+      "sha256": "5ea05bec47dda99df3524e082feef368361ccc09cdb784f893122d73a1b36c32",
+      "passed": true,
+      "requests": 10,
+      "rows": [
+        {
+          "label": "settled-0",
+          "passed": true,
+          "actual_us": 6000000,
+          "final_cache": "memory"
+        },
+        {
+          "label": "settled-1",
+          "passed": true,
+          "actual_us": 0,
+          "final_cache": "memory"
+        },
+        {
+          "label": "settled-2",
+          "passed": true,
+          "actual_us": 8000000,
+          "final_cache": "memory"
+        },
+        {
+          "label": "settled-3",
+          "passed": true,
+          "actual_us": 0,
+          "final_cache": "memory"
+        },
+        {
+          "label": "settled-4",
+          "passed": true,
+          "actual_us": 6000000,
+          "final_cache": "memory"
+        },
+        {
+          "label": "settled-5",
+          "passed": true,
+          "actual_us": 0,
+          "final_cache": "memory"
+        },
+        {
+          "label": "settled-6",
+          "passed": true,
+          "actual_us": 8000000,
+          "final_cache": "memory"
+        },
+        {
+          "label": "settled-7",
+          "passed": true,
+          "actual_us": 0,
+          "final_cache": "memory"
+        },
+        {
+          "label": "rapid-latest",
+          "passed": true,
+          "actual_us": 14000000,
+          "final_cache": "memory"
+        },
+        {
+          "label": "reenter-tall-target",
+          "passed": true,
+          "actual_us": 14000000,
+          "final_cache": "memory"
+        }
+      ]
+    }
+  },
+  "cli_off": {
+    "passed": true,
+    "raw": "work/validation/story004/native-cli-off-provisional-001/summary.json",
+    "feature_events": 0,
+    "helper_children": 0,
+    "inputs_unchanged": true,
+    "paused_time_unchanged": true
+  },
+  "retained_invalid_acquisitions": [
+    "native-detached-provisional-001: selected covered window; pointer reached different control.",
+    "Earlier native-fullscreen-sampled-001: hidden panel/reveal setup."
+  ],
+  "passed": true
+}

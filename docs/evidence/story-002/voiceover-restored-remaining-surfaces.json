@@ -1,0 +1,60 @@
+{
+  "candidate_manifest": "docs/evidence/story-002/app-build-original-presentation-restored-012354.json",
+  "scope": "Actual reader detached/native confirmation on restored rebuild. Main/custom retained actual-reader evidence applies to identical original controller/service inputs (205111); rejected-drawing four-surface result remains separately identified. Samples do not establish continuous speech silence or inherited slider increment seeking.",
+  "modes": {
+    "detached": {
+      "physical_hover_movements": 10,
+      "caption_frames": 11,
+      "unique_caption_pixel_hashes": 1,
+      "active_all": true,
+      "focused_roles": [
+        "AXSlider"
+      ],
+      "slider_state_unchanged": true,
+      "ax_state": "window_index 0\nslider 142.000 1020.000 1476.000 16.000 value 0 title Position\nwindow_index 1\nslider 213.000 1020.000 1330.000 16.000 value 0 title Position\nslider 1617.000 1021.000 50.000 14.000 value 256 title \n",
+      "preview_panel_count_each": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_unchanged": true,
+      "raw_records": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/reader-restored-detached-001/detached-hover.json"
+    },
+    "native": {
+      "physical_hover_movements": 10,
+      "caption_frames": 11,
+      "unique_caption_pixel_hashes": 1,
+      "active_all": true,
+      "focused_roles": [
+        "AXWindow"
+      ],
+      "slider_state_unchanged": true,
+      "ax_state": "window_index 0\nslider 641.000 925.000 445.000 17.000 value 0 title \nslider 671.000 957.000 82.000 14.000 value 256 title \nwindow_index 1\n",
+      "preview_panel_count_each": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_unchanged": true,
+      "raw_records": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/reader-restored-native-001/native-hover.json"
+    }
+  },
+  "unchanged_original_main_custom_proof": "docs/evidence/story-002/voiceover-hover-partial.json",
+  "reader_restored_off": true,
+  "welcome_dialog_restored": 1,
+  "applescript_control_unchanged": 0
+}

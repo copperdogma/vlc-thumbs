@@ -1,0 +1,73 @@
+{
+  "candidate": "app-build-tracknumber-022512.json",
+  "scope": "Native menu selected-track correspondence on owned original and reversed AVC Matroska fixtures; no latency qualification",
+  "checks": [
+    {
+      "native_menu_choice": "Video > Video Track > Track 1",
+      "source": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/story-002/two-tracks.mkv",
+      "video_ordinal": 0,
+      "track_number": 1,
+      "actual_keyframe_us": 0,
+      "visible_srgb_center": {
+        "r": 0.9341829419136047,
+        "g": 0.2884286046028137,
+        "b": 0.17765113711357117
+      },
+      "image": "work/validation/story002/selected-tracks-current-001/original-track1.png",
+      "image_sha256": "e206878707b626adb7d89eaa894bcf81b3808961c17d916f1944f53810188222",
+      "source_preserved": true,
+      "passed": true
+    },
+    {
+      "native_menu_choice": "Video > Video Track > Track 2",
+      "source": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/story-002/two-tracks.mkv",
+      "video_ordinal": 1,
+      "track_number": 2,
+      "actual_keyframe_us": 0,
+      "visible_srgb_center": {
+        "r": 0.015442230738699436,
+        "g": 0.18934637308120728,
+        "b": 0.9638952612876892
+      },
+      "image": "work/validation/story002/selected-tracks-current-001/original-track2-settled.png",
+      "image_sha256": "16bdd15c130e0654bbfdfac0de37c05e8f1b9c8e3f8a9e969fa722cc1f36e08e",
+      "source_preserved": true,
+      "passed": true
+    },
+    {
+      "native_menu_choice": "Video > Video Track > Track 1",
+      "source": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/matroska-track-mapped-002/reversed-tracks.mkv",
+      "video_ordinal": 0,
+      "track_number": 1,
+      "actual_keyframe_us": 0,
+      "visible_srgb_center": {
+        "r": 0.9341829419136047,
+        "g": 0.2884286046028137,
+        "b": 0.17765113711357117
+      },
+      "image": "work/validation/story002/selected-tracks-reversed-current-001/reversed-track1-ready.png",
+      "image_sha256": "b601bf2f43faf650f1aa7048d07e85c007dea4a4a14c5629aff3acb2a6b90c0a",
+      "source_preserved": true,
+      "passed": true
+    },
+    {
+      "native_menu_choice": "Video > Video Track > Track 2",
+      "source": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/matroska-track-mapped-002/reversed-tracks.mkv",
+      "video_ordinal": 1,
+      "track_number": 2,
+      "actual_keyframe_us": 0,
+      "visible_srgb_center": {
+        "r": 0.015442230738699436,
+        "g": 0.18934637308120728,
+        "b": 0.9638952612876892
+      },
+      "image": "work/validation/story002/selected-tracks-reversed-current-001/reversed-track2.png",
+      "image_sha256": "16bdd15c130e0654bbfdfac0de37c05e8f1b9c8e3f8a9e969fa722cc1f36e08e",
+      "source_preserved": true,
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "paused_state_scope": "Original: RC track2 pre-hover pause0 and sampled AX Position0 across menu/hover checks. Reversed: initial and after-hover RC pause0. Source/host logs retained.",
+  "setup_exclusions": "Original host later batched stop/add/pause while swapping fixture; pause raced input creation. This setup was excluded, host stopped, and reversed fixture relaunched with independent paused-zero setup. Incorrect stale coordinate/inactive attempts retained and excluded."
+}

@@ -1,35 +1,242 @@
 # Root eval — integrated timeline experience
 
-Status: deferred contract; no runner and no pass/fail attempt. Parent: none.
+Status: **deferred contract**, no runner and no pass/fail attempt. Parent: none.
+Stories 002 and 004 own preview capability checks; 003 owns bookmark checks;
+these are planned capability questions, not decomposition of a measured failed
+root. The integrated root requires both together.
 
-Input: a legally usable video with pinned bytes, duration and identifiable
-frames/time positions; a pinned VLC candidate, macOS version, screen configuration
-and empty isolated project-owned annotation/cache store. Golden workspace:
-`tests/fixtures/golden/`. Do not modify the user's installed VLC or real notes.
+## Story 004 preview capability — current status 2026-10-05
 
-Expected end-to-end outcome:
+[Story 004](../stories/story-004-responsive-reusable-thumbnails.md) is Done on
+corrected001728 after all-container count guards/mapping namespace invalidation
+and bounded demand-priority retention passed reproduced failure baselines.
+Final3410cache/40service tests, NAS10/10images,20-per-arm ordinary controls and
+three matched active-preparation playback pairs qualify the declared slice.
+Exact local app delivered; normal-profile image inspected. Unchanged four-surface,
+preference and reader evidence is inherited explicitly; cold NAS/p95/causal stall
+and broader compatibility limits remain in the
+[current acceptance ledger](../evidence/story-004/current-acceptance-ledger.md).
+Historical failures and intermediate acquisitions remain dated and preserved.
 
-1. Open the video; hover known timeline positions including start/end and verify
-   recognizable frame/time correspondence without changing playback position.
-2. Reveal controls, right-click a chosen position, add a note, and verify its
-   timestamp marker and hover text. Add another note, edit it, then delete it.
-3. Continue playback and scrub normally. Check loading/failure and media-switch
-   states; stale previews/notes must not appear on another video.
-4. Quit the entire app, reopen the same video, and verify surviving markers,
-   text and timestamps. Select a marker and verify the seek target.
-5. Compare original video hashes and inspect keyboard/accessibility behavior.
-   Check normal/fullscreen controls and state precisely which surfaces passed.
+The integrated root remains **deferred and unattempted** because durable
+bookmarks and their identity/schema are not implemented. Story 004 preview
+proof does not constitute a root score. The practical 20-per-arm baseline-median
++20% ordinary-control allowance applies to the stated comparison; it is not a
+root pass or universal latency claim.
 
-Before execution: set explicit measured tolerances for preview time/frame error,
-seek error, cold/warm hover latency, playback impact and resource use, justified
-by source/build feasibility. Log every required capability independently; a
-partial pass is not root completion. Include failures and untested scenarios.
 
-Changed/replaced-file identity, duplicate basenames, corrupt/failed note writes,
-overlapping markers, duration unavailable and scaling form robustness cases.
-Define expected handling before recording pass/fail. Root proof must show both
-requested features; a compile, screenshot or isolated storage test cannot pass it.
+## Story 002 required pragmatic comparison — 2026-10-05
 
-Future child evals must name their parent and observed failure or a clearly
-labeled planned capability question. No model benchmark/PromptFoo is required
-for this behavioral proof shape.
+Story 002 is Done for its declared functional MVP scope after completing this
+required actual before/after comparison. The cohort contains 20 actual ordinary-
+control responses per arm in four predetermined blocks ordered AB, BA, BA, AB. Use the existing phase-mode observer so
+accessibility is queried only before/after capture, a 3000 ms observation bound,
+and actual pixel-render response timestamps. Report each arm's median, range,
+raw samples, four block medians and observed variability. The prospective allowance was feature median <= baseline median +20%. Baseline
+median was 343.047 ms (range 279.568–487.320); feature median was 330.741 ms
+(range 233.484–420.992), a −3.587% median delta within allowance. Do not claim
+precision p95 from these 20 samples. Preserve every slow observation and stop on the first
+invalid/censored dependent capture; an incomplete collection cannot pass.
+
+This comparison is an ordinary visible-control knob response metric, not
+completed-seek latency or precise causal/per-frame AX qualification. Precise
+tail latency and causal-stall characterization remain deferred. The earlier
+100-per-arm/p95 plan is superseded for this required pragmatic comparison;
+prior attempts remain historical and are not rescored. Functional evidence and
+three matched playback pairs remain accepted. The earlier functional-only Done
+closure was withdrawn when the comparison was identified as mandatory; current
+closure follows this audited result. See [validation](../evidence/story-002/pragmatic-before-after-validation.md).
+
+## Inputs and isolation
+
+Pinned VLC candidate/patch hashes, source/toolchain/macOS, display size/scale,
+fixture hashes/durations/frame map, empty isolated app/cache/annotation roots.
+Use generated local media and preserve its before/after SHA-256. Never modify
+installed VLC or real notes. Manifest/recipes belong in `tests/fixtures/golden/`;
+large generated bytes stay ignored. Source FFmpeg used for generation and its
+configuration must be recorded separately from the app/helper engine.
+
+Existing feasibility fixtures: 3 s/12 fps MPEG-4 MP4; 8 s/24 fps H.264 MP4 with
+burned-in frame/time labels and same-stream MKV. Generation commands/hashes and
+probe results are under `docs/evidence/story-001/thumbnail-probe-20261004/`.
+They are legal project-generated inputs, not a full qualified product golden.
+
+## Expected integrated outcome
+
+1. Open video and play. Reveal controls and hover known points/start/end; show
+   corresponding image/time while playback continues. A paused run must remain
+   paused at the same position during hover.
+2. Right-click a chosen point away from the playhead, enter `Great bit`, save;
+   verify captured time/marker. Add `Try later`, edit it, then delete it. Check
+   label and thumbnail compose in one hover presentation.
+3. Drag/wheel/keyboard seek normally; hide/reveal controls. Exercise overlapping
+   labels, loading/error, track changes and rapid media switches. No old image,
+   label, editor or save completion may attach to a new media generation.
+4. Quit the entire app, relaunch and reopen the unchanged file. Verify exact
+   surviving labels and saved microsecond times; select marker and measure actual
+   seek arrival. Repeat after force termination following an acknowledged commit.
+5. Run the same interaction on main, detached, native-fullscreen and custom-
+   fullscreen controls. Inspect keyboard/VoiceOver and video hashes. Required
+   surface failures cannot be hidden by an overall pass or screenshots alone.
+
+## Historical response-acceptance policy — superseded 2026-10-05
+
+This former policy selected a prospective 20% p95 regression allowance for
+ordinary control response and at least 100 valid responses per arm. It is
+superseded for Story 002 completion by the pragmatic median comparison defined
+above; retain it as historical policy only. Use the same host, fixture, display and observation
+path. Predetermine four consecutive 25-response baseline blocks (rounds 0–3),
+then compute V = (max(block medians) - min(block medians)) / min(block medians).
+If V > 0.20, or ownership, setup or pixel identity is invalid, report the
+comparison as inconclusive, never pass or regression. This is a temporal
+variability screen, not a p95 confidence bound. Do not expand the allowance to
+absorb observed noise. A stable full cohort establishes only the declared
+threshold outcome for that run, not causality or a general host guarantee.
+This allowance is a practical MVP policy, not a measured perceptual threshold.
+
+Vanilla VLC has no timeline thumbnails. Do not invent a feature-off thumbnail
+latency baseline. Report the feature candidate's ordinary timeline response and
+its image/time presentation separately; the difference from ordinary timeline
+feedback to thumbnail visibility is descriptive evidence only. Keep this new
+thumbnail delay distinct from baseline ordinary control response: there is no
+vanilla denominator and no invented preview allowance. Preserve the earlier
+absolute results as historical measurements, not as evidence of a relative
+regression or pass/fail under this policy.
+
+Playback-resource comparisons use matched unmodified-VLC and feature-candidate
+measurements and report CPU/RSS deltas; the ordinary-control allowance does not impose a zero CPU/RSS delta. Resource acceptance remains
+the declared worker/cache bounds below, alongside the playback-integrity gates.
+Historical Story 002 observed costs were approximately +2 percentage points CPU and +20–40
+MiB RSS. These are reported costs, not a harmlessness finding or a global pass.
+Functional evidence remains distinct from precise latency qualification. The
+actual pragmatic ordinary-control comparison was mandatory for Story 002 closure
+and is complete; see the audited [comparison validation](../evidence/story-002/pragmatic-before-after-validation.md).
+Repeated stalls seen in both arms without attribution remain deferred causal
+characterization; they do not support “no stalls” or performance-pass claims.
+Reproducible feature-attributable stalls remain defects and must be fixed. Keep
+the no-seek/no-pause/no-audio-interruption requirements, the <=1 percentage-point
+paired dropped-frame increase, and finite worker/cache/backlog/timeout bounds.
+
+The 8-per-arm ordinary-control pilot validates the measurement setup only
+([pilot record](../evidence/story-002/ordinary-control-baseline-pilot.json)). A
+subsequent 25-baseline/22-feature attempt is invalid because the settled pixel
+knob did not match the expected physical point; it qualifies neither latency nor
+regression ([attempt record](../evidence/story-002/ordinary-control-baseline-incomplete.json)).
+The precise matched-baseline comparison remains unqualified. The sole new
+frozen-v4 attempt under the prospective20% policy ended invalid at25baseline/
+48feature responses; see [archived outcome](../evidence/story-002/ordinary-control-shared-load-20pct-inconclusive.json).
+No partial percentile or temporal-variation result is salvaged. The earlier measurement stop decision is superseded by the current required
+pragmatic comparison above; the older attempt remains historical.
+Functional completion is assessed separately through the
+[acceptance review](../evidence/story-002/shared-load-acceptance-review.md).
+
+## Historical absolute targets — approved 2026-10-04, retained for provenance
+
+Cam approved these absolute limits after reviewing earlier feature measurements.
+They remain preserved as a versioned historical contract and are not the current
+regression-relative acceptance rule. The 022512 cohort below records their
+outcome without establishing feature-attributable regression. Use the declared
+host and standard fixture set for future paired measurements.
+
+| Measure | Historical target and measurement |
+|---|---|
+| Preview correspondence | Cam-approved keyframe-first MVP: show a valid nearby keyframe from the selected video track, with its actual normalized frame time distinct from pointer time. Verify against independent keyframe/frame maps and report distance/density; gaps do not fail a half-second gate. Endpoints use available keyframes; no fabricated beyond-EOF frame. Extra decoded samples remain optional if user trials find gaps too coarse. |
+| Marker seek arrival | <=0.5 s absolute error on standard fixtures, sampled at actual rendered arrival; request return or slider value alone is insufficient. Playing/paused state preserved except normal EOF. |
+| Preview time/loading | <=200 ms p95 from observed pointer input to visible response. Cam-approved MVP revision2026-10-04; never wait for decoder/hash on main thread. |
+| Ordinary control response | <=100 ms p95 from observed control input to visible response; unchanged by the preview MVP revision. |
+| Memory/disk hover hits | <=150/150 ms p95 (Cam-approved MVP revision2026-10-04), pointer event to displayed matching image. Distinguish decoded RAM hit from disk image decode/IO. |
+| Uncached settled hover | <=1,000 ms p95 on standard H.264 MP4/MKV 1080p fixtures, end-to-end. Record first helper launch/open separately and report timeouts. |
+| Cache/worker resources | <=32 MiB decoded-image LRU, <=256 MiB disk cache, one active decode + one replaceable pending. Proposed worker RSS ceiling 512 MiB; validate/enforce bounded allocations and terminate unresponsive worker after 5 s. For matched playback, report CPU/RSS deltas against baseline; no additional zero-delta rule is set. |
+| Verified-identity label restore | <=100 ms p95 to publish 1,000 labels for a media after identity becomes available. Report total open-to-label latency separately. |
+| Durable commit acknowledgement | <=200 ms p95 on declared local isolated store; measured through commit and UI acknowledgement. Busy/IO errors remain failures, not latency successes. |
+| Identity verification | Fresh full-file SHA-256 every open is the proposed correctness baseline. Measure read volume, throughput, CPU/RSS and open-to-label latency on short and representative large files **before accepting the identity ADR**. No invented hashing floor or claim of instant large-file restore. |
+| Playback impact | Three matched 60 s baseline/feature runs, same media/settings: no hover-induced seeks/pauses or audio interruptions; no stalls >100 ms attributable to feature; dropped-frame-rate increase <=1 percentage point. Log baseline/candidate rates, matched CPU/RSS deltas and load, plus native observation. |
+
+For latency, use >=100 settled, non-superseded pointer demands in out-of-order
+target sequence per cache condition on each standard MP4/MKV fixture. Allow
+each demand to display or time out before the next; record monotonic input,
+request, callback and presentation timestamps. Report attempted/success/error/
+timeout counts and successful p50/p95/max; any error/timeout fails that condition
+and cannot be hidden by the success-only percentile. Test rapid bursts separately:
+report deliberate supersessions/cancellations, bounded backlog, no stale display
+and final latest-demand arrival. A correctly cancelled obsolete demand is not
+a missing latency sample or decoder error. For persistence, >=100 independent transactions
+and reopen/load cycles where feasible; crash/fault cases are separate correctness
+trials. Cache-cold means feature cache cleared, not necessarily cold OS storage.
+Do not flush global OS caches. Label actual OS-cache conditions; report first
+process/open and repeat separately. Five tiny diagnostic decodes do not qualify
+these budgets. UI instrumentation must be checked against visible events.
+
+## Fixture and coverage plan
+
+Create assets from synthetic color/motion/numbered frames and generated audio;
+no private media or downloaded copyrighted clips. Freeze expected frame-time map
+and generator commands separately from the candidate. Recheck disk headroom;
+produce/delete only owned generated artifacts and retain recipes/results.
+
+| Family | Required coverage / expected behavior |
+|---|---|
+| Standard | 60 s H.264 1080p24/30 MP4 + same-stream MKV with burned-in frame/time and synthetic audio; main latency/playback targets |
+| Seek timing | Long GOP/B-frames, VFR, nonzero stream/container start and MP4 edit offsets; independently verify VLC time origin; all pass correspondence or block claimed support |
+| Presentation | Portrait rotation, non-square pixels, resize/backing scale and two visibly different video tracks; selected-track mapping/aspect/rotation correct |
+| Stress | Five-minute long-GOP clip and short 4K clip; record decode/resources/playback, permit documented slower uncached previews but keep bounds and honest loading |
+| Unsupported | Audio-only, unavailable duration, nonseekable source, corrupt/truncated video and unsupported HDR transform; no stale or fabricated preview; ordinary playback remains independent |
+| Identity | Same bytes/path/restart; changed bytes same path including same-size/preserved-mtime; duplicate basename; spaces/%/Unicode; direct/symlink/retarget; read-only/missing file; copy/move does not auto-reconnect |
+| Large identity | At least one realistically large local fixture when space allows, recording bytes/storage/cache and playback effect; small/sparse-file read is not a proxy for large-video access |
+| Density | Start/end, identical/near times, 1,000 labels; no inaccessible overlap, resize never alters timestamps |
+| Store failures | Inject full/read-only/failed IO, interruption before and after ack, lock contention, two-process conflict/retry, corrupt/invalid/newer schema; committed data preserved |
+| Service failures | Worker crash/hang/malformed reply, rapid hover/switch, cache corrupt/full/unwritable; same-path same-size/preserved-mtime replacement on reopen and during decode; bounded recovery, no stale successful cache result |
+
+Broader codecs/containers and universal VLC compatibility remain unqualified.
+The required set is a concrete first scope, not an exhaustive codec promise.
+
+## Retention and capture
+
+ADR-001 cases: after writing labels, turn resume history over beyond 30 videos,
+clear recent history, disable recent-items tracking, and invalidate/evict/delete
+thumbnail cache. Reopen and verify labels/times unchanged in every case. Explicit
+label deletion affects only the selected record. Inspect cleanup boundary and
+hash source videos; no cache task can mutate the catalog.
+
+Native UI evidence records action sequence, visible label/frame/time, AX state,
+window/mode, screenshots and timing logs. Use actual pointer gestures for hover,
+context click and seek, plus keyboard/VoiceOver. AX `set_value` alone can change
+a slider without seeking; direct method calls cannot prove pointer routing.
+The current selected-window Computer Use capture misses the floating fullscreen
+panel and exposes no pointer-move API. Establish a usable pointer/capture route
+or record a human exercise before claiming fullscreen hover success. This is an
+explicit proof gap for implementation, not a root pass or known product defect.
+
+Each attempt lists capabilities independently with pass/fail/untested and exact
+limits. Compile success, a decoded frame, store unit tests and screenshots are
+necessary evidence in their own scopes; none alone proves the integrated root.
+
+
+## Preview threshold revision — 2026-10-04
+
+Cam explicitly approved150ms cached-preview and200ms initial time/loading MVP
+limits after trying the feature and reviewing the measured gap against100ms.
+Disk150ms, uncached image1s, ordinary controls100ms, playback100ms stall and
+Story003 identity/label limits remain unchanged. Preserve original failed
+cohorts; revised-contract re-scoring is separate and is not a fresh measurement
+or a claim that these limits were chosen before those trials. The Ideal remains
+unchanged. See docs/evidence/story-002/mvp-threshold-rescore.json.
+
+## Comparative response policy — 2026-10-05
+
+The following paragraph records the earlier policy snapshot before the
+prospective allowance was selected. It is retained as decision history and no
+longer governs current acceptance.
+
+Cam directed that performance targets use a measured pre-change baseline or
+baseline plus an explicit percentage allowance, rather than new absolute
+post-change thresholds. Root selects the measured baseline itself for ordinary
+control response, which permits zero added allowance. The approved 150/200 ms
+values above and older 100 ms results remain historical and are preserved.
+Vanilla VLC has no thumbnail behavior, so report the feature's thumbnail delay
+separately as descriptive evidence; do not fabricate a pre-feature thumbnail
+value or an incremental-preview acceptance threshold.
+The current 022512 MP4 cohort missed its historical absolute limits, but there
+is no matched unmodified-VLC baseline and no regression attribution. The next
+step is a matched baseline comparison at zero added ordinary-control allowance,
+not tuning to an unmeasured absolute target. See [current Story 002 ledger](../evidence/story-002/current-acceptance-ledger.md).

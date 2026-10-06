@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "built_at_utc": "20261005T001302.893840Z",
+  "source_pin": "6de05adcbaf2e8b85fe86aad4169393098628119",
+  "baseline_requirement": "Existing qualified build; no dependency acquisition in this runner",
+  "bundle_id": "org.videolan.vlc-thumbs.development",
+  "minimum_macos": "11.0",
+  "commands": [
+    [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/scripts/apply-vlc-patches.py"
+    ],
+    [
+      "make",
+      "-C",
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/modules",
+      "-j4",
+      "libmacosx_plugin.la"
+    ],
+    [
+      "bash",
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/scripts/build-thumbnail-helper.sh"
+    ],
+    [
+      "codesign",
+      "--force",
+      "--deep",
+      "--sign",
+      "-",
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app"
+    ],
+    [
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/bin/vlc-cache-gen",
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins"
+    ],
+    [
+      "codesign",
+      "--force",
+      "--sign",
+      "-",
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/plugins.dat"
+    ],
+    [
+      "codesign",
+      "--force",
+      "--sign",
+      "-",
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app"
+    ],
+    [
+      "codesign",
+      "--verify",
+      "--deep",
+      "--strict",
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app"
+    ]
+  ],
+  "log": "work/validation/story002/app-build-20261005T001302.893840Z.log",
+  "helper_dependencies": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/vlc-thumbnail-helper:\n\t/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1359.0.0)\n\t/System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox (compatibility version 1.0.0, current version 1000.0.0)\n\t/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 5027.0.69)\n\t/System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo (compatibility version 1.2.0, current version 758.27.0)\n\t/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia (compatibility version 1.0.0, current version 3350.77.5)\n",
+  "inputs_sha256": {
+    "patches/vlc-3.0.24/0001-native-timeline-previews.patch": "e8bad970905206203cd41a8fee09ffa0b18d8a2e09dcc2cee32921be4624a85e",
+    "scripts/apply-vlc-patches.py": "d8a7e741e2989ba35acf2d5ccd08b272760a69d4f853056424dd40baa1d4c724",
+    "scripts/build-timeline-app.py": "f68736ff3809e54198cd47226668fbf5d48f39a2134049a86fd8274745afa565",
+    "src/macosx/VLCThumbnailService.h": "5205b25c43b7c720f8efad036f4e003b3002c70c044660171e4056be7c522bb0",
+    "src/macosx/VLCThumbnailService.m": "0305086bdf9513f54ee785c9e3b99571a9bd057cab1a586bc27997829e6db1eb",
+    "src/macosx/VLCTimelineContext.h": "651c0dcf20eb90eeda70b1547bf51689b3fdd6fefd7a5cd74507a02d79b73244",
+    "src/macosx/VLCTimelineContext.m": "01fef72b89060281dba6bfc9940e26b3e67e143c2666e3029cd54129efa94847",
+    "src/macosx/VLCTimelineGeometry.h": "3b2de60bba6b5feade74387816aa0406d7fbd085469810e1eeafbe7594d07334",
+    "src/macosx/VLCTimelineInteractionController.h": "cd13975b82961511db69cde96c7dcf68221a576999376944e23dfb021c9789fc",
+    "src/macosx/VLCTimelineInteractionController.m": "2c4bbc4c9fbbffa1854b74cee878b877e10ea61a0b77782fd00a0ec759b107c0",
+    "src/thumbnail-helper/thumbnail-helper.c": "6f110ec62094a4ed3da0ad8ed6e54c5bcaa74d135bb69be3acafa88e2fc3ea0d"
+  },
+  "outputs_sha256": {
+    "work/build/vlc-arm64/VLC.app/Contents/MacOS/VLC": "e86c7a890abf46b2a0b8ab956620307d614bf0bcabdd19d43e8517c4affd6f41",
+    "work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libmacosx_plugin.dylib": "0ffdf468eb7b8e6176f4841734c41083be6991857956a165190a546eafb1432e",
+    "work/build/vlc-arm64/VLC.app/Contents/MacOS/vlc-thumbnail-helper": "fbfc257b3a37e5efb06d8fe37abdc43d05de2eec7ed9beb9eb7d761d4725e91a",
+    "work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/plugins.dat": "970e043fbee5be5165b932d3bfd7ca6b21f79ef2f63577e2d7b00c69c6f51e61",
+    "work/build/vlc-arm64/VLC.app/Contents/Info.plist": "f0b04a366f281e8a793da8bbefdd76227e384f8cf73d8bfd0f53a3a886c07db1",
+    "work/validation/story002/pre-run-libmacosx_plugin.dylib": "812d7f39c068d84c28832f909a6ccdbe73b824fb3617cda29cbc4ebcc116ec4b"
+  },
+  "helper_build_manifest": {
+    "schema_version": 1,
+    "command": [
+      "xcrun",
+      "clang",
+      "-arch",
+      "arm64",
+      "-mmacosx-version-min=11.0",
+      "-std=c11",
+      "-Os",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Wl,-dead_strip",
+      "-Wl,-S",
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/src/thumbnail-helper/thumbnail-helper.c",
+      "-o",
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/thumbnail-helper/thumbnail-helper",
+      "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include",
+      "-L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib",
+      "-lavformat",
+      "-lavcodec",
+      "-pthread",
+      "-lm",
+      "-framework",
+      "AudioToolbox",
+      "-lgsm",
+      "-lmp3lame",
+      "-lm",
+      "-L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib",
+      "-lopenjp2",
+      "-lm",
+      "-L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib",
+      "-lz",
+      "-lswscale",
+      "-lavutil",
+      "-lm",
+      "-lz",
+      "-framework",
+      "CoreFoundation",
+      "-framework",
+      "CoreVideo",
+      "-framework",
+      "CoreMedia",
+      "-pthread"
+    ],
+    "architecture": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/thumbnail-helper/thumbnail-helper: Mach-O 64-bit executable arm64",
+    "dependencies": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/thumbnail-helper/thumbnail-helper:\n\t/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1359.0.0)\n\t/System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox (compatibility version 1.0.0, current version 1000.0.0)\n\t/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 5027.0.69)\n\t/System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo (compatibility version 1.2.0, current version 758.27.0)\n\t/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia (compatibility version 1.0.0, current version 3350.77.5)\n",
+    "contrib_prefix": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27",
+    "sha256": {
+      "src/thumbnail-helper/thumbnail-helper.c": "6f110ec62094a4ed3da0ad8ed6e54c5bcaa74d135bb69be3acafa88e2fc3ea0d",
+      "scripts/build-thumbnail-helper.sh": "b16a6bc092a5131a413e6b3d9f470a1e5f2d8311f24d9fd6b260fece64857dd6",
+      "work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/libavcodec.a": "f39f1bffd5c00122a2c99fa460741f087ed2f63f020e18f43cfbab8e1a7f7f9c",
+      "work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/libavformat.a": "5808208cf20f8e1ed17b55b025f1508e270828245ab8c2bd0f8878f9164aa6a6",
+      "work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/libavutil.a": "6dcc91e450e7f3573c3b577bf8a2abaccba2099bcba795832d900f865483b7f2",
+      "work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/libswscale.a": "91600b502354bccdc9caa6dc5eb07c5491a07defd11df6198d74f486ab5319ba",
+      "work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/libgsm.a": "22c0f41dded248d5aeaf2b612c0e6febf85b2ebd303737c620ed8ba54e6f2d04",
+      "work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/libmp3lame.a": "96b64bfebfb9d02ea89862c9a5b86ff7d16d0dc9552f159f447d4fbac7b53fbe",
+      "work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/libopenjp2.a": "81ff2d2b92b547882696bf185c51d0548180930e5d4ce0c178a53ea1ce9a14ac"
+    },
+    "binary_sha256": "b3f0c2a216629046b2ad7c9f801e56750a445c983c2f51623e09431e62777d01",
+    "ffmpeg_provenance": "work/probes/thumbnail-plan/libav-build-provenance.json"
+  }
+}

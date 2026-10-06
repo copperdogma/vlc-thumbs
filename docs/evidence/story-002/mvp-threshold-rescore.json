@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "approved_at_local": "2026-10-04 19:43 MDT",
+  "authorization": "Cam: Yeah you can change that acceptance criteria, responding to150ms cached preview/200ms initial time-loading proposal.",
+  "kind": "Explicit post-measurement contract revision and re-scoring; NOT a fresh latency run.",
+  "current_candidate_manifest": "docs/evidence/story-002/app-build-original-presentation-restored-012354.json",
+  "measurement_candidate_manifest": "docs/evidence/story-002/app-build-20261004T205111.756594Z.json",
+  "all_production_inputs_identical": true,
+  "measurement_conditions": "Same host; warm/uncontrolled OS caches, prior-generation independent templates and fresh scored media namespace; original capture/ownership/correctness guards retained. Cold OS first-open not qualified.",
+  "targets_ms": {
+    "memory_image": 150,
+    "disk_image": 150,
+    "uncached_image": 1000,
+    "initial_time_caption": 200
+  },
+  "cases": {
+    "mp4": {
+      "retained_measurement": "docs/evidence/story-002/continuous-hover-mp4-results.json",
+      "sha256_unchanged": "68392c443ec51f26342d7642aa567ca911206a3a5d50caae194001010f64a34e",
+      "historical_qualified": false,
+      "new_contract_phases": {
+        "miss": {
+          "attempts": 100,
+          "faulted_attempts": 0,
+          "visible_image_and_time_count": 100,
+          "time_caption_count": 100,
+          "percentile_qualification_eligible": true,
+          "image_and_time_p95_ms": 190.57420827448368,
+          "time_caption_p95_ms": 125.57729170657694,
+          "available_image_and_time_p95_ms_diagnostic_only": 190.57420827448368,
+          "available_time_caption_p95_ms_diagnostic_only": 125.57729170657694,
+          "image_and_time_target_ms": 1000,
+          "time_caption_target_ms": 200,
+          "meets_targets": true
+        },
+        "memory": {
+          "attempts": 100,
+          "faulted_attempts": 0,
+          "visible_image_and_time_count": 100,
+          "time_caption_count": 100,
+          "percentile_qualification_eligible": true,
+          "image_and_time_p95_ms": 125.88837486691773,
+          "time_caption_p95_ms": 125.88837486691773,
+          "available_image_and_time_p95_ms_diagnostic_only": 125.88837486691773,
+          "available_time_caption_p95_ms_diagnostic_only": 125.88837486691773,
+          "image_and_time_target_ms": 150,
+          "time_caption_target_ms": 200,
+          "meets_targets": true
+        },
+        "disk": {
+          "attempts": 100,
+          "faulted_attempts": 0,
+          "visible_image_and_time_count": 100,
+          "time_caption_count": 100,
+          "percentile_qualification_eligible": true,
+          "image_and_time_p95_ms": 126.31649989634752,
+          "time_caption_p95_ms": 126.31649989634752,
+          "available_image_and_time_p95_ms_diagnostic_only": 126.31649989634752,
+          "available_time_caption_p95_ms_diagnostic_only": 126.31649989634752,
+          "image_and_time_target_ms": 150,
+          "time_caption_target_ms": 200,
+          "meets_targets": true
+        }
+      },
+      "revised_contract_passed": true
+    },
+    "mkv": {
+      "retained_measurement": "docs/evidence/story-002/continuous-hover-mkv-results.json",
+      "sha256_unchanged": "6ad3dabda2e4507f45e7ecc23dd2952d20f33af602cd854826ce70afa74b5e5b",
+      "historical_qualified": false,
+      "new_contract_phases": {
+        "miss": {
+          "attempts": 100,
+          "faulted_attempts": 0,
+          "visible_image_and_time_count": 100,
+          "time_caption_count": 100,
+          "percentile_qualification_eligible": true,
+          "image_and_time_p95_ms": 217.06304152030498,
+          "time_caption_p95_ms": 167.06320829689503,
+          "available_image_and_time_p95_ms_diagnostic_only": 217.06304152030498,
+          "available_time_caption_p95_ms_diagnostic_only": 167.06320829689503,
+          "image_and_time_target_ms": 1000,
+          "time_caption_target_ms": 200,
+          "meets_targets": true
+        },
+        "memory": {
+          "attempts": 100,
+          "faulted_attempts": 0,
+          "visible_image_and_time_count": 100,
+          "time_caption_count": 100,
+          "percentile_qualification_eligible": true,
+          "image_and_time_p95_ms": 142.6343332277611,
+          "time_caption_p95_ms": 142.6343332277611,
+          "available_image_and_time_p95_ms_diagnostic_only": 142.6343332277611,
+          "available_time_caption_p95_ms_diagnostic_only": 142.6343332277611,
+          "image_and_time_target_ms": 150,
+          "time_caption_target_ms": 200,
+          "meets_targets": true
+        },
+        "disk": {
+          "attempts": 100,
+          "faulted_attempts": 0,
+          "visible_image_and_time_count": 100,
+          "time_caption_count": 100,
+          "percentile_qualification_eligible": true,
+          "image_and_time_p95_ms": 143.46766658127308,
+          "time_caption_p95_ms": 143.46766658127308,
+          "available_image_and_time_p95_ms_diagnostic_only": 143.46766658127308,
+          "available_time_caption_p95_ms_diagnostic_only": 143.46766658127308,
+          "image_and_time_target_ms": 150,
+          "time_caption_target_ms": 200,
+          "meets_targets": true
+        }
+      },
+      "revised_contract_passed": true
+    }
+  },
+  "scorer_integrity_checks": {
+    "99_requests_rejected": true,
+    "faulted_cohort_rejected": true
+  },
+  "historical_reports_rewritten": false,
+  "approved_contract_passed": true,
+  "candidate_temporal_scope": "The current_candidate_manifest and identical-input statement describe012354 at the19:43MDT scoring revision. Later final-review020311 changes have explicit applicability/fresh-check coverage in final-review-findings.json and current-acceptance-ledger.md; this record does not assert their source inputs are identical."
+}

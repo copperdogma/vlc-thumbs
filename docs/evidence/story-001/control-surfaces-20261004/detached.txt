@@ -1,0 +1,27 @@
+Window: "known-h264.mp4", App: VLC Timeline Development.
+0 standard window known-h264.mp4, Secondary Actions: Raise, URL: file:///Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/probes/thumbnail-plan/known-h264.mp4
+	1 button Backward, Description: Seek backward
+	2 button Pause, Description: Play
+	3 button Forward, Description: Seek forward
+	4 slider (settable, float) Position, Description: Playback position, Value: 7068.87255859375
+		5 value indicator (settable, float) 7068.87255859375
+	6 text Description: Playback time, Value: 00:05
+	7 toggle button Description: Fullscreen, Value: off
+	8 close button
+	9 zoom button
+	10 minimize button
+	11 image known-h264.mp4
+	12 text known-h264.mp4
+13 menu bar
+	14 VLC Timeline Development
+	15 File
+	16 Edit
+	17 View
+	18 Playback
+	19 Audio
+	20 Video
+	21 Subtitles
+	22 Window
+	23 Help
+
+The focused UI element is 0 standard window known-h264.mp4, Secondary Actions: Raise, URL: file:///Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/probes/thumbnail-plan/known-h264.mp4

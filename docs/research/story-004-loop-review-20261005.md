@@ -1,0 +1,15 @@
+# Story004 execution review — 2026-10-05
+
+**Verdict: aligned and progressing.** The active goal remains finishing Story004, not merely compiling a helper. Ideal requires useful timeline exploration with intact playback. Current213341 has persistent-worker, scheduling and reusable-cache contracts; NAS helper/service diagnostics show usable delivery and less repeated initialization. Main actual-pointer hover/restart and fresh20-per-arm ordinary control evidence now pass their scoped checks. First matched60s playback pair is eligible, with continuous digital audio and a0.00845percentage-point dropped-picture increase; two more prescribed pairs remain.
+
+The bottleneck is consumer-visible qualification: actual NAS main-window behavior and detached/native/custom fullscreen previews. Isolated service checks and RAM-tier restart assignments cannot substitute for those. Historical/invalid cohorts remain preserved. No new optimizer or repeated contract loop is justified without a defect in those checks.
+
+Continue the already authorized plan: finish three matched playback pairs with preparation actually active, then current four-surface and NAS physical-pointer proof, inspect screenshots/trace timing, and close only with acceptance evidence. Preserve source media, installed daily app until qualified delivery, +20% ordinary-control allowance, sampled-freshness limitation and no commit/push. Reassess after those native acquisitions, or immediately if a reproducible product defect appears. Source warmth/shared-host load prevents causal or universal latency claims.
+
+A richer playback fixture is a small targeted adaptation:7200s stream-copied owned video plus generated tone (274MiB) keeps background jobs active without private-media downloads. Compare against exact same bytes within each pair. No goal wording/budget or acceptance change is needed; follow-through is covered by Cam's existing implementation/testing authorization.
+
+## Continuation review — final222506
+
+Aligned and ready for bounded closeout. Current mainMP4/MKV, detached/native/custom fullscreen and two NAS cohorts pass actual-pointer image assignment; visible “Checking source…” image inspected. Save/Cancel/off restart/on/ordinary seek and CLIoff pass. Twenty-per-arm control medians37.925/37.492ms meet +20%; three matched60s playback pairs with133–140 background dispatches pass dropped-frame/audio checks. Current39service and2841cache contracts include provisional failure/cancel/shared deadline;7-target real preparation finishes2.448s and cross-open coverage needs0decodes. Resource overhead is reported rather than optimized away.
+
+No further speculative optimization or exhaustive NAS grid test is needed. Finish exact delivery provenance, map identity/quota/fault clauses to tests, explicitly inherit unchanged reader-focus evidence (current reader startup was inconclusive), reconcile writable docs and regenerate/validate. Preserve raw invalid attempts and private media; no commit/push. Existing Cam authorization covers this continuation; goal unchanged. Reassess only if the installed app fails its final hover or a concrete acceptance mapping gap appears.

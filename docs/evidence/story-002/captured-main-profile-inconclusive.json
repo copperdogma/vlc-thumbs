@@ -1,0 +1,15 @@
+{
+  "scope": "Instrumented two-pair method diagnostic; profiler affects timing, never performance qualification",
+  "sampled_pid_matches_owned_app": true,
+  "runner_returncode": 0,
+  "profile_returncode": 0,
+  "sample_contains_thread_stacks": false,
+  "raw_sample_sha256": "9a66655e285bfe92f73d37310d38cf6366c0cf3cee2995789d7958af51209454",
+  "raw_directory": "work/validation/story002/captured-main-profile-003",
+  "collection_correct": true,
+  "interpretation": "Capture method trial completes correctly, but sample report has an empty call graph despite exit0. No main-thread attribution is established. Instrumented timings are not acceptance results.",
+  "previous_attempts": [
+    "001/002 selected the short-lived compiled-options help process rather than the owned RC player; no profiles obtained",
+    "003 selects the owned --rc-unix player exactly; empty call graph is inconclusive"
+  ]
+}

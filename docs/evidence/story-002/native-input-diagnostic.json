@@ -1,0 +1,200 @@
+{
+  "scope": "Main window control actions and automation event/persistent-pointer mismatch; no successful hover proven",
+  "app_manifest": "app-build-20261004T162320.051263Z.json",
+  "observations": [
+    {
+      "window_set": 1,
+      "monotonic": 890449.0066149584,
+      "event": "adapter-init",
+      "has_slider": 1,
+      "bounds": "{{0, 0}, {443, 15}}"
+    },
+    {
+      "window_set": 1,
+      "monotonic": 890449.0520495,
+      "event": "adapter-init",
+      "has_slider": 1,
+      "bounds": "{{0, 0}, {1194, 14}}"
+    },
+    {
+      "bounds": "{{0, 0}, {1335, 14}}",
+      "monotonic": 890451.5327613751,
+      "event_point": "{1250.21484375, 531.70703125}",
+      "event": "input-observation",
+      "visible_rect": "{{0, 0}, {1335, 14}}",
+      "tracking_attached": true,
+      "type": 5,
+      "pointer_point": "{1250.21484375, 531.70703125}"
+    },
+    {
+      "bounds": "{{0, 0}, {1335, 14}}",
+      "monotonic": 890451.5410825417,
+      "event_point": "{1248.265625, 531.70703125}",
+      "event": "input-observation",
+      "visible_rect": "{{0, 0}, {1335, 14}}",
+      "tracking_attached": true,
+      "type": 5,
+      "pointer_point": "{1248.265625, 531.70703125}"
+    },
+    {
+      "bounds": "{{0, 0}, {1335, 14}}",
+      "monotonic": 890451.5494073334,
+      "event_point": "{1247.0078125, 531.70703125}",
+      "event": "input-observation",
+      "visible_rect": "{{0, 0}, {1335, 14}}",
+      "tracking_attached": true,
+      "type": 5,
+      "pointer_point": "{1247.0078125, 531.70703125}"
+    },
+    {
+      "bounds": "{{0, 0}, {1335, 14}}",
+      "monotonic": 890451.5577122084,
+      "event_point": "{1244.23046875, 532.265625}",
+      "event": "input-observation",
+      "visible_rect": "{{0, 0}, {1335, 14}}",
+      "tracking_attached": true,
+      "type": 5,
+      "pointer_point": "{1244.23046875, 532.265625}"
+    },
+    {
+      "bounds": "{{0, 0}, {1335, 14}}",
+      "monotonic": 890451.5660688333,
+      "event_point": "{1240.48828125, 532.890625}",
+      "event": "input-observation",
+      "visible_rect": "{{0, 0}, {1335, 14}}",
+      "tracking_attached": true,
+      "type": 5,
+      "pointer_point": "{1240.48828125, 532.890625}"
+    },
+    {
+      "bounds": "{{0, 0}, {1335, 14}}",
+      "monotonic": 890451.5769088333,
+      "event_point": "{1227.19921875, 538.4296875}",
+      "event": "input-observation",
+      "visible_rect": "{{0, 0}, {1335, 14}}",
+      "tracking_attached": true,
+      "type": 5,
+      "pointer_point": "{1227.19921875, 538.4296875}"
+    },
+    {
+      "bounds": "{{0, 0}, {1335, 14}}",
+      "monotonic": 890452.6005302084,
+      "event_point": "{-143.875, 962.66796875}",
+      "event": "input-observation",
+      "visible_rect": "{{0, 0}, {1335, 14}}",
+      "tracking_attached": true,
+      "type": 5,
+      "pointer_point": "{-184.875, 995.66796875}"
+    },
+    {
+      "bounds": "{{0, 0}, {1335, 14}}",
+      "monotonic": 890461.962140875,
+      "event_point": "{733, 7}",
+      "event": "input-observation",
+      "visible_rect": "{{0, 0}, {1335, 14}}",
+      "tracking_attached": true,
+      "type": 5,
+      "pointer_point": "{1076.875, 271.47265625}"
+    },
+    {
+      "bounds": "{{0, 0}, {1335, 14}}",
+      "monotonic": 890462.0397764584,
+      "event_point": "{733, 7}",
+      "event": "input-observation",
+      "visible_rect": "{{0, 0}, {1335, 14}}",
+      "tracking_attached": true,
+      "type": 3,
+      "pointer_point": "{1076.875, 271.47265625}"
+    },
+    {
+      "bounds": "{{0, 0}, {1335, 14}}",
+      "monotonic": 890462.1194104167,
+      "event_point": "{733, 7}",
+      "event": "input-observation",
+      "visible_rect": "{{0, 0}, {1335, 14}}",
+      "tracking_attached": true,
+      "type": 4,
+      "pointer_point": "{1076.875, 271.47265625}"
+    },
+    {
+      "bounds": "{{0, 0}, {1335, 14}}",
+      "monotonic": 890604.4288134584,
+      "event_point": "{283, 7}",
+      "event": "input-observation",
+      "visible_rect": "{{0, 0}, {1335, 14}}",
+      "tracking_attached": true,
+      "type": 5,
+      "pointer_point": "{762.7578125, 170.1953125}"
+    },
+    {
+      "bounds": "{{0, 0}, {1335, 14}}",
+      "monotonic": 890605.7910928334,
+      "event_point": "{283, 7}",
+      "event": "input-observation",
+      "visible_rect": "{{0, 0}, {1335, 14}}",
+      "tracking_attached": true,
+      "type": 5,
+      "pointer_point": "{762.7578125, 170.1953125}"
+    },
+    {
+      "bounds": "{{0, 0}, {1335, 14}}",
+      "monotonic": 890605.8793953334,
+      "event_point": "{283, 7}",
+      "event": "input-observation",
+      "visible_rect": "{{0, 0}, {1335, 14}}",
+      "tracking_attached": true,
+      "type": 6,
+      "pointer_point": "{762.7578125, 170.1953125}"
+    },
+    {
+      "bounds": "{{0, 0}, {1335, 14}}",
+      "monotonic": 890605.8887635417,
+      "event_point": "{533, 7}",
+      "event": "input-observation",
+      "visible_rect": "{{0, 0}, {1335, 14}}",
+      "tracking_attached": true,
+      "type": 6,
+      "pointer_point": "{762.7578125, 170.1953125}"
+    },
+    {
+      "bounds": "{{0, 0}, {1335, 14}}",
+      "monotonic": 890605.9124488333,
+      "event_point": "{783, 7}",
+      "event": "input-observation",
+      "visible_rect": "{{0, 0}, {1335, 14}}",
+      "tracking_attached": true,
+      "type": 6,
+      "pointer_point": "{762.7578125, 170.1953125}"
+    },
+    {
+      "bounds": "{{0, 0}, {1335, 14}}",
+      "monotonic": 890614.7118555,
+      "event_point": "{667.5, 7}",
+      "event": "input-observation",
+      "visible_rect": "{{0, 0}, {1335, 14}}",
+      "tracking_attached": true,
+      "type": 5,
+      "pointer_point": "{1193.3046875, 367.765625}"
+    },
+    {
+      "bounds": "{{0, 0}, {1335, 14}}",
+      "monotonic": 890633.021874625,
+      "event_point": "{733, 7}",
+      "event": "input-observation",
+      "visible_rect": "{{0, 0}, {1335, 14}}",
+      "tracking_attached": true,
+      "type": 5,
+      "pointer_point": "{1193.3046875, 367.765625}"
+    },
+    {
+      "bounds": "{{0, 0}, {1335, 14}}",
+      "monotonic": 890660.7702445417,
+      "event_point": "{733, 7}",
+      "event": "input-observation",
+      "visible_rect": "{{0, 0}, {1335, 14}}",
+      "tracking_attached": true,
+      "type": 5,
+      "pointer_point": "{1009.6953125, 190.94921875}"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "candidate": "app-build-tracknumber-022512.json",
+  "raw": "work/validation/story002/continuous-hover-tracknumber-mp4-001",
+  "collection_error": "Capture error: target_app_inactive_or_crop_left_owned_main_window",
+  "completed_collection": false,
+  "phases": {
+    "miss": {
+      "attempts": 0,
+      "faulted_attempts": 0,
+      "visible_image_and_time_count": 0,
+      "time_caption_count": 0,
+      "percentile_qualification_eligible": false,
+      "image_and_time_p95_ms": null,
+      "time_caption_p95_ms": null,
+      "available_image_and_time_p95_ms_diagnostic_only": null,
+      "available_time_caption_p95_ms_diagnostic_only": null,
+      "image_and_time_target_ms": 1000,
+      "time_caption_target_ms": 200,
+      "meets_targets": false
+    },
+    "memory": {
+      "attempts": 0,
+      "faulted_attempts": 0,
+      "visible_image_and_time_count": 0,
+      "time_caption_count": 0,
+      "percentile_qualification_eligible": false,
+      "image_and_time_p95_ms": null,
+      "time_caption_p95_ms": null,
+      "available_image_and_time_p95_ms_diagnostic_only": null,
+      "available_time_caption_p95_ms_diagnostic_only": null,
+      "image_and_time_target_ms": 150,
+      "time_caption_target_ms": 200,
+      "meets_targets": false
+    },
+    "disk": {
+      "attempts": 0,
+      "faulted_attempts": 0,
+      "visible_image_and_time_count": 0,
+      "time_caption_count": 0,
+      "percentile_qualification_eligible": false,
+      "image_and_time_p95_ms": null,
+      "time_caption_p95_ms": null,
+      "available_image_and_time_p95_ms_diagnostic_only": null,
+      "available_time_caption_p95_ms_diagnostic_only": null,
+      "image_and_time_target_ms": 150,
+      "time_caption_target_ms": 200,
+      "meets_targets": false
+    }
+  },
+  "qualified": false,
+  "source_unchanged": true,
+  "module_unchanged": true,
+  "app_unchanged": true,
+  "finished": {
+    "unix_s": 1791167196.437592,
+    "monotonic_s": 926620.538792166
+  },
+  "interpretation": "Foreground loss during template setup; zero scored attempts; no percentile or feature failure verdict."
+}

@@ -1,0 +1,68 @@
+{
+  "hover": {
+    "window": "standard.mp4",
+    "monotonic": 900924.8760526667,
+    "bucket_us": 52500000,
+    "generation": "A73D7BF7-8C4D-466E-9DE7-FEA7FD82F94E-3",
+    "event": "hover",
+    "requested_us": 52387448,
+    "duration_us": 60000000,
+    "point_x": 1287,
+    "left": 7,
+    "right": 1473
+  },
+  "inflight_at_close_dispatch": true,
+  "fresh_ax_before_close": "window_index 0\nslider 142.000 1091.000 1482.000 16.000 value 9972.1416015625 title Position\nwindow_index 1\nslider 208.000 1091.000 1336.000 16.000 value 9972.1416015625 title Position\nslider 1618.000 1092.000 50.000 14.000 value 256 title \n",
+  "close_started_monotonic": 900924.928687,
+  "close_returncode": 0,
+  "close_result": "{\"ax_error\":0}\n",
+  "after_events": [
+    {
+      "monotonic": 900924.8746565417,
+      "eligible": true,
+      "event": "context",
+      "ordinal": 0,
+      "duration": 60000000
+    },
+    {
+      "window": "standard.mp4",
+      "monotonic": 900924.8760526667,
+      "bucket_us": 52500000,
+      "generation": "A73D7BF7-8C4D-466E-9DE7-FEA7FD82F94E-3",
+      "event": "hover",
+      "requested_us": 52387448,
+      "duration_us": 60000000,
+      "point_x": 1287,
+      "left": 7,
+      "right": 1473
+    },
+    {
+      "monotonic": 900924.9685022084,
+      "eligible": false,
+      "event": "context",
+      "ordinal": -1,
+      "duration": 60000000
+    },
+    {
+      "monotonic": 900924.9826798751,
+      "eligible": false,
+      "event": "context",
+      "ordinal": -1,
+      "duration": 0
+    }
+  ],
+  "after_windows": [
+    {
+      "id": 19376,
+      "layer": 0,
+      "name": "VLC media player",
+      "bounds": {
+        "X": 42,
+        "Height": 1084,
+        "Y": 33,
+        "Width": 1686
+      }
+    }
+  ],
+  "app_survives": true
+}

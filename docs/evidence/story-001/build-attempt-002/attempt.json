@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-03",
+  "source_revision": "6de05adcbaf2e8b85fe86aad4169393098628119",
+  "command": [
+    "bash",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/extras/package/macosx/build.sh",
+    "-a",
+    "aarch64",
+    "-c",
+    "-j",
+    "4",
+    "-C",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64"
+  ],
+  "cwd": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build",
+  "environment_overrides": {
+    "VLC_PATH": "/usr/local/bin"
+  },
+  "initial_free_bytes": 13218426880,
+  "disk_stop_floor_bytes": 1073741824,
+  "status": "stopped-for-architecture-isolation",
+  "elapsed_seconds": 358.6,
+  "minimum_free_bytes": 12516728832,
+  "workspace_bytes": 1661263872,
+  "pid": 32011,
+  "exit_code": -15,
+  "workspace_bytes_before_cleanup": 1492328448,
+  "final_free_bytes": 12708044800,
+  "stop_reason": "System /usr/local libavcodec is x86_64; pkg-config scan must exclude Intel default library paths for arm64 build."
+}

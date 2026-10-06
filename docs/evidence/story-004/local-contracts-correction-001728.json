@@ -1,0 +1,281 @@
+{
+  "build": "app-build-correction-001728.json",
+  "cache_regression": {
+    "schema_version": 1,
+    "purpose": "Current-identity demand-priority disk retention regression",
+    "harness": {
+      "path": "tests/story-004/cache_contract.m",
+      "sha256": "b84518182d5891dbd872246178c3f71c7ac46d4a0b3af96acbd9042d2521317b"
+    },
+    "baseline": {
+      "source": "work/validation/story004/cache-before-demand-priority.m",
+      "source_sha256": "4fe2021388e5c218b33c89fc4cd70fd3b4760455a7484b21033ed095f64463d7",
+      "log": "work/validation/story004/cache-demand-priority-baseline.log",
+      "exit_code": 1,
+      "checks": 3410,
+      "failures": 9,
+      "failed_assertions": [
+        "background prune preserves recently hovered RAM payload on disk",
+        "hot alias and image survive reopening without regeneration",
+        "new decoded demand immediately enters retention tier",
+        "newer background entry yields to newly decoded demand",
+        "newly decoded demand and manifest survive restart without prior RAM lookup",
+        "replace protected disk size with oversized sparse fault",
+        "hard disk quota can evict a demand-tier oversized fault",
+        "demand priority count stays within sample capacity",
+        "sample eviction removes old demand priority before adding new demand"
+      ]
+    },
+    "corrected": {
+      "source": "src/macosx/VLCThumbnailCache.m",
+      "source_sha256": "29399e7d40a2cfcc8b604640f0971f4107d7c6ccb7562d202436725aa9051d4a",
+      "log": "work/validation/story004/cache-demand-priority-corrected.log",
+      "exit_code": 0,
+      "checks": 3410,
+      "failures": 0,
+      "failed_assertions": []
+    },
+    "notes": [
+      "Baseline is the intermediate mtime-only retention fix, not the original Story004 source.",
+      "Two baseline oversized-fault checks fail because baseline already discarded the fresh-demand manifest/payload needed for that fault setup.",
+      "Worker-confined demand membership is current-identity only and at most 512 samples; hard disk quota still applies."
+    ],
+    "primary_source": "https://github.com/facebook/rocksdb/wiki/Block-Cache",
+    "target_compile": "arm64 macOS 11.0 -Wall -Wextra -Werror passed"
+  },
+  "service": {
+    "checks": 40,
+    "failures": 0,
+    "raw": "work/validation/story004/service-contract.json"
+  },
+  "mapping_guard": "All provided native video-count mismatches rejected; countguard2 namespace invalidates potentially wrong images",
+  "unchanged_helper_evidence": "local-contracts-correction-235648.json; helper source hash matches final build, normal packaged helper tested natively",
+  "review": "correction-review-ledger.md",
+  "packaged_unsigned_text_parity": {
+    "equal": true,
+    "sections": {
+      "__text": "8206e25fbc0f34d5d4404c9ee4d5a982f374c0d79cc89b73a5292e4b9b491367",
+      "__stubs": "7f37c757332611c1e5b23329b11854f657575d600067b2141966b523ed8c5ec1",
+      "__stub_helper": "c50b5538e68159c6ffddd2c1abf6313a8282382b55d08c1bdaa87bea5b623d18",
+      "__const": "f17c625c32c68ac66b6355da60f3269334a71db73fe5b8ecf330df151d48fe75",
+      "__cstring": "66a066a0a2a8b5ad022ea87ace13cfa04b13a71920fa06f20b52d3ea4e562df7",
+      "__ustring": "19c8a6f047706fd8c0456520146672c604ba5263804e49b619d934263b4ad148",
+      "__unwind_info": "75f73903e6cdfd4a17261f71b61012d8e15e2ff07de6e9fdcc2ada3c81bd0c8d",
+      "__eh_frame": "e11c046548eead19fe6f2e9d372bfd9ff15c00610d0094c1c5323f661e593994"
+    },
+    "limit": "Unsigned fault suite inherited for unchanged source; packaged fault interposition remains inconclusive"
+  },
+  "packaged_track_count_contract": {
+    "raw": "work/validation/story004/track-count-priority-final.json",
+    "result": {
+      "helper_sha256": "ae7795d6fe67d64f2d770a1f75d7db6302f6d22fedf20cd448a604a5b575d07e",
+      "checks": [
+        {
+          "name": "multi.mp4 count=1 v2",
+          "pass": true,
+          "response": {
+            "version": 2,
+            "ok": false,
+            "error": "ambiguous_track_mapping"
+          },
+          "first_pixel_rgba": [],
+          "exit_code": 1
+        },
+        {
+          "name": "multi.mp4 count=1 v3",
+          "pass": true,
+          "response": {
+            "version": 3,
+            "id": 0,
+            "ok": false,
+            "error": "ambiguous_track_mapping",
+            "payload_bytes": 0
+          },
+          "first_pixel_rgba": [],
+          "exit_code": 1
+        },
+        {
+          "name": "single.mp4 count=2 v2",
+          "pass": true,
+          "response": {
+            "version": 2,
+            "ok": false,
+            "error": "ambiguous_track_mapping"
+          },
+          "first_pixel_rgba": [],
+          "exit_code": 1
+        },
+        {
+          "name": "single.mp4 count=2 v3",
+          "pass": true,
+          "response": {
+            "version": 3,
+            "id": 0,
+            "ok": false,
+            "error": "ambiguous_track_mapping",
+            "payload_bytes": 0
+          },
+          "first_pixel_rgba": [],
+          "exit_code": 1
+        },
+        {
+          "name": "single.mkv count=2 v2",
+          "pass": true,
+          "response": {
+            "version": 2,
+            "ok": false,
+            "error": "ambiguous_track_mapping"
+          },
+          "first_pixel_rgba": [],
+          "exit_code": 1
+        },
+        {
+          "name": "single.mkv count=2 v3",
+          "pass": true,
+          "response": {
+            "version": 3,
+            "id": 0,
+            "ok": false,
+            "error": "ambiguous_track_mapping",
+            "payload_bytes": 0
+          },
+          "first_pixel_rgba": [],
+          "exit_code": 1
+        },
+        {
+          "name": "single.mp4 count=1 v2",
+          "pass": true,
+          "response": {
+            "version": 2,
+            "ok": true,
+            "sampling": "keyframe",
+            "requested_us": 1000000,
+            "actual_us": 0,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0,
+            "video_track_number": -1
+          },
+          "first_pixel_rgba": [
+            0,
+            0,
+            253,
+            255
+          ],
+          "exit_code": 0
+        },
+        {
+          "name": "single.mp4 count=1 v3",
+          "pass": true,
+          "response": {
+            "version": 3,
+            "id": 1,
+            "ok": true,
+            "sampling": "keyframe",
+            "requested_us": 1000000,
+            "actual_us": 0,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0,
+            "video_track_number": -1,
+            "bytes_read": 2883,
+            "read_calls": 1,
+            "seek_calls": 0,
+            "request_bytes_read": 0,
+            "request_read_calls": 0,
+            "request_seek_calls": 0,
+            "open_count": 1,
+            "operation_us": 330
+          },
+          "first_pixel_rgba": [
+            0,
+            0,
+            253,
+            255
+          ],
+          "exit_code": 0
+        },
+        {
+          "name": "single.mkv count=1 v2",
+          "pass": true,
+          "response": {
+            "version": 2,
+            "ok": true,
+            "sampling": "keyframe",
+            "requested_us": 1000000,
+            "actual_us": 0,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0,
+            "video_track_number": 1
+          },
+          "first_pixel_rgba": [
+            0,
+            0,
+            253,
+            255
+          ],
+          "exit_code": 0
+        },
+        {
+          "name": "single.mkv count=1 v3",
+          "pass": true,
+          "response": {
+            "version": 3,
+            "id": 1,
+            "ok": true,
+            "sampling": "keyframe",
+            "requested_us": 1000000,
+            "actual_us": 0,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0,
+            "video_track_number": 1,
+            "bytes_read": 2908,
+            "read_calls": 3,
+            "seek_calls": 0,
+            "request_bytes_read": 0,
+            "request_read_calls": 2,
+            "request_seek_calls": 0,
+            "open_count": 1,
+            "operation_us": 316
+          },
+          "first_pixel_rgba": [
+            0,
+            0,
+            253,
+            255
+          ],
+          "exit_code": 0
+        }
+      ],
+      "scope": "Generated MP4 mismatch plus single-video MP4/Matroska count safety; v2/v3. Optional native demux qualification, not physical-pointer proof.",
+      "pass": true
+    }
+  },
+  "intermediate_proportional_reuse": {
+    "build": "235648",
+    "only_changed_inputs": [
+      "src/macosx/VLCThumbnailCache.h",
+      "src/macosx/VLCThumbnailCache.m"
+    ],
+    "inherited": "Actual malformed-track unavailable UI; main/tall/rapid/detached/native/custom/CLI-off, unchanged helper/controller/service/geometry/preferences wiring",
+    "new_proof": "Cache3410/service40/current packaged track-count and final NAS integration; final control/playback qualification separately required"
+  }
+}

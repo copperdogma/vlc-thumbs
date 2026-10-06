@@ -1,0 +1,27 @@
+{
+  "candidate_manifest": "app-build-20261005T015053.707477Z.json",
+  "fixture_sha256": "3c52e733cc76ed82fa4fa1021d60aa26eb7879853895d70c2105a5417e893da6",
+  "fixture_recipe": "ffmpeg -i two-tracks.mkv -map0:v:0 -map0:v:1 -c:v libx264 -preset ultrafast -g1 -program program_num=1:st=0 -program program_num=2:st=1 two-programs.ts (owned generated red/blue tracks)",
+  "pass": true,
+  "results": [
+    {
+      "ordinal": 0,
+      "reply": {
+        "version": 2,
+        "ok": false,
+        "error": "ambiguous_track_mapping"
+      },
+      "exit": 1
+    },
+    {
+      "ordinal": 1,
+      "reply": {
+        "version": 2,
+        "ok": false,
+        "error": "ambiguous_track_mapping"
+      },
+      "exit": 1
+    }
+  ],
+  "scope": "Both program-local menu ordinals cannot map safely to file-global video ordinals; fail explicitly without pixel payload. No change to successful MP4/MKV sampling."
+}

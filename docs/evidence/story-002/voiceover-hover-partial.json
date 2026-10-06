@@ -1,0 +1,42 @@
+{
+  "scope": "Actual VoiceOver caption-panel and owned preview/focus samples while paused; no continuous speech/audio or complete four-surface claim. Ordinary Play/Pause establishes displayed video before proof; fresh AX track geometry used.",
+  "module_sha256": "444e2b06959729cb7aa7df1ce85b52c35d1fc54a63427b1c267ce6986d02434f",
+  "reader_pid": 35468,
+  "modes": {
+    "main": {
+      "physical_hovers": 20,
+      "caption_including_before_samples": 21,
+      "caption_unique_pixel_hashes": 1,
+      "actual_reader_text": "0.2%, Position, slider",
+      "ax_position_unchanged": 17.14642715454102,
+      "focus_role_unchanged": "AXSlider",
+      "app_active_all": true,
+      "owned_preview_visible_every_sample": true,
+      "preview_x_positions": 10
+    },
+    "custom-fullscreen": {
+      "physical_hovers": 10,
+      "caption_including_before_samples": 11,
+      "caption_unique_pixel_hashes": 1,
+      "actual_reader_text": "0.2%, Position, slider",
+      "ax_position_unchanged": 17.14642715454102,
+      "focus_role_unchanged": "AXWindow",
+      "app_active_all": true,
+      "owned_preview_visible_every_sample": true,
+      "preview_x_positions": 5
+    }
+  },
+  "excluded_setup": "main-hover.json sampled obsolete Y1028 after ordinary video start resized window; no owned previews, not scored. Corrected main-correct uses fresh AX Y1099.",
+  "inherited_seek_limitation": "Actual reader increments do not seek on saved baseline or feature. Separately recorded in voiceover-baseline-comparison.json.",
+  "still_open": [
+    "detached actual reader hover",
+    "native-fullscreen actual reader hover"
+  ],
+  "cleanup": {
+    "reader_off": true,
+    "welcome_dialog": 1,
+    "applescript_control": 0,
+    "utility_quit": true,
+    "owned_feature_stopped": true
+  }
+}

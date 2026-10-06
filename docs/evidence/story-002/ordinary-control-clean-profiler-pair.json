@@ -1,0 +1,75 @@
+{
+  "scope": "Same diagnostic app pair, environment keys allowlisted in both, all raw traces/TOCs stay ignored and private. Exported stack interpretation is separate from these collection guards. No p95/baseline qualification.",
+  "arms": {
+    "enabled": {
+      "owned_pid": 47632,
+      "recording_toc_gate_passed": true,
+      "fingerprints_unchanged": true,
+      "owned_app_exit_code": 0,
+      "observer_control_response_ms": 433.88374987989664,
+      "response_scope": "One profiled transition, not an estimate or acceptance result",
+      "minimal_environment_keys": [
+        "HOME",
+        "LANG",
+        "LC_CTYPE",
+        "LOGNAME",
+        "PATH",
+        "TMPDIR",
+        "USER"
+      ],
+      "hashes": {
+        "results.json": "3cac93e7243d4f8812ef09589c195dc751e2527200707b954a9ed317b130bcde",
+        "trace-toc-sanitized.xml": "23c50153f5a1c13846b5449e9e07a836fb716b35e39af889522a31d91c31fb6f",
+        "time-profile.xml": "0470865afda649460bb4ac30a866dcd5da332c1c6da184263690d04af4b1e146"
+      },
+      "raw_private_directory": "work/validation/story002/control-xctrace-paired-clean-001/enabled-raw",
+      "player_environment_keys": [
+        "HOME",
+        "LANG",
+        "LC_CTYPE",
+        "LOGNAME",
+        "PATH",
+        "TMPDIR",
+        "USER"
+      ],
+      "toc_environment_subtrees_removed": 1
+    },
+    "bypassed": {
+      "owned_pid": 49409,
+      "recording_toc_gate_passed": true,
+      "fingerprints_unchanged": true,
+      "owned_app_exit_code": 0,
+      "observer_control_response_ms": 73.68537492584437,
+      "response_scope": "One profiled transition, not an estimate or acceptance result",
+      "minimal_environment_keys": [
+        "HOME",
+        "LANG",
+        "LC_CTYPE",
+        "LOGNAME",
+        "PATH",
+        "TMPDIR",
+        "USER"
+      ],
+      "hashes": {
+        "results.json": "56ed89b65fd05e884cc1a4e2d542a31efadf9dd1767c00f3e65158b34de20b23",
+        "trace-toc-sanitized.xml": "92aaff1eee5ef560f1ce2331f4209135470f2737d1243575ac242044fc0f8fcb",
+        "time-profile.xml": "dc3e25c38fafc9875beb35745eee7456d1f7064e05d1b452677f5203c32028c3"
+      },
+      "raw_private_directory": "work/validation/story002/control-xctrace-paired-clean-001/bypassed-raw",
+      "player_environment_keys": [
+        "HOME",
+        "LANG",
+        "LC_CTYPE",
+        "LOGNAME",
+        "PATH",
+        "TMPDIR",
+        "USER",
+        "VLC_TIMELINE_DIAGNOSTIC_BYPASS_PREVIEW"
+      ],
+      "toc_environment_subtrees_removed": 1
+    }
+  },
+  "shipping_candidate_unchanged": "022512",
+  "baseline_allowance_percent": 0,
+  "next": "Source attribution of synchronous preview window positioning; no product fix retained yet."
+}

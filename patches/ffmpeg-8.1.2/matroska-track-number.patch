@@ -1,0 +1,14 @@
+--- a/libavformat/matroskadec.c
++++ b/libavformat/matroskadec.c
+@@ -3227,6 +3227,11 @@
+             av_free(key_id_base64);
+             return AVERROR(ENOMEM);
+         }
++        /* Private timeline helper: expose the container's TrackNumber so
++         * video ordinals can follow VLC's TrackNumber-sorted menu. Values
++         * outside AVStream.id's range remain explicitly unmappable. */
++        st->id = track->num > 0 && track->num <= INT_MAX
++               ? (int)track->num : -1;
+         par = st->codecpar;
+ 
+         par->codec_id  = codec_id;

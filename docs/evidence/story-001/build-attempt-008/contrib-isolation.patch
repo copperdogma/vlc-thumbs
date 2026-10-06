@@ -1,0 +1,11 @@
+diff --git a/contrib/src/main.mak b/contrib/src/main.mak
+index 01041fe..99c0b52 100644
+--- a/contrib/src/main.mak
++++ b/contrib/src/main.mak
+@@ -792,3 +792,6 @@ $(patsubst %,.dep-%,$(filter-out $(PKGS_FOUND),$(PKGS_ALL))): .dep-%: .%
+ $(foreach p,$(PKGS_ALL),.$(p)): .%: $$(foreach d,$$(DEPS_$$*),.dep-$$(d))
+ 
+ .DELETE_ON_ERROR:
++
++# Local arm64 build: exclude host Intel package prefix from CMake library/header detection.
++CMAKE += -DCMAKE_IGNORE_PREFIX_PATH=/usr/local

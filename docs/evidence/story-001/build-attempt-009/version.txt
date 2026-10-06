@@ -1,0 +1,7 @@
+VLC version 3.0.24 Vetinari (3.0.24-0-g6de05ad)
+Compiled by cam on mac.lan (Oct  3 2026 23:58:15)
+Compiler: clang: warning: argument unused during compilation: '-mmacosx-version-min=10.7' [-Wunused-command-line-argument]
+This program comes with NO WARRANTY, to the extent permitted by law.
+You may redistribute it under the terms of the GNU General Public License;
+see the file named COPYING for details.
+Written by the VideoLAN team; see the AUTHORS file.

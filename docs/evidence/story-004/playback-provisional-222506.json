@@ -1,0 +1,574 @@
+{
+  "scope": "Three matched60s current-host pairs AB,BA,AB, generated two-hour continuous-tone fixture, diagnostics enabled; active playback + real pointer hover + background preparation. No causal stall/p95/general host guarantee.",
+  "build_manifest": "work/validation/story002/app-build-20261005T222506.861213Z.json",
+  "raw": "work/validation/story004/playback-provisional-analysis.json",
+  "raw_sha256": "066aef923067c3a8da9454ae5f88d37849c24f4b98512747ecb8fac58dfa2d77",
+  "pairs": [
+    {
+      "pair": 1,
+      "both_collections_eligible": true,
+      "baseline": "work/validation/story004/playback-provisional-analysis-inputs/playback-pair-1-baseline-001",
+      "feature": "work/validation/story004/playback-provisional-analysis-inputs/playback-pair-1-feature-001",
+      "matched_conditions": {
+        "fixture_sha256": true,
+        "timeline_diagnostics_enabled": true,
+        "requested_playback_s": true,
+        "capture_fps": true,
+        "normalized_roi": true,
+        "silence_threshold": true,
+        "capture_window_size": true,
+        "timeline_rect_size": true
+      },
+      "diagnostics_cohort": "enabled",
+      "baseline_lost_picture_percent": 0.1079913606911447,
+      "feature_lost_picture_percent": 0.1044932079414838,
+      "lost_picture_increase_percentage_points": -0.003498152749660907,
+      "baseline_decoded_denominator_percent": 0.06680026720106881,
+      "feature_decoded_denominator_percent": 0.06702412868632708,
+      "interpretation": "Numerical paired comparison only; no attribution or passing verdict."
+    },
+    {
+      "pair": 2,
+      "both_collections_eligible": true,
+      "baseline": "work/validation/story004/playback-provisional-analysis-inputs/playback-pair-2-baseline-001",
+      "feature": "work/validation/story004/playback-provisional-analysis-inputs/playback-pair-2-feature-001",
+      "matched_conditions": {
+        "fixture_sha256": true,
+        "timeline_diagnostics_enabled": true,
+        "requested_playback_s": true,
+        "capture_fps": true,
+        "normalized_roi": true,
+        "silence_threshold": true,
+        "capture_window_size": true,
+        "timeline_rect_size": true
+      },
+      "diagnostics_cohort": "enabled",
+      "baseline_lost_picture_percent": 0.10718113612004287,
+      "feature_lost_picture_percent": 0.09813542688910697,
+      "lost_picture_increase_percentage_points": -0.009045709230935908,
+      "baseline_decoded_denominator_percent": 0.06711409395973154,
+      "feature_decoded_denominator_percent": 0.06702412868632708,
+      "interpretation": "Numerical paired comparison only; no attribution or passing verdict."
+    },
+    {
+      "pair": 3,
+      "both_collections_eligible": true,
+      "baseline": "work/validation/story004/playback-provisional-analysis-inputs/playback-pair-3-baseline-001",
+      "feature": "work/validation/story004/playback-provisional-analysis-inputs/playback-pair-3-feature-001",
+      "matched_conditions": {
+        "fixture_sha256": true,
+        "timeline_diagnostics_enabled": true,
+        "requested_playback_s": true,
+        "capture_fps": true,
+        "normalized_roi": true,
+        "silence_threshold": true,
+        "capture_window_size": true,
+        "timeline_rect_size": true
+      },
+      "diagnostics_cohort": "enabled",
+      "baseline_lost_picture_percent": 0.1016260162601626,
+      "feature_lost_picture_percent": 0.10152284263959391,
+      "lost_picture_increase_percentage_points": -0.00010317362056869173,
+      "baseline_decoded_denominator_percent": 0.06711409395973154,
+      "feature_decoded_denominator_percent": 0.06680026720106881,
+      "interpretation": "Numerical paired comparison only; no attribution or passing verdict."
+    }
+  ],
+  "runs": [
+    {
+      "pair": 1,
+      "variant": "baseline",
+      "eligible": true,
+      "source_hash_unchanged": true,
+      "lost_picture_rate": {
+        "displayed_plus_lost_denominator": 926,
+        "displayed_plus_lost_percent": 0.1079913606911447,
+        "decoded_denominator": 1497,
+        "decoded_percent": 0.06680026720106881,
+        "interpretation": "Use displayed+lost consistently for paired percentage-point change; decoded shown separately. Seek preparation/decode-ahead means decoded totals are not unique source-frame counts."
+      },
+      "audio": {
+        "threshold_dbfs": -60,
+        "rms_windows_overlapping_active_interval": 6001,
+        "covered_audio_window_s": 60.000733115393814,
+        "first_audible_relative_s": 0.02522095799940871,
+        "last_audible_relative_s": 60.00073312499808,
+        "below_threshold_intervals": [
+          {
+            "start_relative_s": 0.0,
+            "end_relative_s": 0.025220957995770732,
+            "duration_s": 0.025220957995770732,
+            "location": "leading_boundary",
+            "classification": "low_digital_app_audio_candidate_not_vlc_attribution"
+          }
+        ],
+        "interior_below_threshold_total_s": 0,
+        "formats": [
+          {
+            "bits_per_channel": 32,
+            "channels": 1,
+            "format_flags": 41,
+            "format_id": 1819304813,
+            "rms_supported": true,
+            "sample_rate": 48000
+          }
+        ],
+        "analysis_error_count_all_capture": 0,
+        "timestamp_discontinuities": [],
+        "observer_callback_gaps": [],
+        "callback_arrival_minus_pts_s": {
+          "median": 0.036180583669192856,
+          "p95": 0.04687808366725221,
+          "max": 0.04969333366898354
+        }
+      },
+      "unchanged_roi_intervals": [
+        {
+          "start_relative_s": 0.012763250000716653,
+          "end_relative_s": 0.17942954099999042,
+          "duration_s": 0.16666629099927377,
+          "end_reason": "roi_changed",
+          "classification": "unchanged_roi_candidate_not_vlc_attribution"
+        },
+        {
+          "start_relative_s": 0.28776270800153725,
+          "end_relative_s": 0.42942895799933467,
+          "duration_s": 0.14166624999779742,
+          "end_reason": "roi_changed",
+          "classification": "unchanged_roi_candidate_not_vlc_attribution"
+        }
+      ],
+      "resources": {
+        "app_cpu_mean_percent": 1.483535528596187,
+        "app_rss_mib_max": 236.1875,
+        "retained_helper_cpu_mean_percent": null,
+        "retained_helper_rss_mib_max": null,
+        "sampled_helper_processes": 0,
+        "system_load_range": [
+          7.7744140625,
+          10.29150390625
+        ]
+      },
+      "active_dispatches": 0,
+      "active_hover_dispatches": 0,
+      "active_background_dispatches": 0,
+      "last_background_relative_s": null
+    },
+    {
+      "pair": 1,
+      "variant": "feature",
+      "eligible": true,
+      "source_hash_unchanged": true,
+      "lost_picture_rate": {
+        "displayed_plus_lost_denominator": 957,
+        "displayed_plus_lost_percent": 0.1044932079414838,
+        "decoded_denominator": 1492,
+        "decoded_percent": 0.06702412868632708,
+        "interpretation": "Use displayed+lost consistently for paired percentage-point change; decoded shown separately. Seek preparation/decode-ahead means decoded totals are not unique source-frame counts."
+      },
+      "audio": {
+        "threshold_dbfs": -60,
+        "rms_windows_overlapping_active_interval": 6001,
+        "covered_audio_window_s": 60.00429394839739,
+        "first_audible_relative_s": 0.026488249997782987,
+        "last_audible_relative_s": 60.004293958001654,
+        "below_threshold_intervals": [
+          {
+            "start_relative_s": 0.0,
+            "end_relative_s": 0.026488249997782987,
+            "duration_s": 0.026488249997782987,
+            "location": "leading_boundary",
+            "classification": "low_digital_app_audio_candidate_not_vlc_attribution"
+          }
+        ],
+        "interior_below_threshold_total_s": 0,
+        "formats": [
+          {
+            "bits_per_channel": 32,
+            "channels": 1,
+            "format_flags": 41,
+            "format_id": 1819304813,
+            "rms_supported": true,
+            "sample_rate": 48000
+          }
+        ],
+        "analysis_error_count_all_capture": 0,
+        "timestamp_discontinuities": [],
+        "observer_callback_gaps": [],
+        "callback_arrival_minus_pts_s": {
+          "median": 0.03621237500192365,
+          "p95": 0.04690325000046869,
+          "max": 0.049719000002369285
+        }
+      },
+      "unchanged_roi_intervals": [
+        {
+          "start_relative_s": 0.00398187500104541,
+          "end_relative_s": 0.18731483300143736,
+          "duration_s": 0.18333295800039195,
+          "end_reason": "roi_changed",
+          "classification": "unchanged_roi_candidate_not_vlc_attribution"
+        },
+        {
+          "start_relative_s": 0.278981333001866,
+          "end_relative_s": 0.42064749999917694,
+          "duration_s": 0.14166616699731094,
+          "end_reason": "roi_changed",
+          "classification": "unchanged_roi_candidate_not_vlc_attribution"
+        },
+        {
+          "start_relative_s": 14.10395091600003,
+          "end_relative_s": 14.203951125000458,
+          "duration_s": 0.10000020900042728,
+          "end_reason": "roi_changed",
+          "classification": "unchanged_roi_candidate_not_vlc_attribution"
+        }
+      ],
+      "resources": {
+        "app_cpu_mean_percent": 6.900690846286701,
+        "app_rss_mib_max": 281.796875,
+        "retained_helper_cpu_mean_percent": 1.3924006908462867,
+        "retained_helper_rss_mib_max": 47.515625,
+        "sampled_helper_processes": 12,
+        "system_load_range": [
+          7.26025390625,
+          8.783203125
+        ]
+      },
+      "active_dispatches": 219,
+      "active_hover_dispatches": 79,
+      "active_background_dispatches": 140,
+      "last_background_relative_s": 59.94968237500143
+    },
+    {
+      "pair": 2,
+      "variant": "baseline",
+      "eligible": true,
+      "source_hash_unchanged": true,
+      "lost_picture_rate": {
+        "displayed_plus_lost_denominator": 933,
+        "displayed_plus_lost_percent": 0.10718113612004287,
+        "decoded_denominator": 1490,
+        "decoded_percent": 0.06711409395973154,
+        "interpretation": "Use displayed+lost consistently for paired percentage-point change; decoded shown separately. Seek preparation/decode-ahead means decoded totals are not unique source-frame counts."
+      },
+      "audio": {
+        "threshold_dbfs": -60,
+        "rms_windows_overlapping_active_interval": 6001,
+        "covered_audio_window_s": 60.001491782393714,
+        "first_audible_relative_s": 0.0281458749959711,
+        "last_audible_relative_s": 60.00149179199798,
+        "below_threshold_intervals": [
+          {
+            "start_relative_s": 0.0,
+            "end_relative_s": 0.0281458749959711,
+            "duration_s": 0.0281458749959711,
+            "location": "leading_boundary",
+            "classification": "low_digital_app_audio_candidate_not_vlc_attribution"
+          }
+        ],
+        "interior_below_threshold_total_s": 0,
+        "formats": [
+          {
+            "bits_per_channel": 32,
+            "channels": 1,
+            "format_flags": 41,
+            "format_id": 1819304813,
+            "rms_supported": true,
+            "sample_rate": 48000
+          }
+        ],
+        "analysis_error_count_all_capture": 0,
+        "timestamp_discontinuities": [],
+        "observer_callback_gaps": [],
+        "callback_arrival_minus_pts_s": {
+          "median": 0.036196375000145053,
+          "p95": 0.04688658367012977,
+          "max": 0.0501893333348562
+        }
+      },
+      "unchanged_roi_intervals": [
+        {
+          "start_relative_s": 0.012354749997030012,
+          "end_relative_s": 0.1790210830004071,
+          "duration_s": 0.16666633300337708,
+          "end_reason": "roi_changed",
+          "classification": "unchanged_roi_candidate_not_vlc_attribution"
+        },
+        {
+          "start_relative_s": 0.27068758299719775,
+          "end_relative_s": 0.437353916997381,
+          "duration_s": 0.16666633400018327,
+          "end_reason": "roi_changed",
+          "classification": "unchanged_roi_candidate_not_vlc_attribution"
+        }
+      ],
+      "resources": {
+        "app_cpu_mean_percent": 1.5046712802768165,
+        "app_rss_mib_max": 233.40625,
+        "retained_helper_cpu_mean_percent": null,
+        "retained_helper_rss_mib_max": null,
+        "sampled_helper_processes": 0,
+        "system_load_range": [
+          6.60986328125,
+          10.77685546875
+        ]
+      },
+      "active_dispatches": 0,
+      "active_hover_dispatches": 0,
+      "active_background_dispatches": 0,
+      "last_background_relative_s": null
+    },
+    {
+      "pair": 2,
+      "variant": "feature",
+      "eligible": true,
+      "source_hash_unchanged": true,
+      "lost_picture_rate": {
+        "displayed_plus_lost_denominator": 1019,
+        "displayed_plus_lost_percent": 0.09813542688910697,
+        "decoded_denominator": 1492,
+        "decoded_percent": 0.06702412868632708,
+        "interpretation": "Use displayed+lost consistently for paired percentage-point change; decoded shown separately. Seek preparation/decode-ahead means decoded totals are not unique source-frame counts."
+      },
+      "audio": {
+        "threshold_dbfs": -60,
+        "rms_windows_overlapping_active_interval": 6001,
+        "covered_audio_window_s": 60.004498157395574,
+        "first_audible_relative_s": 0.02697608299786225,
+        "last_audible_relative_s": 60.00449816699984,
+        "below_threshold_intervals": [
+          {
+            "start_relative_s": 0.0,
+            "end_relative_s": 0.02697608299786225,
+            "duration_s": 0.02697608299786225,
+            "location": "leading_boundary",
+            "classification": "low_digital_app_audio_candidate_not_vlc_attribution"
+          }
+        ],
+        "interior_below_threshold_total_s": 0,
+        "formats": [
+          {
+            "bits_per_channel": 32,
+            "channels": 1,
+            "format_flags": 41,
+            "format_id": 1819304813,
+            "rms_supported": true,
+            "sample_rate": 48000
+          }
+        ],
+        "analysis_error_count_all_capture": 0,
+        "timestamp_discontinuities": [],
+        "observer_callback_gaps": [],
+        "callback_arrival_minus_pts_s": {
+          "median": 0.03753037567003048,
+          "p95": 0.04823566733466578,
+          "max": 0.05146645900094882
+        }
+      },
+      "unchanged_roi_intervals": [
+        {
+          "start_relative_s": 0.016595583001617342,
+          "end_relative_s": 0.16659525000068243,
+          "duration_s": 0.14999966699906508,
+          "end_reason": "roi_changed",
+          "classification": "unchanged_roi_candidate_not_vlc_attribution"
+        },
+        {
+          "start_relative_s": 0.2749283330012986,
+          "end_relative_s": 0.4165946670000267,
+          "duration_s": 0.14166633399872808,
+          "end_reason": "roi_changed",
+          "classification": "unchanged_roi_candidate_not_vlc_attribution"
+        }
+      ],
+      "resources": {
+        "app_cpu_mean_percent": 6.748877374784111,
+        "app_rss_mib_max": 280.734375,
+        "retained_helper_cpu_mean_percent": 1.3507772020725388,
+        "retained_helper_rss_mib_max": 46.625,
+        "sampled_helper_processes": 18,
+        "system_load_range": [
+          7.58740234375,
+          8.791015625
+        ]
+      },
+      "active_dispatches": 212,
+      "active_hover_dispatches": 79,
+      "active_background_dispatches": 133,
+      "last_background_relative_s": 59.97052954200262
+    },
+    {
+      "pair": 3,
+      "variant": "baseline",
+      "eligible": true,
+      "source_hash_unchanged": true,
+      "lost_picture_rate": {
+        "displayed_plus_lost_denominator": 984,
+        "displayed_plus_lost_percent": 0.1016260162601626,
+        "decoded_denominator": 1490,
+        "decoded_percent": 0.06711409395973154,
+        "interpretation": "Use displayed+lost consistently for paired percentage-point change; decoded shown separately. Seek preparation/decode-ahead means decoded totals are not unique source-frame counts."
+      },
+      "audio": {
+        "threshold_dbfs": -60,
+        "rms_windows_overlapping_active_interval": 6001,
+        "covered_audio_window_s": 60.000327324396494,
+        "first_audible_relative_s": 0.030354749997059116,
+        "last_audible_relative_s": 60.00032733400076,
+        "below_threshold_intervals": [
+          {
+            "start_relative_s": 0.0,
+            "end_relative_s": 0.030354749997059116,
+            "duration_s": 0.030354749997059116,
+            "location": "leading_boundary",
+            "classification": "low_digital_app_audio_candidate_not_vlc_attribution"
+          }
+        ],
+        "interior_below_threshold_total_s": 0,
+        "formats": [
+          {
+            "bits_per_channel": 32,
+            "channels": 1,
+            "format_flags": 41,
+            "format_id": 1819304813,
+            "rms_supported": true,
+            "sample_rate": 48000
+          }
+        ],
+        "analysis_error_count_all_capture": 0,
+        "timestamp_discontinuities": [],
+        "observer_callback_gaps": [],
+        "callback_arrival_minus_pts_s": {
+          "median": 0.036211042333889054,
+          "p95": 0.046908459004043834,
+          "max": 0.04991679233353352
+        }
+      },
+      "unchanged_roi_intervals": [
+        {
+          "start_relative_s": 0.008219542000006186,
+          "end_relative_s": 0.16655262499989476,
+          "duration_s": 0.15833308299988857,
+          "end_reason": "roi_changed",
+          "classification": "unchanged_roi_candidate_not_vlc_attribution"
+        },
+        {
+          "start_relative_s": 0.27488583399826894,
+          "end_relative_s": 0.41655220900065615,
+          "duration_s": 0.1416663750023872,
+          "end_reason": "roi_changed",
+          "classification": "unchanged_roi_candidate_not_vlc_attribution"
+        }
+      ],
+      "resources": {
+        "app_cpu_mean_percent": 1.567417677642981,
+        "app_rss_mib_max": 234.75,
+        "retained_helper_cpu_mean_percent": null,
+        "retained_helper_rss_mib_max": null,
+        "sampled_helper_processes": 0,
+        "system_load_range": [
+          4.54541015625,
+          5.62744140625
+        ]
+      },
+      "active_dispatches": 0,
+      "active_hover_dispatches": 0,
+      "active_background_dispatches": 0,
+      "last_background_relative_s": null
+    },
+    {
+      "pair": 3,
+      "variant": "feature",
+      "eligible": true,
+      "source_hash_unchanged": true,
+      "lost_picture_rate": {
+        "displayed_plus_lost_denominator": 985,
+        "displayed_plus_lost_percent": 0.10152284263959391,
+        "decoded_denominator": 1497,
+        "decoded_percent": 0.06680026720106881,
+        "interpretation": "Use displayed+lost consistently for paired percentage-point change; decoded shown separately. Seek preparation/decode-ahead means decoded totals are not unique source-frame counts."
+      },
+      "audio": {
+        "threshold_dbfs": -60,
+        "rms_windows_overlapping_active_interval": 6002,
+        "covered_audio_window_s": 60.0033256983952,
+        "first_audible_relative_s": 0.030610583002271596,
+        "last_audible_relative_s": 60.003325707999466,
+        "below_threshold_intervals": [
+          {
+            "start_relative_s": 0.0,
+            "end_relative_s": 0.03061054199861246,
+            "duration_s": 0.03061054199861246,
+            "location": "leading_boundary",
+            "classification": "low_digital_app_audio_candidate_not_vlc_attribution"
+          }
+        ],
+        "interior_below_threshold_total_s": 0,
+        "formats": [
+          {
+            "bits_per_channel": 32,
+            "channels": 1,
+            "format_flags": 41,
+            "format_id": 1819304813,
+            "rms_supported": true,
+            "sample_rate": 48000
+          }
+        ],
+        "analysis_error_count_all_capture": 0,
+        "timestamp_discontinuities": [],
+        "observer_callback_gaps": [],
+        "callback_arrival_minus_pts_s": {
+          "median": 0.0362115839998296,
+          "p95": 0.04689891733505647,
+          "max": 0.049754750667489134
+        }
+      },
+      "unchanged_roi_intervals": [
+        {
+          "start_relative_s": 0.015383666999696288,
+          "end_relative_s": 0.1820501250003872,
+          "duration_s": 0.1666664580006909,
+          "end_reason": "roi_changed",
+          "classification": "unchanged_roi_candidate_not_vlc_attribution"
+        },
+        {
+          "start_relative_s": 0.27371662500081584,
+          "end_relative_s": 0.4320497080007044,
+          "duration_s": 0.15833308299988857,
+          "end_reason": "roi_changed",
+          "classification": "unchanged_roi_candidate_not_vlc_attribution"
+        }
+      ],
+      "resources": {
+        "app_cpu_mean_percent": 6.591003460207612,
+        "app_rss_mib_max": 280.046875,
+        "retained_helper_cpu_mean_percent": 1.3294117647058823,
+        "retained_helper_rss_mib_max": 47.109375,
+        "sampled_helper_processes": 21,
+        "system_load_range": [
+          5.5380859375,
+          6.4130859375
+        ]
+      },
+      "active_dispatches": 213,
+      "active_hover_dispatches": 79,
+      "active_background_dispatches": 134,
+      "last_background_relative_s": 59.861695208670426
+    }
+  ],
+  "excluded_attempts": [
+    "playback-provisional/pair3-baseline: inactive owned app before measurement; retained acquisition failure."
+  ],
+  "acquisition_adjustment": "Pair3 repeated both arms on fresh identity007 using bounded observed foreground readiness; same active protocol/scoring. Wrapper hash/observations retained. Earlier valid pairs retain successful original setup.",
+  "passed": true,
+  "limits": [
+    "No automatic pass/fail or VLC attribution. Compare each of three matched pairs, including load/order, not only aggregate means.",
+    "Diagnostics-enabled and disabled cohorts are listed separately; do not combine them into one three-pair qualification. A mixed-incompatible pair has unmatched measurement settings.",
+    "PTS alignment assumes same local host monotonic clock; inspect callback-minus-PTS diagnostics. Arrivals show processing timing, PTS locates captured content.",
+    "Audio levels observe digital app output; calibrate against synthetic tone. Boundary startup/EOF silence is reported separately, never silently removed.",
+    "Screen ROI must be verified to include continuously moving video and exclude controls/preview/letterboxing. Hash repetition is only a freeze candidate; capture gaps are separate.",
+    "Counter deltas subtract initial setup. Displayed/lost totals and decoded totals have different semantics; counters alone cannot attribute lost frames or establish 100ms stalls.",
+    "Resource sampling adds load, misses short peaks, and does not enforce worker/caching bounds. Native controls/accessibility and feature exposure need their separate evidence."
+  ]
+}

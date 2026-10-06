@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "run": "control-pilot-cadence-16ms-001",
+  "scope": "Matched paused main-window ordinary light-style knob response; not hover-to-thumbnail latency or completed seek",
+  "pilot": true,
+  "method_pilot_passed": true,
+  "qualified": false,
+  "observer_version": 3,
+  "foreground_policy": "workspace-frontmost-pid-bundle-v2",
+  "samples_per_arm": 8,
+  "observed_counts": {
+    "baseline": 8,
+    "feature": 8
+  },
+  "collection_valid": true,
+  "completed_collection": true,
+  "fault_count": 0,
+  "integrity_unchanged": true,
+  "changed_inputs": [],
+  "descriptive_response_ranges_ms": {
+    "baseline": [
+      60.374,
+      367.359
+    ],
+    "feature": [
+      58.254,
+      385.249
+    ]
+  },
+  "reporting_limit": "Method-pilot result only. No p95, effect estimate, or acceptance claim.",
+  "raw_result": "work/validation/story002/control-pilot-cadence-16ms-001/raw/results.json",
+  "candidate_manifest": "app-build-controller-16ms-experiment-132643.json",
+  "formal_comparison": {
+    "status": "running",
+    "run": "work/validation/story002/control-paired-cadence-16ms-001/raw",
+    "design": "Fresh 100 per arm; v3 observer, 900 ms observation bound, zero added allowance",
+    "result": "not yet available"
+  }
+}

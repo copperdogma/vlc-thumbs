@@ -1,0 +1,16 @@
+{
+  "scope": "Unscored main-thread profiling during physical hover; no latency or playback qualification",
+  "completed": true,
+  "all_sampled_focus_active": true,
+  "profile_returncode": 0,
+  "raw_sample": "work/validation/story002/foreground-profile-002/app-sample.txt",
+  "raw_sample_sha256": "5c8db567206b918e781b717edd56c4d53d37658d16e3cc9558c2f22bdd264802",
+  "main_thread_samples": 15098,
+  "ordinary_event_wait_samples": 14925,
+  "interpretation": "Most sampled main-thread stacks are waiting in the ordinary event-loop Mach receive. No sustained feature drawing/decode work appears in this unscored sparse-hover profile. This does not identify the presentation tail seen under ScreenCaptureKit or prove absence of short blocks.",
+  "limitations": [
+    "Sparse physical hovers, no capture observer",
+    "1ms statistical sampling may miss short operations",
+    "Timing is not percentile qualification; profiler changes scheduling"
+  ]
+}

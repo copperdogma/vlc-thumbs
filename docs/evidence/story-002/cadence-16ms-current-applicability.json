@@ -1,0 +1,58 @@
+{
+  "candidate_manifest": "app-build-controller-16ms-experiment-132643.json",
+  "source_sha256": "47b31fa472d778e0c48b304b6c07cf6e7f7a7a62cade31f42943093f4d093690",
+  "scope": "Candidate-specific hover/clear and focused reader/control applicability; no latency, full-playback, or global qualification",
+  "qualified": false,
+  "surfaces": {
+    "main": {
+      "result": "Scoped hover, endpoint, leave/hide and reentry passed",
+      "stable_host": true,
+      "pause_and_integrity": "preserved",
+      "right_caption": "01:30 / Keyframe 1:28",
+      "evidence": "cadence-16ms-surface-applicability.json"
+    },
+    "detached": {
+      "result": "Scoped hover, leave/hide and stationary-pointer resize passed",
+      "stable_host_across_resize": false,
+      "pause_and_integrity": "preserved",
+      "resize_caption": "01:20",
+      "evidence": "cadence-16ms-surface-applicability.json"
+    },
+    "native_fullscreen": {
+      "result": "Scoped hover, leave/hide and reentry passed",
+      "stable_host": true,
+      "pause_and_integrity": "preserved",
+      "right_caption": "01:30 / Keyframe 1:28",
+      "evidence": "cadence-16ms-surface-applicability.json"
+    },
+    "custom_fullscreen": {
+      "result": "Ready first-entry scope now passed after the earlier no-host attempt; preserve the earlier failure and its cause remains unknown",
+      "conditions": "CG alpha=1 at three samples before the first hover",
+      "all_tested_points_visible": true,
+      "leave_hidden_and_reentry_visible": true,
+      "pause_and_integrity": "preserved",
+      "reviewed_first_caption": "00:45 / Keyframe 0:44",
+      "evidence": "work/validation/story002/cadence-16ms-custom-ready-001/custom/results.json"
+    }
+  },
+  "focused_reader_and_control": {
+    "scope": "Uncovered main-window reader hover and selected actual controls on the 132643 candidate; no four-surface reader claim",
+    "reader": "12 caption-clear/hover records retained AXSlider focus and position at 88.9%; preview panel visible and app active in each scored record",
+    "controls": "Native click (53 s), physical drag (68 s), wheel (90 s), Cmd-Alt-Left (80 s), and volume 256→192 passed in recorded scope",
+    "integrity": "preserved",
+    "limits": "Initial caption-overlay setup was corrected to an uncovered crop; an earlier wrong Alt-only attempt is retained, not classified as a product regression. A VoiceOver running-state cleanup race has separate later settings-off verification.",
+    "raw_directory": "work/validation/story002/cadence-16ms-reader-controls-001"
+  },
+  "pending_timer_cancellation": {
+    "scope": "Single-process same-candidate burst; AppKit delivered six intervals below the 16 ms cadence",
+    "result": "Hide occurred 9.134 ms after the last delivered timeline event, within the pending 16 ms interval; no subsequent hover/display occurred before the MKV switch, and paused state and integrity were preserved",
+    "evidence": "cadence-16ms-single-process-burst-applicability.json",
+    "qualification": "Focused cancellation behavior only; no latency percentile or full MKV response cohort"
+  },
+  "remaining": [
+    "No fresh four-surface reader/accessibility claim.",
+    "No full first-entry reliability conclusion beyond the prepared custom-surface setup.",
+    "Ordinary-control matched-baseline latency remains unqualified.",
+    "Playback stall attribution and full MKV response timing remain open."
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "source_revision": "6de05adcbaf2e8b85fe86aad4169393098628119",
+  "build_exit_code": 0,
+  "app": "work/build/vlc-arm64/VLC.app",
+  "architecture": "arm64",
+  "version": "3.0.24-0-g6de05ad",
+  "development_bundle_id": "org.videolan.vlc-thumbs.development",
+  "codesign_verify_exit_code": 0,
+  "playback_smoke_exit_code": 0,
+  "gui_observations": [
+    "Synthetic MPEG-4 video rendered with timestamp 1.917",
+    "Pause button changed to Play",
+    "Timeline click changed playback time to 00:02 and rendered source frame timestamp 2.333"
+  ],
+  "workspace_bytes": 6132903936,
+  "current_free_bytes": 7122669568,
+  "scope_limits": [
+    "Silent 3-second MPEG-4 fixture only",
+    "Fullscreen and other formats not tested",
+    "Auto-update disabled",
+    "No timeline enhancement implemented",
+    "Incremental final success after recorded repairs; full clean rebuild not repeated"
+  ]
+}

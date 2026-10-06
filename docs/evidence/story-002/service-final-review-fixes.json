@@ -1,0 +1,396 @@
+{
+  "schema": 1,
+  "passed": 1,
+  "checks": [
+    {
+      "name": "geometry clamped endpoints",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "geometry midpoint and invalid inputs",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "bucket quantization and EOF",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "file stat identity change invalidates cache",
+      "passed": true,
+      "detail": {
+        "video_ordinal": 0,
+        "payload_bytes": 230400,
+        "version": 2,
+        "width": 320,
+        "actual_us": 0,
+        "channels": 4,
+        "cache": "miss",
+        "elapsed_ms": 29.044041642919183,
+        "height": 180,
+        "ok": true,
+        "requested_us": 0,
+        "has_image": 1,
+        "measured_ms": 29.157291632145643,
+        "sampling": "keyframe"
+      }
+    },
+    {
+      "name": "fault malformed",
+      "passed": true,
+      "detail": {
+        "has_image": 0,
+        "elapsed_ms": 28.45624997280538,
+        "measured_ms": 28.514541569165885,
+        "error": "malformed-reply",
+        "requested_us": 0
+      }
+    },
+    {
+      "name": "recovery after malformed",
+      "passed": true,
+      "detail": {
+        "video_ordinal": 0,
+        "payload_bytes": 230400,
+        "version": 2,
+        "width": 320,
+        "actual_us": 0,
+        "channels": 4,
+        "cache": "miss",
+        "elapsed_ms": 29.431583359837532,
+        "height": 180,
+        "ok": true,
+        "requested_us": 0,
+        "has_image": 1,
+        "measured_ms": 29.521208256483078,
+        "sampling": "keyframe"
+      }
+    },
+    {
+      "name": "fault oversized",
+      "passed": true,
+      "detail": {
+        "has_image": 0,
+        "elapsed_ms": 29.375083395279944,
+        "measured_ms": 29.433666728436947,
+        "error": "malformed-reply",
+        "requested_us": 0
+      }
+    },
+    {
+      "name": "recovery after oversized",
+      "passed": true,
+      "detail": {
+        "video_ordinal": 0,
+        "payload_bytes": 230400,
+        "version": 2,
+        "width": 320,
+        "actual_us": 0,
+        "channels": 4,
+        "cache": "miss",
+        "elapsed_ms": 30.18320829141885,
+        "height": 180,
+        "ok": true,
+        "requested_us": 0,
+        "has_image": 1,
+        "measured_ms": 30.260791652835906,
+        "sampling": "keyframe"
+      }
+    },
+    {
+      "name": "fault crash",
+      "passed": true,
+      "detail": {
+        "has_image": 0,
+        "elapsed_ms": 28.378416667692363,
+        "measured_ms": 28.443333343602717,
+        "error": "decode-unavailable",
+        "requested_us": 0
+      }
+    },
+    {
+      "name": "recovery after crash",
+      "passed": true,
+      "detail": {
+        "video_ordinal": 0,
+        "payload_bytes": 230400,
+        "version": 2,
+        "width": 320,
+        "actual_us": 0,
+        "channels": 4,
+        "cache": "miss",
+        "elapsed_ms": 29.814583365805447,
+        "height": 180,
+        "ok": true,
+        "requested_us": 0,
+        "has_image": 1,
+        "measured_ms": 29.896583291701972,
+        "sampling": "keyframe"
+      }
+    },
+    {
+      "name": "fault hang",
+      "passed": true,
+      "detail": {
+        "has_image": 0,
+        "elapsed_ms": 5001.477791578509,
+        "measured_ms": 5001.538958284073,
+        "error": "decode-unavailable",
+        "requested_us": 0
+      }
+    },
+    {
+      "name": "recovery after hang",
+      "passed": true,
+      "detail": {
+        "video_ordinal": 0,
+        "payload_bytes": 230400,
+        "version": 2,
+        "width": 320,
+        "actual_us": 0,
+        "channels": 4,
+        "cache": "miss",
+        "elapsed_ms": 99.89275003317744,
+        "height": 180,
+        "ok": true,
+        "requested_us": 0,
+        "has_image": 1,
+        "measured_ms": 99.97416660189629,
+        "sampling": "keyframe"
+      }
+    },
+    {
+      "name": "missing helper",
+      "passed": true,
+      "detail": {
+        "has_image": 0,
+        "elapsed_ms": 0.15112501569092274,
+        "measured_ms": 0.18900004215538502,
+        "error": "helper-unavailable",
+        "requested_us": 0
+      }
+    },
+    {
+      "name": "nonlocal media never launches helper",
+      "passed": true,
+      "detail": {
+        "has_image": 0,
+        "elapsed_ms": 0.028374954126775265,
+        "measured_ms": 0.06766663864254951,
+        "error": "not-local-or-cancelled",
+        "requested_us": 0
+      }
+    },
+    {
+      "name": "shutdown rejects new demand",
+      "passed": true,
+      "detail": {
+        "error": "shutdown",
+        "measured_ms": 0.001374981366097927,
+        "has_image": 0
+      }
+    },
+    {
+      "name": "file changed during decode cannot be cached or delivered",
+      "passed": true,
+      "detail": {
+        "has_image": 0,
+        "elapsed_ms": 331.4627499785274,
+        "measured_ms": 331.51795843150467,
+        "error": "changed-or-cancelled",
+        "requested_us": 0
+      }
+    },
+    {
+      "name": "burst latest delivery with stale-token cancellation",
+      "passed": true,
+      "detail": {
+        "deliveries": 1,
+        "delivered_us": 100000,
+        "max_active": 1,
+        "max_pending": 1,
+        "metrics": {
+          "launched": 2,
+          "pending": 0,
+          "active": false,
+          "superseded": 99,
+          "completed": 1
+        },
+        "last_token": 101
+      }
+    },
+    {
+      "name": "active cancellation delivers no stale completion",
+      "passed": true,
+      "detail": {
+        "launched": 3,
+        "pending": 0,
+        "active": false,
+        "superseded": 99,
+        "completed": 1
+      }
+    },
+    {
+      "name": "symlink cache root neither reads nor writes through",
+      "passed": true,
+      "detail": {
+        "video_ordinal": 0,
+        "payload_bytes": 230400,
+        "version": 2,
+        "width": 320,
+        "actual_us": 0,
+        "channels": 4,
+        "cache": "miss",
+        "elapsed_ms": 30.771458288654685,
+        "height": 180,
+        "ok": true,
+        "requested_us": 0,
+        "has_image": 1,
+        "measured_ms": 30.85837501566857,
+        "sampling": "keyframe"
+      }
+    },
+    {
+      "name": "cache IO refusal preserves valid preview and subsequent demand",
+      "passed": true,
+      "detail": {
+        "first": {
+          "video_ordinal": 0,
+          "payload_bytes": 230400,
+          "version": 2,
+          "width": 320,
+          "actual_us": 0,
+          "channels": 4,
+          "cache": "miss",
+          "elapsed_ms": 31.953208381310105,
+          "height": 180,
+          "ok": true,
+          "requested_us": 0,
+          "has_image": 1,
+          "measured_ms": 32.044666702859104,
+          "sampling": "keyframe"
+        },
+        "next": {
+          "video_ordinal": 0,
+          "payload_bytes": 230400,
+          "version": 2,
+          "width": 320,
+          "actual_us": 1000,
+          "channels": 4,
+          "cache": "miss",
+          "elapsed_ms": 31.516333343461156,
+          "height": 180,
+          "ok": true,
+          "requested_us": 1000,
+          "has_image": 1,
+          "measured_ms": 31.60366660449654,
+          "sampling": "keyframe"
+        }
+      }
+    },
+    {
+      "name": "corrupt disk cache repaired and reusable",
+      "passed": true,
+      "detail": {
+        "repair": {
+          "video_ordinal": 0,
+          "payload_bytes": 230400,
+          "version": 2,
+          "width": 320,
+          "actual_us": 0,
+          "channels": 4,
+          "cache": "miss",
+          "elapsed_ms": 31.294541666284204,
+          "height": 180,
+          "ok": true,
+          "requested_us": 0,
+          "has_image": 1,
+          "measured_ms": 31.380250002257526,
+          "sampling": "keyframe"
+        },
+        "reopened": {
+          "video_ordinal": 0,
+          "payload_bytes": 230400,
+          "version": 2,
+          "width": 320,
+          "actual_us": 0,
+          "channels": 4,
+          "cache": "disk",
+          "elapsed_ms": 0.1998333027586341,
+          "height": 180,
+          "ok": true,
+          "requested_us": 0,
+          "has_image": 1,
+          "measured_ms": 0.25687506422400475,
+          "sampling": "keyframe"
+        }
+      }
+    },
+    {
+      "name": "disk quota and cleanup ownership",
+      "passed": true,
+      "detail": {
+        "unrelated_preserved": true,
+        "owned_bytes": 209945775
+      }
+    },
+    {
+      "name": "memory LRU remains bounded and evicts oldest",
+      "passed": true,
+      "detail": {
+        "bytes_before_reload": 33434625,
+        "oldest": {
+          "video_ordinal": 0,
+          "payload_bytes": 230400,
+          "version": 2,
+          "width": 320,
+          "actual_us": 0,
+          "channels": 4,
+          "cache": "disk",
+          "elapsed_ms": 0.2655833959579468,
+          "height": 180,
+          "ok": true,
+          "requested_us": 0,
+          "has_image": 1,
+          "measured_ms": 0.3227499546483159,
+          "sampling": "keyframe"
+        }
+      }
+    }
+  ],
+  "request_order": "deterministic permutation (i*37)%100, not timeline order",
+  "scope": "Canonical Objective-C service on native main runloop with actual NSImage creation. Cache/decoder and delivery latency; excludes hover debounce, actual pointer interaction, floating panel presentation and playback. OS page cache recently populated; cold filesystem state is uncontrolled.",
+  "fixture": "standard.mp4",
+  "unqualified_fault": "True filesystem ENOSPC was not induced; a regular-file cache root provides deterministic IO refusal without filling global disk",
+  "failures": 0,
+  "latency_trials_per_condition": 0,
+  "provenance": {
+    "started_utc": "2026-10-05T01:54:04.304218+00:00",
+    "sha256": {
+      "src/macosx/VLCThumbnailService.m": "0305086bdf9513f54ee785c9e3b99571a9bd057cab1a586bc27997829e6db1eb",
+      "src/macosx/VLCThumbnailService.h": "5205b25c43b7c720f8efad036f4e003b3002c70c044660171e4056be7c522bb0",
+      "src/macosx/VLCTimelineGeometry.h": "3b2de60bba6b5feade74387816aa0406d7fbd085469810e1eeafbe7594d07334",
+      "tests/story-002/service_contract.m": "7cba0f0a1f3bce0a658b576b8944b4184dd5eebe9a8d5c6593d371d53b9fad41",
+      "tests/story-002/fake-helper.py": "908c77efcb4e3581de74faedf380d0e4a186e986f5797b8f81429ce213a8ae5e",
+      "scripts/test-thumbnail-service.sh": "fe4e6ded6bc3057b221fe92909534dd5a3d23bfdd61a0071750c578da9ae2751",
+      "work/build/thumbnail-helper/thumbnail-helper": "d18321d61869d422417757d7d766d4366a6a6102115b7e42b5a59d5646ebec2d",
+      "work/fixtures/story-002/standard.mp4": "346784501f5764cd36a31bb187d25844f500ef958a1a97952eeca28859d5f234",
+      "work/validation/story002/service-contract": "cf149402ca2c652ea6d8baf34ea0ad1d8b051d8717ae8b99f56529c44da080a6"
+    },
+    "finished_utc": "2026-10-05T01:54:16.769977+00:00",
+    "helper_unchanged": true,
+    "inputs_unchanged": {
+      "src/macosx/VLCThumbnailService.m": true,
+      "src/macosx/VLCThumbnailService.h": true,
+      "src/macosx/VLCTimelineGeometry.h": true,
+      "tests/story-002/service_contract.m": true,
+      "tests/story-002/fake-helper.py": true,
+      "scripts/test-thumbnail-service.sh": true,
+      "work/build/thumbnail-helper/thumbnail-helper": true,
+      "work/fixtures/story-002/standard.mp4": true,
+      "work/validation/story002/service-contract": true
+    }
+  }
+}

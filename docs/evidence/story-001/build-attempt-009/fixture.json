@@ -1,0 +1,6 @@
+{
+  "file": "work/fixtures/build-smoke.mp4",
+  "sha256": "bc71b544440458feb68f0ba880428468dc3601021ed4b13ed8a5d48a171f10b3",
+  "generated_with": "ffmpeg -hide_banner -loglevel error -f lavfi -i testsrc2=size=320x180:rate=12 -t 3 -c:v mpeg4 -q:v 4 work/fixtures/build-smoke.mp4",
+  "scope": "Synthetic 3-second silent MPEG-4 video; not product thumbnail golden."
+}

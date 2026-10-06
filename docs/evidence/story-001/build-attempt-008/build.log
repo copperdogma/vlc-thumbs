@@ -1,0 +1,1242 @@
+[\033[1;32mbuild\033[0m] Building VLC for macOS for architecture arm64 on a aarch64 device
+[\033[1;32mbuild\033[0m] Building in "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build"
+[\033[1;32mbuild\033[0m] Building with minimum macOS version 10.7 and SDK 27.0 at /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk using Xcode 27.0
+Build version 27A266a
+[\033[1;32mbuild\033[0m] Building building tools
+You are ready to build VLC and its contribs
+[\033[1;32mbuild\033[0m] Building contribs
+Packages licensing...    GPL version 3
+Creating makefile...
+Bootstrap completed.
+Run "make" to start compilation.
+
+Other targets:
+ * make install      same as "make"
+ * make prebuilt     fetch and install prebuilt binaries
+ * make list         list packages
+ * make fetch        fetch required source tarballs
+ * make fetch-all    fetch all source tarballs
+ * make distclean    clean everything and undo bootstrap
+ * make mostlyclean  clean everything except source tarballs
+ * make clean        clean everything
+ * make package      prepare prebuilt packages
+ * make help         show this text
+All packages:
+  SDL_image a52 alloweduwp amf aom aribb24 aribb25 asdcplib ass
+  bluray bpg breakpad caca cddb chromaprint crystalhd d3d11 d3d9
+  daala dav1d dca dvbpsi dvdcss dvdnav dvdread dxva dxva_x86 dxvahd
+  ebml faad2 ffi ffmpeg flac fluid fluidlite fontconfig freetype2
+  fribidi gcrypt gettext glew glib gme gmp gnutls goom gpg-error
+  growl gsm harfbuzz iconv jack jpeg kate lame libarchive libdsm
+  libmpeg2 libplacebo librist libtasn1 libxml2 live555 lua luac mad
+  matroska mft10 microdns mingw11-fixes mingw12-fixes mingw64 modplug
+  mpcdec mpg123 mysofa ncurses nettle nfs ogg openapv openjpeg opus
+  png postproc projectM protobuf qt qtsvg regex samplerate sdl shout
+  sidplay2 smb2 soxr sparkle spatialaudio speex speexdsp srt ssh2
+  taglib theora tiger tremor twolame upnp utfcpp vncclient vorbis
+  vpl vpx winpthreads wix wixlzx x262 x264 x26410b x265 xau xcb
+  xcb-proto xorg-macros xproto zlib zvbi
+Distribution-provided packages:
+   aom aribb24 asdcplib ass bluray cddb dav1d dca dvbpsi dvdcss
+   dvdnav dvdread ebml faad2 ffmpeg flac fontconfig freetype2 fribidi
+   gcrypt gmp gnutls goom gpg-error harfbuzz iconv kate libmpeg2
+   libplacebo librist libxml2 live555 mad matroska modplug mpg123
+   mysofa ncurses nettle nfs ogg opus png postproc protobuf regex
+   samplerate shout sidplay2 spatialaudio speex speexdsp srt ssh2
+   taglib theora twolame upnp vorbis vpx x264 x26410b zlib zvbi
+Automatically selected packages:
+  a52 chromaprint gettext gme libarchive lua luac mpcdec vncclient
+  x265
+Manually deselected packages:
+Manually selected packages:
+Depended-on packages:
+  gsm jpeg lame openjpeg
+To-be-built packages:
+  a52 chromaprint gettext gme gsm jpeg lame libarchive lua luac
+  mpcdec openjpeg vncclient x265
+make: Nothing to be done for `fetch'.
+rm -f chromaprint/vlc_build/CMakeCache.txt
+rm -f libarchive/vlc_build/CMakeCache.txt
+rm -f vncclient/vlc_build/CMakeCache.txt
+CPPFLAGS=" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64 -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include" CFLAGS="-Werror=partial-availability -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64 -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include" CXXFLAGS="-Werror=partial-availability -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64 -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include -stdlib=libc++" LDFLAGS=" -L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64" cmake -S chromaprint -DCMAKE_TOOLCHAIN_FILE=/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/toolchain.cmake -B chromaprint/vlc_build -DCMAKE_POSITION_INDEPENDENT_CODE=ON -DCMAKE_INSTALL_PREFIX:STRING=/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27 -DBUILD_SHARED_LIBS:BOOL=OFF -DCMAKE_INSTALL_LIBDIR:STRING=lib -DBUILD_TESTING:BOOL=OFF -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_REQUIRED_FLAGS="-Werror=partial-availability" -DCMAKE_IGNORE_PREFIX_PATH=/usr/local -DBUILD_TESTS=OFF
+rm -f x265/vlc_build/CMakeCache.txt
+CPPFLAGS=" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64 -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include" CFLAGS="-Werror=partial-availability -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64 -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include" CXXFLAGS="-Werror=partial-availability -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64 -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include -stdlib=libc++" LDFLAGS=" -L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64" cmake -S libarchive -DCMAKE_TOOLCHAIN_FILE=/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/toolchain.cmake -B libarchive/vlc_build -DCMAKE_POSITION_INDEPENDENT_CODE=ON -DCMAKE_INSTALL_PREFIX:STRING=/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27 -DBUILD_SHARED_LIBS:BOOL=OFF -DCMAKE_INSTALL_LIBDIR:STRING=lib -DBUILD_TESTING:BOOL=OFF -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_REQUIRED_FLAGS="-Werror=partial-availability" -DCMAKE_IGNORE_PREFIX_PATH=/usr/local -DENABLE_CPIO=OFF -DENABLE_TAR=OFF -DENABLE_CAT=OFF -DENABLE_LIBXML2=OFF -DENABLE_LZMA=OFF -DENABLE_ICONV=OFF -DENABLE_EXPAT=OFF -DENABLE_TEST=OFF -DENABLE_WERROR=OFF -DENABLE_CNG=ON -DENABLE_UNZIP=OFF -DHAVE_FDOPENDIR:INTERNAL= -DHAVE_OPENAT:INTERNAL= -DHAVE_FSTATAT:INTERNAL= -DHAVE_LINKAT:INTERNAL=
+CC="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" CXX="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++" OBJC="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" OBJCXX="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++" LD="ld" AR="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar" CCAS="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c" RANLIB="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib" STRIP="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip" PATH="/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/bin:/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/extras/tools/build/bin:/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/extras/tools/build/bin:/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/bin::/usr/local/bin:/bin:/sbin:/usr/bin:/usr/sbin" PKG_CONFIG="pkg-config" CPPFLAGS=" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64 -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include" CFLAGS="-Werror=partial-availability -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64 -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include -g -O2" CXXFLAGS="-Werror=partial-availability -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64 -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include -stdlib=libc++ -g -O2" LDFLAGS=" -L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64" cmake -S vncclient -DCMAKE_TOOLCHAIN_FILE=/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/toolchain.cmake -B vncclient/vlc_build -DCMAKE_POSITION_INDEPENDENT_CODE=ON -DCMAKE_INSTALL_PREFIX:STRING=/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27 -DBUILD_SHARED_LIBS:BOOL=OFF -DCMAKE_INSTALL_LIBDIR:STRING=lib -DBUILD_TESTING:BOOL=OFF -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_REQUIRED_FLAGS="-Werror=partial-availability" -DCMAKE_IGNORE_PREFIX_PATH=/usr/local -DCMAKE_POLICY_VERSION_MINIMUM=3.5 -DWITH_OPENSSL:BOOL=OFF -DWITH_GCRYPT:BOOL=ON -DWITH_ZLIB:BOOL=ON -DWITH_JPEG:BOOL=ON -DWITH_PNG:BOOL=OFF -DWITH_SDL:BOOL=OFF -DWITH_GTK:BOOL=OFF -DWITH_LIBSSHTUNNEL:BOOL=OFF -DWITH_THREADS:BOOL=ON -DWITH_SYSTEMD:BOOL=OFF -DWITH_FFMPEG:BOOL=OFF -DWITH_QT:BOOL=OFF -DWITH_WEBSOCKETS:BOOL=OFF -DWITH_EXAMPLES:BOOL=OFF -DWITH_TESTS:BOOL=OFF
+CPPFLAGS=" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64 -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include" CFLAGS="-Werror=partial-availability -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64 -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include" CXXFLAGS="-Werror=partial-availability -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64 -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include -stdlib=libc++" LDFLAGS=" -L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64" cmake -S x265 -DCMAKE_TOOLCHAIN_FILE=/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/toolchain.cmake -B x265/vlc_build -DCMAKE_POSITION_INDEPENDENT_CODE=ON -DCMAKE_INSTALL_PREFIX:STRING=/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27 -DBUILD_SHARED_LIBS:BOOL=OFF -DCMAKE_INSTALL_LIBDIR:STRING=lib -DBUILD_TESTING:BOOL=OFF -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_REQUIRED_FLAGS="-Werror=partial-availability" -DCMAKE_IGNORE_PREFIX_PATH=/usr/local -S x265/source -DENABLE_SHARED=OFF -DENABLE_CLI=OFF -DASM_FLAGS="-mmacosx-version-min=10.7;-isysroot;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk"
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/x265"
+
+
+CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+-- cmake version 4.0.1
+CMake Warning (dev) at CMakeLists.txt:15 (project):
+  cmake_minimum_required() should be called prior to this top-level project()
+  call.  Please see the cmake-commands(7) manual for usage documentation of
+  both commands.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- The C compiler identification is AppleClang 21.0.0.21000334
+-- The C compiler identification is AppleClang 21.0.0.21000334
+-- The C compiler identification is AppleClang 21.0.0.21000334
+-- The C compiler identification is AppleClang 21.0.0.21000334
+-- The CXX compiler identification is AppleClang 21.0.0.21000334
+-- The CXX compiler identification is AppleClang 21.0.0.21000334
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compiler ABI info - done
+-- Detecting C compiler ABI info - done
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang - skipped
+-- Check for working C compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang - skipped
+-- Check for working C compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang - skipped
+-- Check for working C compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang - skipped
+-- Detecting C compile features
+-- Detecting C compile features
+-- Detecting C compile features
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting C compile features - done
+-- Detecting C compile features - done
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info
+-- Found PkgConfig: pkg-config (found version "2.5.1")
+-- Found ZLIB: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/libz.a (found suitable version "1.3.2", minimum required is "1.2.1")
+-- Found ZLIB: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/libz.a (found version "1.3.2")
+-- Found BZip2: /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/libbz2.tbd (found version "1.0.8")
+-- Looking for BZ2_bzCompressInit
+-- Could NOT find LZO
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ - skipped
+-- Detecting CXX compile features
+-- Check for working CXX compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Detecting CXX compile features - done
+-- Detected ARM64 target processor
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+CMake Warning (dev) at /usr/local/share/cmake/Modules/FindPackageHandleStandardArgs.cmake:430 (message):
+  The package name passed to find_package_handle_standard_args() (NUMA) does
+  not match the name of the calling package (Numa).  This can lead to
+  problems in calling code that expects find_package() result variables
+  (e.g., `_FOUND`) to follow a certain pattern.
+Call Stack (most recent call first):
+  cmake/FindNuma.cmake:43 (find_package_handle_standard_args)
+  CMakeLists.txt:126 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Could NOT find NUMA (missing: NUMA_ROOT_DIR NUMA_INCLUDE_DIR NUMA_LIBRARY) 
+-- Looking for include file inttypes.h
+-- Looking for BZ2_bzCompressInit - found
+-- Could NOT find LIBB2 (missing: LIBB2_LIBRARY LIBB2_INCLUDE_DIR) 
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Looking for lrintf
+-- Could NOT find LZ4 (missing: LZ4_LIBRARY LZ4_INCLUDE_DIR) 
+-- Checking for one of the modules 'libzstd'
+-- Looking for include file inttypes.h - found
+-- Configuring build for run-time CPU feature detection
+-- Performing Test CPU_HAS_NEON_DOTPROD
+-- Could NOT find ZSTD (missing: ZSTD_LIBRARY ZSTD_INCLUDE_DIR) 
+-- Performing Test HAVE_DIRENT_H
+-- Found X11: /opt/X11/include
+-- Looking for XOpenDisplay in /opt/X11/lib/libX11.dylib;/opt/X11/lib/libXext.dylib
+-- Looking for lrintf - found
+-- Looking for round
+-- Performing Test CPU_HAS_NEON_DOTPROD - Success
+-- Performing Test CPU_HAS_NEON_I8MM
+-- Performing Test HAVE_DIRENT_H - Success
+-- Looking for include file sys/types.h
+-- Looking for XOpenDisplay in /opt/X11/lib/libX11.dylib;/opt/X11/lib/libXext.dylib - not found
+-- Looking for dnet_ntoa in dnet
+-- Looking for round - found
+-- Performing Test CPU_HAS_NEON_I8MM - Success
+-- Performing Test CPU_HAS_SVE
+-- Looking for include file sys/types.h - found
+-- Looking for include files sys/types.h, acl/libacl.h
+-- Looking for dnet_ntoa in dnet - not found
+-- Looking for dnet_ntoa in dnet_stub
+-- Performing Test HAVE_FFMPEG_TX_RDFT
+-- Looking for include files sys/types.h, acl/libacl.h - not found
+-- Looking for include files sys/types.h, attr/xattr.h
+-- Performing Test CPU_HAS_SVE - Success
+-- Performing Test CPU_HAS_SVE2
+-- Looking for dnet_ntoa in dnet_stub - not found
+-- Looking for gethostbyname
+-- Performing Test HAVE_FFMPEG_TX_RDFT - Success
+FFTW3 lib not found. Set FFTW3_DIR to find it.
+-- Found KissFFT: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/chromaprint/src/3rdparty/kissfft
+-- Using vdsp for FFT calculations
+-- Using swresample for audio conversion
+-- Configuring done (3.8s)
+-- Looking for include files sys/types.h, attr/xattr.h - not found
+-- Looking for include files sys/types.h, ctype.h
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    BUILD_TESTING
+
+
+-- Build files have been written to: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/chromaprint/vlc_build
+env cmake --build chromaprint/vlc_build
+make[1]: warning: jobserver unavailable: using -j1.  Add `+' to parent make rule.
+-- Performing Test CPU_HAS_SVE2 - Success
+-- Performing Test SVE_COMPILATION_C_TEST_COMPILED
+-- Looking for gethostbyname - found
+-- Looking for connect
+[ 90%] Built target chromaprint_objs
+-- Looking for include files sys/types.h, ctype.h - found
+-- Looking for 3 include files sys/types.h, ..., copyfile.h
+[100%] Built target chromaprint
+env cmake --install chromaprint/vlc_build --prefix /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27
+-- Install configuration: "RelWithDebInfo"
+-- Installing: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/pkgconfig/libchromaprint.pc
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/cmake/Chromaprint/ChromaprintConfig.cmake
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/cmake/Chromaprint/ChromaprintConfigVersion.cmake
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/cmake/Chromaprint/ChromaprintTargets.cmake
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/cmake/Chromaprint/ChromaprintTargets-relwithdebinfo.cmake
+-- Installing: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/libchromaprint.a
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/chromaprint.h
+touch .chromaprint
+-- Looking for connect - found
+-- Looking for remove
+-- Performing Test SVE_COMPILATION_C_TEST_COMPILED - Success
+-- Performing Test SVE_COMPILATION_CXX_TEST_COMPILED
+-- Looking for 3 include files sys/types.h, ..., copyfile.h - found
+-- Looking for 4 include files sys/types.h, ..., direct.h
+-- Looking for remove - found
+-- Looking for shmat
+-- Performing Test SVE_COMPILATION_CXX_TEST_COMPILED - Success
+-- Performing Test SVE_HEADER_C_TEST_COMPILED
+-- Looking for 4 include files sys/types.h, ..., direct.h - not found
+-- Looking for 4 include files sys/types.h, ..., dlfcn.h
+-- Looking for shmat - found
+-- Looking for IceConnectionNumber in ICE
+-- Looking for 4 include files sys/types.h, ..., dlfcn.h - found
+-- Looking for 5 include files sys/types.h, ..., errno.h
+-- Performing Test SVE_HEADER_C_TEST_COMPILED - Success
+-- Performing Test SVE_HEADER_CXX_TEST_COMPILED
+-- Looking for IceConnectionNumber in ICE - not found
+-- Found JPEG: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/libjpeg.a (found version "80")
+-- Performing Test FOUND_LIBJPEG_TURBO
+-- Looking for 5 include files sys/types.h, ..., errno.h - found
+-- Looking for 6 include files sys/types.h, ..., ext2fs/ext2_fs.h
+-- Performing Test FOUND_LIBJPEG_TURBO - Failed
+-- Runtime check for libjpeg-turbo failed, inspecting /Library/Frameworks/Mono.framework/Versions/6.12.0/include/jpeglib.h
+CMake Warning at CMakeLists.txt:136 (message):
+  *** The libjpeg library you are building against is not libjpeg-turbo.
+  Performance will be reduced.  You can obtain libjpeg-turbo from:
+  https://sourceforge.net/projects/libjpeg-turbo/files/ ***
+
+
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test SVE_HEADER_CXX_TEST_COMPILED - Success
+-- Found Neon
+-- Found Neon DotProd
+-- Found Neon I8MM
+-- Found SVE
+-- Found SVE2
+-- Performing Test CC_HAS_FLAX_VEC_CONV_NONE
+-- Looking for 6 include files sys/types.h, ..., ext2fs/ext2_fs.h - not found
+-- Performing Test HAVE_WORKING_EXT2_IOC_GETFLAGS
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Performing Test HAVE_WORKING_EXT2_IOC_GETFLAGS - Failed
+-- Looking for 6 include files sys/types.h, ..., fcntl.h
+-- Found GnuTLS: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/libgnutls.a (Required is at least version "3.4.0")
+-- Looking for dirent.h
+-- Performing Test CC_HAS_FLAX_VEC_CONV_NONE - Success
+-- Performing Test CC_HAS_NO_STRICT_OVERFLOW
+-- Looking for 6 include files sys/types.h, ..., fcntl.h - found
+-- Looking for 7 include files sys/types.h, ..., fnmatch.h
+-- Looking for dirent.h - found
+-- Looking for endian.h
+-- Performing Test CC_HAS_NO_STRICT_OVERFLOW - Success
+-- Performing Test CC_HAS_NO_NARROWING
+-- Looking for endian.h - not found
+-- Looking for fcntl.h
+-- Looking for 7 include files sys/types.h, ..., fnmatch.h - found
+-- Looking for 8 include files sys/types.h, ..., grp.h
+-- Performing Test CC_HAS_NO_NARROWING - Success
+-- Performing Test CC_HAS_NO_ARRAY_BOUNDS
+-- Looking for fcntl.h - found
+-- Looking for netinet/in.h
+-- Looking for 8 include files sys/types.h, ..., grp.h - found
+-- Looking for 9 include files sys/types.h, ..., inttypes.h
+-- Performing Test CC_HAS_NO_ARRAY_BOUNDS - Success
+-- Performing Test CC_HAS_FAST_MATH
+-- Looking for netinet/in.h - found
+-- Looking for sys/endian.h
+-- Performing Test CC_HAS_FAST_MATH - Success
+-- Performing Test CC_HAS_FNO_EXCEPTIONS_FLAG
+-- Looking for 9 include files sys/types.h, ..., inttypes.h - found
+-- Looking for 10 include files sys/types.h, ..., io.h
+-- Looking for sys/endian.h - found
+-- Looking for sys/socket.h
+-- Looking for 10 include files sys/types.h, ..., io.h - not found
+-- Looking for 10 include files sys/types.h, ..., langinfo.h
+-- Performing Test CC_HAS_FNO_EXCEPTIONS_FLAG - Success
+CMake Warning (dev) at /usr/local/share/cmake/Modules/FindPackageHandleStandardArgs.cmake:430 (message):
+  The package name passed to find_package_handle_standard_args() (nasm) does
+  not match the name of the calling package (Nasm).  This can lead to
+  problems in calling code that expects find_package() result variables
+  (e.g., `_FOUND`) to follow a certain pattern.
+Call Stack (most recent call first):
+  cmake/FindNasm.cmake:23 (find_package_handle_standard_args)
+  CMakeLists.txt:515 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Found nasm: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/extras/tools/build/bin/nasm (found version "2.16.03")
+-- GIT_EXECUTABLE /usr/local/bin/git
+-- SOURCE CODE IS FROM x265 GIT ARCHIVED ZIP OR TAR BALL
+-- GIT ARCHIVAL INFORMATION PROCESSED
+-- X265 RELEASE VERSION 4.1+1-1d117be
+-- Detected CXX compiler using -O3 optimization level
+-- The ASM compiler identification is AppleClang
+-- Found assembler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang
+-- Looking for strtok_r
+-- Looking for sys/socket.h - found
+-- Looking for sys/stat.h
+-- Looking for 10 include files sys/types.h, ..., langinfo.h - found
+-- Looking for 11 include files sys/types.h, ..., limits.h
+-- Looking for strtok_r - found
+-- Configuring done (9.2s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    BUILD_TESTING
+    CMAKE_INSTALL_LIBDIR
+
+
+-- Build files have been written to: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/x265/vlc_build
+env cmake --build x265/vlc_build
+make[1]: warning: jobserver unavailable: using -j1.  Add `+' to parent make rule.
+-- Looking for sys/stat.h - found
+-- Looking for sys/time.h
+-- Looking for 11 include files sys/types.h, ..., limits.h - found
+-- Looking for 12 include files sys/types.h, ..., linux/types.h
+[ 52%] Built target common
+-- Looking for 12 include files sys/types.h, ..., linux/types.h - not found
+-- Looking for 12 include files sys/types.h, ..., linux/fiemap.h
+-- Looking for sys/time.h - found
+-- Looking for sys/types.h
+[ 72%] Built target encoder
+[100%] Built target x265-static
+env cmake --install x265/vlc_build --prefix /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27
+-- Install configuration: "RelWithDebInfo"
+-- Installing: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/libx265.a
+-- Looking for 12 include files sys/types.h, ..., linux/fiemap.h - not found
+-- Looking for 12 include files sys/types.h, ..., linux/fs.h
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/x265.h
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/x265_config.h
+-- Installing: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/pkgconfig/x265.pc
+touch .x265
+-- Looking for sys/types.h - found
+-- Looking for sys/wait.h
+-- Looking for 12 include files sys/types.h, ..., linux/fs.h - not found
+-- Performing Test HAVE_WORKING_FS_IOC_GETFLAGS
+-- Looking for sys/wait.h - found
+-- Looking for unistd.h
+-- Performing Test HAVE_WORKING_FS_IOC_GETFLAGS - Failed
+-- Looking for 12 include files sys/types.h, ..., intsafe.h
+-- Looking for unistd.h - found
+-- Looking for sys/resource.h
+-- Looking for 12 include files sys/types.h, ..., intsafe.h - not found
+-- Looking for 12 include files sys/types.h, ..., linux/magic.h
+-- Looking for sys/resource.h - found
+-- Looking for vfork.h
+-- Looking for 12 include files sys/types.h, ..., linux/magic.h - not found
+-- Looking for 12 include files sys/types.h, ..., locale.h
+-- Looking for vfork.h - not found
+-- Looking for ws2tcpip.h
+-- Looking for 12 include files sys/types.h, ..., locale.h - found
+-- Looking for 13 include files sys/types.h, ..., membership.h
+-- Looking for ws2tcpip.h - not found
+-- Looking for arpa/inet.h
+-- Looking for 13 include files sys/types.h, ..., membership.h - found
+-- Looking for 14 include files sys/types.h, ..., memory.h
+-- Looking for arpa/inet.h - found
+-- Looking for stdint.h
+-- Looking for 14 include files sys/types.h, ..., memory.h - found
+-- Looking for 15 include files sys/types.h, ..., paths.h
+-- Looking for stdint.h - found
+-- Looking for stddef.h
+-- Looking for 15 include files sys/types.h, ..., paths.h - found
+-- Looking for 16 include files sys/types.h, ..., poll.h
+-- Looking for stddef.h - found
+-- Looking for sys/types.h
+-- Looking for 16 include files sys/types.h, ..., poll.h - found
+-- Looking for 17 include files sys/types.h, ..., process.h
+-- Looking for sys/types.h - found
+-- Looking for gettimeofday
+-- Looking for 17 include files sys/types.h, ..., process.h - not found
+-- Looking for 17 include files sys/types.h, ..., pthread.h
+-- Looking for gettimeofday - found
+-- Looking for vfork
+-- Looking for 17 include files sys/types.h, ..., pthread.h - found
+-- Looking for 18 include files sys/types.h, ..., pwd.h
+-- Looking for vfork - found
+-- Looking for vprintf
+-- Looking for 18 include files sys/types.h, ..., pwd.h - found
+-- Looking for 19 include files sys/types.h, ..., readpassphrase.h
+-- Looking for vprintf - found
+-- Looking for mmap
+-- Looking for 19 include files sys/types.h, ..., readpassphrase.h - found
+-- Looking for 20 include files sys/types.h, ..., regex.h
+-- Looking for mmap - found
+-- Looking for fork
+-- Looking for 20 include files sys/types.h, ..., regex.h - found
+-- Looking for 21 include files sys/types.h, ..., signal.h
+-- Looking for fork - found
+-- Looking for ftime
+-- Looking for 21 include files sys/types.h, ..., signal.h - found
+-- Looking for 22 include files sys/types.h, ..., spawn.h
+-- Looking for ftime - found
+-- Looking for gethostbyname
+-- Looking for 22 include files sys/types.h, ..., spawn.h - found
+-- Looking for 23 include files sys/types.h, ..., stdarg.h
+-- Looking for gethostbyname - found
+-- Looking for gethostname
+-- Looking for 23 include files sys/types.h, ..., stdarg.h - found
+-- Looking for 24 include files sys/types.h, ..., stdckdint.h
+-- Looking for gethostname - found
+-- Looking for inet_ntoa
+-- Looking for 24 include files sys/types.h, ..., stdckdint.h - found
+-- Looking for 25 include files sys/types.h, ..., stdint.h
+-- Looking for inet_ntoa - found
+-- Looking for memmove
+-- Looking for 25 include files sys/types.h, ..., stdint.h - found
+-- Looking for 26 include files sys/types.h, ..., stdio.h
+-- Looking for memmove - found
+-- Looking for memset
+-- Looking for 26 include files sys/types.h, ..., stdio.h - found
+-- Looking for 27 include files sys/types.h, ..., stdlib.h
+-- Looking for memset - found
+-- Looking for mkfifo
+-- Looking for 27 include files sys/types.h, ..., stdlib.h - found
+-- Looking for 28 include files sys/types.h, ..., string.h
+-- Looking for mkfifo - found
+-- Looking for select
+-- Looking for 28 include files sys/types.h, ..., string.h - found
+-- Looking for 29 include files sys/types.h, ..., strings.h
+-- Looking for select - found
+-- Looking for socket
+-- Looking for 29 include files sys/types.h, ..., strings.h - found
+-- Looking for 30 include files sys/types.h, ..., sys/acl.h
+-- Looking for socket - found
+-- Looking for strchr
+-- Looking for 30 include files sys/types.h, ..., sys/acl.h - found
+-- Looking for 31 include files sys/types.h, ..., sys/cdefs.h
+-- Looking for strchr - found
+-- Looking for strcspn
+-- Looking for 31 include files sys/types.h, ..., sys/cdefs.h - found
+-- Looking for 32 include files sys/types.h, ..., sys/extattr.h
+-- Looking for strcspn - found
+-- Looking for strdup
+-- Looking for 32 include files sys/types.h, ..., sys/extattr.h - not found
+-- Looking for 32 include files sys/types.h, ..., sys/ioctl.h
+-- Looking for strdup - found
+-- Looking for strerror
+-- Looking for 32 include files sys/types.h, ..., sys/ioctl.h - found
+-- Looking for 33 include files sys/types.h, ..., sys/mkdev.h
+-- Looking for strerror - found
+-- Looking for strstr
+-- Looking for 33 include files sys/types.h, ..., sys/mkdev.h - not found
+-- Looking for 33 include files sys/types.h, ..., sys/mount.h
+-- Looking for strstr - found
+-- Looking for htobe64
+-- Looking for 33 include files sys/types.h, ..., sys/mount.h - found
+-- Looking for 34 include files sys/types.h, ..., sys/param.h
+-- Looking for htobe64 - not found
+-- Looking for OSSwapHostToBigInt64
+-- Looking for 34 include files sys/types.h, ..., sys/param.h - found
+-- Looking for 35 include files sys/types.h, ..., sys/poll.h
+-- Looking for OSSwapHostToBigInt64 - found
+-- Building crypto with Libgcrypt
+-- Threads support is using pthreads
+-- Check size of pid_t
+-- Looking for 35 include files sys/types.h, ..., sys/poll.h - found
+-- Looking for 36 include files sys/types.h, ..., sys/richacl.h
+-- Check size of pid_t - done
+-- Check size of size_t
+-- Looking for 36 include files sys/types.h, ..., sys/richacl.h - not found
+-- Looking for 36 include files sys/types.h, ..., sys/select.h
+-- Check size of size_t - done
+-- Check size of socklen_t
+-- Looking for 36 include files sys/types.h, ..., sys/select.h - found
+-- Looking for 37 include files sys/types.h, ..., sys/stat.h
+-- Check size of socklen_t - done
+-- Check size of in_addr_t
+-- Looking for 37 include files sys/types.h, ..., sys/stat.h - found
+-- Looking for 38 include files sys/types.h, ..., sys/statfs.h
+-- Check size of in_addr_t - done
+-- Building with SASL: /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/libsasl2.tbd and /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include
+-- Building TLS with GnuTLS
+-- Configuring done (24.7s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    BUILD_TESTING
+
+
+-- Build files have been written to: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/vncclient/vlc_build
+env cmake --build vncclient/vlc_build --target vncclient
+make[1]: warning: jobserver unavailable: using -j1.  Add `+' to parent make rule.
+-- Looking for 38 include files sys/types.h, ..., sys/statfs.h - not found
+-- Looking for 38 include files sys/types.h, ..., sys/statvfs.h
+[  8%] Building C object CMakeFiles/vncclient.dir/src/libvncclient/cursor.c.o
+[ 16%] Building C object CMakeFiles/vncclient.dir/src/libvncclient/listen.c.o
+[ 25%] Building C object CMakeFiles/vncclient.dir/src/libvncclient/rfbclient.c.o
+-- Looking for 38 include files sys/types.h, ..., sys/statvfs.h - found
+-- Looking for 39 include files sys/types.h, ..., sys/sysmacros.h
+-- Looking for 39 include files sys/types.h, ..., sys/sysmacros.h - not found
+-- Looking for 39 include files sys/types.h, ..., sys/time.h
+[ 33%] Building C object CMakeFiles/vncclient.dir/src/libvncclient/sockets.c.o
+[ 41%] Building C object CMakeFiles/vncclient.dir/src/libvncclient/vncviewer.c.o
+-- Looking for 39 include files sys/types.h, ..., sys/time.h - found
+-- Looking for 40 include files sys/types.h, ..., sys/utime.h
+[ 50%] Building C object CMakeFiles/vncclient.dir/src/common/sockets.c.o
+[ 58%] Building C object CMakeFiles/vncclient.dir/src/common/crypto_libgcrypt.c.o
+[ 66%] Building C object CMakeFiles/vncclient.dir/src/common/turbojpeg.c.o
+-- Looking for 40 include files sys/types.h, ..., sys/utime.h - not found
+-- Looking for 40 include files sys/types.h, ..., sys/utsname.h
+[ 75%] Building C object CMakeFiles/vncclient.dir/src/libvncclient/tls_gnutls.c.o
+[ 83%] Building C object CMakeFiles/vncclient.dir/src/libvncclient/sasl.c.o
+[ 91%] Building C object CMakeFiles/vncclient.dir/src/common/minilzo.c.o
+[100%] Linking C static library libvncclient.a
+-- Looking for 40 include files sys/types.h, ..., sys/utsname.h - found
+-- Looking for 41 include files sys/types.h, ..., sys/vfs.h
+[100%] Built target vncclient
+env cmake --install vncclient/vlc_build --prefix /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27 --component vncclient
+-- Install configuration: "RelWithDebInfo"
+-- Installing: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/libvncclient.a
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/rfb/keysym.h
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/rfb/threading.h
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/rfb/rfb.h
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/rfb/rfbclient.h
+-- Installing: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/rfb/rfbconfig.h
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/rfb/rfbproto.h
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/rfb/rfbregion.h
+-- Installing: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/pkgconfig/libvncclient.pc
+touch .vncclient
+-- Looking for 41 include files sys/types.h, ..., sys/vfs.h - not found
+-- Looking for 41 include files sys/types.h, ..., sys/wait.h
+-- Looking for 41 include files sys/types.h, ..., sys/wait.h - found
+-- Looking for 42 include files sys/types.h, ..., sys/xattr.h
+-- Looking for 42 include files sys/types.h, ..., sys/xattr.h - found
+-- Looking for 43 include files sys/types.h, ..., time.h
+-- Looking for 43 include files sys/types.h, ..., time.h - found
+-- Looking for 44 include files sys/types.h, ..., unistd.h
+-- Looking for 44 include files sys/types.h, ..., unistd.h - found
+-- Looking for 45 include files sys/types.h, ..., utime.h
+-- Looking for 45 include files sys/types.h, ..., utime.h - found
+-- Looking for 46 include files sys/types.h, ..., wchar.h
+-- Looking for 46 include files sys/types.h, ..., wchar.h - found
+-- Looking for 47 include files sys/types.h, ..., wctype.h
+-- Looking for 47 include files sys/types.h, ..., wctype.h - found
+-- Looking for 48 include files sys/types.h, ..., windows.h
+-- Looking for 48 include files sys/types.h, ..., windows.h - not found
+-- Looking for 48 include files sys/types.h, ..., bcrypt.h
+-- Looking for 48 include files sys/types.h, ..., bcrypt.h - not found
+-- Looking for 48 include files sys/types.h, ..., winioctl.h
+-- Looking for 48 include files sys/types.h, ..., winioctl.h - not found
+-- Performing Test SAFE_TO_DEFINE_EXTENSIONS
+-- Performing Test SAFE_TO_DEFINE_EXTENSIONS - Success
+-- Looking for MD5Init in md
+-- Looking for MD5Init in md - not found
+-- Looking for regcomp
+-- Looking for regcomp - found
+-- Looking for _CrtSetReportMode
+-- Looking for _CrtSetReportMode - not found
+-- Looking for arc4random_buf
+-- Looking for arc4random_buf - found
+-- Looking for chflags
+-- Looking for chflags - found
+-- Looking for chown
+-- Looking for chown - found
+-- Looking for chroot
+-- Looking for chroot - found
+-- Looking for closefrom
+-- Looking for closefrom - not found
+-- Looking for close_range
+-- Looking for close_range - not found
+-- Looking for ctime_r
+-- Looking for ctime_r - found
+-- Looking for fchdir
+-- Looking for fchdir - found
+-- Looking for fchflags
+-- Looking for fchflags - found
+-- Looking for fchmod
+-- Looking for fchmod - found
+-- Looking for fchown
+-- Looking for fchown - found
+-- Looking for fcntl
+-- Looking for fcntl - found
+-- Looking for fnmatch
+-- Looking for fnmatch - found
+-- Looking for fork
+-- Looking for fork - found
+-- Looking for fstat
+-- Looking for fstat - found
+-- Looking for fstatfs
+-- Looking for fstatfs - found
+-- Looking for fstatvfs
+-- Looking for fstatvfs - found
+-- Looking for ftruncate
+-- Looking for ftruncate - found
+-- Looking for futimens
+-- Looking for futimens - found
+-- Looking for futimes
+-- Looking for futimes - found
+-- Looking for futimesat
+-- Looking for futimesat - not found
+-- Looking for getegid
+-- Looking for getegid - found
+-- Looking for geteuid
+-- Looking for geteuid - found
+-- Looking for getgrgid_r
+-- Looking for getgrgid_r - found
+-- Looking for getgrnam_r
+-- Looking for getgrnam_r - found
+-- Looking for getline
+-- Looking for getline - found
+-- Looking for getpid
+-- Looking for getpid - found
+-- Looking for getpwnam_r
+-- Looking for getpwnam_r - found
+-- Looking for getpwuid_r
+-- Looking for getpwuid_r - found
+-- Looking for getresgid
+-- Looking for getresgid - not found
+-- Looking for getresuid
+-- Looking for getresuid - not found
+-- Looking for gettimeofday
+-- Looking for gettimeofday - found
+-- Looking for getvfsbyname
+-- Looking for getvfsbyname - found
+-- Looking for gmtime_r
+-- Looking for gmtime_r - found
+-- Looking for issetugid
+-- Looking for issetugid - found
+-- Looking for lchflags
+-- Looking for lchflags - found
+-- Looking for lchmod
+-- Looking for lchmod - found
+-- Looking for lchown
+-- Looking for lchown - found
+-- Looking for link
+-- Looking for link - found
+-- Looking for localtime_r
+-- Looking for localtime_r - found
+-- Looking for lstat
+-- Looking for lstat - found
+-- Looking for lutimes
+-- Looking for lutimes - found
+-- Looking for mbrtowc
+-- Looking for mbrtowc - found
+-- Looking for memmove
+-- Looking for memmove - found
+-- Looking for mkdir
+-- Looking for mkdir - found
+-- Looking for mkfifo
+-- Looking for mkfifo - found
+-- Looking for mknod
+-- Looking for mknod - found
+-- Looking for mkstemp
+-- Looking for mkstemp - found
+-- Looking for nl_langinfo
+-- Looking for nl_langinfo - found
+-- Looking for pipe
+-- Looking for pipe - found
+-- Looking for poll
+-- Looking for poll - found
+-- Looking for posix_spawn
+-- Looking for posix_spawn - found
+-- Looking for posix_spawnp
+-- Looking for posix_spawnp - found
+-- Looking for readlink
+-- Looking for readlink - found
+-- Looking for readpassphrase
+-- Looking for readpassphrase - found
+-- Looking for select
+-- Looking for select - found
+-- Looking for setenv
+-- Looking for setenv - found
+-- Looking for setlocale
+-- Looking for setlocale - found
+-- Looking for sigaction
+-- Looking for sigaction - found
+-- Looking for statfs
+-- Looking for statfs - found
+-- Looking for statvfs
+-- Looking for statvfs - found
+-- Looking for strchr
+-- Looking for strchr - found
+-- Looking for strdup
+-- Looking for strdup - found
+-- Looking for strerror
+-- Looking for strerror - found
+-- Looking for strncpy_s
+-- Looking for strncpy_s - not found
+-- Looking for strnlen
+-- Looking for strnlen - found
+-- Looking for strrchr
+-- Looking for strrchr - found
+-- Looking for symlink
+-- Looking for symlink - found
+-- Looking for sysconf
+-- Looking for sysconf - found
+-- Looking for tcgetattr
+-- Looking for tcgetattr - found
+-- Looking for tcsetattr
+-- Looking for tcsetattr - found
+-- Looking for timegm
+-- Looking for timegm - found
+-- Looking for tzset
+-- Looking for tzset - found
+-- Looking for unlinkat
+-- Looking for unlinkat - found
+-- Looking for unsetenv
+-- Looking for unsetenv - found
+-- Looking for utime
+-- Looking for utime - found
+-- Looking for utimes
+-- Looking for utimes - found
+-- Looking for utimensat
+-- Looking for utimensat - found
+-- Looking for vfork
+-- Looking for vfork - found
+-- Looking for wcrtomb
+-- Looking for wcrtomb - found
+-- Looking for wcscmp
+-- Looking for wcscmp - found
+-- Looking for wcscpy
+-- Looking for wcscpy - found
+-- Looking for wcslen
+-- Looking for wcslen - found
+-- Looking for wctomb
+-- Looking for wctomb - found
+-- Looking for _fseeki64
+-- Looking for _fseeki64 - not found
+-- Looking for _get_timezone
+-- Looking for _get_timezone - not found
+-- Looking for ctime_s
+-- Looking for ctime_s - not found
+-- Looking for gmtime_s
+-- Looking for gmtime_s - not found
+-- Looking for localtime_s
+-- Looking for localtime_s - not found
+-- Looking for _mkgmtime
+-- Looking for _mkgmtime - not found
+-- Looking for cygwin_conv_path
+-- Looking for cygwin_conv_path - not found
+-- Looking for fseeko
+-- Looking for fseeko - found
+-- Looking for strerror_r
+-- Looking for strerror_r - found
+-- Looking for strftime
+-- Looking for strftime - found
+-- Looking for vprintf
+-- Looking for vprintf - found
+-- Looking for wmemcmp
+-- Looking for wmemcmp - found
+-- Looking for wmemcpy
+-- Looking for wmemcpy - found
+-- Looking for wmemmove
+-- Looking for wmemmove - found
+-- Performing Test HAVE_STRUCT_VFSCONF
+-- Performing Test HAVE_STRUCT_VFSCONF - Success
+-- Performing Test HAVE_STRUCT_XVFSCONF
+-- Performing Test HAVE_STRUCT_XVFSCONF - Failed
+-- Performing Test HAVE_STRUCT_STATFS
+-- Performing Test HAVE_STRUCT_STATFS - Success
+-- Performing Test HAVE_DIRFD
+-- Performing Test HAVE_DIRFD - Success
+-- Performing Test HAVE_READLINKAT
+-- Performing Test HAVE_READLINKAT - Failed
+-- Performing Test MAJOR_IN_MKDEV
+-- Performing Test MAJOR_IN_MKDEV - Failed
+-- Performing Test MAJOR_IN_SYSMACROS
+-- Performing Test MAJOR_IN_SYSMACROS - Failed
+-- Looking for EFTYPE
+-- Looking for EFTYPE - found
+-- Looking for EILSEQ
+-- Looking for EILSEQ - found
+-- Looking for D_MD_ORDER
+-- Looking for D_MD_ORDER - found
+-- Looking for INT32_MAX
+-- Looking for INT32_MAX - found
+-- Looking for INT32_MIN
+-- Looking for INT32_MIN - found
+-- Looking for INT64_MAX
+-- Looking for INT64_MAX - found
+-- Looking for INT64_MIN
+-- Looking for INT64_MIN - found
+-- Looking for INTMAX_MAX
+-- Looking for INTMAX_MAX - found
+-- Looking for INTMAX_MIN
+-- Looking for INTMAX_MIN - found
+-- Looking for UINT32_MAX
+-- Looking for UINT32_MAX - found
+-- Looking for UINT64_MAX
+-- Looking for UINT64_MAX - found
+-- Looking for UINTMAX_MAX
+-- Looking for UINTMAX_MAX - found
+-- Looking for SIZE_MAX
+-- Looking for SIZE_MAX - found
+-- Looking for SSIZE_MAX
+-- Looking for SSIZE_MAX - found
+-- Performing Test HAVE_STRUCT_TM_TM_GMTOFF
+-- Performing Test HAVE_STRUCT_TM_TM_GMTOFF - Success
+-- Performing Test HAVE_STRUCT_TM___TM_GMTOFF
+-- Performing Test HAVE_STRUCT_TM___TM_GMTOFF - Failed
+-- Performing Test HAVE_STRUCT_STATFS_F_NAMEMAX
+-- Performing Test HAVE_STRUCT_STATFS_F_NAMEMAX - Failed
+-- Performing Test HAVE_STRUCT_STATFS_F_IOSIZE
+-- Performing Test HAVE_STRUCT_STATFS_F_IOSIZE - Success
+-- Performing Test HAVE_STRUCT_STAT_ST_BIRTHTIME
+-- Performing Test HAVE_STRUCT_STAT_ST_BIRTHTIME - Success
+-- Performing Test HAVE_STRUCT_STAT_ST_BIRTHTIMESPEC_TV_NSEC
+-- Performing Test HAVE_STRUCT_STAT_ST_BIRTHTIMESPEC_TV_NSEC - Success
+-- Performing Test HAVE_STRUCT_STAT_ST_MTIMESPEC_TV_NSEC
+-- Performing Test HAVE_STRUCT_STAT_ST_MTIMESPEC_TV_NSEC - Success
+-- Performing Test HAVE_STRUCT_STAT_ST_MTIM_TV_NSEC
+-- Performing Test HAVE_STRUCT_STAT_ST_MTIM_TV_NSEC - Failed
+-- Performing Test HAVE_STRUCT_STAT_ST_MTIME_N
+-- Performing Test HAVE_STRUCT_STAT_ST_MTIME_N - Failed
+-- Performing Test HAVE_STRUCT_STAT_ST_UMTIME
+-- Performing Test HAVE_STRUCT_STAT_ST_UMTIME - Failed
+-- Performing Test HAVE_STRUCT_STAT_ST_MTIME_USEC
+-- Performing Test HAVE_STRUCT_STAT_ST_MTIME_USEC - Failed
+-- Performing Test HAVE_STRUCT_STAT_ST_BLKSIZE
+-- Performing Test HAVE_STRUCT_STAT_ST_BLKSIZE - Success
+-- Performing Test HAVE_STRUCT_STAT_ST_FLAGS
+-- Performing Test HAVE_STRUCT_STAT_ST_FLAGS - Success
+-- Performing Test HAVE_STRUCT_STATVFS_F_IOSIZE
+-- Performing Test HAVE_STRUCT_STATVFS_F_IOSIZE - Failed
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of short
+-- Check size of short - done
+-- Check size of int
+-- Check size of int - done
+-- Check size of long
+-- Check size of long - done
+-- Check size of long long
+-- Check size of long long - done
+-- Check size of unsigned short
+-- Check size of unsigned short - done
+-- Check size of unsigned
+-- Check size of unsigned - done
+-- Check size of unsigned long
+-- Check size of unsigned long - done
+-- Check size of unsigned long long
+-- Check size of unsigned long long - done
+-- Check size of __int64
+-- Check size of __int64 - failed
+-- Check size of unsigned __int64
+-- Check size of unsigned __int64 - failed
+-- Check size of int16_t
+-- Check size of int16_t - done
+-- Check size of int32_t
+-- Check size of int32_t - done
+-- Check size of int64_t
+-- Check size of int64_t - done
+-- Check size of intmax_t
+-- Check size of intmax_t - done
+-- Check size of uint8_t
+-- Check size of uint8_t - done
+-- Check size of uint16_t
+-- Check size of uint16_t - done
+-- Check size of uint32_t
+-- Check size of uint32_t - done
+-- Check size of uint64_t
+-- Check size of uint64_t - done
+-- Check size of uintmax_t
+-- Check size of uintmax_t - done
+-- Check size of dev_t
+-- Check size of dev_t - done
+-- Check size of gid_t
+-- Check size of gid_t - done
+-- Check size of id_t
+-- Check size of id_t - done
+-- Check size of mode_t
+-- Check size of mode_t - done
+-- Check size of off_t
+-- Check size of off_t - done
+-- Check size of size_t
+-- Check size of size_t - done
+-- Check size of ssize_t
+-- Check size of ssize_t - done
+-- Check size of uid_t
+-- Check size of uid_t - done
+-- Check size of pid_t
+-- Check size of pid_t - done
+-- Check size of intptr_t
+-- Check size of intptr_t - done
+-- Check size of uintptr_t
+-- Check size of uintptr_t - done
+-- Check size of wchar_t
+-- Check size of wchar_t - done
+-- Checking _FILE_OFFSET_BITS for large files
+-- Checking _FILE_OFFSET_BITS for large files - not needed
+-- Looking for setxattr in attr
+-- Looking for setxattr in attr - not found
+-- Looking for setxattr in gnu
+-- Looking for setxattr in gnu - not found
+-- Looking for EXTATTR_NAMESPACE_USER
+-- Looking for EXTATTR_NAMESPACE_USER - not found
+-- Looking for XATTR_NOFOLLOW
+-- Looking for XATTR_NOFOLLOW - found
+-- Looking for fgetxattr
+-- Looking for fgetxattr - found
+-- Looking for flistxattr
+-- Looking for flistxattr - found
+-- Looking for fsetxattr
+-- Looking for fsetxattr - found
+-- Looking for getxattr
+-- Looking for getxattr - found
+-- Looking for listxattr
+-- Looking for listxattr - found
+-- Looking for setxattr
+-- Looking for setxattr - found
+-- Extended attributes support: Darwin
+-- Looking for acl
+-- Looking for acl - not found
+-- Looking for facl
+-- Looking for facl - not found
+-- Looking for acl_get_file in acl
+-- Looking for acl_get_file in acl - not found
+-- Performing Test HAVE_ACL_T
+-- Performing Test HAVE_ACL_T - Success
+-- Performing Test HAVE_ACL_ENTRY_T
+-- Performing Test HAVE_ACL_ENTRY_T - Success
+-- Performing Test HAVE_ACL_PERMSET_T
+-- Performing Test HAVE_ACL_PERMSET_T - Success
+-- Performing Test HAVE_ACL_TAG_T
+-- Performing Test HAVE_ACL_TAG_T - Success
+-- Looking for acl_add_perm
+-- Looking for acl_add_perm - found
+-- Looking for acl_clear_perms
+-- Looking for acl_clear_perms - found
+-- Looking for acl_create_entry
+-- Looking for acl_create_entry - found
+-- Looking for acl_delete_def_file
+-- Looking for acl_delete_def_file - found
+-- Looking for acl_free
+-- Looking for acl_free - found
+-- Looking for acl_get_entry
+-- Looking for acl_get_entry - found
+-- Looking for acl_get_fd
+-- Looking for acl_get_fd - found
+-- Looking for acl_get_file
+-- Looking for acl_get_file - found
+-- Looking for acl_get_permset
+-- Looking for acl_get_permset - found
+-- Looking for acl_get_qualifier
+-- Looking for acl_get_qualifier - found
+-- Looking for acl_get_tag_type
+-- Looking for acl_get_tag_type - found
+-- Looking for acl_init
+-- Looking for acl_init - found
+-- Looking for acl_set_fd
+-- Looking for acl_set_fd - found
+-- Looking for acl_set_file
+-- Looking for acl_set_file - found
+-- Looking for acl_set_qualifier
+-- Looking for acl_set_qualifier - found
+-- Looking for acl_set_tag_type
+-- Looking for acl_set_tag_type - found
+-- Looking for acl_get_perm
+-- Looking for acl_get_perm - not found
+-- Looking for acl_add_flag_np
+-- Looking for acl_add_flag_np - found
+-- Looking for acl_clear_flags_np
+-- Looking for acl_clear_flags_np - found
+-- Looking for acl_get_brand_np
+-- Looking for acl_get_brand_np - not found
+-- Looking for acl_get_entry_type_np
+-- Looking for acl_get_entry_type_np - not found
+-- Looking for acl_get_flag_np
+-- Looking for acl_get_flag_np - found
+-- Looking for acl_get_flagset_np
+-- Looking for acl_get_flagset_np - found
+-- Looking for acl_get_fd_np
+-- Looking for acl_get_fd_np - found
+-- Looking for acl_get_link_np
+-- Looking for acl_get_link_np - found
+-- Looking for acl_get_perm_np
+-- Looking for acl_get_perm_np - found
+-- Looking for acl_is_trivial_np
+-- Looking for acl_is_trivial_np - not found
+-- Looking for acl_set_entry_type_np
+-- Looking for acl_set_entry_type_np - not found
+-- Looking for acl_set_fd_np
+-- Looking for acl_set_fd_np - found
+-- Looking for acl_set_link_np
+-- Looking for acl_set_link_np - found
+-- Looking for mbr_gid_to_uuid
+-- Looking for mbr_gid_to_uuid - found
+-- Looking for mbr_uid_to_uuid
+-- Looking for mbr_uid_to_uuid - found
+-- Looking for mbr_uuid_to_id
+-- Looking for mbr_uuid_to_id - found
+-- Performing Test HAVE_DECL_ACL_TYPE_EXTENDED
+-- Performing Test HAVE_DECL_ACL_TYPE_EXTENDED - Success
+-- Performing Test HAVE_DECL_ACL_SYNCHRONIZE
+-- Performing Test HAVE_DECL_ACL_SYNCHRONIZE - Success
+-- Looking for ACL_TYPE_NFS4
+-- Looking for ACL_TYPE_NFS4 - not found
+-- Looking for ACL_USER
+-- Looking for ACL_USER - not found
+-- Looking for richacl_get_file in richacl
+-- Looking for richacl_get_file in richacl - not found
+-- Performing Test HAVE_STRUCT_RICHACE
+-- Performing Test HAVE_STRUCT_RICHACE - Failed
+-- Performing Test HAVE_STRUCT_RICHACL
+-- Performing Test HAVE_STRUCT_RICHACL - Failed
+-- ACL support: Darwin (limited NFSv4)
+-- Checking support for ARCHIVE_CRYPTO_MD5_LIBSYSTEM
+-- Checking support for ARCHIVE_CRYPTO_MD5_LIBSYSTEM -- found
+-- Checking support for ARCHIVE_CRYPTO_SHA1_LIBSYSTEM
+-- Checking support for ARCHIVE_CRYPTO_SHA1_LIBSYSTEM -- found
+-- Checking support for ARCHIVE_CRYPTO_SHA256_LIBSYSTEM
+-- Checking support for ARCHIVE_CRYPTO_SHA256_LIBSYSTEM -- found
+-- Checking support for ARCHIVE_CRYPTO_SHA384_LIBSYSTEM
+-- Checking support for ARCHIVE_CRYPTO_SHA384_LIBSYSTEM -- found
+-- Checking support for ARCHIVE_CRYPTO_SHA512_LIBSYSTEM
+-- Checking support for ARCHIVE_CRYPTO_SHA512_LIBSYSTEM -- found
+-- Performing Test HAVE_VISIBILITY_ATTR
+-- Performing Test HAVE_VISIBILITY_ATTR - Success
+-- Configuring done (171.9s)
+-- Generating done (0.1s)
+-- Build files have been written to: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/libarchive/vlc_build
+env cmake --build libarchive/vlc_build
+make[1]: warning: jobserver unavailable: using -j1.  Add `+' to parent make rule.
+[  0%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_acl.c.o
+[  1%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_check_magic.c.o
+[  2%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_cmdline.c.o
+[  3%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_cryptor.c.o
+[  4%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_digest.c.o
+[  4%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_entry.c.o
+[  5%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_entry_copy_stat.c.o
+[  6%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_entry_link_resolver.c.o
+[  7%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_entry_sparse.c.o
+[  8%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_entry_stat.c.o
+[  8%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_entry_strmode.c.o
+[  9%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_entry_xattr.c.o
+[ 10%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_hmac.c.o
+[ 11%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_match.c.o
+[ 12%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_options.c.o
+[ 12%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_pack_dev.c.o
+[ 13%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_parse_date.c.o
+[ 14%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_pathmatch.c.o
+[ 15%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_ppmd8.c.o
+[ 16%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_ppmd7.c.o
+[ 16%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_random.c.o
+[ 17%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_rb.c.o
+[ 18%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_read.c.o
+[ 19%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_read_add_passphrase.c.o
+[ 20%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_read_append_filter.c.o
+[ 20%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_read_data_into_fd.c.o
+[ 21%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_read_disk_entry_from_file.c.o
+[ 22%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_read_disk_posix.c.o
+[ 23%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_read_disk_set_standard_lookup.c.o
+[ 24%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_read_extract.c.o
+[ 24%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_read_extract2.c.o
+[ 25%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_read_open_fd.c.o
+[ 26%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_read_open_file.c.o
+[ 27%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_read_open_filename.c.o
+[ 28%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_read_open_memory.c.o
+[ 28%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_read_set_format.c.o
+[ 29%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_read_set_options.c.o
+[ 30%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_read_support_filter_all.c.o
+[ 31%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_read_support_filter_by_code.c.o
+[ 32%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_read_support_filter_bzip2.c.o
+[ 32%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_read_support_filter_compress.c.o
+[ 33%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_read_support_filter_gzip.c.o
+[ 34%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_read_support_filter_grzip.c.o
+[ 35%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_read_support_filter_lrzip.c.o
+[ 36%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_read_support_filter_lz4.c.o
+[ 36%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_read_support_filter_lzop.c.o
+[ 37%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_read_support_filter_none.c.o
+[ 38%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_read_support_filter_program.c.o
+[ 39%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_read_support_filter_rpm.c.o
+[ 40%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_read_support_filter_uu.c.o
+[ 40%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_read_support_filter_xz.c.o
+[ 41%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_read_support_filter_zstd.c.o
+[ 42%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_read_support_format_7zip.c.o
+[ 43%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_read_support_format_all.c.o
+[ 44%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_read_support_format_ar.c.o
+[ 44%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_read_support_format_by_code.c.o
+[ 45%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_read_support_format_cab.c.o
+[ 46%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_read_support_format_cpio.c.o
+[ 47%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_read_support_format_empty.c.o
+[ 48%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_read_support_format_iso9660.c.o
+[ 48%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_read_support_format_lha.c.o
+[ 49%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_read_support_format_mtree.c.o
+[ 50%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_read_support_format_rar.c.o
+[ 51%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_read_support_format_rar5.c.o
+[ 52%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_read_support_format_raw.c.o
+[ 52%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_read_support_format_tar.c.o
+[ 53%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_read_support_format_warc.c.o
+[ 54%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_read_support_format_xar.c.o
+[ 55%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_read_support_format_zip.c.o
+[ 56%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_string.c.o
+[ 56%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_string_sprintf.c.o
+[ 57%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_time.c.o
+[ 58%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_util.c.o
+[ 59%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_version_details.c.o
+[ 60%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_virtual.c.o
+[ 60%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_write.c.o
+[ 61%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_write_disk_posix.c.o
+/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/libarchive/libarchive/archive_write_disk_posix.c:1579:19: warning: assigning to 'const char *' from 'unsigned char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+ 1579 |                 buffer_to_write = a->uncompressed_buffer;
+      |                                 ^ ~~~~~~~~~~~~~~~~~~~~~~
+1 warning generated.
+[ 62%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_write_disk_set_standard_lookup.c.o
+[ 63%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_write_open_fd.c.o
+[ 64%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_write_open_file.c.o
+[ 64%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_write_open_filename.c.o
+[ 65%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_write_open_memory.c.o
+[ 66%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_write_add_filter.c.o
+[ 67%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_write_add_filter_b64encode.c.o
+[ 68%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_write_add_filter_by_name.c.o
+[ 68%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_write_add_filter_bzip2.c.o
+[ 69%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_write_add_filter_compress.c.o
+[ 70%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_write_add_filter_grzip.c.o
+[ 71%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_write_add_filter_gzip.c.o
+[ 72%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_write_add_filter_lrzip.c.o
+[ 72%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_write_add_filter_lz4.c.o
+[ 73%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_write_add_filter_lzop.c.o
+[ 74%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_write_add_filter_none.c.o
+[ 75%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_write_add_filter_program.c.o
+[ 76%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_write_add_filter_uuencode.c.o
+[ 76%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_write_add_filter_xz.c.o
+[ 77%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_write_add_filter_zstd.c.o
+[ 78%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_write_set_format.c.o
+[ 79%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_write_set_format_7zip.c.o
+[ 80%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_write_set_format_ar.c.o
+[ 80%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_write_set_format_by_name.c.o
+[ 81%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_write_set_format_cpio.c.o
+[ 82%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_write_set_format_cpio_binary.c.o
+[ 83%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_write_set_format_cpio_newc.c.o
+[ 84%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_write_set_format_cpio_odc.c.o
+[ 84%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_write_set_format_filter_by_ext.c.o
+[ 85%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_write_set_format_gnutar.c.o
+[ 86%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_write_set_format_iso9660.c.o
+[ 87%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_write_set_format_mtree.c.o
+[ 88%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_write_set_format_pax.c.o
+[ 88%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_write_set_format_raw.c.o
+[ 89%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_write_set_format_shar.c.o
+[ 90%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_write_set_format_ustar.c.o
+[ 91%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_write_set_format_v7tar.c.o
+[ 92%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_write_set_format_warc.c.o
+[ 92%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_write_set_format_xar.c.o
+[ 93%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_write_set_format_zip.c.o
+[ 94%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_write_set_options.c.o
+[ 95%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_write_set_passphrase.c.o
+[ 96%] Building C object libarchive/CMakeFiles/archive_static.dir/filter_fork_posix.c.o
+[ 96%] Building C object libarchive/CMakeFiles/archive_static.dir/xxhash.c.o
+[ 97%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_blake2sp_ref.c.o
+[ 98%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_blake2s_ref.c.o
+[ 99%] Building C object libarchive/CMakeFiles/archive_static.dir/archive_disk_acl_darwin.c.o
+[100%] Linking C static library libarchive.a
+[100%] Built target archive_static
+env cmake --install libarchive/vlc_build --prefix /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27
+-- Install configuration: "RelWithDebInfo"
+-- Installing: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/pkgconfig/libarchive.pc
+-- Installing: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/libarchive.a
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/share/man/man3/archive_entry.3
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/share/man/man3/archive_entry_acl.3
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/share/man/man3/archive_entry_linkify.3
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/share/man/man3/archive_entry_misc.3
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/share/man/man3/archive_entry_paths.3
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/share/man/man3/archive_entry_perms.3
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/share/man/man3/archive_entry_stat.3
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/share/man/man3/archive_entry_time.3
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/share/man/man3/archive_read.3
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/share/man/man3/archive_read_add_passphrase.3
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/share/man/man3/archive_read_data.3
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/share/man/man3/archive_read_disk.3
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/share/man/man3/archive_read_extract.3
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/share/man/man3/archive_read_filter.3
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/share/man/man3/archive_read_format.3
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/share/man/man3/archive_read_free.3
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/share/man/man3/archive_read_header.3
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/share/man/man3/archive_read_new.3
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/share/man/man3/archive_read_open.3
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/share/man/man3/archive_read_set_options.3
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/share/man/man3/archive_util.3
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/share/man/man3/archive_write.3
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/share/man/man3/archive_write_blocksize.3
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/share/man/man3/archive_write_data.3
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/share/man/man3/archive_write_disk.3
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/share/man/man3/archive_write_filter.3
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/share/man/man3/archive_write_finish_entry.3
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/share/man/man3/archive_write_format.3
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/share/man/man3/archive_write_free.3
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/share/man/man3/archive_write_header.3
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/share/man/man3/archive_write_new.3
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/share/man/man3/archive_write_open.3
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/share/man/man3/archive_write_set_options.3
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/share/man/man3/archive_write_set_passphrase.3
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/share/man/man5/cpio.5
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/share/man/man3/libarchive.3
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/share/man/man3/libarchive_changes.3
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/share/man/man3/libarchive_internals.3
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/share/man/man5/libarchive-formats.5
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/share/man/man5/mtree.5
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/share/man/man5/tar.5
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/archive.h
+-- Up-to-date: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/archive_entry.h
+touch .libarchive
+[\033[1;32mbuild\033[0m] Bootstrap-ing configure
+~/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64 ~/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build
+[\033[1;32mbuild\033[0m] Running make -j4
+/Applications/Xcode.app/Contents/Developer/usr/bin/make  all-recursive
+Making all in compat
+/Applications/Xcode.app/Contents/Developer/usr/bin/make  all-am
+make[3]: Nothing to be done for `all-am'.
+Making all in doc
+make[2]: Nothing to be done for `all'.
+Making all in po
+make[2]: Nothing to be done for `all'.
+Making all in share
+make[2]: Nothing to be done for `all'.
+Making all in src
+  GEN      stamp-revision
+/Applications/Xcode.app/Contents/Developer/usr/bin/make  all-am
+make[3]: Nothing to be done for `all-am'.
+Making all in modules
+/Applications/Xcode.app/Contents/Developer/usr/bin/make  all-recursive
+Making all in .
+  CCLD     libmotion_plugin.la
+  CXXLD    libadaptive_plugin.la
+  CCLD     libarchive_plugin.la
+  CCLD     libinflate_plugin.la
+ld: library 'b2' not found
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[4]: *** [libarchive_plugin.la] Error 1
+make[4]: *** Waiting for unfinished jobs....
+make[3]: *** [all-recursive] Error 1
+make[2]: *** [all] Error 2
+make[1]: *** [all-recursive] Error 1
+make: *** [all] Error 2

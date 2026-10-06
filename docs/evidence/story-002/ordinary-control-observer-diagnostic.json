@@ -1,0 +1,169 @@
+{
+  "scope": "Matched paused main-window ordinary light-style knob response; not hover-to-thumbnail latency or completed seek",
+  "measurement": "First independent new light-style knob center within2pt on owned complete WindowServer frame: display_time minus physical input t0; PTS/display>=t0; no subtraction",
+  "observer_diagnostic": true,
+  "collection_valid": true,
+  "diagnostic_completed": true,
+  "qualified": false,
+  "observed_counts": {
+    "baseline": 16,
+    "feature": 16
+  },
+  "integrity_unchanged": true,
+  "changed_inputs": [],
+  "condition_orders": [
+    [
+      [
+        "baseline",
+        "per-frame"
+      ],
+      [
+        "feature",
+        "phase"
+      ],
+      [
+        "feature",
+        "per-frame"
+      ],
+      [
+        "baseline",
+        "phase"
+      ]
+    ],
+    [
+      [
+        "feature",
+        "per-frame"
+      ],
+      [
+        "baseline",
+        "phase"
+      ],
+      [
+        "baseline",
+        "per-frame"
+      ],
+      [
+        "feature",
+        "phase"
+      ]
+    ],
+    [
+      [
+        "baseline",
+        "phase"
+      ],
+      [
+        "feature",
+        "per-frame"
+      ],
+      [
+        "feature",
+        "phase"
+      ],
+      [
+        "baseline",
+        "per-frame"
+      ]
+    ],
+    [
+      [
+        "feature",
+        "phase"
+      ],
+      [
+        "baseline",
+        "per-frame"
+      ],
+      [
+        "baseline",
+        "phase"
+      ],
+      [
+        "feature",
+        "per-frame"
+      ]
+    ]
+  ],
+  "raw_results": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/control-observer-diagnostic-002/results.json",
+  "raw_sha256": "5ca11a53ef3fb521480cee65bfdf2dbfd4b82f0513bcf66775aa34bb2f831bad",
+  "conditions": {
+    "baseline:per-frame": {
+      "scored_count": 8,
+      "response_count": 8,
+      "right_censored_count": 0,
+      "latencies_ms": [
+        255.00574987381697,
+        308.31479153130203,
+        321.394499973394,
+        296.19970824569464,
+        257.91162496898323,
+        283.5306664928794,
+        254.09933330956846,
+        292.7334165433422
+      ],
+      "faults": [],
+      "min_ms": 254.09933330956846,
+      "median_ms": 288.1320415181108,
+      "max_ms": 321.394499973394
+    },
+    "baseline:phase": {
+      "scored_count": 8,
+      "response_count": 8,
+      "right_censored_count": 0,
+      "latencies_ms": [
+        250.94037503004074,
+        263.306749984622,
+        266.9210833264515,
+        251.4794582966715,
+        329.5986665179953,
+        257.9208333045244,
+        233.6919999215752,
+        237.84874996636063
+      ],
+      "faults": [],
+      "min_ms": 233.6919999215752,
+      "median_ms": 254.70014580059797,
+      "max_ms": 329.5986665179953
+    },
+    "feature:per-frame": {
+      "scored_count": 8,
+      "response_count": 8,
+      "right_censored_count": 0,
+      "latencies_ms": [
+        445.6684999167919,
+        462.1894166339189,
+        394.29237495642155,
+        454.0977500146255,
+        662.1065000072122,
+        329.1852081893012,
+        387.47220824006945,
+        396.0195415420458
+      ],
+      "faults": [],
+      "min_ms": 329.1852081893012,
+      "median_ms": 420.84402072941884,
+      "max_ms": 662.1065000072122
+    },
+    "feature:phase": {
+      "scored_count": 8,
+      "response_count": 8,
+      "right_censored_count": 0,
+      "latencies_ms": [
+        333.5322914645076,
+        399.5199581841007,
+        461.81287488434464,
+        499.14904159959406,
+        391.3603749824688,
+        458.4169165464118,
+        391.2562499754131,
+        412.553625064902
+      ],
+      "faults": [],
+      "min_ms": 333.5322914645076,
+      "median_ms": 406.03679162450135,
+      "max_ms": 499.14904159959406
+    }
+  },
+  "conclusion": "All32responses correct/routed/owned; feature is slower under both observer modes. AX-only observer hypothesis does not explain all difference. Eight per condition is diagnostic, no p95 qualification; phase ownership guard equivalence remains unproven."
+}

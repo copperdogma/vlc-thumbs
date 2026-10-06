@@ -1,0 +1,147 @@
+{
+  "scope": "Actual-pointer main-window NAS validation; image-assignment timing, not compositor latency or causal speedup. Private media path/screenshots stay ignored.",
+  "build_manifest": "work/validation/story002/app-build-20261005T222506.861213Z.json",
+  "raw_evidence": "work/validation/story004/native-nas-provisional-001/summary.json",
+  "raw_sha256": "80105d0f8c3dca1ba8290dea2e9b2398b96c615476e32dd736522dae5e30bb16",
+  "build_inputs_sha256": {
+    "patches/vlc-3.0.24/0001-native-timeline-previews.patch": "e46951e1e3d8dcc6b618971bcc9830d6737d90bf80293588f7a96621d6d870ae",
+    "scripts/apply-vlc-patches.py": "d8a7e741e2989ba35acf2d5ccd08b272760a69d4f853056424dd40baa1d4c724",
+    "scripts/build-timeline-app.py": "780519a6ced299f23b7291e39a4dca95c0fcc477d19875bc284d47ca0800ed16",
+    "src/macosx/VLCThumbnailCache.h": "37f04f280042d0cf60862c6278ee791c82b25aaafe4d590d987394ed6f3c3d07",
+    "src/macosx/VLCThumbnailCache.m": "692b3514bf19b3f3b8afcb3dbf7f4b0828c416f54d2458f2e3c5a7a8afeb651c",
+    "src/macosx/VLCThumbnailScheduler.h": "3358d1078438a65971e67c116d7f1400c69b8033a700427faf7a480419e3c5ec",
+    "src/macosx/VLCThumbnailScheduler.m": "634a6263a641807b2f9c47bf9c66e742f57f4f1c25823deee72f6fc119491fe6",
+    "src/macosx/VLCThumbnailService.h": "655747ebac912c9410156c4d204aff33715c22ae764b24d749d416e2c86919ff",
+    "src/macosx/VLCThumbnailService.m": "1cc0b7f5d9e5b5e171d233764b89ddddd69671d006e4ca1caeca430f1d2af34e",
+    "src/macosx/VLCThumbnailWorker.h": "70c89178a08f46802793312381a39da118a21c62b9b003fda2fc2d724b74b570",
+    "src/macosx/VLCThumbnailWorker.m": "0a782004ca3b1f9412d87cdb4077c2e484d16dcdc88f28492247733b2fef2be3",
+    "src/macosx/VLCTimelineContext.h": "651c0dcf20eb90eeda70b1547bf51689b3fdd6fefd7a5cd74507a02d79b73244",
+    "src/macosx/VLCTimelineContext.m": "007285760d6d1825614a72ab92c57e13bf94a1b1c79e7c0daeb881081aa88430",
+    "src/macosx/VLCTimelineGeometry.h": "3b2de60bba6b5feade74387816aa0406d7fbd085469810e1eeafbe7594d07334",
+    "src/macosx/VLCTimelineInteractionController.h": "cd13975b82961511db69cde96c7dcf68221a576999376944e23dfb021c9789fc",
+    "src/macosx/VLCTimelineInteractionController.m": "46caca8f470beb2bb28661c1ce9d347f782131b492ce8130a24a60c0e70986bc",
+    "src/thumbnail-helper/thumbnail-helper.c": "79affe527d956cfc4f9587fc016e2295a6604ce3d47e055d185037dd429ad769"
+  },
+  "media_description": "8.44 GiB AVC movie on SMB over wireless; 6483.796 seconds",
+  "sampled_media_unchanged": true,
+  "frozen_inputs_unchanged": true,
+  "passed": true,
+  "rows": [
+    {
+      "label": "settled-0",
+      "target_seconds": 1493,
+      "outcome": "matching-image",
+      "first_useful_assignment_ms": 79.80304166630958,
+      "final_matching_assignment_ms": 79.80304166630958,
+      "first_image_verification_pending": false,
+      "final_cache": "disk",
+      "final_actual_us": 1488570411,
+      "faults": []
+    },
+    {
+      "label": "settled-1",
+      "target_seconds": 3200,
+      "outcome": "matching-image",
+      "first_useful_assignment_ms": 1.3332083326531574,
+      "final_matching_assignment_ms": 60.01412499972503,
+      "first_image_verification_pending": true,
+      "final_cache": "memory",
+      "final_actual_us": 3199905033,
+      "faults": []
+    },
+    {
+      "label": "settled-2",
+      "target_seconds": 6000,
+      "outcome": "matching-image",
+      "first_useful_assignment_ms": 0.3877499984810129,
+      "final_matching_assignment_ms": 56.885833331762115,
+      "first_image_verification_pending": true,
+      "final_cache": "memory",
+      "final_actual_us": 6003747744,
+      "faults": []
+    },
+    {
+      "label": "settled-3",
+      "target_seconds": 4600,
+      "outcome": "matching-image",
+      "first_useful_assignment_ms": 1.3020000005781185,
+      "final_matching_assignment_ms": 48.53433333482826,
+      "first_image_verification_pending": true,
+      "final_cache": "memory",
+      "final_actual_us": 4601888956,
+      "faults": []
+    },
+    {
+      "label": "settled-4",
+      "target_seconds": 1493,
+      "outcome": "matching-image",
+      "first_useful_assignment_ms": 1.3023749997955747,
+      "final_matching_assignment_ms": 1675.5536250020668,
+      "first_image_verification_pending": true,
+      "final_cache": "memory",
+      "final_actual_us": 1488570411,
+      "faults": []
+    },
+    {
+      "label": "settled-5",
+      "target_seconds": 3200,
+      "outcome": "matching-image",
+      "first_useful_assignment_ms": 3.468833332590293,
+      "final_matching_assignment_ms": 45.9332499995071,
+      "first_image_verification_pending": true,
+      "final_cache": "memory",
+      "final_actual_us": 3199905033,
+      "faults": []
+    },
+    {
+      "label": "settled-6",
+      "target_seconds": 6000,
+      "outcome": "matching-image",
+      "first_useful_assignment_ms": 0.3816249991359655,
+      "final_matching_assignment_ms": 1448.6202916668844,
+      "first_image_verification_pending": true,
+      "final_cache": "memory",
+      "final_actual_us": 6003747744,
+      "faults": []
+    },
+    {
+      "label": "settled-7",
+      "target_seconds": 4600,
+      "outcome": "matching-image",
+      "first_useful_assignment_ms": 3.700624998600688,
+      "final_matching_assignment_ms": 60.180208332894836,
+      "first_image_verification_pending": true,
+      "final_cache": "memory",
+      "final_actual_us": 4601888956,
+      "faults": []
+    },
+    {
+      "label": "rapid-sweep-jump",
+      "target_seconds": 3200,
+      "outcome": "matching-image",
+      "first_useful_assignment_ms": 1.2227500010340009,
+      "final_matching_assignment_ms": 27.622916666587116,
+      "first_image_verification_pending": true,
+      "final_cache": "memory",
+      "final_actual_us": 3199905033,
+      "faults": []
+    },
+    {
+      "label": "leave-reenter",
+      "target_seconds": 3200,
+      "outcome": "matching-image",
+      "first_useful_assignment_ms": 1.0634166683303192,
+      "final_matching_assignment_ms": 56.78266666654963,
+      "first_image_verification_pending": true,
+      "final_cache": "memory",
+      "final_actual_us": 3199905033,
+      "faults": []
+    }
+  ],
+  "limits": [
+    "Cache/source warmth uncontrolled; preceding old-build and intermediate cohorts retained separately.",
+    "First position includes disk reuse only after fresh metadata plus sampled hashing; timing begins at eligible hover, not initial pointer entry/media-readiness.",
+    "RAM provisional image is explicitly awaiting validation; final matching assignments exclude pending/preparing states.",
+    "This is one current-host cohort, no p95/general host guarantee."
+  ]
+}

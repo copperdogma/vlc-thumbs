@@ -1,0 +1,86 @@
+{
+  "scope": "Authorized local daily preview update; ordinary VLC and preferences untouched",
+  "development_build": "222506",
+  "development_manifest": "work/validation/story002/app-build-20261005T222506.861213Z.json",
+  "destination": "/Users/cam/Applications/VLC Timeline Preview.app",
+  "previous_app_preserved": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/VLCPreviewBeforeStory004.app",
+  "bundle_id": "org.videolan.vlc-thumbs.preview",
+  "automatic_updates": false,
+  "signature": "ad hoc outer signed; deep strict verified; nested qualified code unchanged",
+  "same_qualified_components": {
+    "Contents/MacOS/plugins/libmacosx_plugin.dylib": {
+      "qualified": "00cac745fba5a34b415810abe8148fa41442e5056708f1f591e100cf50a56242",
+      "delivered": "00cac745fba5a34b415810abe8148fa41442e5056708f1f591e100cf50a56242"
+    },
+    "Contents/MacOS/vlc-thumbnail-helper": {
+      "qualified": "655db134317db1046ce44a3968cd5d5ad0101cce472677abf70b4516f986ab16",
+      "delivered": "655db134317db1046ce44a3968cd5d5ad0101cce472677abf70b4516f986ab16"
+    },
+    "Contents/MacOS/plugins/plugins.dat": {
+      "qualified": "833a56402ccf2793b47fe9b560bd99d57af61b8f48dd79f8b85b3976361e43fb",
+      "delivered": "833a56402ccf2793b47fe9b560bd99d57af61b8f48dd79f8b85b3976361e43fb"
+    },
+    "Contents/Resources/English.lproj/SimplePreferences.nib/keyedobjects.nib": {
+      "qualified": "e3bcfa67f6cb597eec9fc59637a5410042e46e7decd55a4871d6d6835e0d189d",
+      "delivered": "e3bcfa67f6cb597eec9fc59637a5410042e46e7decd55a4871d6d6835e0d189d"
+    }
+  },
+  "ordinary_vlc": "untouched",
+  "preferences": "No defaults or config edits; existing daily profile retained",
+  "desktop_shortcut": false,
+  "native_delivery_check": {
+    "pid": 49254,
+    "actual_pointer": true,
+    "media": "Reported NAS movie; private path/screenshot ignored",
+    "paused_time": "00:11",
+    "position_slider_preserved": true,
+    "volume": 256,
+    "result": {
+      "result": {
+        "verification_pending": false,
+        "elapsed_ms": 623.5030833340716,
+        "sampling": "keyframe",
+        "decoded_frames": 1,
+        "seek_calls": 0,
+        "version": 3,
+        "ok": true,
+        "timeline_origin_us": 0,
+        "requested_us": 3242000000,
+        "request_read_calls": 0,
+        "id": 1,
+        "open_count": 0,
+        "operation_us": 0,
+        "preparing": false,
+        "height": 172,
+        "actual_us": 3240403833,
+        "width": 320,
+        "channels": 4,
+        "video_ordinal": 0,
+        "video_track_number": -1,
+        "read_calls": 0,
+        "request_bytes_read": 0,
+        "payload_bytes": 220160,
+        "request_seek_calls": 0,
+        "bytes_read": 0,
+        "cache": "memory"
+      },
+      "generation": "90E51E58-3BC9-40B4-AB3D-ED683959858A-3",
+      "event": "service",
+      "monotonic": 22133.683097333334
+    },
+    "owned_screenshot": "work/validation/story004/installed-hover/nas-installed-final.png",
+    "screenshot_inspected": true,
+    "temporary_trace": "work/validation/story004/installed-hover/timeline.jsonl",
+    "observed_caption": "Hover54:01 / Keyframe54:00; useful image visible; Position/time/volume unchanged"
+  },
+  "diagnostics_restored": "Temporary diagnostic launch closed normally; final launch has no feature diagnostics environment",
+  "normal_daily_pid": 59154,
+  "final_normal_launch": {
+    "pid": 59154,
+    "movie_open": true,
+    "paused_time": "00:10",
+    "volume": 256,
+    "diagnostics_enabled": false,
+    "observed": "CUA current main window; actual Pause\u2192Play and stationary time"
+  }
+}

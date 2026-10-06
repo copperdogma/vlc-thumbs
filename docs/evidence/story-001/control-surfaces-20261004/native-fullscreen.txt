@@ -1,0 +1,85 @@
+Window: "build-smoke.mp4", App: VLC Timeline Development.
+0 standard window build-smoke.mp4, URL: file:///Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/build-smoke.mp4, Secondary Actions: Raise
+	1 split group
+		2 scroll area Secondary Actions: Scroll Left, Scroll Right, Scroll Up, Scroll Down
+			3 outline
+				4 row (selectable) LIBRARY
+				5 row (selected) 1, Description: mv sidebar playlist, Value: Playlist
+				6 row (selectable) Description: mv sidebar playlist, Value: Media Library
+				7 row (selectable, expanded) Value: MY COMPUTER, Secondary Actions: Collapse
+				8 row (selectable) Description: mv sidebar movie, Value: My Videos
+				9 row (selectable) Description: mv sidebar music, Value: My Music
+				10 row (selectable) Description: mv sidebar pictures, Value: My Pictures
+				11 row (selectable, expanded) Value: LOCAL NETWORK, Secondary Actions: Collapse
+				12 row (selectable) Description: mv sidebar local, Value: Bonjour Network Discovery
+				13 row (selectable) Description: mv sidebar local, Value: Universal Plug'n'Play
+				14 row (selectable) Description: mv sidebar local, Value: Network streams (SAP)
+				15 row (selectable, expanded) Value: INTERNET, Secondary Actions: Collapse
+				16 row (selectable) Description: mv sidebar podcast, Value: Podcasts
+				17 row (selectable) Description: mv sidebar podcast, Value: Jamendo Selections
+				18 row (selectable) Description: mv sidebar podcast, Value: Icecast Radio Directory
+			19 scroll bar (settable, float) 0.3571428571428572
+				20 value indicator (settable, float) 0.3571428571428572
+				21 increment arrow button
+				22 decrement arrow button
+				23 increment page button
+				24 decrement page button
+			25 scroll bar (settable, float) 0
+				26 value indicator (settable, float) 0
+				27 increment arrow button
+				28 decrement arrow button
+				29 increment page button
+				30 decrement page button
+		31 splitter (disabled, settable, float) 238
+		32 image topbar background
+		33 text Playlist — 0:00:03
+		34 search text field (settable) Description: Search the playlist. Results will be selected in the table., Help: Search in Playlist, Placeholder: Search
+			35 button search
+		36 scroll area
+			37 outline
+				38 row (selected) build-smoke.mp4
+00:03
+				39 container
+					40 sort button
+					41 sort button Title
+					42 sort button Author
+					43 sort button Duration
+	44 button
+	45 button Next, Description: Go to previous item, Help: Backward
+	46 button Play
+	47 button Forward, Description: Go to next item
+	48 button
+	49 button Stop
+	50 button Show/Hide Playlist
+	51 button Repeat, Description: Change repeat mode. Modes: repeat one, repeat all and no repeat.
+	52 button Shuffle
+	53 slider (settable, float) Position, Description: Playback position, Value: 0
+		54 value indicator (settable, float) 0
+	55 text Description: Playback time, Value: 00:00
+	56 button Mute
+	57 slider (settable, float) Description: Volume, Help: Volume: 100 %, Value: 256
+		58 value indicator (settable, float) 256
+	59 button Full Volume
+	60 button Audio Effects, Description: Open Audio Effects window
+	61 toggle button Description: Fullscreen, Value: on
+	62 close button
+	63 zoom button
+	64 minimize button
+	65 image build-smoke.mp4
+	66 text build-smoke.mp4
+67 menu bar
+	68 VLC Timeline Development
+	69 File
+	70 Edit
+	71 View
+	72 Playback
+	73 Audio
+	74 Video
+	75 Subtitles
+	76 Window
+	77 Help
+
+Selected:
+	38 row (selected)
+
+Note: Pay special attention to the content selected by the user. If the user asks a question or refers to the content they are looking at on-screen, they might be referring to the selected content (but they might be referring to something else that's visible, too).

@@ -1,0 +1,85 @@
+{
+  "collection_valid": true,
+  "qualified": false,
+  "observed_counts": {
+    "baseline": 16,
+    "feature": 16
+  },
+  "integrity_unchanged": true,
+  "changed_inputs": [],
+  "raw_results": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/control-window-ordering-diagnostic-001/results.json",
+  "raw_sha256": "c783fa8c5603e5817abc027b4df0ce505933decffc6cbbe4b81b5c199cc8a5be",
+  "conditions": {
+    "baseline:per-frame": {
+      "scored_count": 8,
+      "response_count": 8,
+      "right_censored_count": 0,
+      "latencies_ms": [
+        220.6785000162199,
+        267.0842915540561,
+        275.57399997022003,
+        250.1802499173209,
+        249.76549996063113,
+        258.1630415515974,
+        250.1579582458362,
+        250.05808332934976
+      ],
+      "faults": [],
+      "median_ms": 250.16910408157855
+    },
+    "baseline:phase": {
+      "scored_count": 8,
+      "response_count": 8,
+      "right_censored_count": 0,
+      "latencies_ms": [
+        100.41845834348351,
+        271.28283330239356,
+        234.08270836807787,
+        250.94470824114978,
+        232.64345829375088,
+        250.22854167036712,
+        342.3402082407847,
+        234.5641249557957
+      ],
+      "faults": [],
+      "median_ms": 242.3963333130814
+    },
+    "feature:per-frame": {
+      "scored_count": 8,
+      "response_count": 8,
+      "right_censored_count": 0,
+      "latencies_ms": [
+        425.4352083662525,
+        345.55574995465577,
+        385.9357916517183,
+        442.08029157016426,
+        312.5134166330099,
+        441.314791678451,
+        378.99995839688927,
+        319.78541670832783
+      ],
+      "faults": [],
+      "median_ms": 382.4678750243038
+    },
+    "feature:phase": {
+      "scored_count": 8,
+      "response_count": 8,
+      "right_censored_count": 0,
+      "latencies_ms": [
+        395.5980415921658,
+        258.3170832367614,
+        342.2172499122098,
+        468.0506665026769,
+        320.4134999541566,
+        392.191166523844,
+        362.76887508574873,
+        363.0068749189377
+      ],
+      "faults": [],
+      "median_ms": 362.8878750023432
+    }
+  },
+  "disposition": "Rejected and reverted: per-frame median feature excess132.30ms versus prior132.71ms, so no material reduction in relative gap. Phase medians differ but do not establish qualified performance or causal gain.",
+  "source_and_runtime_restored": "Exact022512 controller input and all manifest outputs rechecked SHA256 after restoring preserved app.",
+  "experiment_app_retained": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/VLCWindowOrdering035125.app"
+}

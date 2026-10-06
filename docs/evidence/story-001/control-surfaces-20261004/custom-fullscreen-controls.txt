@@ -1,0 +1,15 @@
+Window: "", App: VLC Timeline Development.
+0 window Secondary Actions: Raise
+1 menu bar
+	2 VLC Timeline Development
+	3 File
+	4 Edit
+	5 View
+	6 Playback
+	7 Audio
+	8 Video
+	9 Subtitles
+	10 Window
+	11 Help
+
+The focused UI element is 0 window Secondary Actions: Raise

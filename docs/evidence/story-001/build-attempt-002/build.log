@@ -1,0 +1,409 @@
+[\033[1;32mbuild\033[0m] Building VLC for macOS for architecture arm64 on a aarch64 device
+[\033[1;32mbuild\033[0m] Building in "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build"
+[\033[1;32mbuild\033[0m] Building with minimum macOS version 10.7 and SDK 27.0 at /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk using Xcode 27.0
+Build version 27A266a
+[\033[1;32mbuild\033[0m] Building building tools
+You are ready to build VLC and its contribs
+[\033[1;32mbuild\033[0m] Building contribs
+Packages licensing...    GPL version 3
+Creating makefile...
+Bootstrap completed.
+Run "make" to start compilation.
+
+Other targets:
+ * make install      same as "make"
+ * make prebuilt     fetch and install prebuilt binaries
+ * make list         list packages
+ * make fetch        fetch required source tarballs
+ * make fetch-all    fetch all source tarballs
+ * make distclean    clean everything and undo bootstrap
+ * make mostlyclean  clean everything except source tarballs
+ * make clean        clean everything
+ * make package      prepare prebuilt packages
+ * make help         show this text
+All packages:
+  SDL_image a52 alloweduwp amf aom aribb24 aribb25 asdcplib ass
+  bluray bpg breakpad caca cddb chromaprint crystalhd d3d11 d3d9
+  daala dav1d dca dvbpsi dvdcss dvdnav dvdread dxva dxva_x86 dxvahd
+  ebml faad2 ffi ffmpeg flac fluid fluidlite fontconfig freetype2
+  fribidi gcrypt gettext glew glib gme gmp gnutls goom gpg-error
+  growl gsm harfbuzz iconv jack jpeg kate lame libarchive libdsm
+  libmpeg2 libplacebo librist libtasn1 libxml2 live555 lua luac mad
+  matroska mft10 microdns mingw11-fixes mingw12-fixes mingw64 modplug
+  mpcdec mpg123 mysofa ncurses nettle nfs ogg openapv openjpeg opus
+  png postproc projectM protobuf qt qtsvg regex samplerate sdl shout
+  sidplay2 smb2 soxr sparkle spatialaudio speex speexdsp srt ssh2
+  taglib theora tiger tremor twolame upnp utfcpp vncclient vorbis
+  vpl vpx winpthreads wix wixlzx x262 x264 x26410b x265 xau xcb
+  xcb-proto xorg-macros xproto zlib zvbi
+Distribution-provided packages:
+   aom aribb24 ass bluray dav1d ffi ffmpeg flac fontconfig freetype2
+   fribidi gcrypt glib gmp gnutls gpg-error harfbuzz iconv librist
+   libtasn1 libxml2 mad mpg123 ncurses nettle ogg opus png regex
+   samplerate soxr speex srt theora vorbis vpx x264 x26410b x265
+   xau xcb xproto zlib
+Automatically selected packages:
+  a52 asdcplib cddb chromaprint dca dvbpsi dvdnav dvdread faad2
+  fluid gettext gme goom kate libarchive libmpeg2 libplacebo live555
+  lua luac matroska modplug mpcdec nfs postproc protobuf shout
+  sidplay2 spatialaudio speexdsp ssh2 taglib tiger twolame upnp
+  vncclient zvbi
+Manually deselected packages:
+Manually selected packages:
+Depended-on packages:
+  dvdcss ebml gsm jpeg lame mysofa openjpeg utfcpp
+To-be-built packages:
+  a52 asdcplib cddb chromaprint dca dvbpsi dvdcss dvdnav dvdread
+  ebml faad2 fluid gettext gme goom gsm jpeg kate lame libarchive
+  libmpeg2 libplacebo live555 lua luac matroska modplug mpcdec
+  mysofa nfs openjpeg postproc protobuf shout sidplay2 spatialaudio
+  speexdsp ssh2 taglib tiger twolame upnp utfcpp vncclient zvbi
+curl -f -L --retry 3 --output "../tarballs/a52dec-0.7.4.tar.gz" -- "http://downloads.videolan.org/pub/contrib/a52/a52dec-0.7.4.tar.gz"
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  235k  100  235k    0     0   216k      0  0:00:01  0:00:01 --:--:--  216k
+grep -- " a52dec-0.7.4.tar.gz$" "../src/a52/SHA512SUMS" && (cd ../tarballs && sha512sum --check /dev/stdin) < "../src/a52/SHA512SUMS"
+4b26fe9492f218b775fb190b76ecf06edaeb656adfe6dcbd24d0a0f86871c3ba917edb88a398eb12dccedaa1605b6f0a0be06b09f9fddd9a46e457b7dd244848  a52dec-0.7.4.tar.gz
+a52dec-0.7.4.tar.gz: OK
+touch .sum-a52
+curl -f -L --retry 3 --output "../tarballs/asdcplib-rel_2_13_2.tar.gz" -- "http://downloads.videolan.org/pub/contrib/asdcplib/asdcplib-rel_2_13_2.tar.gz" || ( curl -f -L --retry 3 --output "../tarballs/asdcplib-rel_2_13_2.tar.gz" -- "https://github.com/cinecert/asdcplib/archive/refs/tags/rel_2_13_2.tar.gz" && echo "Please upload this package asdcplib-rel_2_13_2.tar.gz to our FTP" )
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  433k  100  433k    0     0   446k      0 --:--:-- --:--:-- --:--:--  446k
+grep -- " asdcplib-rel_2_13_2.tar.gz$" "../src/asdcplib/SHA512SUMS" && (cd ../tarballs && sha512sum --check /dev/stdin) < "../src/asdcplib/SHA512SUMS"
+aa98f3a3dfc2d19e9dbe7aaeb487201a09ec658a9cd1a48f88443993a69f6951a43ca4788ef52120ce8604aa72e8f134af6a9656106a64a8b660baa5c4a79a1f  asdcplib-rel_2_13_2.tar.gz
+asdcplib-rel_2_13_2.tar.gz: OK
+touch .sum-asdcplib
+curl -f -L --retry 3 --output "../tarballs/libcddb-1.3.2.tar.bz2" -- "http://downloads.videolan.org/pub/contrib/cddb/libcddb-1.3.2.tar.bz2" || ( curl -f -L --retry 3 --output "../tarballs/libcddb-1.3.2.tar.bz2" -- "https://downloads.sourceforge.net/project/libcddb/libcddb-1.3.2.tar.bz2" && echo "Please upload this package libcddb-1.3.2.tar.bz2 to our FTP" )
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 31  344k   31  108k    0     0  88883      0  0:00:03  0:00:01  0:00:02 88841100  344k  100  344k    0     0   205k      0  0:00:01  0:00:01 --:--:--  205k
+grep -- " libcddb-1.3.2.tar.bz2$" "../src/cddb/SHA512SUMS" && (cd ../tarballs && sha512sum --check /dev/stdin) < "../src/cddb/SHA512SUMS"
+0e07e7d37f2013164d75b530a5528f54847271fd20f3b7bedb192a05d1f61dcf006d10dc2927efe155a01eddcc57b940bc31d8ac88d5dfc4f1a09771caa84e0a  libcddb-1.3.2.tar.bz2
+libcddb-1.3.2.tar.bz2: OK
+touch .sum-cddb
+curl -f -L --retry 3 --output "../tarballs/chromaprint-1.6.0.tar.gz" -- "http://downloads.videolan.org/pub/contrib/chromaprint/chromaprint-1.6.0.tar.gz" || ( curl -f -L --retry 3 --output "../tarballs/chromaprint-1.6.0.tar.gz" -- "https://github.com/acoustid/chromaprint/releases/download/v1.6.0/chromaprint-1.6.0.tar.gz" && echo "Please upload this package chromaprint-1.6.0.tar.gz to our FTP" )
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  2 1540k    2 41992    0     0  90408      0  0:00:17 --:--:--  0:00:17 90305 48 1540k   48  747k    0     0   513k      0  0:00:03  0:00:01  0:00:02  513k 96 1540k   96 1492k    0     0   639k      0  0:00:02  0:00:02 --:--:--  639k100 1540k  100 1540k    0     0   523k      0  0:00:02  0:00:02 --:--:--  523k
+grep -- " chromaprint-1.6.0.tar.gz$" "../src/chromaprint/SHA512SUMS" && (cd ../tarballs && sha512sum --check /dev/stdin) < "../src/chromaprint/SHA512SUMS"
+517936826be34f492a63677b0f009985a802432ed906d08f9e6d48ef6fc67744a8f8bef579407eecc49d1948430442b7505445e8674389c17bb9e18ac1d259cf  chromaprint-1.6.0.tar.gz
+chromaprint-1.6.0.tar.gz: OK
+touch .sum-chromaprint
+curl -f -L --retry 3 --output "../tarballs/libdca-0.0.7.tar.bz2" -- "http://downloads.videolan.org/pub/videolan/libdca/0.0.7/libdca-0.0.7.tar.bz2"
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  8  154k    8 14182    0     0  42770      0  0:00:03 --:--:--  0:00:03 42716100  154k  100  154k    0     0   196k      0 --:--:-- --:--:-- --:--:--  196k
+grep -- " libdca-0.0.7.tar.bz2$" "../src/dca/SHA512SUMS" && (cd ../tarballs && sha512sum --check /dev/stdin) < "../src/dca/SHA512SUMS"
+dae15d77d066687c882833d5bed8d65a585c1fc0277b7276563c89ddd5a83b35389ec94cca445f38af28a9b01430b72647e9afd1b08f030959e711de1a08924a  libdca-0.0.7.tar.bz2
+libdca-0.0.7.tar.bz2: OK
+touch .sum-dca
+curl -f -L --retry 3 --output "../tarballs/libdvbpsi-1.3.3.tar.bz2" -- "http://downloads.videolan.org/pub/videolan/libdvbpsi/1.3.3/libdvbpsi-1.3.3.tar.bz2"
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  8  476k    8 43142    0     0  89030      0  0:00:05 --:--:--  0:00:05 88952100  476k  100  476k    0     0   440k      0  0:00:01  0:00:01 --:--:--  440k
+grep -- " libdvbpsi-1.3.3.tar.bz2$" "../src/dvbpsi/SHA512SUMS" && (cd ../tarballs && sha512sum --check /dev/stdin) < "../src/dvbpsi/SHA512SUMS"
+70f9e783a947e026ea50afe98ad2b3bfce075bd8d76932f73a6253b077a3a180aa632e9a1fff20308e2f0f3f881d727b4e4aad9b8da2b384edf9a3a0f9eacc69  libdvbpsi-1.3.3.tar.bz2
+libdvbpsi-1.3.3.tar.bz2: OK
+touch .sum-dvbpsi
+curl -f -L --retry 3 --output "../tarballs/libdvdcss-1.4.3.tar.bz2" -- "http://downloads.videolan.org/pub/videolan/libdvdcss/1.4.3/libdvdcss-1.4.3.tar.bz2"
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 11  379k   11 43142    0     0  91210      0  0:00:04 --:--:--  0:00:04 91209100  379k  100  379k    0     0   388k      0 --:--:-- --:--:-- --:--:--  388k
+grep -- " libdvdcss-1.4.3.tar.bz2$" "../src/dvdcss/SHA512SUMS" && (cd ../tarballs && sha512sum --check /dev/stdin) < "../src/dvdcss/SHA512SUMS"
+0f9c0244feff5ca62459823810a39ede745b63fedb682707fcbaf0dff11fff42998cef31a281bb6380930123d079780d37a79871f6e628cdca9cfa06c64befb6  libdvdcss-1.4.3.tar.bz2
+libdvdcss-1.4.3.tar.bz2: OK
+touch .sum-dvdcss
+curl -f -L --retry 3 --output "../tarballs/libdvdnav-6.1.1.tar.bz2" -- "http://downloads.videolan.org/pub/videolan/libdvdnav/6.1.1/libdvdnav-6.1.1.tar.bz2"
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  7  358k    7 28662    0     0  63498      0  0:00:05 --:--:--  0:00:05 63411100  358k  100  358k    0     0   263k      0  0:00:01  0:00:01 --:--:--  263k100  358k  100  358k    0     0   263k      0  0:00:01  0:00:01 --:--:--  263k
+grep -- " libdvdnav-6.1.1.tar.bz2$" "../src/dvdnav/SHA512SUMS" && (cd ../tarballs && sha512sum --check /dev/stdin) < "../src/dvdnav/SHA512SUMS"
+889bc987113189bfdfc1ebf603b256e5b228be37196455dcfdc7f66debe18e7298b82b807e86ff18a8925e491395ed4007c87cf18ba1ff1ccc213d86f5342a10  libdvdnav-6.1.1.tar.bz2
+libdvdnav-6.1.1.tar.bz2: OK
+touch .sum-dvdnav
+curl -f -L --retry 3 --output "../tarballs/libdvdread-6.1.3.tar.bz2" -- "http://downloads.videolan.org/pub/videolan/libdvdread/6.1.3/libdvdread-6.1.3.tar.bz2"
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  386k  100  386k    0     0   426k      0 --:--:-- --:--:-- --:--:--  426k
+grep -- " libdvdread-6.1.3.tar.bz2$" "../src/dvdread/SHA512SUMS" && (cd ../tarballs && sha512sum --check /dev/stdin) < "../src/dvdread/SHA512SUMS"
+c98055829ccbbe2bb7b5df48f6e279cf6e91ecab39a35c37081581452f7df7531c1d7b8abd641c55eeee357235b2658b31478dbc307995cffdf8c011bd0dd0bc  libdvdread-6.1.3.tar.bz2
+libdvdread-6.1.3.tar.bz2: OK
+touch .sum-dvdread
+curl -f -L --retry 3 --output "../tarballs/libebml-1.4.6.tar.xz" -- "http://downloads.videolan.org/pub/contrib/ebml/libebml-1.4.6.tar.xz" || ( curl -f -L --retry 3 --output "../tarballs/libebml-1.4.6.tar.xz" -- "https://dl.matroska.org/downloads/libebml/libebml-1.4.6.tar.xz" && echo "Please upload this package libebml-1.4.6.tar.xz to our FTP" )
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 52424  100 52424    0     0  85402      0 --:--:-- --:--:-- --:--:-- 85520
+grep -- " libebml-1.4.6.tar.xz$" "../src/ebml/SHA512SUMS" && (cd ../tarballs && sha512sum --check /dev/stdin) < "../src/ebml/SHA512SUMS"
+86b469a1c1352e9ea6f581267ab8fc357575f2e410a3a732b12203575744667b152c135cf314978500d6a19fac4ef4015b89fdcfcca43f5bfc49f63e27ecbce2  libebml-1.4.6.tar.xz
+libebml-1.4.6.tar.xz: OK
+touch .sum-ebml
+curl -f -L --retry 3 --output "../tarballs/faad2-2.11.3.tar.gz" -- "http://downloads.videolan.org/pub/contrib/faad2/faad2-2.11.3.tar.gz" || ( curl -f -L --retry 3 --output "../tarballs/faad2-2.11.3.tar.gz" -- "https://github.com/knik0/faad2/archive/refs/tags/2.11.3.tar.gz" && echo "Please upload this package faad2-2.11.3.tar.gz to our FTP" )
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0   153    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+curl: (22) The requested URL returned error: 404
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100 92871    0 92871    0     0  85900      0 --:--:--  0:00:01 --:--:-- 85900100  643k    0  643k    0     0   462k      0 --:--:--  0:00:01 --:--:-- 1783k
+Please upload this package faad2-2.11.3.tar.gz to our FTP
+grep -- " faad2-2.11.3.tar.gz$" "../src/faad2/SHA512SUMS" && (cd ../tarballs && sha512sum --check /dev/stdin) < "../src/faad2/SHA512SUMS"
+1a468a65b8e738a37b7af5415645e8c45b0c3505fe0794948a6b1f5b17e4f9301c015214584fb534cbfc78f016bfe907a1c88131ab76b728ef1554e4dc7e4551  faad2-2.11.3.tar.gz
+faad2-2.11.3.tar.gz: OK
+touch .sum-faad2
+curl -f -L --retry 3 --output "../tarballs/fluidsynth-2.1.8.tar.gz" -- "http://downloads.videolan.org/pub/contrib/fluid/fluidsynth-2.1.8.tar.gz" || ( curl -f -L --retry 3 --output "../tarballs/fluidsynth-2.1.8.tar.gz" -- "https://github.com/FluidSynth/fluidsynth/archive/refs/tags/v2.1.8.tar.gz" && echo "Please upload this package fluidsynth-2.1.8.tar.gz to our FTP" )
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0   153    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+curl: (22) The requested URL returned error: 404
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100 1337k    0 1337k    0     0  1089k      0 --:--:--  0:00:01 --:--:-- 1089k
+Please upload this package fluidsynth-2.1.8.tar.gz to our FTP
+grep -- " fluidsynth-2.1.8.tar.gz$" "../src/fluid/SHA512SUMS" && (cd ../tarballs && sha512sum --check /dev/stdin) < "../src/fluid/SHA512SUMS"
+34f87ea1577b1e89146a1589c67771262961bb18d0c8b21aaa9a1315e18dffc984f18f21cc8a96cc52dca9e94fcad1bdec2b62678c5f2f3434a4faba713854a6  fluidsynth-2.1.8.tar.gz
+fluidsynth-2.1.8.tar.gz: OK
+touch .sum-fluid
+curl -f -L --retry 3 --output "../tarballs/gettext-0.26.tar.xz" -- "http://downloads.videolan.org/pub/contrib/gettext/gettext-0.26.tar.xz" || ( curl -f -L --retry 3 --output "../tarballs/gettext-0.26.tar.xz" -- "http://ftpmirror.gnu.org/gnu/gettext/gettext-0.26.tar.xz" && echo "Please upload this package gettext-0.26.tar.xz to our FTP" )
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  4 9825k    4  484k    0     0   458k      0  0:00:21  0:00:01  0:00:20  458k 79 9825k   79 7801k    0     0  3879k      0  0:00:02  0:00:02 --:--:-- 3879k100 9825k  100 9825k    0     0  4186k      0  0:00:02  0:00:02 --:--:-- 4184k
+grep -- " gettext-0.26.tar.xz$" "../src/gettext/SHA512SUMS" && (cd ../tarballs && sha512sum --check /dev/stdin) < "../src/gettext/SHA512SUMS"
+544e41c9390695df1c21542842e9ca027a03cb7d4045d8cd759dec1a3dfb624aae900751b458bdb31d6454b37c40c474a952059b884555a03c7c95d6d0e687b1  gettext-0.26.tar.xz
+gettext-0.26.tar.xz: OK
+touch .sum-gettext
+curl -f -L --retry 3 --output "../tarballs/game-music-emu-0.6.5.tar.gz" -- "http://downloads.videolan.org/pub/contrib/gme/game-music-emu-0.6.5.tar.gz" || ( curl -f -L --retry 3 --output "../tarballs/game-music-emu-0.6.5.tar.gz" -- "https://github.com/libgme/game-music-emu/archive/refs/tags/0.6.5.tar.gz" && echo "Please upload this package game-music-emu-0.6.5.tar.gz to our FTP" )
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0   153    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+curl: (22) The requested URL returned error: 404
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100  341k    0  341k    0     0   319k      0 --:--:--  0:00:01 --:--:--  319k
+Please upload this package game-music-emu-0.6.5.tar.gz to our FTP
+grep -- " game-music-emu-0.6.5.tar.gz$" "../src/gme/SHA512SUMS" && (cd ../tarballs && sha512sum --check /dev/stdin) < "../src/gme/SHA512SUMS"
+c28fc36098f5e083ef43cda3f037275d7f071868ab44abf577da3f07bd9f2ffae8a65fa842b060df42baa98ad6b5f42817001749fb3c08a4023dea7334d513e9  game-music-emu-0.6.5.tar.gz
+game-music-emu-0.6.5.tar.gz: OK
+touch .sum-gme
+curl -f -L --retry 3 --output "../tarballs/goom-2k4-0-src.tar.gz" -- "http://downloads.videolan.org/pub/contrib/goom/goom-2k4-0-src.tar.gz"
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  1  739k    1 11584    0     0  33258      0  0:00:22 --:--:--  0:00:22 33191100  739k  100  739k    0     0   662k      0  0:00:01  0:00:01 --:--:--  662k
+grep -- " goom-2k4-0-src.tar.gz$" "../src/goom/SHA512SUMS" && (cd ../tarballs && sha512sum --check /dev/stdin) < "../src/goom/SHA512SUMS"
+790e3ab8dee122320ad8b3ae15f6a1cd2780222d5ae97979f614f16ba73b4b853960e7945ef9053ad9eddf9e29e69d0c52f0875d07c5c6c7cee41d764bf4ea5f  goom-2k4-0-src.tar.gz
+goom-2k4-0-src.tar.gz: OK
+touch .sum-goom
+curl -f -L --retry 3 --output "../tarballs/libgsm_1.0.13.tar.gz" -- "http://downloads.videolan.org/pub/contrib/gsm/libgsm_1.0.13.tar.gz" || ( curl -f -L --retry 3 --output "../tarballs/libgsm_1.0.13.tar.gz" -- "http://libgsm.sourcearchive.com/downloads/1.0.13/libgsm_1.0.13.orig.tar.gz" && echo "Please upload this package libgsm_1.0.13.tar.gz to our FTP" )
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 65318  100 65318    0     0   105k      0 --:--:-- --:--:-- --:--:--  104k
+grep -- " libgsm_1.0.13.tar.gz$" "../src/gsm/SHA512SUMS" && (cd ../tarballs && sha512sum --check /dev/stdin) < "../src/gsm/SHA512SUMS"
+0d0cf9e1e81e64cd84f588c1e4f0cb74b849d45e41fdebf860f63588084c73c7c5198bfe73a6c976bda5735ee516661d3db00afbb5cc5886a7ee3a7b31d673aa  libgsm_1.0.13.tar.gz
+libgsm_1.0.13.tar.gz: OK
+touch .sum-gsm
+curl -f -L --retry 3 --output "../tarballs/jpegsrc.v10.tar.gz" -- "http://downloads.videolan.org/pub/contrib/jpeg/jpegsrc.v10.tar.gz" || ( curl -f -L --retry 3 --output "../tarballs/jpegsrc.v10.tar.gz" -- "http://www.ijg.org/files/jpegsrc.v10.tar.gz" && echo "Please upload this package jpegsrc.v10.tar.gz to our FTP" )
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  3 1073k    3 41992    0     0  88461      0  0:00:12 --:--:--  0:00:12 88404100 1073k  100 1073k    0     0   852k      0  0:00:01  0:00:01 --:--:--  852k
+grep -- " jpegsrc.v10.tar.gz$" "../src/jpeg/SHA512SUMS" && (cd ../tarballs && sha512sum --check /dev/stdin) < "../src/jpeg/SHA512SUMS"
+3bdd55d805d76f35cbcd44074e27684a25b40f4811c62374ec9300dde31fa75a17ff3fccfcb8f5947311fa7b07f52dc9cba343562ae4ceb8b3cbe30fda1e4311  jpegsrc.v10.tar.gz
+jpegsrc.v10.tar.gz: OK
+touch .sum-jpeg
+curl -f -L --retry 3 --output "../tarballs/libkate-0.4.1.tar.gz" -- "http://downloads.videolan.org/pub/contrib/kate/libkate-0.4.1.tar.gz" || ( curl -f -L --retry 3 --output "../tarballs/libkate-0.4.1.tar.gz" -- "http://libkate.googlecode.com/files/libkate-0.4.1.tar.gz" && echo "Please upload this package libkate-0.4.1.tar.gz to our FTP" )
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 48  885k   48  429k    0     0   384k      0  0:00:02  0:00:01  0:00:01  384k100  885k  100  885k    0     0   694k      0  0:00:01  0:00:01 --:--:--  694k
+grep -- " libkate-0.4.1.tar.gz$" "../src/kate/SHA512SUMS" && (cd ../tarballs && sha512sum --check /dev/stdin) < "../src/kate/SHA512SUMS"
+2635237753abc0f6c43fc07bd0ecc57c2f3c893efa6c62ad08de9191045612477302ed45acd61cdfea7447efd654ebbe0ed2d6a2cbf867eb834581d7ee43377b  libkate-0.4.1.tar.gz
+libkate-0.4.1.tar.gz: OK
+touch .sum-kate
+curl -f -L --retry 3 --output "../tarballs/lame-3.100.tar.gz" -- "http://downloads.videolan.org/pub/contrib/lame/lame-3.100.tar.gz" || ( curl -f -L --retry 3 --output "../tarballs/lame-3.100.tar.gz" -- "https://downloads.sourceforge.net/project/lame/lame-3.100.tar.gz" && echo "Please upload this package lame-3.100.tar.gz to our FTP" )
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 16 1488k   16  251k    0     0   289k      0  0:00:05 --:--:--  0:00:05  288k100 1488k  100 1488k    0     0  1220k      0  0:00:01  0:00:01 --:--:-- 1221k
+grep -- " lame-3.100.tar.gz$" "../src/lame/SHA512SUMS" && (cd ../tarballs && sha512sum --check /dev/stdin) < "../src/lame/SHA512SUMS"
+0844b9eadb4aacf8000444621451277de365041cc1d97b7f7a589da0b7a23899310afd4e4d81114b9912aa97832621d20588034715573d417b2923948c08634b  lame-3.100.tar.gz
+lame-3.100.tar.gz: OK
+touch .sum-lame
+curl -f -L --retry 3 --output "../tarballs/libarchive-3.8.9.tar.xz" -- "http://downloads.videolan.org/pub/contrib/libarchive/libarchive-3.8.9.tar.xz" || ( curl -f -L --retry 3 --output "../tarballs/libarchive-3.8.9.tar.xz" -- "https://github.com/libarchive/libarchive/releases/download/v3.8.9/libarchive-3.8.9.tar.xz" && echo "Please upload this package libarchive-3.8.9.tar.xz to our FTP" )
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0   153    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+curl: (22) The requested URL returned error: 404
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100 6462k  100 6462k    0     0  5486k      0  0:00:01  0:00:01 --:--:-- 5486k
+Please upload this package libarchive-3.8.9.tar.xz to our FTP
+grep -- " libarchive-3.8.9.tar.xz$" "../src/libarchive/SHA512SUMS" && (cd ../tarballs && sha512sum --check /dev/stdin) < "../src/libarchive/SHA512SUMS"
+f37425417a9e3fdc194a2b892137452ddba6601c69e822598692d4d776c573a90e70aac4598d47c915615facc45d0c83fc46c24856ddf04afd7494b63bb9f137  libarchive-3.8.9.tar.xz
+libarchive-3.8.9.tar.xz: OK
+touch .sum-libarchive
+curl -f -L --retry 3 --output "../tarballs/libmpeg2-0.5.1.tar.gz" -- "http://downloads.videolan.org/pub/contrib/libmpeg2/libmpeg2-0.5.1.tar.gz" || ( curl -f -L --retry 3 --output "../tarballs/libmpeg2-0.5.1.tar.gz" -- "http://downloads.videolan.org/pub/contrib/libmpeg2/libmpeg2-0.5.1.tar.gz" && echo "Please upload this package libmpeg2-0.5.1.tar.gz to our FTP" )
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 84  512k   84  433k    0     0   394k      0  0:00:01  0:00:01 --:--:--  394k100  512k  100  512k    0     0   464k      0  0:00:01  0:00:01 --:--:--  464k
+grep -- " libmpeg2-0.5.1.tar.gz$" "../src/libmpeg2/SHA512SUMS" && (cd ../tarballs && sha512sum --check /dev/stdin) < "../src/libmpeg2/SHA512SUMS"
+3648a2b3d7e2056d5adb328acd2fb983a1fa9a05ccb6f9388cc686c819445421811f42e8439418a0491a13080977f074a0d8bf8fa6bc101ff245ddea65a46fbc  libmpeg2-0.5.1.tar.gz
+libmpeg2-0.5.1.tar.gz: OK
+touch .sum-libmpeg2
+curl -f -L --retry 3 --output "../tarballs/libplacebo-0.2.1.tar.gz" -- "http://downloads.videolan.org/pub/contrib/libplacebo/libplacebo-0.2.1.tar.gz" || ( curl -f -L --retry 3 --output "../tarballs/libplacebo-0.2.1.tar.gz" -- "https://github.com/haasn/libplacebo/archive/v0.2.1.tar.gz" && echo "Please upload this package libplacebo-0.2.1.tar.gz to our FTP" )
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  165k  100  165k    0     0   217k      0 --:--:-- --:--:-- --:--:--  217k
+grep -- " libplacebo-0.2.1.tar.gz$" "../src/libplacebo/SHA512SUMS" && (cd ../tarballs && sha512sum --check /dev/stdin) < "../src/libplacebo/SHA512SUMS"
+d662c1972ee36f45d1e75b1c38edb7d2a47a1df8dedd811c37662ae88514403c978088bc4a42c3bf850b22e9cc882cb5de730bf2463f36caf284f6172e177dbb  libplacebo-0.2.1.tar.gz
+libplacebo-0.2.1.tar.gz: OK
+touch .sum-libplacebo
+curl -f -L --retry 3 --output "../tarballs/live.2026.06.24.tar.gz" -- "http://downloads.videolan.org/pub/contrib/live555/live.2026.06.24.tar.gz" || ( curl -f -L --retry 3 --output "../tarballs/live.2026.06.24.tar.gz" -- "http://downloads.videolan.org/pub/contrib/live555/live.2026.06.24.tar.gz" && echo "Please upload this package live.2026.06.24.tar.gz to our FTP" )
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 66  677k   66  453k    0     0   425k      0  0:00:01  0:00:01 --:--:--  425k100  677k  100  677k    0     0   615k      0  0:00:01  0:00:01 --:--:--  615k
+grep -- " live.2026.06.24.tar.gz$" "../src/live555/SHA512SUMS" && (cd ../tarballs && sha512sum --check /dev/stdin) < "../src/live555/SHA512SUMS"
+31b325f406c651e9008367c90937a1dc555588f76a0aaa820edb62ccfed3bb9f46d42fae4fe62f8812c7f25d0a3eeb13a8267b84130dfee7a25ab74f5d94c57a  live.2026.06.24.tar.gz
+live.2026.06.24.tar.gz: OK
+touch .sum-live555
+curl -f -L --retry 3 --output "../tarballs/lua-5.1.5.tar.gz" -- "http://downloads.videolan.org/pub/contrib/lua/lua-5.1.5.tar.gz" || ( curl -f -L --retry 3 --output "../tarballs/lua-5.1.5.tar.gz" -- "http://www.lua.org/ftp/lua-5.1.5.tar.gz" && echo "Please upload this package lua-5.1.5.tar.gz to our FTP" )
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  216k  100  216k    0     0   235k      0 --:--:-- --:--:-- --:--:--  235k100  216k  100  216k    0     0   235k      0 --:--:-- --:--:-- --:--:--  235k
+grep -- " lua-5.1.5.tar.gz$" "../src/lua/SHA512SUMS" && (cd ../tarballs && sha512sum --check /dev/stdin) < "../src/lua/SHA512SUMS"
+0142fefcbd13afcd9b201403592aa60620011cc8e8559d4d2db2f92739d18186860989f48caa45830ff4f99bfc7483287fd3ff3a16d4dec928e2767ce4d542a9  lua-5.1.5.tar.gz
+lua-5.1.5.tar.gz: OK
+touch .sum-lua
+touch .sum-luac
+curl -f -L --retry 3 --output "../tarballs/libmatroska-1.7.2.tar.xz" -- "http://downloads.videolan.org/pub/contrib/matroska/libmatroska-1.7.2.tar.xz" || ( curl -f -L --retry 3 --output "../tarballs/libmatroska-1.7.2.tar.xz" -- "https://dl.matroska.org/downloads/libmatroska/libmatroska-1.7.2.tar.xz" && echo "Please upload this package libmatroska-1.7.2.tar.xz to our FTP" )
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 63016  100 63016    0     0  99967      0 --:--:-- --:--:-- --:--:--   97k
+grep -- " libmatroska-1.7.2.tar.xz$" "../src/matroska/SHA512SUMS" && (cd ../tarballs && sha512sum --check /dev/stdin) < "../src/matroska/SHA512SUMS"
+86b21a0ff3e5149a2824a9f21f9460179d02aecf477f2b9f1f92ce2f991033bd0cb209d81a4aeee2c0c5ffc193dac57a84dd4f529939b12c900f2cfb881618fb  libmatroska-1.7.2.tar.xz
+libmatroska-1.7.2.tar.xz: OK
+touch .sum-matroska
+curl -f -L --retry 3 --output "../tarballs/libmodplug-0.8.9.0.tar.gz" -- "http://downloads.videolan.org/pub/contrib/modplug/libmodplug-0.8.9.0.tar.gz" || ( curl -f -L --retry 3 --output "../tarballs/libmodplug-0.8.9.0.tar.gz" -- "https://downloads.sourceforge.net/project/modplug-xmms/libmodplug-0.8.9.0.tar.gz" && echo "Please upload this package libmodplug-0.8.9.0.tar.gz to our FTP" )
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  2  563k    2 13032    0     0  41552      0  0:00:13 --:--:--  0:00:13 41503100  563k  100  563k    0     0   530k      0  0:00:01  0:00:01 --:--:--  530k
+grep -- " libmodplug-0.8.9.0.tar.gz$" "../src/modplug/SHA512SUMS" && (cd ../tarballs && sha512sum --check /dev/stdin) < "../src/modplug/SHA512SUMS"
+880e10154fd367ee24ace53ca7e32a5c1fee7dfff1f934e6499944c12779427da63e2f55f8d6ce25db0a42a5b4424053bf64305b31dbfc4ef6a8909924d655fd  libmodplug-0.8.9.0.tar.gz
+libmodplug-0.8.9.0.tar.gz: OK
+touch .sum-modplug
+curl -f -L --retry 3 --output "../tarballs/musepack_src_r481.tar.gz" -- "http://downloads.videolan.org/pub/contrib/mpcdec/musepack_src_r481.tar.gz" || ( curl -f -L --retry 3 --output "../tarballs/musepack_src_r481.tar.gz" -- "http://downloads.videolan.org/pub/contrib/mpcdec/musepack_src_r481.tar.gz" && echo "Please upload this package musepack_src_r481.tar.gz to our FTP" )
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  195k  100  195k    0     0   245k      0 --:--:-- --:--:-- --:--:--  245k
+grep -- " musepack_src_r481.tar.gz$" "../src/mpcdec/SHA512SUMS" && (cd ../tarballs && sha512sum --check /dev/stdin) < "../src/mpcdec/SHA512SUMS"
+89a8eab35e88d5ec1ef7c8fae897b23a5e31e1c99c8430f43a960c8543acd15cbb6b78e3d9da750a7d2649ebd86479c9136f9d370e0911675bfed8feff8de1d1  musepack_src_r481.tar.gz
+musepack_src_r481.tar.gz: OK
+touch .sum-mpcdec
+curl -f -L --retry 3 --output "../tarballs/libmysofa-1.2.1.tar.gz" -- "http://downloads.videolan.org/pub/contrib/mysofa/libmysofa-1.2.1.tar.gz" || ( curl -f -L --retry 3 --output "../tarballs/libmysofa-1.2.1.tar.gz" -- "https://github.com/hoene/libmysofa/archive/v1.2.1.tar.gz" && echo "Please upload this package libmysofa-1.2.1.tar.gz to our FTP" )
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0  190M    0 13032    0     0  42681      0  1:18:06 --:--:--  1:18:06 42588  0  190M    0  760k    0     0   571k      0  0:05:41  0:00:01  0:05:40  571k  1  190M    1 2009k    0     0   880k      0  0:03:41  0:00:02  0:03:39  880k  1  190M    1 3471k    0     0  1057k      0  0:03:04  0:00:03  0:03:01 1056k  2  190M    2 4987k    0     0  1162k      0  0:02:48  0:00:04  0:02:44 1162k  3  190M    3 6186k    0     0  1146k      0  0:02:50  0:00:05  0:02:45 1213k  3  190M    3 6862k    0     0  1069k      0  0:03:02  0:00:06  0:02:56 1200k  3  190M    3 7392k    0     0  1009k      0  0:03:13  0:00:07  0:03:06 1067k  4  190M    4 8074k    0     0   961k      0  0:03:23  0:00:08  0:03:15  900k  4  190M    4 8682k    0     0   932k      0  0:03:29  0:00:09  0:03:20  736k  4  190M    4 9444k    0     0   913k      0  0:03:33  0:00:10  0:03:23  659k  5  190M    5 10.0M    0     0   903k      0  0:03:36  0:00:11  0:03:25  686k  5  190M    5 10.6M    0     0   886k      0  0:03:40  0:00:12  0:03:28  705k  5  190M    5 11.2M    0     0   867k      0  0:03:45  0:00:13  0:03:32  706k  6  190M    6 11.8M    0     0   847k      0  0:03:50  0:00:14  0:03:36  687k  6  190M    6 12.5M    0     0   836k      0  0:03:53  0:00:15  0:03:38  676k  6  190M    6 13.2M    0     0   828k      0  0:03:55  0:00:16  0:03:39  658k  7  190M    7 13.8M    0     0   820k      0  0:03:57  0:00:17  0:03:40  660k  7  190M    7 14.5M    0     0   812k      0  0:04:00  0:00:18  0:03:42  667k  7  190M    7 15.1M    0     0   804k      0  0:04:02  0:00:19  0:03:43  682k  8  190M    8 15.9M    0     0   803k      0  0:04:03  0:00:20  0:03:43  703k  8  190M    8 16.7M    0     0   801k      0  0:04:03  0:00:21  0:03:42  716k  9  190M    9 17.3M    0     0   784k      0  0:04:09  0:00:22  0:03:47  665k  9  190M    9 17.8M    0     0   783k      0  0:04:09  0:00:23  0:03:46  676k  9  190M    9 17.9M    0     0   736k      0  0:04:25  0:00:24  0:04:01  501k  9  190M    9 18.1M    0     0   734k      0  0:04:25  0:00:25  0:04:00  451k  9  190M    9 18.4M    0     0   719k      0  0:04:31  0:00:26  0:04:05  358k  9  190M    9 18.8M    0     0   707k      0  0:04:36  0:00:27  0:04:09  330k 10  190M   10 19.2M    0     0   696k      0  0:04:40  0:00:28  0:04:12  293k 10  190M   10 19.7M    0     0   687k      0  0:04:43  0:00:29  0:04:14  412k 10  190M   10 20.1M    0     0   681k      0  0:04:46  0:00:30  0:04:16  413k 10  190M   10 20.6M    0     0   676k      0  0:04:48  0:00:31  0:04:17  451k 11  190M   11 21.3M    0     0   675k      0  0:04:49  0:00:32  0:04:17  504k 11  190M   11 22.2M    0     0   682k      0  0:04:46  0:00:33  0:04:13  604k 12  190M   12 23.4M    0     0   699k      0  0:04:39  0:00:34  0:04:05  768k 13  190M   13 25.1M    0     0   727k      0  0:04:28  0:00:35  0:03:53 1007k 14  190M   14 26.8M    0     0   757k      0  0:04:17  0:00:36  0:03:41 1263k 15  190M   15 28.6M    0     0   783k      0  0:04:09  0:00:37  0:03:32 1474k 15  190M   15 29.6M    0     0   792k      0  0:04:06  0:00:38  0:03:28 1524k 16  190M   16 30.8M    0     0   802k      0  0:04:03  0:00:39  0:03:24 1514k 16  190M   16 32.0M    0     0   814k      0  0:03:59  0:00:40  0:03:19 1426k 17  190M   17 33.2M    0     0   824k      0  0:03:56  0:00:41  0:03:15 1314k 18  190M   18 34.5M    0     0   834k      0  0:03:54  0:00:42  0:03:12 1213k 18  190M   18 35.6M    0     0   843k      0  0:03:51  0:00:43  0:03:08 1236k 19  190M   19 36.8M    0     0   852k      0  0:03:49  0:00:44  0:03:05 1246k 20  190M   20 38.1M    0     0   862k      0  0:03:46  0:00:45  0:03:01 1251k 20  190M   20 39.3M    0     0   869k      0  0:03:44  0:00:46  0:02:58 1230k 21  190M   21 40.4M    0     0   876k      0  0:03:42  0:00:47  0:02:55 1236k 21  190M   21 41.8M    0     0   887k      0  0:03:40  0:00:48  0:02:52 1268k 22  190M   22 42.7M    0     0   888k      0  0:03:39  0:00:49  0:02:50 1213k 23  190M   23 43.8M    0     0   892k      0  0:03:38  0:00:50  0:02:48 1173k 23  190M   23 44.7M    0     0   893k      0  0:03:38  0:00:51  0:02:47 1124k 23  190M   23 45.6M    0     0   894k      0  0:03:38  0:00:52  0:02:46 1071k 24  190M   24 46.7M    0     0   897k      0  0:03:37  0:00:53  0:02:44  999k 25  190M   25 47.7M    0     0   900k      0  0:03:36  0:00:54  0:02:42 1018k 25  190M   25 48.7M    0     0   901k      0  0:03:36  0:00:55  0:02:41  991k 26  190M   26 49.7M    0     0   900k      0  0:03:37  0:00:56  0:02:41  960k 26  190M   26 50.2M    0     0   896k      0  0:03:37  0:00:57  0:02:40  917k 26  190M   26 51.0M    0     0   897k      0  0:03:37  0:00:58  0:02:39  897k 27  190M   27 51.8M    0     0   895k      0  0:03:38  0:00:59  0:02:39  834k 27  190M   27 52.5M    0     0   892k      0  0:03:38  0:01:00  0:02:38  790k 28  190M   28 53.4M    0     0   891k      0  0:03:39  0:01:01  0:02:38  791k 28  190M   28 54.1M    0     0   890k      0  0:03:39  0:01:02  0:02:37  819k 28  190M   28 55.0M    0     0   889k      0  0:03:39  0:01:03  0:02:36  797k 29  190M   29 55.8M    0     0   889k      0  0:03:39  0:01:04  0:02:35  819k 29  190M   29 56.7M    0     0   888k      0  0:03:39  0:01:05  0:02:34  842k 30  190M   30 57.5M    0     0   889k      0  0:03:39  0:01:06  0:02:33  859k 30  190M   30 58.6M    0     0   892k      0  0:03:38  0:01:07  0:02:31  912k 31  190M   31 59.8M    0     0   897k      0  0:03:37  0:01:08  0:02:29  990k 32  190M   32 61.3M    0     0   906k      0  0:03:35  0:01:09  0:02:26 1130k 33  190M   33 63.1M    0     0   920k      0  0:03:32  0:01:10  0:02:22 1327k 33  190M   33 64.8M    0     0   930k      0  0:03:29  0:01:11  0:02:18 1479k 34  190M   34 66.2M    0     0   936k      0  0:03:28  0:01:12  0:02:16 1516k 35  190M   35 67.0M    0     0   936k      0  0:03:28  0:01:13  0:02:15 1478k 35  190M   35 67.7M    0     0   934k      0  0:03:29  0:01:14  0:02:15 1320k 36  190M   36 68.6M    0     0   934k      0  0:03:29  0:01:15  0:02:14 1135k 36  190M   36 69.3M    0     0   928k      0  0:03:30  0:01:16  0:02:14  890k 36  190M   36 70.0M    0     0   927k      0  0:03:30  0:01:17  0:02:13  790k 37  190M   37 70.7M    0     0   925k      0  0:03:30  0:01:18  0:02:12  766k 37  190M   37 71.6M    0     0   924k      0  0:03:31  0:01:19  0:02:12  782k 38  190M   38 72.5M    0     0   924k      0  0:03:31  0:01:20  0:02:11  780k 38  190M   38 73.3M    0     0   924k      0  0:03:31  0:01:21  0:02:10  869k 38  190M   38 74.3M    0     0   924k      0  0:03:31  0:01:22  0:02:09  888k 39  190M   39 75.2M    0     0   925k      0  0:03:31  0:01:23  0:02:08  920k 40  190M   40 76.3M    0     0   926k      0  0:03:30  0:01:24  0:02:06  957k 40  190M   40 77.3M    0     0   928k      0  0:03:30  0:01:25  0:02:05  995k 41  190M   41 78.3M    0     0   929k      0  0:03:30  0:01:26  0:02:04 1006k 41  190M   41 79.5M    0     0   931k      0  0:03:29  0:01:27  0:02:02 1043k 42  190M   42 80.7M    0     0   936k      0  0:03:28  0:01:28  0:02:00 1127k 42  190M   42 81.8M    0     0   939k      0  0:03:27  0:01:29  0:01:58 1148k 43  190M   43 82.9M    0     0   940k      0  0:03:27  0:01:30  0:01:57 1137k 44  190M   44 84.0M    0     0   942k      0  0:03:27  0:01:31  0:01:56 1171k 44  190M   44 85.0M    0     0   944k      0  0:03:26  0:01:32  0:01:54 1166k 45  190M   45 86.2M    0     0   946k      0  0:03:26  0:01:33  0:01:53 1123k 45  190M   45 87.4M    0     0   949k      0  0:03:25  0:01:34  0:01:51 1136k 46  190M   46 88.6M    0     0   952k      0  0:03:25  0:01:35  0:01:50 1169k 47  190M   47 89.7M    0     0   952k      0  0:03:25  0:01:36  0:01:49 1126k 47  190M   47 90.5M    0     0   952k      0  0:03:25  0:01:37  0:01:48 1107k 48  190M   48 91.6M    0     0   955k      0  0:03:24  0:01:38  0:01:46 1110k 48  190M   48 92.9M    0     0   956k      0  0:03:24  0:01:39  0:01:45 1089k 49  190M   49 93.7M    0     0   956k      0  0:03:24  0:01:40  0:01:44 1033k 49  190M   49 94.4M    0     0   954k      0  0:03:24  0:01:41  0:01:43  991k 49  190M   49 95.2M    0     0   952k      0  0:03:25  0:01:42  0:01:43  953k 50  190M   50 96.1M    0     0   951k      0  0:03:25  0:01:43  0:01:42  888k 50  190M   50 96.6M    0     0   948k      0  0:03:25  0:01:44  0:01:41  775k 51  190M   51 97.4M    0     0   946k      0  0:03:26  0:01:45  0:01:41  744k 51  190M   51 98.1M    0     0   945k      0  0:03:26  0:01:46  0:01:40  763k 51  190M   51 99.0M    0     0   944k      0  0:03:26  0:01:47  0:01:39  781k 52  190M   52 99.8M    0     0   944k      0  0:03:26  0:01:48  0:01:38  787k 52  190M   52  100M    0     0   944k      0  0:03:26  0:01:49  0:01:37  855k 53  190M   53  101M    0     0   943k      0  0:03:26  0:01:50  0:01:36  892k 53  190M   53  102M    0     0   939k      0  0:03:27  0:01:51  0:01:36  819k 53  190M   53  102M    0     0   938k      0  0:03:28  0:01:52  0:01:36  801k 54  190M   54  103M    0     0   938k      0  0:03:28  0:01:53  0:01:35  813k 54  190M   54  104M    0     0   938k      0  0:03:28  0:01:54  0:01:34  817k 55  190M   55  105M    0     0   939k      0  0:03:27  0:01:55  0:01:32  833k 55  190M   55  106M    0     0   939k      0  0:03:27  0:01:56  0:01:31  934k 56  190M   56  107M    0     0   940k      0  0:03:27  0:01:57  0:01:30  978k 56  190M   56  108M    0     0   940k      0  0:03:27  0:01:58  0:01:29  981k 57  190M   57  109M    0     0   941k      0  0:03:27  0:01:59  0:01:28 1001k 58  190M   58  110M    0     0   944k      0  0:03:26  0:02:00  0:01:26 1059k 58  190M   58  112M    0     0   948k      0  0:03:25  0:02:01  0:01:24 1166k 59  190M   59  114M    0     0   957k      0  0:03:24  0:02:02  0:01:22 1360k 60  190M   60  116M    0     0   963k      0  0:03:22  0:02:03  0:01:19 1516k 61  190M   61  117M    0     0   965k      0  0:03:22  0:02:04  0:01:18 1550k 62  190M   62  118M    0     0   969k      0  0:03:21  0:02:05  0:01:16 1566k 62  190M   62  119M    0     0   970k      0  0:03:21  0:02:06  0:01:15 1495k 63  190M   63  120M    0     0   971k      0  0:03:20  0:02:07  0:01:13 1325k 64  190M   64  122M    0     0   974k      0  0:03:20  0:02:08  0:01:12 1232k 64  190M   64  123M    0     0   975k      0  0:03:20  0:02:09  0:01:11 1219k 65  190M   65  124M    0     0   978k      0  0:03:19  0:02:10  0:01:09 1201k 65  190M   65  125M    0     0   977k      0  0:03:19  0:02:11  0:01:08 1157k 66  190M   66  126M    0     0   978k      0  0:03:19  0:02:12  0:01:07 1146k 66  190M   66  127M    0     0   980k      0  0:03:19  0:02:13  0:01:06 1143k 67  190M   67  128M    0     0   982k      0  0:03:18  0:02:14  0:01:04 1153k 68  190M   68  130M    0     0   984k      0  0:03:18  0:02:15  0:01:03 1158k 68  190M   68  131M    0     0   986k      0  0:03:18  0:02:16  0:01:02 1204k 69  190M   69  132M    0     0   987k      0  0:03:17  0:02:17  0:01:00 1239k 70  190M   70  133M    0     0   988k      0  0:03:17  0:02:18  0:00:59 1198k 70  190M   70  134M    0     0   989k      0  0:03:17  0:02:19  0:00:58 1184k 71  190M   71  135M    0     0   989k      0  0:03:17  0:02:20  0:00:57 1102k 71  190M   71  136M    0     0   990k      0  0:03:17  0:02:21  0:00:56 1107k 72  190M   72  137M    0     0   990k      0  0:03:17  0:02:22  0:00:55 1065k 72  190M   72  138M    0     0   991k      0  0:03:17  0:02:23  0:00:54 1063k 73  190M   73  139M    0     0   991k      0  0:03:16  0:02:24  0:00:52 1059k 73  190M   73  140M    0     0   990k      0  0:03:17  0:02:25  0:00:52 1038k 73  190M   73  140M    0     0   984k      0  0:03:18  0:02:26  0:00:52  819k 74  190M   74  141M    0     0   982k      0  0:03:18  0:02:27  0:00:51  743k 74  190M   74  141M    0     0   979k      0  0:03:19  0:02:28  0:00:51  643k 74  190M   74  142M    0     0   976k      0  0:03:20  0:02:29  0:00:51  525k 74  190M   74  142M    0     0   973k      0  0:03:20  0:02:30  0:00:50  459k 75  190M   75  143M    0     0   970k      0  0:03:21  0:02:31  0:00:50  554k 75  190M   75  144M    0     0   968k      0  0:03:21  0:02:32  0:00:49  567k 75  190M   75  144M    0     0   966k      0  0:03:22  0:02:33  0:00:49  588k 76  190M   76  145M    0     0   965k      0  0:03:22  0:02:34  0:00:48  645k 76  190M   76  146M    0     0   966k      0  0:03:22  0:02:35  0:00:47  752k 77  190M   77  147M    0     0   969k      0  0:03:21  0:02:36  0:00:45  922k 78  190M   78  149M    0     0   971k      0  0:03:21  0:02:37  0:00:44 1060k 78  190M   78  150M    0     0   970k      0  0:03:21  0:02:38  0:00:43 1101k 79  190M   79  151M    0     0   971k      0  0:03:20  0:02:39  0:00:41 1169k 79  190M   79  152M    0     0   973k      0  0:03:20  0:02:40  0:00:40 1191k 80  190M   80  153M    0     0   974k      0  0:03:20  0:02:41  0:00:39 1137k 81  190M   81  154M    0     0   975k      0  0:03:20  0:02:42  0:00:38 1115k 81  190M   81  155M    0     0   977k      0  0:03:19  0:02:43  0:00:36 1182k 82  190M   82  157M    0     0   979k      0  0:03:19  0:02:44  0:00:35 1210k 83  190M   83  158M    0     0   980k      0  0:03:19  0:02:45  0:00:34 1225k 83  190M   83  159M    0     0   983k      0  0:03:18  0:02:46  0:00:32 1283k 84  190M   84  161M    0     0   988k      0  0:03:17  0:02:47  0:00:30 1392k 85  190M   85  162M    0     0   990k      0  0:03:17  0:02:48  0:00:29 1434k 86  190M   86  164M    0     0   993k      0  0:03:16  0:02:49  0:00:27 1447k 86  190M   86  165M    0     0   994k      0  0:03:16  0:02:50  0:00:26 1437k 87  190M   87  166M    0     0   996k      0  0:03:15  0:02:51  0:00:24 1410k 87  190M   87  167M    0     0   996k      0  0:03:15  0:02:52  0:00:23 1272k 88  190M   88  169M    0     0   997k      0  0:03:15  0:02:53  0:00:22 1228k 89  190M   89  169M    0     0   997k      0  0:03:15  0:02:54  0:00:21 1156k 89  190M   89  170M    0     0   998k      0  0:03:15  0:02:55  0:00:20 1128k 90  190M   90  171M    0     0   999k      0  0:03:15  0:02:56  0:00:19 1081k 90  190M   90  173M    0     0   999k      0  0:03:15  0:02:57  0:00:18 1081k 91  190M   91  174M    0     0  1000k      0  0:03:15  0:02:58  0:00:17 1076k 91  190M   91  174M    0     0   999k      0  0:03:15  0:02:59  0:00:16 1056k 92  190M   92  175M    0     0   998k      0  0:03:15  0:03:00  0:00:15 1014k 92  190M   92  176M    0     0   998k      0  0:03:15  0:03:01  0:00:14  993k 93  190M   93  177M    0     0   999k      0  0:03:15  0:03:02  0:00:13  999k 93  190M   93  179M    0     0  1000k      0  0:03:15  0:03:03  0:00:12 1001k 94  190M   94  180M    0     0  1000k      0  0:03:15  0:03:04  0:00:11 1045k 95  190M   95  181M    0     0  1001k      0  0:03:15  0:03:05  0:00:10 1104k 95  190M   95  182M    0     0  1001k      0  0:03:15  0:03:06  0:00:09 1087k 95  190M   95  183M    0     0  1000k      0  0:03:15  0:03:07  0:00:08 1048k 96  190M   96  184M    0     0  1000k      0  0:03:15  0:03:08  0:00:07 1018k 97  190M   97  185M    0     0  1001k      0  0:03:14  0:03:09  0:00:05 1041k 97  190M   97  186M    0     0  1001k      0  0:03:15  0:03:10  0:00:05  991k 97  190M   97  186M    0     0  1000k      0  0:03:15  0:03:11  0:00:04  962k 98  190M   98  187M    0     0  1000k      0  0:03:15  0:03:12  0:00:03  987k 99  190M   99  188M    0     0  1000k      0  0:03:15  0:03:13  0:00:02 1002k 99  190M   99  189M    0     0   999k      0  0:03:15  0:03:14  0:00:01  933k 99  190M   99  190M    0     0   999k      0  0:03:15  0:03:15 --:--:--  941k100  190M  100  190M    0     0  1000k      0  0:03:15  0:03:15 --:--:--  993k
+grep -- " libmysofa-1.2.1.tar.gz$" "../src/mysofa/SHA512SUMS" && (cd ../tarballs && sha512sum --check /dev/stdin) < "../src/mysofa/SHA512SUMS"
+2058c94cd09aeeabe40975edd320d7447bd9e535108f32b2a5305c023c7bf89f0c2f44df182390b7e4be8f6ffc9b09c2e35817896bb5e63d3ec9f1bd5b7e972c  libmysofa-1.2.1.tar.gz
+libmysofa-1.2.1.tar.gz: OK
+touch .sum-mysofa
+curl -f -L --retry 3 --output "../tarballs/libnfs-6.0.2.tar.gz" -- "http://downloads.videolan.org/pub/contrib/nfs/libnfs-6.0.2.tar.gz" || ( curl -f -L --retry 3 --output "../tarballs/libnfs-6.0.2.tar.gz" -- "https://github.com/sahlberg/libnfs/archive/libnfs-6.0.2.tar.gz" && echo "Please upload this package libnfs-6.0.2.tar.gz to our FTP" )
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 26  331k   26 88328    0     0   120k      0  0:00:02 --:--:--  0:00:02  120k100  331k  100  331k    0     0   319k      0  0:00:01  0:00:01 --:--:--  319k
+grep -- " libnfs-6.0.2.tar.gz$" "../src/nfs/SHA512SUMS" && (cd ../tarballs && sha512sum --check /dev/stdin) < "../src/nfs/SHA512SUMS"
+539790ab98aac7b2f25755b745d1f5e016518f1adb3748b8c58df187048bc31e091915d59e6359bb95c49dd986361cbbf2536edcda02598b0fac236762b61a46  libnfs-6.0.2.tar.gz
+libnfs-6.0.2.tar.gz: OK
+touch .sum-nfs
+curl -f -L --retry 3 --output "../tarballs/openjpeg-2.5.4.tar.gz" -- "http://downloads.videolan.org/pub/contrib/openjpeg/openjpeg-2.5.4.tar.gz" || ( curl -f -L --retry 3 --output "../tarballs/openjpeg-2.5.4.tar.gz" -- "https://github.com/uclouvain/openjpeg/archive/v2.5.4.tar.gz" && echo "Please upload this package openjpeg-2.5.4.tar.gz to our FTP" )
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  2 2106k    2 56472    0     0  84931      0  0:00:25 --:--:--  0:00:25 84920100 2106k  100 2106k    0     0  1283k      0  0:00:01  0:00:01 --:--:-- 1282k100 2106k  100 2106k    0     0  1283k      0  0:00:01  0:00:01 --:--:-- 1282k
+grep -- " openjpeg-2.5.4.tar.gz$" "../src/openjpeg/SHA512SUMS" && (cd ../tarballs && sha512sum --check /dev/stdin) < "../src/openjpeg/SHA512SUMS"
+702a10e20caaf8209684ded7c9fcf32f5ba6a972cf2d9fcf2611cdc6a446d2c3bb60324205758e6b6f92278c8cf4ef0fbae511e6ffb45ed6e8df514db0c6ab25  openjpeg-2.5.4.tar.gz
+openjpeg-2.5.4.tar.gz: OK
+touch .sum-openjpeg
+rm -Rf -- "../tarballs/postproc-e4982b227779f24f7c54d699d2e247652f69c475" && git init --bare "../tarballs/postproc-e4982b227779f24f7c54d699d2e247652f69c475" && (cd "../tarballs/postproc-e4982b227779f24f7c54d699d2e247652f69c475" && git remote add origin "https://github.com/michaelni/libpostproc" && git fetch origin "") && (cd "../tarballs/postproc-e4982b227779f24f7c54d699d2e247652f69c475" && git archive --prefix="postproc-e4982b227779f24f7c54d699d2e247652f69c475/" --format=tar "e4982b227779f24f7c54d699d2e247652f69c475") > "../tarballs/postproc-e4982b227779f24f7c54d699d2e247652f69c475.tar" && echo "e4982b227779f24f7c54d699d2e247652f69c475 ../tarballs/postproc-e4982b227779f24f7c54d699d2e247652f69c475.tar.xz" > "../tarballs/postproc-e4982b227779f24f7c54d699d2e247652f69c475.githash" && rm -Rf -- "../tarballs/postproc-e4982b227779f24f7c54d699d2e247652f69c475" && xz --stdout "../tarballs/postproc-e4982b227779f24f7c54d699d2e247652f69c475.tar" > "../tarballs/postproc-e4982b227779f24f7c54d699d2e247652f69c475.tar.xz.tmp" && rm -f "../tarballs/postproc-e4982b227779f24f7c54d699d2e247652f69c475.tar" && mv -f -- "../tarballs/postproc-e4982b227779f24f7c54d699d2e247652f69c475.tar.xz.tmp" "../tarballs/postproc-e4982b227779f24f7c54d699d2e247652f69c475.tar.xz"
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/tarballs/postproc-e4982b227779f24f7c54d699d2e247652f69c475/
+From https://github.com/michaelni/libpostproc
+ * branch                  HEAD       -> FETCH_HEAD
+h=`sed -e "s,^\([0-9a-fA-F]\{40\}\) .*/postproc-e4982b227779f24f7c54d699d2e247652f69c475.tar.xz,\1,g" < "../tarballs/postproc-e4982b227779f24f7c54d699d2e247652f69c475.githash"` && test "$h" = "e4982b227779f24f7c54d699d2e247652f69c475"
+touch .sum-postproc
+curl -f -L --retry 3 --output "../tarballs/protobuf-3.4.1-cpp.tar.gz" -- "http://downloads.videolan.org/pub/contrib/protobuf/protobuf-3.4.1-cpp.tar.gz" || ( curl -f -L --retry 3 --output "../tarballs/protobuf-3.4.1-cpp.tar.gz" -- "https://github.com/google/protobuf/releases/download/v3.4.1/protobuf-cpp-3.4.1.tar.gz" && echo "Please upload this package protobuf-3.4.1-cpp.tar.gz to our FTP" )
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  5 4174k    5  233k    0     0   258k      0  0:00:16 --:--:--  0:00:16  258k 50 4174k   50 2092k    0     0  1150k      0  0:00:03  0:00:01  0:00:02 1150k100 4174k  100 4174k    0     0  1522k      0  0:00:02  0:00:02 --:--:-- 1522k
+grep -- " protobuf-3.4.1-cpp.tar.gz$" "../src/protobuf/SHA512SUMS" && (cd ../tarballs && sha512sum --check /dev/stdin) < "../src/protobuf/SHA512SUMS"
+6189e23c7e381f62e971bd0e35ad9c3ed8effe584755357013887c6a582cb5a9a654c39affa2a073b658854138f31bfb70f89fa1df494e9386f1d64fd73d07d2  protobuf-3.4.1-cpp.tar.gz
+protobuf-3.4.1-cpp.tar.gz: OK
+touch .sum-protobuf
+curl -f -L --retry 3 --output "../tarballs/libshout-2.4.6.tar.gz" -- "http://downloads.videolan.org/pub/contrib/shout/libshout-2.4.6.tar.gz" || ( curl -f -L --retry 3 --output "../tarballs/libshout-2.4.6.tar.gz" -- "https://ftp.osuosl.org/pub/xiph/releases/libshout/libshout-2.4.6.tar.gz" && echo "Please upload this package libshout-2.4.6.tar.gz to our FTP" )
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 94  557k   94  527k    0     0   470k      0  0:00:01  0:00:01 --:--:--  470k100  557k  100  557k    0     0   496k      0  0:00:01  0:00:01 --:--:--  496k
+grep -- " libshout-2.4.6.tar.gz$" "../src/shout/SHA512SUMS" && (cd ../tarballs && sha512sum --check /dev/stdin) < "../src/shout/SHA512SUMS"
+e8478cdbf9a27674c16a7b620d1576f2e31a47262b8e29b314d0f46d4e5be24b9a29790b7b226f48939bc34cacf5734fae0aa5686c7ed5879cdbd827ff8e0339  libshout-2.4.6.tar.gz
+libshout-2.4.6.tar.gz: OK
+touch .sum-shout
+curl -f -L --retry 3 --output "../tarballs/sidplay-libs-2.1.1.tar.gz" -- "http://downloads.videolan.org/pub/contrib/sidplay2/sidplay-libs-2.1.1.tar.gz" || ( curl -f -L --retry 3 --output "../tarballs/sidplay-libs-2.1.1.tar.gz" -- "https://downloads.sourceforge.net/project/sidplay2/sidplay2/sidplay-libs-2.1.1/sidplay-libs-2.1.1.tar.gz" && echo "Please upload this package sidplay-libs-2.1.1.tar.gz to our FTP" )
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 18 1855k   18  345k    0     0   382k      0  0:00:04 --:--:--  0:00:04  381k100 1855k  100 1855k    0     0  1266k      0  0:00:01  0:00:01 --:--:-- 1266k
+grep -- " sidplay-libs-2.1.1.tar.gz$" "../src/sidplay2/SHA512SUMS" && (cd ../tarballs && sha512sum --check /dev/stdin) < "../src/sidplay2/SHA512SUMS"
+754cd41f3d2d76754049522c395022bc090f99ea838e6d1ffb8d7689f3aedad9b3879be0312d0af49ba108563296c1176d1e533d1151d5b33368bfda0a1910e3  sidplay-libs-2.1.1.tar.gz
+sidplay-libs-2.1.1.tar.gz: OK
+touch .sum-sidplay2
+curl -f -L --retry 3 --output "../tarballs/spatialaudio-0.3.0.tar.bz2" -- "http://downloads.videolan.org/pub/contrib/spatialaudio/spatialaudio-0.3.0.tar.bz2" || ( curl -f -L --retry 3 --output "../tarballs/spatialaudio-0.3.0.tar.bz2" -- "https://github.com/videolabs/libspatialaudio/releases/download/0.3.0/spatialaudio-0.3.0.tar.bz2" && echo "Please upload this package spatialaudio-0.3.0.tar.bz2 to our FTP" )
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  2  912k    2 23168    0     0  51034      0  0:00:18 --:--:--  0:00:18 51030 93  912k   93  851k    0     0   618k      0  0:00:01  0:00:01 --:--:--  618k100  912k  100  912k    0     0   648k      0  0:00:01  0:00:01 --:--:--  648k
+grep -- " spatialaudio-0.3.0.tar.bz2$" "../src/spatialaudio/SHA512SUMS" && (cd ../tarballs && sha512sum --check /dev/stdin) < "../src/spatialaudio/SHA512SUMS"
+ef1835a94cd87c55ac9327762ae8f1143272de2463ca850299be15d6cf7f5a554e536cc18f70475c25e2c78f434b9c51de158a7246956c8c1f9de3256a67b87a  spatialaudio-0.3.0.tar.bz2
+spatialaudio-0.3.0.tar.bz2: OK
+touch .sum-spatialaudio
+curl -f -L --retry 3 --output "../tarballs/speexdsp-1.2.1.tar.gz" -- "http://downloads.videolan.org/pub/contrib/speexdsp/speexdsp-1.2.1.tar.gz" || ( curl -f -L --retry 3 --output "../tarballs/speexdsp-1.2.1.tar.gz" -- "https://ftp.osuosl.org/pub/xiph/releases/speex/speexdsp-1.2.1.tar.gz" && echo "Please upload this package speexdsp-1.2.1.tar.gz to our FTP" )
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 11  900k   11  107k    0     0   120k      0  0:00:07 --:--:--  0:00:07  120k 79  900k   79  712k    0     0   360k      0  0:00:02  0:00:01  0:00:01  359k100  900k  100  900k    0     0   329k      0  0:00:02  0:00:02 --:--:--  329k
+grep -- " speexdsp-1.2.1.tar.gz$" "../src/speexdsp/SHA512SUMS" && (cd ../tarballs && sha512sum --check /dev/stdin) < "../src/speexdsp/SHA512SUMS"
+41b5f37b48db5cb8c5a0f6437a4a8266d2627a5b7c1088de8549fe0bf0bb3105b7df8024fe207eef194096e0726ea73e2b53e0a4293d8db8e133baa0f8a3bad3  speexdsp-1.2.1.tar.gz
+speexdsp-1.2.1.tar.gz: OK
+touch .sum-speexdsp
+curl -f -L --retry 3 --output "../tarballs/libssh2-1.11.1.tar.xz" -- "http://downloads.videolan.org/pub/contrib/ssh2/libssh2-1.11.1.tar.xz" || ( curl -f -L --retry 3 --output "../tarballs/libssh2-1.11.1.tar.xz" -- "http://www.libssh2.org/download/libssh2-1.11.1.tar.xz" && echo "Please upload this package libssh2-1.11.1.tar.xz to our FTP" )
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 73  704k   73  521k    0     0   449k      0  0:00:01  0:00:01 --:--:--  449k100  704k  100  704k    0     0   604k      0  0:00:01  0:00:01 --:--:--  603k
+grep -- " libssh2-1.11.1.tar.xz$" "../src/ssh2/SHA512SUMS" && (cd ../tarballs && sha512sum --check /dev/stdin) < "../src/ssh2/SHA512SUMS"
+8322b54a522b0cbbb07916d29ec045c08f8ed94bd8abb5e524038640e90a317667a25be46d95b62b101ed726ade0a51a90fb246cf34c045c38f927f4e439e431  libssh2-1.11.1.tar.xz
+libssh2-1.11.1.tar.xz: OK
+touch .sum-ssh2
+curl -f -L --retry 3 --output "../tarballs/taglib-1.13.1.tar.gz" -- "http://downloads.videolan.org/pub/contrib/taglib/taglib-1.13.1.tar.gz" || ( curl -f -L --retry 3 --output "../tarballs/taglib-1.13.1.tar.gz" -- "https://taglib.org/releases/taglib-1.13.1.tar.gz" && echo "Please upload this package taglib-1.13.1.tar.gz to our FTP" )
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 13 1340k   13  186k    0     0   206k      0  0:00:06 --:--:--  0:00:06  206k100 1340k  100 1340k    0     0   862k      0  0:00:01  0:00:01 --:--:--  862k
+grep -- " taglib-1.13.1.tar.gz$" "../src/taglib/SHA512SUMS" && (cd ../tarballs && sha512sum --check /dev/stdin) < "../src/taglib/SHA512SUMS"
+986231ee62caa975afead7e94630d58acaac25a38bc33d4493d51bd635d79336e81bba60586d7355ebc0670e31f28d32da3ecceaf33292e4bc240c64bf00f35b  taglib-1.13.1.tar.gz
+taglib-1.13.1.tar.gz: OK
+touch .sum-taglib
+curl -f -L --retry 3 --output "../tarballs/libtiger-0.3.4.tar.gz" -- "http://downloads.videolan.org/pub/contrib/tiger/libtiger-0.3.4.tar.gz" || ( curl -f -L --retry 3 --output "../tarballs/libtiger-0.3.4.tar.gz" -- "http://libtiger.googlecode.com/files/libtiger-0.3.4.tar.gz" && echo "Please upload this package libtiger-0.3.4.tar.gz to our FTP" )
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  3  374k    3 13032    0     0  41818      0  0:00:09 --:--:--  0:00:09 41769100  374k  100  374k    0     0   389k      0 --:--:-- --:--:-- --:--:--  388k
+grep -- " libtiger-0.3.4.tar.gz$" "../src/tiger/SHA512SUMS" && (cd ../tarballs && sha512sum --check /dev/stdin) < "../src/tiger/SHA512SUMS"
+559e522b5127f32fdd08d62c40dfb493dc2db1efd1e21707d723ef27cbe03e7e38fb04d40856d824ed0c3c94a223ed1a0358fc11ecb30446b5ee5c7a3b802e6d  libtiger-0.3.4.tar.gz
+libtiger-0.3.4.tar.gz: OK
+touch .sum-tiger
+curl -f -L --retry 3 --output "../tarballs/twolame-0.4.0.tar.gz" -- "http://downloads.videolan.org/pub/contrib/twolame/twolame-0.4.0.tar.gz" || ( curl -f -L --retry 3 --output "../tarballs/twolame-0.4.0.tar.gz" -- "https://downloads.sourceforge.net/project/twolame/twolame-0.4.0.tar.gz" && echo "Please upload this package twolame-0.4.0.tar.gz to our FTP" )
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0make: *** [../tarballs/twolame-0.4.0.tar.gz] Terminated: 15

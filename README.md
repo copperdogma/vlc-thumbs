@@ -8,10 +8,27 @@ Start with [Ideal](docs/ideal.md), [Spec](docs/spec.md), preserved
 [intake](docs/idea-intake.md), [plan](docs/plan.md), and
 [Story 001](docs/stories/story-001-vlc-macos-feasibility.md).
 
-Status: workflow setup only; feasibility and implementation have not begun.
-No VLC version or integration architecture is selected. This folder is an
-independent local Git repository nested under Ultima IV Web; no remote/commit
-was created. Moving it later is possible; compatibility links are relative.
+Status: Stories002 and004 thumbnails are Done. The local signed001728 app at
+`~/Applications/VLC Timeline Preview.app` prepares sparse keyframes progressively,
+prioritizes the current hover and nearby positions, and retains bounded thumbnails
+across reopen/restart. Current-session cached images can show “Checking source…”
+while NAS validation runs; reopening first checks metadata and sampled SHA256.
+The default-on checkbox remains in Interface > Playback behaviour.
+
+Bounded native, NAS restart and practical controls/playback checks pass; unchanged
+four-surface, MP4/MKV and preference/reader evidence is explicitly inherited.
+Track-count mismatches now reject safely, and hovered images receive bounded
+retention priority over background thumbnails. See the
+[acceptance ledger](docs/evidence/story-004/current-acceptance-ledger.md) and
+[local update](docs/evidence/story-004/local-preview-update-001728.json).
+Shared-host measurements do not establish universal/p95 latency or causal stall
+attribution. Reader focus uses explicitly inherited unchanged-interface evidence;
+the latest reader startup was inconclusive. Story003 short bookmarks and the
+integrated root remain planned/deferred.
+
+This is an independent Git project nested under Ultima IV Web, with a public
+[GitHub repository](https://github.com/copperdogma/vlc-thumbs). Compatibility
+links are relative; neighboring projects are read-only workflow sources.
 
 ## Local workflow
 
@@ -30,7 +47,6 @@ support files and provenance. See [skill routing](docs/runbooks/skills.md) and
 [setup checklist](docs/setup-checklist.md). Shared contracts are preserved;
 local instructions override examples from other products.
 
-No native app build, web runtime, reserved port allocation, dependency hydration
-hook or product eval runner exists yet. Story 001 determines the source/build
-and fixture route. A future web/API helper must use Conductor port allocation;
-this setup does not modify Conductor.
+The [build runbook](docs/runbooks/build-vlc-macos.md) records the working native
+development route. No web server or reserved port is needed; native capability runners exist.
+Native code and a private decoder helper do not require Conductor allocation.

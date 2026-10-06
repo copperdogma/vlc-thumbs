@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "run": "control-paired-cadence-16ms-001",
+  "scope": "Matched paused main-window ordinary light-style knob response; not hover-to-thumbnail latency or completed seek",
+  "pilot": false,
+  "samples_per_arm": 100,
+  "qualified": false,
+  "collection_valid": false,
+  "completed_collection": false,
+  "observed_valid_counts": {
+    "baseline": 61,
+    "feature": 75
+  },
+  "attempted_action_counts": {
+    "baseline": 62,
+    "feature": 75
+  },
+  "collection_error": "Probe failed or emitted diagnostics: ['target_inactive_or_crop_left_owned_main_window', 'target_inactive_or_crop_left_owned_main_window']",
+  "failure": {
+    "arm": "baseline",
+    "label": "round-02-per-frame-click-011",
+    "returned_per_pid_app": {
+      "exists": false,
+      "pid": 0,
+      "bundle_id": null,
+      "active": false
+    },
+    "independent_foreground_query": {
+      "target_os_process_exists": true,
+      "target_terminated": false,
+      "frontmost_pid": 3394,
+      "frontmost_bundle_id": "org.videolan.vlc-thumbs.development"
+    },
+    "parent_window_contains_crop": true,
+    "frame_status": "idle (numeric status 1)",
+    "pixel_dimensions": [
+      0,
+      0
+    ],
+    "post_input_complete_presentation": false,
+    "ax_pre_post_owned": [
+      true,
+      true
+    ],
+    "interpretation": "The guard returned inactive on one idle callback while the independent foreground query still identified the expected VLC PID/bundle and the owned parent window contained the crop. Cause is unknown; this does not establish product regression or explain prior guard inconsistencies."
+  },
+  "input_fingerprints_unchanged": true,
+  "changed_inputs": [],
+  "salvage": "No comparison, p95, effect estimate, or acceptance result is reported from the incomplete cohort.",
+  "candidate": "Experimental 132643 16 ms controller; separate method pilot passed eight per arm without performance qualification.",
+  "raw_result": "work/validation/story002/control-paired-cadence-16ms-001/raw/results.json",
+  "method_pilot": "ordinary-control-16ms-method-pilot.json"
+}

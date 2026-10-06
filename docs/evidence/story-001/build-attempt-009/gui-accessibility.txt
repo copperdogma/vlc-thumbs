@@ -1,0 +1,43 @@
+<app_specific_instructions>
+## Browser Computer Use
+
+When navigating to a new website or starting a separate web task, prefer opening a new tab instead of reusing the current tab; reuse the current tab only when the user explicitly asks to continue there or when the current page is clearly the right place to continue the existing workflow.
+</app_specific_instructions>
+Window: "build-smoke.mp4", App: VLC Timeline Development.
+0 standard window build-smoke.mp4, URL: file:///Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/build-smoke.mp4, Secondary Actions: Raise
+	1 button
+	2 button Next, Description: Go to previous item, Help: Backward
+	3 button Pause, Description: Play
+	4 button Forward, Description: Go to next item
+	5 button
+	6 button Stop
+	7 button Show/Hide Playlist
+	8 button Repeat, Description: Change repeat mode. Modes: repeat one, repeat all and no repeat.
+	9 button Shuffle
+	10 slider (settable, float) Position, Description: Playback position, Value: 5516.8662109375
+		11 value indicator (settable, float) 5516.8662109375
+	12 text Description: Playback time, Value: 00:01
+	13 button Mute
+	14 slider (settable, float) Description: Volume, Help: Volume: 100 %, Value: 256
+		15 value indicator (settable, float) 256
+	16 button Full Volume
+	17 button Audio Effects, Description: Open Audio Effects window
+	18 toggle button Description: Fullscreen, Value: off
+	19 close button
+	20 zoom button
+	21 minimize button
+	22 image build-smoke.mp4
+	23 text build-smoke.mp4
+24 menu bar
+	25 VLC Timeline Development
+	26 File
+	27 Edit
+	28 View
+	29 Playback
+	30 Audio
+	31 Video
+	32 Subtitles
+	33 Window
+	34 Help
+
+The focused UI element is 0 standard window build-smoke.mp4, URL: file:///Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/build-smoke.mp4, Secondary Actions: Raise

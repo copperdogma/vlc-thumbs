@@ -1,0 +1,14 @@
+header=3.54.0 runtime=3.54.0 runtime_number=3054000 threadsafe=2
+source_id=2026-04-09 12:25:13 8fa8248e303219400c646a885e36dfc52eae33d83f4412e3f369b2be5373aapl
+journal_mode=delete
+timeout=500
+journal_mode=delete
+synchronous=3
+fullfsync=1
+foreign_keys=1
+timeout=500
+edited_rows=1
+stale_edited_rows=0
+label=Edited label revision=2
+quick_check=ok
+sql_rc=0 close_rc=0 cleanup_rc=0

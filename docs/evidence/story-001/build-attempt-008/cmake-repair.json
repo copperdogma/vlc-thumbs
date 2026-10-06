@@ -1,0 +1,22 @@
+{
+  "reason": "CMake discovered optional Intel /usr/local libraries; libarchive pc requested unavailable -lb2.",
+  "global_cmake_flag": "-DCMAKE_IGNORE_PREFIX_PATH=/usr/local",
+  "rebuild_packages": [
+    "libarchive",
+    "chromaprint",
+    "vncclient",
+    "x265"
+  ],
+  "invalidated_installed_files": [
+    "lib/pkgconfig/libarchive.pc",
+    "lib/libarchive.a",
+    "lib/pkgconfig/libchromaprint.pc",
+    "lib/libchromaprint.a",
+    "lib/pkgconfig/libvncclient.pc",
+    "lib/pkgconfig/libvncserver.pc",
+    "lib/libvncclient.a",
+    "lib/libvncserver.a",
+    "lib/pkgconfig/x265.pc",
+    "lib/libx265.a"
+  ]
+}

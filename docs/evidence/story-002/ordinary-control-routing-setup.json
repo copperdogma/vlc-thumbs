@@ -1,0 +1,113 @@
+{
+  "collection_valid": false,
+  "qualified": false,
+  "collection_error": "Probe failed or emitted diagnostics: []",
+  "observed_counts": {
+    "baseline": 0,
+    "feature": 0
+  },
+  "integrity_unchanged": true,
+  "changed_inputs": [],
+  "raw_results": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/control-observer-diagnostic-001/results.json",
+  "raw_sha256": "b81c9b782e3c3b02823d7a948f238a3365f6c6457760aef801331ab4339348ab",
+  "failed_capture": {
+    "arm": "baseline",
+    "label": "template-left",
+    "target": "left",
+    "raw": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/control-observer-diagnostic-001/baseline/template-left.jsonl",
+    "argv": [
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/control-response-probe",
+      "--pid",
+      "21718",
+      "--rect",
+      "900,1016,240,28",
+      "--point",
+      "950,1028",
+      "--click",
+      "--count",
+      "600",
+      "--duration-ms",
+      "3000",
+      "--ax-mode",
+      "per-frame",
+      "--output",
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/control-observer-diagnostic-001/baseline/template-left.jsonl",
+      "--save-last-image",
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/control-observer-diagnostic-001/baseline/template-left.png"
+    ],
+    "stdout": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/control-observer-diagnostic-001/baseline/template-left.stdout",
+    "stderr": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/control-observer-diagnostic-001/baseline/template-left.stderr",
+    "faults": [
+      "Probe failed or emitted diagnostics: []"
+    ],
+    "ax_mode": "per-frame",
+    "scored": false,
+    "observation_bound_ms": 3000,
+    "returncode": 1,
+    "ax_phases": [
+      {
+        "kind": "ax_phase",
+        "owned": 1,
+        "phase": "pre",
+        "query_begin_uptime_s": 930831.4633185834,
+        "query_end_uptime_s": 930831.4639211667,
+        "slider_role": true,
+        "slider_value": 0,
+        "value_error": 0
+      },
+      {
+        "kind": "ax_phase",
+        "owned": 0,
+        "phase": "post",
+        "query_begin_uptime_s": 930834.7594322917,
+        "query_end_uptime_s": 930834.7603295418,
+        "slider_role": false,
+        "slider_value": 5585.9970703125,
+        "value_error": 0
+      }
+    ],
+    "input_routed": [
+      {
+        "event_tag": 71813687963446,
+        "event_timestamp_ns": 930831698542750,
+        "kind": "input_routed",
+        "location": [
+          950,
+          1028
+        ],
+        "pid": 21718,
+        "received_uptime_s": 930831.6997142917,
+        "sequence_index": 0,
+        "type": 5
+      },
+      {
+        "event_tag": 71813687963446,
+        "event_timestamp_ns": 930831699303625,
+        "kind": "input_routed",
+        "location": [
+          950,
+          1028
+        ],
+        "pid": 21718,
+        "received_uptime_s": 930831.6998974168,
+        "sequence_index": 1,
+        "type": 1
+      },
+      {
+        "event_tag": 71813687963446,
+        "event_timestamp_ns": 930831703583750,
+        "kind": "input_routed",
+        "location": [
+          950,
+          1028
+        ],
+        "pid": 21718,
+        "received_uptime_s": 930831.7041755001,
+        "sequence_index": 2,
+        "type": 2
+      }
+    ]
+  },
+  "interpretation": "Zero scored attempts. Tagged move/down/up routed to baseline process, per-frame ownership held, independent saved pixels show knob950. Newly added post-hit Slider-role assumption fails although post-hit belongs to app and value changed. Observer setup failure; no product/regression verdict.",
+  "root_visual_inspection": "baseline/template-left.png: correct knob atglobal950pt"
+}

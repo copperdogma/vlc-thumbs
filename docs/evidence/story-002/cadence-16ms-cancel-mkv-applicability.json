@@ -1,0 +1,58 @@
+{
+  "candidate_manifest": "app-build-controller-16ms-experiment-132643.json",
+  "source_sha256": "47b31fa472d778e0c48b304b6c07cf6e7f7a7a62cade31f42943093f4d093690",
+  "scope": "Focused main-window MP4-to-MKV generation/cancellation and physical-hover applicability; not latency or performance qualification",
+  "qualified": false,
+  "result": "PASS for the recorded behavior scope",
+  "mp4": {
+    "left_middle_right_and_reentry": "visible",
+    "rapid_leave": "preview hidden; RC remained paused at zero",
+    "display_after_leave_before_mkv": false,
+    "rapid_moves_posted": 32,
+    "rapid_move_events_observed": 30,
+    "observed_inter_event_ms": {
+      "min": 43.953,
+      "median": 50.327,
+      "max": 97.479
+    },
+    "qualification_limit": "No move interval was below 16 ms; this did not exercise pending-timer cancellation below one cadence interval."
+  },
+  "media_switch": {
+    "new_generation": true,
+    "observed_generation": "3 to 9",
+    "mkv_displays_current_generation": true,
+    "successful_displays": [
+      {
+        "requested_seconds": 45.0185,
+        "actual_keyframe_seconds": 44,
+        "reviewed_caption": "00:45 / Keyframe 0:44"
+      },
+      {
+        "requested_seconds": 81.469515,
+        "actual_keyframe_seconds": 80,
+        "reviewed_caption": "01:21 / Keyframe 1:20"
+      }
+    ],
+    "leave": "preview hidden; RC remained paused at zero"
+  },
+  "host": {
+    "window_id": 23201,
+    "id_stable": true,
+    "bounds_before_media_change": [41, 777, 1672, 240],
+    "bounds_after_media_change": [41, 848, 1678, 240],
+    "raw_stable_host_flag": false,
+    "flag_note": "The raw flag reflects strict bounds equality; the parent resized on media change while window ID 23201 remained stable."
+  },
+  "provenance": {
+    "raw_result": "work/validation/story002/cadence-16ms-cancel-mkv-001/raw/results.json",
+    "recorder_exit_code": 0,
+    "integrity_unchanged": true,
+    "raw_diagnostic_flag": false,
+    "diagnostic_flag_note": "The runner metadata says timeline diagnostics were disabled although the trace contains injected events; preserve this mismatch and do not infer absence of diagnostics."
+  },
+  "limits": [
+    "Two correct MKV displays establish scoped behavior only, not a full MKV response cohort or percentile.",
+    "No sub-16 ms movement was observed, so rapid pending-timer cancellation was not exercised.",
+    "Ordinary-control baseline latency and playback stall attribution remain unqualified."
+  ]
+}

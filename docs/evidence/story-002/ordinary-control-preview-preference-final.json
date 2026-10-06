@@ -1,0 +1,201 @@
+{
+  "status": "valid",
+  "results": {
+    "baseline": {
+      "count": 20,
+      "median_ms": 222.03914576675743,
+      "min_ms": 158.14133337698877,
+      "max_ms": 617.1094583114609,
+      "samples_ms": [
+        210.08179162163287,
+        209.68708337750286,
+        216.95349994115531,
+        210.21829161327332,
+        509.4622083706781,
+        354.8124582739547,
+        158.14133337698877,
+        243.07800002861768,
+        214.22762493602931,
+        234.8590831970796,
+        199.8815832193941,
+        400.91558324638754,
+        230.61383329331875,
+        193.56070831418037,
+        200.27558330912143,
+        227.12479159235954,
+        193.56325000990182,
+        250.78766664955765,
+        617.1094583114609,
+        266.08454168308526
+      ]
+    },
+    "feature": {
+      "count": 20,
+      "median_ms": 236.53102084062994,
+      "min_ms": 113.4926249505952,
+      "max_ms": 526.6116665443406,
+      "samples_ms": [
+        254.64387494139373,
+        238.32758329808712,
+        183.8448332855478,
+        209.27779155317694,
+        482.50629159156233,
+        337.15887495782226,
+        425.39608327206224,
+        302.1273750346154,
+        251.30599993281066,
+        246.6671250294894,
+        526.6116665443406,
+        212.40245830267668,
+        164.06566672958434,
+        113.4926249505952,
+        216.360958176665,
+        234.73445838317275,
+        208.48308329004794,
+        197.54233316052705,
+        178.63004165701568,
+        245.89395825751126
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "block": 0,
+      "arm": "baseline",
+      "samples_ms": [
+        210.08179162163287,
+        209.68708337750286,
+        216.95349994115531,
+        210.21829161327332,
+        509.4622083706781
+      ],
+      "median_ms": 210.21829161327332
+    },
+    {
+      "block": 0,
+      "arm": "feature",
+      "samples_ms": [
+        254.64387494139373,
+        238.32758329808712,
+        183.8448332855478,
+        209.27779155317694,
+        482.50629159156233
+      ],
+      "median_ms": 238.32758329808712
+    },
+    {
+      "block": 1,
+      "arm": "feature",
+      "samples_ms": [
+        337.15887495782226,
+        425.39608327206224,
+        302.1273750346154,
+        251.30599993281066,
+        246.6671250294894
+      ],
+      "median_ms": 302.1273750346154
+    },
+    {
+      "block": 1,
+      "arm": "baseline",
+      "samples_ms": [
+        354.8124582739547,
+        158.14133337698877,
+        243.07800002861768,
+        214.22762493602931,
+        234.8590831970796
+      ],
+      "median_ms": 234.8590831970796
+    },
+    {
+      "block": 2,
+      "arm": "feature",
+      "samples_ms": [
+        526.6116665443406,
+        212.40245830267668,
+        164.06566672958434,
+        113.4926249505952,
+        216.360958176665
+      ],
+      "median_ms": 212.40245830267668
+    },
+    {
+      "block": 2,
+      "arm": "baseline",
+      "samples_ms": [
+        199.8815832193941,
+        400.91558324638754,
+        230.61383329331875,
+        193.56070831418037,
+        200.27558330912143
+      ],
+      "median_ms": 200.27558330912143
+    },
+    {
+      "block": 3,
+      "arm": "baseline",
+      "samples_ms": [
+        227.12479159235954,
+        193.56325000990182,
+        250.78766664955765,
+        617.1094583114609,
+        266.08454168308526
+      ],
+      "median_ms": 250.78766664955765
+    },
+    {
+      "block": 3,
+      "arm": "feature",
+      "samples_ms": [
+        234.73445838317275,
+        208.48308329004794,
+        197.54233316052705,
+        178.63004165701568,
+        245.89395825751126
+      ],
+      "median_ms": 208.48308329004794
+    }
+  ],
+  "median_allowance_percent": 20,
+  "median_delta_percent": 6.526720783323325,
+  "within_allowance": true,
+  "fingerprints_before": {
+    "media": "37e1e1ebf58d44d0a38f4ac3f6f621dca2547307f9429a404bfccfd475d94c84",
+    "probe": "0d844721b517ec313e44daf88ad7a53515aa6104c193f4e9399b21ca6e8bd9f9",
+    "pointer": "bfc48a37b90fc9aefda36735b36f9c239dea1f3c021046f7039d9e29691abd8e",
+    "baseline_app_tree": "7f834b0bd597aa9729f1c64f8f0e16c40459fcaf954e255d66a0c3e532d0ba7d",
+    "baseline_plugin": "43e7d6da115cf83209869e51942528d14de9089d73ba4da31790b5bf04b0e1b5",
+    "baseline_helper": "830d9857bbcd04b1b58462b3025fbbf09662dbcd80eb539be2e3ba45ab4da348",
+    "feature_app_tree": "9a86166d3ebbef259e2431dcc82162453b21a072bc09fda0fb91ddb61a744a98",
+    "feature_plugin": "1de138205be0d039427759e72a04e4c6cda4a2d66437bc7aa355563e5bad0799",
+    "feature_helper": "cbbd6784deb18501eddccf4d695dbd7b39c3ef27b14374fa34209d638d6b836f",
+    "test:baseline_control_trial.py": "8be05884d7cdb9a640d260acc17f63a425c963e73ad368933504c847cf1cb8d2",
+    "test:control_response_probe.m": "0489b5656e03e5531794fbfed4f783cfc9c8ffbb7f476bf534f3e3d7a6435bb1",
+    "test:native_hover_trial.py": "2706ac8366f1ce98daadaf6f2c4d310648d99a78ffe8b3b47df4feb13d76c8e9",
+    "test:native_hover_benchmark.py": "295c192d9ca1c5800821a158b018f2ad57510de0894883e1f0d04557206ec379",
+    "test:playback_benchmark.py": "588295e4b74dfbd611179d9b4ccd03e013596ef2a07f32f899d5e739d4f3c6bd",
+    "test:native-pointer.m": "ecedbe0903ba7fc2eba9fd1c784c973387b2eef7d0cd574220eddc8ca6e33c1d"
+  },
+  "fingerprints_after": {
+    "media": "37e1e1ebf58d44d0a38f4ac3f6f621dca2547307f9429a404bfccfd475d94c84",
+    "probe": "0d844721b517ec313e44daf88ad7a53515aa6104c193f4e9399b21ca6e8bd9f9",
+    "pointer": "bfc48a37b90fc9aefda36735b36f9c239dea1f3c021046f7039d9e29691abd8e",
+    "baseline_app_tree": "7f834b0bd597aa9729f1c64f8f0e16c40459fcaf954e255d66a0c3e532d0ba7d",
+    "baseline_plugin": "43e7d6da115cf83209869e51942528d14de9089d73ba4da31790b5bf04b0e1b5",
+    "baseline_helper": "830d9857bbcd04b1b58462b3025fbbf09662dbcd80eb539be2e3ba45ab4da348",
+    "feature_app_tree": "9a86166d3ebbef259e2431dcc82162453b21a072bc09fda0fb91ddb61a744a98",
+    "feature_plugin": "1de138205be0d039427759e72a04e4c6cda4a2d66437bc7aa355563e5bad0799",
+    "feature_helper": "cbbd6784deb18501eddccf4d695dbd7b39c3ef27b14374fa34209d638d6b836f",
+    "test:baseline_control_trial.py": "8be05884d7cdb9a640d260acc17f63a425c963e73ad368933504c847cf1cb8d2",
+    "test:control_response_probe.m": "0489b5656e03e5531794fbfed4f783cfc9c8ffbb7f476bf534f3e3d7a6435bb1",
+    "test:native_hover_trial.py": "2706ac8366f1ce98daadaf6f2c4d310648d99a78ffe8b3b47df4feb13d76c8e9",
+    "test:native_hover_benchmark.py": "295c192d9ca1c5800821a158b018f2ad57510de0894883e1f0d04557206ec379",
+    "test:playback_benchmark.py": "588295e4b74dfbd611179d9b4ccd03e013596ef2a07f32f899d5e739d4f3c6bd",
+    "test:native-pointer.m": "ecedbe0903ba7fc2eba9fd1c784c973387b2eef7d0cd574220eddc8ca6e33c1d"
+  },
+  "raw_summary": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/control-pragmatic-preference-final-001/summary.json",
+  "build_manifest": "app-build-preview-preference-final-155231.json",
+  "all_52_sessions_audited": true,
+  "clean_exit_both": true,
+  "scope": "Approximate actual paused knob render; sharedhost;20each; no p95/causal attribution/completedseek claim"
+}

@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "candidate_manifest": "app-build-controller-16ms-experiment-132643.json",
+  "scope": "Candidate-specific physical pointer/surface applicability; no performance qualification",
+  "qualified": false,
+  "detached": {
+    "all_visible": true,
+    "leave_hid_preview": true,
+    "paused_at_zero": true,
+    "integrity_unchanged": true,
+    "stationary_pointer_resize_caption": "01:20",
+    "host_id_survived_resize": false,
+    "result": "Pass for recorded hover/clear/resize visual scope; host identity did not survive resize and is reported as such",
+    "raw_result": "work/validation/story002/cadence-16ms-surfaces-001/detached/results.json"
+  },
+  "native": {
+    "all_visible": true,
+    "stable_host": true,
+    "leave_hid_preview": true,
+    "reentry_visible": true,
+    "paused_at_zero": true,
+    "integrity_unchanged": true,
+    "reviewed_right_caption": "01:30 / Keyframe 1:28",
+    "result": "Pass for recorded hover/clear/reentry scope",
+    "raw_result": "work/validation/story002/cadence-16ms-surfaces-001/native/results.json"
+  },
+  "custom": {
+    "first_five_positions_host_count": 0,
+    "leave_hid_preview": true,
+    "reentry_host_present": true,
+    "overall_pass": false,
+    "result": "Incomplete; controls visibility/fade versus product behavior remains under investigation",
+    "raw_result": "work/validation/story002/cadence-16ms-surfaces-001/custom/results.json"
+  },
+  "main": {
+    "status": "completed",
+    "physical_points": [
+      "left-endpoint",
+      "middle",
+      "right-endpoint",
+      "return-middle",
+      "leave",
+      "reenter"
+    ],
+    "stable_host": true,
+    "leave_hid_preview": true,
+    "paused_at_zero": true,
+    "integrity_unchanged": true,
+    "root_reviewed_right_caption": "01:30 / Keyframe 1:28",
+    "result": "Pass for recorded main-window hover/clear/reentry applicability; no timing acceptance",
+    "raw_result": "work/validation/story002/cadence-16ms-main-001/raw/results.json"
+  },
+  "overall": "Do not claim a four-surface pass. Main, detached, and native results are bounded to their recorded scopes; custom first-entry is incomplete."
+}

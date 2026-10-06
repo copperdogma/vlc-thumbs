@@ -1,0 +1,32 @@
+{
+  "scope": "Only generated sentinel media; reject existing output before encoder/Python writes",
+  "generator_sha256": "7e6157be47cd3af4b0773709c88a629f903c14871a39b22098dffba29c7d34a8",
+  "original_sha256": "29199604e49bbfec24cc4a30f50d8daf2f4aa1e1a06e4d151e50de7f106d19ee",
+  "checks": [
+    {
+      "case": "linked-media",
+      "pass": true,
+      "exit": 2,
+      "stderr": "usage: generate-thumbnail-fixtures.py [-h] [--ffmpeg FFMPEG] [--output OUTPUT]\ngenerate-thumbnail-fixtures.py: error: Fixture output must be a new directory; choose a fresh --output\n",
+      "original_sha256_after": "29199604e49bbfec24cc4a30f50d8daf2f4aa1e1a06e4d151e50de7f106d19ee",
+      "encoder_called": false
+    },
+    {
+      "case": "linked-sidecar",
+      "pass": true,
+      "exit": 2,
+      "stderr": "usage: generate-thumbnail-fixtures.py [-h] [--ffmpeg FFMPEG] [--output OUTPUT]\ngenerate-thumbnail-fixtures.py: error: Fixture output must be a new directory; choose a fresh --output\n",
+      "original_sha256_after": "29199604e49bbfec24cc4a30f50d8daf2f4aa1e1a06e4d151e50de7f106d19ee",
+      "encoder_called": false
+    },
+    {
+      "case": "hardlinked-media",
+      "pass": true,
+      "exit": 2,
+      "stderr": "usage: generate-thumbnail-fixtures.py [-h] [--ffmpeg FFMPEG] [--output OUTPUT]\ngenerate-thumbnail-fixtures.py: error: Fixture output must be a new directory; choose a fresh --output\n",
+      "original_sha256_after": "29199604e49bbfec24cc4a30f50d8daf2f4aa1e1a06e4d151e50de7f106d19ee",
+      "encoder_called": false
+    }
+  ],
+  "pass": true
+}

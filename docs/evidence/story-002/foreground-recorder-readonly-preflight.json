@@ -1,0 +1,13 @@
+{
+  "scope": "Read-only recorder startup/run-loop applicability, no induced transition or control timing trial",
+  "returncode": 0,
+  "elapsed_seconds": 3.319200500031002,
+  "row_count": 2,
+  "ready": true,
+  "finished": true,
+  "ordered_receipts": true,
+  "source_sha256": "97f4d552c54ddbd2498b16669833a49f86762372ee0fa64766eed12b4e97fe5c",
+  "binary_sha256": "350cb66905f29529392cad3da76d15da363a8cd60be52cbd810131355f2f6207",
+  "activation_calls": false,
+  "notification_delivery_proven": false
+}

@@ -1,0 +1,216 @@
+{
+  "status": "valid",
+  "method": "phase AX; validated-frontmost-instance acquisition; actual pixel render; 20 per arm; AB BA BA AB",
+  "median_allowance_percent": 20,
+  "results": {
+    "baseline": {
+      "count": 20,
+      "median_ms": 343.0473332409747,
+      "min_ms": 279.56804155837744,
+      "max_ms": 487.31991660315543,
+      "samples_ms": [
+        487.31991660315543,
+        326.6898333095014,
+        349.6467082295567,
+        395.7110416376963,
+        304.92095823865384,
+        329.61754163261503,
+        333.53549987077713,
+        395.09762497618794,
+        336.4479582523927,
+        312.8957914886996,
+        369.77320828009397,
+        327.26474991068244,
+        377.6509165763855,
+        359.8052499582991,
+        396.2462916970253,
+        326.4134165365249,
+        349.64958333875984,
+        279.56804155837744,
+        378.8775416323915,
+        321.30599999800324
+      ]
+    },
+    "feature": {
+      "count": 20,
+      "median_ms": 330.74093743925914,
+      "min_ms": 233.48404152784497,
+      "max_ms": 420.99220829550177,
+      "samples_ms": [
+        307.98704153858125,
+        334.6344582969323,
+        420.99220829550177,
+        308.2701666280627,
+        319.6409582160413,
+        386.8002083618194,
+        304.03416650369763,
+        233.48404152784497,
+        288.1143332924694,
+        378.8812500424683,
+        393.8317915890366,
+        367.10345826577395,
+        362.590208183974,
+        343.70420826599,
+        311.9088333332911,
+        353.75187499448657,
+        345.16962489578873,
+        304.79599989484996,
+        322.4320416338742,
+        326.847416581586
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "block": 0,
+      "arm": "baseline",
+      "samples_ms": [
+        487.31991660315543,
+        326.6898333095014,
+        349.6467082295567,
+        395.7110416376963,
+        304.92095823865384
+      ],
+      "median_ms": 349.6467082295567
+    },
+    {
+      "block": 0,
+      "arm": "feature",
+      "samples_ms": [
+        307.98704153858125,
+        334.6344582969323,
+        420.99220829550177,
+        308.2701666280627,
+        319.6409582160413
+      ],
+      "median_ms": 319.6409582160413
+    },
+    {
+      "block": 1,
+      "arm": "feature",
+      "samples_ms": [
+        386.8002083618194,
+        304.03416650369763,
+        233.48404152784497,
+        288.1143332924694,
+        378.8812500424683
+      ],
+      "median_ms": 304.03416650369763
+    },
+    {
+      "block": 1,
+      "arm": "baseline",
+      "samples_ms": [
+        329.61754163261503,
+        333.53549987077713,
+        395.09762497618794,
+        336.4479582523927,
+        312.8957914886996
+      ],
+      "median_ms": 333.53549987077713
+    },
+    {
+      "block": 2,
+      "arm": "feature",
+      "samples_ms": [
+        393.8317915890366,
+        367.10345826577395,
+        362.590208183974,
+        343.70420826599,
+        311.9088333332911
+      ],
+      "median_ms": 362.590208183974
+    },
+    {
+      "block": 2,
+      "arm": "baseline",
+      "samples_ms": [
+        369.77320828009397,
+        327.26474991068244,
+        377.6509165763855,
+        359.8052499582991,
+        396.2462916970253
+      ],
+      "median_ms": 369.77320828009397
+    },
+    {
+      "block": 3,
+      "arm": "baseline",
+      "samples_ms": [
+        326.4134165365249,
+        349.64958333875984,
+        279.56804155837744,
+        378.8775416323915,
+        321.30599999800324
+      ],
+      "median_ms": 326.4134165365249
+    },
+    {
+      "block": 3,
+      "arm": "feature",
+      "samples_ms": [
+        353.75187499448657,
+        345.16962489578873,
+        304.79599989484996,
+        322.4320416338742,
+        326.847416581586
+      ],
+      "median_ms": 326.847416581586
+    }
+  ],
+  "median_delta_percent": -3.5873754462539043,
+  "within_allowance": true,
+  "fingerprints_before": {
+    "media": "37e1e1ebf58d44d0a38f4ac3f6f621dca2547307f9429a404bfccfd475d94c84",
+    "probe": "0d844721b517ec313e44daf88ad7a53515aa6104c193f4e9399b21ca6e8bd9f9",
+    "pointer": "bfc48a37b90fc9aefda36735b36f9c239dea1f3c021046f7039d9e29691abd8e",
+    "baseline_app_tree": "7f834b0bd597aa9729f1c64f8f0e16c40459fcaf954e255d66a0c3e532d0ba7d",
+    "baseline_plugin": "43e7d6da115cf83209869e51942528d14de9089d73ba4da31790b5bf04b0e1b5",
+    "baseline_helper": "830d9857bbcd04b1b58462b3025fbbf09662dbcd80eb539be2e3ba45ab4da348",
+    "feature_app_tree": "2e52b8378db68d5a2662b5a920af504292ebb630e47983cdda05f06509eab159",
+    "feature_plugin": "c6e450ad19d07b9844593c4a66b3e5909dec170f24157f6cbb324939a23c869d",
+    "feature_helper": "cbbd6784deb18501eddccf4d695dbd7b39c3ef27b14374fa34209d638d6b836f",
+    "test:baseline_control_trial.py": "8be05884d7cdb9a640d260acc17f63a425c963e73ad368933504c847cf1cb8d2",
+    "test:control_response_probe.m": "0489b5656e03e5531794fbfed4f783cfc9c8ffbb7f476bf534f3e3d7a6435bb1",
+    "test:native_hover_trial.py": "2706ac8366f1ce98daadaf6f2c4d310648d99a78ffe8b3b47df4feb13d76c8e9",
+    "test:native_hover_benchmark.py": "295c192d9ca1c5800821a158b018f2ad57510de0894883e1f0d04557206ec379",
+    "test:playback_benchmark.py": "588295e4b74dfbd611179d9b4ccd03e013596ef2a07f32f899d5e739d4f3c6bd",
+    "test:native-pointer.m": "ecedbe0903ba7fc2eba9fd1c784c973387b2eef7d0cd574220eddc8ca6e33c1d"
+  },
+  "fingerprints_after": {
+    "media": "37e1e1ebf58d44d0a38f4ac3f6f621dca2547307f9429a404bfccfd475d94c84",
+    "probe": "0d844721b517ec313e44daf88ad7a53515aa6104c193f4e9399b21ca6e8bd9f9",
+    "pointer": "bfc48a37b90fc9aefda36735b36f9c239dea1f3c021046f7039d9e29691abd8e",
+    "baseline_app_tree": "7f834b0bd597aa9729f1c64f8f0e16c40459fcaf954e255d66a0c3e532d0ba7d",
+    "baseline_plugin": "43e7d6da115cf83209869e51942528d14de9089d73ba4da31790b5bf04b0e1b5",
+    "baseline_helper": "830d9857bbcd04b1b58462b3025fbbf09662dbcd80eb539be2e3ba45ab4da348",
+    "feature_app_tree": "2e52b8378db68d5a2662b5a920af504292ebb630e47983cdda05f06509eab159",
+    "feature_plugin": "c6e450ad19d07b9844593c4a66b3e5909dec170f24157f6cbb324939a23c869d",
+    "feature_helper": "cbbd6784deb18501eddccf4d695dbd7b39c3ef27b14374fa34209d638d6b836f",
+    "test:baseline_control_trial.py": "8be05884d7cdb9a640d260acc17f63a425c963e73ad368933504c847cf1cb8d2",
+    "test:control_response_probe.m": "0489b5656e03e5531794fbfed4f783cfc9c8ffbb7f476bf534f3e3d7a6435bb1",
+    "test:native_hover_trial.py": "2706ac8366f1ce98daadaf6f2c4d310648d99a78ffe8b3b47df4feb13d76c8e9",
+    "test:native_hover_benchmark.py": "295c192d9ca1c5800821a158b018f2ad57510de0894883e1f0d04557206ec379",
+    "test:playback_benchmark.py": "588295e4b74dfbd611179d9b4ccd03e013596ef2a07f32f899d5e739d4f3c6bd",
+    "test:native-pointer.m": "ecedbe0903ba7fc2eba9fd1c784c973387b2eef7d0cd574220eddc8ca6e33c1d"
+  },
+  "raw_summary": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/control-pragmatic-current-002/summary.json",
+  "runner": "work/validation/story002/pragmatic-runner/run002.py",
+  "runner_sha256": "4a68e988c0f1c3e3a81c12b3e0ab33004fc4d53377c81bdbd7cbca8104128d24",
+  "all_52_session_acquisitions_verified": true,
+  "all_capture_faults_empty": true,
+  "owned_cleanup": {
+    "baseline": {
+      "exit_code": 0,
+      "cleanup_errors": []
+    },
+    "feature": {
+      "exit_code": 0,
+      "cleanup_errors": []
+    }
+  },
+  "scope": "Approximate actual native knob render response; phase AX; shared host; no p95, completed-seek or causal speedup claim",
+  "qualification": "control-frontmost-acquisition-qualification.json",
+  "preserved_executed_runner": "tests/story-002/pragmatic_control_trial.py",
+  "preserved_runner_sha256": "4a68e988c0f1c3e3a81c12b3e0ab33004fc4d53377c81bdbd7cbca8104128d24"
+}

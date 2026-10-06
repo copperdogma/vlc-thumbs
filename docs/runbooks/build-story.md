@@ -6,8 +6,9 @@ scope. Keep delegation disjoint, optional and proportional. Use current primary
 VLC documentation/source for external interfaces. Deterministic UI/persistence
 features need behavioral baselines; no paid model baseline is required.
 
-No VLC build command exists yet. Story 001 must establish it with pinned
-revision/toolchain. `make validate` only checks workflow. When a candidate exists,
+Use `docs/runbooks/build-vlc-macos.md` for the verified current-host build
+route and repairs. Reuse the existing isolated build and check free space;
+record feature patches separately from compatibility repairs. `make validate` only checks workflow. When a candidate exists,
 record actual native UI commands/observations and fixture evidence. Verify media
 hashes, frame/time correspondence, playback and restart/identity behaviors.
 Review scope honestly, then `/validate` and `/mark-story-done`; commit/push only

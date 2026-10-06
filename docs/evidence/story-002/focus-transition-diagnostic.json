@@ -1,0 +1,46 @@
+{
+  "scope": "Unscored foreground transition diagnostic; no latency or playback qualification",
+  "completed": true,
+  "app_pid": 24125,
+  "focus_samples": 20,
+  "all_sampled_focus_active": true,
+  "activation_events": [
+    {
+      "active": true,
+      "application": "com.openai.codex",
+      "kind": "initial",
+      "pid": 29646,
+      "uptime": 917920.4954791251
+    },
+    {
+      "active": true,
+      "application": "org.videolan.vlc-thumbs.development",
+      "kind": "activation",
+      "pid": 24125,
+      "uptime": 917920.916069
+    },
+    {
+      "active": true,
+      "application": "other",
+      "kind": "activation",
+      "pid": 400,
+      "uptime": 917965.1905465417
+    },
+    {
+      "active": true,
+      "application": "com.openai.codex",
+      "kind": "activation",
+      "pid": 29646,
+      "uptime": 917965.1923823333
+    },
+    {
+      "active": true,
+      "application": "com.openai.codex",
+      "kind": "finished",
+      "pid": 29646,
+      "uptime": 917975.5527981251
+    }
+  ],
+  "raw_summary": "work/validation/story002/focus-transition-001/summary.json",
+  "interpretation": "One42-second owned session remains active during unscored native hovers. Activation away from VLC occurs after owned-player cleanup. Earlier failures unexplained; do not claim their cause or latency acceptance."
+}

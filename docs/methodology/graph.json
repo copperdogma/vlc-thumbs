@@ -80,7 +80,7 @@
     {
       "id": "001",
       "title": "Story 001 — VLC macOS timeline feasibility",
-      "status": "Draft",
+      "status": "Done",
       "priority": "High",
       "path": "docs/stories/story-001-vlc-macos-feasibility.md",
       "ideal_refs": [
@@ -97,9 +97,110 @@
         "spec:4"
       ],
       "depends_on": [],
-      "decision_refs": [],
+      "decision_refs": [
+        "docs/decisions/adr-001-media-metadata-storage/adr.md"
+      ],
       "eval_refs": [
         "root-timeline-experience"
+      ]
+    },
+    {
+      "id": "002",
+      "title": "Story 002 — Thumbnail previews on the macOS timeline",
+      "status": "Done",
+      "priority": "High",
+      "path": "docs/stories/story-002-timeline-thumbnails.md",
+      "ideal_refs": [
+        "ideal:req:previews",
+        "ideal:req:playback-quality",
+        "ideal:req:media-integrity",
+        "ideal:req:evidence"
+      ],
+      "spec_refs": [
+        "spec:1",
+        "spec:2",
+        "spec:4",
+        "spec:5"
+      ],
+      "depends_on": [
+        "001"
+      ],
+      "decision_refs": [
+        "docs/decisions/adr-002-native-thumbnail-services/adr.md",
+        "docs/decisions/adr-001-media-metadata-storage/adr.md",
+        "docs/research/timeline-implementation-plan.md",
+        "docs/runbooks/build-vlc-macos.md"
+      ],
+      "eval_refs": [
+        "root-timeline-experience",
+        "story-002-preview-capability"
+      ]
+    },
+    {
+      "id": "003",
+      "title": "Story 003 — Persistent short labels on the macOS timeline",
+      "status": "Pending",
+      "priority": "High",
+      "path": "docs/stories/story-003-timeline-bookmarks.md",
+      "ideal_refs": [
+        "ideal:req:annotations",
+        "ideal:req:persistence",
+        "ideal:req:navigation",
+        "ideal:req:media-integrity",
+        "ideal:req:playback-quality",
+        "ideal:req:evidence"
+      ],
+      "spec_refs": [
+        "spec:1",
+        "spec:3",
+        "spec:4",
+        "spec:5"
+      ],
+      "depends_on": [
+        "001"
+      ],
+      "decision_refs": [
+        "docs/decisions/adr-001-media-metadata-storage/adr.md",
+        "docs/research/timeline-implementation-plan.md",
+        "docs/runbooks/media-metadata.md"
+      ],
+      "eval_refs": [
+        "root-timeline-experience"
+      ]
+    },
+    {
+      "id": "004",
+      "title": "Story 004 — Responsive previews with background preparation and reusable caching",
+      "status": "Done",
+      "priority": "High",
+      "path": "docs/stories/story-004-responsive-reusable-thumbnails.md",
+      "ideal_refs": [
+        "ideal:req:previews",
+        "ideal:req:playback-quality",
+        "ideal:req:media-integrity",
+        "ideal:req:evidence"
+      ],
+      "spec_refs": [
+        "spec:1",
+        "spec:2",
+        "spec:4",
+        "spec:5"
+      ],
+      "depends_on": [
+        "002"
+      ],
+      "decision_refs": [
+        "docs/decisions/adr-003-persistent-thumbnail-preparation/adr.md",
+        "docs/decisions/adr-001-media-metadata-storage/adr.md",
+        "docs/decisions/adr-002-native-thumbnail-services/adr.md",
+        "docs/research/nas-thumbnail-latency.md",
+        "docs/research/story-002-pragmatic-before-after-plan.md",
+        "docs/runbooks/build-story.md",
+        "docs/runbooks/media-metadata.md"
+      ],
+      "eval_refs": [
+        "root-timeline-experience",
+        "story-004-responsive-preview-capability"
       ]
     }
   ],
@@ -126,43 +227,86 @@
       ],
       "command": "not implemented",
       "parent_id": ""
+    },
+    {
+      "id": "story-002-preview-capability",
+      "name": "Native macOS keyframe previews",
+      "type": "quality",
+      "status": "partial",
+      "spec_refs": [
+        "spec:1",
+        "spec:2",
+        "spec:4"
+      ],
+      "ideal_refs": [
+        "ideal:req:evidence",
+        "ideal:req:media-integrity",
+        "ideal:req:playback-quality",
+        "ideal:req:previews"
+      ],
+      "command": "See tests/story-002/README.md for candidate-specific fixture and native runners",
+      "parent_id": "root-timeline-experience"
+    },
+    {
+      "id": "story-004-responsive-preview-capability",
+      "name": "Responsive preparation and reusable previews",
+      "type": "quality",
+      "status": "passed",
+      "spec_refs": [
+        "spec:1",
+        "spec:2",
+        "spec:4"
+      ],
+      "ideal_refs": [
+        "ideal:req:evidence",
+        "ideal:req:media-integrity",
+        "ideal:req:playback-quality",
+        "ideal:req:previews"
+      ],
+      "command": "See tests/story-004/README.md for local contracts and native comparison commands",
+      "parent_id": "root-timeline-experience"
     }
   ],
   "state": {
     "exists": true,
     "active_focus": {
-      "story_id": "001",
-      "summary": "Establish macOS VLC timeline integration and reproducible build feasibility.",
-      "reason": "Both requested interactions need actual timeline access; excerpt claims are unverified.",
-      "current_command": "Read Story 001 and establish its research/build plan.",
-      "status": "draft"
+      "story_id": "004",
+      "status": "done",
+      "summary": "Story004 corrected and Done on001728; Story003 bookmarks remains planned.",
+      "reason": "Reproduced mapping and retention defects corrected, current build qualified and local app updated.",
+      "current_command": ">-"
     },
     "categories": [
       {
         "id": "spec:1",
         "title": "VLC integration and delivery",
-        "substrate_status": "missing",
+        "substrate_status": "partial",
         "phase": "climb",
         "story_refs": [
-          "001"
+          "001",
+          "002",
+          "003",
+          "004"
         ],
         "eval_refs": [
           "root-timeline-experience"
         ],
-        "note": "No pinned source or verified native timeline/build path."
+        "note": "Pinned arm64 development app and all four fully visible preview surfaces support Story 002 functional evidence on signed build 132643; required pragmatic comparison passed; ordinary native controls and scoped reader inheritance are validated. Story 003 integration and public/other-platform delivery remain deferred. Earlier custom no-host observation remains unknown; no universal entry-reliability claim."
       },
       {
         "id": "spec:2",
         "title": "Thumbnail correspondence and responsiveness",
-        "substrate_status": "missing",
+        "substrate_status": "partial",
         "phase": "climb",
         "story_refs": [
-          "001"
+          "002",
+          "004"
         ],
         "eval_refs": [
-          "root-timeline-experience"
+          "root-timeline-experience",
+          "story-004-responsive-preview-capability"
         ],
-        "note": "Decoder/cache approach and measurable thresholds unselected."
+        "note": "Story004001728 correction passes3410cache/40service, final NAS10/10,20/arm controls37.612/37.635ms within+20%, and3matched playback pairs with130–138background jobs. Exact app delivered; scoped unchanged UI/preference/reader evidence inherited. Cold misses, sampled blind spot, broader formats/universal latency/public packaging remain unqualified."
       },
       {
         "id": "spec:3",
@@ -170,34 +314,43 @@
         "substrate_status": "missing",
         "phase": "climb",
         "story_refs": [
-          "001"
+          "003"
         ],
         "eval_refs": [
           "root-timeline-experience"
         ],
-        "note": "No schema or media identity chosen; same-file persistence is initial scope."
+        "decision_refs": [
+          "docs/decisions/adr-001-media-metadata-storage/adr.md"
+        ],
+        "note": "ADR-001 accepts durable Application Support labels. SQLite platform probe works; schema/fresh-hash identity remain proposals with a measured-latency gate in 003."
       },
       {
         "id": "spec:4",
         "title": "Interaction quality and behavioral proof",
-        "substrate_status": "missing",
+        "substrate_status": "partial",
         "phase": "climb",
         "story_refs": [
-          "001"
+          "002",
+          "003",
+          "004"
         ],
         "eval_refs": [
           "root-timeline-experience"
         ],
-        "note": "Root contract exists; no runner or fixture/build evidence."
+        "note": "Story 002 functional interaction proof is recorded under the declared scope; normal native controls, current main reader and source-invariant four-surface reader inheritance are recorded. Bookmarks and integrated root are absent; precise performance remains unqualified/deferred."
       },
       {
         "id": "spec:5",
         "title": "Project workflow and source obligations",
         "substrate_status": "partial",
         "phase": "climb",
-        "story_refs": [],
+        "story_refs": [
+          "001",
+          "002",
+          "003"
+        ],
         "eval_refs": [],
-        "note": "Local workflow installed; source licensing/build provenance remain to verify."
+        "note": "Workflow and source/build/dependency provenance recorded. New helper distribution obligations and public packaging remain deferred."
       }
     ],
     "planning_inputs": [
@@ -214,28 +367,28 @@
     ],
     "lanes": {
       "runtime": {
-        "status": "deferred",
-        "reason": "No VLC build or helper runtime exists; no Conductor port range allocated.",
+        "status": "baseline-available",
+        "reason": "Isolated native VLC baseline and feature candidate exist; four-surface hover is visibly demonstrated; Story 002 functional MVP and pragmatic comparison are Done; no Conductor port range needed.",
         "trigger": "Pinned native build exists; allocate ports only if a web/API helper is introduced."
       },
       "eval_harness": {
         "status": "deferred",
-        "reason": "Root contract exists but no legal media fixture or candidate UI runner.",
+        "reason": "Root contract and small legal diagnostic fixtures exist; full product fixture suite and integrated UI runner do not.",
         "trigger": "Candidate implements both requested interactions on a pinned build."
       },
       "ui_scout": {
         "status": "deferred",
-        "reason": "No project VLC UI candidate exists.",
+        "reason": "Four-surface hover is visibly demonstrated; Story 002 controls/accessibility/playback evidence is retained; pragmatic comparison passed with precise tail/stall characterization deferred.",
         "trigger": "Runnable native timeline slice exists."
       },
       "architecture_audits": {
         "status": "deferred",
-        "reason": "No product architecture exists.",
+        "reason": "Broad audit deferred; ADR003 accepts bounded worker lifecycle, sampled cache freshness and provisional source-check presentation.",
         "trigger": "Real integration/storage/decoder boundaries present a material question."
       },
       "codebase_improvement": {
         "status": "deferred",
-        "reason": "Only setup/tooling exists.",
+        "reason": "Feature implementation exists; broad cleanup deferred while finishing its acceptance gates.",
         "trigger": "Meaningful VLC implementation exists."
       }
     }

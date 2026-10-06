@@ -6,11 +6,16 @@ seeded_from:
   current_plan: docs/plan.md
   methodology_source: Board Game Ingester and Ultima IV Web
 active_focus:
-  story_id: "001"
-  summary: Establish macOS VLC timeline integration and reproducible build feasibility.
-  reason: Both requested interactions need actual timeline access; excerpt claims are unverified.
-  current_command: Read Story 001 and establish its research/build plan.
-  status: draft
+  story_id: "004"
+  status: done
+  summary: Story004 corrected and Done on001728; Story003 bookmarks remains planned.
+  reason: Reproduced mapping and retention defects corrected, current build qualified and local app updated.
+  current_command: >-
+    Approved correction plan completed; current001728 evidence supersedes affected222506 claims.
+    Metadata plus sampled hashing and provisional current-session Checking source
+    presentation are accepted under Cam's delegated choices. Preserve all invalid
+    attempts, resource overhead and explicitly inherited reader proof. Bookmarks
+    and root remain separate; no commit/push/public distribution requested.
 planning_inputs:
   - path: docs/idea-intake.md
     status: preserved-intake
@@ -21,56 +26,57 @@ planning_inputs:
 categories:
   - id: spec:1
     title: VLC integration and delivery
-    substrate_status: missing
+    substrate_status: partial
     phase: climb
-    story_refs: ["001"]
+    story_refs: ["001", "002", "003", "004"]
     eval_refs: [root-timeline-experience]
-    note: No pinned source or verified native timeline/build path.
+    note: Pinned arm64 development app and all four fully visible preview surfaces support Story 002 functional evidence on signed build 132643; required pragmatic comparison passed; ordinary native controls and scoped reader inheritance are validated. Story 003 integration and public/other-platform delivery remain deferred. Earlier custom no-host observation remains unknown; no universal entry-reliability claim.
   - id: spec:2
     title: Thumbnail correspondence and responsiveness
-    substrate_status: missing
+    substrate_status: partial
     phase: climb
-    story_refs: ["001"]
-    eval_refs: [root-timeline-experience]
-    note: Decoder/cache approach and measurable thresholds unselected.
+    story_refs: ["002", "004"]
+    eval_refs: [root-timeline-experience, story-004-responsive-preview-capability]
+    note: "Story004001728 correction passes3410cache/40service, final NAS10/10,20/arm controls37.612/37.635ms within+20%, and3matched playback pairs with130–138background jobs. Exact app delivered; scoped unchanged UI/preference/reader evidence inherited. Cold misses, sampled blind spot, broader formats/universal latency/public packaging remain unqualified."
   - id: spec:3
     title: Annotation persistence and media identity
     substrate_status: missing
     phase: climb
-    story_refs: ["001"]
+    story_refs: ["003"]
     eval_refs: [root-timeline-experience]
-    note: No schema or media identity chosen; same-file persistence is initial scope.
+    decision_refs: [docs/decisions/adr-001-media-metadata-storage/adr.md]
+    note: ADR-001 accepts durable Application Support labels. SQLite platform probe works; schema/fresh-hash identity remain proposals with a measured-latency gate in 003.
   - id: spec:4
     title: Interaction quality and behavioral proof
-    substrate_status: missing
+    substrate_status: partial
     phase: climb
-    story_refs: ["001"]
+    story_refs: ["002", "003", "004"]
     eval_refs: [root-timeline-experience]
-    note: Root contract exists; no runner or fixture/build evidence.
+    note: "Story 002 functional interaction proof is recorded under the declared scope; normal native controls, current main reader and source-invariant four-surface reader inheritance are recorded. Bookmarks and integrated root are absent; precise performance remains unqualified/deferred."
   - id: spec:5
     title: Project workflow and source obligations
     substrate_status: partial
     phase: climb
-    story_refs: []
+    story_refs: ["001", "002", "003"]
     eval_refs: []
-    note: Local workflow installed; source licensing/build provenance remain to verify.
+    note: Workflow and source/build/dependency provenance recorded. New helper distribution obligations and public packaging remain deferred.
 runtime:
-  status: deferred
-  reason: No VLC build or helper runtime exists; no Conductor port range allocated.
+  status: baseline-available
+  reason: Isolated native VLC baseline and feature candidate exist; four-surface hover is visibly demonstrated; Story 002 functional MVP and pragmatic comparison are Done; no Conductor port range needed.
   trigger: Pinned native build exists; allocate ports only if a web/API helper is introduced.
 eval_harness:
   status: deferred
-  reason: Root contract exists but no legal media fixture or candidate UI runner.
+  reason: Root contract and small legal diagnostic fixtures exist; full product fixture suite and integrated UI runner do not.
   trigger: Candidate implements both requested interactions on a pinned build.
 ui_scout:
   status: deferred
-  reason: No project VLC UI candidate exists.
+  reason: Four-surface hover is visibly demonstrated; Story 002 controls/accessibility/playback evidence is retained; pragmatic comparison passed with precise tail/stall characterization deferred.
   trigger: Runnable native timeline slice exists.
 architecture_audits:
   status: deferred
-  reason: No product architecture exists.
+  reason: Broad audit deferred; ADR003 accepts bounded worker lifecycle, sampled cache freshness and provisional source-check presentation.
   trigger: Real integration/storage/decoder boundaries present a material question.
 codebase_improvement:
   status: deferred
-  reason: Only setup/tooling exists.
+  reason: Feature implementation exists; broad cleanup deferred while finishing its acceptance gates.
   trigger: Meaningful VLC implementation exists.

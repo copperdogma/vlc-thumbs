@@ -1,0 +1,32 @@
+{
+  "scope": "Same upstream test executable with saved pre-feature baseline core/libvlc and TLS modules; no GUI module used",
+  "executable_sha256": "0283501eead74c631319195576841338855b74636fd5ca5722694022b3695196",
+  "binary_comparisons": {
+    "lib/libvlc.5.dylib": {
+      "baseline": "23160704d1fb17d70fcbe9575bad1e9d38c282ec7d385a5eaf71baec29541141",
+      "feature": "23160704d1fb17d70fcbe9575bad1e9d38c282ec7d385a5eaf71baec29541141",
+      "identical": true
+    },
+    "lib/libvlccore.9.dylib": {
+      "baseline": "4dbd36d5bfeacfc8b980d525a77aa840941ecfb4f54b4668f154fd31023690e9",
+      "feature": "4dbd36d5bfeacfc8b980d525a77aa840941ecfb4f54b4668f154fd31023690e9",
+      "identical": true
+    },
+    "plugins/libgnutls_plugin.dylib": {
+      "baseline": "e86361984215fdd07885d248caa002ab06d641bcc2f38b1e7af14115ef83a6c2",
+      "feature": "e86361984215fdd07885d248caa002ab06d641bcc2f38b1e7af14115ef83a6c2",
+      "identical": true
+    },
+    "plugins/libsecuretransport_plugin.dylib": {
+      "baseline": "c11d43d670ce2edb6c14fa334b3dbd04609807829094593458df8829c92e1f6e",
+      "feature": "c11d43d670ce2edb6c14fa334b3dbd04609807829094593458df8829c92e1f6e",
+      "identical": true
+    }
+  },
+  "returncode": -6,
+  "baseline_libvlc_loaded": true,
+  "baseline_core_loaded": true,
+  "baseline_securetransport_loaded": true,
+  "baseline_gnutls_loaded": true,
+  "same_assertion": true
+}

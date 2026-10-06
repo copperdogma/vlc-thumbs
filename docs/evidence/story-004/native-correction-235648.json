@@ -1,0 +1,54 @@
+{
+  "scope": "Corrected build actual-pointer normal/error/CLI-off and four-surface proof. Representative captured synthetic panels inspected. Assignment/trace results are not compositor latency, full accessibility rerun or exhaustive formats. Surface runners deliberately retain qualified:false until owner assessment; owner assesses this bounded functional scope only.",
+  "build_manifest": "work/validation/story002/app-build-20261005T235648.846719Z.json",
+  "main": {
+    "passed": true,
+    "requests": 10,
+    "raw": "work/validation/story004/native-main-correction-001/benchmark/results.json",
+    "raw_sha256": "d4f81d5e6a694ba1fdbb004eaf43ca86ed3f829c35970bdbc0f66551dbca399a"
+  },
+  "ambiguous_track": {
+    "passed": true,
+    "native_playback": "blue",
+    "presentation": "Preview unavailable, no successful red/wrong-track preview",
+    "raw": "work/validation/story004/native-ambiguous-correction-001/summary.json",
+    "raw_sha256": "fcb6ea84021779bb4905dbe5b7907cfbcac2282523b11868d082e6433c40dff1"
+  },
+  "cli_off": {
+    "passed": true,
+    "raw": "work/validation/story004/cli-off-correction-001",
+    "scope": "Pointer hover with override off; no feature events/helper children, paused controls remain"
+  },
+  "surfaces": {
+    "detached": {
+      "completed_interactions": true,
+      "all_point_displays_passed": true,
+      "leave_hidden": true,
+      "integrity_unchanged": true,
+      "points": 6,
+      "raw": "work/validation/story004/native-detached-correction-001/results.json",
+      "raw_sha256": "fc8560ae4301f1e37d4f8645cc0e683fa7759ac6ca2f0921f920a81f35ad0c56",
+      "owner_functional_assessment": "pass within bounded trace and inspected panel scope"
+    },
+    "native": {
+      "completed_interactions": true,
+      "all_point_displays_passed": true,
+      "leave_hidden": true,
+      "integrity_unchanged": true,
+      "points": 6,
+      "raw": "work/validation/story004/native-native-correction-001/results.json",
+      "raw_sha256": "7e34a961942d5910aeba8fff109d4601824ea3aba99bed67f0c67d27fc7029d5",
+      "owner_functional_assessment": "pass within bounded trace and inspected panel scope"
+    },
+    "custom": {
+      "completed_interactions": true,
+      "all_point_displays_passed": true,
+      "leave_hidden": true,
+      "integrity_unchanged": true,
+      "points": 6,
+      "raw": "work/validation/story004/native-custom-correction-001/results.json",
+      "raw_sha256": "e3276a7e186e36792b29188a9c2f2f3847193237863769b46de8b4904975d6a8",
+      "owner_functional_assessment": "pass within bounded trace and inspected panel scope"
+    }
+  }
+}

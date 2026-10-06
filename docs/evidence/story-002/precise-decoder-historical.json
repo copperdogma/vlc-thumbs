@@ -1,0 +1,4630 @@
+{
+  "scope": "Private helper: decode/IPC/reference/resource/latency; UI/cache/playback untested",
+  "host": [
+    "Darwin",
+    "mac.lan",
+    "27.0.0",
+    "Darwin Kernel Version 27.0.0: Tue Aug 11 21:05:48 PDT 2026; root:xnu-13432.1.9~1/RELEASE_ARM64_T6041",
+    "arm64"
+  ],
+  "helper": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/thumbnail-helper/thumbnail-helper",
+  "helper_sha256": "e6b6f9a09dae808055de6cf92cfc29e15cd037262508a70b58705691930e3dc4",
+  "generation_sha256": "d50241574b193b83fabcd0d17e0f979d027f99adc97ad6b43b6fe41ad4a7c27a",
+  "conditions": "Sequential uncached process launches, generated media recently written/read; OS filesystem cache warm/uncontrolled. No global cache flush. Timing includes Python sampling overhead; excludes GUI/service/presentation.",
+  "correctness": [
+    {
+      "fixture": "standard.mp4",
+      "target_s": 12.125,
+      "ordinal": 0,
+      "header": {
+        "version": 1,
+        "ok": true,
+        "requested_us": 12125000,
+        "actual_us": 12125000,
+        "width": 320,
+        "height": 180,
+        "channels": 4,
+        "payload_bytes": 230400,
+        "video_ordinal": 0,
+        "decoded_frames": 4,
+        "timeline_origin_us": 0
+      },
+      "elapsed_ms": 31.87808394432068,
+      "peak_sampled_rss_kib": 25808,
+      "peak_sampled_cpu_percent": 0.0,
+      "payload_sha256": "0c1e20cab15f660c12f9fac5370a7fdede03970e0c4433fd7465faba4c574c97",
+      "independent_frame_index": 291,
+      "independent_normalized_s": 12.125,
+      "reference_mean_absolute_rgb_error": 0.2595601851851852,
+      "reference_command": [
+        "/usr/local/bin/ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-i",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/story-002/standard.mp4",
+        "-map",
+        "0:v:0",
+        "-vf",
+        "select=eq(n\\,291),scale=320:180:flags=bilinear:in_color_matrix=bt709",
+        "-frames:v",
+        "1",
+        "-threads",
+        "2",
+        "-f",
+        "rawvideo",
+        "-pix_fmt",
+        "rgba",
+        "-"
+      ],
+      "pass": true
+    },
+    {
+      "fixture": "standard.mkv",
+      "target_s": 12.125,
+      "ordinal": 0,
+      "header": {
+        "version": 1,
+        "ok": true,
+        "requested_us": 12125000,
+        "actual_us": 12125000,
+        "width": 320,
+        "height": 180,
+        "channels": 4,
+        "payload_bytes": 230400,
+        "video_ordinal": 0,
+        "decoded_frames": 4,
+        "timeline_origin_us": 0
+      },
+      "elapsed_ms": 33.702541957609355,
+      "peak_sampled_rss_kib": 30736,
+      "peak_sampled_cpu_percent": 0.0,
+      "payload_sha256": "0c1e20cab15f660c12f9fac5370a7fdede03970e0c4433fd7465faba4c574c97",
+      "independent_frame_index": 291,
+      "independent_normalized_s": 12.125,
+      "reference_mean_absolute_rgb_error": 0.2595601851851852,
+      "reference_command": [
+        "/usr/local/bin/ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-i",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/story-002/standard.mkv",
+        "-map",
+        "0:v:0",
+        "-vf",
+        "select=eq(n\\,291),scale=320:180:flags=bilinear:in_color_matrix=bt709",
+        "-frames:v",
+        "1",
+        "-threads",
+        "2",
+        "-f",
+        "rawvideo",
+        "-pix_fmt",
+        "rgba",
+        "-"
+      ],
+      "pass": true
+    },
+    {
+      "fixture": "long-gop.mp4",
+      "target_s": 9.125,
+      "ordinal": 0,
+      "header": {
+        "version": 1,
+        "ok": true,
+        "requested_us": 9125000,
+        "actual_us": 9125000,
+        "width": 320,
+        "height": 180,
+        "channels": 4,
+        "payload_bytes": 230400,
+        "video_ordinal": 0,
+        "decoded_frames": 220,
+        "timeline_origin_us": 0
+      },
+      "elapsed_ms": 60.35504199098796,
+      "peak_sampled_rss_kib": 17568,
+      "peak_sampled_cpu_percent": 0.0,
+      "payload_sha256": "bbc5efea7e72d9eb253f1086d2ef629ef45073ac366195e39951885c8acb27c1",
+      "independent_frame_index": 219,
+      "independent_normalized_s": 9.125,
+      "reference_mean_absolute_rgb_error": 1.0122800925925926,
+      "reference_command": [
+        "/usr/local/bin/ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-i",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/story-002/long-gop.mp4",
+        "-map",
+        "0:v:0",
+        "-vf",
+        "select=eq(n\\,219),scale=320:180:flags=bilinear:in_color_matrix=bt601",
+        "-frames:v",
+        "1",
+        "-threads",
+        "2",
+        "-f",
+        "rawvideo",
+        "-pix_fmt",
+        "rgba",
+        "-"
+      ],
+      "pass": true
+    },
+    {
+      "fixture": "vfr.mkv",
+      "target_s": 8.25,
+      "ordinal": 0,
+      "header": {
+        "version": 1,
+        "ok": true,
+        "requested_us": 8250000,
+        "actual_us": 8250000,
+        "width": 320,
+        "height": 180,
+        "channels": 4,
+        "payload_bytes": 230400,
+        "video_ordinal": 0,
+        "decoded_frames": 91,
+        "timeline_origin_us": 0
+      },
+      "elapsed_ms": 30.775916995480657,
+      "peak_sampled_rss_kib": 13040,
+      "peak_sampled_cpu_percent": 0.0,
+      "payload_sha256": "ea042beb2bbf23ac8f1726d1140836f41414a3bcdc072e2d75c10eca51e3ca5d",
+      "independent_frame_index": 90,
+      "independent_normalized_s": 8.25,
+      "reference_mean_absolute_rgb_error": 1.0153472222222222,
+      "reference_command": [
+        "/usr/local/bin/ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-i",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/story-002/vfr.mkv",
+        "-map",
+        "0:v:0",
+        "-vf",
+        "select=eq(n\\,90),scale=320:180:flags=bilinear:in_color_matrix=bt601",
+        "-frames:v",
+        "1",
+        "-threads",
+        "2",
+        "-f",
+        "rawvideo",
+        "-pix_fmt",
+        "rgba",
+        "-"
+      ],
+      "pass": true
+    },
+    {
+      "fixture": "nonzero.mkv",
+      "target_s": 6.125,
+      "ordinal": 0,
+      "header": {
+        "version": 1,
+        "ok": true,
+        "requested_us": 6125000,
+        "actual_us": 6125000,
+        "width": 320,
+        "height": 180,
+        "channels": 4,
+        "payload_bytes": 230400,
+        "video_ordinal": 0,
+        "decoded_frames": 148,
+        "timeline_origin_us": 5000000
+      },
+      "elapsed_ms": 47.23379202187061,
+      "peak_sampled_rss_kib": 16688,
+      "peak_sampled_cpu_percent": 0.0,
+      "payload_sha256": "814649e40a8b3e83437358b7b45b736faa907ffd0c56f1d6d14ac80c542e059f",
+      "independent_frame_index": 147,
+      "independent_normalized_s": 6.125,
+      "reference_mean_absolute_rgb_error": 0.9813831018518518,
+      "reference_command": [
+        "/usr/local/bin/ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-i",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/story-002/nonzero.mkv",
+        "-map",
+        "0:v:0",
+        "-vf",
+        "select=eq(n\\,147),scale=320:180:flags=bilinear:in_color_matrix=bt601",
+        "-frames:v",
+        "1",
+        "-threads",
+        "2",
+        "-f",
+        "rawvideo",
+        "-pix_fmt",
+        "rgba",
+        "-"
+      ],
+      "pass": true
+    },
+    {
+      "fixture": "edit-offset.mp4",
+      "target_s": 5.125,
+      "ordinal": 0,
+      "header": {
+        "version": 1,
+        "ok": true,
+        "requested_us": 5125000,
+        "actual_us": 5125000,
+        "width": 320,
+        "height": 180,
+        "channels": 4,
+        "payload_bytes": 230400,
+        "video_ordinal": 0,
+        "decoded_frames": 76,
+        "timeline_origin_us": 0
+      },
+      "elapsed_ms": 32.74175000842661,
+      "peak_sampled_rss_kib": 17632,
+      "peak_sampled_cpu_percent": 0.0,
+      "payload_sha256": "e74ac80d74206ad1edebac9bcfb0960e4bb5df2e57d4a873736000f67e37f523",
+      "independent_frame_index": 75,
+      "independent_normalized_s": 5.125,
+      "reference_mean_absolute_rgb_error": 1.0344328703703705,
+      "reference_command": [
+        "/usr/local/bin/ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-i",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/story-002/edit-offset.mp4",
+        "-map",
+        "0:v:0",
+        "-vf",
+        "select=eq(n\\,75),scale=320:180:flags=bilinear:in_color_matrix=bt601",
+        "-frames:v",
+        "1",
+        "-threads",
+        "2",
+        "-f",
+        "rawvideo",
+        "-pix_fmt",
+        "rgba",
+        "-"
+      ],
+      "pass": true
+    },
+    {
+      "fixture": "rotation.mp4",
+      "target_s": 4.125,
+      "ordinal": 0,
+      "header": {
+        "version": 1,
+        "ok": true,
+        "requested_us": 4125000,
+        "actual_us": 4125000,
+        "width": 101,
+        "height": 180,
+        "channels": 4,
+        "payload_bytes": 72720,
+        "video_ordinal": 0,
+        "decoded_frames": 100,
+        "timeline_origin_us": 0
+      },
+      "elapsed_ms": 47.10245889145881,
+      "peak_sampled_rss_kib": 16480,
+      "peak_sampled_cpu_percent": 0.0,
+      "payload_sha256": "fdca20426f3619dc9d315e26afeceb1e1c04d90154b4f6c491870743ac29aa3a",
+      "independent_frame_index": 99,
+      "independent_normalized_s": 4.125,
+      "reference_mean_absolute_rgb_error": 3.348294829482948,
+      "reference_command": [
+        "/usr/local/bin/ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-i",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/story-002/rotation.mp4",
+        "-map",
+        "0:v:0",
+        "-vf",
+        "select=eq(n\\,99),scale=101:180:flags=bilinear:in_color_matrix=bt601",
+        "-frames:v",
+        "1",
+        "-threads",
+        "2",
+        "-f",
+        "rawvideo",
+        "-pix_fmt",
+        "rgba",
+        "-"
+      ],
+      "pass": true
+    },
+    {
+      "fixture": "sar.mp4",
+      "target_s": 3.125,
+      "ordinal": 0,
+      "header": {
+        "version": 1,
+        "ok": true,
+        "requested_us": 3125000,
+        "actual_us": 3125000,
+        "width": 320,
+        "height": 90,
+        "channels": 4,
+        "payload_bytes": 115200,
+        "video_ordinal": 0,
+        "decoded_frames": 76,
+        "timeline_origin_us": 0
+      },
+      "elapsed_ms": 44.12891704123467,
+      "peak_sampled_rss_kib": 13984,
+      "peak_sampled_cpu_percent": 0.0,
+      "payload_sha256": "8591bbadb522562ea0f8156b31cc0cec92642f2a74841514724098fb5d9b0878",
+      "independent_frame_index": 75,
+      "independent_normalized_s": 3.125,
+      "reference_mean_absolute_rgb_error": 0.770162037037037,
+      "reference_command": [
+        "/usr/local/bin/ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-i",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/story-002/sar.mp4",
+        "-map",
+        "0:v:0",
+        "-vf",
+        "select=eq(n\\,75),scale=320:90:flags=bilinear:in_color_matrix=bt601",
+        "-frames:v",
+        "1",
+        "-threads",
+        "2",
+        "-f",
+        "rawvideo",
+        "-pix_fmt",
+        "rgba",
+        "-"
+      ],
+      "pass": true
+    },
+    {
+      "fixture": "two-tracks.mkv",
+      "target_s": 4.0,
+      "ordinal": 0,
+      "header": {
+        "version": 1,
+        "ok": true,
+        "requested_us": 4000000,
+        "actual_us": 4000000,
+        "width": 320,
+        "height": 180,
+        "channels": 4,
+        "payload_bytes": 230400,
+        "video_ordinal": 0,
+        "decoded_frames": 97,
+        "timeline_origin_us": 0
+      },
+      "elapsed_ms": 17.765416065230966,
+      "peak_sampled_rss_kib": 2032,
+      "peak_sampled_cpu_percent": 0.0,
+      "payload_sha256": "d6e4fa051e063ccce3f7eb0b5d61cef12e94a88d6adaa80d9539a3f623aee914",
+      "independent_frame_index": 96,
+      "independent_normalized_s": 4.0,
+      "reference_mean_absolute_rgb_error": 0.9888888888888889,
+      "reference_command": [
+        "/usr/local/bin/ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-i",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/story-002/two-tracks.mkv",
+        "-map",
+        "0:v:0",
+        "-vf",
+        "select=eq(n\\,96),scale=320:180:flags=bilinear:in_color_matrix=bt601",
+        "-frames:v",
+        "1",
+        "-threads",
+        "2",
+        "-f",
+        "rawvideo",
+        "-pix_fmt",
+        "rgba",
+        "-"
+      ],
+      "pass": true
+    },
+    {
+      "fixture": "two-tracks.mkv",
+      "target_s": 4.0,
+      "ordinal": 1,
+      "header": {
+        "version": 1,
+        "ok": true,
+        "requested_us": 4000000,
+        "actual_us": 4000000,
+        "width": 320,
+        "height": 180,
+        "channels": 4,
+        "payload_bytes": 230400,
+        "video_ordinal": 1,
+        "decoded_frames": 97,
+        "timeline_origin_us": 0
+      },
+      "elapsed_ms": 34.043708932586014,
+      "peak_sampled_rss_kib": 1024,
+      "peak_sampled_cpu_percent": 0.0,
+      "payload_sha256": "62bed08f4af765d15f6c1c1d746338062e6342486681e1396045df0ef49d3a0c",
+      "independent_frame_index": 96,
+      "independent_normalized_s": 4.0,
+      "reference_mean_absolute_rgb_error": 0.9888888888888889,
+      "reference_command": [
+        "/usr/local/bin/ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-i",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/story-002/two-tracks.mkv",
+        "-map",
+        "0:v:1",
+        "-vf",
+        "select=eq(n\\,96),scale=320:180:flags=bilinear:in_color_matrix=bt601",
+        "-frames:v",
+        "1",
+        "-threads",
+        "2",
+        "-f",
+        "rawvideo",
+        "-pix_fmt",
+        "rgba",
+        "-"
+      ],
+      "pass": true
+    },
+    {
+      "fixture": "short-4k.mp4",
+      "target_s": 1.25,
+      "ordinal": 0,
+      "header": {
+        "version": 1,
+        "ok": true,
+        "requested_us": 1250000,
+        "actual_us": 1250000,
+        "width": 320,
+        "height": 180,
+        "channels": 4,
+        "payload_bytes": 230400,
+        "video_ordinal": 0,
+        "decoded_frames": 16,
+        "timeline_origin_us": 0
+      },
+      "elapsed_ms": 118.84133401326835,
+      "peak_sampled_rss_kib": 63008,
+      "peak_sampled_cpu_percent": 5.0,
+      "payload_sha256": "47a6b26851c0f53747268a96140b55e89e00f074ca78a9e078f1a30a5151ca21",
+      "independent_frame_index": 15,
+      "independent_normalized_s": 1.25,
+      "reference_mean_absolute_rgb_error": 0.4023321759259259,
+      "reference_command": [
+        "/usr/local/bin/ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-i",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/story-002/short-4k.mp4",
+        "-map",
+        "0:v:0",
+        "-vf",
+        "select=eq(n\\,15),scale=320:180:flags=bilinear:in_color_matrix=bt709",
+        "-frames:v",
+        "1",
+        "-threads",
+        "2",
+        "-f",
+        "rawvideo",
+        "-pix_fmt",
+        "rgba",
+        "-"
+      ],
+      "pass": true
+    },
+    {
+      "fixture": "five-minute.mp4",
+      "target_s": 244.25,
+      "ordinal": 0,
+      "header": {
+        "version": 1,
+        "ok": true,
+        "requested_us": 244250000,
+        "actual_us": 244250000,
+        "width": 320,
+        "height": 180,
+        "channels": 4,
+        "payload_bytes": 230400,
+        "video_ordinal": 0,
+        "decoded_frames": 532,
+        "timeline_origin_us": 0
+      },
+      "elapsed_ms": 62.725208001211286,
+      "peak_sampled_rss_kib": 13168,
+      "peak_sampled_cpu_percent": 0.0,
+      "payload_sha256": "b0323690ecc415fa326824b471187f96c975d818544ebe20823b012ba76328f6",
+      "independent_frame_index": 2931,
+      "independent_normalized_s": 244.25,
+      "reference_mean_absolute_rgb_error": 0.4485763888888889,
+      "reference_command": [
+        "/usr/local/bin/ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-i",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/story-002/five-minute.mp4",
+        "-map",
+        "0:v:0",
+        "-vf",
+        "select=eq(n\\,2931),scale=320:180:flags=bilinear:in_color_matrix=bt601",
+        "-frames:v",
+        "1",
+        "-threads",
+        "2",
+        "-f",
+        "rawvideo",
+        "-pix_fmt",
+        "rgba",
+        "-"
+      ],
+      "pass": true
+    },
+    {
+      "fixture": "standard.mp4",
+      "target_s": 0.0,
+      "ordinal": 0,
+      "header": {
+        "version": 1,
+        "ok": true,
+        "requested_us": 0,
+        "actual_us": 0,
+        "width": 320,
+        "height": 180,
+        "channels": 4,
+        "payload_bytes": 230400,
+        "video_ordinal": 0,
+        "decoded_frames": 1,
+        "timeline_origin_us": 0
+      },
+      "elapsed_ms": 31.71274997293949,
+      "peak_sampled_rss_kib": 4832,
+      "peak_sampled_cpu_percent": 0.0,
+      "payload_sha256": "ddb1bb58a980f8d37971e71d77d22648ad049765d54113d844bf88c574d68da6",
+      "independent_frame_index": 0,
+      "independent_normalized_s": 0.0,
+      "reference_mean_absolute_rgb_error": 0.2462037037037037,
+      "reference_command": [
+        "/usr/local/bin/ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-i",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/story-002/standard.mp4",
+        "-map",
+        "0:v:0",
+        "-vf",
+        "select=eq(n\\,0),scale=320:180:flags=bilinear:in_color_matrix=bt709",
+        "-frames:v",
+        "1",
+        "-threads",
+        "2",
+        "-f",
+        "rawvideo",
+        "-pix_fmt",
+        "rgba",
+        "-"
+      ],
+      "pass": true
+    },
+    {
+      "fixture": "standard.mp4",
+      "target_s": 60.0,
+      "ordinal": 0,
+      "header": {
+        "version": 1,
+        "ok": true,
+        "requested_us": 60000000,
+        "actual_us": 59958333,
+        "width": 320,
+        "height": 180,
+        "channels": 4,
+        "payload_bytes": 230400,
+        "video_ordinal": 0,
+        "decoded_frames": 48,
+        "timeline_origin_us": 0
+      },
+      "elapsed_ms": 77.99287501256913,
+      "peak_sampled_rss_kib": 24640,
+      "peak_sampled_cpu_percent": 16.3,
+      "payload_sha256": "de19648318162d8a2991e1a1b3aa07d661f9f7231156202cd2ce9df20956b6e6",
+      "independent_frame_index": 1439,
+      "independent_normalized_s": 59.958333,
+      "reference_mean_absolute_rgb_error": 0.25492476851851853,
+      "reference_command": [
+        "/usr/local/bin/ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-i",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/story-002/standard.mp4",
+        "-map",
+        "0:v:0",
+        "-vf",
+        "select=eq(n\\,1439),scale=320:180:flags=bilinear:in_color_matrix=bt709",
+        "-frames:v",
+        "1",
+        "-threads",
+        "2",
+        "-f",
+        "rawvideo",
+        "-pix_fmt",
+        "rgba",
+        "-"
+      ],
+      "pass": true
+    },
+    {
+      "fixture": "audio-only.m4a",
+      "ordinal": 0,
+      "expected": "error",
+      "header": {
+        "version": 1,
+        "ok": false,
+        "error": "track_unavailable"
+      },
+      "elapsed_ms": 31.00341698154807,
+      "peak_sampled_rss_kib": 2208,
+      "peak_sampled_cpu_percent": 0.0,
+      "payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "pass": true
+    },
+    {
+      "fixture": "corrupt.mp4",
+      "ordinal": 0,
+      "expected": "error",
+      "header": {
+        "version": 1,
+        "ok": false,
+        "error": "unsupported_input"
+      },
+      "elapsed_ms": 31.267415964975953,
+      "peak_sampled_rss_kib": 1040,
+      "peak_sampled_cpu_percent": 0.0,
+      "payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "pass": true
+    },
+    {
+      "fixture": "truncated.mp4",
+      "ordinal": 0,
+      "expected": "error",
+      "header": {
+        "version": 1,
+        "ok": false,
+        "error": "unsupported_input"
+      },
+      "elapsed_ms": 32.31908299494535,
+      "peak_sampled_rss_kib": 5152,
+      "peak_sampled_cpu_percent": 0.0,
+      "payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "pass": true
+    },
+    {
+      "fixture": "hdr-tagged.mp4",
+      "ordinal": 0,
+      "expected": "error",
+      "header": {
+        "version": 1,
+        "ok": false,
+        "error": "unsupported_color"
+      },
+      "elapsed_ms": 33.22766697965562,
+      "peak_sampled_rss_kib": 288,
+      "peak_sampled_cpu_percent": 0.0,
+      "payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "pass": true
+    },
+    {
+      "fixture": "two-tracks.mkv",
+      "ordinal": 2,
+      "expected": "error",
+      "header": {
+        "version": 1,
+        "ok": false,
+        "error": "track_unavailable"
+      },
+      "elapsed_ms": 33.07179198600352,
+      "peak_sampled_rss_kib": 5152,
+      "peak_sampled_cpu_percent": 0.0,
+      "payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "pass": true
+    },
+    {
+      "fixture": "missing.mp4",
+      "ordinal": 0,
+      "expected": "error",
+      "header": {
+        "version": 1,
+        "ok": false,
+        "error": "invalid_input"
+      },
+      "elapsed_ms": 18.303665914572775,
+      "peak_sampled_rss_kib": 976,
+      "peak_sampled_cpu_percent": 0.0,
+      "payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "pass": true
+    },
+    {
+      "fixture": ".",
+      "ordinal": 0,
+      "expected": "error",
+      "header": {
+        "version": 1,
+        "ok": false,
+        "error": "invalid_input"
+      },
+      "elapsed_ms": 22.307166014797986,
+      "peak_sampled_rss_kib": 5072,
+      "peak_sampled_cpu_percent": 0.0,
+      "payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "pass": true
+    },
+    {
+      "fixture": "edit-offset.mp4",
+      "target_s": 0.0,
+      "expected": "error",
+      "pass": true,
+      "header": {
+        "version": 1,
+        "ok": false,
+        "error": "timestamp_mismatch"
+      },
+      "elapsed_ms": 28.360167052596807,
+      "peak_sampled_rss_kib": 4624,
+      "peak_sampled_cpu_percent": 0.0,
+      "payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "benchmarks": [
+    {
+      "fixture": "standard.mp4",
+      "attempted": 100,
+      "success": 100,
+      "failures": [],
+      "samples": [
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 0,
+            "actual_us": 0,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 32.28108293842524,
+          "peak_sampled_rss_kib": 3520,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "ddb1bb58a980f8d37971e71d77d22648ad049765d54113d844bf88c574d68da6"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 18500000,
+            "actual_us": 18500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 13,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 31.360208056867123,
+          "peak_sampled_rss_kib": 24528,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "ce566b894bd1fb2dc8db7a93b7edd19c0ee23dcac079d838acf39c5271b8805c"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 37000000,
+            "actual_us": 37000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 45.64754106104374,
+          "peak_sampled_rss_kib": 24592,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "d65b702c590f1857d546f2e543910cdbcd3e8552da2e7ffc24b409b01a52f756"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 55500000,
+            "actual_us": 55500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 73.83987493813038,
+          "peak_sampled_rss_kib": 25328,
+          "peak_sampled_cpu_percent": 8.0,
+          "payload_sha256": "a22f971a09c7bab233d20e3b08cf231ae1189f00eb4ff847cd3e65c4a3406bd6"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 14500000,
+            "actual_us": 14500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 13,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 33.336541964672506,
+          "peak_sampled_rss_kib": 24688,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "b705bc17607fe14e954d6472b754e06b4b9eea2779e64c8cda00d8e08546ed75"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 33000000,
+            "actual_us": 33000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 46.782499994151294,
+          "peak_sampled_rss_kib": 26928,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "2e1d53a633caae6f4aa0ff015bcc2d9b04e1ce08e43ae800373fe8f682801fc6"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 51500000,
+            "actual_us": 51500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 77.5091249961406,
+          "peak_sampled_rss_kib": 24608,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "e9e1d0f08bb8a6fa62079153691632849c699510566405d2bf46d05eafa3b6c5"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 10500000,
+            "actual_us": 10500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 13,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 33.85445801541209,
+          "peak_sampled_rss_kib": 24608,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "3c377b6a78a4814aeb087dff1dac9dfd7755f2112a58d2e4fc06e8b1cb020dd3"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 29000000,
+            "actual_us": 29000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 49.51949999667704,
+          "peak_sampled_rss_kib": 24560,
+          "peak_sampled_cpu_percent": 2.7,
+          "payload_sha256": "d695b4c63c3872c64c50111e439a402d8c1533eae17567c5541f947c82905561"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 47500000,
+            "actual_us": 47500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 80.5865409784019,
+          "peak_sampled_rss_kib": 25232,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "bfbe9c670d42beb962c0d3ff69e5bd7ebc8383733b1c5ac777f7a7b80a95ce9f"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 6500000,
+            "actual_us": 6500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 13,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 51.48179200477898,
+          "peak_sampled_rss_kib": 24560,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "b7273aaab03cc8c3bff0bf63c8c6210b0e100231dddd99b98fd789ba54e04801"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 25000000,
+            "actual_us": 25000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 47.37675003707409,
+          "peak_sampled_rss_kib": 24608,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "88c5516ce98250f38fa4b5a9d21c9176625550c7721951f1dc766bf6d2bbb620"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 43500000,
+            "actual_us": 43500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 78.55862495489419,
+          "peak_sampled_rss_kib": 25808,
+          "peak_sampled_cpu_percent": 9.3,
+          "payload_sha256": "cf768019a70da346386458610f21b09212584dc863961dacda8714f4ceaf964b"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 2500000,
+            "actual_us": 2500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 13,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 30.901791993528605,
+          "peak_sampled_rss_kib": 24528,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "ae0f47abf3a5a2392a44ecf699e5670429941983b745222ffbe178efd9218b64"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 21000000,
+            "actual_us": 21000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 48.02945803385228,
+          "peak_sampled_rss_kib": 26864,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "d33f46f2095ee6de62bf361a2ab8bae818047dc6abc4a07b40421e2b90d70c38"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 39500000,
+            "actual_us": 39500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 77.58754107635468,
+          "peak_sampled_rss_kib": 25184,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "6cc81bf8a4b25c7139bb24e159ea7359f238e9ab26b547afc125df8a86b609a7"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 58000000,
+            "actual_us": 58000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 31.958041014149785,
+          "peak_sampled_rss_kib": 5136,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "9e4d65a4d7e87b0ab602c2122e542e8eac6e6ef2b771418d0a5f1cdeefc94b7d"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 17000000,
+            "actual_us": 17000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 47.54350008442998,
+          "peak_sampled_rss_kib": 24688,
+          "peak_sampled_cpu_percent": 3.2,
+          "payload_sha256": "a6d0f514b8fc063b5d995df13853a6854e67003495aae7f4a070a48289884c0a"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 35500000,
+            "actual_us": 35500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 77.83408393152058,
+          "peak_sampled_rss_kib": 25072,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "7815c27291b72a24fc988fc90c23bf59541cd2dcd3a7ad805bce7c6d223b7ccd"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 54000000,
+            "actual_us": 54000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 29.695458943024278,
+          "peak_sampled_rss_kib": 1728,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "23ea96342cf2b7117071019e987061a0dbe47401a9f2ed8ddd79deef697ae34a"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 13000000,
+            "actual_us": 13000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 45.229958021081984,
+          "peak_sampled_rss_kib": 24608,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "1b1f39bdc38bb837579d997a521ae803165be66b127e961fd2f832d5482cd00d"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 31500000,
+            "actual_us": 31500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 78.70724995154887,
+          "peak_sampled_rss_kib": 24704,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "dd3405f261a598163fb4005f308dba2f7ae7816f657b7fb0b2e880d21e9f310e"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 50000000,
+            "actual_us": 50000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 32.084790989756584,
+          "peak_sampled_rss_kib": 160,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "db67a0eafdc57ec1854ecfc8a08d0d762450597d3af42960b36dcc34864a911c"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 9000000,
+            "actual_us": 9000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 48.10737492516637,
+          "peak_sampled_rss_kib": 25664,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "d0eb6732099b2efc1fb9f2bd8583597731888d45f92355e4ee89be3eb4dd256f"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 27500000,
+            "actual_us": 27500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 76.33562502451241,
+          "peak_sampled_rss_kib": 24608,
+          "peak_sampled_cpu_percent": 7.3,
+          "payload_sha256": "c8f63eae4a205e8605fae5731d9159d3d47c13db1e4c8b00790879a8a7dfc576"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 46000000,
+            "actual_us": 46000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 17.33299996703863,
+          "peak_sampled_rss_kib": 1040,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "f301a1ee7c8e0be6d890725ad9ea0c1b965e521a0b8a26a3872a3b6fe1aaeae3"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 5000000,
+            "actual_us": 5000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 45.95295793842524,
+          "peak_sampled_rss_kib": 24688,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "8777ce85656babb926433b4ccbdad57179e6d67daf5df279de376ead12f6e7f7"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 23500000,
+            "actual_us": 23500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 80.70920803584158,
+          "peak_sampled_rss_kib": 24752,
+          "peak_sampled_cpu_percent": 2.9,
+          "payload_sha256": "1f67f30ce2944c3aca5c99e44aa207d5cfd60e08c5cde93240e6df2f7bf119ed"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 42000000,
+            "actual_us": 42000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 33.71262503787875,
+          "peak_sampled_rss_kib": 4640,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "eee8b8d6e133e8ef28067b96750ffdf784cbbe030fa89693b529a93e0596510f"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 1000000,
+            "actual_us": 1000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 48.33062505349517,
+          "peak_sampled_rss_kib": 24416,
+          "peak_sampled_cpu_percent": 5.4,
+          "payload_sha256": "db88589d9b771ea2b24d8bfed7f4254577f29839cd3e9a1d40524d87e39b66e1"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 19500000,
+            "actual_us": 19500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 78.90283304732293,
+          "peak_sampled_rss_kib": 24624,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "e62cfc79cab65981f91423b1b8df78ed5641e5db9e26b07874408abd4c04073e"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 38000000,
+            "actual_us": 38000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 31.388833071105182,
+          "peak_sampled_rss_kib": 1344,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "a276077bbdc4ab067e71d7e68bef71e425466a74d03a78b833f95f4933e6e642"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 56500000,
+            "actual_us": 56500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 13,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 32.235875027254224,
+          "peak_sampled_rss_kib": 24464,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "456acd6165ac1e91032b8e3e42586da06ff77d3c33ba47fa7015cde7c1dbe0ca"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 15500000,
+            "actual_us": 15500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 74.97870898805559,
+          "peak_sampled_rss_kib": 24592,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "5dd2af84a5aa1412d21718f2d77af56898258ad8765e137bbff4cbc7b5d1c5b4"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 34000000,
+            "actual_us": 34000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 33.32837496418506,
+          "peak_sampled_rss_kib": 832,
+          "peak_sampled_cpu_percent": 0.2,
+          "payload_sha256": "a166700b6a0b7a1128e938dd45c99cd9c56ebf6363855035da4eb5e93540a06e"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 52500000,
+            "actual_us": 52500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 13,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 31.85429109726101,
+          "peak_sampled_rss_kib": 24384,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "a661ba818d1ca25a63628691007a824a6865674e6a6ed11846f745ebb6cb055d"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 11500000,
+            "actual_us": 11500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 64.34220797382295,
+          "peak_sampled_rss_kib": 24720,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "45a3393ad22bc943f3e2518d98c38abe011033f28ea85b141517fa56fecd3d27"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 30000000,
+            "actual_us": 30000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 31.576500041410327,
+          "peak_sampled_rss_kib": 5136,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "4e57283b5fc568b21c03281c7fda9ab788f2fc359c99de7833c3ccc6f2cdbbf5"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 48500000,
+            "actual_us": 48500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 13,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 31.224709004163742,
+          "peak_sampled_rss_kib": 24496,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "8fbdb7664cb7f91df1b1cd194de3bc99b5fe6c90d811bdecac19fba61682d572"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 7500000,
+            "actual_us": 7500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 61.9884169427678,
+          "peak_sampled_rss_kib": 24736,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "000e228a1eeb538994e6c673bb11a41bf680384d04f0a6a17c334c09a4b81150"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 26000000,
+            "actual_us": 26000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 30.903249979019165,
+          "peak_sampled_rss_kib": 512,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "9255d7834b364ae3c1e00d951796d2d6e16029762901f6e207074f84669f740e"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 44500000,
+            "actual_us": 44500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 13,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 45.25804100558162,
+          "peak_sampled_rss_kib": 24608,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "5c1d1c27713a0792d21561289cab7516e87c1dfff3db308fb8745f0568baadef"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 3500000,
+            "actual_us": 3500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 79.12541693076491,
+          "peak_sampled_rss_kib": 24720,
+          "peak_sampled_cpu_percent": 14.2,
+          "payload_sha256": "e2ac812c3a6e2b5aacacdaefad5f285f09390bbf48edd984cb06d0a9fc81facb"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 22000000,
+            "actual_us": 22000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 18.176708952523768,
+          "peak_sampled_rss_kib": 5232,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "d7fd3a22b2462fafbff9e3991fdc731b74a49123d5720cfd9b9f8ace0fdcb5d5"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 40500000,
+            "actual_us": 40500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 13,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 39.10570906009525,
+          "peak_sampled_rss_kib": 24672,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "2a4115099ebcdf7066b781c10452eefb5f42574f38fcd8c874555dab53367d2c"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 59000000,
+            "actual_us": 59000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 70.39162504952401,
+          "peak_sampled_rss_kib": 26832,
+          "peak_sampled_cpu_percent": 8.9,
+          "payload_sha256": "903622a1601946aa0002986438b4a3fd689a6911b42675c96f83248c67da2ec1"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 18000000,
+            "actual_us": 18000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 38.539125001989305,
+          "peak_sampled_rss_kib": 5872,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "b477ac670f2df63b2ba64be010bf26d7ee6dcec7dbb165c7bd335846aef53d5b"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 36500000,
+            "actual_us": 36500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 13,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 36.00029204972088,
+          "peak_sampled_rss_kib": 24544,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "e4eb740d2a98254a28e0ed7c7f8bf37763644813156eb02aa0373c8e351dc22a"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 55000000,
+            "actual_us": 55000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 65.98291709087789,
+          "peak_sampled_rss_kib": 24784,
+          "peak_sampled_cpu_percent": 2.5,
+          "payload_sha256": "9d4c1b7580ac8dd6a27bed846deaf52b09322eb62ef50b1436c32480e7fd475d"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 14000000,
+            "actual_us": 14000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 38.91754196956754,
+          "peak_sampled_rss_kib": 1264,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "1473f402085c2a78b8ddc424782e2c830ef28d908a1c660c1bd146964ad53071"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 32500000,
+            "actual_us": 32500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 13,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 41.573667083866894,
+          "peak_sampled_rss_kib": 26784,
+          "peak_sampled_cpu_percent": 6.9,
+          "payload_sha256": "5f3683fc5fc711274be7449702a88fe94744e81e0482a1f4867445c58b1e7290"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 51000000,
+            "actual_us": 51000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 64.74741699639708,
+          "peak_sampled_rss_kib": 26816,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "7ce53eef43d676459fbbe3fc150660f5b6769032c224a95f6c57d50ea5afdf4a"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 10000000,
+            "actual_us": 10000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 34.253249992616475,
+          "peak_sampled_rss_kib": 3056,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "409a2824172c4c43f958e107c9dd9341270a9ddedf44d7ff3769bbd1845cc61b"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 28500000,
+            "actual_us": 28500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 13,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 42.556250002235174,
+          "peak_sampled_rss_kib": 25360,
+          "peak_sampled_cpu_percent": 3.1,
+          "payload_sha256": "578c2bf589b714d8eb2dcdead922b3ba245d4d28a905a6b6234ee54c3aa3e219"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 47000000,
+            "actual_us": 47000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 69.68525005504489,
+          "peak_sampled_rss_kib": 22928,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "e54d7ef369b7cb806aae0f9850fbbc14d0665cba6171dc3ea480451121e31be8"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 6000000,
+            "actual_us": 6000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 41.04566702153534,
+          "peak_sampled_rss_kib": 6464,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "daecbf977df2a248ac5206f4476c268321064308692cf89d36b4a1a14b4929f6"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 24500000,
+            "actual_us": 24500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 13,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 54.81804197188467,
+          "peak_sampled_rss_kib": 27888,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "1a63111c1e570ac2cce3d045478e395a9511e5b9c6c907ea96870c6ce8a26b4a"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 43000000,
+            "actual_us": 43000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 72.43104104418308,
+          "peak_sampled_rss_kib": 24672,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "c238174c214263deec7053dca2b9be5a2860217da82f277e91cbf5cefa7904c0"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 2000000,
+            "actual_us": 2000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 35.07541597355157,
+          "peak_sampled_rss_kib": 5664,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "84e46007b61f5439027823eaca026b82ae9cb08a2526f926f09dd81131e81da2"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 20500000,
+            "actual_us": 20500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 13,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 34.37799995299429,
+          "peak_sampled_rss_kib": 24640,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "e42dec01f42beb6bef062c54d5874f4073482b31f39fa2cdf2604a274f5f72b8"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 39000000,
+            "actual_us": 39000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 58.55195806361735,
+          "peak_sampled_rss_kib": 25664,
+          "peak_sampled_cpu_percent": 10.0,
+          "payload_sha256": "f29e344500dcd9c6d73f383becde652edce84f2402166942be4896c07d9ba2a9"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 57500000,
+            "actual_us": 57500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 79.80083301663399,
+          "peak_sampled_rss_kib": 24528,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "b017abc59ea1f0a65d57ad88fa50a6cb459885df63bf1e2f642b16f2ef175979"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 16500000,
+            "actual_us": 16500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 13,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 33.19016704335809,
+          "peak_sampled_rss_kib": 24768,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "d513cdda9b333c184928b66155925c655e61252f494c55708219c38b4bc3a87e"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 35000000,
+            "actual_us": 35000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 46.63241596426815,
+          "peak_sampled_rss_kib": 24720,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "78d0bbd3f81d9e3512350c05dca09eb13349c56a1cc8ad421946e442179da0ba"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 53500000,
+            "actual_us": 53500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 63.79299995023757,
+          "peak_sampled_rss_kib": 24688,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "fd1f25d3a967ac3f9a3872cf584df2be723650d7ab27024532f21b6893d1a312"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 12500000,
+            "actual_us": 12500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 13,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 32.878207974135876,
+          "peak_sampled_rss_kib": 24384,
+          "peak_sampled_cpu_percent": 0.7,
+          "payload_sha256": "510175c951ba068c8fa06f05c6f69f7587cd7555e53295b88123f74c17c0f2cc"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 31000000,
+            "actual_us": 31000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 45.83937500137836,
+          "peak_sampled_rss_kib": 24608,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "1eb2dc018d26d8dd22e301330bb19e7b4a06488942f9d149d222e070a696efcb"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 49500000,
+            "actual_us": 49500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 62.769541051238775,
+          "peak_sampled_rss_kib": 24688,
+          "peak_sampled_cpu_percent": 14.8,
+          "payload_sha256": "c8882e3827b7349447931de797e53b3bba1df55449d4efb2be3ea72566da9174"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 8500000,
+            "actual_us": 8500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 13,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 45.47604196704924,
+          "peak_sampled_rss_kib": 24528,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "ab4312abfbafb71be181a7c1e13a9eb805e8336a69946caaea1786d57639304a"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 27000000,
+            "actual_us": 27000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 61.67679198551923,
+          "peak_sampled_rss_kib": 25152,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "1655f142c4c2e8e2dccf4c6c353151d561071f3ae0d5d85229e9e3297af6382e"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 45500000,
+            "actual_us": 45500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 78.69516697246581,
+          "peak_sampled_rss_kib": 24736,
+          "peak_sampled_cpu_percent": 0.4,
+          "payload_sha256": "2b2fffb0cedf38f7c21a9756afd483a73f4ab7bb988bbf62ed5df3f411c0c588"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 4500000,
+            "actual_us": 4500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 13,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 30.60475003439933,
+          "peak_sampled_rss_kib": 24464,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "85dbb3a8f0712bbdd58a4f1359af121360bbf15fd9e6eed931ea132e6847c9a5"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 23000000,
+            "actual_us": 23000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 63.29033395741135,
+          "peak_sampled_rss_kib": 24640,
+          "peak_sampled_cpu_percent": 5.1,
+          "payload_sha256": "ca5ec23431b49864ec4356c09ca9e4157f672281f1d3568ec43b23304753e1f4"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 41500000,
+            "actual_us": 41500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 79.41237499471754,
+          "peak_sampled_rss_kib": 24560,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "9055632fea46ac7d3098ff9e9e2dad4fdba155f2b94e6039b5d7ce860f589bc1"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 500000,
+            "actual_us": 500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 13,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 33.15283393021673,
+          "peak_sampled_rss_kib": 24288,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "a23780b63b27ca4c62e6e93526c17aed39c425058362f74a687b1712a889c35f"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 19000000,
+            "actual_us": 19000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 63.494417001493275,
+          "peak_sampled_rss_kib": 25184,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "8ff3cbfc2e34762e11c3448fdf9a75f4a1ff1bf1bc41ba763b56dcdbe874ce65"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 37500000,
+            "actual_us": 37500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 64.23054204788059,
+          "peak_sampled_rss_kib": 24768,
+          "peak_sampled_cpu_percent": 9.9,
+          "payload_sha256": "b753b97d725c7d8b825a879d584bd9d6acf9bb4a248d3d3b66a87db29b517a7d"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 56000000,
+            "actual_us": 56000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 33.15549995750189,
+          "peak_sampled_rss_kib": 1392,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "4c82a9c7e42486fba94b5923af056e188d43bcc566ac26857b1f9620a2c55699"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 15000000,
+            "actual_us": 15000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 60.97687501460314,
+          "peak_sampled_rss_kib": 25232,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "204567461bd79426cc8d6a7d282b6b7eac145fb15fea1cd8caf9a8c56e175a50"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 33500000,
+            "actual_us": 33500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 65.34500000998378,
+          "peak_sampled_rss_kib": 24608,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "a0cb41e77e31314f7e42caad63834bc407cbb79f32db66bb24c5c77c64f73968"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 52000000,
+            "actual_us": 52000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 33.62770902458578,
+          "peak_sampled_rss_kib": 160,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "cb6b742028a82d1a7e7d8d817bbf003dab96ed5dbdbc19f2dd2b48b8dbde7224"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 11000000,
+            "actual_us": 11000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 48.92191698309034,
+          "peak_sampled_rss_kib": 24544,
+          "peak_sampled_cpu_percent": 5.7,
+          "payload_sha256": "d4ad80fd8a7219c728199d93f628737fb51bf59b0cdb45e1ca31686740379b5a"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 29500000,
+            "actual_us": 29500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 65.49045804422349,
+          "peak_sampled_rss_kib": 24656,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "2daf8a2916b0f5543444b0c2106ee67121d925bdfaf6fcfb852c8b7d9540ca91"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 48000000,
+            "actual_us": 48000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 34.13804096635431,
+          "peak_sampled_rss_kib": 2400,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "ee673f4452c418dcf7958f2f1bba436e00c1e55acc30c695c939e5177974ecd3"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 7000000,
+            "actual_us": 7000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 49.34008396230638,
+          "peak_sampled_rss_kib": 24608,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "9214a89787b9a569756823fa0d383694303914cf993a1c113485d6d0b7c95024"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 25500000,
+            "actual_us": 25500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 75.34641702659428,
+          "peak_sampled_rss_kib": 25648,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "cd74259412a253fa59fb7bde68cf0dc62a7041f48fd1740b13acf1f1c2136234"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 44000000,
+            "actual_us": 44000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 32.14250004384667,
+          "peak_sampled_rss_kib": 2400,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "b5dbf15da9636bda6668fccb97036cf573b857c5cff38b6d3d8663eb2115e284"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 3000000,
+            "actual_us": 3000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 62.58279108442366,
+          "peak_sampled_rss_kib": 25152,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "89b2b9a3f33a76cef27941f78f1443d10c40b7dd96c145b284ff6b98564dbdda"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 21500000,
+            "actual_us": 21500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 78.68983293883502,
+          "peak_sampled_rss_kib": 25600,
+          "peak_sampled_cpu_percent": 6.7,
+          "payload_sha256": "d874f40a2c29c336048b48c6f8785e3f3fab528af81790d1c67f9291ac65c258"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 40000000,
+            "actual_us": 40000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 32.88683295249939,
+          "peak_sampled_rss_kib": 5392,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "c72d491952bc343d5eb280753a5f32ee882959a8b4871a1a65e77e8fb908a582"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 58500000,
+            "actual_us": 58500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 13,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 32.82254096120596,
+          "peak_sampled_rss_kib": 27008,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "85b6e563543058fbbb32fd2d43290256cab9caac8a5667102203a8e8f4ded53c"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 17500000,
+            "actual_us": 17500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 61.611041077412665,
+          "peak_sampled_rss_kib": 24768,
+          "peak_sampled_cpu_percent": 0.9,
+          "payload_sha256": "fb5fa36d3d1195542ce5428e87394d75c9bf4b494a676116c37d4118993a7006"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 36000000,
+            "actual_us": 36000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 32.63329202309251,
+          "peak_sampled_rss_kib": 800,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "ccf4f5a4546d557dbd7900f11b9d380ca4ce155d90f9187ba318da20d1e68ba1"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 54500000,
+            "actual_us": 54500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 13,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 46.065624919719994,
+          "peak_sampled_rss_kib": 25648,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "64f837e22352a8d36b8f9932416aa9ce282100437b85fc0d47cc80c01b4ed595"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 13500000,
+            "actual_us": 13500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 77.14929210487753,
+          "peak_sampled_rss_kib": 24608,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "5e8138843508d91dd408884888d0709932487313713104b634bd11a53f2b2800"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 32000000,
+            "actual_us": 32000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 30.826292000710964,
+          "peak_sampled_rss_kib": 2080,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "0b3534ee7abe81881a620163254dd47909da8bbacfe59f9a3ca09c4d69767fdc"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 50500000,
+            "actual_us": 50500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 13,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 33.87054102495313,
+          "peak_sampled_rss_kib": 25792,
+          "peak_sampled_cpu_percent": 0.7,
+          "payload_sha256": "8dde0d9834bb02cd1544988a5d0c02e8ff0fedb6cd70a165a89a2e5bd06f7468"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 9500000,
+            "actual_us": 9500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 66.2556670140475,
+          "peak_sampled_rss_kib": 25616,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "e799bdddd7f4c069849e908b8e49c55c44e3236893933d1286a88ad18656e4c5"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 28000000,
+            "actual_us": 28000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 32.2463329648599,
+          "peak_sampled_rss_kib": 4352,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "331e95a10f98db731712deed8114e3989f1b30941a9e47e58a6e063640a7e84c"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 46500000,
+            "actual_us": 46500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 13,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 31.32462501525879,
+          "peak_sampled_rss_kib": 25760,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "97ff91c6a5aad520e26dd03d9e16f0d0360258b32e5d9ec497f39a7d33b49e74"
+        }
+      ],
+      "first_benchmark_process_ms": 32.28108293842524,
+      "p50_ms": 46.065624919719994,
+      "p95_ms": 78.90283304732293,
+      "max_ms": 80.70920803584158,
+      "max_sampled_rss_kib": 27888,
+      "helper_latency_target_pass": true
+    },
+    {
+      "fixture": "standard.mkv",
+      "attempted": 100,
+      "success": 100,
+      "failures": [],
+      "samples": [
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 0,
+            "actual_us": 0,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 33.515249961055815,
+          "peak_sampled_rss_kib": 24720,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "ddb1bb58a980f8d37971e71d77d22648ad049765d54113d844bf88c574d68da6"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 18500000,
+            "actual_us": 18500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 13,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 47.55700007081032,
+          "peak_sampled_rss_kib": 27760,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "ce566b894bd1fb2dc8db7a93b7edd19c0ee23dcac079d838acf39c5271b8805c"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 37000000,
+            "actual_us": 37000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 61.46150000859052,
+          "peak_sampled_rss_kib": 27808,
+          "peak_sampled_cpu_percent": 2.1,
+          "payload_sha256": "d65b702c590f1857d546f2e543910cdbcd3e8552da2e7ffc24b409b01a52f756"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 55500000,
+            "actual_us": 55500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 79.2234999826178,
+          "peak_sampled_rss_kib": 27344,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "a22f971a09c7bab233d20e3b08cf231ae1189f00eb4ff847cd3e65c4a3406bd6"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 14500000,
+            "actual_us": 14500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 13,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 47.16470802668482,
+          "peak_sampled_rss_kib": 31712,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "b705bc17607fe14e954d6472b754e06b4b9eea2779e64c8cda00d8e08546ed75"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 33000000,
+            "actual_us": 33000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 62.767333001829684,
+          "peak_sampled_rss_kib": 30832,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "2e1d53a633caae6f4aa0ff015bcc2d9b04e1ce08e43ae800373fe8f682801fc6"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 51500000,
+            "actual_us": 51500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 78.32612504716963,
+          "peak_sampled_rss_kib": 31088,
+          "peak_sampled_cpu_percent": 1.8,
+          "payload_sha256": "e9e1d0f08bb8a6fa62079153691632849c699510566405d2bf46d05eafa3b6c5"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 10500000,
+            "actual_us": 10500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 13,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 46.62195791024715,
+          "peak_sampled_rss_kib": 27600,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "3c377b6a78a4814aeb087dff1dac9dfd7755f2112a58d2e4fc06e8b1cb020dd3"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 29000000,
+            "actual_us": 29000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 64.2265829956159,
+          "peak_sampled_rss_kib": 27008,
+          "peak_sampled_cpu_percent": 0.9,
+          "payload_sha256": "d695b4c63c3872c64c50111e439a402d8c1533eae17567c5541f947c82905561"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 47500000,
+            "actual_us": 47500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 75.50200005061924,
+          "peak_sampled_rss_kib": 27792,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "bfbe9c670d42beb962c0d3ff69e5bd7ebc8383733b1c5ac777f7a7b80a95ce9f"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 6500000,
+            "actual_us": 6500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 13,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 48.32612501922995,
+          "peak_sampled_rss_kib": 27792,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "b7273aaab03cc8c3bff0bf63c8c6210b0e100231dddd99b98fd789ba54e04801"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 25000000,
+            "actual_us": 25000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 60.99216593429446,
+          "peak_sampled_rss_kib": 28304,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "88c5516ce98250f38fa4b5a9d21c9176625550c7721951f1dc766bf6d2bbb620"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 43500000,
+            "actual_us": 43500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 76.4029580168426,
+          "peak_sampled_rss_kib": 27824,
+          "peak_sampled_cpu_percent": 0.8,
+          "payload_sha256": "cf768019a70da346386458610f21b09212584dc863961dacda8714f4ceaf964b"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 2500000,
+            "actual_us": 2500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 13,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 49.225709051825106,
+          "peak_sampled_rss_kib": 30528,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "ae0f47abf3a5a2392a44ecf699e5670429941983b745222ffbe178efd9218b64"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 21000000,
+            "actual_us": 21000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 64.64200001209974,
+          "peak_sampled_rss_kib": 30496,
+          "peak_sampled_cpu_percent": 0.9,
+          "payload_sha256": "d33f46f2095ee6de62bf361a2ab8bae818047dc6abc4a07b40421e2b90d70c38"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 39500000,
+            "actual_us": 39500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 76.72741694841534,
+          "peak_sampled_rss_kib": 30304,
+          "peak_sampled_cpu_percent": 17.8,
+          "payload_sha256": "6cc81bf8a4b25c7139bb24e159ea7359f238e9ab26b547afc125df8a86b609a7"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 58000000,
+            "actual_us": 58000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 32.96250000130385,
+          "peak_sampled_rss_kib": 24880,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "9e4d65a4d7e87b0ab602c2122e542e8eac6e6ef2b771418d0a5f1cdeefc94b7d"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 17000000,
+            "actual_us": 17000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 64.7400839952752,
+          "peak_sampled_rss_kib": 31712,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "a6d0f514b8fc063b5d995df13853a6854e67003495aae7f4a070a48289884c0a"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 35500000,
+            "actual_us": 35500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 81.43933292012662,
+          "peak_sampled_rss_kib": 29696,
+          "peak_sampled_cpu_percent": 4.5,
+          "payload_sha256": "7815c27291b72a24fc988fc90c23bf59541cd2dcd3a7ad805bce7c6d223b7ccd"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 54000000,
+            "actual_us": 54000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 31.339916051365435,
+          "peak_sampled_rss_kib": 24496,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "23ea96342cf2b7117071019e987061a0dbe47401a9f2ed8ddd79deef697ae34a"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 13000000,
+            "actual_us": 13000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 62.74229090195149,
+          "peak_sampled_rss_kib": 29232,
+          "peak_sampled_cpu_percent": 7.2,
+          "payload_sha256": "1b1f39bdc38bb837579d997a521ae803165be66b127e961fd2f832d5482cd00d"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 31500000,
+            "actual_us": 31500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 78.40700005181134,
+          "peak_sampled_rss_kib": 29744,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "dd3405f261a598163fb4005f308dba2f7ae7816f657b7fb0b2e880d21e9f310e"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 50000000,
+            "actual_us": 50000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 32.289791968651116,
+          "peak_sampled_rss_kib": 24560,
+          "peak_sampled_cpu_percent": 3.3,
+          "payload_sha256": "db67a0eafdc57ec1854ecfc8a08d0d762450597d3af42960b36dcc34864a911c"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 9000000,
+            "actual_us": 9000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 65.17079100012779,
+          "peak_sampled_rss_kib": 30976,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "d0eb6732099b2efc1fb9f2bd8583597731888d45f92355e4ee89be3eb4dd256f"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 27500000,
+            "actual_us": 27500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 79.94891598355025,
+          "peak_sampled_rss_kib": 27024,
+          "peak_sampled_cpu_percent": 10.1,
+          "payload_sha256": "c8f63eae4a205e8605fae5731d9159d3d47c13db1e4c8b00790879a8a7dfc576"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 46000000,
+            "actual_us": 46000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 33.19166705477983,
+          "peak_sampled_rss_kib": 24816,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "f301a1ee7c8e0be6d890725ad9ea0c1b965e521a0b8a26a3872a3b6fe1aaeae3"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 5000000,
+            "actual_us": 5000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 61.86779192648828,
+          "peak_sampled_rss_kib": 28288,
+          "peak_sampled_cpu_percent": 13.2,
+          "payload_sha256": "8777ce85656babb926433b4ccbdad57179e6d67daf5df279de376ead12f6e7f7"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 23500000,
+            "actual_us": 23500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 75.57499990798533,
+          "peak_sampled_rss_kib": 27744,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "1f67f30ce2944c3aca5c99e44aa207d5cfd60e08c5cde93240e6df2f7bf119ed"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 42000000,
+            "actual_us": 42000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 31.285249977372587,
+          "peak_sampled_rss_kib": 24432,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "eee8b8d6e133e8ef28067b96750ffdf784cbbe030fa89693b529a93e0596510f"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 1000000,
+            "actual_us": 1000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 63.35004197899252,
+          "peak_sampled_rss_kib": 31072,
+          "peak_sampled_cpu_percent": 0.1,
+          "payload_sha256": "db88589d9b771ea2b24d8bfed7f4254577f29839cd3e9a1d40524d87e39b66e1"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 19500000,
+            "actual_us": 19500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 76.96858304552734,
+          "peak_sampled_rss_kib": 27632,
+          "peak_sampled_cpu_percent": 18.3,
+          "payload_sha256": "e62cfc79cab65981f91423b1b8df78ed5641e5db9e26b07874408abd4c04073e"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 38000000,
+            "actual_us": 38000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 33.51549990475178,
+          "peak_sampled_rss_kib": 27072,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "a276077bbdc4ab067e71d7e68bef71e425466a74d03a78b833f95f4933e6e642"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 56500000,
+            "actual_us": 56500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 13,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 44.894083053804934,
+          "peak_sampled_rss_kib": 30784,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "456acd6165ac1e91032b8e3e42586da06ff77d3c33ba47fa7015cde7c1dbe0ca"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 15500000,
+            "actual_us": 15500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 80.79362497664988,
+          "peak_sampled_rss_kib": 28048,
+          "peak_sampled_cpu_percent": 9.0,
+          "payload_sha256": "5dd2af84a5aa1412d21718f2d77af56898258ad8765e137bbff4cbc7b5d1c5b4"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 34000000,
+            "actual_us": 34000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 31.597207998856902,
+          "peak_sampled_rss_kib": 27760,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "a166700b6a0b7a1128e938dd45c99cd9c56ebf6363855035da4eb5e93540a06e"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 52500000,
+            "actual_us": 52500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 13,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 48.008291982114315,
+          "peak_sampled_rss_kib": 27680,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "a661ba818d1ca25a63628691007a824a6865674e6a6ed11846f745ebb6cb055d"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 11500000,
+            "actual_us": 11500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 76.05220808181912,
+          "peak_sampled_rss_kib": 29088,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "45a3393ad22bc943f3e2518d98c38abe011033f28ea85b141517fa56fecd3d27"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 30000000,
+            "actual_us": 30000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 32.45883306954056,
+          "peak_sampled_rss_kib": 25760,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "4e57283b5fc568b21c03281c7fda9ab788f2fc359c99de7833c3ccc6f2cdbbf5"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 48500000,
+            "actual_us": 48500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 13,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 47.9737080167979,
+          "peak_sampled_rss_kib": 27808,
+          "peak_sampled_cpu_percent": 3.3,
+          "payload_sha256": "8fbdb7664cb7f91df1b1cd194de3bc99b5fe6c90d811bdecac19fba61682d572"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 7500000,
+            "actual_us": 7500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 78.56300007551908,
+          "peak_sampled_rss_kib": 31712,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "000e228a1eeb538994e6c673bb11a41bf680384d04f0a6a17c334c09a4b81150"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 26000000,
+            "actual_us": 26000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 30.802832916378975,
+          "peak_sampled_rss_kib": 27264,
+          "peak_sampled_cpu_percent": 2.2,
+          "payload_sha256": "9255d7834b364ae3c1e00d951796d2d6e16029762901f6e207074f84669f740e"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 44500000,
+            "actual_us": 44500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 13,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 49.65279204770923,
+          "peak_sampled_rss_kib": 27696,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "5c1d1c27713a0792d21561289cab7516e87c1dfff3db308fb8745f0568baadef"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 3500000,
+            "actual_us": 3500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 76.7494160681963,
+          "peak_sampled_rss_kib": 29184,
+          "peak_sampled_cpu_percent": 15.6,
+          "payload_sha256": "e2ac812c3a6e2b5aacacdaefad5f285f09390bbf48edd984cb06d0a9fc81facb"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 22000000,
+            "actual_us": 22000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 32.318250043317676,
+          "peak_sampled_rss_kib": 27264,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "d7fd3a22b2462fafbff9e3991fdc731b74a49123d5720cfd9b9f8ace0fdcb5d5"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 40500000,
+            "actual_us": 40500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 13,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 46.5140420710668,
+          "peak_sampled_rss_kib": 27600,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "2a4115099ebcdf7066b781c10452eefb5f42574f38fcd8c874555dab53367d2c"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 59000000,
+            "actual_us": 59000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 60.728791053406894,
+          "peak_sampled_rss_kib": 29552,
+          "peak_sampled_cpu_percent": 6.7,
+          "payload_sha256": "903622a1601946aa0002986438b4a3fd689a6911b42675c96f83248c67da2ec1"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 18000000,
+            "actual_us": 18000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 31.926666968502104,
+          "peak_sampled_rss_kib": 5120,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "b477ac670f2df63b2ba64be010bf26d7ee6dcec7dbb165c7bd335846aef53d5b"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 36500000,
+            "actual_us": 36500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 13,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 47.353167086839676,
+          "peak_sampled_rss_kib": 30496,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "e4eb740d2a98254a28e0ed7c7f8bf37763644813156eb02aa0373c8e351dc22a"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 55000000,
+            "actual_us": 55000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 61.82399997487664,
+          "peak_sampled_rss_kib": 31888,
+          "peak_sampled_cpu_percent": 2.5,
+          "payload_sha256": "9d4c1b7580ac8dd6a27bed846deaf52b09322eb62ef50b1436c32480e7fd475d"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 14000000,
+            "actual_us": 14000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 32.44933299720287,
+          "peak_sampled_rss_kib": 24464,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "1473f402085c2a78b8ddc424782e2c830ef28d908a1c660c1bd146964ad53071"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 32500000,
+            "actual_us": 32500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 13,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 48.68074995465577,
+          "peak_sampled_rss_kib": 28944,
+          "peak_sampled_cpu_percent": 9.2,
+          "payload_sha256": "5f3683fc5fc711274be7449702a88fe94744e81e0482a1f4867445c58b1e7290"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 51000000,
+            "actual_us": 51000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 63.66987503133714,
+          "peak_sampled_rss_kib": 29408,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "7ce53eef43d676459fbbe3fc150660f5b6769032c224a95f6c57d50ea5afdf4a"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 10000000,
+            "actual_us": 10000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 33.40691595803946,
+          "peak_sampled_rss_kib": 27216,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "409a2824172c4c43f958e107c9dd9341270a9ddedf44d7ff3769bbd1845cc61b"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 28500000,
+            "actual_us": 28500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 13,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 45.87004205677658,
+          "peak_sampled_rss_kib": 31552,
+          "peak_sampled_cpu_percent": 3.9,
+          "payload_sha256": "578c2bf589b714d8eb2dcdead922b3ba245d4d28a905a6b6234ee54c3aa3e219"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 47000000,
+            "actual_us": 47000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 62.556833028793335,
+          "peak_sampled_rss_kib": 31616,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "e54d7ef369b7cb806aae0f9850fbbc14d0665cba6171dc3ea480451121e31be8"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 6000000,
+            "actual_us": 6000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 33.544791978783906,
+          "peak_sampled_rss_kib": 27136,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "daecbf977df2a248ac5206f4476c268321064308692cf89d36b4a1a14b4929f6"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 24500000,
+            "actual_us": 24500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 13,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 44.21337507665157,
+          "peak_sampled_rss_kib": 27024,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "1a63111c1e570ac2cce3d045478e395a9511e5b9c6c907ea96870c6ce8a26b4a"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 43000000,
+            "actual_us": 43000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 63.4674170287326,
+          "peak_sampled_rss_kib": 27808,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "c238174c214263deec7053dca2b9be5a2860217da82f277e91cbf5cefa7904c0"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 2000000,
+            "actual_us": 2000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 47.58200002834201,
+          "peak_sampled_rss_kib": 27120,
+          "peak_sampled_cpu_percent": 3.3,
+          "payload_sha256": "84e46007b61f5439027823eaca026b82ae9cb08a2526f926f09dd81131e81da2"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 20500000,
+            "actual_us": 20500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 13,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 47.446749988012016,
+          "peak_sampled_rss_kib": 32112,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "e42dec01f42beb6bef062c54d5874f4073482b31f39fa2cdf2604a274f5f72b8"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 39000000,
+            "actual_us": 39000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 64.07829094678164,
+          "peak_sampled_rss_kib": 27600,
+          "peak_sampled_cpu_percent": 12.1,
+          "payload_sha256": "f29e344500dcd9c6d73f383becde652edce84f2402166942be4896c07d9ba2a9"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 57500000,
+            "actual_us": 57500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 81.95575000718236,
+          "peak_sampled_rss_kib": 27440,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "b017abc59ea1f0a65d57ad88fa50a6cb459885df63bf1e2f642b16f2ef175979"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 16500000,
+            "actual_us": 16500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 13,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 46.20208393316716,
+          "peak_sampled_rss_kib": 28976,
+          "peak_sampled_cpu_percent": 6.7,
+          "payload_sha256": "d513cdda9b333c184928b66155925c655e61252f494c55708219c38b4bc3a87e"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 35000000,
+            "actual_us": 35000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 61.79349997546524,
+          "peak_sampled_rss_kib": 27744,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "78d0bbd3f81d9e3512350c05dca09eb13349c56a1cc8ad421946e442179da0ba"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 53500000,
+            "actual_us": 53500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 80.50958393141627,
+          "peak_sampled_rss_kib": 31600,
+          "peak_sampled_cpu_percent": 10.8,
+          "payload_sha256": "fd1f25d3a967ac3f9a3872cf584df2be723650d7ab27024532f21b6893d1a312"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 12500000,
+            "actual_us": 12500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 13,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 45.209583011455834,
+          "peak_sampled_rss_kib": 29360,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "510175c951ba068c8fa06f05c6f69f7587cd7555e53295b88123f74c17c0f2cc"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 31000000,
+            "actual_us": 31000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 62.812875024974346,
+          "peak_sampled_rss_kib": 27856,
+          "peak_sampled_cpu_percent": 12.1,
+          "payload_sha256": "1eb2dc018d26d8dd22e301330bb19e7b4a06488942f9d149d222e070a696efcb"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 49500000,
+            "actual_us": 49500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 78.17458303179592,
+          "peak_sampled_rss_kib": 29840,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "c8882e3827b7349447931de797e53b3bba1df55449d4efb2be3ea72566da9174"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 8500000,
+            "actual_us": 8500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 13,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 48.51774999406189,
+          "peak_sampled_rss_kib": 28272,
+          "peak_sampled_cpu_percent": 5.2,
+          "payload_sha256": "ab4312abfbafb71be181a7c1e13a9eb805e8336a69946caaea1786d57639304a"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 27000000,
+            "actual_us": 27000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 64.53424994833767,
+          "peak_sampled_rss_kib": 27872,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "1655f142c4c2e8e2dccf4c6c353151d561071f3ae0d5d85229e9e3297af6382e"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 45500000,
+            "actual_us": 45500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 75.93491696752608,
+          "peak_sampled_rss_kib": 30432,
+          "peak_sampled_cpu_percent": 9.1,
+          "payload_sha256": "2b2fffb0cedf38f7c21a9756afd483a73f4ab7bb988bbf62ed5df3f411c0c588"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 4500000,
+            "actual_us": 4500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 13,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 46.314500039443374,
+          "peak_sampled_rss_kib": 29488,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "85dbb3a8f0712bbdd58a4f1359af121360bbf15fd9e6eed931ea132e6847c9a5"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 23000000,
+            "actual_us": 23000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 62.29279201943427,
+          "peak_sampled_rss_kib": 29968,
+          "peak_sampled_cpu_percent": 9.0,
+          "payload_sha256": "ca5ec23431b49864ec4356c09ca9e4157f672281f1d3568ec43b23304753e1f4"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 41500000,
+            "actual_us": 41500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 75.30937495175749,
+          "peak_sampled_rss_kib": 30784,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "9055632fea46ac7d3098ff9e9e2dad4fdba155f2b94e6039b5d7ce860f589bc1"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 500000,
+            "actual_us": 500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 13,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 45.71379104163498,
+          "peak_sampled_rss_kib": 28976,
+          "peak_sampled_cpu_percent": 6.4,
+          "payload_sha256": "a23780b63b27ca4c62e6e93526c17aed39c425058362f74a687b1712a889c35f"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 19000000,
+            "actual_us": 19000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 64.65650000609457,
+          "peak_sampled_rss_kib": 28592,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "8ff3cbfc2e34762e11c3448fdf9a75f4a1ff1bf1bc41ba763b56dcdbe874ce65"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 37500000,
+            "actual_us": 37500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 75.17670898232609,
+          "peak_sampled_rss_kib": 30208,
+          "peak_sampled_cpu_percent": 9.4,
+          "payload_sha256": "b753b97d725c7d8b825a879d584bd9d6acf9bb4a248d3d3b66a87db29b517a7d"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 56000000,
+            "actual_us": 56000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 45.81462498754263,
+          "peak_sampled_rss_kib": 27296,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "4c82a9c7e42486fba94b5923af056e188d43bcc566ac26857b1f9620a2c55699"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 15000000,
+            "actual_us": 15000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 62.88779200986028,
+          "peak_sampled_rss_kib": 32048,
+          "peak_sampled_cpu_percent": 10.8,
+          "payload_sha256": "204567461bd79426cc8d6a7d282b6b7eac145fb15fea1cd8caf9a8c56e175a50"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 33500000,
+            "actual_us": 33500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 79.58766701631248,
+          "peak_sampled_rss_kib": 27312,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "a0cb41e77e31314f7e42caad63834bc407cbb79f32db66bb24c5c77c64f73968"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 52000000,
+            "actual_us": 52000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 30.601500067859888,
+          "peak_sampled_rss_kib": 26272,
+          "peak_sampled_cpu_percent": 4.5,
+          "payload_sha256": "cb6b742028a82d1a7e7d8d817bbf003dab96ed5dbdbc19f2dd2b48b8dbde7224"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 11000000,
+            "actual_us": 11000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 63.15141695085913,
+          "peak_sampled_rss_kib": 30832,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "d4ad80fd8a7219c728199d93f628737fb51bf59b0cdb45e1ca31686740379b5a"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 29500000,
+            "actual_us": 29500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 80.42570808902383,
+          "peak_sampled_rss_kib": 28416,
+          "peak_sampled_cpu_percent": 14.4,
+          "payload_sha256": "2daf8a2916b0f5543444b0c2106ee67121d925bdfaf6fcfb852c8b7d9540ca91"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 48000000,
+            "actual_us": 48000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 31.857124995440245,
+          "peak_sampled_rss_kib": 24720,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "ee673f4452c418dcf7958f2f1bba436e00c1e55acc30c695c939e5177974ecd3"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 7000000,
+            "actual_us": 7000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 58.80895908921957,
+          "peak_sampled_rss_kib": 27904,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "9214a89787b9a569756823fa0d383694303914cf993a1c113485d6d0b7c95024"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 25500000,
+            "actual_us": 25500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 78.23004107922316,
+          "peak_sampled_rss_kib": 27664,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "cd74259412a253fa59fb7bde68cf0dc62a7041f48fd1740b13acf1f1c2136234"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 44000000,
+            "actual_us": 44000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 32.3440000647679,
+          "peak_sampled_rss_kib": 24512,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "b5dbf15da9636bda6668fccb97036cf573b857c5cff38b6d3d8663eb2115e284"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 3000000,
+            "actual_us": 3000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 25,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 61.983958003111184,
+          "peak_sampled_rss_kib": 27840,
+          "peak_sampled_cpu_percent": 5.5,
+          "payload_sha256": "89b2b9a3f33a76cef27941f78f1443d10c40b7dd96c145b284ff6b98564dbdda"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 21500000,
+            "actual_us": 21500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 77.07195798866451,
+          "peak_sampled_rss_kib": 27840,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "d874f40a2c29c336048b48c6f8785e3f3fab528af81790d1c67f9291ac65c258"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 40000000,
+            "actual_us": 40000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 31.98874997906387,
+          "peak_sampled_rss_kib": 24688,
+          "peak_sampled_cpu_percent": 0.2,
+          "payload_sha256": "c72d491952bc343d5eb280753a5f32ee882959a8b4871a1a65e77e8fb908a582"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 58500000,
+            "actual_us": 58500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 13,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 46.90420802216977,
+          "peak_sampled_rss_kib": 27824,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "85b6e563543058fbbb32fd2d43290256cab9caac8a5667102203a8e8f4ded53c"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 17500000,
+            "actual_us": 17500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 76.42179110553116,
+          "peak_sampled_rss_kib": 27712,
+          "peak_sampled_cpu_percent": 14.8,
+          "payload_sha256": "fb5fa36d3d1195542ce5428e87394d75c9bf4b494a676116c37d4118993a7006"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 36000000,
+            "actual_us": 36000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 31.379624968394637,
+          "peak_sampled_rss_kib": 1232,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "ccf4f5a4546d557dbd7900f11b9d380ca4ce155d90f9187ba318da20d1e68ba1"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 54500000,
+            "actual_us": 54500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 13,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 47.758416971191764,
+          "peak_sampled_rss_kib": 30752,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "64f837e22352a8d36b8f9932416aa9ce282100437b85fc0d47cc80c01b4ed595"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 13500000,
+            "actual_us": 13500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 75.5504579283297,
+          "peak_sampled_rss_kib": 27888,
+          "peak_sampled_cpu_percent": 5.2,
+          "payload_sha256": "5e8138843508d91dd408884888d0709932487313713104b634bd11a53f2b2800"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 32000000,
+            "actual_us": 32000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 33.28691690694541,
+          "peak_sampled_rss_kib": 24752,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "0b3534ee7abe81881a620163254dd47909da8bbacfe59f9a3ca09c4d69767fdc"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 50500000,
+            "actual_us": 50500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 13,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 51.964040962047875,
+          "peak_sampled_rss_kib": 28768,
+          "peak_sampled_cpu_percent": 9.3,
+          "payload_sha256": "8dde0d9834bb02cd1544988a5d0c02e8ff0fedb6cd70a165a89a2e5bd06f7468"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 9500000,
+            "actual_us": 9500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 37,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 84.0603340184316,
+          "peak_sampled_rss_kib": 28304,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "e799bdddd7f4c069849e908b8e49c55c44e3236893933d1286a88ad18656e4c5"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 28000000,
+            "actual_us": 28000000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 1,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 35.34604189917445,
+          "peak_sampled_rss_kib": 25952,
+          "peak_sampled_cpu_percent": 5.2,
+          "payload_sha256": "331e95a10f98db731712deed8114e3989f1b30941a9e47e58a6e063640a7e84c"
+        },
+        {
+          "header": {
+            "version": 1,
+            "ok": true,
+            "requested_us": 46500000,
+            "actual_us": 46500000,
+            "width": 320,
+            "height": 180,
+            "channels": 4,
+            "payload_bytes": 230400,
+            "video_ordinal": 0,
+            "decoded_frames": 13,
+            "timeline_origin_us": 0
+          },
+          "elapsed_ms": 52.717499900609255,
+          "peak_sampled_rss_kib": 29152,
+          "peak_sampled_cpu_percent": 0.0,
+          "payload_sha256": "97ff91c6a5aad520e26dd03d9e16f0d0360258b32e5d9ec497f39a7d33b49e74"
+        }
+      ],
+      "first_benchmark_process_ms": 33.515249961055815,
+      "p50_ms": 60.728791053406894,
+      "p95_ms": 80.42570808902383,
+      "max_ms": 84.0603340184316,
+      "max_sampled_rss_kib": 32112,
+      "helper_latency_target_pass": true
+    }
+  ],
+  "failures": [],
+  "same_stream_rgba_equal": true,
+  "source_hashes_unchanged": true,
+  "helper_hash_unchanged": true,
+  "first_helper_request_ms": 31.87808394432068,
+  "pass": true
+}

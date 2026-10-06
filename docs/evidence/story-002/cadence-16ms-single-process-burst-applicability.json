@@ -1,0 +1,40 @@
+{
+  "candidate_manifest": "app-build-controller-16ms-experiment-132643.json",
+  "source_sha256": "47b31fa472d778e0c48b304b6c07cf6e7f7a7a62cade31f42943093f4d093690",
+  "scope": "Single-process physical burst, pending 16 ms hide/cancellation and MP4-to-MKV generation applicability; no performance qualification",
+  "qualified": false,
+  "burst": {
+    "moves_posted": 33,
+    "composition": "32 timeline moves plus leave",
+    "mouse_move_events_coalesced_by_appkit": 7,
+    "interval_ms": {
+      "min": 8.034,
+      "median": 8.332,
+      "max": 8.344,
+      "count_below_16_ms": 6
+    },
+    "hover_demands_during_burst": 2,
+    "final_mouse_move_monotonic_seconds": 969971.4948434584,
+    "hide_monotonic_seconds": 969971.503977625,
+    "last_timeline_event_to_hide_ms": 9.134,
+    "hidden_after_leave": true,
+    "paused_at_zero": true,
+    "subsequent_hover_or_display_before_mkv": false,
+    "result": "PASS for recorded native pending-timer hide/cancellation scope"
+  },
+  "mkv": {
+    "generation_changed": true,
+    "two_current_generation_displays": true,
+    "integrity_unchanged": true
+  },
+  "provenance": {
+    "raw_result": "work/validation/story002/cadence-16ms-single-process-burst-001/raw/results.json",
+    "recorder_exit_code": 0,
+    "controller_and_app_unchanged": true
+  },
+  "limits": [
+    "AppKit coalesced 33 posted pointer moves into seven delivered timeline mouse-move events; these are measured delivered intervals, not all posted intervals.",
+    "This is a focused cancellation/applicability proof, not a latency percentile, formal performance cohort, or full MKV response cohort.",
+    "The separate-process 43.953 ms minimum remains a valid historical limitation of that earlier run, not the current single-process result."
+  ]
+}

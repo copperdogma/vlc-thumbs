@@ -1,0 +1,34 @@
+{
+  "scope": "Native main-window preference Save/Cancel/restart and physical hover; other adapters gated by shared class/notification, not fresh four-surface GUI proof",
+  "build_manifest": "app-build-preview-preference-154102.json",
+  "default": "on; visible checked checkbox in native Interface/Playback behaviour",
+  "off_save": "vlcrc macosx-timeline-previews=0; hide observed; physical moves delivered and no hover/service/display after boundary",
+  "off_cancel": "checkbox temporarily checked then Cancel; returned checkbox0 and configremained0; no preview work",
+  "off_restart": "whole appquit/relaunch same explicit isolated vlcrc; nativecheckbox reads0 before Saveon",
+  "reenable_save": "nativeSave writesdefaulton; actualkeyframe display ok in restarttrace",
+  "normal_tooltip": "CGwindowinspect observed tooltipwindow54x20 after disable; localizedPosition restored in sourcebeforecontroller",
+  "source_media_sha256": "37e1e1ebf58d44d0a38f4ac3f6f621dca2547307f9429a404bfccfd475d94c84",
+  "raw_dir": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/preference-native-002",
+  "trace_files": {
+    "off": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/preference-native-002/timeline.jsonl",
+    "restart": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/preference-native-002/restart-off-timeline.jsonl"
+  },
+  "off_after_boundary_events": [
+    "input-observation",
+    "input-observation"
+  ],
+  "restart_display_events": [
+    {
+      "ok": 1,
+      "monotonic": 974437.1827871251,
+      "generation": "1F8F9C99-4445-4CD2-A7A3-67F08682E408-2",
+      "event": "display",
+      "requested_us": 53721302,
+      "actual_us": 52000000,
+      "cache": "miss",
+      "elapsed_ms": 119.69391664024442
+    }
+  ],
+  "source_review": "No material finding after tooltipordering correction; pending timer/request and stale-completion gates verified",
+  "original_vlc": "not targeted or altered"
+}

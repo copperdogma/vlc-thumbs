@@ -1,0 +1,65 @@
+{
+  "scope": "Owned multi-video Matroska ambiguity rejection; not general EBML parser",
+  "helper_sha256": "4feff444b0b764c727144bf9472d343f9de0f8079cbbd12326efa6e1082a600e",
+  "source_sha256": "2e244263057c72ca4348e90698afb1ef4194902b8c7744ee7b7b5ac4c823460f",
+  "checks": [
+    {
+      "media": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/story-002/two-tracks.mkv",
+      "ordinal": 0,
+      "pass": true,
+      "header": {
+        "version": 2,
+        "ok": false,
+        "error": "ambiguous_track_mapping"
+      },
+      "elapsed_ms": 339.11437494680285,
+      "peak_sampled_rss_kib": 14000,
+      "peak_sampled_cpu_percent": 0.3,
+      "payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "media": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/story-002/two-tracks.mkv",
+      "ordinal": 1,
+      "pass": true,
+      "header": {
+        "version": 2,
+        "ok": false,
+        "error": "ambiguous_track_mapping"
+      },
+      "elapsed_ms": 33.627500059083104,
+      "peak_sampled_rss_kib": 5296,
+      "peak_sampled_cpu_percent": 0.0,
+      "payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "media": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/matroska-track-final-001/reversed-tracks.mkv",
+      "ordinal": 0,
+      "pass": true,
+      "header": {
+        "version": 2,
+        "ok": false,
+        "error": "ambiguous_track_mapping"
+      },
+      "elapsed_ms": 17.8753329673782,
+      "peak_sampled_rss_kib": 5232,
+      "peak_sampled_cpu_percent": 0.0,
+      "payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "media": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/matroska-track-final-001/reversed-tracks.mkv",
+      "ordinal": 1,
+      "pass": true,
+      "header": {
+        "version": 2,
+        "ok": false,
+        "error": "ambiguous_track_mapping"
+      },
+      "elapsed_ms": 36.65133402682841,
+      "peak_sampled_rss_kib": 5616,
+      "peak_sampled_cpu_percent": 0.0,
+      "payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "pass": true,
+  "reordered_sha256": "8310428d70583b142158ffa1a9045cbbf9c36d35558d85a004985e9dc3baab89"
+}

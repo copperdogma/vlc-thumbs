@@ -1,0 +1,155 @@
+{
+  "build": "222506",
+  "scope": "Actual CUA Save/Cancel with owned isolated config; actual pointer hover and ordinary seek, full owned app restart. Daily/ordinary profiles untouched.",
+  "raw_evidence": "work/validation/story004/native-preference-provisional-001/session.json",
+  "raw_sha256": "263486bd788360b30713c6cab65acbbb7224652555e091adffdc4f360ec4bf94",
+  "inputs_unchanged": true,
+  "passed": true,
+  "checkpoints": [
+    {
+      "label": "initial",
+      "pid": 20725,
+      "config_value": [],
+      "helper_count": 0,
+      "paused": {
+        "state": "pause",
+        "media_time_seconds": 0,
+        "counters": {
+          "video decoded": 51,
+          "frames displayed": 1,
+          "frames lost": 0,
+          "audio decoded": 30,
+          "buffers played": 15,
+          "buffers lost": 0
+        }
+      }
+    },
+    {
+      "label": "saved-off",
+      "pid": 20725,
+      "config_value": [
+        "macosx-timeline-previews=0"
+      ],
+      "helper_count": 0,
+      "paused": {
+        "state": "pause",
+        "media_time_seconds": 0,
+        "counters": {
+          "video decoded": 51,
+          "frames displayed": 1,
+          "frames lost": 0,
+          "audio decoded": 30,
+          "buffers played": 15,
+          "buffers lost": 0
+        }
+      }
+    },
+    {
+      "label": "cancel-retains-off",
+      "pid": 20725,
+      "config_value": [
+        "macosx-timeline-previews=0"
+      ],
+      "helper_count": 0,
+      "paused": {
+        "state": "pause",
+        "media_time_seconds": 0,
+        "counters": {
+          "video decoded": 51,
+          "frames displayed": 1,
+          "frames lost": 0,
+          "audio decoded": 30,
+          "buffers played": 15,
+          "buffers lost": 0
+        }
+      }
+    },
+    {
+      "label": "restart-retains-off",
+      "pid": 25475,
+      "config_value": [
+        "macosx-timeline-previews=0"
+      ],
+      "helper_count": 0,
+      "paused": {
+        "state": "pause",
+        "media_time_seconds": 0,
+        "counters": {
+          "video decoded": 51,
+          "frames displayed": 1,
+          "frames lost": 0,
+          "audio decoded": 30,
+          "buffers played": 15,
+          "buffers lost": 0
+        }
+      }
+    },
+    {
+      "label": "saved-on",
+      "pid": 25475,
+      "config_value": [],
+      "helper_count": 0,
+      "paused": {
+        "state": "pause",
+        "media_time_seconds": 0,
+        "counters": {
+          "video decoded": 51,
+          "frames displayed": 1,
+          "frames lost": 0,
+          "audio decoded": 30,
+          "buffers played": 15,
+          "buffers lost": 0
+        }
+      }
+    },
+    {
+      "label": "ordinary-seek",
+      "pid": 25475,
+      "config_value": [],
+      "helper_count": 0,
+      "paused": {
+        "state": "pause",
+        "media_time_seconds": 54,
+        "counters": {
+          "video decoded": 53,
+          "frames displayed": 2,
+          "frames lost": 0,
+          "audio decoded": 30,
+          "buffers played": 15,
+          "buffers lost": 0
+        }
+      }
+    },
+    {
+      "label": "seek-confirmed",
+      "pid": 25475,
+      "config_value": [],
+      "helper_count": 0,
+      "paused": {
+        "state": "pause",
+        "media_time_seconds": 54,
+        "counters": {
+          "video decoded": 53,
+          "frames displayed": 2,
+          "frames lost": 0,
+          "audio decoded": 30,
+          "buffers played": 15,
+          "buffers lost": 0
+        }
+      }
+    }
+  ],
+  "ui_observations": [
+    "Initial checkbox checked",
+    "Save off persisted0; actual hover no helper or panel",
+    "Toggle on then Cancel retained0",
+    "New process after quit/restart checkbox off",
+    "Save on restored actual preview (default1 omitted from config)",
+    "Actual click seek moved paused0 to54seconds; Position slider and volume256 preserved"
+  ],
+  "reader_focus": {
+    "current_actual_reader_attempt": "Inconclusive: bound CUA CmdF5 and direct VoiceOver launch did not enable reader; no current reader pass claimed",
+    "applicable_inherited_evidence": "docs/evidence/story-002/voiceover-current-four-surfaces.json",
+    "source_invariant": "Preview panel remains nonkey/nonmain, decorative with no accessible children; original Position slider/actions retained. Current native focus/AX checks pass. Broader reader repair is not claimed"
+  }
+}

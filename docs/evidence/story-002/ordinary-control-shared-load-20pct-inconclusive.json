@@ -1,0 +1,46 @@
+{
+  "scope": "Single prospectively20%-allowance shared-host comparison; entire cohort invalid, no partial percentile or rescore",
+  "allowed_percent": 20,
+  "policy": "docs/research/story-002-shared-load-completion-plan.md",
+  "candidate_manifest": "app-build-controller-16ms-experiment-132643.json",
+  "observer_version": 4,
+  "observed_counts": {
+    "baseline": 25,
+    "feature": 48
+  },
+  "collection_valid": false,
+  "qualified": false,
+  "error": "Expected new light-style knob center missing",
+  "last_capture": {
+    "label": "round-01-per-frame-click-023",
+    "faults": [
+      "Expected new light-style knob center missing"
+    ],
+    "readiness_center_x": 950,
+    "settled_center_x": 950,
+    "post_input_centers": [
+      950
+    ],
+    "complete_presentations": 1,
+    "input_routed_sequence": true,
+    "observation_bound_ms": 900
+  },
+  "integrity_unchanged": true,
+  "changed_inputs": [],
+  "load_context": {
+    "sample_count": 30,
+    "period_seconds": 5,
+    "one_minute_load_average_range": [
+      12.17431640625,
+      18.93701171875
+    ],
+    "summed_process_cpu_percent_range": [
+      610.1,
+      965.4
+    ],
+    "scope": "Whole-host process sums, includes test apparatus and VLC; not machine utilization percent or attribution to particular AI threads"
+  },
+  "decision": "Precision comparison inconclusive and nonblocking for approved functionalMVP; no performance pass, no causal regression attribution, no retry or new observer",
+  "raw_result": "work/validation/story002/control-shared-load-20pct-001/raw/results.json",
+  "load_samples": "work/validation/story002/control-shared-load-20pct-001/load.jsonl"
+}

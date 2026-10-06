@@ -1,0 +1,102 @@
+{
+  "schema": 1,
+  "generator": "scripts/generate-thumbnail-fixtures.py",
+  "generator_sha256": "201cc5be6fbea73e409b796e2c5712d530e34dd61290054bcb0c69c6606d4c66",
+  "research_ffmpeg": "ffmpeg version 8.0 Copyright (c) 2000-2025 the FFmpeg developers",
+  "metadata_path": "work/fixtures/story-002/generation.json",
+  "metadata_sha256": "d50241574b193b83fabcd0d17e0f979d027f99adc97ad6b43b6fe41ad4a7c27a",
+  "total_media_bytes": 182249994,
+  "fixtures": [
+    {
+      "name": "standard.mp4",
+      "description": "60 s 1080p24 with burned frame/time and generated ALAC tone (no AAC priming shift on remux)",
+      "bytes": 76623239,
+      "sha256": "346784501f5764cd36a31bb187d25844f500ef958a1a97952eeca28859d5f234"
+    },
+    {
+      "name": "standard.mkv",
+      "description": "Same video/audio bitstreams as standard.mp4",
+      "bytes": 76625320,
+      "sha256": "51f59e769be620737c941201cf33468729dd1b4a6ecd7f64f9851293ad9dd0e4"
+    },
+    {
+      "name": "long-gop.mp4",
+      "description": "12 s, ten-second GOP, three B-frames",
+      "bytes": 1786009,
+      "sha256": "41d2254a19fff56659b2e2ef07764c496064265fa687a25091add71e3e4b2f62"
+    },
+    {
+      "name": "vfr.mkv",
+      "description": "VFR: 12 fps then 8 fps; original burned source frame numbers",
+      "bytes": 1090049,
+      "sha256": "ee4fac30dfa77868abcfae4b75e663f695965dff4bfbbf9baa2d036daf61b325"
+    },
+    {
+      "name": "nonzero.mkv",
+      "description": "Container and video start at +5 seconds",
+      "bytes": 1784535,
+      "sha256": "96d96c1e2bed2018e9cec59069b14770aa509a826d51c8346133b3d79a05ca3a"
+    },
+    {
+      "name": "edit-offset.mp4",
+      "description": "Video starts at +2 s while audio/container start near zero; initial video gap",
+      "bytes": 1913749,
+      "sha256": "85ce4eb11d45fa5ba152fe374014a069d672d71a08df18d64139f7a4aabb62f2"
+    },
+    {
+      "name": "rotation.mp4",
+      "description": "90-degree display matrix, landscape encoded samples",
+      "bytes": 1786009,
+      "sha256": "f9f1b0c08fc767628a4c7a610627de74678c7d0c25ec9c36149e3dc4b5205c84"
+    },
+    {
+      "name": "sar.mp4",
+      "description": "640x360 encoded pixels, 2:1 SAR, 32:9 display aspect",
+      "bytes": 1386041,
+      "sha256": "6d0cd950c43d099aeee2dc1ca79d0c74901f04efa74b752f6f42be27f87edf55"
+    },
+    {
+      "name": "two-tracks.mkv",
+      "description": "Video ordinal 0 red, ordinal 1 blue",
+      "bytes": 10041,
+      "sha256": "2e244263057c72ca4348e90698afb1ef4194902b8c7744ee7b7b5ac4c823460f"
+    },
+    {
+      "name": "audio-only.m4a",
+      "description": "No video stream",
+      "bytes": 27626,
+      "sha256": "d9614f6c45347c4eb4d20c0e587577794d20ea663662eba1a290002378ae0e4e"
+    },
+    {
+      "name": "short-4k.mp4",
+      "description": "Three-second 4K diagnostic stress",
+      "bytes": 9679039,
+      "sha256": "2db31bf76e3f3308d195e73a7658cad433010ad8e854951aa6b32f7ed8d325e2"
+    },
+    {
+      "name": "five-minute.mp4",
+      "description": "Five-minute low-resolution fifty-second GOP stress; not standard latency",
+      "bytes": 9466574,
+      "sha256": "8bddb41e1135307351397bd462350ebefa869f9d9da5e1e2502e9dde71804d72"
+    },
+    {
+      "name": "corrupt.mp4",
+      "description": "Invalid synthetic bytes",
+      "bytes": 384,
+      "sha256": "0ed300338baeb807ba6449f47c663f8126552e39b53d2642b88588ca4fdc93cd"
+    },
+    {
+      "name": "hdr-tagged.mp4",
+      "description": "Synthetic ordinary samples tagged PQ/BT2020 to verify explicit unsupported-presentation rejection; not an HDR quality golden",
+      "bytes": 70867,
+      "sha256": "f03acb8cdc20a35b16fc3586115fc764471169d28083807043065baefbfa280a"
+    },
+    {
+      "name": "truncated.mp4",
+      "description": "First 512 bytes of owned standard.mp4; incomplete MP4 header",
+      "bytes": 512,
+      "sha256": "4379fbf5b2aabba67bd7636caf0215d9b17d5533179f9e599e20d7ebd6578840"
+    }
+  ],
+  "frame_map_schema": "independent ffprobe decoded presentation order including key_frame/pict_type"
+}

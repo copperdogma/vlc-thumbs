@@ -1,0 +1,29 @@
+{
+  "collection_valid": true,
+  "qualified": false,
+  "method_pilot_passed": true,
+  "observed_counts": {
+    "baseline": 8,
+    "feature": 8
+  },
+  "diagnostic_preposition_ms": 800,
+  "integrity_unchanged": true,
+  "changed_inputs": [],
+  "diagnostic_range_ms": {
+    "baseline": {
+      "min": 59.35999983921647,
+      "max": 300.53716665133834
+    },
+    "feature": {
+      "min": 341.2474166834727,
+      "max": 616.1307499278337
+    }
+  },
+  "raw_results": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/prepositioned-control-pilot-001/results.json",
+  "raw_sha256": "527bce9923601c99958ad4ddc4bb3a905a7b40e894daf9c598a67c9258d79bb2",
+  "medians_ms": {
+    "baseline": 96.80389572167769,
+    "feature": 445.9770207758993
+  },
+  "conclusion": "Eight per arm; strong original guards correct. Preposition800ms did not eliminate feature/control difference. Not p95 qualification or replacement of simultaneous move-and-click results."
+}

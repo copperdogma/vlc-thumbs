@@ -1,0 +1,239 @@
+[
+  {
+    "version": "8.1.2",
+    "license": "LGPL version 2.1 or later",
+    "decoder": "h264",
+    "time_base": [
+      1,
+      12288
+    ],
+    "stream_start": 0,
+    "open_ms": 2.351,
+    "requests": [
+      {
+        "requested_seconds": 0.5,
+        "seek_result": 0,
+        "success": true,
+        "decoded_frames": 13,
+        "best_effort_timestamp": 6144,
+        "actual_seconds": 0.5,
+        "elapsed_ms": 2.597,
+        "width": 320,
+        "height": 180,
+        "scaled_rows": 180,
+        "rgb_md5": "b33364ec9e29dc1a82c0c1779a42e44b"
+      },
+      {
+        "requested_seconds": 7.25,
+        "seek_result": 0,
+        "success": true,
+        "decoded_frames": 31,
+        "best_effort_timestamp": 89088,
+        "actual_seconds": 7.25,
+        "elapsed_ms": 5.138,
+        "width": 320,
+        "height": 180,
+        "scaled_rows": 180,
+        "rgb_md5": "6876e9dd36153164c72029a0aab59cac"
+      },
+      {
+        "requested_seconds": 2.3,
+        "seek_result": 0,
+        "success": true,
+        "decoded_frames": 9,
+        "best_effort_timestamp": 28672,
+        "actual_seconds": 2.333333333,
+        "elapsed_ms": 1.922,
+        "width": 320,
+        "height": 180,
+        "scaled_rows": 180,
+        "rgb_md5": "c0fe8215bde948affdb41919c03c932e"
+      },
+      {
+        "requested_seconds": 6.75,
+        "seek_result": 0,
+        "success": true,
+        "decoded_frames": 19,
+        "best_effort_timestamp": 82944,
+        "actual_seconds": 6.75,
+        "elapsed_ms": 3.357,
+        "width": 320,
+        "height": 180,
+        "scaled_rows": 180,
+        "rgb_md5": "f7084263e9d9ef25a8df314b485b7fca"
+      },
+      {
+        "requested_seconds": 2.3,
+        "seek_result": 0,
+        "success": true,
+        "decoded_frames": 9,
+        "best_effort_timestamp": 28672,
+        "actual_seconds": 2.333333333,
+        "elapsed_ms": 1.814,
+        "width": 320,
+        "height": 180,
+        "scaled_rows": 180,
+        "rgb_md5": "c0fe8215bde948affdb41919c03c932e"
+      }
+    ],
+    "input": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/probes/thumbnail-plan/known-h264.mp4"
+  },
+  {
+    "version": "8.1.2",
+    "license": "LGPL version 2.1 or later",
+    "decoder": "h264",
+    "time_base": [
+      1,
+      1000
+    ],
+    "stream_start": 0,
+    "open_ms": 0.733,
+    "requests": [
+      {
+        "requested_seconds": 0.5,
+        "seek_result": 0,
+        "success": true,
+        "decoded_frames": 13,
+        "best_effort_timestamp": 500,
+        "actual_seconds": 0.5,
+        "elapsed_ms": 2.382,
+        "width": 320,
+        "height": 180,
+        "scaled_rows": 180,
+        "rgb_md5": "b33364ec9e29dc1a82c0c1779a42e44b"
+      },
+      {
+        "requested_seconds": 7.25,
+        "seek_result": 0,
+        "success": true,
+        "decoded_frames": 31,
+        "best_effort_timestamp": 7250,
+        "actual_seconds": 7.25,
+        "elapsed_ms": 4.656,
+        "width": 320,
+        "height": 180,
+        "scaled_rows": 180,
+        "rgb_md5": "6876e9dd36153164c72029a0aab59cac"
+      },
+      {
+        "requested_seconds": 2.3,
+        "seek_result": 0,
+        "success": true,
+        "decoded_frames": 9,
+        "best_effort_timestamp": 2333,
+        "actual_seconds": 2.333,
+        "elapsed_ms": 1.819,
+        "width": 320,
+        "height": 180,
+        "scaled_rows": 180,
+        "rgb_md5": "c0fe8215bde948affdb41919c03c932e"
+      },
+      {
+        "requested_seconds": 6.75,
+        "seek_result": 0,
+        "success": true,
+        "decoded_frames": 19,
+        "best_effort_timestamp": 6750,
+        "actual_seconds": 6.75,
+        "elapsed_ms": 4.007,
+        "width": 320,
+        "height": 180,
+        "scaled_rows": 180,
+        "rgb_md5": "f7084263e9d9ef25a8df314b485b7fca"
+      },
+      {
+        "requested_seconds": 2.3,
+        "seek_result": 0,
+        "success": true,
+        "decoded_frames": 9,
+        "best_effort_timestamp": 2333,
+        "actual_seconds": 2.333,
+        "elapsed_ms": 1.772,
+        "width": 320,
+        "height": 180,
+        "scaled_rows": 180,
+        "rgb_md5": "c0fe8215bde948affdb41919c03c932e"
+      }
+    ],
+    "input": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/probes/thumbnail-plan/known-h264.mkv"
+  },
+  {
+    "version": "8.1.2",
+    "license": "LGPL version 2.1 or later",
+    "decoder": "mpeg4",
+    "time_base": [
+      1,
+      12288
+    ],
+    "stream_start": 0,
+    "open_ms": 0.611,
+    "requests": [
+      {
+        "requested_seconds": 0.5,
+        "seek_result": 0,
+        "success": true,
+        "decoded_frames": 7,
+        "best_effort_timestamp": 6144,
+        "actual_seconds": 0.5,
+        "elapsed_ms": 0.781,
+        "width": 320,
+        "height": 180,
+        "scaled_rows": 180,
+        "rgb_md5": "6327f43cfa2b1922263ea29f3b1a0441"
+      },
+      {
+        "requested_seconds": 2.25,
+        "seek_result": 0,
+        "success": true,
+        "decoded_frames": 4,
+        "best_effort_timestamp": 27648,
+        "actual_seconds": 2.25,
+        "elapsed_ms": 0.585,
+        "width": 320,
+        "height": 180,
+        "scaled_rows": 180,
+        "rgb_md5": "3472aea0cf4c7f18e0ced091a9ea047c"
+      },
+      {
+        "requested_seconds": 1.3,
+        "seek_result": 0,
+        "success": true,
+        "decoded_frames": 5,
+        "best_effort_timestamp": 16384,
+        "actual_seconds": 1.333333333,
+        "elapsed_ms": 0.56,
+        "width": 320,
+        "height": 180,
+        "scaled_rows": 180,
+        "rgb_md5": "204cdb9e046f6677205c4c4dab6f41d3"
+      },
+      {
+        "requested_seconds": 1.75,
+        "seek_result": 0,
+        "success": true,
+        "decoded_frames": 10,
+        "best_effort_timestamp": 21504,
+        "actual_seconds": 1.75,
+        "elapsed_ms": 0.654,
+        "width": 320,
+        "height": 180,
+        "scaled_rows": 180,
+        "rgb_md5": "1fe7704c2bc171d0f631170cc375c122"
+      },
+      {
+        "requested_seconds": 1.3,
+        "seek_result": 0,
+        "success": true,
+        "decoded_frames": 5,
+        "best_effort_timestamp": 16384,
+        "actual_seconds": 1.333333333,
+        "elapsed_ms": 0.43,
+        "width": 320,
+        "height": 180,
+        "scaled_rows": 180,
+        "rgb_md5": "204cdb9e046f6677205c4c4dab6f41d3"
+      }
+    ],
+    "input": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/build-smoke.mp4"
+  }
+]

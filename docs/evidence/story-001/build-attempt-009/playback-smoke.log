@@ -1,0 +1,590 @@
+[0000000104fa0df0] main libvlc debug: VLC media player - 3.0.24 Vetinari
+[0000000104fa0df0] main libvlc debug: Copyright © 1996-2026 the VideoLAN team
+[0000000104fa0df0] main libvlc debug: revision 3.0.24-0-g6de05ad
+[0000000104fa0df0] main libvlc debug: configured with /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/extras/package/macosx/../../../configure  '--prefix=/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/vlc_install_dir' '--enable-macosx' '--enable-merge-ffmpeg' '--enable-osx-notifications' '--enable-faad' '--enable-flac' '--enable-theora' '--enable-shout' '--enable-ncurses' '--enable-twolame' '--enable-libass' '--enable-macosx-avfoundation' '--disable-skins2' '--disable-xcb' '--disable-caca' '--disable-pulse' '--disable-sdl-image' '--disable-vnc' '--build=aarch64-apple-darwin27' '--host=aarch64-apple-darwin27' '--with-macosx-version-min=10.7' '--with-macosx-sdk=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk' '--disable-sparkle' 'build_alias=aarch64-apple-darwin27' 'host_alias=aarch64-apple-darwin27' 'CC=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7' 'CFLAGS=-g -arch arm64' 'LDFLAGS=-arch arm64' 'CXX=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -stdlib=libc++ -std=c++11' 'CXXFLAGS=-g -arch arm64' 'OBJC=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7' 'OBJCFLAGS=-g -arch arm64' 'PKG_CONFIG_PATH=' 'PKG_CONFIG_LIBDIR=/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/pkgconfig'
+[0000000104fa0df0] main libvlc debug: searching plug-in modules
+[0000000104fa0df0] main libvlc debug: loading plugins cache file /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/plugins.dat
+[0000000104fa0df0] main libvlc debug: recursively browsing `/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins'
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libtospdif_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libddummy_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libtaglib_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/liblibass_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libspeex_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libi420_rgb_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libmarq_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libugly_resampler_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/librawvideo_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libfreetype_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libscreen_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libadummy_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libmosaic_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libaccess_concat_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libasf_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libpng_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libaom_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libstream_out_autodel_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libpsychedelic_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libdolby_surround_decoder_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libequalizer_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libmux_ps_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libi420_10_p010_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libaes3_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libnormvol_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libstream_out_dummy_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libscaletempo_pitch_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libinteger_mixer_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libxa_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libaccess_srt_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libi420_yuy2_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libvideotoolbox_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libcroppadd_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libvoc_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libscte27_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libnoseek_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libaccess_output_file_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libvout_macosx_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libstream_out_gather_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libflaschen_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libmux_ts_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libavcodec_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libedgedetection_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libaddonsvorepository_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libcaopengllayer_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libedummy_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libbonjour_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libpacketizer_av1_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libcache_read_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libblendbench_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libinvert_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libvc1_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libdcp_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libfolder_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libstream_out_record_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libpacketizer_mlp_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libavcapture_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libvdr_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libfaad_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libdecomp_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libvobsub_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libsecuretransport_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libfreeze_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libpacketizer_copy_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libscene_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libupnp_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libposterize_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libsubsdec_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libgestures_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libgnutls_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libstream_out_transcode_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libimage_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libvmem_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libstream_out_stats_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libsatip_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libaccess_output_dummy_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libwav_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libsamplerate_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/liblpcm_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libchorus_flanger_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libmux_mpjpeg_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libhotkeys_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libdvdnav_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libhqdn3d_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libmirror_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libflac_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libcaf_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libaudio_format_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libsmf_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libspatializer_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libanaglyph_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libsap_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libmono_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libx26410b_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libmediadirs_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libnuv_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libalphamask_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libstereo_widen_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libtwolame_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libsepia_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libaccess_output_udp_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libmux_mp4_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libaudiobargraph_a_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/librawdv_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libstream_out_description_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libglconv_cvpx_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libt140_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libmux_ogg_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libstream_out_setid_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libstream_out_cycle_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libtextst_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libi422_yuy2_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libmotiondetect_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libaccess_output_livehttp_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libwave_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libpacketizer_dirac_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libfps_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libwebvtt_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libhttps_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libball_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libpva_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libvisual_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/liblogo_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libdiracsys_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libfingerprinter_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libcvdsub_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libsharpen_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libfile_keystore_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libclone_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libgaussianblur_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libavi_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/librtp_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libmemory_keystore_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libyuy2_i420_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libstream_out_chromaprint_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libsubsusf_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libdvbsub_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libkaraoke_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libmotionblur_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libpacketizer_flac_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libripple_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libpacketizer_h264_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libwall_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libsftp_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libcanvas_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/librawvid_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libstream_out_display_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libaccess_imem_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libblend_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libvod_rtsp_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libi420_nv12_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libauhal_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libpuzzle_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libstream_out_delay_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libdmxmus_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libattachment_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libnfs_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libgme_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libexport_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libskiptags_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libantiflicker_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/liblogger_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libfloat_mixer_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libstream_out_es_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libxml_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libaudioscrobbler_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libdemux_chromecast_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libplaylist_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libgradient_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libpacketizer_mpegaudio_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libsubtitle_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libmux_wav_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libmad_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libreal_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libtransform_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libopus_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libtcp_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libnsspeechsynthesizer_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libudp_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libnsv_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libpacketizer_vc1_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libmpgv_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libstl_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libaddonsfsstorage_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libcdg_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libtrivial_channel_mixer_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libyuy2_i422_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/librtpvideo_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libstats_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libmotion_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libpacketizer_dts_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libhds_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libmkv_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libcolorthres_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libheadphone_channel_mixer_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libmjpeg_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libtimecode_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libaccess_output_http_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libgain_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libmpc_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libaccess_output_shout_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libzvbi_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/librotate_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libremoteosd_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libkeychain_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libcc_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libx265_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libftp_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libpostproc_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libconsole_logger_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libstream_out_rtp_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libbluescreen_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libgrain_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/librawaud_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libmpg123_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libpacketizer_a52_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/librss_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libaccess_output_srt_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libspudec_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libarchive_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libdvdread_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libty_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libi422_i420_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libvpx_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libprefetch_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libadjust_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libdummy_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libtdummy_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libgoom_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libpodcast_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libmux_dummy_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libvhs_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libinflate_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libsid_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libgrey_yuv_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libmux_asf_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libdemuxdump_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/liblua_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libtheora_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libsdp_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libvorbis_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libcvpx_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libspdif_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/liboldrc_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libscte18_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libci_filters_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libsvcdsub_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libaraw_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libvcd_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libaccess_output_rist_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libchain_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libpacketizer_mpegvideo_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libscale_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libcompressor_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libx264_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libcache_block_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libadpcm_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libyuvp_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libgradfun_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libcdda_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/liboldmovie_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libdav1d_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libparam_eq_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libaiff_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libidummy_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libhttp_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/librv32_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libaudiotoolboxmidi_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libes_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libjpeg_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libnetsync_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libfilesystem_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libstream_out_bridge_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libkate_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libaribsub_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libps_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/liberase_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libadaptive_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/librecord_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libstream_out_standard_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libsubstx3g_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libdeinterlace_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libuleaddvaudio_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libadf_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libmux_avi_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libdemux_cdg_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libimem_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/liblibbluray_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libtelx_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libdemux_stl_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libts_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libextract_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libpacketizer_mpeg4audio_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libremap_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libaudiobargraph_v_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libpacketizer_hevc_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/librist_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libfile_logger_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libtta_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libdirectory_demux_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libspatialaudio_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libsimple_channel_mixer_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libh26x_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libg711_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/liblive555_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libttml_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libvdummy_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libogg_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libau_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libnsc_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libyuv_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libafile_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libstream_out_mosaic_bridge_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libmp4_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/liboggspots_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libpacketizer_mpeg4video_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libavaudiocapture_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libncurses_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libdynamicoverlay_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libmacosx_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libshm_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libstream_out_chromecast_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libflacsys_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libaccess_mms_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libmod_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libscaletempo_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libsyslog_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libmagnify_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libstream_out_duplicate_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libsubsdelay_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libswscale_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libamem_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libstream_out_smem_plugin.dylib
+[0000000104fa0df0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/plugins/libspeex_resampler_plugin.dylib
+[0000000104fa0df0] main libvlc debug: plug-ins loaded: 460 modules
+[0000000104fa0fb0] main logger debug: looking for logger module matching "any": 3 candidates
+[0000000104fa0fb0] main logger debug: using logger module "console"
+[0000000104fa0df0] main libvlc debug: translation test: code is "C"
+[0000000104fa2240] main keystore debug: looking for keystore module matching "memory": 3 candidates
+[0000000104fa2240] main keystore debug: using keystore module "memory"
+[0000000104fa0df0] main libvlc debug: CPU has capabilities FPU 
+[0000000104fa0df0] main libvlc warning: Key "Command+0" bound to multiple actions
+[00000079668d00f0] main playlist debug: creating audio output
+[00000079678fc0f0] main audio output debug: looking for audio output module matching "dummy": 4 candidates
+[00000079678fc0f0] main audio output debug: using audio output module "adummy"
+[00000079668d00f0] main playlist debug: keeping audio output
+[000000796688caf0] main input debug: Creating an input for preparsing 'build-smoke.mp4'
+[0000000104fac480] main interface debug: looking for interface module matching "hotkeys,none": 14 candidates
+[0000000104fac480] main interface debug: using interface module "hotkeys"
+[0000000104fac5c0] main interface debug: looking for interface module matching "dummy": 14 candidates
+[0000000104fac5c0] dummy interface: using the dummy interface module...
+[0000000104fac5c0] main interface debug: using interface module "dummy"
+[00000079668d00f0] main playlist debug: processing request item: null, node: Playlist, skip: 0
+[00000079668d00f0] main playlist debug: rebuilding array of current - root Playlist
+[00000079668d00f0] main playlist debug: rebuild done - 1 items, index -1
+[00000079668d00f0] main playlist debug: starting playback of new item
+[00000079668d00f0] main playlist debug: resyncing on build-smoke.mp4
+[00000079668d00f0] main playlist debug: build-smoke.mp4 is at 0
+[00000079668d00f0] main playlist debug: creating new input thread
+[000000796688caf0] main input debug: Creating an input for 'build-smoke.mp4'
+[0000000104fac700] main meta fetcher debug: looking for meta fetcher module matching "any": 1 candidates
+[00000079668d00f0] main playlist debug: requesting art for new input thread
+[0000000104fac700] lua meta fetcher debug: Trying Lua scripts in /Users/cam/Library/Application Support/org.videolan.vlc-thumbs.development/lua/meta/fetcher
+[0000000104fac700] lua meta fetcher debug: Trying Lua scripts in /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/lua/meta/fetcher
+[0000000104fac700] lua meta fetcher debug: Trying Lua scripts in /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/share/lua/meta/fetcher
+[000000796688caf0] main input debug: using timeshift granularity of 50 MiB
+[000000796688caf0] main input debug: using default timeshift path
+[000000796688caf0] main input debug: `file:///Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/build-smoke.mp4' gives access `file' demux `any' path `/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/build-smoke.mp4'
+[00000079668a00f0] main input source debug: creating demux: access='file' demux='any' location='/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/build-smoke.mp4' file='/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/build-smoke.mp4'
+[0000007966899cf0] main demux debug: looking for access_demux module matching "file": 14 candidates
+[0000000104fac700] main meta fetcher debug: no meta fetcher modules matched
+[00000079679e40f0] main art finder debug: looking for art finder module matching "any": 2 candidates
+[0000007966899cf0] main demux debug: no access_demux modules matched
+[000000796689a3f0] main stream debug: creating access: file:///Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/build-smoke.mp4
+[000000796689a3f0] main stream debug:  (path: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/build-smoke.mp4)
+[000000796689a3f0] main stream debug: looking for access module matching "file": 23 candidates
+[00000079679e40f0] lua art finder debug: Trying Lua scripts in /Users/cam/Library/Application Support/org.videolan.vlc-thumbs.development/lua/meta/art
+[00000079679e40f0] lua art finder debug: Trying Lua scripts in /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/lua/meta/art
+[00000079679e40f0] lua art finder debug: Trying Lua scripts in /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/share/lua/meta/art
+[000000796689a3f0] main stream debug: using access module "filesystem"
+[000000796689a230] main stream debug: looking for stream_filter module matching "prefetch,cache_read": 26 candidates
+[000000796689a230] cache_read stream debug: Using stream method for AStream*
+[00000079679e40f0] lua art finder debug: Trying Lua playlist script /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/share/lua/meta/art/00_musicbrainz.luac
+[000000796689a230] cache_read stream debug: starting pre-buffering
+[000000796689a230] cache_read stream debug: received first data after 0 ms
+[000000796689a230] cache_read stream debug: pre-buffering done 1024 bytes in 0s - 10000 KiB/s
+[000000796689a230] main stream debug: using stream_filter module "cache_read"
+[0000007966899b30] main stream debug: looking for stream_filter module matching "any": 26 candidates
+[00000079679e40f0] lua art finder debug: skipping script (unmatched scope) /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/share/lua/meta/art/00_musicbrainz.luac
+[0000007966899b30] lua stream debug: Trying Lua scripts in /Users/cam/Library/Application Support/org.videolan.vlc-thumbs.development/lua/playlist
+[0000007966899b30] lua stream debug: Trying Lua scripts in /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/lua/playlist
+[0000007966899b30] lua stream debug: Trying Lua scripts in /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/share/lua/playlist
+[00000079679e40f0] lua art finder debug: Trying Lua playlist script /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/share/lua/meta/art/01_googleimage.luac
+[0000007966899b30] lua stream debug: Trying Lua playlist script /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/share/lua/playlist/anevia_streams.luac
+[00000079679e40f0] lua art finder debug: skipping script (unmatched scope) /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/share/lua/meta/art/01_googleimage.luac
+[00000079679e40f0] lua art finder debug: Trying Lua playlist script /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/share/lua/meta/art/02_frenchtv.luac
+[0000007966899b30] lua stream debug: Trying Lua playlist script /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/share/lua/playlist/anevia_xml.luac
+[00000079679e40f0] lua art finder debug: skipping script (unmatched scope) /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/share/lua/meta/art/02_frenchtv.luac
+[00000079679e40f0] lua art finder debug: Trying Lua playlist script /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/share/lua/meta/art/03_lastfm.luac
+[0000007966899b30] lua stream debug: Trying Lua playlist script /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/share/lua/playlist/appletrailers.luac
+[00000079679e40f0] lua art finder debug: skipping script (unmatched scope) /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/share/lua/meta/art/03_lastfm.luac
+[00000079679e40f0] main art finder debug: no art finder modules matched
+[00000079679e40f0] main meta fetcher debug: looking for meta fetcher module matching "any": 1 candidates
+[0000007966899b30] lua stream debug: Trying Lua playlist script /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/share/lua/playlist/bbc_co_uk.luac
+[00000079679e40f0] lua meta fetcher debug: Trying Lua scripts in /Users/cam/Library/Application Support/org.videolan.vlc-thumbs.development/lua/meta/fetcher
+[00000079679e40f0] lua meta fetcher debug: Trying Lua scripts in /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/lua/meta/fetcher
+[00000079679e40f0] lua meta fetcher debug: Trying Lua scripts in /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/share/lua/meta/fetcher
+[00000079679e40f0] main meta fetcher debug: no meta fetcher modules matched
+[00000079679e40f0] main art finder debug: looking for art finder module matching "any": 2 candidates
+[0000007966899b30] lua stream debug: Trying Lua playlist script /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/share/lua/playlist/cue.luac
+[00000079679e40f0] lua art finder debug: Trying Lua scripts in /Users/cam/Library/Application Support/org.videolan.vlc-thumbs.development/lua/meta/art
+[00000079679e40f0] lua art finder debug: Trying Lua scripts in /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/lua/meta/art
+[00000079679e40f0] lua art finder debug: Trying Lua scripts in /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/share/lua/meta/art
+[00000079679e40f0] lua art finder debug: Trying Lua playlist script /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/share/lua/meta/art/00_musicbrainz.luac
+[0000007966899b30] lua stream debug: Trying Lua playlist script /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/share/lua/playlist/dailymotion.luac
+[00000079679e40f0] lua art finder debug: skipping script (unmatched scope) /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/share/lua/meta/art/00_musicbrainz.luac
+[0000007966899b30] lua stream debug: Trying Lua playlist script /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/share/lua/playlist/jamendo.luac
+[00000079679e40f0] lua art finder debug: Trying Lua playlist script /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/share/lua/meta/art/01_googleimage.luac
+[00000079679e40f0] lua art finder debug: skipping script (unmatched scope) /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/share/lua/meta/art/01_googleimage.luac
+[00000079679e40f0] lua art finder debug: Trying Lua playlist script /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/share/lua/meta/art/02_frenchtv.luac
+[0000007966899b30] lua stream debug: Trying Lua playlist script /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/share/lua/playlist/koreus.luac
+[00000079679e40f0] lua art finder debug: skipping script (unmatched scope) /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/share/lua/meta/art/02_frenchtv.luac
+[00000079679e40f0] lua art finder debug: Trying Lua playlist script /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/share/lua/meta/art/03_lastfm.luac
+[0000007966899b30] lua stream debug: Trying Lua playlist script /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/share/lua/playlist/liveleak.luac
+[00000079679e40f0] lua art finder debug: skipping script (unmatched scope) /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/share/lua/meta/art/03_lastfm.luac
+[00000079679e40f0] main art finder debug: no art finder modules matched
+[0000007966899b30] lua stream debug: Trying Lua playlist script /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/share/lua/playlist/newgrounds.luac
+[0000007966899b30] lua stream debug: Trying Lua playlist script /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/share/lua/playlist/rockbox_fm_presets.luac
+[0000007966899b30] lua stream debug: Trying Lua playlist script /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/share/lua/playlist/soundcloud.luac
+[0000007966899b30] lua stream debug: Trying Lua playlist script /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/share/lua/playlist/twitch.luac
+[0000007966899b30] lua stream debug: Trying Lua playlist script /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/share/lua/playlist/vimeo.luac
+[0000007966899b30] lua stream debug: Trying Lua playlist script /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/VLC.app/Contents/MacOS/share/lua/playlist/vocaroo.luac
+[0000007966899b30] main stream debug: no stream_filter modules matched
+[00000079668a0270] main stream_directory debug: looking for stream_directory module matching "any": 1 candidates
+[00000079668a0270] main stream_directory debug: no stream_directory modules matched
+[00000079668a00f0] main input source debug: attachment of directory-extractor failed for file:///Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/build-smoke.mp4
+[0000007966899b30] main stream debug: looking for stream_filter module matching "record": 26 candidates
+[0000007966899b30] main stream debug: using stream_filter module "record"
+[00000079668a00f0] main input source debug: creating demux: access='file' demux='any' location='/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/build-smoke.mp4' file='/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/build-smoke.mp4'
+[0000007966899970] main demux debug: looking for demux module matching "mp4": 56 candidates
+[0000007966899970] mp4 demux debug: dumping root Box "root"
+[0000007966899970] mp4 demux debug: |   + ftyp size 28 offset 0
+[0000007966899970] mp4 demux debug: |   + free size 8 offset 28
+[0000007966899970] mp4 demux debug: |   + mdat size 175905 offset 36
+[0000007966899970] mp4 demux debug: |   + moov size 1004 offset 175941
+[0000007966899970] mp4 demux debug: |   |   + mvhd size 108 offset 175949
+[0000007966899970] mp4 demux debug: |   |   + trak size 791 offset 176057
+[0000007966899970] mp4 demux debug: |   |   |   + tkhd size 92 offset 176065
+[0000007966899970] mp4 demux debug: |   |   |   + edts size 36 offset 176157
+[0000007966899970] mp4 demux debug: |   |   |   |   + elst size 28 offset 176165
+[0000007966899970] mp4 demux debug: |   |   |   + mdia size 655 offset 176193
+[0000007966899970] mp4 demux debug: |   |   |   |   + mdhd size 32 offset 176201
+[0000007966899970] mp4 demux debug: |   |   |   |   + hdlr size 45 offset 176233
+[0000007966899970] mp4 demux debug: |   |   |   |   + minf size 570 offset 176278
+[0000007966899970] mp4 demux debug: |   |   |   |   |   + vmhd size 20 offset 176286
+[0000007966899970] mp4 demux debug: |   |   |   |   |   + dinf size 36 offset 176306
+[0000007966899970] mp4 demux debug: |   |   |   |   |   |   + dref size 28 offset 176314
+[0000007966899970] mp4 demux debug: |   |   |   |   |   |   |   + url  size 12 offset 176330
+[0000007966899970] mp4 demux debug: |   |   |   |   |   + stbl size 506 offset 176342
+[0000007966899970] mp4 demux debug: |   |   |   |   |   |   + stsd size 234 offset 176350
+[0000007966899970] mp4 demux debug: |   |   |   |   |   |   |   + mp4v size 218 offset 176366
+[0000007966899970] mp4 demux debug: |   |   |   |   |   |   |   |   + esds size 96 offset 176452
+[0000007966899970] mp4 demux debug: |   |   |   |   |   |   |   |   + pasp size 16 offset 176548
+[0000007966899970] mp4 demux debug: |   |   |   |   |   |   |   |   + btrt size 20 offset 176564
+[0000007966899970] mp4 demux debug: |   |   |   |   |   |   + stts size 24 offset 176584
+[0000007966899970] mp4 demux debug: |   |   |   |   |   |   + stss size 28 offset 176608
+[0000007966899970] mp4 demux debug: |   |   |   |   |   |   + stsc size 28 offset 176636
+[0000007966899970] mp4 demux debug: |   |   |   |   |   |   + stsz size 164 offset 176664
+[0000007966899970] mp4 demux debug: |   |   |   |   |   |   + stco size 20 offset 176828
+[0000007966899970] mp4 demux debug: |   |   + udta size 97 offset 176848
+[0000007966899970] mp4 demux debug: |   |   |   + meta size 89 offset 176856
+[0000007966899970] mp4 demux debug: |   |   |   |   + hdlr size 33 offset 176868
+[0000007966899970] mp4 demux debug: |   |   |   |   + ilst size 44 offset 176901
+[0000007966899970] mp4 demux debug: |   |   |   |   |   + ctoo size 36 offset 176909
+[0000007966899970] mp4 demux debug: |   |   |   |   |   |   + data size 28 offset 176917
+[0000007966899970] mp4 demux debug: ISO Media (isom) version 512.
+[0000007966899970] mp4 demux debug: found 1 tracks
+[0000007966899970] mp4 demux warning: elst box found
+[0000007966899970] mp4 demux debug:    - [0] duration=3000ms media time=0ms) rate=1.0
+[0000007966899970] mp4 demux debug: track[Id 0x1] read 1 chunk
+[0000007966899970] mp4 demux warning: STTS table of 1 entries
+[0000007966899970] mp4 demux debug: track[Id 0x1] read 36 samples length:3s
+[000000796688caf0] main input debug: selecting program id=0
+[0000007966899970] mp4 demux debug: adding track[Id 0x1] video (enable) language undef
+[0000007966899970] main demux debug: using demux module "mp4"
+[000000796688caf0] main input debug: looking for a subtitle file in /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/
+[00000079678fc4f0] main decoder debug: looking for video decoder module matching "any": 15 candidates
+[00000079678fc4f0] videotoolbox decoder debug: Will decode MP4V with original FourCC 'mp4v'
+[00000079678fc4f0] videotoolbox decoder warning: vt session error: 'kVTCouldNotFindVideoDecoderErr'
+[00000079678fc4f0] avcodec decoder debug: using ffmpeg Lavc62.28.102
+[00000079678fc4f0] avcodec decoder debug: CPU flags: 0x0000f360
+[00000079678fc4f0] avcodec decoder debug: allowing 6 thread(s) for decoding
+[00000079678fc4f0] avcodec decoder debug: codec (mpeg4) started
+[00000079678fc4f0] main decoder debug: using video decoder module "avcodec"
+[00000079679e40f0] main demux meta debug: looking for meta reader module matching "any": 2 candidates
+[00000079668995f0] main stream debug: creating access: file:///Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/build-smoke.mp4
+[00000079668995f0] main stream debug:  (path: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/build-smoke.mp4)
+[00000079668995f0] main stream debug: looking for access module matching "file": 23 candidates
+[00000079668995f0] main stream debug: using access module "filesystem"
+[0000007966899430] main stream debug: looking for stream_filter module matching "prefetch,cache": 26 candidates
+[0000007966899430] main stream debug: no stream_filter modules matched
+[00000079668995f0] main stream debug: removing module "filesystem"
+[00000079679e40f0] main demux meta debug: using meta reader module "taglib"
+[0000007966899970] main demux debug: removing module "taglib"
+[000000796688caf0] main input debug: `file:///Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/build-smoke.mp4' successfully opened
+[0000007966899970] mp4 demux debug: elst (0) gives 0ms (movie)-> 0ms (track)
+[0000007966899970] mp4 demux debug: track[Id 0x1] using Sync Sample Box (stss)
+[0000007966899970] mp4 demux debug: stss gives 0 --> 0 (sample number)
+[000000796688caf0] main input debug: Buffering 0%
+[000000796688caf0] main input debug: Buffering 25%
+[00000079678fc4f0] avcodec decoder debug: available software decoder output format 0 (yuv420p)
+[000000796688caf0] main input debug: Buffering 50%
+[000000796688caf0] main input debug: Buffering 75%
+[000000796688caf0] main input debug: Buffering 100%
+[000000796688caf0] main input debug: Stream buffering done (1250 ms in 0 ms)
+[00000079678fc8f0] main spu text debug: looking for text renderer module matching "any": 3 candidates
+[00000079678fc8f0] main spu text debug: using text renderer module "freetype"
+[00000079678fd4f0] main scale debug: looking for video converter module matching "any": 16 candidates
+[00000079678fd4f0] swscale scale debug: 32x32 (32x32) chroma: YUVA -> 16x16 (16x16) chroma: RGBA with scaling using Bicubic (good quality)
+[00000079678fd4f0] main scale debug: using video converter module "swscale"
+[00000079678fd8f0] main scale debug: looking for video converter module matching "any": 16 candidates
+[00000079678fd8f0] yuvp scale debug: YUVP to YUVA converter
+[00000079678fd8f0] main scale debug: using video converter module "yuvp"
+[00000079668f40f0] main video output debug: Deinterlacing available
+[00000079668f40f0] main video output debug: deinterlace -1, mode auto, is_needed 0
+[00000079668a0ff0] main window debug: looking for vout window module matching "any": 1 candidates
+[00000079668a0ff0] macosx window debug: Opening video window
+[00000079668a0ff0] macosx window error: Cannot create vout as Mac OS X interface was not found
+[00000079668a0ff0] main window debug: no vout window modules matched
+[00000079668f40f0] main video output debug: Opening vout display wrapper
+[00000079679083f0] main vout display debug: looking for vout display module matching "dummy": 7 candidates
+[00000079679083f0] main vout display debug: using vout display module "vdummy"
+[00000079668f40f0] main video output debug: original format sz 320x192, of (0,0), vsz 320x180, 4cc I420, sar 1:1, msk r0x0 g0x0 b0x0
+[00000079679083f0] main vout display debug: VoutDisplayEvent 'resize' 320x180
+[00000079678fc8f0] main spu text debug: removing module "freetype"
+[00000079678fc8f0] main spu text debug: looking for text renderer module matching "any": 3 candidates
+[00000079678fc8f0] main spu text debug: using text renderer module "freetype"
+[00000079678fc4f0] main decoder debug: Received first picture
+[000000796688caf0] main input debug: Decoder wait done in 18 ms
+[00000079678fdcf0] main blend debug: looking for video blending module matching "any": 1 candidates
+[00000079678fdcf0] main blend debug: using video blending module "blend"
+[00000079679083f0] main vout display debug: auto hiding mouse cursor
+[000000796688caf0] main input debug: EOF reached
+[000000796688caf0] main input debug: waiting decoder fifos to empty
+[000000796688caf0] main input debug: waiting decoder fifos to empty
+[000000796688caf0] main input debug: waiting decoder fifos to empty
+[000000796688caf0] main input debug: waiting decoder fifos to empty
+[000000796688caf0] main input debug: waiting decoder fifos to empty
+[000000796688caf0] main input debug: waiting decoder fifos to empty
+[000000796688caf0] main input debug: waiting decoder fifos to empty
+[000000796688caf0] main input debug: waiting decoder fifos to empty
+[000000796688caf0] main input debug: waiting decoder fifos to empty
+[00000079678fc4f0] main decoder debug: killing decoder fourcc `mp4v'
+[00000079678fc4f0] main decoder debug: removing module "avcodec"
+[00000079668d00f0] main playlist debug: saving a free vout
+[00000079668d00f0] main playlist debug: reusing provided vout
+[0000007966899970] main demux debug: removing module "mp4"
+[0000007966899970] mp4 demux debug: freeing all memory
+[000000796688caf0] main input debug: Program doesn't contain anymore ES
+[0000007966899b30] main stream debug: removing module "record"
+[000000796689a230] main stream debug: removing module "cache_read"
+[000000796689a3f0] main stream debug: removing module "filesystem"
+[00000079668d00f0] main playlist debug: dead input
+[00000079668d00f0] main playlist debug: changing item without a request (current 0/1)
+[00000079668d00f0] main playlist debug: nothing to play
+[00000079668d00f0] main playlist: end of playlist, exiting
+[0000000104fa0df0] main libvlc debug: exiting
+[00000079668f40f0] main video output debug: destroying useless vout
+[00000079678fdcf0] main blend debug: removing module "blend"
+[00000079679083f0] main vout display debug: removing module "vdummy"
+[0000000104fa0df0] main libvlc debug: exiting
+[00000079678fc8f0] main spu text debug: removing module "freetype"
+[0000000104fa0df0] main libvlc debug: removing all interfaces
+[0000000104fac5c0] main interface debug: removing module "dummy"
+[0000000104fac480] main interface debug: removing module "hotkeys"
+[00000079668d00f0] main playlist debug: destroying
+[00000079668d00f0] main playlist debug: deactivating the playlist
+[00000079678fd8f0] main scale debug: removing module "yuvp"
+[00000079678fd4f0] main scale debug: removing module "swscale"
+[00000079678fc0f0] main audio output debug: removing module "adummy"
+[00000079668d00f0] main playlist debug: deleting item `build-smoke.mp4'
+[00000079668d00f0] main playlist debug: deleting item `Playlist'
+[0000000104fa2240] main keystore debug: removing module "memory"

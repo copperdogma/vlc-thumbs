@@ -1,0 +1,138 @@
+{
+  "scope": "Owned AVC multi-video Matroska identity/order regression and count mismatch rejection; not general codec qualification",
+  "helper_sha256": "be995050b3593dba49b55c743feb30fd8b149bc3c8f5351cacf074f8ddbbe7d6",
+  "source_sha256": "2e244263057c72ca4348e90698afb1ef4194902b8c7744ee7b7b5ac4c823460f",
+  "checks": [
+    {
+      "media": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/story-002/two-tracks.mkv",
+      "ordinal": 0,
+      "pass": true,
+      "header": {
+        "version": 2,
+        "ok": true,
+        "sampling": "keyframe",
+        "requested_us": 4000000,
+        "actual_us": 0,
+        "width": 320,
+        "height": 180,
+        "channels": 4,
+        "payload_bytes": 230400,
+        "video_ordinal": 0,
+        "decoded_frames": 1,
+        "timeline_origin_us": 0,
+        "video_track_number": 1
+      },
+      "elapsed_ms": 33.42070896178484,
+      "peak_sampled_rss_kib": 5152,
+      "peak_sampled_cpu_percent": 0.0,
+      "payload_sha256": "e35427d90d7d2d8e2b4ccaa3c40bbd1d052931787c3d80060b5795c42eacb11b",
+      "first_rgb": [
+        251,
+        0,
+        0
+      ]
+    },
+    {
+      "media": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/fixtures/story-002/two-tracks.mkv",
+      "ordinal": 1,
+      "pass": true,
+      "header": {
+        "version": 2,
+        "ok": true,
+        "sampling": "keyframe",
+        "requested_us": 4000000,
+        "actual_us": 0,
+        "width": 320,
+        "height": 180,
+        "channels": 4,
+        "payload_bytes": 230400,
+        "video_ordinal": 1,
+        "decoded_frames": 1,
+        "timeline_origin_us": 0,
+        "video_track_number": 2
+      },
+      "elapsed_ms": 33.8506669504568,
+      "peak_sampled_rss_kib": 5264,
+      "peak_sampled_cpu_percent": 0.0,
+      "payload_sha256": "125f331bd57584a6b34f11d18c68fbf1d0f9673590e07bf52c9965f4f3755016",
+      "first_rgb": [
+        1,
+        0,
+        252
+      ]
+    },
+    {
+      "media": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/matroska-track-mapped-002/reversed-tracks.mkv",
+      "ordinal": 0,
+      "pass": true,
+      "header": {
+        "version": 2,
+        "ok": true,
+        "sampling": "keyframe",
+        "requested_us": 4000000,
+        "actual_us": 0,
+        "width": 320,
+        "height": 180,
+        "channels": 4,
+        "payload_bytes": 230400,
+        "video_ordinal": 0,
+        "decoded_frames": 1,
+        "timeline_origin_us": 0,
+        "video_track_number": 1
+      },
+      "elapsed_ms": 35.18787492066622,
+      "peak_sampled_rss_kib": 5152,
+      "peak_sampled_cpu_percent": 0.0,
+      "payload_sha256": "e35427d90d7d2d8e2b4ccaa3c40bbd1d052931787c3d80060b5795c42eacb11b",
+      "first_rgb": [
+        251,
+        0,
+        0
+      ]
+    },
+    {
+      "media": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/matroska-track-mapped-002/reversed-tracks.mkv",
+      "ordinal": 1,
+      "pass": true,
+      "header": {
+        "version": 2,
+        "ok": true,
+        "sampling": "keyframe",
+        "requested_us": 4000000,
+        "actual_us": 0,
+        "width": 320,
+        "height": 180,
+        "channels": 4,
+        "payload_bytes": 230400,
+        "video_ordinal": 1,
+        "decoded_frames": 1,
+        "timeline_origin_us": 0,
+        "video_track_number": 2
+      },
+      "elapsed_ms": 33.59408292453736,
+      "peak_sampled_rss_kib": 14656,
+      "peak_sampled_cpu_percent": 0.0,
+      "payload_sha256": "125f331bd57584a6b34f11d18c68fbf1d0f9673590e07bf52c9965f4f3755016",
+      "first_rgb": [
+        1,
+        0,
+        252
+      ]
+    },
+    {
+      "case": "native-count-mismatch",
+      "pass": true,
+      "header": {
+        "version": 2,
+        "ok": false,
+        "error": "ambiguous_track_mapping"
+      },
+      "elapsed_ms": 17.595374956727028,
+      "peak_sampled_rss_kib": 5248,
+      "peak_sampled_cpu_percent": 0.0,
+      "payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "pass": true,
+  "reordered_sha256": "8310428d70583b142158ffa1a9045cbbf9c36d35558d85a004985e9dc3baab89"
+}

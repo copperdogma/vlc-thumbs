@@ -1,0 +1,97 @@
+{
+  "date": "2026-10-03",
+  "source_url": "https://code.videolan.org/videolan/vlc.git",
+  "tag": "3.0.24",
+  "tag_object": "cbb63ead663f05413847e8712cbe0eb6833083ff",
+  "commit": "6de05adcbaf2e8b85fe86aad4169393098628119",
+  "checkout": "work/upstream/vlc-3.0.24",
+  "checkout_pristine": true,
+  "qualification": "Pinned source inspection baseline; not a qualified build or product delivery decision.",
+  "development_comparison": {
+    "branch": "master",
+    "commit": "da266629fdffc4bee4560d9c818efd16217efeda",
+    "verification": "git ls-remote primary origin matches SHA-pinned VideoLAN GitHub mirror inspected by bounded research agent."
+  },
+  "inspected_files": [
+    {
+      "path": "COPYING",
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+    },
+    {
+      "path": "COPYING.LIB",
+      "sha256": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551"
+    },
+    {
+      "path": "modules/gui/macosx/VLCSlider.m",
+      "sha256": "a9c25a8d381bb893a28a7739c27ee3e6a81c357f3e907da5b57a6bd8fef8c95a"
+    },
+    {
+      "path": "modules/gui/macosx/VLCSliderCell.m",
+      "sha256": "5320bcbdfb02ea14ca9cd2040bde53cc9ceb888985aa323b26884d719d189d62"
+    },
+    {
+      "path": "modules/gui/macosx/VLCControlsBarCommon.m",
+      "sha256": "13df7de8c28dbd130d1f2ab143b8404e684dbc5e0ec1638cbc34109b25345791"
+    },
+    {
+      "path": "modules/gui/macosx/VLCFSPanelController.m",
+      "sha256": "9d9b79699227a08770b76fecc341cdbbf6f27fa6b5541114fadbe1beb07de037"
+    },
+    {
+      "path": "modules/gui/macosx/UI/MainWindow.xib",
+      "sha256": "796e0ab1d5f4977a8717e8a0dad9886ad32d67d7ca10ddf942bbeb62f68b6b4a"
+    },
+    {
+      "path": "modules/gui/macosx/UI/DetachedVideoWindow.xib",
+      "sha256": "66f83278886a894981dcbe486474da6f2fdf69530f05691e750398a6c05584b6"
+    },
+    {
+      "path": "modules/gui/macosx/UI/VLCFullScreenPanel.xib",
+      "sha256": "17c2f45ec00173ba7f873de7c28ee43e2755079451d0ca06da9180ddb242cdb9"
+    },
+    {
+      "path": "modules/gui/macosx/VLCBookmarksWindowController.m",
+      "sha256": "0ed3971ef8111c7c7d836434d990a060e17e2e94d777c4c688c1af239d02b6f2"
+    },
+    {
+      "path": "modules/gui/macosx/VLCExtensionsDialogProvider.m",
+      "sha256": "af5c33a2579d7853a89597cc7a909a458605c7d7525631adcc38d28a13b9db6f"
+    },
+    {
+      "path": "modules/gui/macosx/VLCVoutWindowController.m",
+      "sha256": "6d792a640c9896e7e31931cbe9fe39c6e1a61f61cd4f5dbd1f6e4c498baf9dc7"
+    },
+    {
+      "path": "modules/lua/libs/dialog.c",
+      "sha256": "daa981b229e7dad1586413e30e3deb3d3cb35d7a0bb134ee8b933d700fd30f7e"
+    },
+    {
+      "path": "modules/lua/libs/input.c",
+      "sha256": "798e6fae93a7b5f15c8b0b69edbdebf3fe50463e9440735f57d74633821c62dd"
+    },
+    {
+      "path": "share/lua/README.txt",
+      "sha256": "0bd966e29bdaab793ba3ea3a872ca933d84731ce6c63bbd350707e769c03a335"
+    },
+    {
+      "path": "src/input/control.c",
+      "sha256": "5548bf2f13fffa231cb7e01b0c8ed2629189bfcb49b3d842b6bd102972e2777f"
+    },
+    {
+      "path": "src/input/input.c",
+      "sha256": "bba206618dfaf18c95bd329f8255a622b6f221be581d69258d38eea3456ef29d"
+    },
+    {
+      "path": "include/vlc/libvlc_media_player.h",
+      "sha256": "baf3ceb5c6e192f0f987dbb8387ad4371d1c1512af56ef280dc7ab165df0ce50"
+    },
+    {
+      "path": "extras/package/macosx/build.sh",
+      "sha256": "ac8bfa35e96012bb14e12649dd01cb23960eafcb03dacd0d44d655e418ddf589"
+    },
+    {
+      "path": "contrib/src/main.mak",
+      "sha256": "505cc5e7822c9dd0cd09b2963f9eb2e060f9f928e74d017aac4dd1019d078de1"
+    }
+  ]
+}

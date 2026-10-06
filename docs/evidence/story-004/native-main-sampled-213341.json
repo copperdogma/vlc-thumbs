@@ -1,0 +1,202 @@
+{
+  "scope": "Native physical-pointer main-window hover, owned screenshots inspected in first run. Trace elapsed is service assignment diagnostic, not compositor latency. Second independent app launch serves requested samples with no decoder reads; proactive cache loading makes reported tier memory, separate direct disk service proof retained.",
+  "probe_sha256": "8d5f4b96d84b4a4e23010e6eb37afdbd1c41548edc83ef87e9b41316b4c75b0a",
+  "runs": [
+    {
+      "raw_evidence": "work/validation/story004/native-main-sampled-001",
+      "collection_completed": true,
+      "error": null,
+      "passed": true,
+      "requests": [
+        {
+          "label": "settled-0",
+          "passed": true,
+          "target_seconds": 7,
+          "actual_us": 6000000,
+          "cache": "miss",
+          "elapsed_ms": 253.05458333605202,
+          "source_read_calls": 2
+        },
+        {
+          "label": "settled-1",
+          "passed": true,
+          "target_seconds": 1,
+          "actual_us": 0,
+          "cache": "miss",
+          "elapsed_ms": 187.5370000016119,
+          "source_read_calls": 1
+        },
+        {
+          "label": "settled-2",
+          "passed": true,
+          "target_seconds": 9,
+          "actual_us": 8000000,
+          "cache": "miss",
+          "elapsed_ms": 199.13462499971502,
+          "source_read_calls": 3
+        },
+        {
+          "label": "settled-3",
+          "passed": true,
+          "target_seconds": 0,
+          "actual_us": 0,
+          "cache": "memory",
+          "elapsed_ms": 64.240666666592,
+          "source_read_calls": 0
+        },
+        {
+          "label": "settled-4",
+          "passed": true,
+          "target_seconds": 7,
+          "actual_us": 6000000,
+          "cache": "memory",
+          "elapsed_ms": 77.69099999859463,
+          "source_read_calls": 0
+        },
+        {
+          "label": "settled-5",
+          "passed": true,
+          "target_seconds": 1,
+          "actual_us": 0,
+          "cache": "memory",
+          "elapsed_ms": 93.41950000089128,
+          "source_read_calls": 0
+        },
+        {
+          "label": "settled-6",
+          "passed": true,
+          "target_seconds": 9,
+          "actual_us": 8000000,
+          "cache": "memory",
+          "elapsed_ms": 90.68516666957294,
+          "source_read_calls": 0
+        },
+        {
+          "label": "settled-7",
+          "passed": true,
+          "target_seconds": 0,
+          "actual_us": 0,
+          "cache": "memory",
+          "elapsed_ms": 66.86041666762321,
+          "source_read_calls": 0
+        },
+        {
+          "label": "rapid-latest",
+          "passed": true,
+          "target_seconds": 15,
+          "actual_us": 14000000,
+          "cache": "miss",
+          "elapsed_ms": 255.436749997898,
+          "source_read_calls": 2
+        },
+        {
+          "label": "reenter-tall-target",
+          "passed": true,
+          "target_seconds": 15,
+          "actual_us": 14000000,
+          "cache": "memory",
+          "elapsed_ms": 98.30658333521569,
+          "source_read_calls": 0
+        }
+      ]
+    },
+    {
+      "raw_evidence": "work/validation/story004/native-main-sampled-002",
+      "collection_completed": true,
+      "error": null,
+      "passed": true,
+      "requests": [
+        {
+          "label": "settled-0",
+          "passed": true,
+          "target_seconds": 7,
+          "actual_us": 6000000,
+          "cache": "memory",
+          "elapsed_ms": 67.20475000111037,
+          "source_read_calls": 0
+        },
+        {
+          "label": "settled-1",
+          "passed": true,
+          "target_seconds": 1,
+          "actual_us": 0,
+          "cache": "memory",
+          "elapsed_ms": 62.42808333263383,
+          "source_read_calls": 0
+        },
+        {
+          "label": "settled-2",
+          "passed": true,
+          "target_seconds": 9,
+          "actual_us": 8000000,
+          "cache": "memory",
+          "elapsed_ms": 83.58145833335584,
+          "source_read_calls": 0
+        },
+        {
+          "label": "settled-3",
+          "passed": true,
+          "target_seconds": 0,
+          "actual_us": 0,
+          "cache": "memory",
+          "elapsed_ms": 90.44575000007171,
+          "source_read_calls": 0
+        },
+        {
+          "label": "settled-4",
+          "passed": true,
+          "target_seconds": 7,
+          "actual_us": 6000000,
+          "cache": "memory",
+          "elapsed_ms": 61.076166664861375,
+          "source_read_calls": 0
+        },
+        {
+          "label": "settled-5",
+          "passed": true,
+          "target_seconds": 1,
+          "actual_us": 0,
+          "cache": "memory",
+          "elapsed_ms": 85.34641666847165,
+          "source_read_calls": 0
+        },
+        {
+          "label": "settled-6",
+          "passed": true,
+          "target_seconds": 9,
+          "actual_us": 8000000,
+          "cache": "memory",
+          "elapsed_ms": 82.71283333306201,
+          "source_read_calls": 0
+        },
+        {
+          "label": "settled-7",
+          "passed": true,
+          "target_seconds": 0,
+          "actual_us": 0,
+          "cache": "memory",
+          "elapsed_ms": 68.56633333154605,
+          "source_read_calls": 0
+        },
+        {
+          "label": "rapid-latest",
+          "passed": true,
+          "target_seconds": 15,
+          "actual_us": 14000000,
+          "cache": "memory",
+          "elapsed_ms": 162.4540833327046,
+          "source_read_calls": 0
+        },
+        {
+          "label": "reenter-tall-target",
+          "passed": true,
+          "target_seconds": 15,
+          "actual_us": 14000000,
+          "cache": "memory",
+          "elapsed_ms": 108.97870833287016,
+          "source_read_calls": 0
+        }
+      ]
+    }
+  ]
+}

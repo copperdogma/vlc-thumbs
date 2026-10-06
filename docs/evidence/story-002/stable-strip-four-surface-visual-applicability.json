@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "candidate": "VLCStableStrip061929.app",
+  "current_production": "canonical original 022512 restored; no prototype retained",
+  "scope": "Bounded visual applicability across the four timeline surfaces; not full acceptance or performance qualification",
+  "qualified": false,
+  "surfaces": {
+    "main_window": {
+      "summary": "Six physical-pointer actions passed: left, middle, right x=1536, return, leave, re-enter. Stable host identity/bounds, hide/reveal, paused media time zero and source integrity were preserved. Root visually confirmed captions and clearing; screenshots capture the owned parent+child window group, not an isolated panel.",
+      "evidence": "docs/evidence/story-002/stable-strip-main-visual-results.json"
+    },
+    "detached": {
+      "summary": "Six observations passed with stable host, leave/hide and integrity true; paused media time zero. Root visually confirmed right endpoint caption 01:30 / Keyframe 1:28.",
+      "raw_result": "work/validation/story002/stable-strip-surfaces-001/detached/results.json"
+    },
+    "custom_fullscreen": {
+      "initial_attempts": {
+        "summary": "Custom 001 and 002 failed at the initial left endpoint because no visible stable-strip host was found. AX reported the actual fullscreen slider rectangle as x=641,y=918,w=445,h=17. Cause is unknown.",
+        "raw_results": [
+          "work/validation/story002/stable-strip-surfaces-001/custom/results.json",
+          "work/validation/story002/stable-strip-surfaces-002/custom/results.json"
+        ]
+      },
+      "seeded_sequence": {
+        "summary": "After seeding middle, left/middle/right/return/leave/re-enter all had visible presentation, stable host, leave/hide and integrity true; paused at zero. Host bounds 795x240 at (466,690). Root visually confirmed right endpoint 01:30 / Keyframe 1:28.",
+        "raw_result": "work/validation/story002/stable-strip-surfaces-diagnostic-003/custom/results.json"
+      }
+    },
+    "native_fullscreen": {
+      "seeded_sequence": {
+        "summary": "After seeding middle, left/middle/right/return/leave/re-enter all had visible presentation, stable host, leave/hide and integrity true; paused at zero. Host bounds 795x240 at (466,697). Root visually confirmed return-middle 00:45 / Keyframe 0:44 and clearing.",
+        "raw_result": "work/validation/story002/stable-strip-surfaces-diagnostic-003/native/results.json"
+      }
+    }
+  },
+  "limitations": [
+    "An initial fullscreen reveal recorded alpha=0 before the seeded sequence; this does not prove the cause of earlier no-host failures.",
+    "These results establish four-surface visual applicability only. Fullscreen first-entry reliability, resize, playing-media behavior, ordinary playback/control, accessibility, resources and performance remain unqualified on this prototype.",
+    "No source/app changes were made and no acceptance checkbox is closed."
+  ]
+}

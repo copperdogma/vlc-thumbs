@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "run": "control-pilot-complete-strip-002",
+  "scope": "Matched paused main-window ordinary light-style knob response; not hover-to-thumbnail latency or completed seek",
+  "pilot": true,
+  "collection_valid": false,
+  "completed_collection": false,
+  "qualified": false,
+  "observed_counts": {
+    "baseline": 4,
+    "feature": 5
+  },
+  "collection_error": "Expected new light-style knob center missing",
+  "changed_inputs": [],
+  "integrity_unchanged": true,
+  "failure": {
+    "arm": "feature",
+    "label": "round-02-per-frame-click-001",
+    "requested_pointer_x": 1090,
+    "requested_target_x": 1090,
+    "input_routed": true,
+    "ownership_pre_post": [
+      1,
+      1
+    ],
+    "knob_pixel_center_pre": 950,
+    "knob_pixel_center_settled": 950,
+    "post_input_pixel_centers": [
+      950
+    ],
+    "failure": [
+      "Expected new light-style knob center missing"
+    ],
+    "ax_value_pre": 5585.9970703125,
+    "ax_value_post": 6651.44580078125,
+    "ax_value_changed": true,
+    "observation_bound_ms": 900,
+    "complete_presentations": 1
+  },
+  "no_salvage": "The cohort ended at baseline 4 / feature 5. No partial p95, effect estimate, or acceptance result is reported.",
+  "candidate_at_run": "072539 reversible candidate; the later 132643 controller experiment was not used in this run.",
+  "raw_result": "work/validation/story002/control-pilot-complete-strip-002/raw/results.json",
+  "later_build": {
+    "manifest": "app-build-controller-16ms-experiment-132643.json",
+    "controller_sha256": "47b31fa472d778e0c48b304b6c07cf6e7f7a7a62cade31f42943093f4d093690",
+    "status": "Experimental, not performance-qualified",
+    "compared_with": "app-build-stable-strip-candidate-072539.json",
+    "manifest_comparison": "Only controller source input differs; helper/service/archive dependencies match. Expected bundle output changes are VLC, libmacosx_plugin.dylib, and plugins.dat."
+  }
+}

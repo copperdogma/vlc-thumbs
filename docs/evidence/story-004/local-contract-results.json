@@ -1,0 +1,2238 @@
+{
+  "scope": "Local generated-media and isolated-cache contracts, not native/NAS/playback qualification",
+  "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+  "sources_sha256": {
+    "src/macosx/VLCThumbnailScheduler.m": "634a6263a641807b2f9c47bf9c66e742f57f4f1c25823deee72f6fc119491fe6",
+    "src/macosx/VLCTimelineContext.h": "651c0dcf20eb90eeda70b1547bf51689b3fdd6fefd7a5cd74507a02d79b73244",
+    "src/macosx/VLCThumbnailCache.h": "37f04f280042d0cf60862c6278ee791c82b25aaafe4d590d987394ed6f3c3d07",
+    "src/macosx/VLCTimelineInteractionController.h": "cd13975b82961511db69cde96c7dcf68221a576999376944e23dfb021c9789fc",
+    "src/macosx/VLCTimelineGeometry.h": "3b2de60bba6b5feade74387816aa0406d7fbd085469810e1eeafbe7594d07334",
+    "src/macosx/VLCThumbnailService.h": "655747ebac912c9410156c4d204aff33715c22ae764b24d749d416e2c86919ff",
+    "src/macosx/VLCThumbnailWorker.h": "70c89178a08f46802793312381a39da118a21c62b9b003fda2fc2d724b74b570",
+    "src/macosx/VLCTimelineContext.m": "007285760d6d1825614a72ab92c57e13bf94a1b1c79e7c0daeb881081aa88430",
+    "src/macosx/VLCThumbnailScheduler.h": "3358d1078438a65971e67c116d7f1400c69b8033a700427faf7a480419e3c5ec",
+    "src/macosx/VLCTimelineInteractionController.m": "46caca8f470beb2bb28661c1ce9d347f782131b492ce8130a24a60c0e70986bc",
+    "src/macosx/VLCThumbnailCache.m": "692b3514bf19b3f3b8afcb3dbf7f4b0828c416f54d2458f2e3c5a7a8afeb651c",
+    "src/macosx/VLCThumbnailWorker.m": "0a782004ca3b1f9412d87cdb4077c2e484d16dcdc88f28492247733b2fef2be3",
+    "src/macosx/VLCThumbnailService.m": "1cc0b7f5d9e5b5e171d233764b89ddddd69671d006e4ca1caeca430f1d2af34e",
+    "src/thumbnail-helper/thumbnail-helper.c": "79affe527d956cfc4f9587fc016e2295a6604ce3d47e055d185037dd429ad769",
+    "tests/story-004/fake-worker.py": "f16d0b072f013c651ba3f52d948a64d9f160c518e4d93018b9e10f800ea4b968",
+    "tests/story-004/service_contract.m": "1f30becf74b882ebe4bd18f8aedba36a2e880624748f5818cb9bedb07bff7032",
+    "tests/story-004/cache_contract.m": "25d2d17ce503680e5a3188a9af0c0c637b7304b8229993d8d35337e18fa42d6e",
+    "tests/story-004/preparation_smoke.m": "a34eaf81aeb587f578092d11c043b42c8561a9589a1afc57693f463c1283f40c"
+  },
+  "helper_sha256": "b23a8cd6f6f94133b25f1b9b5bcc01e1e0171177f8b534eb59a9a3b3e381472e",
+  "helper_contract": {
+    "scope": "Generated fixture v2/v3 parity, out-of-order state reset, protocol, mutation, idle survival. No NAS/native proof.",
+    "helper_sha256": "b23a8cd6f6f94133b25f1b9b5bcc01e1e0171177f8b534eb59a9a3b3e381472e",
+    "fixtures": [
+      {
+        "name": "standard.mp4",
+        "ready": {
+          "version": 3,
+          "type": "ready",
+          "ok": true,
+          "duration_us": 60000000,
+          "bytes_read": 130378,
+          "read_calls": 3,
+          "seek_calls": 0,
+          "open_count": 1,
+          "operation_us": 4720
+        },
+        "samples": [
+          {
+            "header": {
+              "version": 3,
+              "id": 1,
+              "ok": true,
+              "sampling": "keyframe",
+              "requested_us": 7000000,
+              "actual_us": 6000000,
+              "width": 320,
+              "height": 180,
+              "channels": 4,
+              "payload_bytes": 230400,
+              "video_ordinal": 0,
+              "decoded_frames": 1,
+              "timeline_origin_us": 0,
+              "video_track_number": -1,
+              "bytes_read": 234531,
+              "read_calls": 5,
+              "seek_calls": 1,
+              "request_bytes_read": 104153,
+              "request_read_calls": 2,
+              "request_seek_calls": 1,
+              "open_count": 1,
+              "operation_us": 3075
+            },
+            "pixel_sha256": "daecbf977df2a248ac5206f4476c268321064308692cf89d36b4a1a14b4929f6"
+          },
+          {
+            "header": {
+              "version": 3,
+              "id": 2,
+              "ok": true,
+              "sampling": "keyframe",
+              "requested_us": 1000000,
+              "actual_us": 0,
+              "width": 320,
+              "height": 180,
+              "channels": 4,
+              "payload_bytes": 230400,
+              "video_ordinal": 0,
+              "decoded_frames": 1,
+              "timeline_origin_us": 0,
+              "video_track_number": -1,
+              "bytes_read": 315672,
+              "read_calls": 6,
+              "seek_calls": 2,
+              "request_bytes_read": 81141,
+              "request_read_calls": 1,
+              "request_seek_calls": 1,
+              "open_count": 1,
+              "operation_us": 2361
+            },
+            "pixel_sha256": "ddb1bb58a980f8d37971e71d77d22648ad049765d54113d844bf88c574d68da6"
+          },
+          {
+            "header": {
+              "version": 3,
+              "id": 3,
+              "ok": true,
+              "sampling": "keyframe",
+              "requested_us": 9000000,
+              "actual_us": 8000000,
+              "width": 320,
+              "height": 180,
+              "channels": 4,
+              "payload_bytes": 230400,
+              "video_ordinal": 0,
+              "decoded_frames": 1,
+              "timeline_origin_us": 0,
+              "video_track_number": -1,
+              "bytes_read": 468956,
+              "read_calls": 9,
+              "seek_calls": 3,
+              "request_bytes_read": 153284,
+              "request_read_calls": 3,
+              "request_seek_calls": 1,
+              "open_count": 1,
+              "operation_us": 2884
+            },
+            "pixel_sha256": "2ec93d48500a082465006b34cd1530e5a82325659187bb1bac12517157d898d4"
+          },
+          {
+            "header": {
+              "version": 3,
+              "id": 4,
+              "ok": true,
+              "sampling": "keyframe",
+              "requested_us": 0,
+              "actual_us": 0,
+              "width": 320,
+              "height": 180,
+              "channels": 4,
+              "payload_bytes": 230400,
+              "video_ordinal": 0,
+              "decoded_frames": 1,
+              "timeline_origin_us": 0,
+              "video_track_number": -1,
+              "bytes_read": 550097,
+              "read_calls": 10,
+              "seek_calls": 4,
+              "request_bytes_read": 81141,
+              "request_read_calls": 1,
+              "request_seek_calls": 1,
+              "open_count": 1,
+              "operation_us": 2238
+            },
+            "pixel_sha256": "ddb1bb58a980f8d37971e71d77d22648ad049765d54113d844bf88c574d68da6"
+          },
+          {
+            "header": {
+              "version": 3,
+              "id": 5,
+              "ok": true,
+              "sampling": "keyframe",
+              "requested_us": 7000000,
+              "actual_us": 6000000,
+              "width": 320,
+              "height": 180,
+              "channels": 4,
+              "payload_bytes": 230400,
+              "video_ordinal": 0,
+              "decoded_frames": 1,
+              "timeline_origin_us": 0,
+              "video_track_number": -1,
+              "bytes_read": 654250,
+              "read_calls": 12,
+              "seek_calls": 5,
+              "request_bytes_read": 104153,
+              "request_read_calls": 2,
+              "request_seek_calls": 1,
+              "open_count": 1,
+              "operation_us": 2410
+            },
+            "pixel_sha256": "daecbf977df2a248ac5206f4476c268321064308692cf89d36b4a1a14b4929f6"
+          }
+        ]
+      },
+      {
+        "name": "standard.mkv",
+        "ready": {
+          "version": 3,
+          "type": "ready",
+          "ok": true,
+          "duration_us": 60000000,
+          "bytes_read": 424310,
+          "read_calls": 12,
+          "seek_calls": 0,
+          "open_count": 1,
+          "operation_us": 10788
+        },
+        "samples": [
+          {
+            "header": {
+              "version": 3,
+              "id": 1,
+              "ok": true,
+              "sampling": "keyframe",
+              "requested_us": 7000000,
+              "actual_us": 6000000,
+              "width": 320,
+              "height": 180,
+              "channels": 4,
+              "payload_bytes": 230400,
+              "video_ordinal": 0,
+              "decoded_frames": 1,
+              "timeline_origin_us": 0,
+              "video_track_number": 1,
+              "bytes_read": 529112,
+              "read_calls": 15,
+              "seek_calls": 3,
+              "request_bytes_read": 104802,
+              "request_read_calls": 3,
+              "request_seek_calls": 3,
+              "open_count": 1,
+              "operation_us": 3203
+            },
+            "pixel_sha256": "daecbf977df2a248ac5206f4476c268321064308692cf89d36b4a1a14b4929f6"
+          },
+          {
+            "header": {
+              "version": 3,
+              "id": 2,
+              "ok": true,
+              "sampling": "keyframe",
+              "requested_us": 1000000,
+              "actual_us": 0,
+              "width": 320,
+              "height": 180,
+              "channels": 4,
+              "payload_bytes": 230400,
+              "video_ordinal": 0,
+              "decoded_frames": 1,
+              "timeline_origin_us": 0,
+              "video_track_number": 1,
+              "bytes_read": 610278,
+              "read_calls": 17,
+              "seek_calls": 4,
+              "request_bytes_read": 81166,
+              "request_read_calls": 2,
+              "request_seek_calls": 1,
+              "open_count": 1,
+              "operation_us": 2488
+            },
+            "pixel_sha256": "ddb1bb58a980f8d37971e71d77d22648ad049765d54113d844bf88c574d68da6"
+          },
+          {
+            "header": {
+              "version": 3,
+              "id": 3,
+              "ok": true,
+              "sampling": "keyframe",
+              "requested_us": 9000000,
+              "actual_us": 8000000,
+              "width": 320,
+              "height": 180,
+              "channels": 4,
+              "payload_bytes": 230400,
+              "video_ordinal": 0,
+              "decoded_frames": 1,
+              "timeline_origin_us": 0,
+              "video_track_number": 1,
+              "bytes_read": 710678,
+              "read_calls": 19,
+              "seek_calls": 5,
+              "request_bytes_read": 100400,
+              "request_read_calls": 2,
+              "request_seek_calls": 1,
+              "open_count": 1,
+              "operation_us": 2975
+            },
+            "pixel_sha256": "2ec93d48500a082465006b34cd1530e5a82325659187bb1bac12517157d898d4"
+          },
+          {
+            "header": {
+              "version": 3,
+              "id": 4,
+              "ok": true,
+              "sampling": "keyframe",
+              "requested_us": 0,
+              "actual_us": 0,
+              "width": 320,
+              "height": 180,
+              "channels": 4,
+              "payload_bytes": 230400,
+              "video_ordinal": 0,
+              "decoded_frames": 1,
+              "timeline_origin_us": 0,
+              "video_track_number": 1,
+              "bytes_read": 791844,
+              "read_calls": 21,
+              "seek_calls": 6,
+              "request_bytes_read": 81166,
+              "request_read_calls": 2,
+              "request_seek_calls": 1,
+              "open_count": 1,
+              "operation_us": 2245
+            },
+            "pixel_sha256": "ddb1bb58a980f8d37971e71d77d22648ad049765d54113d844bf88c574d68da6"
+          },
+          {
+            "header": {
+              "version": 3,
+              "id": 5,
+              "ok": true,
+              "sampling": "keyframe",
+              "requested_us": 7000000,
+              "actual_us": 6000000,
+              "width": 320,
+              "height": 180,
+              "channels": 4,
+              "payload_bytes": 230400,
+              "video_ordinal": 0,
+              "decoded_frames": 1,
+              "timeline_origin_us": 0,
+              "video_track_number": 1,
+              "bytes_read": 896030,
+              "read_calls": 23,
+              "seek_calls": 7,
+              "request_bytes_read": 104186,
+              "request_read_calls": 2,
+              "request_seek_calls": 1,
+              "open_count": 1,
+              "operation_us": 2503
+            },
+            "pixel_sha256": "daecbf977df2a248ac5206f4476c268321064308692cf89d36b4a1a14b4929f6"
+          }
+        ]
+      },
+      {
+        "name": "nonzero.mkv",
+        "ready": {
+          "version": 3,
+          "type": "ready",
+          "ok": true,
+          "duration_us": 17000000,
+          "bytes_read": 65536,
+          "read_calls": 2,
+          "seek_calls": 0,
+          "open_count": 1,
+          "operation_us": 1281
+        },
+        "samples": [
+          {
+            "header": {
+              "version": 3,
+              "id": 1,
+              "ok": true,
+              "sampling": "keyframe",
+              "requested_us": 7000000,
+              "actual_us": 5000000,
+              "width": 320,
+              "height": 180,
+              "channels": 4,
+              "payload_bytes": 230400,
+              "video_ordinal": 0,
+              "decoded_frames": 1,
+              "timeline_origin_us": 0,
+              "video_track_number": 1,
+              "bytes_read": 1849383,
+              "read_calls": 60,
+              "seek_calls": 3,
+              "request_bytes_read": 1783847,
+              "request_read_calls": 58,
+              "request_seek_calls": 3,
+              "open_count": 1,
+              "operation_us": 2529
+            },
+            "pixel_sha256": "a77655d0b08effa1d6bdbd17efb113847829192432eeeef972c9e3605c032c38"
+          },
+          {
+            "header": {
+              "version": 3,
+              "id": 2,
+              "ok": true,
+              "sampling": "keyframe",
+              "requested_us": 1000000,
+              "actual_us": 5000000,
+              "width": 320,
+              "height": 180,
+              "channels": 4,
+              "payload_bytes": 230400,
+              "video_ordinal": 0,
+              "decoded_frames": 1,
+              "timeline_origin_us": 0,
+              "video_track_number": 1,
+              "bytes_read": 3633182,
+              "read_calls": 117,
+              "seek_calls": 4,
+              "request_bytes_read": 1783799,
+              "request_read_calls": 57,
+              "request_seek_calls": 1,
+              "open_count": 1,
+              "operation_us": 1912
+            },
+            "pixel_sha256": "a77655d0b08effa1d6bdbd17efb113847829192432eeeef972c9e3605c032c38"
+          },
+          {
+            "header": {
+              "version": 3,
+              "id": 3,
+              "ok": true,
+              "sampling": "keyframe",
+              "requested_us": 9000000,
+              "actual_us": 5000000,
+              "width": 320,
+              "height": 180,
+              "channels": 4,
+              "payload_bytes": 230400,
+              "video_ordinal": 0,
+              "decoded_frames": 1,
+              "timeline_origin_us": 0,
+              "video_track_number": 1,
+              "bytes_read": 5416981,
+              "read_calls": 174,
+              "seek_calls": 5,
+              "request_bytes_read": 1783799,
+              "request_read_calls": 57,
+              "request_seek_calls": 1,
+              "open_count": 1,
+              "operation_us": 2036
+            },
+            "pixel_sha256": "a77655d0b08effa1d6bdbd17efb113847829192432eeeef972c9e3605c032c38"
+          },
+          {
+            "header": {
+              "version": 3,
+              "id": 4,
+              "ok": true,
+              "sampling": "keyframe",
+              "requested_us": 0,
+              "actual_us": 5000000,
+              "width": 320,
+              "height": 180,
+              "channels": 4,
+              "payload_bytes": 230400,
+              "video_ordinal": 0,
+              "decoded_frames": 1,
+              "timeline_origin_us": 0,
+              "video_track_number": 1,
+              "bytes_read": 7200780,
+              "read_calls": 231,
+              "seek_calls": 6,
+              "request_bytes_read": 1783799,
+              "request_read_calls": 57,
+              "request_seek_calls": 1,
+              "open_count": 1,
+              "operation_us": 1748
+            },
+            "pixel_sha256": "a77655d0b08effa1d6bdbd17efb113847829192432eeeef972c9e3605c032c38"
+          },
+          {
+            "header": {
+              "version": 3,
+              "id": 5,
+              "ok": true,
+              "sampling": "keyframe",
+              "requested_us": 7000000,
+              "actual_us": 5000000,
+              "width": 320,
+              "height": 180,
+              "channels": 4,
+              "payload_bytes": 230400,
+              "video_ordinal": 0,
+              "decoded_frames": 1,
+              "timeline_origin_us": 0,
+              "video_track_number": 1,
+              "bytes_read": 8984579,
+              "read_calls": 288,
+              "seek_calls": 7,
+              "request_bytes_read": 1783799,
+              "request_read_calls": 57,
+              "request_seek_calls": 1,
+              "open_count": 1,
+              "operation_us": 1838
+            },
+            "pixel_sha256": "a77655d0b08effa1d6bdbd17efb113847829192432eeeef972c9e3605c032c38"
+          }
+        ]
+      },
+      {
+        "name": "vfr.mkv",
+        "ready": {
+          "version": 3,
+          "type": "ready",
+          "ok": true,
+          "duration_us": 11917000,
+          "bytes_read": 98304,
+          "read_calls": 3,
+          "seek_calls": 0,
+          "open_count": 1,
+          "operation_us": 2503
+        },
+        "samples": [
+          {
+            "header": {
+              "version": 3,
+              "id": 1,
+              "ok": true,
+              "sampling": "keyframe",
+              "requested_us": 7000000,
+              "actual_us": 0,
+              "width": 320,
+              "height": 180,
+              "channels": 4,
+              "payload_bytes": 230400,
+              "video_ordinal": 0,
+              "decoded_frames": 1,
+              "timeline_origin_us": 0,
+              "video_track_number": 1,
+              "bytes_read": 1220568,
+              "read_calls": 41,
+              "seek_calls": 4,
+              "request_bytes_read": 1122264,
+              "request_read_calls": 38,
+              "request_seek_calls": 4,
+              "open_count": 1,
+              "operation_us": 1837
+            },
+            "pixel_sha256": "a77655d0b08effa1d6bdbd17efb113847829192432eeeef972c9e3605c032c38"
+          },
+          {
+            "header": {
+              "version": 3,
+              "id": 2,
+              "ok": true,
+              "sampling": "keyframe",
+              "requested_us": 1000000,
+              "actual_us": 0,
+              "width": 320,
+              "height": 180,
+              "channels": 4,
+              "payload_bytes": 230400,
+              "video_ordinal": 0,
+              "decoded_frames": 1,
+              "timeline_origin_us": 0,
+              "video_track_number": 1,
+              "bytes_read": 2310036,
+              "read_calls": 77,
+              "seek_calls": 5,
+              "request_bytes_read": 1089468,
+              "request_read_calls": 36,
+              "request_seek_calls": 1,
+              "open_count": 1,
+              "operation_us": 814
+            },
+            "pixel_sha256": "a77655d0b08effa1d6bdbd17efb113847829192432eeeef972c9e3605c032c38"
+          },
+          {
+            "header": {
+              "version": 3,
+              "id": 3,
+              "ok": true,
+              "sampling": "keyframe",
+              "requested_us": 9000000,
+              "actual_us": 0,
+              "width": 320,
+              "height": 180,
+              "channels": 4,
+              "payload_bytes": 230400,
+              "video_ordinal": 0,
+              "decoded_frames": 1,
+              "timeline_origin_us": 0,
+              "video_track_number": 1,
+              "bytes_read": 3399504,
+              "read_calls": 113,
+              "seek_calls": 6,
+              "request_bytes_read": 1089468,
+              "request_read_calls": 36,
+              "request_seek_calls": 1,
+              "open_count": 1,
+              "operation_us": 895
+            },
+            "pixel_sha256": "a77655d0b08effa1d6bdbd17efb113847829192432eeeef972c9e3605c032c38"
+          },
+          {
+            "header": {
+              "version": 3,
+              "id": 4,
+              "ok": true,
+              "sampling": "keyframe",
+              "requested_us": 0,
+              "actual_us": 0,
+              "width": 320,
+              "height": 180,
+              "channels": 4,
+              "payload_bytes": 230400,
+              "video_ordinal": 0,
+              "decoded_frames": 1,
+              "timeline_origin_us": 0,
+              "video_track_number": 1,
+              "bytes_read": 4488972,
+              "read_calls": 149,
+              "seek_calls": 7,
+              "request_bytes_read": 1089468,
+              "request_read_calls": 36,
+              "request_seek_calls": 1,
+              "open_count": 1,
+              "operation_us": 723
+            },
+            "pixel_sha256": "a77655d0b08effa1d6bdbd17efb113847829192432eeeef972c9e3605c032c38"
+          },
+          {
+            "header": {
+              "version": 3,
+              "id": 5,
+              "ok": true,
+              "sampling": "keyframe",
+              "requested_us": 7000000,
+              "actual_us": 0,
+              "width": 320,
+              "height": 180,
+              "channels": 4,
+              "payload_bytes": 230400,
+              "video_ordinal": 0,
+              "decoded_frames": 1,
+              "timeline_origin_us": 0,
+              "video_track_number": 1,
+              "bytes_read": 5578440,
+              "read_calls": 185,
+              "seek_calls": 8,
+              "request_bytes_read": 1089468,
+              "request_read_calls": 36,
+              "request_seek_calls": 1,
+              "open_count": 1,
+              "operation_us": 672
+            },
+            "pixel_sha256": "a77655d0b08effa1d6bdbd17efb113847829192432eeeef972c9e3605c032c38"
+          }
+        ]
+      },
+      {
+        "name": "rotation.mp4",
+        "ready": {
+          "version": 3,
+          "type": "ready",
+          "ok": true,
+          "duration_us": 12000000,
+          "bytes_read": 69815,
+          "read_calls": 3,
+          "seek_calls": 2,
+          "open_count": 1,
+          "operation_us": 1433
+        },
+        "samples": [
+          {
+            "header": {
+              "version": 3,
+              "id": 1,
+              "ok": true,
+              "sampling": "keyframe",
+              "requested_us": 7000000,
+              "actual_us": 0,
+              "width": 101,
+              "height": 180,
+              "channels": 4,
+              "payload_bytes": 72720,
+              "video_ordinal": 0,
+              "decoded_frames": 1,
+              "timeline_origin_us": 0,
+              "video_track_number": -1,
+              "bytes_read": 1823008,
+              "read_calls": 57,
+              "seek_calls": 2,
+              "request_bytes_read": 1753193,
+              "request_read_calls": 54,
+              "request_seek_calls": 0,
+              "open_count": 1,
+              "operation_us": 2704
+            },
+            "pixel_sha256": "e651b8f95ee322e435ff4278f58ecae74d2a6b5b71174036a0aa718ae6a58203"
+          },
+          {
+            "header": {
+              "version": 3,
+              "id": 2,
+              "ok": true,
+              "sampling": "keyframe",
+              "requested_us": 1000000,
+              "actual_us": 0,
+              "width": 101,
+              "height": 180,
+              "channels": 4,
+              "payload_bytes": 72720,
+              "video_ordinal": 0,
+              "decoded_frames": 1,
+              "timeline_origin_us": 0,
+              "video_track_number": -1,
+              "bytes_read": 3608969,
+              "read_calls": 112,
+              "seek_calls": 3,
+              "request_bytes_read": 1785961,
+              "request_read_calls": 55,
+              "request_seek_calls": 1,
+              "open_count": 1,
+              "operation_us": 1639
+            },
+            "pixel_sha256": "e651b8f95ee322e435ff4278f58ecae74d2a6b5b71174036a0aa718ae6a58203"
+          },
+          {
+            "header": {
+              "version": 3,
+              "id": 3,
+              "ok": true,
+              "sampling": "keyframe",
+              "requested_us": 9000000,
+              "actual_us": 0,
+              "width": 101,
+              "height": 180,
+              "channels": 4,
+              "payload_bytes": 72720,
+              "video_ordinal": 0,
+              "decoded_frames": 1,
+              "timeline_origin_us": 0,
+              "video_track_number": -1,
+              "bytes_read": 5394930,
+              "read_calls": 167,
+              "seek_calls": 4,
+              "request_bytes_read": 1785961,
+              "request_read_calls": 55,
+              "request_seek_calls": 1,
+              "open_count": 1,
+              "operation_us": 1669
+            },
+            "pixel_sha256": "e651b8f95ee322e435ff4278f58ecae74d2a6b5b71174036a0aa718ae6a58203"
+          },
+          {
+            "header": {
+              "version": 3,
+              "id": 4,
+              "ok": true,
+              "sampling": "keyframe",
+              "requested_us": 0,
+              "actual_us": 0,
+              "width": 101,
+              "height": 180,
+              "channels": 4,
+              "payload_bytes": 72720,
+              "video_ordinal": 0,
+              "decoded_frames": 1,
+              "timeline_origin_us": 0,
+              "video_track_number": -1,
+              "bytes_read": 7180891,
+              "read_calls": 222,
+              "seek_calls": 5,
+              "request_bytes_read": 1785961,
+              "request_read_calls": 55,
+              "request_seek_calls": 1,
+              "open_count": 1,
+              "operation_us": 1655
+            },
+            "pixel_sha256": "e651b8f95ee322e435ff4278f58ecae74d2a6b5b71174036a0aa718ae6a58203"
+          },
+          {
+            "header": {
+              "version": 3,
+              "id": 5,
+              "ok": true,
+              "sampling": "keyframe",
+              "requested_us": 7000000,
+              "actual_us": 0,
+              "width": 101,
+              "height": 180,
+              "channels": 4,
+              "payload_bytes": 72720,
+              "video_ordinal": 0,
+              "decoded_frames": 1,
+              "timeline_origin_us": 0,
+              "video_track_number": -1,
+              "bytes_read": 8966852,
+              "read_calls": 277,
+              "seek_calls": 6,
+              "request_bytes_read": 1785961,
+              "request_read_calls": 55,
+              "request_seek_calls": 1,
+              "open_count": 1,
+              "operation_us": 1797
+            },
+            "pixel_sha256": "e651b8f95ee322e435ff4278f58ecae74d2a6b5b71174036a0aa718ae6a58203"
+          }
+        ]
+      },
+      {
+        "name": "edit-offset.mp4",
+        "ready": {
+          "version": 3,
+          "type": "ready",
+          "ok": true,
+          "duration_us": 14000000,
+          "bytes_read": 109304,
+          "read_calls": 4,
+          "seek_calls": 2,
+          "open_count": 1,
+          "operation_us": 2305
+        },
+        "samples": [
+          {
+            "header": {
+              "version": 3,
+              "id": 1,
+              "ok": true,
+              "sampling": "keyframe",
+              "requested_us": 7000000,
+              "actual_us": 2000000,
+              "width": 320,
+              "height": 180,
+              "channels": 4,
+              "payload_bytes": 230400,
+              "video_ordinal": 0,
+              "decoded_frames": 1,
+              "timeline_origin_us": 0,
+              "video_track_number": -1,
+              "bytes_read": 2006621,
+              "read_calls": 62,
+              "seek_calls": 3,
+              "request_bytes_read": 1897317,
+              "request_read_calls": 58,
+              "request_seek_calls": 1,
+              "open_count": 1,
+              "operation_us": 2815
+            },
+            "pixel_sha256": "a77655d0b08effa1d6bdbd17efb113847829192432eeeef972c9e3605c032c38"
+          },
+          {
+            "header": {
+              "version": 3,
+              "id": 2,
+              "ok": true,
+              "sampling": "keyframe",
+              "requested_us": 1000000,
+              "actual_us": 2000000,
+              "width": 320,
+              "height": 180,
+              "channels": 4,
+              "payload_bytes": 230400,
+              "video_ordinal": 0,
+              "decoded_frames": 1,
+              "timeline_origin_us": 0,
+              "video_track_number": -1,
+              "bytes_read": 3903772,
+              "read_calls": 120,
+              "seek_calls": 4,
+              "request_bytes_read": 1897151,
+              "request_read_calls": 58,
+              "request_seek_calls": 1,
+              "open_count": 1,
+              "operation_us": 1859
+            },
+            "pixel_sha256": "a77655d0b08effa1d6bdbd17efb113847829192432eeeef972c9e3605c032c38"
+          },
+          {
+            "header": {
+              "version": 3,
+              "id": 3,
+              "ok": true,
+              "sampling": "keyframe",
+              "requested_us": 9000000,
+              "actual_us": 2000000,
+              "width": 320,
+              "height": 180,
+              "channels": 4,
+              "payload_bytes": 230400,
+              "video_ordinal": 0,
+              "decoded_frames": 1,
+              "timeline_origin_us": 0,
+              "video_track_number": -1,
+              "bytes_read": 5800923,
+              "read_calls": 178,
+              "seek_calls": 5,
+              "request_bytes_read": 1897151,
+              "request_read_calls": 58,
+              "request_seek_calls": 1,
+              "open_count": 1,
+              "operation_us": 1804
+            },
+            "pixel_sha256": "a77655d0b08effa1d6bdbd17efb113847829192432eeeef972c9e3605c032c38"
+          },
+          {
+            "header": {
+              "version": 3,
+              "id": 4,
+              "ok": true,
+              "sampling": "keyframe",
+              "requested_us": 0,
+              "actual_us": 2000000,
+              "width": 320,
+              "height": 180,
+              "channels": 4,
+              "payload_bytes": 230400,
+              "video_ordinal": 0,
+              "decoded_frames": 1,
+              "timeline_origin_us": 0,
+              "video_track_number": -1,
+              "bytes_read": 7698074,
+              "read_calls": 236,
+              "seek_calls": 6,
+              "request_bytes_read": 1897151,
+              "request_read_calls": 58,
+              "request_seek_calls": 1,
+              "open_count": 1,
+              "operation_us": 1989
+            },
+            "pixel_sha256": "a77655d0b08effa1d6bdbd17efb113847829192432eeeef972c9e3605c032c38"
+          },
+          {
+            "header": {
+              "version": 3,
+              "id": 5,
+              "ok": true,
+              "sampling": "keyframe",
+              "requested_us": 7000000,
+              "actual_us": 2000000,
+              "width": 320,
+              "height": 180,
+              "channels": 4,
+              "payload_bytes": 230400,
+              "video_ordinal": 0,
+              "decoded_frames": 1,
+              "timeline_origin_us": 0,
+              "video_track_number": -1,
+              "bytes_read": 9595225,
+              "read_calls": 294,
+              "seek_calls": 7,
+              "request_bytes_read": 1897151,
+              "request_read_calls": 58,
+              "request_seek_calls": 1,
+              "open_count": 1,
+              "operation_us": 1933
+            },
+            "pixel_sha256": "a77655d0b08effa1d6bdbd17efb113847829192432eeeef972c9e3605c032c38"
+          }
+        ]
+      },
+      {
+        "name": "long-gop.mp4",
+        "ready": {
+          "version": 3,
+          "type": "ready",
+          "ok": true,
+          "duration_us": 12000000,
+          "bytes_read": 69815,
+          "read_calls": 3,
+          "seek_calls": 2,
+          "open_count": 1,
+          "operation_us": 2388
+        },
+        "samples": [
+          {
+            "header": {
+              "version": 3,
+              "id": 1,
+              "ok": true,
+              "sampling": "keyframe",
+              "requested_us": 7000000,
+              "actual_us": 0,
+              "width": 320,
+              "height": 180,
+              "channels": 4,
+              "payload_bytes": 230400,
+              "video_ordinal": 0,
+              "decoded_frames": 1,
+              "timeline_origin_us": 0,
+              "video_track_number": -1,
+              "bytes_read": 1823008,
+              "read_calls": 57,
+              "seek_calls": 2,
+              "request_bytes_read": 1753193,
+              "request_read_calls": 54,
+              "request_seek_calls": 0,
+              "open_count": 1,
+              "operation_us": 2900
+            },
+            "pixel_sha256": "a77655d0b08effa1d6bdbd17efb113847829192432eeeef972c9e3605c032c38"
+          },
+          {
+            "header": {
+              "version": 3,
+              "id": 2,
+              "ok": true,
+              "sampling": "keyframe",
+              "requested_us": 1000000,
+              "actual_us": 0,
+              "width": 320,
+              "height": 180,
+              "channels": 4,
+              "payload_bytes": 230400,
+              "video_ordinal": 0,
+              "decoded_frames": 1,
+              "timeline_origin_us": 0,
+              "video_track_number": -1,
+              "bytes_read": 3608969,
+              "read_calls": 112,
+              "seek_calls": 3,
+              "request_bytes_read": 1785961,
+              "request_read_calls": 55,
+              "request_seek_calls": 1,
+              "open_count": 1,
+              "operation_us": 2011
+            },
+            "pixel_sha256": "a77655d0b08effa1d6bdbd17efb113847829192432eeeef972c9e3605c032c38"
+          },
+          {
+            "header": {
+              "version": 3,
+              "id": 3,
+              "ok": true,
+              "sampling": "keyframe",
+              "requested_us": 9000000,
+              "actual_us": 0,
+              "width": 320,
+              "height": 180,
+              "channels": 4,
+              "payload_bytes": 230400,
+              "video_ordinal": 0,
+              "decoded_frames": 1,
+              "timeline_origin_us": 0,
+              "video_track_number": -1,
+              "bytes_read": 5394930,
+              "read_calls": 167,
+              "seek_calls": 4,
+              "request_bytes_read": 1785961,
+              "request_read_calls": 55,
+              "request_seek_calls": 1,
+              "open_count": 1,
+              "operation_us": 1885
+            },
+            "pixel_sha256": "a77655d0b08effa1d6bdbd17efb113847829192432eeeef972c9e3605c032c38"
+          },
+          {
+            "header": {
+              "version": 3,
+              "id": 4,
+              "ok": true,
+              "sampling": "keyframe",
+              "requested_us": 0,
+              "actual_us": 0,
+              "width": 320,
+              "height": 180,
+              "channels": 4,
+              "payload_bytes": 230400,
+              "video_ordinal": 0,
+              "decoded_frames": 1,
+              "timeline_origin_us": 0,
+              "video_track_number": -1,
+              "bytes_read": 7180891,
+              "read_calls": 222,
+              "seek_calls": 5,
+              "request_bytes_read": 1785961,
+              "request_read_calls": 55,
+              "request_seek_calls": 1,
+              "open_count": 1,
+              "operation_us": 1851
+            },
+            "pixel_sha256": "a77655d0b08effa1d6bdbd17efb113847829192432eeeef972c9e3605c032c38"
+          },
+          {
+            "header": {
+              "version": 3,
+              "id": 5,
+              "ok": true,
+              "sampling": "keyframe",
+              "requested_us": 7000000,
+              "actual_us": 0,
+              "width": 320,
+              "height": 180,
+              "channels": 4,
+              "payload_bytes": 230400,
+              "video_ordinal": 0,
+              "decoded_frames": 1,
+              "timeline_origin_us": 0,
+              "video_track_number": -1,
+              "bytes_read": 8966852,
+              "read_calls": 277,
+              "seek_calls": 6,
+              "request_bytes_read": 1785961,
+              "request_read_calls": 55,
+              "request_seek_calls": 1,
+              "open_count": 1,
+              "operation_us": 2080
+            },
+            "pixel_sha256": "a77655d0b08effa1d6bdbd17efb113847829192432eeeef972c9e3605c032c38"
+          }
+        ]
+      }
+    ],
+    "checks": [
+      "malformed and overlong/incomplete input rejected",
+      "idle 16s then extraction and clean EOF",
+      "mutation rejected before extraction and worker retired",
+      "full SHA256 and sampled window recipe, deterministic repeat, changed sampled bytes, unsampled limitation, small full hash",
+      "independent 15s startup/request watchdog kills injected blocked read with no stdout corruption"
+    ],
+    "deadline_seconds": {
+      "blocked_startup_read": 15.140641833997506,
+      "blocked_request_read": 15.043023958001868
+    },
+    "metadata": {
+      "scope": "Generated file metadata-only stat identity and blocked open/stat watchdog; no content freshness claim.",
+      "helper_sha256": "b23a8cd6f6f94133b25f1b9b5bcc01e1e0171177f8b534eb59a9a3b3e381472e",
+      "deadline_seconds": {
+        "blocked_open": 15.013160083999537,
+        "blocked_stat": 15.009578917000908
+      },
+      "metadata_avoids_open_seconds": 0.14805379199970048,
+      "checks": [
+        "zero content reads, deterministic stat digest",
+        "symlink follows same target, retarget changes stat",
+        "restored mtime mutation changes metadata",
+        "metadata opens no descriptor; content open and metadata stat faults terminate without output corruption"
+      ],
+      "pass": true
+    },
+    "teardown": {
+      "scope": "Generated fixture EOF teardown blocked-close watchdog. Completed response retained; no NAS/UI proof.",
+      "helper_sha256": "b23a8cd6f6f94133b25f1b9b5bcc01e1e0171177f8b534eb59a9a3b3e381472e",
+      "deadline_seconds": {
+        "blocked_close_after_response_eof": 15.04116349999822
+      },
+      "completed_response": {
+        "header": {
+          "version": 3,
+          "id": 91,
+          "ok": true,
+          "sampling": "keyframe",
+          "requested_us": 1000000,
+          "actual_us": 0,
+          "width": 320,
+          "height": 180,
+          "channels": 4,
+          "payload_bytes": 230400,
+          "video_ordinal": 0,
+          "decoded_frames": 1,
+          "timeline_origin_us": 0,
+          "video_track_number": -1,
+          "bytes_read": 211519,
+          "read_calls": 4,
+          "seek_calls": 1,
+          "request_bytes_read": 81141,
+          "request_read_calls": 1,
+          "request_seek_calls": 1,
+          "open_count": 1,
+          "operation_us": 2608
+        },
+        "pixel_sha256": "ddb1bb58a980f8d37971e71d77d22648ad049765d54113d844bf88c574d68da6"
+      },
+      "pass": true
+    },
+    "pass": true
+  },
+  "service_contract": {
+    "passed": 1,
+    "checks": [
+      {
+        "name": "shared bridge policy follows coarse plan and bounds",
+        "passed": true,
+        "detail": {}
+      },
+      {
+        "name": "missing helper cannot throw or stall",
+        "passed": true,
+        "detail": {
+          "preparing": false,
+          "verification_pending": false,
+          "has_image": 0,
+          "requested_us": 0,
+          "elapsed_ms": 0.34954166767420247,
+          "measured_ms": 0.3767916678043548,
+          "error": "helper-unavailable",
+          "source_verification_failed": true
+        }
+      },
+      {
+        "name": "worker reused across uncached targets",
+        "passed": true,
+        "detail": {
+          "active": false,
+          "worker_ready": 1,
+          "pending": 0,
+          "worker_requests": 2,
+          "launched": 1,
+          "superseded": 1,
+          "completed": 2
+        }
+      },
+      {
+        "name": "new presentation generation retains verified disk sample",
+        "passed": true,
+        "detail": {
+          "has_image": 1,
+          "elapsed_ms": 75.20683333495981,
+          "measured_ms": 75.25316666578874,
+          "sampling": "keyframe",
+          "seek_calls": 0,
+          "version": 3,
+          "ok": true,
+          "open_count": 0,
+          "requested_us": 1000000,
+          "request_read_calls": 0,
+          "id": 1,
+          "preparing": false,
+          "operation_us": 0,
+          "video_ordinal": 0,
+          "actual_us": 0,
+          "width": 64,
+          "channels": 4,
+          "height": 36,
+          "read_calls": 0,
+          "request_bytes_read": 0,
+          "payload_bytes": 9216,
+          "request_seek_calls": 0,
+          "bytes_read": 0,
+          "cache": "disk"
+        }
+      },
+      {
+        "name": "cached hover bypasses active extraction",
+        "passed": true,
+        "detail": {
+          "result": {
+            "has_image": 1,
+            "verification_pending": false,
+            "elapsed_ms": 30.84350000062841,
+            "measured_ms": 30.867916666466044,
+            "sampling": "keyframe",
+            "seek_calls": 0,
+            "version": 3,
+            "ok": true,
+            "open_count": 0,
+            "requested_us": 2000000,
+            "request_read_calls": 0,
+            "id": 1,
+            "preparing": false,
+            "operation_us": 0,
+            "video_ordinal": 0,
+            "actual_us": 2000000,
+            "width": 64,
+            "channels": 4,
+            "height": 36,
+            "read_calls": 0,
+            "request_bytes_read": 0,
+            "payload_bytes": 9216,
+            "request_seek_calls": 0,
+            "bytes_read": 0,
+            "cache": "memory"
+          },
+          "metrics": {
+            "active": true,
+            "worker_ready": 1,
+            "pending": 0,
+            "worker_requests": 2,
+            "launched": 1,
+            "superseded": 2,
+            "completed": 1
+          }
+        }
+      },
+      {
+        "name": "bypassed active extraction finishes without an extra decode",
+        "passed": true,
+        "detail": {
+          "active": false,
+          "worker_ready": 1,
+          "pending": 0,
+          "worker_requests": 2,
+          "launched": 1,
+          "superseded": 2,
+          "completed": 2
+        }
+      },
+      {
+        "name": "obsolete extraction invalidates currently displayed cached hover",
+        "passed": true,
+        "detail": {
+          "active": true,
+          "worker_ready": 1,
+          "pending": 0,
+          "worker_requests": 2,
+          "launched": 1,
+          "superseded": 2,
+          "completed": 1
+        }
+      },
+      {
+        "name": "cached provisional precedes one final owner and one metadata validation",
+        "passed": true,
+        "detail": {
+          "finals": 1,
+          "metrics": {
+            "active": false,
+            "worker_ready": 1,
+            "pending": 0,
+            "worker_requests": 1,
+            "launched": 1,
+            "superseded": 1,
+            "completed": 1
+          },
+          "metadata_calls": 1
+        }
+      },
+      {
+        "name": "replacement during cached validation clears provisional without a stale validated hit",
+        "passed": true,
+        "detail": {
+          "active": false,
+          "worker_ready": 0,
+          "pending": 0,
+          "worker_requests": 1,
+          "launched": 1,
+          "superseded": 2,
+          "completed": 1
+        }
+      },
+      {
+        "name": "latest RAM provisional bypasses blocked older source validation",
+        "passed": true,
+        "detail": {
+          "metrics": {
+            "active": false,
+            "worker_ready": 1,
+            "pending": 1,
+            "worker_requests": 2,
+            "launched": 1,
+            "superseded": 3,
+            "completed": 2
+          },
+          "provisional_s": 0.00013279166523716412
+        }
+      },
+      {
+        "name": "superseded validation cannot replace latest hover",
+        "passed": true,
+        "detail": {
+          "active": false,
+          "worker_ready": 1,
+          "pending": 0,
+          "worker_requests": 2,
+          "launched": 1,
+          "superseded": 3,
+          "completed": 2
+        }
+      },
+      {
+        "name": "leaving during cached source check suppresses late presentation",
+        "passed": true,
+        "detail": {
+          "active": false,
+          "worker_ready": 1,
+          "pending": 0,
+          "worker_requests": 1,
+          "launched": 1,
+          "superseded": 1,
+          "completed": 1
+        }
+      },
+      {
+        "name": "fresh reopen cannot provisionally reuse prior-session cache",
+        "passed": true,
+        "detail": {
+          "active": true,
+          "worker_ready": 0,
+          "pending": 1,
+          "worker_requests": 0,
+          "launched": 0,
+          "superseded": 0,
+          "completed": 0
+        }
+      },
+      {
+        "name": "fresh reopen returns disk image only after qualified identity",
+        "passed": true,
+        "detail": {
+          "active": false,
+          "worker_ready": 0,
+          "pending": 0,
+          "worker_requests": 0,
+          "launched": 0,
+          "superseded": 0,
+          "completed": 1
+        }
+      },
+      {
+        "name": "pointer movement cannot renew provisional source-check lifetime",
+        "passed": true,
+        "detail": {
+          "cleared_after_s": 15.003120666664472,
+          "metrics": {
+            "active": true,
+            "worker_ready": 1,
+            "pending": 1,
+            "worker_requests": 1,
+            "launched": 1,
+            "superseded": 2,
+            "completed": 1
+          }
+        }
+      },
+      {
+        "name": "known source failure suppresses provisional redisplay",
+        "passed": true,
+        "detail": {
+          "active": true,
+          "worker_ready": 1,
+          "pending": 1,
+          "worker_requests": 1,
+          "launched": 1,
+          "superseded": 3,
+          "completed": 1
+        }
+      },
+      {
+        "name": "actual timestamp cache hit needs no requested alias",
+        "passed": true,
+        "detail": {
+          "has_image": 1,
+          "verification_pending": false,
+          "elapsed_ms": 29.648124997038394,
+          "measured_ms": 29.674875000637257,
+          "sampling": "keyframe",
+          "seek_calls": 0,
+          "version": 3,
+          "ok": true,
+          "open_count": 0,
+          "requested_us": 2000000,
+          "request_read_calls": 0,
+          "id": 1,
+          "preparing": false,
+          "operation_us": 0,
+          "video_ordinal": 0,
+          "actual_us": 2000000,
+          "width": 64,
+          "channels": 4,
+          "height": 36,
+          "read_calls": 0,
+          "request_bytes_read": 0,
+          "payload_bytes": 9216,
+          "request_seek_calls": 0,
+          "bytes_read": 0,
+          "cache": "memory"
+        }
+      },
+      {
+        "name": "actual timestamp disk reuse after reopen",
+        "passed": true,
+        "detail": {
+          "has_image": 1,
+          "elapsed_ms": 82.59845833526924,
+          "measured_ms": 82.63245833222754,
+          "sampling": "keyframe",
+          "seek_calls": 0,
+          "version": 3,
+          "ok": true,
+          "open_count": 0,
+          "requested_us": 2000000,
+          "request_read_calls": 0,
+          "id": 1,
+          "preparing": false,
+          "operation_us": 0,
+          "video_ordinal": 0,
+          "actual_us": 2000000,
+          "width": 64,
+          "channels": 4,
+          "height": 36,
+          "read_calls": 0,
+          "request_bytes_read": 0,
+          "payload_bytes": 9216,
+          "request_seek_calls": 0,
+          "bytes_read": 0,
+          "cache": "disk"
+        }
+      },
+      {
+        "name": "active extraction finishes and latest bounded hover wins",
+        "passed": true,
+        "detail": {
+          "finals": 1,
+          "bridges": 2,
+          "metrics": {
+            "active": false,
+            "worker_ready": 1,
+            "pending": 0,
+            "worker_requests": 2,
+            "launched": 1,
+            "superseded": 100,
+            "completed": 2
+          }
+        }
+      },
+      {
+        "name": "presentation exit keeps useful active extraction",
+        "passed": true,
+        "detail": {
+          "active": false,
+          "worker_ready": 1,
+          "pending": 0,
+          "worker_requests": 3,
+          "launched": 1,
+          "superseded": 101,
+          "completed": 3
+        }
+      },
+      {
+        "name": "exit result is cached for subsequent hover",
+        "passed": true,
+        "detail": {
+          "has_image": 1,
+          "verification_pending": false,
+          "elapsed_ms": 26.92383333487669,
+          "measured_ms": 26.95191666498431,
+          "sampling": "keyframe",
+          "seek_calls": 0,
+          "version": 3,
+          "ok": true,
+          "open_count": 0,
+          "requested_us": 6000000,
+          "request_read_calls": 0,
+          "id": 3,
+          "preparing": false,
+          "operation_us": 0,
+          "video_ordinal": 0,
+          "actual_us": 6000000,
+          "width": 64,
+          "channels": 4,
+          "height": 36,
+          "read_calls": 0,
+          "request_bytes_read": 0,
+          "payload_bytes": 9216,
+          "request_seek_calls": 0,
+          "bytes_read": 0,
+          "cache": "memory"
+        }
+      },
+      {
+        "name": "fault and finite retry malformed",
+        "passed": true,
+        "detail": {
+          "preparing": false,
+          "measured_ms": 4222.466333332704,
+          "requested_us": 0,
+          "terminal": true,
+          "last": 20051.5497775,
+          "attempts": 3,
+          "elapsed_ms": 4222.459000000526,
+          "error": "worker-protocol",
+          "retry_at": 20054.549776,
+          "has_image": 0
+        }
+      },
+      {
+        "name": "recover context after malformed",
+        "passed": true,
+        "detail": {
+          "id": 4,
+          "video_ordinal": 0,
+          "payload_bytes": 9216,
+          "version": 3,
+          "cache_metrics": {
+            "targets": 1,
+            "manifest_loaded": false,
+            "samples": 1,
+            "memory_bytes": 9413
+          },
+          "preparing": false,
+          "measured_ms": 105.9869583332329,
+          "width": 64,
+          "actual_us": 0,
+          "channels": 4,
+          "cache": "miss",
+          "elapsed_ms": 105.94658333502593,
+          "requested_us": 0,
+          "ok": true,
+          "height": 36,
+          "open_count": 1,
+          "cache_capacity": true,
+          "sampling": "keyframe",
+          "has_image": 1
+        }
+      },
+      {
+        "name": "fault and finite retry startup-malformed",
+        "passed": true,
+        "detail": {
+          "preparing": false,
+          "measured_ms": 4213.834416666941,
+          "requested_us": 0,
+          "terminal": true,
+          "last": 20055.871063083334,
+          "attempts": 3,
+          "elapsed_ms": 4213.828583335271,
+          "error": "worker-protocol",
+          "retry_at": 20058.87106116667,
+          "has_image": 0
+        }
+      },
+      {
+        "name": "recover context after startup-malformed",
+        "passed": true,
+        "detail": {
+          "id": 1,
+          "video_ordinal": 0,
+          "payload_bytes": 9216,
+          "version": 3,
+          "cache_metrics": {
+            "targets": 1,
+            "manifest_loaded": false,
+            "samples": 1,
+            "memory_bytes": 9413
+          },
+          "preparing": false,
+          "measured_ms": 102.71216666660621,
+          "width": 64,
+          "actual_us": 0,
+          "channels": 4,
+          "cache": "miss",
+          "elapsed_ms": 102.67833333273302,
+          "requested_us": 0,
+          "ok": true,
+          "height": 36,
+          "open_count": 1,
+          "cache_capacity": true,
+          "sampling": "keyframe",
+          "has_image": 1
+        }
+      },
+      {
+        "name": "fault and finite retry crash",
+        "passed": true,
+        "detail": {
+          "preparing": false,
+          "measured_ms": 4218.323916666122,
+          "requested_us": 0,
+          "terminal": true,
+          "last": 20060.19272241667,
+          "attempts": 3,
+          "elapsed_ms": 4218.313500001386,
+          "error": "worker-protocol",
+          "retry_at": 20063.19271966667,
+          "has_image": 0
+        }
+      },
+      {
+        "name": "recover context after crash",
+        "passed": true,
+        "detail": {
+          "id": 4,
+          "video_ordinal": 0,
+          "payload_bytes": 9216,
+          "version": 3,
+          "cache_metrics": {
+            "targets": 1,
+            "manifest_loaded": false,
+            "samples": 1,
+            "memory_bytes": 9413
+          },
+          "preparing": false,
+          "measured_ms": 99.07966667014989,
+          "width": 64,
+          "actual_us": 0,
+          "channels": 4,
+          "cache": "miss",
+          "elapsed_ms": 99.05033333052415,
+          "requested_us": 0,
+          "ok": true,
+          "height": 36,
+          "open_count": 1,
+          "cache_capacity": true,
+          "sampling": "keyframe",
+          "has_image": 1
+        }
+      },
+      {
+        "name": "fault and finite retry fractional",
+        "passed": true,
+        "detail": {
+          "preparing": false,
+          "measured_ms": 4189.4792083330685,
+          "requested_us": 0,
+          "terminal": true,
+          "last": 20064.482599083334,
+          "attempts": 3,
+          "elapsed_ms": 4189.471833331481,
+          "error": "worker-protocol",
+          "retry_at": 20067.482597125003,
+          "has_image": 0
+        }
+      },
+      {
+        "name": "recover context after fractional",
+        "passed": true,
+        "detail": {
+          "id": 4,
+          "video_ordinal": 0,
+          "payload_bytes": 9216,
+          "version": 3,
+          "cache_metrics": {
+            "targets": 1,
+            "manifest_loaded": false,
+            "samples": 1,
+            "memory_bytes": 9413
+          },
+          "preparing": false,
+          "measured_ms": 102.74108333032927,
+          "width": 64,
+          "actual_us": 0,
+          "channels": 4,
+          "cache": "miss",
+          "elapsed_ms": 102.7088749979157,
+          "requested_us": 0,
+          "ok": true,
+          "height": 36,
+          "open_count": 1,
+          "cache_capacity": true,
+          "sampling": "keyframe",
+          "has_image": 1
+        }
+      },
+      {
+        "name": "fault and finite retry unsupported",
+        "passed": true,
+        "detail": {
+          "preparing": false,
+          "measured_ms": 78.54262499677134,
+          "requested_us": 0,
+          "terminal": true,
+          "last": 20064.66465291667,
+          "attempts": 1,
+          "elapsed_ms": 78.53624999916065,
+          "error": "unsupported_codec",
+          "retry_at": 20065.664651791667,
+          "has_image": 0
+        }
+      },
+      {
+        "name": "recover context after unsupported",
+        "passed": true,
+        "detail": {
+          "id": 2,
+          "video_ordinal": 0,
+          "payload_bytes": 9216,
+          "version": 3,
+          "cache_metrics": {
+            "targets": 1,
+            "manifest_loaded": false,
+            "samples": 1,
+            "memory_bytes": 9413
+          },
+          "preparing": false,
+          "measured_ms": 100.69112500059418,
+          "width": 64,
+          "actual_us": 0,
+          "channels": 4,
+          "cache": "miss",
+          "elapsed_ms": 100.65366666822229,
+          "requested_us": 0,
+          "ok": true,
+          "height": 36,
+          "open_count": 1,
+          "cache_capacity": true,
+          "sampling": "keyframe",
+          "has_image": 1
+        }
+      },
+      {
+        "name": "fault and finite retry fail-once",
+        "passed": true,
+        "detail": {
+          "id": 2,
+          "video_ordinal": 0,
+          "payload_bytes": 9216,
+          "version": 3,
+          "cache_metrics": {
+            "targets": 1,
+            "manifest_loaded": false,
+            "samples": 1,
+            "memory_bytes": 9413
+          },
+          "preparing": false,
+          "measured_ms": 1132.4747500002559,
+          "width": 64,
+          "actual_us": 0,
+          "channels": 4,
+          "cache": "miss",
+          "elapsed_ms": 1132.452750000084,
+          "requested_us": 0,
+          "ok": true,
+          "height": 36,
+          "open_count": 1,
+          "cache_capacity": true,
+          "sampling": "keyframe",
+          "has_image": 1
+        }
+      },
+      {
+        "name": "recover context after fail-once",
+        "passed": true,
+        "detail": {
+          "id": 3,
+          "video_ordinal": 0,
+          "payload_bytes": 9216,
+          "version": 3,
+          "cache_metrics": {
+            "targets": 1,
+            "manifest_loaded": false,
+            "samples": 1,
+            "memory_bytes": 18826
+          },
+          "preparing": false,
+          "measured_ms": 103.30704166699434,
+          "width": 64,
+          "actual_us": 0,
+          "channels": 4,
+          "cache": "miss",
+          "elapsed_ms": 103.27070833227481,
+          "requested_us": 0,
+          "ok": true,
+          "height": 36,
+          "open_count": 1,
+          "cache_capacity": true,
+          "sampling": "keyframe",
+          "has_image": 1
+        }
+      },
+      {
+        "name": "context change terminates obsolete hang",
+        "passed": true,
+        "detail": {
+          "id": 1,
+          "video_ordinal": 0,
+          "payload_bytes": 9216,
+          "version": 3,
+          "cache_metrics": {
+            "targets": 1,
+            "manifest_loaded": false,
+            "samples": 1,
+            "memory_bytes": 9413
+          },
+          "preparing": false,
+          "measured_ms": 103.40841666402412,
+          "width": 64,
+          "actual_us": 0,
+          "channels": 4,
+          "cache": "miss",
+          "elapsed_ms": 103.36829166772077,
+          "requested_us": 0,
+          "ok": true,
+          "height": 36,
+          "open_count": 1,
+          "cache_capacity": true,
+          "sampling": "keyframe",
+          "has_image": 1
+        }
+      },
+      {
+        "name": "context change terminates obsolete startup-hang",
+        "passed": true,
+        "detail": {
+          "id": 1,
+          "video_ordinal": 0,
+          "payload_bytes": 9216,
+          "version": 3,
+          "cache_metrics": {
+            "targets": 1,
+            "manifest_loaded": false,
+            "samples": 1,
+            "memory_bytes": 9413
+          },
+          "preparing": false,
+          "measured_ms": 102.13374999875668,
+          "width": 64,
+          "actual_us": 0,
+          "channels": 4,
+          "cache": "miss",
+          "elapsed_ms": 102.09429166570771,
+          "requested_us": 0,
+          "ok": true,
+          "height": 36,
+          "open_count": 1,
+          "cache_capacity": true,
+          "sampling": "keyframe",
+          "has_image": 1
+        }
+      },
+      {
+        "name": "file mutation does not present stale pixels",
+        "passed": true,
+        "detail": {
+          "preparing": false,
+          "verification_pending": false,
+          "has_image": 0,
+          "requested_us": 1000000,
+          "elapsed_ms": 351.74575000201,
+          "measured_ms": 351.75520833581686,
+          "error": "media_changed"
+        }
+      },
+      {
+        "name": "finite proactive coverage without hover",
+        "passed": true,
+        "detail": {
+          "active": false,
+          "worker_ready": 1,
+          "pending": 0,
+          "worker_requests": 7,
+          "launched": 1,
+          "superseded": 0,
+          "completed": 7
+        }
+      },
+      {
+        "name": "sustained cached hover leaves turns for global preparation",
+        "passed": true,
+        "detail": {
+          "active": false,
+          "worker_ready": 1,
+          "pending": 0,
+          "worker_requests": 14,
+          "launched": 2,
+          "superseded": 62,
+          "completed": 15
+        }
+      },
+      {
+        "name": "disable stops background extraction",
+        "passed": true,
+        "detail": {
+          "active": false,
+          "worker_ready": 0,
+          "pending": 0,
+          "worker_requests": 14,
+          "launched": 2,
+          "superseded": 62,
+          "completed": 15
+        }
+      }
+    ]
+  },
+  "real_helper_smoke": {
+    "records": [
+      {
+        "has_image": 1,
+        "cache_capacity": true,
+        "elapsed_ms": 128.17112500124495,
+        "sampling": "keyframe",
+        "decoded_frames": 1,
+        "seek_calls": 1,
+        "version": 3,
+        "ok": true,
+        "timeline_origin_us": 0,
+        "requested_us": 5000000,
+        "request_read_calls": 3,
+        "id": 1,
+        "open_count": 1,
+        "operation_us": 2691,
+        "preparing": false,
+        "cache_metrics": {
+          "targets": 1,
+          "manifest_loaded": false,
+          "samples": 1,
+          "memory_bytes": 230800
+        },
+        "height": 180,
+        "actual_us": 4000000,
+        "width": 320,
+        "channels": 4,
+        "video_ordinal": 0,
+        "video_track_number": -1,
+        "read_calls": 6,
+        "request_bytes_read": 156200,
+        "payload_bytes": 230400,
+        "request_seek_calls": 1,
+        "bytes_read": 286578,
+        "cache": "miss"
+      },
+      {
+        "has_image": 1,
+        "cache_capacity": true,
+        "elapsed_ms": 89.38904167007422,
+        "sampling": "keyframe",
+        "decoded_frames": 1,
+        "seek_calls": 2,
+        "version": 3,
+        "ok": true,
+        "timeline_origin_us": 0,
+        "requested_us": 2000000,
+        "request_read_calls": 2,
+        "id": 2,
+        "open_count": 1,
+        "operation_us": 2628,
+        "preparing": false,
+        "cache_metrics": {
+          "targets": 2,
+          "manifest_loaded": false,
+          "samples": 2,
+          "memory_bytes": 461599
+        },
+        "height": 180,
+        "actual_us": 2000000,
+        "width": 320,
+        "channels": 4,
+        "video_ordinal": 0,
+        "video_track_number": -1,
+        "read_calls": 8,
+        "request_bytes_read": 98929,
+        "payload_bytes": 230400,
+        "request_seek_calls": 1,
+        "bytes_read": 385507,
+        "cache": "miss"
+      },
+      {
+        "has_image": 1,
+        "cache_capacity": true,
+        "elapsed_ms": 80.00191666360479,
+        "sampling": "keyframe",
+        "decoded_frames": 1,
+        "seek_calls": 3,
+        "version": 3,
+        "ok": true,
+        "timeline_origin_us": 0,
+        "requested_us": 12000000,
+        "request_read_calls": 3,
+        "id": 3,
+        "open_count": 1,
+        "operation_us": 2660,
+        "preparing": false,
+        "cache_metrics": {
+          "targets": 3,
+          "manifest_loaded": false,
+          "samples": 3,
+          "memory_bytes": 692402
+        },
+        "height": 180,
+        "actual_us": 12000000,
+        "width": 320,
+        "channels": 4,
+        "video_ordinal": 0,
+        "video_track_number": -1,
+        "read_calls": 11,
+        "request_bytes_read": 151540,
+        "payload_bytes": 230400,
+        "request_seek_calls": 1,
+        "bytes_read": 537047,
+        "cache": "miss"
+      },
+      {
+        "has_image": 1,
+        "verification_pending": false,
+        "elapsed_ms": 24.205083333072253,
+        "sampling": "keyframe",
+        "decoded_frames": 1,
+        "seek_calls": 0,
+        "version": 3,
+        "ok": true,
+        "timeline_origin_us": 0,
+        "requested_us": 5000000,
+        "request_read_calls": 0,
+        "id": 1,
+        "open_count": 0,
+        "operation_us": 0,
+        "preparing": false,
+        "height": 180,
+        "actual_us": 4000000,
+        "width": 320,
+        "channels": 4,
+        "video_ordinal": 0,
+        "video_track_number": -1,
+        "read_calls": 0,
+        "request_bytes_read": 0,
+        "payload_bytes": 230400,
+        "request_seek_calls": 0,
+        "bytes_read": 0,
+        "cache": "memory"
+      },
+      {
+        "has_image": 1,
+        "elapsed_ms": 73.64841666640132,
+        "sampling": "keyframe",
+        "decoded_frames": 1,
+        "seek_calls": 0,
+        "version": 3,
+        "ok": true,
+        "timeline_origin_us": 0,
+        "requested_us": 5000000,
+        "request_read_calls": 0,
+        "id": 1,
+        "open_count": 0,
+        "operation_us": 0,
+        "preparing": false,
+        "height": 180,
+        "actual_us": 4000000,
+        "width": 320,
+        "channels": 4,
+        "video_ordinal": 0,
+        "video_track_number": -1,
+        "read_calls": 0,
+        "request_bytes_read": 0,
+        "payload_bytes": 230400,
+        "request_seek_calls": 0,
+        "bytes_read": 0,
+        "cache": "disk"
+      }
+    ],
+    "passed": true
+  },
+  "cache_checks": 2849,
+  "cache_failures": 0,
+  "scheduler_contract": "passed",
+  "candidate_build_manifest": "work/validation/story002/app-build-20261005T222506.861213Z.json",
+  "native_status": "Current222506 mainMP4/MKV, detached/native/custom fullscreen, CLIoff and owned preference checks pass; reader focus source-invariant evidence inherited explicitly",
+  "nas_status": "Two current10/10 actual-pointer cohorts pass, including fresh disk restart and pending source-check image; uncontrolled warmth/no universal latency claim",
+  "freshness_policy": "accepted metadata plus sampled SHA256 under ADR003",
+  "installed_app_status": "Updated requested local preview app to qualified222506; nested components match; native NAS hover image inspected",
+  "signed_app_helper_sha256": "655db134317db1046ce44a3968cd5d5ad0101cce472677abf70b4516f986ab16",
+  "cache_contract": {
+    "checks": 2849,
+    "failures": 0,
+    "passed": true,
+    "log": "work/validation/story-004/cache-contract-safe-reuse-final.log",
+    "log_sha256": "7e47bb7753ef3fc9e7b2cfc320b41ed33c9c2afbe9b2db4b2da8bd9b49ff86a2",
+    "additional_cases": [
+      "render/protocol identity switch rejects old samples; return reuses compatible samples",
+      "Actual0500directory denies writes; RAM remains usable; no manifest or false reopen hit"
+    ]
+  },
+  "preparation_smoke": {
+    "passed": true,
+    "scope": "Real helper, generated90s video, no hover; finite7-target proactive plan then new service reloads coverage without decoding",
+    "coverage_seconds": 2.4476192083347996,
+    "first": {
+      "active": false,
+      "worker_ready": 1,
+      "pending": 0,
+      "worker_requests": 7,
+      "launched": 1,
+      "superseded": 0,
+      "completed": 7
+    },
+    "reopen": {
+      "active": false,
+      "worker_ready": 0,
+      "pending": 0,
+      "worker_requests": 0,
+      "launched": 0,
+      "superseded": 0,
+      "completed": 1
+    }
+  },
+  "build_manifest": "work/validation/story002/app-build-20261005T222506.861213Z.json",
+  "instrumentation_limit": {
+    "attempt": "Signed stripped app helper supplied to injection-only fault contract; blocked-read subprocess reached20s outer timeout. Retained as failed acquisition; no watchdog pass inferred from that attempt.",
+    "validated_route": "Unstripped build helper from same source/build passes full generated-fixture/fault contracts. Signed packaged helper independently passes actual native movie extraction/cache checks.",
+    "uncertainty": "Exact reason that read interposition did not produce expected startup timeout in packaged variant is unqualified; no change to delivered signing/entitlements."
+  },
+  "source_identity_contract": {
+    "passed": true,
+    "scope": "Generated-file metadata/sampled freshness, no native UI or durable label identity proof",
+    "helper_sha256": "b23a8cd6f6f94133b25f1b9b5bcc01e1e0171177f8b534eb59a9a3b3e381472e",
+    "source_sha256": "79affe527d956cfc4f9587fc016e2295a6604ce3d47e055d185037dd429ad769",
+    "checks": [
+      "unchanged metadata and sampled fingerprint repeat deterministically",
+      "same-size preserved-mtime sampled edit changes identity and content fingerprint",
+      "same URI symlink retarget follows new object and rejects old identity",
+      "equal-content equal-size preserved-mtime atomic replacement changes identity"
+    ]
+  },
+  "helper_text_parity": {
+    "scope": "Mach-O immutable TEXT section comparison before versus after strip/sign; symbol/fault-interposition machinery outside TEXT is not identical.",
+    "same_sections": true,
+    "unstripped": {
+      "__TEXT,__text": {
+        "size": 12716892,
+        "sha256": "4f43762ae26a4eeccb5e5ff67fe0e4ccbf7007cce6332a1868180b369242f073"
+      },
+      "__TEXT,__stubs": {
+        "size": 2112,
+        "sha256": "7f37c757332611c1e5b23329b11854f657575d600067b2141966b523ed8c5ec1"
+      },
+      "__TEXT,__stub_helper": {
+        "size": 2136,
+        "sha256": "c50b5538e68159c6ffddd2c1abf6313a8282382b55d08c1bdaa87bea5b623d18"
+      },
+      "__TEXT,__const": {
+        "size": 2130544,
+        "sha256": "f17c625c32c68ac66b6355da60f3269334a71db73fe5b8ecf330df151d48fe75"
+      },
+      "__TEXT,__cstring": {
+        "size": 566687,
+        "sha256": "66a066a0a2a8b5ad022ea87ace13cfa04b13a71920fa06f20b52d3ea4e562df7"
+      },
+      "__TEXT,__ustring": {
+        "size": 178,
+        "sha256": "19c8a6f047706fd8c0456520146672c604ba5263804e49b619d934263b4ad148"
+      },
+      "__TEXT,__unwind_info": {
+        "size": 100976,
+        "sha256": "f4714e1c95a9874cb6b8b90058f8e78a864aa7b6f1bf6479a396d91254b1c7ef"
+      },
+      "__TEXT,__eh_frame": {
+        "size": 463140,
+        "sha256": "ea22e15e8f461c59bf017a19a1bb59ef869337a7e42079ff83fc6d7baf6620ea"
+      }
+    },
+    "packaged": {
+      "__TEXT,__text": {
+        "size": 12716892,
+        "sha256": "4f43762ae26a4eeccb5e5ff67fe0e4ccbf7007cce6332a1868180b369242f073"
+      },
+      "__TEXT,__stubs": {
+        "size": 2112,
+        "sha256": "7f37c757332611c1e5b23329b11854f657575d600067b2141966b523ed8c5ec1"
+      },
+      "__TEXT,__stub_helper": {
+        "size": 2136,
+        "sha256": "c50b5538e68159c6ffddd2c1abf6313a8282382b55d08c1bdaa87bea5b623d18"
+      },
+      "__TEXT,__const": {
+        "size": 2130544,
+        "sha256": "f17c625c32c68ac66b6355da60f3269334a71db73fe5b8ecf330df151d48fe75"
+      },
+      "__TEXT,__cstring": {
+        "size": 566687,
+        "sha256": "66a066a0a2a8b5ad022ea87ace13cfa04b13a71920fa06f20b52d3ea4e562df7"
+      },
+      "__TEXT,__ustring": {
+        "size": 178,
+        "sha256": "19c8a6f047706fd8c0456520146672c604ba5263804e49b619d934263b4ad148"
+      },
+      "__TEXT,__unwind_info": {
+        "size": 100976,
+        "sha256": "f4714e1c95a9874cb6b8b90058f8e78a864aa7b6f1bf6479a396d91254b1c7ef"
+      },
+      "__TEXT,__eh_frame": {
+        "size": 463140,
+        "sha256": "ea22e15e8f461c59bf017a19a1bb59ef869337a7e42079ff83fc6d7baf6620ea"
+      }
+    }
+  },
+  "manifest_field_reconciliation": "Corrected stale candidate_build_manifest field to the tested final222506 build; historical measurements unchanged."
+}

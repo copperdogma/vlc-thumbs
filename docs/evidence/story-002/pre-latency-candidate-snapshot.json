@@ -1,0 +1,13 @@
+{
+  "utc": "2026-10-05T03:06:01.902744+00:00",
+  "source": "work/build/vlc-arm64/VLC.app",
+  "snapshot": "work/build/VLCPreLatency022512.app",
+  "build": "app-build-tracknumber-022512.json",
+  "purpose": "Preserve exact pre-performance-change candidate for subsequent comparisons; no runtime changes made",
+  "sha256": {
+    "Contents/MacOS/VLC": "348fdfcebec17a7fdf58ddbb15998d2b671fc6d01ee0c1bb2d03ece5396ce3bf",
+    "Contents/MacOS/plugins/libmacosx_plugin.dylib": "69a933b654845e59f76af0dadb0af2b2ed08f738a1bcfe2f0f4bb9787aca2cff",
+    "Contents/MacOS/vlc-thumbnail-helper": "cbbd6784deb18501eddccf4d695dbd7b39c3ef27b14374fa34209d638d6b836f",
+    "Contents/MacOS/plugins/plugins.dat": "476fbce2a48215f7fdabdce2cf4f54d5e61fb0245eff24b10c18e5cb3fe80c9c"
+  }
+}

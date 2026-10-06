@@ -1,0 +1,619 @@
+[\033[1;32mbuild\033[0m] Building VLC for macOS for architecture arm64 on a aarch64 device
+[\033[1;32mbuild\033[0m] Building in "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build"
+[\033[1;32mbuild\033[0m] Building with minimum macOS version 10.7 and SDK 27.0 at /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk using Xcode 27.0
+Build version 27A266a
+[\033[1;32mbuild\033[0m] Building building tools
+You are ready to build VLC and its contribs
+[\033[1;32mbuild\033[0m] Building contribs
+Packages licensing...    GPL version 3
+Creating makefile...
+Bootstrap completed.
+Run "make" to start compilation.
+
+Other targets:
+ * make install      same as "make"
+ * make prebuilt     fetch and install prebuilt binaries
+ * make list         list packages
+ * make fetch        fetch required source tarballs
+ * make fetch-all    fetch all source tarballs
+ * make distclean    clean everything and undo bootstrap
+ * make mostlyclean  clean everything except source tarballs
+ * make clean        clean everything
+ * make package      prepare prebuilt packages
+ * make help         show this text
+All packages:
+  SDL_image a52 alloweduwp amf aom aribb24 aribb25 asdcplib ass
+  bluray bpg breakpad caca cddb chromaprint crystalhd d3d11 d3d9
+  daala dav1d dca dvbpsi dvdcss dvdnav dvdread dxva dxva_x86 dxvahd
+  ebml faad2 ffi ffmpeg flac fluid fluidlite fontconfig freetype2
+  fribidi gcrypt gettext glew glib gme gmp gnutls goom gpg-error
+  growl gsm harfbuzz iconv jack jpeg kate lame libarchive libdsm
+  libmpeg2 libplacebo librist libtasn1 libxml2 live555 lua luac mad
+  matroska mft10 microdns mingw11-fixes mingw12-fixes mingw64 modplug
+  mpcdec mpg123 mysofa ncurses nettle nfs ogg openapv openjpeg opus
+  png postproc projectM protobuf qt qtsvg regex samplerate sdl shout
+  sidplay2 smb2 soxr sparkle spatialaudio speex speexdsp srt ssh2
+  taglib theora tiger tremor twolame upnp utfcpp vncclient vorbis
+  vpl vpx winpthreads wix wixlzx x262 x264 x26410b x265 xau xcb
+  xcb-proto xorg-macros xproto zlib zvbi
+Distribution-provided packages:
+   aom aribb24 asdcplib cddb chromaprint dca dvbpsi dvdcss dvdnav
+   dvdread ebml faad2 ffmpeg flac gcrypt gmp gnutls goom gpg-error
+   iconv kate libarchive libmpeg2 libplacebo libxml2 live555 mad
+   matroska modplug mpg123 mysofa ncurses nettle nfs ogg opus png
+   postproc protobuf regex samplerate shout sidplay2 spatialaudio
+   speex speexdsp srt ssh2 taglib theora twolame upnp vorbis vpx
+   x264 x26410b x265 zlib zvbi
+Automatically selected packages:
+  a52 ass bluray dav1d fontconfig freetype2 fribidi gettext gme
+  harfbuzz librist lua luac mpcdec vncclient
+Manually deselected packages:
+Manually selected packages:
+Depended-on packages:
+  jpeg
+To-be-built packages:
+  a52 ass bluray dav1d fontconfig freetype2 fribidi gettext gme
+  harfbuzz jpeg librist lua luac mpcdec vncclient
+make: Nothing to be done for `fetch'.
+rm -rf fribidi/build
+rm -rf harfbuzz/build
+rm -rf /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/share/java/libbluray*.jar
+rm -rf dav1d/build
+rm -rf bluray/build
+CC="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" CXX="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++" OBJC="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" OBJCXX="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++" LD="ld" AR="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar" CCAS="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c" RANLIB="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib" STRIP="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip" PATH="/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/bin:/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/extras/tools/build/bin:/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/extras/tools/build/bin:/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/bin::/usr/local/bin:/bin:/sbin:/usr/bin:/usr/sbin" PKG_CONFIG="pkg-config" meson setup fribidi/build fribidi --default-library static --prefix "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27" --backend ninja -Dlibdir=lib --buildtype debugoptimized -Dc_args="-Werror=partial-availability -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64 -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include -g -O2" -Dc_link_args=" -L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64" -Dcpp_args="-Werror=partial-availability -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64 -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include -stdlib=libc++ -g -O2" -Dcpp_link_args=" -L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64" -Dobjc_args="-Werror=partial-availability -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64 -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include -g -O2" -Dobjc_link_args=" -L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64" -Dobjcpp_args="-Werror=partial-availability -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64 -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include -stdlib=libc++ -g -O2" -Dobjcpp_link_args=" -L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64" -Ddocs=false -Dbin=false -Dtests=false
+CC="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" CXX="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++" OBJC="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" OBJCXX="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++" LD="ld" AR="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar" CCAS="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c" RANLIB="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib" STRIP="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip" PATH="/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/bin:/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/extras/tools/build/bin:/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/extras/tools/build/bin:/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/bin::/usr/local/bin:/bin:/sbin:/usr/bin:/usr/sbin" PKG_CONFIG="pkg-config" meson setup dav1d/build dav1d --default-library static --prefix "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27" --backend ninja -Dlibdir=lib --buildtype debugoptimized -Dc_args="-Werror=partial-availability -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64 -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include -g -O2" -Dc_link_args=" -L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64" -Dcpp_args="-Werror=partial-availability -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64 -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include -stdlib=libc++ -g -O2" -Dcpp_link_args=" -L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64" -Dobjc_args="-Werror=partial-availability -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64 -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include -g -O2" -Dobjc_link_args=" -L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64" -Dobjcpp_args="-Werror=partial-availability -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64 -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include -stdlib=libc++ -g -O2" -Dobjcpp_link_args=" -L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64" -D enable_tests=false -D enable_tools=false
+CC="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" CXX="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++" OBJC="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" OBJCXX="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++" LD="ld" AR="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar" CCAS="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c" RANLIB="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib" STRIP="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip" PATH="/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/bin:/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/extras/tools/build/bin:/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/extras/tools/build/bin:/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/bin::/usr/local/bin:/bin:/sbin:/usr/bin:/usr/sbin" PKG_CONFIG="pkg-config" meson setup bluray/build bluray --default-library static --prefix "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27" --backend ninja -Dlibdir=lib --buildtype debugoptimized -Dc_args="-Werror=partial-availability -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64 -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include -g -O2" -Dc_link_args=" -L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64" -Dcpp_args="-Werror=partial-availability -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64 -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include -stdlib=libc++ -g -O2" -Dcpp_link_args=" -L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64" -Dobjc_args="-Werror=partial-availability -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64 -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include -g -O2" -Dobjc_link_args=" -L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64" -Dobjcpp_args="-Werror=partial-availability -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64 -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include -stdlib=libc++ -g -O2" -Dobjcpp_link_args=" -L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64" -Dfreetype=enabled -Dlibxml2=enabled -Dfontconfig=disabled
+CC="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" CXX="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++" OBJC="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" OBJCXX="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++" LD="ld" AR="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar" CCAS="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c" RANLIB="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib" STRIP="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip" PATH="/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/bin:/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/extras/tools/build/bin:/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/extras/tools/build/bin:/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/bin::/usr/local/bin:/bin:/sbin:/usr/bin:/usr/sbin" PKG_CONFIG="pkg-config" meson setup harfbuzz/build harfbuzz --default-library static --prefix "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27" --backend ninja -Dlibdir=lib --buildtype debugoptimized -Dc_args="-Werror=partial-availability -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64 -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include -g -O2" -Dc_link_args=" -L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64" -Dcpp_args="-Werror=partial-availability -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64 -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include -stdlib=libc++ -g -O2" -Dcpp_link_args=" -L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64" -Dobjc_args="-Werror=partial-availability -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64 -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include -g -O2" -Dobjc_link_args=" -L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64" -Dobjcpp_args="-Werror=partial-availability -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64 -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include -stdlib=libc++ -g -O2" -Dobjcpp_link_args=" -L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64" -Dfreetype=enabled -Dglib=disabled -Dgobject=disabled -Ddocs=disabled -Dtests=disabled -Dgpu_demo=disabled -Dcoretext=enabled
+The Meson build system
+Version: 1.10.0
+Source dir: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/fribidi
+Build dir: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/fribidi/build
+Build type: native build
+Project name: fribidi
+Project version: 1.0.12
+C compiler for the host machine: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang (clang 21.0.0 "Apple clang version 21.0.0 (clang-2100.3.34.2)")
+C linker for the host machine: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang ld64 27037.1
+Host machine cpu family: aarch64
+Host machine cpu: aarch64
+Compiler for C supports arguments -fvisibility=hidden: YES 
+Checking for function "memmove" : YES 
+Checking for function "memset" : YES 
+Checking for function "strdup" : YES 
+Has header "stdlib.h" : YES 
+Has header "string.h" : YES 
+Has header "memory.h" : YES 
+Has header "strings.h" : YES 
+Has header "sys/times.h" : YES 
+Has header "strings.h" : YES (cached)
+Configuring config.h using configuration
+Has header "stdlib.h" : YES (cached)
+Has header "string.h" : YES (cached)
+Has header "strings.h" : YES (cached)
+Checking for size of "int" : 4 
+Configuring fribidi-config.h using configuration
+Found pkg-config: YES (/usr/local/bin/pkg-config) 2.5.1
+Build targets in project: 15
+
+fribidi 1.0.12
+
+  User defined options
+    backend         : ninja
+    bin             : false
+    buildtype       : debugoptimized
+    c_args          : -Werror=partial-availability -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64 -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include -g -O2
+    c_link_args     :  -L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64
+    cpp_args        : -Werror=partial-availability -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64 -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include -stdlib=libc++ -g -O2
+    cpp_link_args   :  -L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64
+    default_library : static
+    docs            : false
+    libdir          : lib
+    objc_args       : -Werror=partial-availability -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64 -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include -g -O2
+    objc_link_args  :  -L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64
+    objcpp_args     : -Werror=partial-availability -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64 -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include -stdlib=libc++ -g -O2
+    objcpp_link_args:  -L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64
+    prefix          : /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27
+    tests           : false
+
+Found ninja-1.13.2.git.kitware.jobserver-pipe-1 at /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/extras/tools/build/bin/ninja
+meson compile -C fribidi/build   && meson install -C fribidi/build
+ninja: Entering directory `/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/fribidi/build'
+[1/46] Compiling C object gen.tab/gen-unicode-version.p/gen-unicode-version.c.o
+[2/46] Linking target gen.tab/gen-unicode-version
+The Meson build system
+Version: 1.10.0
+Source dir: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/dav1d
+Build dir: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/dav1d/build
+Build type: native build
+Project name: dav1d
+Project version: 1.5.4
+C compiler for the host machine: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang (clang 21.0.0 "Apple clang version 21.0.0 (clang-2100.3.34.2)")
+C linker for the host machine: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang ld64 27037.1
+Host machine cpu family: aarch64
+Host machine cpu: aarch64
+Fetching value of define "DAV1D_API_VERSION_MAJOR" : 7 
+Fetching value of define "DAV1D_API_VERSION_MINOR" : 0 
+Fetching value of define "DAV1D_API_VERSION_PATCH" : 0 
+Run-time dependency threads found: YES
+Checking for function "clock_gettime" : NO 
+Checking for function "sigaction" : YES 
+Checking for function "posix_memalign" : YES 
+Checking for function "memalign" : NO 
+Checking for function "aligned_alloc" : NO 
+Library m found: YES
+Check usable header "stdatomic.h" : YES 
+Check usable header "sys/types.h" : YES 
+Check usable header "unistd.h" : YES 
+Check usable header "io.h" : NO 
+Check usable header "pthread_np.h" : NO 
+Checking for function "getopt_long" : YES 
+Checking for function "getauxval" : NO 
+Checking for function "elf_aux_info" : NO 
+Checking for function "pthread_getaffinity_np" with dependency threads: NO 
+Checking for function "pthread_setaffinity_np" with dependency threads: NO 
+Checking for function "pthread_setname_np" with dependency threads: YES 
+Checking for function "pthread_set_name_np" with dependency threads: NO 
+Checking if "_Generic" compiles: YES 
+Compiler for C supports arguments -fvisibility=hidden: YES 
+Compiler for C supports arguments -Wundef: YES 
+Compiler for C supports arguments -Werror=vla: YES 
+Compiler for C supports arguments -Wno-maybe-uninitialized: NO 
+Compiler for C supports arguments -Wno-missing-field-initializers: YES 
+Compiler for C supports arguments -Wno-unused-parameter: YES 
+Compiler for C supports arguments -Wstrict-prototypes: YES 
+Compiler for C supports arguments -Werror=missing-prototypes: YES 
+Compiler for C supports arguments -Wshorten-64-to-32: YES 
+Compiler for C supports arguments -fomit-frame-pointer: YES 
+Compiler for C supports arguments -ffast-math: YES 
+Compiler for C supports arguments -fno-align-functions: YES 
+Checking if "DOTPROD" compiles: YES 
+Checking if "I8MM" compiles: YES 
+Checking if "SVE" compiles: YES 
+Checking if "SVE2" compiles: YES 
+Configuring config.h using configuration
+Found pkg-config: YES (/usr/local/bin/pkg-config) 2.5.1
+Build targets in project: 5
+
+dav1d 1.5.4
+
+  User defined options
+    backend         : ninja
+    buildtype       : debugoptimized
+    c_args          : -Werror=partial-availability -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64 -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include -g -O2
+    c_link_args     :  -L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64
+    cpp_args        : -Werror=partial-availability -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64 -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include -stdlib=libc++ -g -O2
+    cpp_link_args   :  -L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64
+    default_library : static
+    enable_tests    : false
+    enable_tools    : false
+    libdir          : lib
+    objc_args       : -Werror=partial-availability -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64 -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include -g -O2
+    objc_link_args  :  -L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64
+    objcpp_args     : -Werror=partial-availability -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64 -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include -stdlib=libc++ -g -O2
+    objcpp_link_args:  -L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64
+    prefix          : /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27
+
+Found ninja-1.13.2.git.kitware.jobserver-pipe-1 at /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/extras/tools/build/bin/ninja
+meson compile -C dav1d/build   && meson install -C dav1d/build
+ninja: Entering directory `/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/dav1d/build'
+[1/73] Compiling C object src/libdav1d_bitdepth_8.a.p/fg_apply_tmpl.c.o
+[2/73] Compiling C object src/libdav1d_bitdepth_8.a.p/cdef_apply_tmpl.c.o
+[3/73] Compiling C object src/libdav1d_bitdepth_8.a.p/cdef_tmpl.c.o
+[4/73] Compiling C object src/libdav1d_bitdepth_8.a.p/ipred_prepare_tmpl.c.o
+[5/73] Compiling C object src/libdav1d_bitdepth_8.a.p/filmgrain_tmpl.c.o
+[6/73] Compiling C object src/libdav1d_bitdepth_8.a.p/ipred_tmpl.c.o
+[7/73] Compiling C object src/libdav1d_bitdepth_8.a.p/itx_tmpl.c.o
+[8/73] Compiling C object src/libdav1d_bitdepth_8.a.p/loopfilter_tmpl.c.o
+[9/73] Compiling C object src/libdav1d_bitdepth_8.a.p/lf_apply_tmpl.c.o
+[10/73] Compiling C object src/libdav1d_bitdepth_8.a.p/lr_apply_tmpl.c.o
+[11/73] Compiling C object src/libdav1d_bitdepth_8.a.p/looprestoration_tmpl.c.o
+[12/73] Compiling C object src/libdav1d_bitdepth_8.a.p/mc_tmpl.c.o
+[13/73] Compiling C object src/libdav1d_bitdepth_16.a.p/cdef_apply_tmpl.c.o
+[14/73] Compiling C object src/libdav1d_bitdepth_16.a.p/cdef_tmpl.c.o
+[15/73] Compiling C object src/libdav1d_bitdepth_8.a.p/recon_tmpl.c.o
+[16/73] Compiling C object src/libdav1d_bitdepth_16.a.p/fg_apply_tmpl.c.o
+[17/73] Generating include/vcs_version.h with a custom command
+[18/73] Compiling C object src/libdav1d_bitdepth_16.a.p/ipred_prepare_tmpl.c.o
+[19/73] Compiling C object src/libdav1d_bitdepth_16.a.p/filmgrain_tmpl.c.o
+[20/73] Compiling C object src/libdav1d_bitdepth_16.a.p/itx_tmpl.c.o
+[21/73] Compiling C object src/libdav1d_bitdepth_16.a.p/ipred_tmpl.c.o
+[22/73] Compiling C object src/libdav1d_bitdepth_16.a.p/loopfilter_tmpl.c.o
+[23/73] Compiling C object src/libdav1d_bitdepth_16.a.p/lf_apply_tmpl.c.o
+[24/73] Compiling C object src/libdav1d_bitdepth_16.a.p/lr_apply_tmpl.c.o
+[3/46] Generating gen.tab/fribidi-unicode-version.h with a custom command (wrapped by meson to capture output)
+[25/73] Compiling C object src/libdav1d_bitdepth_16.a.p/looprestoration_tmpl.c.o
+[4/46] Compiling C object gen.tab/gen-bidi-type-tab.p/gen-bidi-type-tab.c.o
+[5/46] Compiling C object gen.tab/gen-joining-type-tab.p/gen-joining-type-tab.c.o
+[6/46] Compiling C object gen.tab/gen-joining-type-tab.p/packtab.c.o
+[7/46] Compiling C object gen.tab/gen-bidi-type-tab.p/packtab.c.o
+[26/73] Compiling C object src/libdav1d.a.p/cpu.c.o
+[8/46] Compiling C object gen.tab/gen-arabic-shaping-tab.p/gen-arabic-shaping-tab.c.o
+[27/73] Compiling C object src/libdav1d_bitdepth_16.a.p/mc_tmpl.c.o
+[9/46] Compiling C object gen.tab/gen-mirroring-tab.p/gen-mirroring-tab.c.o
+[28/73] Compiling C object src/libdav1d.a.p/ctx.c.o
+[10/46] Compiling C object gen.tab/gen-arabic-shaping-tab.p/packtab.c.o
+[29/73] Compiling C object src/libdav1d_bitdepth_16.a.p/recon_tmpl.c.o
+[11/46] Compiling C object gen.tab/gen-brackets-tab.p/gen-brackets-tab.c.o
+[30/73] Compiling C object src/libdav1d.a.p/data.c.o
+[12/46] Compiling C object gen.tab/gen-mirroring-tab.p/packtab.c.o
+[13/46] Compiling C object gen.tab/gen-brackets-type-tab.p/gen-brackets-type-tab.c.o
+[31/73] Compiling C object src/libdav1d.a.p/dequant_tables.c.o
+[14/46] Linking target gen.tab/gen-bidi-type-tab
+[15/46] Compiling C object gen.tab/gen-brackets-tab.p/packtab.c.o
+[32/73] Compiling C object src/libdav1d.a.p/getbits.c.o
+[33/73] Compiling C object src/libdav1d.a.p/cdf.c.o
+[16/46] Linking target gen.tab/gen-joining-type-tab
+[34/73] Compiling C object src/libdav1d.a.p/intra_edge.c.o
+[17/46] Compiling C object gen.tab/gen-brackets-type-tab.p/packtab.c.o
+[18/46] Linking target gen.tab/gen-arabic-shaping-tab
+[19/46] Linking target gen.tab/gen-mirroring-tab
+[20/46] Linking target gen.tab/gen-brackets-tab
+[21/46] Linking target gen.tab/gen-brackets-type-tab
+The Meson build system
+Version: 1.10.0
+Source dir: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/bluray
+Build dir: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/bluray/build
+Build type: native build
+Project name: libbluray
+Project version: 1.4.1
+C compiler for the host machine: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang (clang 21.0.0 "Apple clang version 21.0.0 (clang-2100.3.34.2)")
+C linker for the host machine: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang ld64 27037.1
+Host machine cpu family: aarch64
+Host machine cpu: aarch64
+Run-time dependency appleframeworks found: YES (CoreFoundation, DiskArbitration)
+Has header "dirent.h" : YES 
+Has header "dlfcn.h" : YES 
+Has header "mntent.h" : NO 
+Has header "strings.h" : YES 
+Has header "sys/time.h" : YES 
+Has header "sys/dl.h" : NO 
+Checking for function "dladdr" : YES 
+Checking for function "getopt" : YES 
+Checking for function "dlopen" : YES 
+Run-time dependency threads found: YES
+Found pkg-config: YES (/usr/local/bin/pkg-config) 2.5.1
+Found CMake: /usr/local/bin/cmake (4.0.1)
+Run-time dependency freetype2 found: NO (tried pkgconfig, framework and cmake)
+
+bluray/meson.build:171:22: ERROR: Dependency "freetype2" not found, tried pkgconfig, framework and cmake
+
+A full log can be found at /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/bluray/build/meson-logs/meson-log.txt
+make: *** [.bluray] Error 1
+rm -rf librist/build
+[35/73] Compiling C object src/libdav1d.a.p/lf_mask.c.o
+[36/73] Compiling C object src/libdav1d.a.p/lib.c.o
+CC="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" CXX="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++" OBJC="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" OBJCXX="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++" LD="ld" AR="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar" CCAS="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c" RANLIB="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib" STRIP="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip" PATH="/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/bin:/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/extras/tools/build/bin:/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/extras/tools/build/bin:/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/bin::/usr/local/bin:/bin:/sbin:/usr/bin:/usr/sbin" PKG_CONFIG="pkg-config" meson setup librist/build librist --default-library static --prefix "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27" --backend ninja -Dlibdir=lib --buildtype debugoptimized -Dc_args="-Werror=partial-availability -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64 -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include -g -O2" -Dc_link_args=" -L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64" -Dcpp_args="-Werror=partial-availability -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64 -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include -stdlib=libc++ -g -O2" -Dcpp_link_args=" -L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64" -Dobjc_args="-Werror=partial-availability -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64 -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include -g -O2" -Dobjc_link_args=" -L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64" -Dobjcpp_args="-Werror=partial-availability -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64 -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include -stdlib=libc++ -g -O2" -Dobjcpp_link_args=" -L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64" -Dbuilt_tools=false -Dtest=false -Duse_nettle=true -Duse_mbedtls=false
+[37/73] Compiling C object src/libdav1d.a.p/log.c.o
+[38/73] Compiling C object src/libdav1d.a.p/mem.c.o
+[39/73] Compiling C object src/libdav1d.a.p/msac.c.o
+[40/73] Compiling C object src/libdav1d.a.p/pal.c.o
+[41/73] Compiling C object src/libdav1d.a.p/itx_1d.c.o
+[22/46] Generating gen.tab/gen-mirroring-tab with a custom command (wrapped by meson to capture output)
+[23/46] Generating gen.tab/gen-arabic-shaping-tab with a custom command (wrapped by meson to capture output)
+[42/73] Compiling C object src/libdav1d.a.p/picture.c.o
+[43/73] Compiling C object src/libdav1d.a.p/obu.c.o
+[44/73] Compiling C object src/libdav1d.a.p/qm.c.o
+[45/73] Compiling C object src/libdav1d.a.p/ref.c.o
+[46/73] Compiling C object src/libdav1d.a.p/scan.c.o
+[47/73] Compiling C object src/libdav1d.a.p/tables.c.o
+[48/73] Compiling C object src/libdav1d.a.p/decode.c.o
+[49/73] Compiling C object src/libdav1d.a.p/warpmv.c.o
+[50/73] Compiling C object src/libdav1d.a.p/wedge.c.o
+[24/46] Generating gen.tab/gen-joining-type-tab with a custom command (wrapped by meson to capture output)
+[25/46] Generating gen.tab/gen-bidi-type-tab with a custom command (wrapped by meson to capture output)
+[51/73] Compiling C object src/libdav1d.a.p/refmvs.c.o
+[52/73] Compiling C object src/libdav1d.a.p/arm_cpu.c.o
+[53/73] Compiling C object src/libdav1d.a.p/arm_64_looprestoration_common.S.o
+[26/46] Generating gen.tab/gen-brackets-type-tab with a custom command (wrapped by meson to capture output)
+[54/73] Compiling C object src/libdav1d.a.p/thread_task.c.o
+[55/73] Compiling C object src/libdav1d.a.p/arm_64_msac.S.o
+[27/46] Generating gen.tab/gen-brackets-tab with a custom command (wrapped by meson to capture output)
+[56/73] Compiling C object src/libdav1d.a.p/arm_64_refmvs.S.o
+[57/73] Compiling C object src/libdav1d.a.p/arm_64_itx.S.o
+[58/73] Compiling C object src/libdav1d.a.p/arm_64_cdef.S.o
+[28/46] Compiling C object lib/libfribidi.a.p/fribidi-arabic.c.o
+[29/46] Compiling C object lib/libfribidi.a.p/fribidi.c.o
+[30/46] Compiling C object lib/libfribidi.a.p/fribidi-bidi-types.c.o
+[59/73] Compiling C object src/libdav1d.a.p/arm_64_filmgrain.S.o
+[60/73] Compiling C object src/libdav1d.a.p/arm_64_loopfilter.S.o
+[61/73] Compiling C object src/libdav1d.a.p/arm_64_ipred.S.o
+[62/73] Compiling C object src/libdav1d.a.p/arm_64_looprestoration.S.o
+[31/46] Compiling C object lib/libfribidi.a.p/fribidi-char-sets-cp1255.c.o
+[32/46] Compiling C object lib/libfribidi.a.p/fribidi-char-sets.c.o
+[33/46] Compiling C object lib/libfribidi.a.p/fribidi-char-sets-cap-rtl.c.o
+[63/73] Compiling C object src/libdav1d.a.p/arm_64_cdef16.S.o
+[34/46] Compiling C object lib/libfribidi.a.p/fribidi-bidi.c.o
+../lib/fribidi-bidi.c:577:28: warning: implicit conversion from enumeration type 'FriBidiCharType' to different enumeration type 'FriBidiParType' [-Wimplicit-enum-enum-cast]
+  577 |               *pbase_dir = FRIBIDI_LEVEL_TO_DIR (base_level);
+      |                          ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../lib/fribidi-bidi-types.h:257:32: note: expanded from macro 'FRIBIDI_LEVEL_TO_DIR'
+  257 |         (FRIBIDI_LEVEL_IS_RTL (lev) ? FRIBIDI_TYPE_RTL : FRIBIDI_TYPE_LTR)
+      |                                       ^~~~~~~~~~~~~~~~
+../lib/fribidi-bidi.c:577:28: warning: implicit conversion from enumeration type 'FriBidiCharType' to different enumeration type 'FriBidiParType' [-Wimplicit-enum-enum-cast]
+  577 |               *pbase_dir = FRIBIDI_LEVEL_TO_DIR (base_level);
+      |                          ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../lib/fribidi-bidi-types.h:257:51: note: expanded from macro 'FRIBIDI_LEVEL_TO_DIR'
+  257 |         (FRIBIDI_LEVEL_IS_RTL (lev) ? FRIBIDI_TYPE_RTL : FRIBIDI_TYPE_LTR)
+      |                                                          ^~~~~~~~~~~~~~~~
+../lib/fribidi-bidi.c:582:14: warning: implicit conversion from enumeration type 'FriBidiCharType' to different enumeration type 'FriBidiParType' [-Wimplicit-enum-enum-cast]
+  582 |   base_dir = FRIBIDI_LEVEL_TO_DIR (base_level);
+      |            ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../lib/fribidi-bidi-types.h:257:32: note: expanded from macro 'FRIBIDI_LEVEL_TO_DIR'
+  257 |         (FRIBIDI_LEVEL_IS_RTL (lev) ? FRIBIDI_TYPE_RTL : FRIBIDI_TYPE_LTR)
+      |                                       ^~~~~~~~~~~~~~~~
+../lib/fribidi-bidi.c:582:14: warning: implicit conversion from enumeration type 'FriBidiCharType' to different enumeration type 'FriBidiParType' [-Wimplicit-enum-enum-cast]
+  582 |   base_dir = FRIBIDI_LEVEL_TO_DIR (base_level);
+      |            ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../lib/fribidi-bidi-types.h:257:51: note: expanded from macro 'FRIBIDI_LEVEL_TO_DIR'
+  257 |         (FRIBIDI_LEVEL_IS_RTL (lev) ? FRIBIDI_TYPE_RTL : FRIBIDI_TYPE_LTR)
+      |                                                          ^~~~~~~~~~~~~~~~
+../lib/fribidi-bidi.c:584:58: warning: implicit conversion from enumeration type 'FriBidiParType' to different enumeration type 'FriBidiCharType' [-Wimplicit-enum-enum-cast]
+  584 |   DBG2 ("  base dir   : %s", fribidi_get_bidi_type_name (base_dir));
+      |                              ~~~~~~~~~~~~~~~~~~~~~~~~~~  ^~~~~~~~
+../lib/fribidi-bidi.c:1392:16: warning: implicit conversion from enumeration type 'FriBidiParType' to different enumeration type 'FriBidiCharType' [-Wimplicit-enum-enum-cast]
+ 1392 |             p->type = base_dir;
+      |                     ~ ^~~~~~~~
+6 warnings generated.
+The Meson build system
+Version: 1.10.0
+Source dir: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/harfbuzz
+Build dir: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/harfbuzz/build
+Build type: native build
+Project name: harfbuzz
+Project version: 14.2.1
+C compiler for the host machine: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang (clang 21.0.0 "Apple clang version 21.0.0 (clang-2100.3.34.2)")
+C linker for the host machine: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang ld64 27037.1
+C++ compiler for the host machine: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ (clang 21.0.0 "Apple clang version 21.0.0 (clang-2100.3.34.2)")
+C++ linker for the host machine: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ ld64 27037.1
+Host machine cpu family: aarch64
+Host machine cpu: aarch64
+Compiler for C++ supports link arguments -Bsymbolic-functions: YES 
+Compiler for C++ supports arguments -fno-exceptions: YES 
+Compiler for C++ supports arguments -fno-rtti: YES 
+Compiler for C++ supports arguments -fno-threadsafe-statics: YES 
+Compiler for C++ supports arguments -fvisibility-inlines-hidden: YES 
+Library m found: YES
+Found pkg-config: YES (/usr/local/bin/pkg-config) 2.5.1
+Found CMake: /usr/local/bin/cmake (4.0.1)
+Run-time dependency freetype2 found: NO (tried pkgconfig, framework and cmake)
+Not looking for a fallback subproject for the dependency freetype2 because:
+Use of fallback dependencies is disabled.
+
+harfbuzz/meson.build:111:15: ERROR: Dependency 'freetype2' is required but not found.
+
+A full log can be found at /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/harfbuzz/build/meson-logs/meson-log.txt
+[35/46] Compiling C object lib/libfribidi.a.p/fribidi-char-sets-iso8859-6.c.o
+[64/73] Compiling C object src/libdav1d.a.p/arm_64_mc_dotprod.S.o
+[36/46] Compiling C object lib/libfribidi.a.p/fribidi-char-sets-cp1256.c.o
+[65/73] Compiling C object src/libdav1d.a.p/arm_64_mc.S.o
+[37/46] Compiling C object lib/libfribidi.a.p/fribidi-char-sets-iso8859-8.c.o
+[66/73] Compiling C object src/libdav1d.a.p/arm_64_filmgrain16.S.o
+make: *** [.harfbuzz] Error 1
+[38/46] Compiling C object lib/libfribidi.a.p/fribidi-deprecated.c.o
+[39/46] Compiling C object lib/libfribidi.a.p/fribidi-char-sets-utf8.c.o
+[40/46] Compiling C object lib/libfribidi.a.p/fribidi-joining.c.o
+[67/73] Compiling C object src/libdav1d.a.p/arm_64_loopfilter16.S.o
+[68/73] Compiling C object src/libdav1d.a.p/arm_64_ipred16.S.o
+[69/73] Compiling C object src/libdav1d.a.p/arm_64_looprestoration16.S.o
+[41/46] Compiling C object lib/libfribidi.a.p/fribidi-joining-types.c.o
+[42/46] Compiling C object lib/libfribidi.a.p/fribidi-mirroring.c.o
+[43/46] Compiling C object lib/libfribidi.a.p/fribidi-brackets.c.o
+[44/46] Compiling C object lib/libfribidi.a.p/fribidi-shape.c.o
+[70/73] Compiling C object src/libdav1d.a.p/arm_64_mc16_sve.S.o
+[45/46] Compiling C object lib/libfribidi.a.p/fribidi-run.c.o
+[71/73] Compiling C object src/libdav1d.a.p/arm_64_itx16.S.o
+[72/73] Compiling C object src/libdav1d.a.p/arm_64_mc16.S.o
+[46/46] Linking static target lib/libfribidi.a
+INFO: autodetecting backend as ninja
+INFO: calculating backend command to run: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/extras/tools/build/bin/ninja -C /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/fribidi/build
+[73/73] Linking static target src/libdav1d.a
+INFO: autodetecting backend as ninja
+INFO: calculating backend command to run: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/extras/tools/build/bin/ninja -C /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/dav1d/build
+ninja: Entering directory `/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/fribidi/build'
+ninja: no work to do.
+Installing gen.tab/fribidi-unicode-version.h to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/fribidi
+Installing lib/libfribidi.a to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib
+Installing /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/fribidi/lib/fribidi-arabic.h to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/fribidi
+Installing /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/fribidi/lib/fribidi-begindecls.h to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/fribidi
+Installing /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/fribidi/lib/fribidi-bidi.h to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/fribidi
+Installing /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/fribidi/lib/fribidi-bidi-types.h to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/fribidi
+Installing /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/fribidi/lib/fribidi-bidi-types-list.h to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/fribidi
+Installing /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/fribidi/lib/fribidi-char-sets.h to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/fribidi
+Installing /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/fribidi/lib/fribidi-char-sets-list.h to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/fribidi
+Installing /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/fribidi/lib/fribidi-common.h to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/fribidi
+Installing /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/fribidi/lib/fribidi-deprecated.h to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/fribidi
+Installing /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/fribidi/lib/fribidi-enddecls.h to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/fribidi
+Installing /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/fribidi/lib/fribidi-flags.h to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/fribidi
+Installing /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/fribidi/lib/fribidi-joining.h to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/fribidi
+Installing /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/fribidi/lib/fribidi-joining-types.h to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/fribidi
+Installing /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/fribidi/lib/fribidi-joining-types-list.h to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/fribidi
+Installing /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/fribidi/lib/fribidi-mirroring.h to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/fribidi
+Installing /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/fribidi/lib/fribidi-brackets.h to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/fribidi
+Installing /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/fribidi/lib/fribidi-shape.h to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/fribidi
+Installing /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/fribidi/lib/fribidi-types.h to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/fribidi
+Installing /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/fribidi/lib/fribidi-unicode.h to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/fribidi
+Installing /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/fribidi/lib/fribidi.h to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/fribidi
+Installing /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/fribidi/build/lib/fribidi-config.h to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/fribidi
+Installing /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/fribidi/build/meson-private/fribidi.pc to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/pkgconfig
+ninja: Entering directory `/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/dav1d/build'
+touch .fribidi
+touch -r .fribidi .dep-fribidi
+[1/3] Generating include/vcs_version.h with a custom command
+Installing src/libdav1d.a to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib
+Installing /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/dav1d/include/dav1d/common.h to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/dav1d
+Installing /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/dav1d/include/dav1d/data.h to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/dav1d
+Installing /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/dav1d/include/dav1d/dav1d.h to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/dav1d
+Installing /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/dav1d/include/dav1d/headers.h to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/dav1d
+Installing /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/dav1d/include/dav1d/picture.h to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/dav1d
+Installing /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/dav1d/include/dav1d/version.h to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/dav1d
+Installing /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/dav1d/build/meson-private/dav1d.pc to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/pkgconfig
+touch .dav1d
+The Meson build system
+Version: 1.10.0
+Source dir: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/librist
+Build dir: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/librist/build
+Build type: native build
+Project name: libRIST
+Project version: 0.2.20
+C compiler for the host machine: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang (clang 21.0.0 "Apple clang version 21.0.0 (clang-2100.3.34.2)")
+C linker for the host machine: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang ld64 27037.1
+Host machine cpu family: aarch64
+Host machine cpu: aarch64
+Program brew found: YES (/usr/local/bin/brew)
+librist/meson.build:61: WARNING: use_nettle is deprecated, use use_gnutls
+Has header "pthread.h" : YES 
+Checking for function "clock_gettime" : NO 
+Compiler for C supports arguments -Wundef: YES 
+Compiler for C supports arguments -Werror=vla: YES 
+Compiler for C supports arguments -Wno-maybe-uninitialized: NO 
+Compiler for C supports arguments -Wno-missing-field-initializers: YES 
+Compiler for C supports arguments -Wno-unused-parameter: YES 
+Compiler for C supports arguments -Wshorten-64-to-32: YES 
+Compiler for C supports arguments -Wunused-parameter: YES 
+Compiler for C supports arguments -Wmaybe-uninitialized: NO 
+Compiler for C supports arguments -Wno-error=deprecated-declarations: YES 
+Run-time dependency threads found: YES
+Compiler for C supports arguments -Watomic-implicit-seq-cst: YES 
+Has header "sys/un.h" : YES 
+Found pkg-config: YES (/usr/local/bin/pkg-config) 2.5.1
+Found CMake: /usr/local/bin/cmake (4.0.1)
+Run-time dependency libmicrohttpd found: NO (tried pkgconfig, framework and cmake)
+Compiler for C supports arguments -fvisibility=hidden: YES 
+Check usable header "stdatomic.h" : YES 
+Run-time dependency libcjson found: NO (tried pkgconfig, framework and cmake)
+Has header "cjson/cJSON.h" : NO 
+Message: Using builtin cJSON library
+Run-time dependency liblz4 found: NO (tried pkgconfig, framework and cmake)
+Has header "lz4.h" : NO 
+Message: Using builtin LZ4 library
+Run-time dependency nettle found: YES 3.10.2
+Run-time dependency hogweed found: YES 3.10.2
+Checking if "Nettle with mini-gmp?" with dependencies nettle, hogweed compiles: NO 
+Run-time dependency gmp found: YES 6.3.0
+Run-time dependency gnutls found: YES 3.8.13
+Configuring version.h using configuration
+Configuring librist_config.h using configuration
+Program objcopy found: NO
+Configuring config.h using configuration
+librist/meson.build:350: WARNING: Project targets '>= 0.51.0' but uses feature introduced in '0.57.0': prelink arg in library.
+Found pkg-config: YES (/usr/local/bin/pkg-config) 2.5.1
+Build targets in project: 2
+WARNING: Project specifies a minimum meson_version '>= 0.51.0' but uses features which were added in newer versions:
+ * 0.57.0: {'prelink arg in library'}
+
+libRIST 0.2.20
+
+  User defined options
+    backend         : ninja
+    buildtype       : debugoptimized
+    built_tools     : false
+    c_args          : -Werror=partial-availability -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64 -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include -g -O2
+    c_link_args     :  -L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64
+    cpp_args        : -Werror=partial-availability -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64 -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include -stdlib=libc++ -g -O2
+    cpp_link_args   :  -L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64
+    default_library : static
+    libdir          : lib
+    objc_args       : -Werror=partial-availability -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64 -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include -g -O2
+    objc_link_args  :  -L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64
+    objcpp_args     : -Werror=partial-availability -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64 -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include -stdlib=libc++ -g -O2
+    objcpp_link_args:  -L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64
+    prefix          : /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27
+    test            : false
+    use_mbedtls     : false
+    use_nettle      : true
+
+Found ninja-1.13.2.git.kitware.jobserver-pipe-1 at /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/extras/tools/build/bin/ninja
+meson compile -C librist/build   && meson install -C librist/build
+ninja: Entering directory `/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/librist/build'
+[1/36] Generating include/vcs_version.h with a custom command
+[2/36] Compiling C object librist.a.p/src_crypto_crypto.c.o
+[3/36] Compiling C object librist.a.p/src_proto_rtp.c.o
+[4/36] Compiling C object librist.a.p/src_crypto_psk.c.o
+[5/36] Compiling C object librist.a.p/src_proto_gre.c.o
+[6/36] Compiling C object librist.a.p/src_proto_rist_time.c.o
+[7/36] Compiling C object librist.a.p/src_rist_pacer.c.o
+[8/36] Compiling C object librist.a.p/src_flow.c.o
+[9/36] Compiling C object librist.a.p/src_logging.c.o
+[10/36] Compiling C object librist.a.p/src_network.c.o
+[11/36] Compiling C object librist.a.p/src_adv.c.o
+[12/36] Compiling C object librist.a.p/src_rist_ref.c.o
+[13/36] Compiling C object librist.a.p/src_adv_ctrl.c.o
+[14/36] Compiling C object librist.a.p/src_rist-thread.c.o
+[15/36] Compiling C object librist.a.p/src_rist.c.o
+[16/36] Compiling C object librist.a.p/src_mpegts.c.o
+[17/36] Compiling C object librist.a.p/src_peer.c.o
+[18/36] Compiling C object librist.a.p/src_transport.c.o
+[19/36] Compiling C object librist.a.p/src_udp.c.o
+[20/36] Compiling C object librist.a.p/src_stats.c.o
+[21/36] Compiling C object librist.a.p/src_udpsocket.c.o
+[22/36] Compiling C object librist.a.p/src_tun_cidr.c.o
+[23/36] Compiling C object librist.a.p/contrib_stdio-shim.c.o
+[24/36] Compiling C object librist.a.p/src_libevsocket.c.o
+[25/36] Compiling C object librist.a.p/contrib_time-shim.c.o
+[26/36] Compiling C object librist.a.p/contrib_pthread-shim.c.o
+[27/36] Compiling C object librist.a.p/src_tun_darwin.c.o
+[28/36] Compiling C object librist.a.p/src_crypto_random.c.o
+[29/36] Compiling C object librist.a.p/src_crypto_srp_constants.c.o
+[30/36] Compiling C object librist.a.p/src_rist-common.c.o
+[31/36] Compiling C object librist.a.p/src_crypto_eap_v4_crypto.c.o
+[32/36] Compiling C object librist.a.p/src_crypto_srp.c.o
+[33/36] Compiling C object librist.a.p/src_proto_eap.c.o
+[34/36] Compiling C object librist.a.p/contrib_contrib_cJSON_cjson_cJSON.c.o
+[35/36] Compiling C object librist.a.p/contrib_lz4_lz4.c.o
+[36/36] Linking static target librist.a
+INFO: autodetecting backend as ninja
+INFO: calculating backend command to run: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/extras/tools/build/bin/ninja -C /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/librist/build
+ninja: Entering directory `/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/librist/build'
+[1/4] Generating include/vcs_version.h with a custom command
+Installing librist.a to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib
+Installing /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/librist/include/librist/common.h to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/librist
+Installing /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/librist/include/librist/headers.h to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/librist
+Installing /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/librist/include/librist/librist_srp.h to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/librist
+Installing /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/librist/include/librist/librist.h to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/librist
+Installing /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/librist/include/librist/logging.h to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/librist
+Installing /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/librist/include/librist/oob.h to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/librist
+Installing /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/librist/include/librist/opt.h to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/librist
+Installing /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/librist/include/librist/peer.h to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/librist
+Installing /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/librist/include/librist/receiver.h to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/librist
+Installing /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/librist/include/librist/sender.h to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/librist
+Installing /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/librist/include/librist/stats.h to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/librist
+Installing /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/librist/include/librist/tun.h to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/librist
+Installing /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/librist/include/librist/transport.h to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/librist
+Installing /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/librist/include/librist/tunnel.h to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/librist
+Installing /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/librist/include/librist/udpsocket.h to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/librist
+Installing /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/librist/include/librist/urlparam.h to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/librist
+Installing /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/librist/build/include/librist/version.h to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/librist
+Installing /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/librist/build/include/librist/librist_config.h to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include/librist
+Installing /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/librist/build/meson-private/librist.pc to /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib/pkgconfig
+touch .librist
+make: Target `all' not remade because of errors.
+rm -rf harfbuzz/build
+CC="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" CXX="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++" OBJC="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" OBJCXX="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++" LD="ld" AR="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar" CCAS="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c" RANLIB="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib" STRIP="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip" PATH="/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/bin:/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/extras/tools/build/bin:/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/extras/tools/build/bin:/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/bin::/usr/local/bin:/bin:/sbin:/usr/bin:/usr/sbin" PKG_CONFIG="pkg-config" meson setup harfbuzz/build harfbuzz --default-library static --prefix "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27" --backend ninja -Dlibdir=lib --buildtype debugoptimized -Dc_args="-Werror=partial-availability -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64 -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include -g -O2" -Dc_link_args=" -L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64" -Dcpp_args="-Werror=partial-availability -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64 -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include -stdlib=libc++ -g -O2" -Dcpp_link_args=" -L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64" -Dobjc_args="-Werror=partial-availability -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64 -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include -g -O2" -Dobjc_link_args=" -L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64" -Dobjcpp_args="-Werror=partial-availability -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64 -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/include -stdlib=libc++ -g -O2" -Dobjcpp_link_args=" -L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/aarch64-apple-darwin27/lib -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mmacosx-version-min=10.7 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -DMACOSX_DEPLOYMENT_TARGET=10.7 -arch arm64" -Dfreetype=enabled -Dglib=disabled -Dgobject=disabled -Ddocs=disabled -Dtests=disabled -Dgpu_demo=disabled -Dcoretext=enabled
+The Meson build system
+Version: 1.10.0
+Source dir: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/harfbuzz
+Build dir: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/harfbuzz/build
+Build type: native build
+Project name: harfbuzz
+Project version: 14.2.1
+C compiler for the host machine: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang (clang 21.0.0 "Apple clang version 21.0.0 (clang-2100.3.34.2)")
+C linker for the host machine: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang ld64 27037.1
+C++ compiler for the host machine: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ (clang 21.0.0 "Apple clang version 21.0.0 (clang-2100.3.34.2)")
+C++ linker for the host machine: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ ld64 27037.1
+Host machine cpu family: aarch64
+Host machine cpu: aarch64
+Compiler for C++ supports link arguments -Bsymbolic-functions: YES 
+Compiler for C++ supports arguments -fno-exceptions: YES 
+Compiler for C++ supports arguments -fno-rtti: YES 
+Compiler for C++ supports arguments -fno-threadsafe-statics: YES 
+Compiler for C++ supports arguments -fvisibility-inlines-hidden: YES 
+Library m found: YES
+Found pkg-config: YES (/usr/local/bin/pkg-config) 2.5.1
+Found CMake: /usr/local/bin/cmake (4.0.1)
+Run-time dependency freetype2 found: NO (tried pkgconfig, framework and cmake)
+Not looking for a fallback subproject for the dependency freetype2 because:
+Use of fallback dependencies is disabled.
+
+harfbuzz/meson.build:111:15: ERROR: Dependency 'freetype2' is required but not found.
+
+A full log can be found at /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/harfbuzz/build/meson-logs/meson-log.txt
+make: *** [.harfbuzz] Error 1

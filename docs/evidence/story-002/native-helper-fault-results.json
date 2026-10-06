@@ -1,0 +1,126 @@
+{
+  "actions": [
+    {
+      "time": 900809.953689166,
+      "command": "get_time",
+      "reply": "13\r\n"
+    },
+    {
+      "time": 900810.154243666,
+      "command": "pause",
+      "reply": "pause: returned 0 (no error)\r\nstatus change: ( play state: 2 ): Play\r\n"
+    },
+    {
+      "time": 900811.3590725,
+      "command": "get_time",
+      "reply": "status change: ( play state: 3 )\r\n14\r\n"
+    },
+    {
+      "time": 900812.526163458,
+      "command": "get_time",
+      "reply": "16\r\n"
+    },
+    {
+      "time": 900812.731217083,
+      "command": "pause",
+      "reply": "pause: returned 0 (no error)\r\nstatus change: ( pause state: 3 ): Pause\r\n"
+    }
+  ],
+  "helper_mode_before": 493,
+  "helper_mode_after": 493,
+  "helper_sha256_before": "830d9857bbcd04b1b58462b3025fbbf09662dbcd80eb539be2e3ba45ab4da348",
+  "helper_sha256_after": "830d9857bbcd04b1b58462b3025fbbf09662dbcd80eb539be2e3ba45ab4da348",
+  "events": [
+    {
+      "event": "hide",
+      "monotonic": 900809.3290405001
+    },
+    {
+      "window": "Fullscreen Controls",
+      "monotonic": 900810.1891795833,
+      "bucket_us": 56500000,
+      "generation": "3BF5731E-88CB-4344-B93C-4A791925D414-2",
+      "event": "hover",
+      "requested_us": 56329411,
+      "duration_us": 60000000,
+      "point_x": 408,
+      "left": 9,
+      "right": 434
+    },
+    {
+      "result": {
+        "error": "helper-unavailable",
+        "elapsed_ms": 1.3047083048149943,
+        "requested_us": 56500000
+      },
+      "generation": "3BF5731E-88CB-4344-B93C-4A791925D414-2",
+      "event": "service",
+      "monotonic": 900810.1905215001
+    },
+    {
+      "ok": 0,
+      "monotonic": 900810.1905640417,
+      "generation": "3BF5731E-88CB-4344-B93C-4A791925D414-2",
+      "event": "display",
+      "requested_us": 56329411,
+      "actual_us": 0,
+      "cache": "error",
+      "elapsed_ms": 1.9022499909624457
+    },
+    {
+      "window": "Fullscreen Controls",
+      "monotonic": 900811.4187130417,
+      "bucket_us": 48000000,
+      "generation": "3BF5731E-88CB-4344-B93C-4A791925D414-2",
+      "event": "hover",
+      "requested_us": 47858823,
+      "duration_us": 60000000,
+      "point_x": 348,
+      "left": 9,
+      "right": 434
+    },
+    {
+      "result": {
+        "video_ordinal": 0,
+        "payload_bytes": 230400,
+        "version": 2,
+        "width": 320,
+        "actual_us": 48000000,
+        "channels": 4,
+        "cache": "miss",
+        "elapsed_ms": 232.63541667256504,
+        "requested_us": 48000000,
+        "ok": true,
+        "height": 180,
+        "decoded_frames": 1,
+        "timeline_origin_us": 0,
+        "sampling": "keyframe"
+      },
+      "generation": "3BF5731E-88CB-4344-B93C-4A791925D414-2",
+      "event": "service",
+      "monotonic": 900811.6514100417
+    },
+    {
+      "ok": 1,
+      "monotonic": 900811.6515621667,
+      "generation": "3BF5731E-88CB-4344-B93C-4A791925D414-2",
+      "event": "display",
+      "requested_us": 47858823,
+      "actual_us": 48000000,
+      "cache": "miss",
+      "elapsed_ms": 233.18908328656107
+    }
+  ],
+  "focus": {
+    "window_position": [
+      0,
+      0
+    ],
+    "focused_role": "AXWindow",
+    "app_active": true,
+    "window_size": [
+      1728,
+      1117
+    ]
+  }
+}

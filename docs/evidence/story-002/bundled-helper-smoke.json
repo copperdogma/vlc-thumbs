@@ -1,0 +1,22 @@
+{
+  "scope": "Bundled helper executes directly with empty PATH; no native hover/pointer proof",
+  "helper_sha256": "830d9857bbcd04b1b58462b3025fbbf09662dbcd80eb539be2e3ba45ab4da348",
+  "exit": 0,
+  "header": {
+    "version": 2,
+    "ok": true,
+    "sampling": "keyframe",
+    "requested_us": 12500000,
+    "actual_us": 12000000,
+    "width": 320,
+    "height": 180,
+    "channels": 4,
+    "payload_bytes": 230400,
+    "video_ordinal": 0,
+    "decoded_frames": 1,
+    "timeline_origin_us": 0
+  },
+  "payload_bytes": 230400,
+  "bundle_sign_exit": 0,
+  "bundle_sign_stderr": ""
+}

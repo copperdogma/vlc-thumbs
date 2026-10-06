@@ -1,0 +1,13 @@
+{
+  "case": "Local HLS playlist with secondary HTTP resource",
+  "helper_sha256": "23fe2f7d8a04aa27f4ee4ddb098d01d2a97edfda59c3a1b2880b462fc473eaa5",
+  "reply": {
+    "version": 2,
+    "ok": false,
+    "error": "unsupported_input"
+  },
+  "returncode": 1,
+  "secondary_connections": 0,
+  "helper_elapsed_ms": 20.929499994963408,
+  "listener_window_ms": 250
+}
