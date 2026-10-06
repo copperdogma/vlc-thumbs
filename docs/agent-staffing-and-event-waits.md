@@ -59,3 +59,18 @@ adaptation worker.
 | `.agents/skills/ideation/SKILL.md` | `fd510999167e94fac8aef2bcd4e3be54710e3248982fe6ba2bceee5ecc6bbdca` | `fd510999167e94fac8aef2bcd4e3be54710e3248982fe6ba2bceee5ecc6bbdca` |
 | `.agents/skills/create-adr/SKILL.md` | `da131c28dd0ccc8ddd9ad8279acf38eb8f626370fecffd9b1f381f2dd9ccb0a8` | `66055295b54888d17704d55d92a01d0cfe83ad6dd318e1c34ff22dcb86c1eded` |
 | `.agents/skills/setup-methodology/SKILL.md` | `f60b30e8ca47a5fd375cb6b3352ca0bbbe4639df85377928f4f622cf3ac01eee` | `33a2b416f69c3aee079c57a06fa91f51595bc0a233f17a0900abcd31e51d9872` |
+
+## Verified policy landing
+
+Cam's 2026-10-06 approval covered this scoped commit and push. After the global
+Conductor/11-owner preflight cleared, policy commit
+`a8151a345d91d6457bf1b561b6903eecd7bdbada` was pushed to
+`origin/codex/align-055-vlc-thumbs` and fast-forwarded onto `origin/main`.
+`git ls-remote origin refs/heads/main` verified that exact policy SHA after
+landing. The primary checkout and its unrelated work were preserved.
+
+This section records the observed policy landing. Its subsequent receipt-only
+commit is recorded with final remote-main proof in Conductor Alignment 055's
+consolidated owner ledger. Policy validation is reused because the checked leaf,
+AGENTS and workflow inputs are unchanged; the receipt update receives scoped
+content review and `git diff --check`. No product rerun is required.
