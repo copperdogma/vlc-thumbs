@@ -157,7 +157,8 @@
         "spec:5"
       ],
       "depends_on": [
-        "001"
+        "001",
+        "005"
       ],
       "decision_refs": [
         "docs/decisions/adr-001-media-metadata-storage/adr.md",
@@ -200,6 +201,41 @@
       ],
       "eval_refs": [
         "root-timeline-experience",
+        "story-004-responsive-preview-capability"
+      ]
+    },
+    {
+      "id": "005",
+      "title": "Story 005 — Open-source contribution (Story 002b)",
+      "status": "Pending",
+      "priority": "High",
+      "path": "docs/stories/story-005-open-source-contribution.md",
+      "ideal_refs": [
+        "ideal:req:previews",
+        "ideal:req:playback-quality",
+        "ideal:req:media-integrity",
+        "ideal:req:evidence"
+      ],
+      "spec_refs": [
+        "spec:1",
+        "spec:2",
+        "spec:4",
+        "spec:5"
+      ],
+      "depends_on": [
+        "002",
+        "004"
+      ],
+      "decision_refs": [
+        "docs/research/upstream-contribution-scout.md",
+        "docs/decisions/adr-001-media-metadata-storage/adr.md",
+        "docs/decisions/adr-002-native-thumbnail-services/adr.md",
+        "docs/decisions/adr-003-persistent-thumbnail-preparation/adr.md",
+        "docs/evidence/story-004/current-acceptance-ledger.md",
+        "docs/runbooks/build-vlc-macos.md"
+      ],
+      "eval_refs": [
+        "story-002-preview-capability",
         "story-004-responsive-preview-capability"
       ]
     }
@@ -270,11 +306,11 @@
   "state": {
     "exists": true,
     "active_focus": {
-      "story_id": "004",
-      "status": "done",
-      "summary": "Story004 corrected and Done on001728; Story003 bookmarks remains planned.",
-      "reason": "Reproduced mapping and retention defects corrected, current build qualified and local app updated.",
-      "current_command": ">-"
+      "story_id": "005",
+      "status": "pending",
+      "summary": "Story002b/005 upstream contribution is next; Story003 bookmarks waits behind it.",
+      "reason": "Cam requested investigation, upstream-quality improvement and submission/review before bookmarks; current turn is scout and story planning only.",
+      "current_command": "Planning complete; await Cam's request to start Phase1. Preserve the qualified local app and scoped evidence; no implementation, maintainer contact or submission in the planning turn."
     },
     "categories": [
       {
@@ -286,7 +322,8 @@
           "001",
           "002",
           "003",
-          "004"
+          "004",
+          "005"
         ],
         "eval_refs": [
           "root-timeline-experience"
@@ -300,7 +337,8 @@
         "phase": "climb",
         "story_refs": [
           "002",
-          "004"
+          "004",
+          "005"
         ],
         "eval_refs": [
           "root-timeline-experience",
@@ -332,7 +370,8 @@
         "story_refs": [
           "002",
           "003",
-          "004"
+          "004",
+          "005"
         ],
         "eval_refs": [
           "root-timeline-experience"
@@ -347,10 +386,11 @@
         "story_refs": [
           "001",
           "002",
-          "003"
+          "003",
+          "005"
         ],
         "eval_refs": [],
-        "note": "Workflow and source/build/dependency provenance recorded. New helper distribution obligations and public packaging remain deferred."
+        "note": "Local source/build/dependency provenance recorded. Story005 now owns upstream standards, integration, source contribution and review; initial scout only, no readiness or acceptance claim. Public binary packaging remains deferred."
       }
     ],
     "planning_inputs": [

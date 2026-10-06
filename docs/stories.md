@@ -6,5 +6,6 @@
 |---|---|---|---|---|---|
 | 001 | Story 001 — VLC macOS timeline feasibility | Done | High | spec:1, spec:2, spec:3, spec:4 | - |
 | 002 | Story 002 — Thumbnail previews on the macOS timeline | Done | High | spec:1, spec:2, spec:4, spec:5 | 001 |
-| 003 | Story 003 — Persistent short labels on the macOS timeline | Pending | High | spec:1, spec:3, spec:4, spec:5 | 001 |
+| 003 | Story 003 — Persistent short labels on the macOS timeline | Pending | High | spec:1, spec:3, spec:4, spec:5 | 001, 005 |
 | 004 | Story 004 — Responsive previews with background preparation and reusable caching | Done | High | spec:1, spec:2, spec:4, spec:5 | 002 |
+| 005 | Story 005 — Open-source contribution (Story 002b) | Pending | High | spec:1, spec:2, spec:4, spec:5 | 002, 004 |

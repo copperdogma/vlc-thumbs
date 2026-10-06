@@ -165,3 +165,25 @@ after closing and reopening a video. Story 004 records that direction, finite
 sparse coverage, persistent disposable-cache retention and explicit identity/
 lifecycle decisions. This request creates the story; implementation has not
 started. Original Story 002 validation remains scoped historical evidence.
+
+## Upstream contribution story — 2026-10-05
+
+Cam:
+
+> Okay let’s do a story 2b: open source contribution. I want to open this as a PR for their repo if they want it.
+>
+> This will have three phases:
+> 1. Investigate (scout) vlc’s repo, code quality bars, coding conventions, style, guidelines, contribution guidelines, etc.
+> 2. Improve our code to match or exceed their guidelines. I want this to be a stellar commit for them that’s a breeze to evaluate with little to no work for them to accept it. I want to ensure we’re doing as MUCH work as possible to ensure they’re super happy with this work.
+> 3. Submit the code to them and Shepard it through.
+>
+> I think we should do this before doing any more work like on bookmarks. That way if they accept it we can write the bookmarks in the same style and standard so we can continue that as well.
+
+Cam subsequently clarified the current turn:
+
+> You’re meant to just write the story, not do the work;) but finish your scout and story planning.
+
+Recorded as Story005 with user-facing alias Story002b because the tracker uses
+numeric IDs. Plan these three phases and place the contribution before Story003.
+Finish the bounded initial scout and planning only; no implementation, contact or
+submission in this turn. Maintainer acceptance remains an external decision.

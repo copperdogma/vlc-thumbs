@@ -26,6 +26,11 @@ attribution. Reader focus uses explicitly inherited unchanged-interface evidence
 the latest reader startup was inconclusive. Story003 short bookmarks and the
 integrated root remain planned/deferred.
 
+Next is [Story 002b / 005 — open-source contribution](docs/stories/story-005-open-source-contribution.md):
+investigate VLC upstream, improve and validate a contribution, then submit and
+shepherd review. Bookmarks wait behind that work. The initial scout and story
+are written; implementation and upstream submission have not started.
+
 This is an independent Git project nested under Ultima IV Web, with a public
 [GitHub repository](https://github.com/copperdogma/vlc-thumbs). Compatibility
 links are relative; neighboring projects are read-only workflow sources.

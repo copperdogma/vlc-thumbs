@@ -3,7 +3,7 @@
 The deep dive is recorded in [timeline implementation planning](research/timeline-implementation-plan.md).
 The Ideal remains the implementation-free North Star. The source/build route,
 proposed architecture, tests and compromises live in that synthesis, the spec
-and the two original feature stories plus a thumbnail follow-up.
+and the feature and contribution stories.
 
 1. **Story 001 — feasibility (Done):** pinned source, working isolated arm64
    app, native control map, diagnostic decoder/SQLite probes and concrete proof
@@ -39,19 +39,29 @@ and the two original feature stories plus a thumbnail follow-up.
    three active-preparation playback pairs pass their scoped checks. The local
    preview app is updated; [acceptance ledger](evidence/story-004/current-acceptance-ledger.md)
    retains resource costs, inherited reader proof and unqualified broader claims.
-4. **[Story 003 — bookmarks](stories/story-003-timeline-bookmarks.md):** compact
+4. **[Story 002b / 005 — open-source contribution](stories/story-005-open-source-contribution.md)
+   (Pending, next):** investigate VLC's current contribution process, conventions
+   and existing thumbnail architecture; improve/port and independently qualify
+   a focused contribution; then submit through the official process and shepherd
+   review. The [initial scout](research/upstream-contribution-scout.md) finds
+   current development infrastructure worth testing before retaining our helper.
+   Phase 1 must settle the target and architecture before broad implementation.
+   Cam requested this before bookmarks. This turn creates the plan only;
+   upstream acceptance and the full investigation remain unproven.
+5. **[Story 003 — bookmarks](stories/story-003-timeline-bookmarks.md):** compact
    one-to-three-word labels, visible markers, hover, add/edit/delete/seek and
    independent durable storage. Reuse 002's timeline context/presentation.
    First measure full-file identity verification and record the identity/store
    ADR. SQLite is the leading store candidate; replacement safety and hash cost
    must be reconciled explicitly before broad implementation.
-5. Run each story's capability proof; after previews and bookmarks work, run the integrated root with
+6. Run each story's capability proof; after previews and bookmarks work, run the integrated root with
    restart, identity, retention, playback and accessibility checks on main,
    detached, native-fullscreen and custom-fullscreen controls.
 
 The stories retain distinct image/caching versus durable-write/identity contracts.
-All use the real feasibility baseline; 003 is scheduled after 002 for
-shared UI reuse, not because notes depend on a working decoder. Keep all format,
+All use a real pinned baseline; 003 now waits for 002b/005's contribution outcome
+or Cam's explicit sequencing change, so its design follows learned upstream
+conventions. Notes do not depend on a working decoder. Keep all format,
 fullscreen, error handling and native UI work inside the owning feature story.
 Do not split them into backend-only tasks that leave the interaction unfinished.
 
@@ -63,7 +73,8 @@ at2026-10-05 15:05:13UTC to finish the required before/after comparison. Prior
 goal/API and closure records remain historical, not current blockers or proof.
 ADR-001 accepts storage lifetimes; ADR-002 selects the preview implementation.
 Story 003 identity/schema choices remain proposals awaiting its technical gate.
-Full public packaging, upstream contribution, portability across moves/devices,
-colors and tags follow a working floor. Reuse the existing build, recheck free
+Upstream contribution is now the next priority, before bookmarks. Full public
+binary packaging, portability across moves/devices, colors and tags remain
+deferred. Reuse the existing build where applicable, recheck free
 space before heavier work, and preserve the prior low-disk guard. No other
 project or installed VLC is modified. No commit/push in this planning step.

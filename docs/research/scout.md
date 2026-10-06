@@ -1,5 +1,8 @@
 # Research index
 
+- [Upstream contribution planning](upstream-contribution-scout.md): initial
+  official-process and current-source scout for Story002b/005; target, native
+  service reuse and independent-build gates before bookmarks. Full audit pending.
 - [NAS thumbnail latency](nas-thumbnail-latency.md): read-only probes of a large
   mounted-SMB video, timeout/read-cost findings, cache/cancellation limitations,
   and established worker/background-thumbnail patterns for discussion.

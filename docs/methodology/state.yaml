@@ -6,16 +6,11 @@ seeded_from:
   current_plan: docs/plan.md
   methodology_source: Board Game Ingester and Ultima IV Web
 active_focus:
-  story_id: "004"
-  status: done
-  summary: Story004 corrected and Done on001728; Story003 bookmarks remains planned.
-  reason: Reproduced mapping and retention defects corrected, current build qualified and local app updated.
-  current_command: >-
-    Approved correction plan completed; current001728 evidence supersedes affected222506 claims.
-    Metadata plus sampled hashing and provisional current-session Checking source
-    presentation are accepted under Cam's delegated choices. Preserve all invalid
-    attempts, resource overhead and explicitly inherited reader proof. Bookmarks
-    and root remain separate; no commit/push/public distribution requested.
+  story_id: "005"
+  status: pending
+  summary: Story002b/005 upstream contribution is next; Story003 bookmarks waits behind it.
+  reason: Cam requested investigation, upstream-quality improvement and submission/review before bookmarks; current turn is scout and story planning only.
+  current_command: Planning complete; await Cam's request to start Phase1. Preserve the qualified local app and scoped evidence; no implementation, maintainer contact or submission in the planning turn.
 planning_inputs:
   - path: docs/idea-intake.md
     status: preserved-intake
@@ -28,14 +23,14 @@ categories:
     title: VLC integration and delivery
     substrate_status: partial
     phase: climb
-    story_refs: ["001", "002", "003", "004"]
+    story_refs: ["001", "002", "003", "004", "005"]
     eval_refs: [root-timeline-experience]
     note: Pinned arm64 development app and all four fully visible preview surfaces support Story 002 functional evidence on signed build 132643; required pragmatic comparison passed; ordinary native controls and scoped reader inheritance are validated. Story 003 integration and public/other-platform delivery remain deferred. Earlier custom no-host observation remains unknown; no universal entry-reliability claim.
   - id: spec:2
     title: Thumbnail correspondence and responsiveness
     substrate_status: partial
     phase: climb
-    story_refs: ["002", "004"]
+    story_refs: ["002", "004", "005"]
     eval_refs: [root-timeline-experience, story-004-responsive-preview-capability]
     note: "Story004001728 correction passes3410cache/40service, final NAS10/10,20/arm controls37.612/37.635ms within+20%, and3matched playback pairs with130–138background jobs. Exact app delivered; scoped unchanged UI/preference/reader evidence inherited. Cold misses, sampled blind spot, broader formats/universal latency/public packaging remain unqualified."
   - id: spec:3
@@ -50,16 +45,16 @@ categories:
     title: Interaction quality and behavioral proof
     substrate_status: partial
     phase: climb
-    story_refs: ["002", "003", "004"]
+    story_refs: ["002", "003", "004", "005"]
     eval_refs: [root-timeline-experience]
     note: "Story 002 functional interaction proof is recorded under the declared scope; normal native controls, current main reader and source-invariant four-surface reader inheritance are recorded. Bookmarks and integrated root are absent; precise performance remains unqualified/deferred."
   - id: spec:5
     title: Project workflow and source obligations
     substrate_status: partial
     phase: climb
-    story_refs: ["001", "002", "003"]
+    story_refs: ["001", "002", "003", "005"]
     eval_refs: []
-    note: Workflow and source/build/dependency provenance recorded. New helper distribution obligations and public packaging remain deferred.
+    note: Local source/build/dependency provenance recorded. Story005 now owns upstream standards, integration, source contribution and review; initial scout only, no readiness or acceptance claim. Public binary packaging remains deferred.
 runtime:
   status: baseline-available
   reason: Isolated native VLC baseline and feature candidate exist; four-surface hover is visibly demonstrated; Story 002 functional MVP and pragmatic comparison are Done; no Conductor port range needed.

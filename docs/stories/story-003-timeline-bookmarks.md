@@ -7,18 +7,19 @@ ideal_refs: [ideal:req:annotations, ideal:req:persistence, ideal:req:navigation,
 spec_refs: [spec:1, spec:3, spec:4, spec:5]
 adr_refs: [adr-001-media-metadata-storage]
 decision_refs: [docs/decisions/adr-001-media-metadata-storage/adr.md, docs/research/timeline-implementation-plan.md, docs/runbooks/media-metadata.md]
-depends_on: ["001"]
+depends_on: ["001", "005"]
 category_refs: [spec:3, spec:4]
 architecture_domains: [native-timeline, media-identity, durable-annotations]
 eval_refs: [root-timeline-experience]
 ---
 # Story 003 — Persistent short labels on the macOS timeline
 
-**Status:** Pending. **Priority:** High. **Depends on:** 001.
-Recommended after 002 to reuse its timeline adapter. There is no decoder/cache
-runtime dependency: this story can prove bookmark behavior independently. If
-started first, create the same shared adapter and let 002 reuse it; do not build
-a second UI system. Planning is authorized; implementation has not started.
+**Status:** Pending. **Priority:** High. **Depends on:** 001 and 005 (sequencing).
+Cam placed [Story 002b / 005 — upstream contribution](story-005-open-source-contribution.md)
+before bookmarks on 2026-10-05. Reuse the architecture and conventions learned
+there before implementing this story. There is no decoder/cache runtime
+dependency; 005 is an explicit project-order gate. Reconcile this plan with its
+upstream disposition before starting. Bookmark implementation has not started.
 
 ## Goal
 

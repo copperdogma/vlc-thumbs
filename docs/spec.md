@@ -54,6 +54,19 @@ must move the whole mutable tools/contrib/source/build workspace; `-C` alone
 moves only part. Retain evidence and preserve pristine source/user files.
 Root eval: root-timeline-experience. Stories: 001 baseline, 002/003 features.
 
+### Upstream contribution priority — Story 002b / 005
+
+Cam requested contribution before bookmarks on 2026-10-05. The
+[three-phase story](stories/story-005-open-source-contribution.md) owns investigation
+of current VLC standards and architecture, improvement/porting and independent
+qualification, then official submission and review follow-through. The current
+3.0.24 route remains qualified local history; upstream target and architecture
+must be selected from a current source audit and minimal proof. Reuse upstream
+thumbnail/hover facilities where they meet the contract, documenting any changed
+mechanisms or behavior explicitly. Do not assume current local evidence qualifies
+a new branch. Story003 waits for this contribution's disposition or an explicit
+sequencing change. Story creation and its initial scout are planning only.
+
 ## spec:2 - Thumbnail correspondence and responsiveness
 
 Cam requested a conventional native on/off control on2026-10-05. Provide a
@@ -255,8 +268,11 @@ Licensing is a legal constraint: verify selected source/library obligations
 before distributing, preserve corresponding source/configuration/patch records,
 and do not mistake a build or probe for release clearance. Public repository
 already exists by Cam's request; no current permission to publish binaries or
-new commits is implied. Story 001 is feasibility; 002 and 003 implement the
-separate preview and durable-label outcomes. Root completion requires both.
+new commits is implied. Story001 is feasibility; 002/004 implement previews and
+003 owns durable labels. Story005 (002b) adds the upstream contribution boundary:
+clean reproduction, project conventions, reviewable source, licenses, tests and
+honest submission/disposition. Full investigation, implementation and submission
+remain pending after planning. Root completion still requires both features.
 
 ### Story 004 correspondence/retention correction
 

@@ -69,8 +69,13 @@ dormant until there is relevant substrate. Source hashes live in
 
 ## Current stage and commands
 
-Stories001 and002 are Done within their declared scopes. Story004 corrections are Done on001728: track-count guard and bounded demand retention pass. Story003 short
-bookmarks remains planned; integrated root and public distribution are deferred.
+Stories001 and002 are Done within their declared scopes. Story004 corrections are Done on001728: track-count guard and bounded demand retention pass.
+Story005 (Cam's Story002b) is next: investigate VLC upstream, improve the
+contribution, then submit and shepherd review. See its three-phase story and
+docs/research/upstream-contribution-scout.md. Current request is scout/story
+planning only; no implementation or upstream contact. Story003 bookmarks waits
+for the contribution's disposition or Cam's explicit sequencing change;
+integrated root and public binary distribution remain deferred.
 VLC3.0.24 is pinned. Corrected candidate001728 is installed at Cam's requested local preview
 app; previous app is preserved under ignored work. Persistent private worker,
 finite progressive/hover preparation and32MiBRAM/256MiBdisk cache are implemented.
