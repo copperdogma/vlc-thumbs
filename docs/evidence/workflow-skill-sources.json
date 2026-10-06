@@ -21,7 +21,17 @@
         {
           "path": ".agents/skills/build-story/SKILL.md",
           "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/build-story/SKILL.md",
-          "sha256": "5733c6501906dee93bf18d166476454541074d546b60d22dc58dc2dabb94c410"
+          "sha256": "7c203343635f382f967e435098b3a4d7ddc7eb9077565e5e994ef367b836464d",
+          "original_provenance": {
+            "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/build-story/SKILL.md",
+            "sha256": "5733c6501906dee93bf18d166476454541074d546b60d22dc58dc2dabb94c410"
+          },
+          "adopted_update": {
+            "date": "2026-10-04",
+            "source": "/Users/cam/Documents/Projects/conductor/.agents/skills/build-story/SKILL.md",
+            "source_sha256": "144b58c9792ec9dee98bcfcfff6714830867c45a397a45f40aa05a74ad6b796b",
+            "disposition": "scoped local research-rule adaptation"
+          }
         }
       ]
     },
@@ -241,7 +251,17 @@
         {
           "path": ".agents/skills/init-project/SKILL.md",
           "source": "/Users/cam/Documents/Projects/ultima-iv-web/.agents/skills/init-project/SKILL.md",
-          "sha256": "15eadb8150920ea58b66a80949778bafb89559bc4c59446e499d7e1c573d6ce9"
+          "sha256": "1c8a447dad238450672cdb67218e7c92c273b9f85c0aaf6a250a7e8020ad2763",
+          "original_provenance": {
+            "source": "/Users/cam/Documents/Projects/ultima-iv-web/.agents/skills/init-project/SKILL.md",
+            "sha256": "15eadb8150920ea58b66a80949778bafb89559bc4c59446e499d7e1c573d6ce9"
+          },
+          "adopted_update": {
+            "date": "2026-10-04",
+            "source": "/Users/cam/Documents/Projects/conductor/.agents/skills/init-project/SKILL.md",
+            "source_sha256": "008217ddb93cbf6197df180b212e2ab6acf84ca2cc4d408713a97c36a677b789",
+            "disposition": "scoped local research-rule adaptation"
+          }
         }
       ]
     },
@@ -274,7 +294,17 @@
         {
           "path": ".agents/skills/loop-review/SKILL.md",
           "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/loop-review/SKILL.md",
-          "sha256": "311751103c5f2c0124a7bd5c807796fe3ce6e09b77bfe1d8039e2401a8a0d104"
+          "sha256": "52a32470060f815a7d273aff44831a25464138ca046e168069baa1b9eedc2870",
+          "original_provenance": {
+            "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/loop-review/SKILL.md",
+            "sha256": "311751103c5f2c0124a7bd5c807796fe3ce6e09b77bfe1d8039e2401a8a0d104"
+          },
+          "adopted_update": {
+            "date": "2026-10-04",
+            "source": "/Users/cam/Documents/Projects/conductor/.agents/skills/loop-review/SKILL.md",
+            "source_sha256": "2a17e4152daec8dd40fa648b864b6c2ca22b627733794ae58c17eb043e22526c",
+            "disposition": "scoped local research-rule adaptation"
+          }
         },
         {
           "path": ".agents/skills/loop-review/agents/openai.yaml",
@@ -290,7 +320,17 @@
         {
           "path": ".agents/skills/loop-verify/SKILL.md",
           "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/loop-verify/SKILL.md",
-          "sha256": "774bda95f734307efc2946fc8ef649e2e9ec92516412e22039a9a21aba583bf7"
+          "sha256": "37acb2b7d89c17ad06c0a75d0f78ed730a2065f840588dc975ec5cb819cbc057",
+          "original_provenance": {
+            "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/loop-verify/SKILL.md",
+            "sha256": "774bda95f734307efc2946fc8ef649e2e9ec92516412e22039a9a21aba583bf7"
+          },
+          "adopted_update": {
+            "date": "2026-10-04",
+            "source": "/Users/cam/Documents/Projects/conductor/.agents/skills/loop-verify/SKILL.md",
+            "source_sha256": "1d7b722ed4c08a3e0c7647a9155d16d248a22ac2b0bb26cf6c3e3181a2875967",
+            "disposition": "scoped local research-rule adaptation"
+          }
         }
       ]
     },
@@ -338,7 +378,17 @@
         {
           "path": ".agents/skills/setup-methodology/SKILL.md",
           "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/setup-methodology/SKILL.md",
-          "sha256": "f5f1b5c467b8395b74b69ebe7e66b32b147366a8ee82eeda5c0e2f3c057a4bd0"
+          "sha256": "34ec636b6e52fd7c1daaea3b5ae76a2eb772634034c7a344d3e81a59ed631d57",
+          "original_provenance": {
+            "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/setup-methodology/SKILL.md",
+            "sha256": "f5f1b5c467b8395b74b69ebe7e66b32b147366a8ee82eeda5c0e2f3c057a4bd0"
+          },
+          "adopted_update": {
+            "date": "2026-10-04",
+            "source": "/Users/cam/Documents/Projects/conductor/.agents/skills/setup-methodology/SKILL.md",
+            "source_sha256": "3188419488a1c7b257447a46399f8c7907ced94dd1510e903e5ad859c35b439a",
+            "disposition": "current shared source with owner strict-reset contract preserved"
+          }
         },
         {
           "path": ".agents/skills/setup-methodology/references/modes.md",
@@ -348,7 +398,17 @@
         {
           "path": ".agents/skills/setup-methodology/templates/setup-checklist.md",
           "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/setup-methodology/templates/setup-checklist.md",
-          "sha256": "21a252774cfb45a4061c154fa070cc22da9c1c1c185dc7eaf7427a603ec5fd38"
+          "sha256": "504ef63273bf2a2813e24cdcd84b3825c2dd6507669471f6120a2c404091aade",
+          "original_provenance": {
+            "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/setup-methodology/templates/setup-checklist.md",
+            "sha256": "21a252774cfb45a4061c154fa070cc22da9c1c1c185dc7eaf7427a603ec5fd38"
+          },
+          "adopted_update": {
+            "date": "2026-10-04",
+            "source": "/Users/cam/Documents/Projects/conductor/.agents/skills/setup-methodology/SKILL.md",
+            "source_sha256": "3188419488a1c7b257447a46399f8c7907ced94dd1510e903e5ad859c35b439a",
+            "disposition": "exact shared refresh"
+          }
         }
       ]
     },
@@ -436,7 +496,17 @@
         {
           "path": ".agents/skills/validate/SKILL.md",
           "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/validate/SKILL.md",
-          "sha256": "cb1642bbf5da0ecef138b7c59db6e3a2d997090eb0efc8aba98d45dc288207f9"
+          "sha256": "61cdff5bdba697541dc81a99a790cf85e4a197674b1cfa36ca0cdd5a66ec41f8",
+          "original_provenance": {
+            "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/validate/SKILL.md",
+            "sha256": "cb1642bbf5da0ecef138b7c59db6e3a2d997090eb0efc8aba98d45dc288207f9"
+          },
+          "adopted_update": {
+            "date": "2026-10-04",
+            "source": "/Users/cam/Documents/Projects/conductor/.agents/skills/validate/SKILL.md",
+            "source_sha256": "0114dfe1756f9707470e57f62ae5c08259b8f3168da15a53baec531b266ba6dd",
+            "disposition": "scoped local research-rule adaptation"
+          }
         }
       ]
     },
@@ -474,5 +544,19 @@
       "sha256": "85332805086a3ab064bd23f6aa59e9f567e4c686c2b0d1508acaf3f66d88bf39",
       "adaptation": "VLC project identity; fact status scoped to this project."
     }
-  ]
+  ],
+  "research_rule_refresh": {
+    "date": "2026-10-04",
+    "source": "Conductor Alignment 053",
+    "historical_provenance": "Original source and hashes retained in original_provenance; sha256 describes current local content.",
+    "changed_files": [
+      ".agents/skills/build-story/SKILL.md",
+      ".agents/skills/init-project/SKILL.md",
+      ".agents/skills/loop-review/SKILL.md",
+      ".agents/skills/loop-verify/SKILL.md",
+      ".agents/skills/setup-methodology/SKILL.md",
+      ".agents/skills/setup-methodology/templates/setup-checklist.md",
+      ".agents/skills/validate/SKILL.md"
+    ]
+  }
 }

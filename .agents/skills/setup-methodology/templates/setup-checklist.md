@@ -55,3 +55,12 @@
 - [ ] `/init-project` is documented as the greenfield idea-intake seed skill
 - [ ] Ideal/spec intake or local equivalent confirmed before setup creates generic placeholders
 - [ ] Eval ladder represented: root/parent evals, measured failure modes, child evals, and owning stories where applicable
+
+## Research before reinvention
+
+Preserve the AGENTS problem-class research rule through kickoff and refresh,
+including lean setup. Verify build planning/implementation and validation hooks,
+periodic coordinator comparisons, cadence continuity and earlier stop/budget
+precedence. Reuse applicable research; preserve project reuse boundaries and
+acceptance criteria. Record reusable sources and a small local check in existing
+notes. No mandatory search for obvious fixes or new recurring automation.

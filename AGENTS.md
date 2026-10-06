@@ -100,3 +100,26 @@ node scripts/triage-facts.mjs --json
 
 `make validate` checks graph currency, skill wiring/source hashes and local
 workflow references. It is not VLC functionality, performance or licensing proof.
+
+## Research and strategy checkpoints
+
+When a nontrivial obstacle makes the next step uncertain, inspect enough
+local evidence to name the general problem class, then check established
+approaches before inventing a workaround. Reuse applicable prior research;
+otherwise consult a few primary sources, retaining the constraints that
+affect applicability. Stop once you can choose an approach and a small local
+test. Prefer the simplest permitted technique that fits; explain material
+departures. If attempts keep failing, revisit the diagnosis and assumptions
+before adding retries or special cases. Record reusable sources, the
+decision, local evidence, and uncertainty in existing project notes. Obvious
+fixes need no research ceremony. Preserve project reuse boundaries and
+acceptance criteria.
+
+In long-running work, use `/loop-review` to periodically challenge the
+approach against the intended outcome and established alternatives, even
+when local metrics improve. Preserve a requested cadence; otherwise use
+roughly 30 minutes of active work or three substantive rounds, whichever
+comes first, as a tunable default within the authorized run. `/loop-verify`
+keeps its round checks and earlier stop rules. Reuse applicable source
+comparisons, carry cadence across interruptions, and charge research to the
+existing budget. This does not create a schedule or extend work past a stop.
