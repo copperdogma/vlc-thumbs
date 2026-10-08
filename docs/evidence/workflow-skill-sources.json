@@ -339,17 +339,16 @@
         {
           "path": ".agents/skills/loop-review/SKILL.md",
           "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/loop-review/SKILL.md",
-          "sha256": "d6567ab3bb164cf3d234fb9fc6c37cf061ec9bf25f13ec9f920f62a5f7eb56b6",
+          "sha256": "0a46d76f0dfe2fe87b2e7eb69c5a44012a12dc14c2006a056540849b97520dcb",
           "original_provenance": {
             "source": "/Users/cam/Documents/Projects/boardgame-ingester/.agents/skills/loop-review/SKILL.md",
             "sha256": "311751103c5f2c0124a7bd5c807796fe3ce6e09b77bfe1d8039e2401a8a0d104"
           },
           "adopted_update": {
-            "date": "2026-10-06",
-            "alignment": "Conductor Alignment 055",
-            "source": "/Users/cam/Documents/Projects/conductor-align-055/.agents/skills/loop-review/SKILL.md",
-            "source_sha256": "6158049fc9fe13e25c79e401cfe87f85fea115a095d9ee9cf9160534bc6c0b0c",
-            "disposition": "selective local staffing and event-wait adaptation; owner contracts retained"
+            "date": "2026-10-08",
+            "alignment": "Conductor Alignment 056",
+            "source": "/Users/cam/Documents/Projects/conductor/docs/alignments/align-056-continuing-reviewer-and-independent-milestones.md",
+            "disposition": "continuing strategic reviewer and fresh independent milestone reviews; owner contracts retained"
           },
           "adopted_update_history": [
             {
@@ -357,6 +356,13 @@
               "source": "/Users/cam/Documents/Projects/conductor/.agents/skills/loop-review/SKILL.md",
               "source_sha256": "2a17e4152daec8dd40fa648b864b6c2ca22b627733794ae58c17eb043e22526c",
               "disposition": "scoped local research-rule adaptation"
+            },
+            {
+              "date": "2026-10-06",
+              "alignment": "Conductor Alignment 055",
+              "source": "/Users/cam/Documents/Projects/conductor-align-055/.agents/skills/loop-review/SKILL.md",
+              "source_sha256": "6158049fc9fe13e25c79e401cfe87f85fea115a095d9ee9cf9160534bc6c0b0c",
+              "disposition": "selective local staffing and event-wait adaptation; owner contracts retained"
             }
           ]
         },
