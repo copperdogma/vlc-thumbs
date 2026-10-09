@@ -1,0 +1,197 @@
+diff --git a/include/vlc_process.h b/include/vlc_process.h
+index 610d567..23cb60a 100644
+--- a/include/vlc_process.h
++++ b/include/vlc_process.h
+@@ -43,7 +43,7 @@ vlc_process_Spawn(const char *path, int argc, const char *const *argv);
+ /**
+  * Kill a process and abort its I/O.
+  *
+- * Sends a termination signal to the process and shuts down the communication
++ * Forcibly terminates the process and shuts down the communication
+  * channel, so that any in-flight or subsequent I/O on @p process completes
+  * promptly instead of blocking: vlc_process_fd_Read() reports end-of-stream
+  * and vlc_process_fd_Write() fails with EPIPE.
+@@ -61,7 +61,7 @@ vlc_process_Kill(struct vlc_process *process);
+  * Stop a vlc_process and wait for its termination.
+  *
+  * Closes its file descriptors, and waits for it to exit. Optionally sends a
+- * termination signal to the process,
++ * forced termination request to the process.
+  *
+  * @warning This must not be called concurrently with vlc_process_fd_Read() or
+  *          vlc_process_fd_Write() on the same @p process. It closes the
+diff --git a/src/posix/process.c b/src/posix/process.c
+index 3de7a11..fa693c4 100644
+--- a/src/posix/process.c
++++ b/src/posix/process.c
+@@ -125,7 +125,7 @@ vlc_process_Kill(struct vlc_process *process)
+ {
+     assert(process != NULL);
+ 
+-    kill(process->pid, SIGTERM);
++    kill(process->pid, SIGKILL);
+     shutdown(process->fd, SHUT_RDWR);
+ }
+ 
+diff --git a/test/Makefile.am b/test/Makefile.am
+index 9084eeb..ac34e91 100644
+--- a/test/Makefile.am
++++ b/test/Makefile.am
+@@ -118,6 +118,12 @@ if HAVE_DARWIN
+ check_PROGRAMS += test_src_misc_image_cvpx
+ endif
+ 
++if HAVE_PROCESS_SPAWN
++if !HAVE_WIN32
++check_PROGRAMS += test_src_misc_process
++endif
++endif
++
+ if BUILD_LUA
+ check_PROGRAMS += test_modules_lua_playlist_parser
+ endif
+@@ -225,6 +231,8 @@ test_src_misc_ancillary_SOURCES = src/misc/ancillary.c
+ test_src_misc_ancillary_LDADD = $(LIBVLCCORE) $(LIBVLC)
+ test_src_misc_variables_SOURCES = src/misc/variables.c
+ test_src_misc_variables_LDADD = $(LIBVLCCORE) $(LIBVLC)
++test_src_misc_process_SOURCES = src/misc/process.c
++test_src_misc_process_LDADD = $(LIBVLCCORE)
+ test_src_config_chain_SOURCES = src/config/chain.c
+ test_src_config_chain_LDADD = $(LIBVLCCORE)
+ test_src_crypto_update_SOURCES = src/crypto/update.c
+diff --git a/test/src/meson.build b/test/src/meson.build
+index df94131..38da709 100644
+--- a/test/src/meson.build
++++ b/test/src/meson.build
+@@ -52,6 +52,15 @@ vlc_tests += {
+     'link_with' : [libvlc, libvlccore],
+ }
+ 
++if host_system != 'windows' and cdata.get('HAVE_VLC_PROCESS_SPAWN', 0) == 1
++vlc_tests += {
++    'name' : 'test_src_misc_process',
++    'sources' : files('misc/process.c'),
++    'suite' : ['src', 'test_src'],
++    'link_with' : [libvlccore],
++}
++endif
++
+ if gcrypt_dep.found() and get_option('update-check').allowed()
+     vlc_tests += {
+         'name' : 'test_src_crypto_update',
+diff --git a/test/src/misc/process.c b/test/src/misc/process.c
+new file mode 100644
+index 0000000..93e8d79
+--- /dev/null
++++ b/test/src/misc/process.c
+@@ -0,0 +1,110 @@
++// SPDX-License-Identifier: LGPL-2.1-or-later
++/* Regression tests for POSIX process termination and I/O ownership. */
++
++#include "../../libvlc/test.h"
++#include <vlc_process.h>
++#include <errno.h>
++#include <sys/wait.h>
++
++static int child(const char *mode)
++{
++    struct sigaction action = {0};
++    action.sa_handler = SIG_IGN;
++    sigemptyset(&action.sa_mask);
++    assert(sigaction(SIGTERM, &action, NULL) == 0);
++
++    /* A failed forced-termination test must not leave a persistent child. */
++    action.sa_handler = SIG_DFL;
++    assert(sigaction(SIGALRM, &action, NULL) == 0);
++    alarm(3);
++    test_log("child ready: pid=%ld pgid=%ld mode=%s\n",
++             (long)getpid(), (long)getpgrp(), mode);
++    assert(write(STDOUT_FILENO, "R", 1) == 1);
++
++    if (strcmp(mode, "close") == 0)
++    {
++        char byte;
++        ssize_t count;
++        do
++            count = read(STDIN_FILENO, &byte, 1);
++        while (count == -1 && errno == EINTR);
++        return count == 0 ? 42 : 1;
++    }
++    for (;;)
++        pause();
++}
++
++static struct vlc_process *spawn_child(const char *path, const char *mode)
++{
++    const char *args[] = { "--child", mode };
++    struct vlc_process *process = vlc_process_Spawn(path, 2, args);
++    assert(process != NULL);
++    uint8_t byte;
++    assert(vlc_process_fd_Read(process, &byte, 1, 2000) == 1);
++    assert(byte == 'R');
++    return process;
++}
++
++static void assert_forced_status(int status)
++{
++    assert(status >= 0);
++    assert(WIFSIGNALED(status));
++    assert(WTERMSIG(status) == SIGKILL);
++}
++
++struct reader
++{
++    struct vlc_process *process;
++    vlc_sem_t started;
++    ssize_t result;
++};
++
++static void *read_thread(void *opaque)
++{
++    struct reader *reader = opaque;
++    uint8_t byte;
++    vlc_sem_post(&reader->started);
++    reader->result = vlc_process_fd_Read(reader->process, &byte, 1, 2000);
++    return NULL;
++}
++
++int main(int argc, char **argv)
++{
++    if (argc == 3 && strcmp(argv[1], "--child") == 0)
++        return child(argv[2]);
++
++    test_init();
++    (void)test_defaults_args;
++    (void)test_defaults_nargs;
++
++    struct vlc_process *process = spawn_child(argv[0], "wait");
++    assert_forced_status(vlc_process_Terminate(process, true));
++    test_log("forced termination passed\n");
++
++    process = spawn_child(argv[0], "wait");
++    struct reader reader = { .process = process };
++    vlc_sem_init(&reader.started, 0);
++    vlc_thread_t thread;
++    assert(vlc_clone(&thread, read_thread, &reader) == 0);
++    vlc_sem_wait(&reader.started);
++    vlc_process_Kill(process);
++    vlc_process_Kill(process);
++    vlc_join(thread, NULL);
++    assert(reader.result == 0);
++
++    uint8_t byte = 0;
++    assert(vlc_process_fd_Read(process, &byte, 1, 100) == 0);
++    /* Check I/O abort here; errno normalization is a separate contract. */
++    assert(vlc_process_fd_Write(process, &byte, 1, 100) == -1);
++    test_log("write after kill errno=%d\n", errno);
++    /* No I/O user may remain when Terminate frees the process. */
++    assert_forced_status(vlc_process_Terminate(process, false));
++    test_log("repeated kill, I/O and reap passed\n");
++
++    process = spawn_child(argv[0], "close");
++    int status = vlc_process_Terminate(process, false);
++    assert(status >= 0 && WIFEXITED(status));
++    assert(WEXITSTATUS(status) == 42);
++    test_log("unforced close and reap passed\n");
++    return 0;
++}

@@ -1,0 +1,6 @@
+{
+  "url": "https://ffmpeg.org/releases/ffmpeg-9.0.tar.xz",
+  "bytes": 12032020,
+  "sha512": "2e2fea606b290c306bdef13b4c8efb7a4b138ffa16f94f608f85877f5e7ca93980bda8219eeeed8343c463d302c7a2c46b14902ccbbe1e53483f9411b31b9c69",
+  "pinned_checksum_matches": true
+}

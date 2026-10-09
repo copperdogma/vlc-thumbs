@@ -1,0 +1,152 @@
+{
+  "scope": "Narrow H1 root-boundary fixture repair only; no admission/helper/dependency/build qualification",
+  "base": "2e358f3098c2f2b7621d1dc568de8b61ad786322",
+  "source": "work/upstream/vlc-master-story005-candidate/bin/timeline-preview/tests/generate_admission_fixtures.py",
+  "source_sha256": "92be89ff835bfdb8eaddac8cef634e2a9d58aa69b750d035b1979db563add3a4",
+  "command": [
+    "python3",
+    "work/upstream/vlc-master-story005-candidate/bin/timeline-preview/tests/generate_admission_fixtures.py",
+    "--output",
+    "work/story005-admission-fixtures002"
+  ],
+  "manifest": "work/story005-admission-fixtures002/manifest.json",
+  "manifest_sha256": "831fb0ef5c195ec5227deb8ddddbc8fee2eb8c2a18a76ebe443f7c2d452238c1",
+  "case_count": 38,
+  "media_bytes": 1845558,
+  "previous_receipt": "docs/evidence/story-005/admission-fixture-generation.json",
+  "previous_receipt_sha256": "4b34c0a0be2b4b43b24132451a513092943aae644233698af73be7cd3c4e38f6",
+  "previous_source_sha256": "0c58262f350ec1552570a6373cac713a7fbe76af685410a19a7d1c3f35989981",
+  "previous_source_copy": "work/story005-admission-sourcefreeze001.py",
+  "previous_output_preserved": "work/story005-admission-fixtures001",
+  "added_cases": [
+    {
+      "file": "unknown-first-finite-second-segment.mkv",
+      "admitted": false,
+      "reason": "second Segment without new EBML Header violates one root per document",
+      "validity": "malformed-multiple-segments-one-document",
+      "cluster_count": 2,
+      "bytes": 1928,
+      "sha256": "6417e2f2afac8b7daae45c1ed2f13001ffb4fa94fc611c1a9ce83a7339e8e0b9",
+      "structural_oracle": {
+        "complete_bounds": true,
+        "segments": 1,
+        "cluster_count": 2,
+        "unknown_clusters": 0,
+        "ordered_flags": [],
+        "link_ids": [],
+        "own_segment_uids": [
+          "102030405060708090a0b0c0d0e0f001",
+          "102030405060708090a0b0c0d0e0f001"
+        ],
+        "chapter_offsets": [],
+        "first_cluster_offset": 321,
+        "cluster_timestamps_ms": [
+          0,
+          0
+        ],
+        "seek_entries": [],
+        "nodes": 66,
+        "segment_elements": 2,
+        "ebml_headers": 1,
+        "root_boundary_ids_within_unknown_segment": [
+          {
+            "id": "0x18538067",
+            "offset": 987,
+            "unknown": false
+          }
+        ]
+      },
+      "ffprobe_returncode": 0
+    },
+    {
+      "file": "unknown-first-unknown-second-segment.mkv",
+      "admitted": false,
+      "reason": "second unknown Segment without new EBML Header violates one root per document",
+      "validity": "malformed-multiple-segments-one-document",
+      "cluster_count": 2,
+      "bytes": 1934,
+      "sha256": "e96ca46eb307b1f540667d4dc09dd749091cb24567f0f6eb824ccf901016d11b",
+      "structural_oracle": {
+        "complete_bounds": true,
+        "segments": 1,
+        "cluster_count": 2,
+        "unknown_clusters": 0,
+        "ordered_flags": [],
+        "link_ids": [],
+        "own_segment_uids": [
+          "102030405060708090a0b0c0d0e0f001",
+          "102030405060708090a0b0c0d0e0f001"
+        ],
+        "chapter_offsets": [],
+        "first_cluster_offset": 321,
+        "cluster_timestamps_ms": [
+          0,
+          0
+        ],
+        "seek_entries": [],
+        "nodes": 66,
+        "segment_elements": 2,
+        "ebml_headers": 1,
+        "root_boundary_ids_within_unknown_segment": [
+          {
+            "id": "0x18538067",
+            "offset": 987,
+            "unknown": true
+          }
+        ]
+      },
+      "ffprobe_returncode": 0
+    },
+    {
+      "file": "unknown-first-header-finite-second-segment.mkv",
+      "admitted": false,
+      "reason": "valid concatenated EBML documents unsupported by single-Segment admission",
+      "validity": "unsupported-valid-ebml-stream",
+      "cluster_count": 2,
+      "bytes": 1968,
+      "sha256": "53b121cfe1ed14785121b0fda45335241c96eed703a15ff92c3578e2c860c725",
+      "structural_oracle": {
+        "complete_bounds": true,
+        "segments": 1,
+        "cluster_count": 2,
+        "unknown_clusters": 0,
+        "ordered_flags": [],
+        "link_ids": [],
+        "own_segment_uids": [
+          "102030405060708090a0b0c0d0e0f001",
+          "102030405060708090a0b0c0d0e0f001"
+        ],
+        "chapter_offsets": [],
+        "first_cluster_offset": 321,
+        "cluster_timestamps_ms": [
+          0,
+          0
+        ],
+        "seek_entries": [],
+        "nodes": 74,
+        "segment_elements": 2,
+        "ebml_headers": 2,
+        "root_boundary_ids_within_unknown_segment": [
+          {
+            "id": "0x1a45dfa3",
+            "offset": 987,
+            "unknown": false
+          },
+          {
+            "id": "0x18538067",
+            "offset": 1027,
+            "unknown": false
+          }
+        ]
+      },
+      "ffprobe_returncode": 0
+    }
+  ],
+  "all_ffprobe_returncode_zero": true,
+  "classification_source": "RFC8794sections8.2/9/11.1: new EBMLHeader beginsnewdocument; one rootElementperdocument. Two concatenatedEBMLdocumentsarevalidstream; secondSegmentwithoutHeaderis malformedMatroskadocument. Completebyteextentsare not completeMatroskavalidity.",
+  "sources": [
+    "https://www.rfc-editor.org/rfc/rfc8794.html",
+    "https://www.matroska.org/technical/elements.html"
+  ],
+  "limitations": "FFprobe opens these controls but does not certify container/admission correctness; no extra native/app test was run. Prior native observations only apply to prior001fixtures."
+}

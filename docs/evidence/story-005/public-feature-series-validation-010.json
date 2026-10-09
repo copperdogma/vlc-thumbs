@@ -1,0 +1,213 @@
+{
+  "revision": 10,
+  "base": "2e358f3098c2f2b7621d1dc568de8b61ad786322",
+  "patch_directory": "patches/vlc-master/feature-series",
+  "source_tree": "cc0ec69e8be5ba2e60ccae6ea095b471b500a6ff",
+  "previous_source_tree": "48a6b53f29d7f99ea410ba0e9d7085f7d9673acb",
+  "previous_manifest_sha256": "61e5379d7b9e2a1e5d7775689a41a2167868cb426037301c44b46f1bfa6375aa",
+  "previous_receipt": "docs/evidence/story-005/public-feature-series-validation-009.json",
+  "preserved_previous_series": "work/story005-feature-series-freeze009",
+  "manifest_sha256": "0279ae61e3bb54b0e448a00d61521cf8f51654808f2efc7e578689f633a2dab5",
+  "applications": [
+    {
+      "patch": "0000-source-header-distribution.patch",
+      "tree": "8d4bb7aa150137045b9ff020fe49e264a9b06682",
+      "apply_check": "pass",
+      "apply": "pass"
+    },
+    {
+      "patch": "0001-contrib-matroska-identity-and-admission.patch",
+      "tree": "8f02c02f582c2f96dcecb99593397d49e7edaeda",
+      "apply_check": "pass",
+      "apply": "pass"
+    },
+    {
+      "patch": "0002-timeline-helper-build-package-and-tests.patch",
+      "tree": "7fd3d61eade69839584c6cd227b53fb1c055b354",
+      "apply_check": "pass",
+      "apply": "pass"
+    },
+    {
+      "patch": "0003-macosx-timeline-context-service-and-hover.patch",
+      "tree": "cc0ec69e8be5ba2e60ccae6ea095b471b500a6ff",
+      "apply_check": "pass",
+      "apply": "pass"
+    }
+  ],
+  "exact_source_tree_match": true,
+  "source_indexes_before": {
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/.git/index": "7f2f5931db7b4dba20f741eb7c3ffc9a42ef65be2a6cd94dd66f15113512e895",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/.git/worktrees/vlc-master-story005-candidate/index": "89f3541234e65d5ff8f9ea6928d78d03b65850b61232ca376416750860d44be6"
+  },
+  "source_indexes_after": {
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/.git/index": "7f2f5931db7b4dba20f741eb7c3ffc9a42ef65be2a6cd94dd66f15113512e895",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/.git/worktrees/vlc-master-story005-candidate/index": "89f3541234e65d5ff8f9ea6928d78d03b65850b61232ca376416750860d44be6"
+  },
+  "storage_cap_bytes": 20971520,
+  "temp_removed_on_exit": true,
+  "source_tree_byte_count": 1334605,
+  "patch_bytes": 510405,
+  "excluded_generated_paths": [
+    "bin/timeline-preview/__pycache__/test.cpython-314.pyc",
+    "bin/timeline-preview/tests/__pycache__/compare-identity.cpython-314.pyc",
+    "bin/timeline-preview/tests/__pycache__/generate_admission_fixtures.cpython-314.pyc",
+    "bin/timeline-preview/tests/__pycache__/generate_dependency_fixtures.cpython-314.pyc",
+    "bin/timeline-preview/tests/__pycache__/generate_fixtures.cpython-314.pyc"
+  ],
+  "bounded_private_prototype_marker_scan": "pass",
+  "meaning": "exact source correspondence only; scoped qualification and remaining gates stated separately",
+  "artifact_bytes": 4281589,
+  "license_counts": {
+    "GPL-2.0-or-later": 23,
+    "LGPL-2.1-or-later": 5
+  },
+  "preserved_existing_macOS_header_count": 10,
+  "public_review": "docs/evidence/story-005/public-feature-series-review-010.md",
+  "bounded_private_prototype_and_key_marker_scan": "pass",
+  "final_helper_guide_sha256": "c0a75f2f508066ee4d82daa7f10253c0fa2c498c3d956e0022efdce55cce428f",
+  "final_helper_distribution_list_sha256": "b8127423a839e158c689327916f6abe9976738ae9025c39e5f63928390a50b4d",
+  "artifact_files": [
+    {
+      "file": "0000-source-header-distribution.patch",
+      "bytes": 4732,
+      "sha256": "70da9e24f27de04128c59b1484379d1d9813f7e1af04d3792e971a07a24cd57e"
+    },
+    {
+      "file": "0001-contrib-matroska-identity-and-admission.patch",
+      "bytes": 13511,
+      "sha256": "27772936e6068efe11bd44dd6265cd1fb61114dfd8aa7cd9ba693c609e54abf1"
+    },
+    {
+      "file": "0002-timeline-helper-build-package-and-tests.patch",
+      "bytes": 187209,
+      "sha256": "b2661e2a585ed4f543c97ba0f50ce401637dbc1b8404fe85572cf866a8f6875e"
+    },
+    {
+      "file": "0003-macosx-timeline-context-service-and-hover.patch",
+      "bytes": 304953,
+      "sha256": "ef9ad2f01482a06798495284c138b448637f91c417f467b2bd7a1c3fec2d7151"
+    },
+    {
+      "file": "README.md",
+      "bytes": 13933,
+      "sha256": "643152b8ca0dc44c297faadc789cb68d1a416cc3bacfa2b77543b00a2293f2f6"
+    },
+    {
+      "file": "contribution-description-draft.md",
+      "bytes": 7218,
+      "sha256": "a43b16e0ce6c1954374482a5997ba2b088a4fbc4f906bd845eb4dec57f3cce11"
+    },
+    {
+      "file": "demonstration/README.md",
+      "bytes": 3692,
+      "sha256": "58180470b0b37095332c20530459637ba246f8288ed6049e5faf497db2a24e80"
+    },
+    {
+      "file": "demonstration/custom-fullscreen-hover.png",
+      "bytes": 3512667,
+      "sha256": "3b11c683299899abbf8d6ff640456853afa7e83ec06ab40147e8f3116106abd1"
+    },
+    {
+      "file": "demonstration/detached-hover.png",
+      "bytes": 192239,
+      "sha256": "d32dd707d09bfd70731c2b0438d1e4c8c83f04dbe4391ed3d1be2cb100bc5050"
+    },
+    {
+      "file": "demonstration/provenance.json",
+      "bytes": 4418,
+      "sha256": "b02db1dcb018664eb4bedd8a325da56ae705cfe82ef09a706c26669a586459dc"
+    },
+    {
+      "file": "manifest.json",
+      "bytes": 33530,
+      "sha256": "0279ae61e3bb54b0e448a00d61521cf8f51654808f2efc7e578689f633a2dab5"
+    },
+    {
+      "file": "proposed-commit-messages.md",
+      "bytes": 3294,
+      "sha256": "7758e8763cfb587644d27cd7704d0a30e80d2ac304fc60030e5ad2d7b1b6a5d3"
+    },
+    {
+      "file": "series",
+      "bytes": 193,
+      "sha256": "db71116d7a68e3319f7fe0a220a17327c3bbb116c98253d29bdc28d688930d4f"
+    }
+  ],
+  "observed_peak_before_final_metadata_bytes": 14254770,
+  "conservative_peak_with_final_metadata_bytes": 18718408,
+  "storage_measurement_boundary": "Observed maximum counted public artifacts, preserved prior series, temporary indexes/objects after each Git operation; conservative upper bound additionally charges the complete final artifact size for final metadata writes.",
+  "final_source_owner_freezes": {
+    "bin/timeline-preview/README.md": "c0a75f2f508066ee4d82daa7f10253c0fa2c498c3d956e0022efdce55cce428f",
+    "bin/timeline-preview/tests/README.md": "c2d32cf067b6fe180d6892eff68989e6dbab72da323eb73c7d6cd42d776f8fc4",
+    "bin/timeline-preview/tests/generate_fixtures.py": "7122c3a80b4f6ade690b47e8854a57d84bdda8684d144ea7e6a6dd4c274f00ec",
+    "bin/timeline-preview/Makefile.am": "b8127423a839e158c689327916f6abe9976738ae9025c39e5f63928390a50b4d",
+    "modules/gui/macosx/tests/Makefile.am": "fe199564f7be3514bec3b0c81304dcb31cb4c0de8f754fe29629b53a99fb7271",
+    "modules/gui/macosx/tests/VLCLibraryDataTypesIntegrationTestSupport.m": "6847913b961fabfb3d03d8144e37c2ecba130893e495e2e0cb7d297f7a349c92",
+    "modules/gui/macosx/tests/VLCThumbnailServiceTest.m": "2e8840b8177d1824e12d658dffbc93cd8e8c506f4d8feb29d5c86b6f60e874fe",
+    "modules/audio_output/Makefile.am": "de9e4602adbaa9838049b1dca5fcc8aa3c1b280ef8b3ec82a0c5200523a211ae",
+    "modules/video_output/Makefile.am": "8e2f7181ea2eea363dedcb19a3390c63eb7d7c1b9a322ff247a1be9b573589f9",
+    "modules/misc/Makefile.am": "202f4a95ab9de075df6f64b7ea2bf3dd21a11d795e81544c5a1ff97a721734b0",
+    "configure.ac": "9dd8d65a1a272dcf919b85bc6ed5c3180ff48fba7ccfa339096777aae74c974d"
+  },
+  "wrapper_wording_correction": {
+    "source_tree_and_patch_bytes_unchanged": true,
+    "evidence": "macosx.m add_bool macosx-timeline-previews true",
+    "prior_receipt": "docs/evidence/story-005/public-feature-series-validation-005-before-wording.json",
+    "description": "default-enabled preference-controlled native preview; FFmpeg admission remains opt-in; explicit cache limits and actual sample time label"
+  },
+  "guide_proportional_review": {
+    "sole_source_delta": "bin/timeline-preview/README.md",
+    "shell_blocks_bash_n": "7 passed",
+    "new_license_or_dependency_inputs": false,
+    "private_marker_scan": "pass",
+    "conventional_distcheck": "80 pass/5 skip/7 fail; terminal stages not reached"
+  },
+  "final_wrapper_lineage_correction": "five Apple/media-library headers; revision9 only part2 README differs from revision8; 0000/0001/0003 preserved",
+  "wrapper_contributor_guidance_only": {
+    "name": "Cam Marsollier",
+    "email": "cam.marsollier@gmail.com",
+    "basis": "Cam approved contributor credit; contributor/contact identity is taken from the current Git configuration",
+    "ai_assistance": "disclosed",
+    "terms": "retain existing VLC GPL/LGPL and third-party notices",
+    "copyright_scope": "contributor credit does not assert sole ownership, assignment or waiver",
+    "sign_off_or_formal_attestation": false
+  },
+  "wrapper_structural_distribution_disclosure_only": {
+    "source_receipt": "docs/evidence/story-005/structural-distribution-001.json",
+    "archive_scope": "revision8;revision9 docs-only",
+    "full_distcheck_pass": false,
+    "correct_executable_name_installation_proven": false,
+    "distcleancheck": "failed bin/vlc and extra-only libvlc_vtutils.la",
+    "source_and_patch_bytes_unchanged": true
+  },
+  "native_demonstration_wrapper_only": {
+    "directory": "demonstration",
+    "provenance": "demonstration/provenance.json",
+    "scope": "Actual four-surface visible rendering acquired; two unchanged screenshots included; no recording/full native-reader-performance acceptance",
+    "source_and_patch_bytes_unchanged": true
+  },
+  "characterization_wrapper_update_only": {
+    "acceptance": "held pending shutdown and remaining edge interpretation",
+    "controls": "20 scored responses perarm; narrow foreground/unoccluded paused rendered-knob/shared600000ms condition",
+    "playback": "six retained60s intervals; numerical0pp and continuous captured digital audio; candidate133.332ms screenPTSgap;5exit0/oneSIGSEGV onquit",
+    "resources": "61-sample app/helper CPU/RSS characterization; not true peaks or continuous interval CPU",
+    "screen_gap_interpretation": "Not a demonstrated feature-attributable stall; no uninterrupted-screen claim",
+    "no_numerical_retake": true
+  },
+  "native_outcome_wrapper_only": {
+    "ordinary_controls": "qualified by combined four-surface wheel/volume/Space/clicks,20-perarm controls and physical main/custom gestures; shared setPositionFast unchanged",
+    "custom": "physical click/drag plus5s playback and Escape/main reparent passed",
+    "main_immediate_assertion": "invalid asynchronous completion check; not a regression finding",
+    "detached_projection": "uncalibrated \u00b13s mapping; not a regression finding; precise drag/held-button behavior lacks fresh proof",
+    "faded_preview_absence": "consistent with eligibility guard; earlierfour-surface visible hover retained",
+    "reader": "actual baseline activation unavailable; setting restoredOFF; no functional navigation pass",
+    "readiness": "actual SIGSEGV remains material hold;133.332ms screenPTSgap disclosed without causal or uninterrupted-screen claim"
+  },
+  "final_wrapper_review_only": {
+    "status": "READY FOR MAINTAINER REVIEW/SUBMISSION BY CAM \u2014 nothing submitted; focused scope with disclosed baseline shutdown limitation and unqualified scopes",
+    "source_patches_images_unchanged": true,
+    "shutdown_evidence_sha256": "ad2424a61cbe67affead5f736e421de1d1ab52ea742f26c3a9c9ffaee281f584",
+    "previous_manifest_sha256": "4f091a23217974e80f7950bf9ee64b3a1242c67ffcfbcc7b451d5159cd48b380",
+    "no_runtime_or_submission": true
+  }
+}

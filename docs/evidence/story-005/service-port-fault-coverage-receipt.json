@@ -1,0 +1,26 @@
+{
+  "source_pin": "2e358f3098c2f2b7621d1dc568de8b61ad786322",
+  "source_root": "work/upstream/vlc-master-story005-candidate",
+  "source_hashes": {
+    "modules/gui/macosx/tests/VLCThumbnailServiceTest.m": "848bcb7db8f49bbdc8cca42faddf3c0fe57774c33a817f4f171b07c118434226",
+    "modules/gui/macosx/tests/VLCThumbnailTestHelper.c": "c671a501f3d378d595ebeff255fc9dfd9a7997a22bcf4e3f9d93f242ce9e8374"
+  },
+  "selectors": [
+    "VLCThumbnailServiceTest/testQueuedValidationDoesNotExtendProvisionalDeadline",
+    "VLCThumbnailServiceTest/testFinitePreparationBecomesQuiescent",
+    "VLCThumbnailServiceTest/testHungWorkerPIDDisappearsBeforeRecovery"
+  ],
+  "compile_log": "Previous compile-008 succeeds; final delta only captures errno before assertion. Normal target compile pending owner.",
+  "runtime_status": "Normal registered focused target passes three methods, zero failures; 35.187 seconds runtime.",
+  "persistence_tail_equivalent_except_manifest_version": true,
+  "normal_registered_receipt": "docs/evidence/story-005/candidate-build-20261006T054833Z.json",
+  "normal_registered_log": "docs/evidence/story-005/candidate-build-20261006T054833Z.log",
+  "later_full_suite_observation": {
+    "receipt": "docs/evidence/story-005/candidate-build-20261006T062106Z.json",
+    "failure": "Inherited fixed2.5s finite proactive assertion observed6completed/7requests/active1",
+    "total_method_duration_seconds": 60.577,
+    "assertion_wait_seconds": 2.5,
+    "causal_load_attribution": "not established",
+    "root_selected_next_step": "Single quiet final whole suite after environment restoration/independent compile complete; unchangedsource unless exact assertion recurs"
+  }
+}

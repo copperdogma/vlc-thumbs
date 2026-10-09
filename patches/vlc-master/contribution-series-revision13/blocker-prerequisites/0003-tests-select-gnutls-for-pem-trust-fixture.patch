@@ -1,0 +1,55 @@
+diff --git a/test/modules/misc/tls.c b/test/modules/misc/tls.c
+index 2b73854531f686478310004f1dc6b12a08d988c4..e7f342691936f9a605771c0201e47bf6fb881090 100644
+--- a/test/modules/misc/tls.c
++++ b/test/modules/misc/tls.c
+@@ -123,6 +123,34 @@ static const char *const test_cert_argv[] = {
+ static const char *const alpn[] = { "foo", "bar", NULL };
+ static const char *const alpn_bad[] = { "baz", NULL };
+ 
++/* The PEM trust fixture below configures the GnuTLS credential backend. */
++static vlc_tls_client_t *fixture_ClientCreate(vlc_object_t *obj, bool *missing)
++{
++    module_t **mods = NULL;
++    ssize_t count = vlc_module_match("tls client", "gnutls", true, &mods, NULL);
++    *missing = count == 0;
++    if (count <= 0)
++    {
++        free(mods);
++        return NULL;
++    }
++
++    int (*probe)(vlc_tls_client_t *) = vlc_module_map(obj->logger, mods[0]);
++    free(mods);
++    if (probe == NULL)
++        return NULL;
++
++    vlc_tls_client_t *client = vlc_object_create(obj, sizeof(*client));
++    if (client == NULL)
++        return NULL;
++    if (probe(client) == VLC_SUCCESS)
++        return client;
++
++    /* GnuTLS OpenClient frees failed initialization resources itself. */
++    vlc_object_delete(client);
++    return NULL;
++}
++
+ int main(void)
+ {
+     libvlc_instance_t *vlc;
+@@ -180,7 +208,14 @@ int main(void)
+ 
+     server_creds = vlc_tls_ServerCreate(obj, CERTFILE, NULL);
+     assert(server_creds != NULL);
+-    client_creds = vlc_tls_ClientCreate(obj);
++    bool missing;
++    client_creds = fixture_ClientCreate(obj, &missing);
++    if (missing)
++    {
++        vlc_tls_ServerDelete(server_creds);
++        libvlc_release(vlc);
++        return 77;
++    }
+     assert(client_creds != NULL);
+ 
+     /* Test known certificate */

@@ -1,0 +1,262 @@
+{
+  "source_sha256": {
+    "contrib/src/ffmpeg/matroska-flat-timeline.patch": "abd605f770de85f739929c5d333bd45e8d35075b2b69720cfaecbdc0d278450e",
+    "contrib/src/ffmpeg/matroska-track-number.patch": "23baeb78b81fcb51e5068feaba2ad6f8ddfedfc3eb7dd5bca3b7d56df5ce2602",
+    "bin/timeline-preview/timeline-preview.c": "61fa2c51d2dd62a0bd7ea7d5b07744a166725a6dac0e5eb0fb6292bf4b604e0f",
+    "bin/timeline-preview/PROTOCOL.md": "30063a4f71a945238d5e34515514f2fdf35355f436c7bf5ffaaff53fcbb5e708",
+    "bin/timeline-preview/test.py": "dd42b041891b84e347fb6253259f6c2bb4a7781d91398e98546d16d9f4ce1414",
+    "bin/timeline-preview/test-io.c": "6521c10f5187a353487bf874f6e0663ff5f155c4da0a9e13d8cb484d7a12dc60",
+    "bin/timeline-preview/tests/generate_admission_fixtures.py": "92be89ff835bfdb8eaddac8cef634e2a9d58aa69b750d035b1979db563add3a4"
+  },
+  "fixtures": {
+    "work/story005-fixtures/edit-offset.mp4": {
+      "bytes": 577963,
+      "sha256": "387c7688c5e3df3196a6e49af67fd0bffbdee6bc8472a74bca49a89d440bebf1"
+    },
+    "work/story005-fixtures/long-gop.mp4": {
+      "bytes": 347708,
+      "sha256": "0a799a96c129d26170bb5f5195df532eeffd8cd00c34416644d10a08820a6e91"
+    },
+    "work/story005-fixtures/positive-start.mkv": {
+      "bytes": 346247,
+      "sha256": "7ddb8c7272f835612b5f665cf7816e3aaba53a3487640e5daa1858241f0ec0b3"
+    },
+    "work/story005-fixtures/rotation.mp4": {
+      "bytes": 347708,
+      "sha256": "5f877209d39a53e581709deed5cd515955719497d4197d4e74c93a6d55223ed2"
+    },
+    "work/story005-fixtures/sar.mp4": {
+      "bytes": 358900,
+      "sha256": "4f925ee5155fcf63ba795240986cb17dad2b8c9eb9fc173a28004aa7e2328af3"
+    },
+    "work/story005-fixtures/standard.mkv": {
+      "bytes": 586906,
+      "sha256": "0c7989cce8e59a17dc30f83ea2af0252ad32e9079a17e0880bbc1b6236c3e65d"
+    },
+    "work/story005-fixtures/standard.mp4": {
+      "bytes": 589343,
+      "sha256": "8bc46b663c6b42269c9f81ea46b50f18833d40f8014a26850ab51c1c534098dc"
+    },
+    "work/story005-fixtures/two-tracks.mkv": {
+      "bytes": 14948,
+      "sha256": "140fb2321b56579b5840be66c9d0c3a2e61079db740300a124b32d98ad245336"
+    },
+    "work/story005-fixtures/vfr.mkv": {
+      "bytes": 221328,
+      "sha256": "4d0432ad3c54271721f8b0ecbe88c203e308231877b6f21a4205819f01d268e2"
+    },
+    "work/story005-mp4-fixtures001/base.mp4": {
+      "bytes": 347708,
+      "sha256": "0a799a96c129d26170bb5f5195df532eeffd8cd00c34416644d10a08820a6e91"
+    },
+    "work/story005-mp4-fixtures001/dwell-control.mp4": {
+      "bytes": 347708,
+      "sha256": "689eb1c8fd3181bffd0e087cc0246a6ef0114c10d1ef2334d35f93ca1ec44f2c"
+    },
+    "work/story005-mp4-fixtures001/negative-ctts-trim.mp4": {
+      "bytes": 347712,
+      "sha256": "6397c0528f8ecd2d0b0fed3c943980898c169fa1febbedffa16b9bc9d14d6172"
+    },
+    "work/story005-mp4-fixtures001/negative-ctts.mp4": {
+      "bytes": 347712,
+      "sha256": "763d9d707cba371d36e81704868d39e777be136bb8e2d2c86e28c0cd379e5eca"
+    },
+    "work/story005-mp4-fixtures001/nonkeyframe-trim.mp4": {
+      "bytes": 347708,
+      "sha256": "51e6736ac2e1c681ec02ec547c231a2bddebfcbea4a9f7c59bf45bd74c431324"
+    },
+    "work/story005-mp4-fixtures001/two-edits.mp4": {
+      "bytes": 347720,
+      "sha256": "5b98150289167c6fa8442147e99d7ca269d547c6d72794f51426984b1821657a"
+    },
+    "work/story005-feature-dependency-fixtures002/duplicate.mkv": {
+      "bytes": 21830,
+      "sha256": "bc8827545b2e9e5d21cce5f254ba54f6fff3c1d500c4d4b257d3ebb97d9b955f"
+    },
+    "work/story005-feature-dependency-fixtures002/int-max.mkv": {
+      "bytes": 21929,
+      "sha256": "29b643f0e5fb0fd7641bc915414ef81d25d024891391a5a407a7688f9fb6cf8e"
+    },
+    "work/story005-feature-dependency-fixtures002/nonconsecutive.mkv": {
+      "bytes": 21830,
+      "sha256": "ff0917161f372ab9777cb03a62efb4c3f8f124e9f77342845f676fe14227f536"
+    },
+    "work/story005-feature-dependency-fixtures002/reordered.mkv": {
+      "bytes": 21830,
+      "sha256": "d27b985d2e62d72e6d4f975947bd5910275e1416aa215300948fdd4a8eeea6ba"
+    },
+    "work/story005-feature-dependency-fixtures002/seed.mkv": {
+      "bytes": 22092,
+      "sha256": "3b23876673388513cf40d2d9f0cab8a3de366efef4c3d4e1c3464d67f753732b"
+    },
+    "work/story005-feature-dependency-fixtures002/too-large.mkv": {
+      "bytes": 21929,
+      "sha256": "f97111416268dbf47d3b05f28aa602860f7ca929cadc0dbe98c058a07d73881d"
+    },
+    "work/story005-feature-dependency-fixtures002/zero.mkv": {
+      "bytes": 21830,
+      "sha256": "a0dd7a37a21d24d31eb65ab309d1879f35b88e7aa2b4eccf1561d3d50a977995"
+    },
+    "work/story005-admission-fixtures002/flat-bogus-tags.mkv": {
+      "bytes": 1093,
+      "sha256": "3f60c6b803ef6b697e93e66eb90821d5cf3ec2ca8596fcebef62ff7cb614e356"
+    },
+    "work/story005-admission-fixtures002/flat-default-edition.mkv": {
+      "bytes": 1009,
+      "sha256": "22d983daa019207668eeba1d2a813d1212cd5835e00db69fe1bd9edb0bf2ec77"
+    },
+    "work/story005-admission-fixtures002/flat-first-ordered-last.mkv": {
+      "bytes": 1040,
+      "sha256": "c75f603f6e9b37fee159fade51302ded3d5f44cf14db7c7ceba36a4d5eb31a23"
+    },
+    "work/story005-admission-fixtures002/flat-late-chapters.mkv": {
+      "bytes": 1013,
+      "sha256": "67ce0887a84f2522287201668441fde505a4ce37189b0dd8e70d507fead55914"
+    },
+    "work/story005-admission-fixtures002/flat-no-chapters.mkv": {
+      "bytes": 981,
+      "sha256": "dae15d18112e12c52b8a47ba2ebfd08c914d78aa19cccdd0e0cc60307eab12fc"
+    },
+    "work/story005-admission-fixtures002/flat-own-segment-uid.mkv": {
+      "bytes": 981,
+      "sha256": "dae15d18112e12c52b8a47ba2ebfd08c914d78aa19cccdd0e0cc60307eab12fc"
+    },
+    "work/story005-admission-fixtures002/flat-simple-chapters.mkv": {
+      "bytes": 1013,
+      "sha256": "de0035b35e540e093ffaf1abd0be335f5fac15da7db851b11dea53b4ed1f8037"
+    },
+    "work/story005-admission-fixtures002/flat-two-hours-1200-clusters.mkv": {
+      "bytes": 801904,
+      "sha256": "4a2355ecf6551a265aee936f5ef0a475de0e2517b96208bb24ab05502e2a4da8"
+    },
+    "work/story005-admission-fixtures002/flat-unknown-segment.mkv": {
+      "bytes": 987,
+      "sha256": "fb01e65b18d07921a672dca521429f63ad6e78a6a58232b46e6243903a92c00c"
+    },
+    "work/story005-admission-fixtures002/hard-next.mkv": {
+      "bytes": 1002,
+      "sha256": "cfc31499a454e3131f70f25b66d9f86c1a97245b3c492c428488e2dc0af70689"
+    },
+    "work/story005-admission-fixtures002/hard-prev-late-info.mkv": {
+      "bytes": 1002,
+      "sha256": "05a8522926da8fde4e5b013f41c9a9515553e96a1e3222e6cd66653aff109b65"
+    },
+    "work/story005-admission-fixtures002/hard-prev-next.mkv": {
+      "bytes": 1022,
+      "sha256": "b69246e5c5f596792cdd17fc8dbf2c1f417c1fff792280ac9c7cf6f1bb7141a0"
+    },
+    "work/story005-admission-fixtures002/hard-prev.mkv": {
+      "bytes": 1002,
+      "sha256": "2869a7a23bf971dcacbbf6e06a16d7271c1953d8d49e543a4b9dcb111f7da91a"
+    },
+    "work/story005-admission-fixtures002/medium-edition-uid.mkv": {
+      "bytes": 1036,
+      "sha256": "294af7dbadbfbc4c58ecb453ffb2661253f8f298b1c6d5b11c44920aed547838"
+    },
+    "work/story005-admission-fixtures002/medium-edition-without-segment.mkv": {
+      "bytes": 1017,
+      "sha256": "bf5f3b5ad81e09f392a531adb1ae597fb192ed48d8ddd7e034a407841c9f7578"
+    },
+    "work/story005-admission-fixtures002/medium-late.mkv": {
+      "bytes": 1048,
+      "sha256": "c70b7ef7b5421c1b103eb1856b2ddd78989f1c6d6a93cea6a3710a15f0d9061e"
+    },
+    "work/story005-admission-fixtures002/medium-nested.mkv": {
+      "bytes": 1048,
+      "sha256": "9c336d6a9ad06a1af592e5b5ca607e00e9aa8e3ec61918adb1cb8c58557130ca"
+    },
+    "work/story005-admission-fixtures002/medium-unordered.mkv": {
+      "bytes": 1032,
+      "sha256": "b9328d3da47761c77c47e01d1855da70e6e978ffbe859d804ea52960e79e872f"
+    },
+    "work/story005-admission-fixtures002/multiple-segments.mkv": {
+      "bytes": 1922,
+      "sha256": "debda1909fa216ec4b24570d5358a099c9c45e41ad59f4163859d3a79db7b839"
+    },
+    "work/story005-admission-fixtures002/node-budget-100001-voids.mkv": {
+      "bytes": 200984,
+      "sha256": "615f89d909c45eef89d3409ee22cccd76f8bd899469cc7ef4b3434112326ba63"
+    },
+    "work/story005-admission-fixtures002/ordered-bogus-tags.mkv": {
+      "bytes": 1122,
+      "sha256": "fb44160cfe7541dba347f9638a57ea0745a0b5a7fed632b0eec920632d8ed5fc"
+    },
+    "work/story005-admission-fixtures002/ordered-duplicate-1-then-0.mkv": {
+      "bytes": 1017,
+      "sha256": "82f0170df9e52192c8c28643942c046e2be928bf0ceef667d13e3a5718c699a7"
+    },
+    "work/story005-admission-fixtures002/ordered-first-flat-last.mkv": {
+      "bytes": 1040,
+      "sha256": "052db3ab1a743e302a5ef19d60eaf4681ce4667911b501af4f30a74c910c67a8"
+    },
+    "work/story005-admission-fixtures002/ordered-hidden-nondefault.mkv": {
+      "bytes": 1048,
+      "sha256": "82d969449ce692709df1ce36afdb971c698b5572ebebda0938b4e2f8289a27fb"
+    },
+    "work/story005-admission-fixtures002/ordered-late-broken-index.mkv": {
+      "bytes": 1052,
+      "sha256": "2782df79fa9fd9bb8d4afa5f764493cbe55a362f0117be61dda6a6af10ac4abb"
+    },
+    "work/story005-admission-fixtures002/ordered-late-correct-index.mkv": {
+      "bytes": 1035,
+      "sha256": "fa235e5b4ff3dfee900afc153b32bea288e1b2193e8d9fded1ceb673d7ed76f4"
+    },
+    "work/story005-admission-fixtures002/ordered-late-incomplete-index.mkv": {
+      "bytes": 1035,
+      "sha256": "72411b2cca9a266a2f0250ea48031f0e8f939927adfd5b4c44841c88b062c7e0"
+    },
+    "work/story005-admission-fixtures002/ordered-late-no-index.mkv": {
+      "bytes": 1013,
+      "sha256": "9cf0724711300039495e8b178309499c58dbde1a422baaa1b8147189e8c50fbb"
+    },
+    "work/story005-admission-fixtures002/ordered-late-two-hours-1200-clusters.mkv": {
+      "bytes": 801936,
+      "sha256": "0d801841c43d776efc9de429820e091186c13a98674a3d9aeeb5fa6ebeb92821"
+    },
+    "work/story005-admission-fixtures002/ordered-single.mkv": {
+      "bytes": 1013,
+      "sha256": "976cda811b242d21414a6e7f9c60675852194f460adeaf888d8b0da7286a20b6"
+    },
+    "work/story005-admission-fixtures002/oversize-chapters.mkv": {
+      "bytes": 1014,
+      "sha256": "8cb3dfdf7616d8d0235f4d0f79575758d49fb6c81e440bdf95ad717994b40487"
+    },
+    "work/story005-admission-fixtures002/seed.mkv": {
+      "bytes": 1280,
+      "sha256": "6f457931eca2cdd0ef6b3f1944603ace7a3c1ce4101dd897657b630e71594069"
+    },
+    "work/story005-admission-fixtures002/segment-family.mkv": {
+      "bytes": 1001,
+      "sha256": "b257d767e0b9b322dca443855de68dc1bf37ae0b03a79b42acf7c06514f88a6f"
+    },
+    "work/story005-admission-fixtures002/truncated-chapters.mkv": {
+      "bytes": 1010,
+      "sha256": "7c42bcd550b085864abd2938b6c3c04f3016a27c08f0c5e9d87156216de86c72"
+    },
+    "work/story005-admission-fixtures002/unknown-cluster.mkv": {
+      "bytes": 993,
+      "sha256": "6b071a0ead26c1f35d081109b63467b3dbb75e6f2c01922fe49403f89d8deceb"
+    },
+    "work/story005-admission-fixtures002/unknown-first-finite-second-segment.mkv": {
+      "bytes": 1928,
+      "sha256": "6417e2f2afac8b7daae45c1ed2f13001ffb4fa94fc611c1a9ce83a7339e8e0b9"
+    },
+    "work/story005-admission-fixtures002/unknown-first-header-finite-second-segment.mkv": {
+      "bytes": 1968,
+      "sha256": "53b121cfe1ed14785121b0fda45335241c96eed703a15ff92c3578e2c860c725"
+    },
+    "work/story005-admission-fixtures002/unknown-first-unknown-second-segment.mkv": {
+      "bytes": 1934,
+      "sha256": "e96ca46eb307b1f540667d4dc09dd749091cb24567f0f6eb824ccf901016d11b"
+    },
+    "work/story005-admission-fixtures002/zero-vint.mkv": {
+      "bytes": 983,
+      "sha256": "18a829cc3a6144540c0914e27bf09b20c146efd854cb0fb607f5543af246c9f1"
+    }
+  },
+  "outer_launcher_sha256": "5142af180b70414bb330333ed5825d0b1f2c3c42bd801ec2fab6e52d41f83b9a",
+  "dependency_manifest": "feature-h1-contrib-build-manifest.json",
+  "helper_manifest": "feature-h1-helper-build-manifest.json",
+  "fixture_manifest": "admission-fixture-generation.json",
+  "disk_free_bytes_after": 1833156608
+}

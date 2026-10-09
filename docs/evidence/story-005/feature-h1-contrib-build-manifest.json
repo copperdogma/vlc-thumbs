@@ -1,0 +1,22 @@
+{
+  "stage": "Normal H1 contrib source build, pending admission/customAVIO/default playback qualification",
+  "receipt": "docs/evidence/story-005/candidate-build-20261006T035202Z.json",
+  "prior_archive_verification": "docs/evidence/story-005/feature-contrib-source-archives.json",
+  "hashes": {
+    "work/upstream/vlc-master-story005-candidate/contrib/src/ffmpeg/matroska-track-number.patch": "23baeb78b81fcb51e5068feaba2ad6f8ddfedfc3eb7dd5bca3b7d56df5ce2602",
+    "work/upstream/vlc-master-story005-candidate/contrib/src/ffmpeg/matroska-flat-timeline.patch": "abd605f770de85f739929c5d333bd45e8d35075b2b69720cfaecbdc0d278450e",
+    "work/upstream/vlc-master-story005-candidate/contrib/src/ffmpeg/rules.mak": "c3f3f5c5b54e93de3b3a954431809edc7a965691f1f7a411b56e941b83421028",
+    "work/story005-master-candidate/contrib/contrib-aarch64-apple-darwin19/ffmpeg/libavformat/matroskadec.c": "acd562d9aa40ebe0d0ae1d828803c39ade792322e6261c20bed68cba6936e819",
+    "work/story005-master-candidate/contrib/contrib-aarch64-apple-darwin19/ffmpeg/vlc_build/ffbuild/config.mak": "b162eacca2f4d6ea5aad7c695b837b738a1cb535260ff80e7eb130383bc65273",
+    "work/story005-master-candidate/contrib/contrib-aarch64-apple-darwin19/ffmpeg/vlc_build/config.h": "bf69dec22426faef977175cd14e2a321c8682849a10f2147de4c04615eb630b0",
+    "work/story005-master-candidate/contrib/aarch64-apple-darwin19/lib/libavformat.a": "c17ee092be7f1fe21efa33ea5272920a4bf9e06034d3cb9656f675e84734674b",
+    "work/story005-master-candidate/contrib/aarch64-apple-darwin19/lib/libavcodec.a": "4adeece1f8f6fec0ed74b67349616d3ebc0fd786e400bf9492d9a35c83d128ac",
+    "work/story005-master-candidate/contrib/aarch64-apple-darwin19/lib/libavutil.a": "e5c85ae6d0152bf90ab85f9ec0ffb224e5ade32737c097c6ab0a67edd9cd1d7f",
+    "work/story005-master-candidate/contrib/aarch64-apple-darwin19/lib/libswscale.a": "7d02c1999d516084b835ecca31e1d08e4f155d120b186f6c702b5577678ab2fc",
+    "work/story005-master-candidate/contrib/aarch64-apple-darwin19/lib/libgsm.a": "4d0c2084597232b8787e8fa428209ef7ff02f1e749d32c387a11217489f17bdd",
+    "work/story005-master-candidate/contrib/aarch64-apple-darwin19/lib/libmp3lame.a": "26ac76a04618a6520e491cb4cbb879900e1ab3d5706f1463fd557d3a2e60c03a",
+    "work/story005-master-candidate/contrib/aarch64-apple-darwin19/lib/libopenjp2.a": "fa8011c73a052fa2863f43648da7d977b3f982a4f4fd32f594c48b05fc6fb064",
+    "work/story005-master-candidate/contrib/aarch64-apple-darwin19/lib/libz.a": "f35342c8069414b94a71e0aef17fbafedac6e3e022072d6d66e3930a57f19636"
+  },
+  "static_closure": "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/contrib/aarch64-apple-darwin19/include -L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/contrib/aarch64-apple-darwin19/lib -lavformat -lavcodec -framework AudioToolbox -lgsm -lmp3lame -lm -L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/contrib/aarch64-apple-darwin19/lib -lopenjp2 -lm -pthread -L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/contrib/aarch64-apple-darwin19/lib -lz -framework VideoToolbox -framework CoreFoundation -framework CoreMedia -framework CoreVideo -framework CoreServices -lswscale -lavutil -lm -lz -framework VideoToolbox -pthread -framework CoreFoundation -framework CoreMedia -framework CoreVideo -framework CoreServices"
+}

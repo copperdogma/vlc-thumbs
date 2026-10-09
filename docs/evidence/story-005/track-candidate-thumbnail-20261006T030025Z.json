@@ -1,0 +1,19 @@
+{
+  "binary": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/test/.libs/test_src_preparser_thumbnail",
+  "binary_sha256": "397cddf988bacfa909e8f80ebc2c5681a16de70ca56517c0698e4c0c8d16d43b",
+  "launcher_pid": 80503,
+  "launcher_pgid": 80503,
+  "timeout_seconds": 90,
+  "test_pgid": 80505,
+  "returncode": 0,
+  "timeout": false,
+  "final_members": [],
+  "final_live_members": [],
+  "final_returncode": 0,
+  "elapsed_seconds": 0.9715696250059409,
+  "stdout": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/docs/evidence/story-005/track-candidate-thumbnail-20261006T030025Z.stdout.log",
+  "stderr": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/docs/evidence/story-005/track-candidate-thumbnail-20261006T030025Z.stderr.log",
+  "child_groups_verified": false,
+  "child_count": 0,
+  "passed": true
+}

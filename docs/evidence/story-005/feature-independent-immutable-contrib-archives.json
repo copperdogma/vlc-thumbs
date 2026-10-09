@@ -1,0 +1,41 @@
+{
+  "copies": [
+    {
+      "archive": "ffmpeg-9.0.tar.xz",
+      "source": "work/upstream/vlc-master-story005-candidate/contrib/tarballs/ffmpeg-9.0.tar.xz",
+      "sha512": "2e2fea606b290c306bdef13b4c8efb7a4b138ffa16f94f608f85877f5e7ca93980bda8219eeeed8343c463d302c7a2c46b14902ccbbe1e53483f9411b31b9c69",
+      "bytes": 12032020,
+      "checksum_file": "work/upstream/vlc-master-story005-reproduction/contrib/src/ffmpeg/SHA512SUMS"
+    },
+    {
+      "archive": "gsm-1.0-pl22.tar.gz",
+      "source": "work/upstream/vlc-master-story005-candidate/contrib/tarballs/gsm-1.0-pl22.tar.gz",
+      "sha512": "f4284f096ed4d606ddece5c1b28edb63feacc26a0b664f1350c040dbf50113d27bedfd9896bf1620cb4fc3a6c8f6a5244955a6c625ded833dcee607c63c97dd2",
+      "bytes": 66583,
+      "checksum_file": "work/upstream/vlc-master-story005-reproduction/contrib/src/gsm/SHA512SUMS"
+    },
+    {
+      "archive": "lame-3.100.tar.gz",
+      "source": "work/upstream/vlc-master-story005-candidate/contrib/tarballs/lame-3.100.tar.gz",
+      "sha512": "0844b9eadb4aacf8000444621451277de365041cc1d97b7f7a589da0b7a23899310afd4e4d81114b9912aa97832621d20588034715573d417b2923948c08634b",
+      "bytes": 1524133,
+      "checksum_file": "work/upstream/vlc-master-story005-reproduction/contrib/src/lame/SHA512SUMS"
+    },
+    {
+      "archive": "openjpeg-2.5.4.tar.gz",
+      "source": "work/upstream/vlc-master-story005-candidate/contrib/tarballs/openjpeg-2.5.4.tar.gz",
+      "sha512": "702a10e20caaf8209684ded7c9fcf32f5ba6a972cf2d9fcf2611cdc6a446d2c3bb60324205758e6b6f92278c8cf4ef0fbae511e6ffb45ed6e8df514db0c6ab25",
+      "bytes": 2157028,
+      "checksum_file": "work/upstream/vlc-master-story005-reproduction/contrib/src/openjpeg/SHA512SUMS"
+    },
+    {
+      "archive": "vlc-contrib-aarch64-apple-darwin19-latest.tar.zst",
+      "source": "work/story005-master-baseline/contrib/contrib-aarch64-apple-darwin19/vlc-contrib-aarch64-apple-darwin19-latest.tar.zst",
+      "sha512": "46ff351556f8b9f54e9d550a987621e6bf3c005fb9d00922befc538b9ae1ba5628d238ff5c1defecdc81ff3cfe386db0442a0a45050f4462545f01ef89399d57",
+      "bytes": 216247250,
+      "digest_kind": "Prior exactofficialHTTPSacquisition digest, not publisher signature"
+    }
+  ],
+  "mutable_prefix_object_build_reuse": false,
+  "note": "Only immutable archives reused after hash verification; fresh official recipe re-verifies source SUMS, unpacks and builds normally. Prebuilt freshness is exactpinnedartifact, notall-source closure."
+}

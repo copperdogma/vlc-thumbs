@@ -1,0 +1,1 @@
+{"status": "passed", "relocation_bytes_unchanged": true, "isolated_bundle_id": "org.videolan.vlc.story005.nativecandidate", "changed_files": ["Contents/Info.plist", "Contents/MacOS/VLC"], "all_other_files_and_symlinks_equal": true, "main_loadable_sections_equal": true}

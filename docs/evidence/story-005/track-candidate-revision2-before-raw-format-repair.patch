@@ -1,0 +1,795 @@
+diff --git a/bin/preparser/main.c b/bin/preparser/main.c
+index 9cb1e2d..d78fd1e 100644
+--- a/bin/preparser/main.c
++++ b/bin/preparser/main.c
+@@ -235,6 +235,17 @@ preparser_req_Preparse(vlc_preparser_t *preparser, struct preparser *pp)
+             goto end;
+     }
+ 
++    if (req != NULL && pp->req_msg.req_type != VLC_PREPARSER_MSG_REQ_TYPE_PARSE &&
++        pp->req_msg.req.arg.video_track_id != NULL) {
++        /* The internal constructor has accepted and copied the strict ID.
++         * Only acknowledge that contract, never arbitrary unconsumed options. */
++        pp->res_msg.res.video_track_id = strdup(pp->req_msg.req.arg.video_track_id);
++        if (pp->res_msg.res.video_track_id == NULL) {
++            vlc_preparser_req_Release(req);
++            req = NULL;
++        }
++    }
++
+     if (req != NULL && vlc_preparser_Submit(preparser, req) != VLC_SUCCESS) {
+         vlc_preparser_req_Release(req);
+         req = NULL;
+diff --git a/include/vlc_preparser.h b/include/vlc_preparser.h
+index 65fa5b1..c6c29c3 100644
+--- a/include/vlc_preparser.h
++++ b/include/vlc_preparser.h
+@@ -224,6 +224,16 @@ struct vlc_thumbnailer_arg
+ 
+     /** True to enable hardware decoder (false by default) */
+     bool hw_dec;
++
++    /**
++     * Canonical, stable video ES string ID, or NULL for automatic selection.
++     * A non-NULL ID must be non-empty and singular (no comma-separated list).
++     * Obtain it from vlc_es_id_GetStrId(), never from a track ordinal.
++     * The caller ensures the ID is stable for the requested item. Each request
++     * copies the string, so the caller may release it after construction.
++     * An unavailable explicit ID fails instead of selecting another track.
++     */
++    const char *video_track_id;
+ };
+ 
+ /**
+diff --git a/include/vlc_preparser_ipc.h b/include/vlc_preparser_ipc.h
+index 2a7fe3e..8f31f18 100644
+--- a/include/vlc_preparser_ipc.h
++++ b/include/vlc_preparser_ipc.h
+@@ -67,6 +67,7 @@ struct vlc_preparser_msg_req {
+      * Used by both type `VLC_PREPARSER_MSG_REQ_TYPE_THUMBNAIL` and
+      * `VLC_PREPARSER_MSG_REQ_TYPE_THUMBNAIL_TO_FILES`.
+      */
++    /* arg.video_track_id is owned and freed by vlc_preparser_msg_Clean. */
+     struct vlc_thumbnailer_arg arg;
+ 
+     /**
+@@ -114,6 +115,10 @@ struct vlc_preparser_msg_res {
+      * Used by all types of request.
+      */
+     int status;
++
++    /** Owned acknowledgment of the explicit selection contract accepted by the
++     * worker, or NULL. This is not independently measured decoded ES identity. */
++    char *video_track_id;
+     input_item_t *item;
+ };
+ 
+@@ -139,6 +144,22 @@ struct vlc_preparser_msg {
+     };
+ };
+ 
++/** Check acknowledgment of the explicit selection contract, not decoded ES
++ * identity. Old workers are compatible only with automatic-selection requests. */
++static inline bool
++vlc_preparser_msg_CheckVideoTrackId(const struct vlc_preparser_msg *req,
++                                    const struct vlc_preparser_msg *res)
++{
++    assert(req->type == VLC_PREPARSER_MSG_TYPE_REQ);
++    if (res->type != VLC_PREPARSER_MSG_TYPE_RES)
++        return false;
++    return res->req_type == req->req_type &&
++           (req->req_type == VLC_PREPARSER_MSG_REQ_TYPE_PARSE ||
++            req->req.arg.video_track_id == NULL ||
++            (res->res.video_track_id != NULL &&
++             strcmp(req->req.arg.video_track_id, res->res.video_track_id) == 0));
++}
++
+ /**
+  * Initialize a preparser message.
+  * 
+diff --git a/lib/parser.c b/lib/parser.c
+index d57f74b..feda023 100644
+--- a/lib/parser.c
++++ b/lib/parser.c
+@@ -359,7 +359,7 @@ libvlc_parser_task_new_thumbnail(libvlc_parser_t *parser,
+ 
+     task->instance = libvlc_retain(parser->libvlc);
+     libvlc_thumbnailer_seek_type_t seek_type = req->seek.type;
+-    struct vlc_thumbnailer_arg thumb_arg;
++    struct vlc_thumbnailer_arg thumb_arg = {0};
+     thumb_arg.hw_dec = req->hw_dec;
+ 
+     switch (seek_type)
+diff --git a/modules/misc/preparser_serializer/json/fromjson.c b/modules/misc/preparser_serializer/json/fromjson.c
+index 69d29eb..118bfdb 100644
+--- a/modules/misc/preparser_serializer/json/fromjson.c
++++ b/modules/misc/preparser_serializer/json/fromjson.c
+@@ -1376,7 +1376,7 @@ fromJSON_vlc_preparser_msg_req(struct serdes_sys *sys,
+         if (req->arg.seek.type == VLC_THUMBNAILER_SEEK_TIME) {
+             json_object_to_int(obj, "seek.time", &req->arg.seek.time,
+                                  &err);
+-        } else {
++        } else if (req->arg.seek.type == VLC_THUMBNAILER_SEEK_POS) {
+             json_object_to_double(obj, "seek.pos", &req->arg.seek.pos,
+                                   &err);
+         }
+@@ -1384,6 +1384,14 @@ fromJSON_vlc_preparser_msg_req(struct serdes_sys *sys,
+                             &err, VLC_THUMBNAILER_SEEK_PRECISE,
+                             VLC_THUMBNAILER_SEEK_FAST);
+         json_object_to_boolean(obj, "hw_dec", &req->arg.hw_dec, &err);
++        /* An old automatic-selection caller may omit this optional field. */
++        if (json_get(obj, "video_track_id") != NULL) {
++            char *id = NULL;
++            json_object_to_string(obj, "video_track_id", &id, &err);
++            req->arg.video_track_id = id;
++            if (id != NULL && (id[0] == '\0' || strchr(id, ',') != NULL))
++                err = true;
++        }
+     }
+     json_object_to_string(obj, "uri", &req->uri, &err);
+ 
+@@ -1439,6 +1447,10 @@ fromJSON_vlc_preparser_msg_res(struct serdes_sys *sys,
+             vlc_assert_unreachable();
+     }
+     json_object_to_int(obj, "status", &res->status, &err);
++    /* Missing old-worker acknowledgment stays NULL; explicit callers reject it. */
++    if (res->type != VLC_PREPARSER_MSG_REQ_TYPE_PARSE &&
++        json_get(obj, "video_track_id") != NULL)
++        json_object_to_string(obj, "video_track_id", &res->video_track_id, &err);
+ 
+     json_object_from_name(sys, obj, "item", &res->item, err, true,
+                           fromJSON_input_item);
+diff --git a/modules/misc/preparser_serializer/json/tojson.c b/modules/misc/preparser_serializer/json/tojson.c
+index c6fd660..ef3ea98 100644
+--- a/modules/misc/preparser_serializer/json/tojson.c
++++ b/modules/misc/preparser_serializer/json/tojson.c
+@@ -1144,6 +1144,7 @@ toJSON_vlc_preparser_msg_req(struct serdes_sys *sys,
+         }
+         json_stringify(number, sys, "seek.speed", req->arg.seek.speed);
+         json_stringify(boolean, sys, "hw_dec", req->arg.hw_dec);
++        json_stringify(string, sys, "video_track_id", req->arg.video_track_id);
+     }
+ 
+     json_stringify_last(string, sys, "uri", req->uri);
+@@ -1197,6 +1198,8 @@ toJSON_vlc_preparser_msg_res(struct serdes_sys *sys,
+         return;
+     }
+     json_stringify(number, sys, "status", res->status);
++    if (res->type != VLC_PREPARSER_MSG_REQ_TYPE_PARSE)
++        json_stringify(string, sys, "video_track_id", res->video_track_id);
+     toJSON_input_item(sys, res->item, "item");
+     if (serdes_buf_puts(sys, "}") < 0) {
+         return;
+diff --git a/src/preparser/external.c b/src/preparser/external.c
+index f0d73fe..2b5d133 100644
+--- a/src/preparser/external.c
++++ b/src/preparser/external.c
+@@ -190,6 +190,8 @@ preparser_task_ExecCallback(struct preparser_task *task, int status)
+     assert(task->req_msg.type == VLC_PREPARSER_MSG_TYPE_REQ);
+     struct vlc_preparser_msg *res_msg = &task->res_msg;
+     if (status != 0) {
++        /* A rejected acknowledgment may already own a decoded response. */
++        vlc_preparser_msg_Clean(res_msg);
+         vlc_preparser_msg_Init(res_msg, VLC_PREPARSER_MSG_TYPE_RES,
+                                task->req_msg.req_type);
+         res_msg->res.item = input_item_Hold(task->item);
+@@ -273,6 +275,9 @@ preparser_task_Run(struct preparser_process_thread *thread, vlc_tick_t timeout)
+                                                &serdes_ctx);
+     if (ret != VLC_SUCCESS) {
+         status = ret;
++    } else if (!vlc_preparser_msg_CheckVideoTrackId(&task->req_msg, &task->res_msg)) {
++        /* An old worker/serializer must not silently deliver its default ES. */
++        status = VLC_EGENERIC;
+     }
+ 
+ end:
+@@ -395,7 +400,27 @@ preparser_task_InitPush(struct preparser_task *task, int options,
+ /**
+  * Init a task for a Generate Thumbnail request.
+  */
+-static void
++static int
++preparser_task_InitThumbnailArg(struct vlc_thumbnailer_arg *dst,
++                                 const struct vlc_thumbnailer_arg *arg)
++{
++    if (arg == NULL)
++        return VLC_SUCCESS;
++
++    *dst = *arg;
++    dst->video_track_id = NULL;
++    if (arg->video_track_id != NULL) {
++        if (arg->video_track_id[0] == '\0' ||
++            strchr(arg->video_track_id, ',') != NULL)
++            return VLC_EINVAL;
++        dst->video_track_id = strdup(arg->video_track_id);
++        if (dst->video_track_id == NULL)
++            return VLC_ENOMEM;
++    }
++    return VLC_SUCCESS;
++}
++
++static int
+ preparser_task_InitThumbnail(struct preparser_task *task,
+                              const struct vlc_thumbnailer_arg *arg,
+                              const union preparser_task_cbs *cbs,
+@@ -408,21 +433,19 @@ preparser_task_InitThumbnail(struct preparser_task *task,
+     assert(msg->req_type == VLC_PREPARSER_MSG_REQ_TYPE_THUMBNAIL);
+     assert(cbs != NULL);
+ 
+-    if (arg == NULL) {
+-        msg->req.arg.seek.type = VLC_THUMBNAILER_SEEK_NONE;
+-        msg->req.arg.hw_dec = false;
+-    } else {
+-        msg->req.arg = *arg;
+-    }
++    int ret = preparser_task_InitThumbnailArg(&msg->req.arg, arg);
++    if (ret != VLC_SUCCESS)
++        return ret;
+ 
+     task->cbs = *cbs;
+     task->cbs_userdata = userdata;
++    return VLC_SUCCESS;
+ }
+ 
+ /**
+  * Init a task for a Generate Thumbnail To Files request.
+  */
+-static void
++static int
+ preparser_task_InitThumbnailToFile(struct preparser_task *task,
+                                 const struct vlc_thumbnailer_arg *arg,
+                                 const struct vlc_thumbnailer_output *outputs,
+@@ -438,18 +461,17 @@ preparser_task_InitThumbnailToFile(struct preparser_task *task,
+     assert(output_count == 0 || outputs != NULL);
+     assert(cbs != NULL);
+ 
+-    if (arg == NULL) {
+-        msg->req.arg.seek.type = VLC_THUMBNAILER_SEEK_NONE;
+-        msg->req.arg.hw_dec = false;
+-    } else {
+-        msg->req.arg = *arg;
+-    }
++    int ret = preparser_task_InitThumbnailArg(&msg->req.arg, arg);
++    if (ret != VLC_SUCCESS)
++        return ret;
+     if (output_count != 0) {
+-        vlc_vector_push_all(&msg->req.outputs, outputs, output_count);
++        if (!vlc_vector_push_all(&msg->req.outputs, outputs, output_count))
++            return VLC_ENOMEM;
+     }
+ 
+     task->cbs = *cbs;
+     task->cbs_userdata = userdata;
++    return VLC_SUCCESS;
+ }
+ 
+ /*****************************************************************************
+@@ -1014,7 +1036,11 @@ preparser_req_NewThumbnail(void *opaque, input_item_t *item,
+     if (task == NULL) {
+         return NULL;
+     }
+-    preparser_task_InitThumbnail(task, thumb_arg, &task_cbs, cbs_userdata);
++    if (preparser_task_InitThumbnail(task, thumb_arg, &task_cbs,
++                                     cbs_userdata) != VLC_SUCCESS) {
++        preparser_task_req_Release(&task->req);
++        return NULL;
++    }
+ 
+     return &task->req;
+ }
+@@ -1048,8 +1074,12 @@ preparser_req_NewThumbnailToFiles(void *opaque, input_item_t *item,
+     if (task == NULL) {
+         return NULL;
+     }
+-    preparser_task_InitThumbnailToFile(task, thumb_arg, outputs, output_count,
+-                                       &task_cbs, cbs_userdata);
++    if (preparser_task_InitThumbnailToFile(task, thumb_arg, outputs,
++                                           output_count, &task_cbs,
++                                           cbs_userdata) != VLC_SUCCESS) {
++        preparser_task_req_Release(&task->req);
++        return NULL;
++    }
+ 
+     return &task->req;
+ }
+diff --git a/src/preparser/internal.c b/src/preparser/internal.c
+index 6b1e160..4a946c4 100644
+--- a/src/preparser/internal.c
++++ b/src/preparser/internal.c
+@@ -116,6 +116,7 @@ PreparserRequestDelete(struct vlc_preparser_req *req)
+     for (size_t i = 0; i < req_owner->output_count; ++i)
+         free(req_owner->outputs[i].file_path);
+     free(req_owner->outputs);
++    free((char *)req_owner->thumb_arg.video_track_id);
+     if (req_owner->pic != NULL)
+         picture_Release(req_owner->pic);
+     if (req_owner->i11e_ctx != NULL)
+@@ -165,8 +166,22 @@ PreparserRequestNew(struct preparser_sys *preparser, void (*run)(void *), input_
+             .seek.type = VLC_THUMBNAILER_SEEK_NONE,
+             .hw_dec = false,
+         };
+-    else
++    else {
+         req_owner->thumb_arg = *thumb_arg;
++        req_owner->thumb_arg.video_track_id = NULL;
++        if (thumb_arg->video_track_id != NULL) {
++            if (thumb_arg->video_track_id[0] == '\0' ||
++                strchr(thumb_arg->video_track_id, ',') != NULL) {
++                free(req_owner);
++                return NULL;
++            }
++            req_owner->thumb_arg.video_track_id = strdup(thumb_arg->video_track_id);
++            if (req_owner->thumb_arg.video_track_id == NULL) {
++                free(req_owner);
++                return NULL;
++            }
++        }
++    }
+ 
+     input_item_Hold(item);
+ 
+@@ -527,10 +542,38 @@ ThumbnailerRun(void *userdata)
+                           vlc_tick_now() + preparser->timeout :
+                           VLC_TICK_INVALID;
+ 
+-    input_thread_t* input =
+-            input_Create( preparser->owner, req_owner->item, &cfg );
++    bool timeout = false;
++    input_item_t *private_item = NULL;
++    input_item_t *item = req_owner->item;
++    if (req_owner->thumb_arg.video_track_id != NULL) {
++        /* input_Create snapshots ES selection before returning. Apply only the
++         * strict selection overrides to a private item before constructing it. */
++        private_item = input_item_Copy(item);
++        if (private_item == NULL)
++            goto complete;
++        char *option;
++        if (asprintf(&option, "video-track-id=%s",
++                     req_owner->thumb_arg.video_track_id) < 0) {
++            input_item_Release(private_item);
++            goto complete;
++        }
++        int ret = input_item_AddOption(private_item, "video-track=-1",
++                                        VLC_INPUT_OPTION_TRUSTED);
++        if (ret == VLC_SUCCESS)
++            ret = input_item_AddOption(private_item, option,
++                                        VLC_INPUT_OPTION_TRUSTED);
++        free(option);
++        if (ret != VLC_SUCCESS) {
++            input_item_Release(private_item);
++            goto complete;
++        }
++        item = private_item;
++    }
++    input_thread_t* input = input_Create(preparser->owner, item, &cfg);
++    if (private_item != NULL)
++        input_item_Release(private_item);
+     if (!input)
+-        goto error;
++        goto complete;
+ 
+     assert(req_owner->thumb_arg.seek.speed == VLC_THUMBNAILER_SEEK_PRECISE
+         || req_owner->thumb_arg.seek.speed == VLC_THUMBNAILER_SEEK_FAST);
+@@ -561,10 +604,9 @@ ThumbnailerRun(void *userdata)
+     if (ret != VLC_SUCCESS)
+     {
+         input_Close(input);
+-        goto error;
++        goto complete;
+     }
+ 
+-    bool timeout = false;
+     if (deadline == VLC_TICK_INVALID)
+         vlc_sem_wait(&req_owner->preparse_ended);
+     else
+@@ -574,6 +616,8 @@ ThumbnailerRun(void *userdata)
+     input_Stop(input);
+     input_Close(input);
+ 
++complete:
++    /* Construction/start/selection failures still complete the published request. */
+     if (timeout)
+         req_owner->preparse_status = VLC_ETIMEOUT;
+     if (atomic_load(&req_owner->interrupted))
+@@ -638,7 +682,6 @@ ThumbnailerRun(void *userdata)
+         picture_Release(pic);
+     }
+ 
+-error:
+     if (req_owner != NULL)
+         vlc_preparser_req_Release(req);
+ }
+diff --git a/src/preparser/ipc.c b/src/preparser/ipc.c
+index 86c4246..a1d21d4 100644
+--- a/src/preparser/ipc.c
++++ b/src/preparser/ipc.c
+@@ -87,6 +87,7 @@ vlc_preparser_msg_Init(struct vlc_preparser_msg *msg, int msg_type,
+         msg->req.arg.seek.type = VLC_THUMBNAILER_SEEK_NONE;
+         msg->req.arg.seek.speed = VLC_THUMBNAILER_SEEK_PRECISE;
+         msg->req.arg.hw_dec = false;
++        msg->req.arg.video_track_id = NULL;
+         vlc_vector_init(&msg->req.outputs);
+         vlc_vector_init(&msg->req.outputs_path);
+         msg->req.uri = NULL;
+@@ -97,6 +98,7 @@ vlc_preparser_msg_Init(struct vlc_preparser_msg *msg, int msg_type,
+         msg->res.pic = NULL;
+         vlc_vector_init(&msg->res.result);
+         msg->res.status = -1;
++        msg->res.video_track_id = NULL;
+         msg->res.item = NULL;
+     }
+ }
+@@ -107,6 +109,8 @@ vlc_preparser_msg_Clean(struct vlc_preparser_msg *msg)
+     assert(msg != NULL);
+ 
+     if (msg->type == VLC_PREPARSER_MSG_TYPE_REQ) {
++        free((char *)msg->req.arg.video_track_id);
++        msg->req.arg.video_track_id = NULL;
+         vlc_vector_clear(&msg->req.outputs);
+         char *ptr = NULL;
+         vlc_vector_foreach(ptr, &msg->req.outputs_path) {
+@@ -118,6 +122,8 @@ vlc_preparser_msg_Clean(struct vlc_preparser_msg *msg)
+             msg->req.uri = NULL;
+         }
+     } else {
++        free(msg->res.video_track_id);
++        msg->res.video_track_id = NULL;
+         input_attachment_t *att = NULL;
+         vlc_vector_foreach(att, &msg->res.attachments) {
+             vlc_input_attachment_Release(att);
+diff --git a/test/src/preparser/thumbnail.c b/test/src/preparser/thumbnail.c
+index 2a5392d..ed04b28 100644
+--- a/test/src/preparser/thumbnail.c
++++ b/test/src/preparser/thumbnail.c
+@@ -25,6 +25,7 @@
+ #include <vlc_preparser.h>
+ #include <vlc_input_item.h>
+ #include <vlc_picture.h>
++#include <vlc_preparser_ipc.h>
+ 
+ #include <errno.h>
+ 
+@@ -152,7 +153,7 @@ static void test_thumbnails( libvlc_instance_t* p_vlc, bool external )
+         vlc_mutex_lock( &ctx.lock );
+ 
+         vlc_preparser_req *req;
+-        struct vlc_thumbnailer_arg thumb_arg;
++        struct vlc_thumbnailer_arg thumb_arg = {0};
+         if ( test_params[i].b_use_pos )
+         {
+             thumb_arg.seek.type = VLC_THUMBNAILER_SEEK_POS;
+@@ -239,6 +240,208 @@ static void test_cancel_thumbnail( libvlc_instance_t* p_vlc, bool external )
+     vlc_preparser_Delete( p_thumbnailer );
+ }
+ 
++
++/* Different mock dimensions identify ES selection without codec fixtures. */
++struct track_context {
++    vlc_sem_t sem;
++    int status;
++    unsigned width, height, callbacks;
++};
++
++static void track_on_ended(vlc_preparser_req *req, int status,
++                           picture_t *picture, void *opaque)
++{
++    (void) req;
++    struct track_context *ctx = opaque;
++    ++ctx->callbacks;
++    ctx->status = status;
++    ctx->width = picture ? picture->format.i_visible_width : 0;
++    ctx->height = picture ? picture->format.i_visible_height : 0;
++    vlc_sem_post(&ctx->sem);
++}
++
++static void test_video_track(libvlc_instance_t *vlc, bool external)
++{
++    const struct vlc_preparser_cfg cfg = {
++        .types = VLC_PREPARSER_TYPE_THUMBNAIL,
++        .max_thumbnailer_threads = 1,
++        .timeout = VLC_TICK_FROM_MS(250),
++        .external_process = external,
++    };
++    vlc_preparser_t *preparser = vlc_preparser_New(VLC_OBJECT(vlc->p_libvlc_int), &cfg);
++    assert(preparser != NULL);
++    input_item_t *item = input_item_New(
++        "mock://video_track_count=2;video_width=32;video_height=24;"
++        "video_chroma=ARGB;length=1000000;config=video[1]{width=80,height=48}",
++        "two mock videos");
++    assert(item != NULL);
++    /* Explicit requests must override existing selection on a private copy. */
++    assert(input_item_AddOption(item, "video-track=0", VLC_INPUT_OPTION_TRUSTED) == VLC_SUCCESS);
++    assert(input_item_AddOption(item, "video-track-id=video/0", VLC_INPUT_OPTION_TRUSTED) == VLC_SUCCESS);
++    static const char *ids[] = { NULL, "video/0", "video/1", "video/999", "", "video/0,video/1" };
++    static const unsigned widths[] = { 32, 32, 80, 0, 0, 0 };
++    static const unsigned heights[] = { 24, 24, 48, 0, 0, 0 };
++    static const struct vlc_thumbnailer_cbs cbs = { .on_ended = track_on_ended };
++    for (size_t i = 0; i < ARRAY_SIZE(ids); ++i) {
++        struct track_context ctx = {0};
++        vlc_sem_init(&ctx.sem, 0);
++        char *id = ids[i] ? strdup(ids[i]) : NULL;
++        assert(ids[i] == NULL || id != NULL);
++        struct vlc_thumbnailer_arg arg = { .video_track_id = id };
++        vlc_preparser_req *req = vlc_preparser_req_NewThumbnail(preparser, item, &arg, &cbs, &ctx);
++        /* Construction must own the ID before Submit, including external requests. */
++        if (id) memset(id, 'x', strlen(id));
++        free(id);
++        if (i >= 4) {
++            assert(req == NULL);
++            continue;
++        }
++        assert(req != NULL);
++        assert(vlc_preparser_Submit(preparser, req) == VLC_SUCCESS);
++        assert(vlc_sem_timedwait(&ctx.sem, vlc_tick_now() + VLC_TICK_FROM_SEC(3)) == 0);
++        assert(ctx.callbacks == 1);
++        assert(ctx.width == widths[i] && ctx.height == heights[i]);
++        assert((ctx.status == VLC_SUCCESS) == (widths[i] != 0));
++        vlc_preparser_req_Release(req);
++    }
++    /* Owned strings also need cleanup when a request is never submitted. */
++    struct vlc_thumbnailer_arg arg = { .video_track_id = "video/1" };
++    struct track_context ctx = {0};
++    vlc_preparser_req *req = vlc_preparser_req_NewThumbnail(preparser, item, &arg, &cbs, &ctx);
++    assert(req != NULL);
++    vlc_preparser_req_Release(req);
++    assert(item->i_options == 2);
++    assert(strcmp(item->ppsz_options[0], "video-track=0") == 0);
++    assert(strcmp(item->ppsz_options[1], "video-track-id=video/0") == 0);
++    input_item_Release(item);
++    vlc_preparser_Delete(preparser);
++}
++
++struct track_wire {
++    char *data;
++    size_t size, offset;
++};
++
++static ssize_t track_wire_write(const void *data, size_t size, void *opaque)
++{
++    struct track_wire *wire = opaque;
++    char *next = realloc(wire->data, wire->size + size + 1);
++    assert(next != NULL);
++    wire->data = next;
++    memcpy(next + wire->size, data, size);
++    wire->size += size;
++    wire->data[wire->size] = '\0';
++    return size;
++}
++
++static ssize_t track_wire_read(void *data, size_t size, void *opaque)
++{
++    struct track_wire *wire = opaque;
++    size = size < wire->size - wire->offset ? size : wire->size - wire->offset;
++    memcpy(data, wire->data + wire->offset, size);
++    wire->offset += size;
++    return size;
++}
++
++static int track_roundtrip(vlc_object_t *obj, struct vlc_preparser_msg *src,
++                           struct vlc_preparser_msg *dst, unsigned wire_mode)
++{
++    static const struct vlc_preparser_msg_serdes_cbs cbs = {
++        .write = track_wire_write, .read = track_wire_read,
++    };
++    struct vlc_preparser_msg_serdes *serdes = vlc_preparser_msg_serdes_Create(obj, &cbs, false);
++    assert(serdes != NULL);
++    struct track_wire wire = {0};
++    assert(vlc_preparser_msg_serdes_Serialize(serdes, src, &wire) == VLC_SUCCESS);
++    if (wire_mode == 1) {
++        /* Exercise a real old response, not merely an explicit JSON null. */
++        char *key = strstr(wire.data, "\"video_track_id\"");
++        assert(key != NULL);
++        char *end = strchr(key, ',');
++        char *start = key;
++        while (start > wire.data && start[-1] != ',') --start;
++        assert(start > wire.data && end != NULL);
++        --start;
++        size_t removed = end - start;
++        memmove(start, end, wire.size - (end - wire.data) + 1);
++        wire.size -= removed;
++    }
++    if (wire_mode == 2) {
++        /* Fail after decoding the owned acknowledgment, exercising cleanup. */
++        char *key = strstr(wire.data, "\"item\"");
++        assert(key != NULL);
++        char *value = strchr(key, ':') + 1;
++        while (*value == ' ') ++value;
++        assert(strncmp(value, "null", 4) == 0);
++        memcpy(value, "true", 4);
++    }
++    int ret = vlc_preparser_msg_serdes_Deserialize(serdes, dst, &wire);
++    vlc_preparser_msg_serdes_Delete(serdes);
++    free(wire.data);
++    return ret;
++}
++
++static void test_video_track_transport(libvlc_instance_t *vlc)
++{
++    vlc_object_t *obj = VLC_OBJECT(vlc->p_libvlc_int);
++    for (int type = VLC_PREPARSER_MSG_REQ_TYPE_THUMBNAIL;
++         type <= VLC_PREPARSER_MSG_REQ_TYPE_THUMBNAIL_TO_FILES; ++type) {
++        struct vlc_preparser_msg req, copy, res, reply;
++        vlc_preparser_msg_Init(&req, VLC_PREPARSER_MSG_TYPE_REQ, type);
++        req.req.uri = strdup("mock://video_track_count=2");
++        assert(req.req.uri != NULL);
++        req.req.arg.seek.type = VLC_THUMBNAILER_SEEK_TIME;
++        req.req.arg.seek.time = VLC_TICK_0;
++        req.req.arg.video_track_id = strdup("video/1");
++        assert(req.req.arg.video_track_id != NULL);
++        assert(track_roundtrip(obj, &req, &copy, false) == VLC_SUCCESS);
++        assert(copy.req.arg.video_track_id != req.req.arg.video_track_id);
++        assert(strcmp(copy.req.arg.video_track_id, "video/1") == 0);
++        /* A deserialized request in the response direction must fail safely. */
++        assert(!vlc_preparser_msg_CheckVideoTrackId(&req, &copy));
++        vlc_preparser_msg_Clean(&copy);
++
++        vlc_preparser_msg_Init(&res, VLC_PREPARSER_MSG_TYPE_RES, type);
++        res.res.status = VLC_EGENERIC;
++        assert(track_roundtrip(obj, &res, &reply, true) == VLC_SUCCESS);
++        assert(reply.res.video_track_id == NULL);
++        assert(!vlc_preparser_msg_CheckVideoTrackId(&req, &reply));
++        vlc_preparser_msg_Clean(&reply);
++        res.res.video_track_id = strdup("video/0");
++        assert(res.res.video_track_id != NULL);
++        assert(track_roundtrip(obj, &res, &reply, false) == VLC_SUCCESS);
++        assert(!vlc_preparser_msg_CheckVideoTrackId(&req, &reply));
++        vlc_preparser_msg_Clean(&reply);
++        free(res.res.video_track_id);
++        res.res.video_track_id = strdup("video/1");
++        assert(res.res.video_track_id != NULL);
++        assert(track_roundtrip(obj, &res, &reply, false) == VLC_SUCCESS);
++        assert(vlc_preparser_msg_CheckVideoTrackId(&req, &reply));
++        vlc_preparser_msg_Clean(&reply);
++        assert(track_roundtrip(obj, &res, &reply, 2) != VLC_SUCCESS);
++        assert(reply.res.video_track_id == NULL && reply.res.item == NULL);
++        vlc_preparser_msg_Clean(&reply);
++        vlc_preparser_msg_Clean(&res);
++
++        free((char *)req.req.arg.video_track_id);
++        req.req.arg.video_track_id = NULL;
++        assert(track_roundtrip(obj, &req, &copy, true) == VLC_SUCCESS);
++        assert(copy.req.arg.video_track_id == NULL);
++        vlc_preparser_msg_Clean(&copy);
++        /* Invalid IDs allocate during decode, then must be cleaned on failure. */
++        static const char *invalid[] = { "", "video/0,video/1" };
++        for (size_t i = 0; i < ARRAY_SIZE(invalid); ++i) {
++            req.req.arg.video_track_id = strdup(invalid[i]);
++            assert(req.req.arg.video_track_id != NULL);
++            assert(track_roundtrip(obj, &req, &copy, false) != VLC_SUCCESS);
++            assert(copy.req.arg.video_track_id == NULL);
++            free((char *)req.req.arg.video_track_id);
++            req.req.arg.video_track_id = NULL;
++        }
++        vlc_preparser_msg_Clean(&req);
++    }
++}
++
+ int main( void )
+ {
+     test_init();
+@@ -253,11 +456,14 @@ int main( void )
+     fprintf(stderr, "Run with internal preparser...\n");
+     test_thumbnails( vlc, false );
+     test_cancel_thumbnail( vlc, false );
++    test_video_track(vlc, false);
++    test_video_track_transport(vlc);
+ 
+-#if !defined(HAVE_VLC_PROCESS_SPAWN)
++#if defined(HAVE_VLC_EXTERNAL_PREPARSER)
+     fprintf(stderr, "Run with external preparser...\n");
+     test_thumbnails( vlc, true );
+     test_cancel_thumbnail( vlc, true );
++    test_video_track(vlc, true);
+ #endif
+ 
+ 
+diff --git a/test/src/preparser/thumbnail_to_files.c b/test/src/preparser/thumbnail_to_files.c
+index 524ba57..7a36780 100644
+--- a/test/src/preparser/thumbnail_to_files.c
++++ b/test/src/preparser/thumbnail_to_files.c
+@@ -493,6 +493,86 @@ static int run_alpha_crop_test(libvlc_instance_t *vlc, bool test_align)
+     return 0;
+ }
+ 
++
++struct track_file_context {
++    vlc_sem_t sem;
++    int status;
++    bool success;
++};
++
++static void track_file_on_ended(vlc_preparser_req *req, int status,
++                                const bool *results, size_t count, void *opaque)
++{
++    (void) req;
++    struct track_file_context *ctx = opaque;
++    ctx->status = status;
++    ctx->success = count == 1 && results != NULL && results[0];
++    vlc_sem_post(&ctx->sem);
++}
++
++static void test_file_video_track(libvlc_instance_t *vlc, bool external)
++{
++    if (vlc_preparser_CheckThumbnailerFormat(VLC_THUMBNAILER_FORMAT_RGBA) != VLC_SUCCESS) {
++        fprintf(stderr, "skip: video-track file test needs RGBA encoder\n");
++        return;
++    }
++    const struct vlc_preparser_cfg cfg = {
++        .types = VLC_PREPARSER_TYPE_THUMBNAIL_TO_FILES,
++        .max_thumbnailer_threads = 1,
++        .timeout = VLC_TICK_FROM_MS(250),
++        .external_process = external,
++    };
++    vlc_preparser_t *preparser = vlc_preparser_New(VLC_OBJECT(vlc->p_libvlc_int), &cfg);
++    assert(preparser != NULL);
++    input_item_t *item = input_item_New(
++        "mock://video_track_count=2;video_width=32;video_height=24;"
++        "video_chroma=RGBA;length=1000000;config=video[1]{width=80,height=48}",
++        "two mock videos");
++    assert(item != NULL);
++    /* Explicit requests must override existing selection on a private copy. */
++    assert(input_item_AddOption(item, "video-track=0", VLC_INPUT_OPTION_TRUSTED) == VLC_SUCCESS);
++    assert(input_item_AddOption(item, "video-track-id=video/0", VLC_INPUT_OPTION_TRUSTED) == VLC_SUCCESS);
++    static const char *ids[] = { NULL, "video/0", "video/1", "video/999", "", "video/0,video/1" };
++    static const size_t sizes[] = { 32 * 24 * 4, 32 * 24 * 4, 80 * 48 * 4, 0, 0, 0 };
++    static const struct vlc_thumbnailer_to_files_cbs cbs = { .on_ended = track_file_on_ended };
++    for (size_t i = 0; i < ARRAY_SIZE(ids); ++i) {
++        char path[] = "/tmp/libvlc_track_XXXXXX";
++        int fd = vlc_mkstemp(path);
++        assert(fd >= 0);
++        struct vlc_thumbnailer_output out = {
++            .format = VLC_THUMBNAILER_FORMAT_RGBA,
++            .file_path = path, .creat_mode = 0600,
++        };
++        struct track_file_context ctx = {0};
++        vlc_sem_init(&ctx.sem, 0);
++        char *id = ids[i] ? strdup(ids[i]) : NULL;
++        assert(ids[i] == NULL || id != NULL);
++        struct vlc_thumbnailer_arg arg = { .video_track_id = id };
++        vlc_preparser_req *req = vlc_preparser_req_NewThumbnailToFiles(
++            preparser, item, &arg, &out, 1, &cbs, &ctx);
++        if (id) memset(id, 'x', strlen(id));
++        free(id);
++        if (i >= 4) {
++            assert(req == NULL);
++        } else {
++            assert(req != NULL);
++            assert(vlc_preparser_Submit(preparser, req) == VLC_SUCCESS);
++            assert(vlc_sem_timedwait(&ctx.sem, vlc_tick_now() + VLC_TICK_FROM_SEC(3)) == 0);
++            assert(ctx.success == (sizes[i] != 0));
++            assert((ctx.status == VLC_SUCCESS) == ctx.success);
++            vlc_preparser_req_Release(req);
++        }
++        assert(lseek(fd, 0, SEEK_END) == (off_t)sizes[i]);
++        close(fd);
++        assert(unlink(path) == 0);
++    }
++    assert(item->i_options == 2);
++    assert(strcmp(item->ppsz_options[0], "video-track=0") == 0);
++    assert(strcmp(item->ppsz_options[1], "video-track-id=video/0") == 0);
++    input_item_Release(item);
++    vlc_preparser_Delete(preparser);
++}
++
+ int main(int argc, const char *argv[])
+ {
+     test_init();
+@@ -512,6 +592,7 @@ int main(int argc, const char *argv[])
+     }
+ 
+     fprintf(stderr, "Run with internal preparser...\n");
++    test_file_video_track(vlc, false);
+     ret = run_test(vlc, false);
+     if (ret != 0) {
+         goto end;
+@@ -526,8 +607,9 @@ int main(int argc, const char *argv[])
+     if (ret != 0) {
+         goto end;
+     }
+-#if !defined(HAVE_VLC_PROCESS_SPAWN)
++#if defined(HAVE_VLC_EXTERNAL_PREPARSER)
+     fprintf(stderr, "Run with external preparser...\n");
++    test_file_video_track(vlc, true);
+     ret = run_test(vlc, true);
+     if (ret != 0) {
+         goto end;

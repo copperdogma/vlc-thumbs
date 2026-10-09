@@ -1,0 +1,32 @@
+{
+  "source_tree": "8ec1cdec6939c67eeb6bef0ff1bb035c168d0592",
+  "status": "full registered gate failed; focused setup and duration tests passed",
+  "focused_real_controller": {
+    "receipt": "candidate-build-20261006T061726Z.json",
+    "tests": 1,
+    "failures": 0
+  },
+  "focused_hover": {
+    "receipt": "candidate-build-20261006T061755Z.json",
+    "tests": 12,
+    "failures": 0
+  },
+  "full_registered": {
+    "receipt": "candidate-build-20261006T062106Z.json",
+    "main_tests": 269,
+    "main_skipped": 1,
+    "main_failures": 2,
+    "isolated_context_tests": 7,
+    "isolated_context_failures": 0,
+    "isolated_hover_tests": 12,
+    "isolated_hover_failures": 0,
+    "failures": [
+      "VLCThumbnailServiceTest/testServiceContracts: finite proactive coverage; completed6 active1 workerrequests7, concurrent independentbuild+fixturegeneration",
+      "VLCTimelinePlayerContextTest: missing macOS descriptor after earlier integration support overwrites VLC_PLUGIN_PATH=modules/.libs"
+    ]
+  },
+  "app_build_receipt": "candidate-build-20261006T061836Z.json",
+  "original_app_manifest": "feature-duration-fixed-original-app-manifest.json",
+  "relocation_isolation": "feature-duration-fixed-app-relocation-isolation.json",
+  "scope": "No test failures erased; source/duration changes incorporated, whole-suite qualification pending bounded diagnosis."
+}

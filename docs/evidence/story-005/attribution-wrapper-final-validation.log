@@ -1,0 +1,64 @@
+{
+  "status": "passed",
+  "checks": [
+    "59 frozen source hashes/sizes",
+    "9 artifact hashes/sizes",
+    "series order",
+    "relative wrapper links",
+    "complete artifact private/binary marker scan",
+    "Git identity and approval precision",
+    "native demonstration placeholder unchanged",
+    "20MiB storage cap",
+    "0000/0001/0003 lineage unchanged"
+  ],
+  "source_tree": "48a6b53f29d7f99ea410ba0e9d7085f7d9673acb",
+  "manifest_sha256": "2df8ed200a159e55672d08ca2baeb485c8a3b99d19e00fe9463cb1b0c2a4ece7",
+  "artifact_bytes": 556609,
+  "artifact_files": [
+    {
+      "file": "0000-source-header-distribution.patch",
+      "bytes": 4732,
+      "sha256": "70da9e24f27de04128c59b1484379d1d9813f7e1af04d3792e971a07a24cd57e"
+    },
+    {
+      "file": "0001-contrib-matroska-identity-and-admission.patch",
+      "bytes": 13511,
+      "sha256": "27772936e6068efe11bd44dd6265cd1fb61114dfd8aa7cd9ba693c609e54abf1"
+    },
+    {
+      "file": "0002-timeline-helper-build-package-and-tests.patch",
+      "bytes": 186997,
+      "sha256": "e75a22d8720e940016617cffc338390652899945770e78ed1d177c5fe2587b63"
+    },
+    {
+      "file": "0003-macosx-timeline-context-service-and-hover.patch",
+      "bytes": 304953,
+      "sha256": "ef9ad2f01482a06798495284c138b448637f91c417f467b2bd7a1c3fec2d7151"
+    },
+    {
+      "file": "README.md",
+      "bytes": 9192,
+      "sha256": "d3ca70df8840df3b03a2ac459572f8301027eb57ec4985a8069a502139f0b387"
+    },
+    {
+      "file": "contribution-description-draft.md",
+      "bytes": 5039,
+      "sha256": "2d6de12cad81feec82d89a3e080ff1377bb7ebc58034e57075221ecbd3ecddce"
+    },
+    {
+      "file": "manifest.json",
+      "bytes": 28698,
+      "sha256": "2df8ed200a159e55672d08ca2baeb485c8a3b99d19e00fe9463cb1b0c2a4ece7"
+    },
+    {
+      "file": "proposed-commit-messages.md",
+      "bytes": 3294,
+      "sha256": "7758e8763cfb587644d27cd7704d0a30e80d2ac304fc60030e5ad2d7b1b6a5d3"
+    },
+    {
+      "file": "series",
+      "bytes": 193,
+      "sha256": "db71116d7a68e3319f7fe0a220a17327c3bbb116c98253d29bdc28d688930d4f"
+    }
+  ]
+}

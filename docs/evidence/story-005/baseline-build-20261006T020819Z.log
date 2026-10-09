@@ -1,0 +1,970 @@
+[\033[1;32mbuild\033[0m] Building VLC for macOS, architecture aarch64 (aka: arm64) on a aarch64 device
+Setting base environment
+Using VLC root dir /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005, build triplet aarch64-apple-darwin19 and host triplet aarch64-apple-darwin19
+[\033[1;32mbuild\033[0m] Checking for python3 ...
+Python 3.14.3
+[\033[1;32mbuild\033[0m] Building in "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs"
+[\033[1;32mbuild\033[0m] Building building tools
+To-be-built packages: configguess
+You are ready to build VLC and its contribs
+~/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline ~/Documents/Projects/ultima-iv-web/vlc-thumbs
+Setting contrib environment with minimum macOS version 10.13 and SDK 27.0 at /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk using Xcode 27.0
+Build version 27A266a
+[\033[1;32mbuild\033[0m] Building contribs
+Packages licensing...    GPL version 3
+Creating makefile...
+Bootstrap completed.
+Run "make" to start compilation.
+
+Other targets:
+ * make install      same as "make"
+ * make prebuilt     fetch and install prebuilt binaries
+ * make tools        build native tools binaries
+ * make list         list packages
+ * make fetch        fetch required source tarballs
+ * make fetch-all    fetch all source tarballs
+ * make distclean    clean everything and undo bootstrap
+ * make mostlyclean  clean everything except source tarballs
+ * make clean        clean everything
+ * make package      prepare prebuilt packages
+ * make help         show this text
+All packages:
+  alloweduwp alsa amf aom aribb24 aribb25 asdcplib ass basu bluray
+  bpg breakpad caca cargo-c chromaprint d3d12 daala dav1d dcomp
+  decklink dvbcsa dvbpsi dvdcss dvdnav dvdread dxva dxva_x86 dxvahd
+  ebml faad2 ffi ffmpeg flac fluid fluidlite fontconfig freetype2
+  fribidi fxc2 gcrypt gettext ggml glad glew glib glslang gme gmp
+  gnutls goom gpg-error gsm harfbuzz iconv jack jinja jpeg kate
+  lame libarchive libaribcaption libdsm libebur128 libnoidea
+  libplacebo librist libtasn1 libxml2 live555 lua luac mad markupsafe
+  matroska medialibrary meson-machinefile mft10 microdns mingw11-fixes
+  mingw12-fixes mingw64 modplug mpg123 mysofa ncurses nettle nfs
+  nvcodec ogg openapv opencv4 openjpeg opus png postproc projectM
+  protobuf protoc pthread-stubs qt qt-tools qtdeclarative
+  qtdeclarative-tools qtshadertools qtshadertools-tools qtsvg
+  qtwayland rav1e rnnoise salsa sam3 samplerate shout sidplay2 smb2
+  soxr sparkle spatialaudio speex speexdsp sqlite srt ssh2 taglib
+  theora tiger tremor twolame uiautomationcore upnp utfcpp vncclient
+  vorbis vpl vpx vulkan-headers vulkan-loader winpthreads winrt_headers
+  wix wixlzx x262 x264 x26410b x265 xau xcb xcb-proto xorg-macros
+  xproto zlib zvbi
+All native tools:
+  luac protoc
+Distribution-provided packages:
+   qt-tools qtdeclarative-tools
+Automatically selected packages:
+  aom aribb24 asdcplib ass bluray breakpad chromaprint dav1d decklink
+  dvbcsa dvbpsi dvdnav dvdread faad2 ffmpeg flac fluidlite freetype2
+  fribidi gcrypt gettext glslang gme goom gpg-error harfbuzz iconv
+  jpeg kate libarchive libaribcaption libebur128 libnoidea libplacebo
+  librist libxml2 live555 lua luac mad matroska medialibrary
+  meson-machinefile modplug mpg123 ncurses nfs ogg openapv opencv4
+  opus png postproc protobuf protoc rnnoise samplerate shout sidplay2
+  smb2 soxr sparkle spatialaudio speex speexdsp srt ssh2 taglib
+  theora twolame upnp vncclient vorbis vorbis vpx vulkan-headers
+  x264 x265 zlib zvbi
+Manually deselected packages:
+Manually selected packages:
+Depended-on packages:
+  dvdcss ebml glad gmp gnutls gsm jinja lame markupsafe mysofa
+  nettle openjpeg sqlite utfcpp
+To-be-built packages:
+  aom aribb24 asdcplib ass bluray breakpad chromaprint dav1d decklink
+  dvbcsa dvbpsi dvdcss dvdnav dvdread ebml faad2 ffmpeg flac fluidlite
+  freetype2 fribidi gcrypt gettext glad glslang gme gmp gnutls goom
+  gpg-error gsm harfbuzz iconv jinja jpeg kate lame libarchive
+  libaribcaption libebur128 libnoidea libplacebo librist libxml2
+  live555 lua luac mad markupsafe matroska medialibrary meson-machinefile
+  modplug mpg123 mysofa ncurses nettle nfs ogg openapv opencv4
+  openjpeg opus png postproc protobuf protoc rnnoise samplerate
+  shout sidplay2 smb2 soxr sparkle spatialaudio speex speexdsp
+  sqlite srt ssh2 taglib theora twolame upnp utfcpp vncclient vorbis
+  vpx vulkan-headers x264 x265 zlib zvbi
+curl -f -L --retry 3 --output "vlc-contrib-aarch64-apple-darwin19-latest.tar.zst" -- "https://artifacts.videolan.org/vlc/macos-arm64/vlc-contrib-aarch64-apple-darwin19-15b71e3fa6d49ed2845dfb1324760984eae6101c.tar.zst"
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0  206M    0  367k    0     0   315k      0  0:11:09  0:00:01  0:11:08  315k  2  206M    2 4255k    0     0  1978k      0  0:01:46  0:00:02  0:01:44 1978k  3  206M    3 7583k    0     0  2397k      0  0:01:28  0:00:03  0:01:25 2396k  4  206M    4 10.1M    0     0  2499k      0  0:01:24  0:00:04  0:01:20 2499k  6  206M    6 12.8M    0     0  2449k      0  0:01:26  0:00:05  0:01:21 2593k  7  206M    7 14.7M    0     0  2453k      0  0:01:26  0:00:06  0:01:20 2952k  8  206M    8 16.7M    0     0  2380k      0  0:01:28  0:00:07  0:01:21 2551k  9  206M    9 18.6M    0     0  2334k      0  0:01:30  0:00:08  0:01:22 2294k  9  206M    9 20.3M    0     0  2257k      0  0:01:33  0:00:09  0:01:24 2058k 10  206M   10 22.1M    0     0  2218k      0  0:01:35  0:00:10  0:01:25 1962k 11  206M   11 24.0M    0     0  2202k      0  0:01:35  0:00:11  0:01:24 1893k 12  206M   12 25.8M    0     0  2179k      0  0:01:36  0:00:12  0:01:24 1885k 13  206M   13 27.7M    0     0  2157k      0  0:01:37  0:00:13  0:01:24 1866k 14  206M   14 29.6M    0     0  2139k      0  0:01:38  0:00:14  0:01:24 1921k 15  206M   15 31.2M    0     0  2083k      0  0:01:41  0:00:15  0:01:26 1813k 15  206M   15 32.2M    0     0  2014k      0  0:01:44  0:00:16  0:01:28 1608k 15  206M   15 32.7M    0     0  1949k      0  0:01:48  0:00:17  0:01:31 1395k 16  206M   16 33.3M    0     0  1874k      0  0:01:52  0:00:18  0:01:34 1138k 16  206M   16 34.0M    0     0  1811k      0  0:01:56  0:00:19  0:01:37  893k 16  206M   16 34.7M    0     0  1754k      0  0:02:00  0:00:20  0:01:40  725k 17  206M   17 35.4M    0     0  1704k      0  0:02:03  0:00:21  0:01:42  669k 17  206M   17 36.1M    0     0  1660k      0  0:02:07  0:00:22  0:01:45  683k 17  206M   17 36.8M    0     0  1628k      0  0:02:09  0:00:23  0:01:46  722k 18  206M   18 37.5M    0     0  1592k      0  0:02:12  0:00:24  0:01:48  736k 18  206M   18 38.4M    0     0  1563k      0  0:02:15  0:00:25  0:01:50  774k 19  206M   19 39.5M    0     0  1548k      0  0:02:16  0:00:26  0:01:50  871k 19  206M   19 40.9M    0     0  1540k      0  0:02:17  0:00:27  0:01:50  996k 20  206M   20 42.7M    0     0  1554k      0  0:02:15  0:00:28  0:01:47 1212k 21  206M   21 45.2M    0     0  1588k      0  0:02:12  0:00:29  0:01:43 1566k 23  206M   23 48.2M    0     0  1640k      0  0:02:08  0:00:30  0:01:38 2025k 25  206M   25 52.5M    0     0  1726k      0  0:02:02  0:00:31  0:01:31 2655k 27  206M   27 56.1M    0     0  1788k      0  0:01:58  0:00:32  0:01:26 3147k 29  206M   29 59.8M    0     0  1849k      0  0:01:54  0:00:33  0:01:21 3505k 30  206M   30 62.0M    0     0  1859k      0  0:01:53  0:00:34  0:01:19 3439k 30  206M   30 63.7M    0     0  1855k      0  0:01:53  0:00:35  0:01:18 3150k 31  206M   31 65.5M    0     0  1853k      0  0:01:53  0:00:36  0:01:17 2641k 32  206M   32 67.1M    0     0  1851k      0  0:01:54  0:00:37  0:01:17 2261k 33  206M   33 68.5M    0     0  1828k      0  0:01:55  0:00:38  0:01:17 1699k 33  206M   33 69.4M    0     0  1814k      0  0:01:56  0:00:39  0:01:17 1506k 34  206M   34 70.2M    0     0  1791k      0  0:01:57  0:00:40  0:01:17 1337k 34  206M   34 71.0M    0     0  1769k      0  0:01:59  0:00:41  0:01:18 1151k 34  206M   34 71.9M    0     0  1749k      0  0:02:00  0:00:42  0:01:18  985k 35  206M   35 72.9M    0     0  1730k      0  0:02:02  0:00:43  0:01:19  945k 35  206M   35 73.8M    0     0  1711k      0  0:02:03  0:00:44  0:01:19  898k 36  206M   36 74.7M    0     0  1695k      0  0:02:04  0:00:45  0:01:19  928k 36  206M   36 75.7M    0     0  1679k      0  0:02:05  0:00:46  0:01:19  949k 37  206M   37 76.8M    0     0  1667k      0  0:02:06  0:00:47  0:01:19  984k 37  206M   37 78.0M    0     0  1658k      0  0:02:07  0:00:48  0:01:19 1038k 38  206M   38 79.4M    0     0  1655k      0  0:02:07  0:00:49  0:01:18 1160k 39  206M   39 81.4M    0     0  1661k      0  0:02:07  0:00:50  0:01:17 1354k 40  206M   40 83.3M    0     0  1667k      0  0:02:06  0:00:51  0:01:15 1555k 41  206M   41 85.1M    0     0  1672k      0  0:02:06  0:00:52  0:01:14 1716k 42  206M   42 87.2M    0     0  1679k      0  0:02:05  0:00:53  0:01:12 1886k 43  206M   43 88.8M    0     0  1680k      0  0:02:05  0:00:54  0:01:11 1923k 43  206M   43 90.5M    0     0  1680k      0  0:02:05  0:00:55  0:01:10 1873k 44  206M   44 92.4M    0     0  1684k      0  0:02:05  0:00:56  0:01:09 1848k 45  206M   45 94.3M    0     0  1688k      0  0:02:05  0:00:57  0:01:08 1859k 46  206M   46 96.1M    0     0  1692k      0  0:02:04  0:00:58  0:01:06 1829k 47  206M   47 97.9M    0     0  1695k      0  0:02:04  0:00:59  0:01:05 1861k 48  206M   48 99.8M    0     0  1698k      0  0:02:04  0:01:00  0:01:04 1901k 49  206M   49  101M    0     0  1705k      0  0:02:03  0:01:01  0:01:02 1943k 50  206M   50  103M    0     0  1711k      0  0:02:03  0:01:02  0:01:01 1968k 51  206M   51  106M    0     0  1723k      0  0:02:02  0:01:03  0:00:59 2078k 52  206M   52  108M    0     0  1729k      0  0:02:02  0:01:04  0:00:58 2135k 53  206M   53  111M    0     0  1746k      0  0:02:00  0:01:05  0:00:55 2318k 55  206M   55  113M    0     0  1757k      0  0:02:00  0:01:06  0:00:54 2403k 56  206M   56  116M    0     0  1772k      0  0:01:59  0:01:07  0:00:52 2536k 57  206M   57  119M    0     0  1790k      0  0:01:57  0:01:08  0:00:49 2637k 58  206M   58  121M    0     0  1801k      0  0:01:57  0:01:09  0:00:48 2716k 60  206M   60  123M    0     0  1806k      0  0:01:56  0:01:10  0:00:46 2593k 61  206M   61  126M    0     0  1815k      0  0:01:56  0:01:11  0:00:45 2576k 61  206M   61  127M    0     0  1809k      0  0:01:56  0:01:12  0:00:44 2311k 62  206M   62  129M    0     0  1808k      0  0:01:56  0:01:13  0:00:43 2061k 63  206M   63  130M    0     0  1797k      0  0:01:57  0:01:14  0:00:43 1741k 63  206M   63  131M    0     0  1788k      0  0:01:58  0:01:15  0:00:43 1526k 64  206M   64  132M    0     0  1779k      0  0:01:58  0:01:16  0:00:42 1269k 64  206M   64  133M    0     0  1772k      0  0:01:59  0:01:17  0:00:42 1235k 65  206M   65  134M    0     0  1765k      0  0:01:59  0:01:18  0:00:41 1128k 65  206M   65  135M    0     0  1758k      0  0:02:00  0:01:19  0:00:41 1183k 66  206M   66  137M    0     0  1751k      0  0:02:00  0:01:20  0:00:40 1203k 67  206M   67  138M    0     0  1746k      0  0:02:00  0:01:21  0:00:39 1236k 67  206M   67  139M    0     0  1742k      0  0:02:01  0:01:22  0:00:39 1281k 68  206M   68  141M    0     0  1740k      0  0:02:01  0:01:23  0:00:38 1358k 69  206M   69  143M    0     0  1745k      0  0:02:01  0:01:24  0:00:37 1537k 70  206M   70  145M    0     0  1754k      0  0:02:00  0:01:25  0:00:35 1814k 72  206M   72  149M    0     0  1771k      0  0:01:59  0:01:26  0:00:33 2186k 73  206M   73  152M    0     0  1789k      0  0:01:58  0:01:27  0:00:31 2536k 75  206M   75  155M    0     0  1810k      0  0:01:56  0:01:28  0:00:28 2960k 77  206M   77  159M    0     0  1829k      0  0:01:55  0:01:29  0:00:26 3259k 79  206M   79  163M    0     0  1855k      0  0:01:53  0:01:30  0:00:23 3563k 80  206M   80  166M    0     0  1867k      0  0:01:53  0:01:31  0:00:22 3526k 81  206M   81  167M    0     0  1862k      0  0:01:53  0:01:32  0:00:21 3121k 81  206M   81  168M    0     0  1857k      0  0:01:53  0:01:33  0:00:20 2691k 82  206M   82  170M    0     0  1850k      0  0:01:54  0:01:34  0:00:20 2222k 83  206M   83  171M    0     0  1845k      0  0:01:54  0:01:35  0:00:19 1662k 83  206M   83  172M    0     0  1836k      0  0:01:55  0:01:36  0:00:19 1264k 84  206M   84  173M    0     0  1828k      0  0:01:55  0:01:37  0:00:18 1199k 84  206M   84  174M    0     0  1822k      0  0:01:55  0:01:38  0:00:17 1177k 85  206M   85  176M    0     0  1818k      0  0:01:56  0:01:39  0:00:17 1206k 86  206M   86  177M    0     0  1813k      0  0:01:56  0:01:40  0:00:16 1215k 86  206M   86  178M    0     0  1810k      0  0:01:56  0:01:41  0:00:15 1303k 87  206M   87  180M    0     0  1806k      0  0:01:56  0:01:42  0:00:14 1362k 88  206M   88  181M    0     0  1802k      0  0:01:57  0:01:43  0:00:14 1408k 88  206M   88  183M    0     0  1799k      0  0:01:57  0:01:44  0:00:13 1429k 89  206M   89  184M    0     0  1797k      0  0:01:57  0:01:45  0:00:12 1456k 90  206M   90  186M    0     0  1796k      0  0:01:57  0:01:46  0:00:11 1517k 91  206M   91  188M    0     0  1798k      0  0:01:57  0:01:47  0:00:10 1633k 92  206M   92  190M    0     0  1801k      0  0:01:57  0:01:48  0:00:09 1779k 93  206M   93  191M    0     0  1801k      0  0:01:57  0:01:49  0:00:08 1832k 93  206M   93  193M    0     0  1797k      0  0:01:57  0:01:50  0:00:07 1813k 94  206M   94  195M    0     0  1797k      0  0:01:57  0:01:51  0:00:06 1813k 95  206M   95  196M    0     0  1796k      0  0:01:57  0:01:52  0:00:05 1757k 96  206M   96  198M    0     0  1796k      0  0:01:57  0:01:53  0:00:04 1679k 97  206M   97  200M    0     0  1795k      0  0:01:57  0:01:54  0:00:03 1671k 97  206M   97  201M    0     0  1794k      0  0:01:57  0:01:55  0:00:02 1714k 98  206M   98  203M    0     0  1793k      0  0:01:57  0:01:56  0:00:01 1724k 99  206M   99  205M    0     0  1795k      0  0:01:57  0:01:57 --:--:-- 1760k100  206M  100  206M    0     0  1795k      0  0:01:57  0:01:57 --:--:-- 1784k
+rm -f -r /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/aarch64-apple-darwin19
+rm -f -R prebuilt vlc-contrib-aarch64-apple-darwin19-latest  && tar xfo vlc-contrib-aarch64-apple-darwin19-latest.tar.zst 
+mv aarch64-apple-darwin19 /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/aarch64-apple-darwin19
+cd /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/aarch64-apple-darwin19 && /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/contrib/src/change_prefix.sh
+Fixing up bin/srt-ffplay
+Fixing up bin/libpng16-config
+Fixing up bin/gpgrt-config
+Fixing up bin/xml2-config
+Fixing up bin/setup_vars_opencv4.sh
+Fixing up bin/taglib-config
+Fixing up bin/gettext.sh
+Fixing up bin/gpg-error-config
+Fixing up bin/libgcrypt-config
+Fixing up lib/libdvbpsi.la
+Fixing up lib/libtheora.la
+Fixing up lib/libgnutls.la
+Fixing up lib/libtheoraenc.la
+Fixing up lib/libtwolame.la
+Fixing up lib/libshout.la
+Fixing up lib/librnnoise.la
+Fixing up lib/libzvbi.la
+Fixing up lib/libgpg-error.la
+Fixing up lib/libsidplay2.la
+Fixing up lib/libmodplug.la
+Fixing up lib/libresid-builder.la
+Fixing up lib/libasprintf.la
+Fixing up lib/libgoom2.la
+Fixing up lib/libasdcp.la
+Fixing up lib/libsamplerate.la
+Fixing up lib/libkumu.la
+Fixing up lib/libintl.la
+Fixing up lib/libgmp.la
+Fixing up lib/libtheoradec.la
+Fixing up lib/liboggkate.la
+Fixing up lib/libmp3lame.la
+Fixing up lib/libgcrypt.la
+Fixing up lib/libcharset.la
+Fixing up lib/libkate.la
+Fixing up lib/libdvbcsa.la
+Fixing up lib/libaribb24.la
+Fixing up lib/libiconv.la
+Fixing up lib/libspeex.la
+Fixing up lib/libspeexdsp.la
+Fixing up lib/pkgconfig/dvdread.pc
+Fixing up lib/pkgconfig/librist.pc
+Fixing up lib/pkgconfig/theoradec.pc
+Fixing up lib/pkgconfig/libarchive.pc
+Fixing up lib/pkgconfig/medialibrary.pc
+Fixing up lib/pkgconfig/libopenjp2.pc
+Fixing up lib/pkgconfig/dvdnav.pc
+Fixing up lib/pkgconfig/fluidlite.pc
+Fixing up lib/pkgconfig/mad.pc
+Fixing up lib/pkgconfig/flac.pc
+Fixing up lib/pkgconfig/libpng16.pc
+Fixing up lib/pkgconfig/lua.pc
+Fixing up lib/pkgconfig/libgcrypt.pc
+Fixing up lib/pkgconfig/ogg.pc
+Fixing up lib/pkgconfig/libjpeg.pc
+Fixing up lib/pkgconfig/libswscale.pc
+Fixing up lib/pkgconfig/libnoidea.pc
+Fixing up lib/pkgconfig/gmp.pc
+Fixing up lib/pkgconfig/rnnoise.pc
+Fixing up lib/pkgconfig/libass.pc
+Fixing up lib/pkgconfig/oapv.pc
+Fixing up lib/pkgconfig/harfbuzz-raster.pc
+Fixing up lib/pkgconfig/twolame.pc
+Fixing up lib/pkgconfig/vorbisfile.pc
+Fixing up lib/pkgconfig/speex.pc
+Fixing up lib/pkgconfig/soxr.pc
+Fixing up lib/pkgconfig/kate.pc
+Fixing up lib/pkgconfig/aom.pc
+Fixing up lib/pkgconfig/libsmb2.pc
+Fixing up lib/pkgconfig/libebml.pc
+Fixing up lib/pkgconfig/vorbis.pc
+Fixing up lib/pkgconfig/libchromaprint.pc
+Fixing up lib/pkgconfig/dvbcsa.pc
+Fixing up lib/pkgconfig/libavcodec.pc
+Fixing up lib/pkgconfig/nettle.pc
+Fixing up lib/pkgconfig/hogweed.pc
+Fixing up lib/pkgconfig/dav1d.pc
+Fixing up lib/pkgconfig/harfbuzz-subset.pc
+Fixing up lib/pkgconfig/ncursesw.pc
+Fixing up lib/pkgconfig/libavformat.pc
+Fixing up lib/pkgconfig/protobuf-lite.pc
+Fixing up lib/pkgconfig/libmysofa.pc
+Fixing up lib/pkgconfig/harfbuzz.pc
+Fixing up lib/pkgconfig/libplacebo.pc
+Fixing up lib/pkgconfig/libdvdcss.pc
+Fixing up lib/pkgconfig/freetype2.pc
+Fixing up lib/pkgconfig/haisrt.pc
+Fixing up lib/pkgconfig/libvncclient.pc
+Fixing up lib/pkgconfig/taglib.pc
+Fixing up lib/pkgconfig/spatialaudio.pc
+Fixing up lib/pkgconfig/libaribcaption.pc
+Fixing up lib/pkgconfig/theora.pc
+Fixing up lib/pkgconfig/harfbuzz-gpu.pc
+Fixing up lib/pkgconfig/libavutil.pc
+Fixing up lib/pkgconfig/asdcplib.pc
+Fixing up lib/pkgconfig/zlib.pc
+Fixing up lib/pkgconfig/libgoom2.pc
+Fixing up lib/pkgconfig/libmpg123.pc
+Fixing up lib/pkgconfig/libupnp.pc
+Fixing up lib/pkgconfig/aribb24.pc
+Fixing up lib/pkgconfig/samplerate.pc
+Fixing up lib/pkgconfig/vorbisenc.pc
+Fixing up lib/pkgconfig/libmodplug.pc
+Fixing up lib/pkgconfig/lua5.4.pc
+Fixing up lib/pkgconfig/opus.pc
+Fixing up lib/pkgconfig/faad2.pc
+Fixing up lib/pkgconfig/libsidplay2.pc
+Fixing up lib/pkgconfig/gnutls.pc
+Fixing up lib/pkgconfig/libsyn123.pc
+Fixing up lib/pkgconfig/libebur128.pc
+Fixing up lib/pkgconfig/harfbuzz-vector.pc
+Fixing up lib/pkgconfig/srt.pc
+Fixing up lib/pkgconfig/zvbi-0.2.pc
+Fixing up lib/pkgconfig/gpg-error.pc
+Fixing up lib/pkgconfig/protobuf.pc
+Fixing up lib/pkgconfig/libnfs.pc
+Fixing up lib/pkgconfig/sqlite3.pc
+Fixing up lib/pkgconfig/libbluray.pc
+Fixing up lib/pkgconfig/libxml-2.0.pc
+Fixing up lib/pkgconfig/libdvbpsi.pc
+Fixing up lib/pkgconfig/oggkate.pc
+Fixing up lib/pkgconfig/x264.pc
+Fixing up lib/pkgconfig/speexdsp.pc
+Fixing up lib/pkgconfig/libmatroska.pc
+Fixing up lib/pkgconfig/theoraenc.pc
+Fixing up lib/pkgconfig/live555.pc
+Fixing up lib/pkgconfig/shout.pc
+Fixing up lib/pkgconfig/libssh2.pc
+Fixing up lib/pkgconfig/x265.pc
+Fixing up lib/pkgconfig/libpostproc.pc
+Fixing up lib/pkgconfig/opencv4.pc
+Fixing up lib/pkgconfig/libgme.pc
+Fixing up lib/pkgconfig/vpx.pc
+Fixing up lib/pkgconfig/fribidi.pc
+find: share/meson/cross/: No such file or directory
+# Regenerate the machine file with local tool paths, without rebuilding dependencies.
+install -d "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/aarch64-apple-darwin19/share/meson/native"
+PREFIX="/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/aarch64-apple-darwin19" \
+	../../../upstream/vlc-master-story005/contrib/src/gen-meson-machinefile.py \
+		--type external-native \
+		--binary libgcrypt-config:/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/aarch64-apple-darwin19/bin/libgcrypt-config --binary luac:/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/bin/aarch64-apple-darwin19-luac --binary protoc:/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/bin/protoc \
+		"/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/aarch64-apple-darwin19/share/meson/native/contrib.ini"
+rm -f -Rf luac luac-5.4.4 && mkdir -p luac-5.4.4
+rm -f -R "../../../upstream/vlc-master-story005/contrib/tarballs/protoc-21.1-cpp.tar.gz"
+cp "../../../upstream/vlc-master-story005/contrib/tarballs/protobuf-3.21.1.tar.gz" "../../../upstream/vlc-master-story005/contrib/tarballs/protoc-21.1-cpp.tar.gz"
+tar xzfo ../../../upstream/vlc-master-story005/contrib/tarballs/lua-5.4.4.tar.gz -C luac-5.4.4 --strip-components=1
+# extract in a different directory as it may run at the same time as the protobug extraction
+rm -f -Rf protoc protoc-21.1-cpp && mkdir -p protoc-21.1-cpp
+(cd luac-5.4.4 && patch -fp1) < ../../../upstream/vlc-master-story005/contrib/src/lua/Enforce-always-using-64bit-integers-floats.patch
+tar xzfo "../../../upstream/vlc-master-story005/contrib/tarballs/protoc-21.1-cpp.tar.gz" -C protoc-21.1-cpp --strip-components=1
+patching file 'src/luaconf.h'
+mv luac-5.4.4 luac && touch luac
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C luac CC="gcc" CXX="g++" LD="gcc" AR="ar" NM="nm" RANLIB="ranlib" STRIP="strip" PATH="/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/bin:/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/bin:/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/libexec:/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/bin:/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/bin::/opt/homebrew/opt/python@3.14/bin:/usr/local/bin:/bin:/sbin:/usr/bin:/usr/sbin" AR="ar rcu" MYCFLAGS="-O2" MYLDFLAGS="-O2" CPPFLAGS="" generic
+gcc -O2 -Wall -Wextra -DLUA_COMPAT_5_3  -O2   -c -o lapi.o lapi.c
+gcc -O2 -Wall -Wextra -DLUA_COMPAT_5_3  -O2  -c lcode.c
+gcc -O2 -Wall -Wextra -DLUA_COMPAT_5_3  -O2   -c -o lctype.o lctype.c
+gcc -O2 -Wall -Wextra -DLUA_COMPAT_5_3  -O2   -c -o ldebug.o ldebug.c
+(cd protoc-21.1-cpp && patch -fp1) < ../../../upstream/vlc-master-story005/contrib/src/protobuf/0001-Fix-9947-make-the-ABI-identical-between-debug-and-no.patch
+gcc -O2 -Wall -Wextra -DLUA_COMPAT_5_3  -O2   -c -o ldo.o ldo.c
+patching file 'src/google/protobuf/message_lite.cc'
+patching file 'src/google/protobuf/metadata_lite.h'
+(cd protoc-21.1-cpp && patch -fp1) < ../../../upstream/vlc-master-story005/contrib/src/protobuf/0001-prioritize-internal-include-path-over-zlib-include-d.patch
+patching file CMakeLists.txt
+# add a dummy install command to disable some installation
+sed -i.old '1s;^;function (noinstall ...)\nendfunction()\n;' protoc-21.1-cpp/cmake/install.cmake
+gcc -O2 -Wall -Wextra -DLUA_COMPAT_5_3  -O2   -c -o ldump.o ldump.c
+# don't install pkg-config files (on top of the target ones)
+sed -i.orig -e 's,install(FILES ,noinstall(FILES ,' protoc-21.1-cpp/cmake/install.cmake
+# don't install cmake exports/targets/folders except protoc
+gcc -O2 -Wall -Wextra -DLUA_COMPAT_5_3  -O2   -c -o lfunc.o lfunc.c
+sed -i.orig -e 's,install(EXPORT ,noinstall(EXPORT ,' protoc-21.1-cpp/cmake/install.cmake
+sed -i.orig -e 's,install(DIRECTORY ,noinstall(DIRECTORY ,' protoc-21.1-cpp/cmake/install.cmake
+sed -i.orig -e 's,install(TARGETS ,noinstall(TARGETS ,' protoc-21.1-cpp/cmake/install.cmake
+sed -i.orig -e 's,noinstall(TARGETS protoc,install(TARGETS protoc,' protoc-21.1-cpp/cmake/install.cmake
+# disable libprotobuf-lite
+# sed -i.orig -e 's,libprotobuf-lite, ,' protoc-21.1-cpp/cmake/install.cmake
+# sed -i.orig -e 's,include(libprotobuf-lite,#include(libprotobuf-lite,' protoc-21.1-cpp/cmake/CMakeLists.txt
+mv protoc-21.1-cpp protoc && touch protoc
+gcc -O2 -Wall -Wextra -DLUA_COMPAT_5_3  -O2   -c -o lgc.o lgc.c
+gcc -O2 -Wall -Wextra -DLUA_COMPAT_5_3  -O2  -c llex.c
+rm -f protoc/vlc_native/CMakeCache.txt
+CC="gcc" CXX="g++" LD="gcc" AR="ar" NM="nm" RANLIB="ranlib" STRIP="strip" PATH="/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/bin:/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/bin:/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/libexec:/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/bin:/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/bin::/opt/homebrew/opt/python@3.14/bin:/usr/local/bin:/bin:/sbin:/usr/bin:/usr/sbin" CPPFLAGS="" CFLAGS="-O2" CXXFLAGS="-O2" LDFLAGS="-O2" cmake -S protoc -B protoc/vlc_native -DCMAKE_POSITION_INDEPENDENT_CODE=ON -DBUILD_SHARED_LIBS:BOOL=OFF -DCMAKE_INSTALL_LIBDIR:STRING=lib -DBUILD_TESTING:BOOL=OFF -G Ninja -DCMAKE_INSTALL_PREFIX:STRING=/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib -Dprotobuf_BUILD_TESTS=OFF -Dprotobuf_DEBUG_POSTFIX:STRING= -Dprotobuf_BUILD_PROTOC_BINARIES=ON
+gcc -O2 -Wall -Wextra -DLUA_COMPAT_5_3  -O2   -c -o lmem.o lmem.c
+gcc -O2 -Wall -Wextra -DLUA_COMPAT_5_3  -O2   -c -o lobject.o lobject.c
+gcc -O2 -Wall -Wextra -DLUA_COMPAT_5_3  -O2   -c -o lopcodes.o lopcodes.c
+gcc -O2 -Wall -Wextra -DLUA_COMPAT_5_3  -O2  -c lparser.c
+gcc -O2 -Wall -Wextra -DLUA_COMPAT_5_3  -O2   -c -o lstate.o lstate.c
+gcc -O2 -Wall -Wextra -DLUA_COMPAT_5_3  -O2   -c -o lstring.o lstring.c
+gcc -O2 -Wall -Wextra -DLUA_COMPAT_5_3  -O2   -c -o ltable.o ltable.c
+gcc -O2 -Wall -Wextra -DLUA_COMPAT_5_3  -O2   -c -o ltm.o ltm.c
+gcc -O2 -Wall -Wextra -DLUA_COMPAT_5_3  -O2   -c -o lundump.o lundump.c
+gcc -O2 -Wall -Wextra -DLUA_COMPAT_5_3  -O2   -c -o lvm.o lvm.c
+gcc -O2 -Wall -Wextra -DLUA_COMPAT_5_3  -O2   -c -o lzio.o lzio.c
+gcc -O2 -Wall -Wextra -DLUA_COMPAT_5_3  -O2   -c -o lauxlib.o lauxlib.c
+gcc -O2 -Wall -Wextra -DLUA_COMPAT_5_3  -O2   -c -o lbaselib.o lbaselib.c
+gcc -O2 -Wall -Wextra -DLUA_COMPAT_5_3  -O2   -c -o lcorolib.o lcorolib.c
+gcc -O2 -Wall -Wextra -DLUA_COMPAT_5_3  -O2   -c -o ldblib.o ldblib.c
+gcc -O2 -Wall -Wextra -DLUA_COMPAT_5_3  -O2   -c -o liolib.o liolib.c
+gcc -O2 -Wall -Wextra -DLUA_COMPAT_5_3  -O2   -c -o lmathlib.o lmathlib.c
+gcc -O2 -Wall -Wextra -DLUA_COMPAT_5_3  -O2   -c -o loadlib.o loadlib.c
+gcc -O2 -Wall -Wextra -DLUA_COMPAT_5_3  -O2   -c -o loslib.o loslib.c
+gcc -O2 -Wall -Wextra -DLUA_COMPAT_5_3  -O2   -c -o lstrlib.o lstrlib.c
+gcc -O2 -Wall -Wextra -DLUA_COMPAT_5_3  -O2   -c -o ltablib.o ltablib.c
+gcc -O2 -Wall -Wextra -DLUA_COMPAT_5_3  -O2   -c -o lutf8lib.o lutf8lib.c
+gcc -O2 -Wall -Wextra -DLUA_COMPAT_5_3  -O2   -c -o linit.o linit.c
+gcc -O2 -Wall -Wextra -DLUA_COMPAT_5_3  -O2   -c -o lua.o lua.c
+gcc -O2 -Wall -Wextra -DLUA_COMPAT_5_3  -O2   -c -o luac.o luac.c
+ar rcu liblua.a lapi.o lcode.o lctype.o ldebug.o ldo.o ldump.o lfunc.o lgc.o llex.o lmem.o lobject.o lopcodes.o lparser.o lstate.o lstring.o ltable.o ltm.o lundump.o lvm.o lzio.o lauxlib.o lbaselib.o lcorolib.o ldblib.o liolib.o lmathlib.o loadlib.o loslib.o lstrlib.o ltablib.o lutf8lib.o linit.o 
+ranlib liblua.a
+gcc -o lua  -O2 lua.o liblua.a -lm  
+gcc -o luac  -O2 luac.o liblua.a -lm  
+mkdir -p -- /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/bin
+install -m 0755 -s -- luac/src/luac /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/bin/aarch64-apple-darwin19-luac
+touch .luac
+touch -r .luac .dep-luac
+CMake Deprecation Warning at CMakeLists.txt:2 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+-- The C compiler identification is AppleClang 21.0.0.21000334
+-- The CXX compiler identification is AppleClang 21.0.0.21000334
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- 
+-- 3.21.1.0
+-- Performing Test protobuf_HAVE_LD_VERSION_SCRIPT
+-- Performing Test protobuf_HAVE_LD_VERSION_SCRIPT - Failed
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Found ZLIB: /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/lib/libz.tbd (found version "1.2.12")
+-- Performing Test protobuf_HAVE_BUILTIN_ATOMICS
+-- Performing Test protobuf_HAVE_BUILTIN_ATOMICS - Success
+-- Configuring done (5.4s)
+-- Generating done (0.1s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    BUILD_TESTING
+
+
+-- Build files have been written to: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/contrib-aarch64-apple-darwin19/protoc/vlc_native
+env cmake --build protoc/vlc_native
+ninja: Jobserver mode detected:  --jobserver-fds=3,4 -j
+ninja: warning: Jobserver 'pipe' mode detected, a pool that implements 'fifo' mode would be more reliable!
+ninja: error: Could not initialize jobserver: Invalid file descriptors
+[1/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/io/io_win32.cc.o
+[2/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/arenaz_sampler.cc.o
+[3/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/io/strtod.cc.o
+[4/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/io/zero_copy_stream.cc.o
+[5/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/io/zero_copy_stream_impl.cc.o
+[6/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/io/zero_copy_stream_impl_lite.cc.o
+[7/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/arena.cc.o
+[8/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/generated_enum_util.cc.o
+[9/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/implicit_weak_message.cc.o
+[10/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/any_lite.cc.o
+[11/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/generated_message_util.cc.o
+[12/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/map.cc.o
+[13/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/io/coded_stream.cc.o
+[14/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/inlined_string_field.cc.o
+[15/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/arenastring.cc.o
+[16/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/message_lite.cc.o
+[17/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/stubs/bytestream.cc.o
+[18/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/stubs/statusor.cc.o
+[19/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/stubs/stringpiece.cc.o
+[20/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/stubs/int128.cc.o
+[21/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/stubs/status.cc.o
+[22/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/repeated_ptr_field.cc.o
+[23/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/stubs/common.cc.o
+[24/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/stubs/stringprintf.cc.o
+[25/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/stubs/structurally_valid.cc.o
+[26/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/stubs/time.cc.o
+[27/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/parse_context.cc.o
+[28/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/stubs/strutil.cc.o
+/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/contrib-aarch64-apple-darwin19/protoc/src/google/protobuf/stubs/strutil.cc:506:11: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+  506 |           sprintf(dest + used, (use_hex ? "\\x%02x" : "\\%03o"),
+      |           ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/_stdio.h:278:1: note: 'sprintf' has been explicitly marked deprecated here
+  278 | __deprecated_msg("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.")
+      | ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/sys/cdefs.h:227:48: note: expanded from macro '__deprecated_msg'
+  227 |         #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))
+      |                                                       ^
+1 warning generated.
+[29/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/any.cc.o
+[30/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/generated_message_tctable_lite.cc.o
+In file included from /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/contrib-aarch64-apple-darwin19/protoc/src/google/protobuf/generated_message_tctable_lite.cc:36:
+/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/contrib-aarch64-apple-darwin19/protoc/src/google/protobuf/generated_message_tctable_impl.h:256:1: warning: function declared 'noreturn' should not return [-Winvalid-noreturn]
+  256 | }
+      | ^
+/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/contrib-aarch64-apple-darwin19/protoc/src/google/protobuf/generated_message_tctable_lite.cc:57:15: note: in instantiation of function template specialization 'google::protobuf::internal::AlignFail<4UL>' requested here
+   57 | template void AlignFail<4>(uintptr_t);
+      |               ^
+In file included from /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/contrib-aarch64-apple-darwin19/protoc/src/google/protobuf/generated_message_tctable_lite.cc:36:
+/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/contrib-aarch64-apple-darwin19/protoc/src/google/protobuf/generated_message_tctable_impl.h:256:1: warning: function declared 'noreturn' should not return [-Winvalid-noreturn]
+  256 | }
+      | ^
+/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/contrib-aarch64-apple-darwin19/protoc/src/google/protobuf/generated_message_tctable_lite.cc:58:15: note: in instantiation of function template specialization 'google::protobuf::internal::AlignFail<8UL>' requested here
+   58 | template void AlignFail<8>(uintptr_t);
+      |               ^
+In file included from /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/contrib-aarch64-apple-darwin19/protoc/src/google/protobuf/generated_message_tctable_lite.cc:36:
+/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/contrib-aarch64-apple-darwin19/protoc/src/google/protobuf/generated_message_tctable_impl.h:256:1: warning: function declared 'noreturn' should not return [-Winvalid-noreturn]
+  256 | }
+      | ^
+/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/contrib-aarch64-apple-darwin19/protoc/src/google/protobuf/generated_message_tctable_impl.h:384:7: note: in instantiation of function template specialization 'google::protobuf::internal::AlignFail<1UL>' requested here
+  384 |       AlignFail<alignof(T)>(reinterpret_cast<uintptr_t>(target));
+      |       ^
+/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/contrib-aarch64-apple-darwin19/protoc/src/google/protobuf/generated_message_tctable_lite.cc:1515:5: note: in instantiation of function template specialization 'google::protobuf::internal::TcParser::RefAt<bool>' requested here
+ 1515 |     RefAt<bool>(msg, entry.offset) = static_cast<bool>(tmp);
+      |     ^
+3 warnings generated.
+[31/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/wire_format_lite.cc.o
+[32/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/duration.pb.cc.o
+[33/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/any.pb.cc.o
+[34/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/empty.pb.cc.o
+[35/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/extension_set.cc.o
+[36/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/compiler/importer.cc.o
+[37/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/api.pb.cc.o
+[38/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/repeated_field.cc.o
+[39/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/io/gzip_stream.cc.o
+[40/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/generated_message_bases.cc.o
+[41/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/dynamic_message.cc.o
+[42/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/field_mask.pb.cc.o
+[43/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/generated_message_tctable_full.cc.o
+[44/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/service.cc.o
+[45/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/extension_set_heavy.cc.o
+[46/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/io/tokenizer.cc.o
+[47/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/stubs/substitute.cc.o
+[48/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/io/printer.cc.o
+[49/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/source_context.pb.cc.o
+[50/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/timestamp.pb.cc.o
+[51/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/reflection_ops.cc.o
+[52/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/compiler/parser.cc.o
+[53/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/util/delimited_message_util.cc.o
+[54/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/map_field.cc.o
+[55/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/descriptor_database.cc.o
+[56/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/message.cc.o
+[57/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/unknown_field_set.cc.o
+[58/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/util/field_comparator.cc.o
+[59/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/util/internal/error_listener.cc.o
+[60/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/type.pb.cc.o
+[61/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/struct.pb.cc.o
+[62/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/util/internal/json_escaping.cc.o
+[63/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/util/field_mask_util.cc.o
+[64/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/descriptor.pb.cc.o
+[65/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/util/internal/field_mask_utility.cc.o
+[66/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/generated_message_reflection.cc.o
+[67/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/util/internal/json_objectwriter.cc.o
+[68/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/util/internal/json_stream_parser.cc.o
+[69/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/util/internal/datapiece.cc.o
+[70/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/util/internal/object_writer.cc.o
+[71/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/util/internal/default_value_objectwriter.cc.o
+[72/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/util/internal/utility.cc.o
+[73/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/util/internal/type_info.cc.o
+[74/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/text_format.cc.o
+[75/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/util/json_util.cc.o
+[76/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/util/internal/protostream_objectsource.cc.o
+[77/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/util/time_util.cc.o
+[78/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/util/internal/proto_writer.cc.o
+[79/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/code_generator.cc.o
+[80/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/util/internal/protostream_objectwriter.cc.o
+[81/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/wrappers.pb.cc.o
+[82/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/util/type_resolver_util.cc.o
+[83/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/cpp/enum_field.cc.o
+[84/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/cpp/enum.cc.o
+[85/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/cpp/extension.cc.o
+[86/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/cpp/generator.cc.o
+[87/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/wire_format.cc.o
+[88/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/cpp/field.cc.o
+[89/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/cpp/map_field.cc.o
+[90/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/cpp/padding_optimizer.cc.o
+[91/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/util/message_differencer.cc.o
+[92/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/cpp/message_field.cc.o
+[93/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/csharp/csharp_doc_comment.cc.o
+[94/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/csharp/csharp_enum_field.cc.o
+[95/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/command_line_interface.cc.o
+[96/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/csharp/csharp_enum.cc.o
+[97/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/cpp/service.cc.o
+[98/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/cpp/primitive_field.cc.o
+[99/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/cpp/helpers.cc.o
+[100/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/cpp/string_field.cc.o
+[101/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/csharp/csharp_generator.cc.o
+[102/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/csharp/csharp_map_field.cc.o
+[103/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/csharp/csharp_helpers.cc.o
+[104/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/cpp/file.cc.o
+[105/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/cpp/parse_function_generator.cc.o
+[106/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/csharp/csharp_field_base.cc.o
+[107/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/csharp/csharp_repeated_enum_field.cc.o
+[108/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/csharp/csharp_message_field.cc.o
+[109/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/csharp/csharp_primitive_field.cc.o
+[110/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/csharp/csharp_repeated_message_field.cc.o
+[111/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/csharp/csharp_message.cc.o
+[112/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/csharp/csharp_repeated_primitive_field.cc.o
+[113/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/csharp/csharp_reflection_class.cc.o
+[114/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/csharp/csharp_source_generator_base.cc.o
+[115/205] Building CXX object CMakeFiles/libprotobuf.dir/src/google/protobuf/descriptor.cc.o
+[116/205] Linking CXX static library libprotobuf.a
+[117/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/csharp/csharp_wrapper_field.cc.o
+[118/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/doc_comment.cc.o
+[119/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/context.cc.o
+[120/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/enum_lite.cc.o
+[121/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/extension_lite.cc.o
+[122/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/enum_field.cc.o
+[123/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/enum_field_lite.cc.o
+[124/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/enum.cc.o
+[125/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/extension.cc.o
+[126/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/generator_factory.cc.o
+[127/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/field.cc.o
+[128/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/generator.cc.o
+[129/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/cpp/message.cc.o
+[130/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/kotlin_generator.cc.o
+[131/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/map_field.cc.o
+[132/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/file.cc.o
+[133/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/helpers.cc.o
+[134/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/map_field_lite.cc.o
+[135/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/message_builder_lite.cc.o
+[136/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/name_resolver.cc.o
+[137/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/message_field.cc.o
+[138/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/message_field_lite.cc.o
+[139/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/message_builder.cc.o
+[140/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/message_lite.cc.o
+[141/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/primitive_field_lite.cc.o
+[142/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/primitive_field.cc.o
+[143/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/service.cc.o
+[144/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/shared_code_generator.cc.o
+[145/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/string_field_lite.cc.o
+[146/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/message.cc.o
+[147/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/objectivec/objectivec_enum.cc.o
+[148/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/java/string_field.cc.o
+[149/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/objectivec/objectivec_enum_field.cc.o
+[150/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/objectivec/objectivec_extension.cc.o
+[151/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/objectivec/objectivec_field.cc.o
+[152/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/objectivec/objectivec_message_field.cc.o
+[153/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/objectivec/objectivec_map_field.cc.o
+[154/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/objectivec/objectivec_oneof.cc.o
+[155/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/objectivec/objectivec_generator.cc.o
+[156/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/objectivec/objectivec_primitive_field.cc.o
+[157/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/plugin.cc.o
+[158/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/zip_writer.cc.o
+[159/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/objectivec/objectivec_file.cc.o
+[160/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/python/helpers.cc.o
+[161/205] Building CXX object CMakeFiles/libprotobuf-lite.dir/src/google/protobuf/arena.cc.o
+[162/205] Building CXX object CMakeFiles/protoc.dir/src/google/protobuf/compiler/main.cc.o
+[163/205] Building CXX object CMakeFiles/libprotobuf-lite.dir/src/google/protobuf/arenaz_sampler.cc.o
+[164/205] Building CXX object CMakeFiles/libprotobuf-lite.dir/src/google/protobuf/any_lite.cc.o
+[165/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/subprocess.cc.o
+[166/205] Building CXX object CMakeFiles/libprotobuf-lite.dir/src/google/protobuf/io/io_win32.cc.o
+[167/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/plugin.pb.cc.o
+[168/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/objectivec/objectivec_message.cc.o
+[169/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/ruby/ruby_generator.cc.o
+[170/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/objectivec/objectivec_helpers.cc.o
+[171/205] Building CXX object CMakeFiles/libprotobuf-lite.dir/src/google/protobuf/arenastring.cc.o
+[172/205] Building CXX object CMakeFiles/libprotobuf-lite.dir/src/google/protobuf/generated_enum_util.cc.o
+[173/205] Building CXX object CMakeFiles/libprotobuf-lite.dir/src/google/protobuf/generated_message_util.cc.o
+[174/205] Building CXX object CMakeFiles/libprotobuf-lite.dir/src/google/protobuf/implicit_weak_message.cc.o
+[175/205] Building CXX object CMakeFiles/libprotobuf-lite.dir/src/google/protobuf/inlined_string_field.cc.o
+[176/205] Building CXX object CMakeFiles/libprotobuf-lite.dir/src/google/protobuf/io/strtod.cc.o
+[177/205] Building CXX object CMakeFiles/libprotobuf-lite.dir/src/google/protobuf/io/coded_stream.cc.o
+[178/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/python/generator.cc.o
+[179/205] Building CXX object CMakeFiles/libprotobuf-lite.dir/src/google/protobuf/io/zero_copy_stream.cc.o
+[180/205] Building CXX object CMakeFiles/libprotobuf-lite.dir/src/google/protobuf/io/zero_copy_stream_impl.cc.o
+[181/205] Building CXX object CMakeFiles/libprotobuf-lite.dir/src/google/protobuf/io/zero_copy_stream_impl_lite.cc.o
+[182/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/python/pyi_generator.cc.o
+[183/205] Building CXX object CMakeFiles/libprotobuf-lite.dir/src/google/protobuf/map.cc.o
+[184/205] Building CXX object CMakeFiles/libprotobuf-lite.dir/src/google/protobuf/stubs/common.cc.o
+[185/205] Building CXX object CMakeFiles/libprotobuf-lite.dir/src/google/protobuf/stubs/bytestream.cc.o
+[186/205] Building CXX object CMakeFiles/libprotobuf-lite.dir/src/google/protobuf/stubs/statusor.cc.o
+[187/205] Building CXX object CMakeFiles/libprotobuf-lite.dir/src/google/protobuf/stubs/int128.cc.o
+[188/205] Building CXX object CMakeFiles/libprotobuf-lite.dir/src/google/protobuf/repeated_ptr_field.cc.o
+[189/205] Building CXX object CMakeFiles/libprotobuf-lite.dir/src/google/protobuf/stubs/status.cc.o
+[190/205] Building CXX object CMakeFiles/libprotobuf-lite.dir/src/google/protobuf/stubs/stringpiece.cc.o
+[191/205] Building CXX object CMakeFiles/libprotobuf-lite.dir/src/google/protobuf/message_lite.cc.o
+[192/205] Building CXX object CMakeFiles/libprotobuf-lite.dir/src/google/protobuf/parse_context.cc.o
+[193/205] Building CXX object CMakeFiles/libprotoc.dir/src/google/protobuf/compiler/php/php_generator.cc.o
+[194/205] Building CXX object CMakeFiles/libprotobuf-lite.dir/src/google/protobuf/stubs/stringprintf.cc.o
+[195/205] Building CXX object CMakeFiles/libprotobuf-lite.dir/src/google/protobuf/generated_message_tctable_lite.cc.o
+In file included from /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/contrib-aarch64-apple-darwin19/protoc/src/google/protobuf/generated_message_tctable_lite.cc:36:
+/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/contrib-aarch64-apple-darwin19/protoc/src/google/protobuf/generated_message_tctable_impl.h:256:1: warning: function declared 'noreturn' should not return [-Winvalid-noreturn]
+  256 | }
+      | ^
+/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/contrib-aarch64-apple-darwin19/protoc/src/google/protobuf/generated_message_tctable_lite.cc:57:15: note: in instantiation of function template specialization 'google::protobuf::internal::AlignFail<4UL>' requested here
+   57 | template void AlignFail<4>(uintptr_t);
+      |               ^
+In file included from /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/contrib-aarch64-apple-darwin19/protoc/src/google/protobuf/generated_message_tctable_lite.cc:36:
+/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/contrib-aarch64-apple-darwin19/protoc/src/google/protobuf/generated_message_tctable_impl.h:256:1: warning: function declared 'noreturn' should not return [-Winvalid-noreturn]
+  256 | }
+      | ^
+/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/contrib-aarch64-apple-darwin19/protoc/src/google/protobuf/generated_message_tctable_lite.cc:58:15: note: in instantiation of function template specialization 'google::protobuf::internal::AlignFail<8UL>' requested here
+   58 | template void AlignFail<8>(uintptr_t);
+      |               ^
+In file included from /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/contrib-aarch64-apple-darwin19/protoc/src/google/protobuf/generated_message_tctable_lite.cc:36:
+/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/contrib-aarch64-apple-darwin19/protoc/src/google/protobuf/generated_message_tctable_impl.h:256:1: warning: function declared 'noreturn' should not return [-Winvalid-noreturn]
+  256 | }
+      | ^
+/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/contrib-aarch64-apple-darwin19/protoc/src/google/protobuf/generated_message_tctable_impl.h:384:7: note: in instantiation of function template specialization 'google::protobuf::internal::AlignFail<1UL>' requested here
+  384 |       AlignFail<alignof(T)>(reinterpret_cast<uintptr_t>(target));
+      |       ^
+/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/contrib-aarch64-apple-darwin19/protoc/src/google/protobuf/generated_message_tctable_lite.cc:1515:5: note: in instantiation of function template specialization 'google::protobuf::internal::TcParser::RefAt<bool>' requested here
+ 1515 |     RefAt<bool>(msg, entry.offset) = static_cast<bool>(tmp);
+      |     ^
+3 warnings generated.
+[196/205] Linking CXX static library libprotoc.a
+[197/205] Building CXX object CMakeFiles/libprotobuf-lite.dir/src/google/protobuf/stubs/structurally_valid.cc.o
+[198/205] Building CXX object CMakeFiles/libprotobuf-lite.dir/src/google/protobuf/stubs/time.cc.o
+[199/205] Linking CXX executable protoc-3.21.1.0
+[200/205] Creating executable symlink protoc
+[201/205] Building CXX object CMakeFiles/libprotobuf-lite.dir/src/google/protobuf/extension_set.cc.o
+[202/205] Building CXX object CMakeFiles/libprotobuf-lite.dir/src/google/protobuf/wire_format_lite.cc.o
+[203/205] Building CXX object CMakeFiles/libprotobuf-lite.dir/src/google/protobuf/repeated_field.cc.o
+[204/205] Building CXX object CMakeFiles/libprotobuf-lite.dir/src/google/protobuf/stubs/strutil.cc.o
+/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/contrib-aarch64-apple-darwin19/protoc/src/google/protobuf/stubs/strutil.cc:506:11: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+  506 |           sprintf(dest + used, (use_hex ? "\\x%02x" : "\\%03o"),
+      |           ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/_stdio.h:278:1: note: 'sprintf' has been explicitly marked deprecated here
+  278 | __deprecated_msg("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.")
+      | ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/sys/cdefs.h:227:48: note: expanded from macro '__deprecated_msg'
+  227 |         #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))
+      |                                                       ^
+1 warning generated.
+[205/205] Linking CXX static library libprotobuf-lite.a
+env cmake --install protoc/vlc_native
+-- Install configuration: ""
+-- Installing: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/bin/protoc-3.21.1.0
+-- Installing: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/bin/protoc
+touch .protoc
+touch -r .protoc .dep-protoc
+Unsetting contrib flags
+Setting libVLC flags
+[\033[1;32mbuild\033[0m] Bootstrap-ing configure
+autoreconf: export WARNINGS=
+autoreconf: Entering directory '.'
+autoreconf: running: autopoint --force
+Copying file ABOUT-NLS
+Copying file po/Makevars.template
+Copying file po/Rules-quot
+Copying file po/boldquot.sed
+Copying file po/en@boldquot.header
+Copying file po/en@quot.header
+Copying file po/insert-header.sin
+Copying file po/quot.sed
+Copying file po/remove-potcdate.sin
+autoreconf: running: aclocal -I extras/tools/build/share/aclocal/ --force -I m4
+autoreconf: configure.ac: tracing
+autoreconf: running: libtoolize --copy --force
+libtoolize: putting auxiliary files in AC_CONFIG_AUX_DIR, 'autotools'.
+libtoolize: copying file 'autotools/ltmain.sh'
+libtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'm4'.
+libtoolize: copying file 'm4/libtool.m4'
+libtoolize: copying file 'm4/ltoptions.m4'
+libtoolize: copying file 'm4/ltsugar.m4'
+libtoolize: copying file 'm4/ltversion.m4'
+libtoolize: copying file 'm4/lt~obsolete.m4'
+autoreconf: configure.ac: not using Intltool
+autoreconf: configure.ac: not using Gtkdoc
+autoreconf: configure.ac: not running autopoint a second time
+autoreconf: running: aclocal -I extras/tools/build/share/aclocal/ --force -I m4
+autoreconf: running: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/bin/autoconf --include=extras/tools/build/share/aclocal/ --force
+configure.ac:1313: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:1313: the top level
+configure.ac:2264: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:2264: the top level
+configure.ac:2356: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:2356: the top level
+configure.ac:2357: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:2357: the top level
+configure.ac:2377: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:2377: the top level
+configure.ac:2382: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:2382: the top level
+configure.ac:2387: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:2387: the top level
+configure.ac:2420: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:2420: the top level
+configure.ac:2425: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:2425: the top level
+configure.ac:2430: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:70: PKG_HAVE_WITH_MODULES is expanded from...
+configure.ac:2430: the top level
+configure.ac:2435: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:2435: the top level
+configure.ac:2440: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:2440: the top level
+configure.ac:2445: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:2445: the top level
+configure.ac:2627: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:2627: the top level
+configure.ac:2631: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:2631: the top level
+configure.ac:2656: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+configure.ac:2656: the top level
+configure.ac:2683: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+configure.ac:2683: the top level
+configure.ac:2690: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+configure.ac:2690: the top level
+configure.ac:2708: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:2708: the top level
+configure.ac:2745: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:2745: the top level
+configure.ac:2749: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:2749: the top level
+configure.ac:2752: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:2752: the top level
+configure.ac:2758: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+configure.ac:2758: the top level
+configure.ac:2794: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:2794: the top level
+configure.ac:2859: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:2859: the top level
+configure.ac:2892: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:70: PKG_HAVE_WITH_MODULES is expanded from...
+configure.ac:2892: the top level
+configure.ac:3069: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+configure.ac:3069: the top level
+configure.ac:3092: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:3092: the top level
+configure.ac:3097: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:3097: the top level
+configure.ac:3102: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:3102: the top level
+configure.ac:3135: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:3135: the top level
+configure.ac:3140: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:3140: the top level
+configure.ac:3145: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:3145: the top level
+configure.ac:3150: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:3150: the top level
+configure.ac:3167: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:3167: the top level
+configure.ac:3181: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:3181: the top level
+configure.ac:3186: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:3186: the top level
+configure.ac:3191: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:3191: the top level
+configure.ac:3202: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:3202: the top level
+configure.ac:3207: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:3207: the top level
+configure.ac:3212: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:3212: the top level
+configure.ac:3217: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:3217: the top level
+configure.ac:3286: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:3286: the top level
+configure.ac:3326: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:3326: the top level
+configure.ac:3332: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:3332: the top level
+configure.ac:3338: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:3338: the top level
+configure.ac:3339: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:3339: the top level
+configure.ac:3379: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:3379: the top level
+configure.ac:3402: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:3402: the top level
+configure.ac:3407: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:3407: the top level
+configure.ac:3495: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:70: PKG_HAVE_WITH_MODULES is expanded from...
+configure.ac:3495: the top level
+configure.ac:3534: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+configure.ac:3534: the top level
+configure.ac:3863: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:3863: the top level
+configure.ac:3864: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:3864: the top level
+configure.ac:3897: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:70: PKG_HAVE_WITH_MODULES is expanded from...
+configure.ac:3897: the top level
+configure.ac:3902: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:3902: the top level
+configure.ac:4129: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:4129: the top level
+configure.ac:4134: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:4134: the top level
+configure.ac:4139: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:4139: the top level
+configure.ac:4167: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:4167: the top level
+configure.ac:4172: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+configure.ac:4172: the top level
+configure.ac:4877: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:4877: the top level
+configure.ac:4882: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:4882: the top level
+configure.ac:4888: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:4888: the top level
+configure.ac:4935: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:4935: the top level
+configure.ac:4939: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:4939: the top level
+configure.ac:4943: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:4943: the top level
+configure.ac:4948: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:4948: the top level
+configure.ac:4964: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:4964: the top level
+configure.ac:4971: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:4971: the top level
+configure.ac:5060: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:5060: the top level
+configure.ac:5098: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:70: PKG_HAVE_WITH_MODULES is expanded from...
+configure.ac:5098: the top level
+configure.ac:5103: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:5103: the top level
+configure.ac:5105: warning: PKG_PROG_PKG_CONFIG is m4_require'd but not m4_defun'd
+m4/with_pkg.m4:34: PKG_WITH_MODULES is expanded from...
+m4/with_pkg.m4:85: PKG_ENABLE_MODULES_VLC is expanded from...
+configure.ac:5105: the top level
+configure.ac:1: error: undefined or overquoted macro: dnl
+      If this token and others are legitimate, please use m4_pattern_allow.
+      See the Autoconf documentation.
+configure.ac:18: error: undefined or overquoted macro: AC_MSG_ERROR
+configure.ac:27: error: undefined or overquoted macro: AC_SUBST
+configure.ac:64: error: undefined or overquoted macro: AC_DEFINE
+configure.ac:86: error: undefined or overquoted macro: AS_IF
+configure.ac:94: error: undefined or overquoted macro: AC_LANG_PUSH
+configure.ac:97: error: undefined or overquoted macro: AC_LANG_POP
+configure.ac:188: error: undefined or overquoted macro: AC_MSG_CHECKING
+configure.ac:192: error: undefined or overquoted macro: AC_MSG_RESULT
+configure.ac:226: error: undefined or overquoted macro: AC_LANG_PROGRAM
+configure.ac:329: error: undefined or overquoted macro: AC_PREPROC_IFELSE
+configure.ac:922: error: undefined or overquoted macro: AC_CACHE_CHECK
+configure.ac:924: error: undefined or overquoted macro: AC_COMPILE_IFELSE
+configure.ac:970: error: undefined or overquoted macro: AC_CHECK_LIB
+configure.ac:1015: error: undefined or overquoted macro: AC_CHECK_HEADERS
+configure.ac:1199: error: undefined or overquoted macro: AC_CHECK_HEADER
+configure.ac:1304: error: undefined or overquoted macro: AC_MSG_WARN
+configure:37424: error: undefined or overquoted macro: m4_n
+autoreconf: error: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/bin/autoconf failed with exit status: 1

@@ -1,0 +1,42 @@
+[00000001011593f0] main libvlc debug: VLC media player - 4.0.0-dev Otto Chriek
+[00000001011593f0] main libvlc debug: Copyright © 1996-2026 the VideoLAN team
+[00000001011593f0] main libvlc debug: revision 2e358f3
+[00000001011593f0] main libvlc debug: configured with /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-candidate/extras/package/macosx/../../../configure  '--prefix=/' '--enable-macosx' '--enable-merge-ffmpeg' '--enable-osx-notifications' '--enable-flac' '--enable-theora' '--enable-shout' '--enable-ncurses' '--enable-twolame' '--enable-libass' '--enable-macosx-avfoundation' '--disable-xcb' '--disable-caca' '--disable-pulse' '--disable-vnc' '--without-x' '--build=aarch64-apple-darwin19' '--host=aarch64-apple-darwin19' '--with-contrib=contrib/aarch64-apple-darwin19' '--with-macosx-version-min=10.13' '--with-macosx-sdk=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk' '--enable-extra-checks' 'build_alias=aarch64-apple-darwin19' 'host_alias=aarch64-apple-darwin19' 'CC=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang' 'CFLAGS=-g -arch arm64 -Werror=incompatible-function-pointer-types' 'LDFLAGS=-arch arm64' 'CXX=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++' 'CXXFLAGS=-g -arch arm64 -Werror=incompatible-function-pointer-types' 'OBJC=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang' 'OBJCFLAGS=-g -arch arm64 -Werror=incompatible-function-pointer-types' 'OBJCXX=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++' 'OBJCXXFLAGS=-g -arch arm64 -Werror=incompatible-function-pointer-types' 'PKG_CONFIG_PATH=' 'PKG_CONFIG_LIBDIR=/nonexistent/story005-pkgconfig-isolation' 'NCURSES_LIBS=-L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/contrib/aarch64-apple-darwin19/lib -lncursesw'
+[00000001011593f0] main libvlc debug: searching plug-in modules
+[00000001011593f0] main libvlc debug: loading plugins cache file /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/modules/plugins/plugins.dat
+[00000001011593f0] main libvlc warning: cannot read /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/modules/plugins/plugins.dat: No such file or directory
+[00000001011593f0] main libvlc debug: recursively browsing `/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/modules/plugins'
+[00000001011593f0] main libvlc debug: loading plugins cache file /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/modules/plugins.dat
+[00000001011593f0] main libvlc debug: recursively browsing `/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/modules'
+[000000016f781d10] main generic error: cannot load plug-in /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/modules/.libs/libmacosx_plugin.dylib: dlopen(/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/modules/.libs/libmacosx_plugin.dylib, 0x0001): Library not loaded: @rpath/Sparkle.framework/Versions/B/Sparkle
+  Referenced from: <EF9BF14B-1827-30BE-A65A-728710C44EB5> /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/modules/.libs/libmacosx_plugin.dylib
+  Reason: no LC_RPATH's found
+[00000001011593f0] main libvlc debug: plug-ins loaded: 571 modules
+[000000016f7821a0] main generic debug: looking for logger module matching "any": 3 candidates
+[000000016f7821a0] main generic debug: using logger module "console"
+[000000016f7821a0] main generic debug: looking for tracer module matching "none": 0 candidates
+[000000016f7821a0] main generic debug: no tracer modules matched with name none
+[00000001011593f0] main libvlc debug: translation test: code is "C"
+[000000016f782100] main generic debug: looking for keystore module matching "memory": 1 candidates
+[000000016f782100] main generic debug: using keystore module "memory"
+[00000001011593f0] main libvlc debug: CPU has capabilities FPU 
+[00000001011593f0] main libvlc warning: Key "Command+0" bound to multiple actions
+[0000000101177640] main player debug: creating audio output
+[000000016f781fc0] main generic debug: looking for audio output module matching "dummy": 3 candidates
+[000000016f781fc0] main generic debug: using audio output module "adummy"
+[0000000101177640] main player debug: keeping audio output
+[000000016f782200] main generic debug: looking for interface module matching "test_misc_image": 1 candidates
+[000000016f781e00] main generic debug: looking for image encoder module matching "any": 5 candidates
+[000000016f781e00] main generic debug: using image encoder module "test_misc_image"
+[000000016f781e00] main generic debug: looking for image encoder module matching "any": 5 candidates
+[000000016f781e00] main generic debug: using image encoder module "test_misc_image"
+[000000016f781e08] main generic debug: looking for video converter module matching "any": 16 candidates
+[000000016f781e08] main generic debug: using video converter module "test_misc_image"
+[0000000101178330] main filter debug: removing "video converter" module "test_misc_image"
+[000000016f782200] main generic debug: using interface module "test_misc_image"
+[00000001011593f0] main libvlc debug: exiting
+[00000001011593f0] main libvlc debug: no exit handler
+[00000001011593f0] main libvlc debug: removing all interfaces
+[00000077f6d74080] main interface debug: removing "interface" module "test_misc_image"
+[0000000101177f20] main audio output debug: removing "audio output" module "adummy"
+[00000077f6d74000] main keystore debug: removing "keystore" module "memory"

@@ -1,0 +1,13 @@
+Setting base environment
+Using VLC root dir /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-reproduction, build triplet aarch64-apple-darwin19 and host triplet aarch64-apple-darwin19
+sed (GNU sed) 4.10
+sed (GNU sed) 4.10
+/usr/bin/make
+/usr/local/bin/xz
+/usr/bin/gzip
+/usr/bin/tar
+/opt/homebrew/opt/python@3.14/bin/python3
+/usr/local/bin/pkg-config
+/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-reproduction/extras/tools/build/bin/autoconf
+/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-reproduction/extras/tools/build/bin/automake
+/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-reproduction/extras/tools/build/bin/libtool

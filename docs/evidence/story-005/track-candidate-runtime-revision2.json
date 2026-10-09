@@ -1,0 +1,190 @@
+{
+  "schema_version": 1,
+  "candidate_patch_revision": 2,
+  "selected_track_patch_sha256": "782fb6917fee94f208541ff8dc52d1674e81de220980ffc19a7a4aa18645e60b",
+  "candidate_contains": [
+    "0001",
+    "0002 revision 2",
+    "0003"
+  ],
+  "candidate_excludes": "experimental 0004 reversed by build owner",
+  "source_probe": "work/story005-track-runtime/selected-track-probe.c",
+  "compile": {
+    "argv": [
+      "clang",
+      "-DHAVE_CONFIG_H",
+      "-std=gnu11",
+      "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate",
+      "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-candidate/include",
+      "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-candidate",
+      "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/include",
+      "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-candidate/src",
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-track-runtime/selected-track-probe.c",
+      "-L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/lib/.libs",
+      "-L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/src/.libs",
+      "-lvlc",
+      "-lvlccore",
+      "-Wl,-rpath,/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/lib/.libs",
+      "-Wl,-rpath,/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/src/.libs",
+      "-o",
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-track-runtime/selected-track-probe"
+    ],
+    "exit_code": 0,
+    "output": ""
+  },
+  "enumeration": {
+    "mode": "enumerate",
+    "play_status": 0,
+    "observation_seconds": 5,
+    "video_track_count": 2,
+    "tracks": [
+      {
+        "id": "video/1",
+        "id_stable": true,
+        "selected": true,
+        "codec": 875967080
+      },
+      {
+        "id": "video/2",
+        "id_stable": true,
+        "selected": false,
+        "codec": 875967080
+      }
+    ]
+  },
+  "uri_rows": [
+    {
+      "mode": "internal",
+      "case": "default",
+      "track_id": null,
+      "exit_code": 0,
+      "stdout": "{\"mode\":\"internal\",\"request_index\":0,\"requested_us\":6000000,\"fast\":true,\"explicit_track_id\":false,\"status\":0,\"outer_timeout\":false,\"elapsed_us\":21799,\"has_picture\":true,\"picture_date\":1,\"date_valid\":true,\"date_minus_tick_zero\":0,\"chroma\":808596553,\"visible_width\":320,\"visible_height\":180,\"orientation\":0,\"sar_num\":1,\"sar_den\":1,\"export_geometry\":\"display-fit\",\"export_requested_width\":320,\"export_requested_height\":180,\"export_status\":0,\"export_saved\":true,\"export_width\":320,\"export_height\":180,\"export_bytes\":230400,\"export_orientation\":0,\"export_sar_num\":1,\"export_sar_den\":1}\n",
+      "rgba": {
+        "bytes": 230400,
+        "sha256": "9a45fb8f66f97870ba7af45ddd5d50c5991b30efb1af1882cab4e6ac8d487fc3",
+        "mean_channels": [
+          254.0,
+          0.0,
+          0.0,
+          255.0
+        ]
+      }
+    },
+    {
+      "mode": "internal",
+      "case": "red",
+      "track_id": "video/1",
+      "exit_code": 0,
+      "stdout": "{\"mode\":\"internal\",\"request_index\":0,\"requested_us\":6000000,\"fast\":true,\"explicit_track_id\":true,\"status\":0,\"outer_timeout\":false,\"elapsed_us\":13770,\"has_picture\":true,\"picture_date\":1,\"date_valid\":true,\"date_minus_tick_zero\":0,\"chroma\":808596553,\"visible_width\":320,\"visible_height\":180,\"orientation\":0,\"sar_num\":1,\"sar_den\":1,\"export_geometry\":\"display-fit\",\"export_requested_width\":320,\"export_requested_height\":180,\"export_status\":0,\"export_saved\":true,\"export_width\":320,\"export_height\":180,\"export_bytes\":230400,\"export_orientation\":0,\"export_sar_num\":1,\"export_sar_den\":1}\n",
+      "rgba": {
+        "bytes": 230400,
+        "sha256": "9a45fb8f66f97870ba7af45ddd5d50c5991b30efb1af1882cab4e6ac8d487fc3",
+        "mean_channels": [
+          254.0,
+          0.0,
+          0.0,
+          255.0
+        ]
+      }
+    },
+    {
+      "mode": "internal",
+      "case": "blue",
+      "track_id": "video/2",
+      "exit_code": 0,
+      "stdout": "{\"mode\":\"internal\",\"request_index\":0,\"requested_us\":6000000,\"fast\":true,\"explicit_track_id\":true,\"status\":0,\"outer_timeout\":false,\"elapsed_us\":14422,\"has_picture\":true,\"picture_date\":6000001,\"date_valid\":true,\"date_minus_tick_zero\":6000000,\"chroma\":808596553,\"visible_width\":320,\"visible_height\":180,\"orientation\":0,\"sar_num\":1,\"sar_den\":1,\"export_geometry\":\"display-fit\",\"export_requested_width\":320,\"export_requested_height\":180,\"export_status\":0,\"export_saved\":true,\"export_width\":320,\"export_height\":180,\"export_bytes\":230400,\"export_orientation\":0,\"export_sar_num\":1,\"export_sar_den\":1}\n",
+      "rgba": {
+        "bytes": 230400,
+        "sha256": "982a25337e2df2268c6e4d43c797fdaa053a206e09f7915dc3556a05086a20d1",
+        "mean_channels": [
+          0.0,
+          0.0,
+          255.0,
+          255.0
+        ]
+      }
+    },
+    {
+      "mode": "internal",
+      "case": "invalid",
+      "track_id": "video/999",
+      "exit_code": 6,
+      "stdout": "{\"mode\":\"internal\",\"request_index\":0,\"requested_us\":6000000,\"fast\":true,\"explicit_track_id\":true,\"status\":-2147483648,\"outer_timeout\":false,\"elapsed_us\":8257,\"has_picture\":false}\n"
+    },
+    {
+      "mode": "external",
+      "case": "default",
+      "track_id": null,
+      "exit_code": 0,
+      "stdout": "{\"mode\":\"external\",\"request_index\":0,\"requested_us\":6000000,\"fast\":true,\"explicit_track_id\":false,\"status\":0,\"outer_timeout\":false,\"elapsed_us\":66810,\"has_picture\":true,\"picture_date\":1,\"date_valid\":true,\"date_minus_tick_zero\":0,\"chroma\":808596553,\"visible_width\":320,\"visible_height\":180,\"orientation\":0,\"sar_num\":1,\"sar_den\":1,\"export_geometry\":\"display-fit\",\"export_requested_width\":320,\"export_requested_height\":180,\"export_status\":0,\"export_saved\":true,\"export_width\":320,\"export_height\":180,\"export_bytes\":230400,\"export_orientation\":0,\"export_sar_num\":1,\"export_sar_den\":1}\n",
+      "rgba": {
+        "bytes": 230400,
+        "sha256": "9a45fb8f66f97870ba7af45ddd5d50c5991b30efb1af1882cab4e6ac8d487fc3",
+        "mean_channels": [
+          254.0,
+          0.0,
+          0.0,
+          255.0
+        ]
+      }
+    },
+    {
+      "mode": "external",
+      "case": "red",
+      "track_id": "video/1",
+      "exit_code": 0,
+      "stdout": "{\"mode\":\"external\",\"request_index\":0,\"requested_us\":6000000,\"fast\":true,\"explicit_track_id\":true,\"status\":0,\"outer_timeout\":false,\"elapsed_us\":61489,\"has_picture\":true,\"picture_date\":1,\"date_valid\":true,\"date_minus_tick_zero\":0,\"chroma\":808596553,\"visible_width\":320,\"visible_height\":180,\"orientation\":0,\"sar_num\":1,\"sar_den\":1,\"export_geometry\":\"display-fit\",\"export_requested_width\":320,\"export_requested_height\":180,\"export_status\":0,\"export_saved\":true,\"export_width\":320,\"export_height\":180,\"export_bytes\":230400,\"export_orientation\":0,\"export_sar_num\":1,\"export_sar_den\":1}\n",
+      "rgba": {
+        "bytes": 230400,
+        "sha256": "9a45fb8f66f97870ba7af45ddd5d50c5991b30efb1af1882cab4e6ac8d487fc3",
+        "mean_channels": [
+          254.0,
+          0.0,
+          0.0,
+          255.0
+        ]
+      }
+    },
+    {
+      "mode": "external",
+      "case": "blue",
+      "track_id": "video/2",
+      "exit_code": 0,
+      "stdout": "{\"mode\":\"external\",\"request_index\":0,\"requested_us\":6000000,\"fast\":true,\"explicit_track_id\":true,\"status\":0,\"outer_timeout\":false,\"elapsed_us\":61959,\"has_picture\":true,\"picture_date\":6000001,\"date_valid\":true,\"date_minus_tick_zero\":6000000,\"chroma\":808596553,\"visible_width\":320,\"visible_height\":180,\"orientation\":0,\"sar_num\":1,\"sar_den\":1,\"export_geometry\":\"display-fit\",\"export_requested_width\":320,\"export_requested_height\":180,\"export_status\":0,\"export_saved\":true,\"export_width\":320,\"export_height\":180,\"export_bytes\":230400,\"export_orientation\":0,\"export_sar_num\":1,\"export_sar_den\":1}\n",
+      "rgba": {
+        "bytes": 230400,
+        "sha256": "982a25337e2df2268c6e4d43c797fdaa053a206e09f7915dc3556a05086a20d1",
+        "mean_channels": [
+          0.0,
+          0.0,
+          255.0,
+          255.0
+        ]
+      }
+    },
+    {
+      "mode": "external",
+      "case": "invalid",
+      "track_id": "video/999",
+      "exit_code": 6,
+      "stdout": "{\"mode\":\"external\",\"request_index\":0,\"requested_us\":6000000,\"fast\":true,\"explicit_track_id\":true,\"status\":-2147483648,\"outer_timeout\":false,\"elapsed_us\":54242,\"has_picture\":false}\n"
+    }
+  ],
+  "to_files_failure": {
+    "diagnostic_log": "work/story005-track-runtime/tofiles-diagnostic.stderr.log",
+    "registered_log": "docs/evidence/story-005/track-candidate-tofiles-20261006T030030Z.stderr.log",
+    "failure_case": "external NULL/default first request",
+    "status": -2147483648,
+    "success": false,
+    "bytes": 0,
+    "diagnosis": "Existing JSON output-format validator upper bound JPEG rejects public RGBA/ARGB. This precedes selected-track consumption.",
+    "repair": "Revision 3 validates public range PNG..ARGB and adds boundaries/invalid-format cleanup transport regression."
+  },
+  "binary_hashes": {
+    "work/story005-track-runtime/selected-track-probe": "19251c52e4758b30b85f0bf2f39e1b000f8fe521e2ec53685fd2ae4ac0a8682a",
+    "work/story005-master-candidate/src/.libs/libvlccore.dylib": "a2a3337c9d82e692943f5b31efc7c11bf0e525d0861d51e2560e5cfc8748fde0",
+    "work/story005-master-candidate/lib/.libs/libvlc.dylib": "dcb914c996ea99e28a07489f0860cf07cbccc45c3d64525e804cfe5ee6ca2ba9",
+    "work/story005-master-candidate/bin/.libs/vlc-preparser": "470d42beffb618989c170199e6b7899f633744e56e35cd93e8ff0ea9fd3899d1"
+  },
+  "limits": "Eight sequential URI requests exactly once each; no native hover, broad latency, player track changes, source freshness or hard process reap proof. Default/red picture time remains zero for target6s, inherited separate time behavior gap."
+}

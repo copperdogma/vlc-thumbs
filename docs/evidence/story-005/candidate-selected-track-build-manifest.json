@@ -1,0 +1,86 @@
+{
+  "source_pin": "2e358f3098c2f2b7621d1dc568de8b61ad786322",
+  "source_diff_sha256": "9e0bf3a2bcadf9814040821e70e43e811457a7582f795471883f454156843099",
+  "candidate_product_inputs": {
+    "bin/preparser/main.c": "1e32732877b14d98d2154c730f6550bd9479388fef8268ed1a23d059589753f2",
+    "include/vlc_preparser.h": "9d04bdf059e94753b82deb91f9a7436a17501a3ccacb47e95b1b79f863449a1b",
+    "include/vlc_preparser_ipc.h": "0f020a7755e83c496a04ab0aa9b9420518a710ca60cb0369dea362065f72fe5c",
+    "include/vlc_process.h": "56c0262e33d3129444597650de71c9b74b496e2d23b8bae0535ad0b31df2bbbb",
+    "lib/parser.c": "01c15c7998063ffa8a3e4a5a8da7354637b69b7473d1fd90388db77f4a6f6842",
+    "modules/misc/preparser_serializer/json/fromjson.c": "d1245a855ecc13391a2992bf3cb0b2b193d7b37a5a63ab9073875dc6b4eb0d8a",
+    "modules/misc/preparser_serializer/json/tojson.c": "4b5b6ec6089328775f5e7c3cf7b814be639f1845a6394c8dc1c98df6c11926de",
+    "src/misc/picture.c": "b8bf7b22839f514880c4df4dd783849b0287b3dbbe15d93dc9e757b401f582a5",
+    "src/posix/process.c": "2f777b8c4930bd11187491921a6f2b56061bb2de058528fe861a88f08192e501",
+    "src/preparser/external.c": "b097b36618a954ed9ad3de58afa88f5858c7d6d8641ac09acc07d0c645fcacf6",
+    "src/preparser/internal.c": "d68b3659267cf54b7512b6bdcb5ecea3e9d8eea39ebd9846ccdf27c3997b4c0e",
+    "src/preparser/ipc.c": "31e26fe707e6e24dd205d56c0aa40705d489566701267d396323f668044adbd1",
+    "test/Makefile.am": "1f856406c9e31880556d9267b427ec283b3eb583c2a4a51ff55f5ad77bd3b30a",
+    "test/src/meson.build": "0bac81b330dbf284eb7f42f8490d1d44005c6dc1bffed25ac305151c545fd500",
+    "test/src/misc/image.c": "5df565faa6162879e4dfdf6b9799c56ce379b04632504c752e1045a251ed14fd",
+    "test/src/misc/process.c": "a2ac9ae837852c970ce58621a456130c33bbeb8a0a4d3d7567e24923a2679daf",
+    "test/src/preparser/thumbnail.c": "db6ae473faccb1ace12fff4c192fa0bd0060dbec8477ef2dcb1e21c8c1312364",
+    "test/src/preparser/thumbnail_to_files.c": "4b1569a534fde49646324cf70c855ab152da6beeb5b3885e831aae0553113111"
+  },
+  "stage": "0001 + approved 0002 revision3 +0003; experimental0004 exactly reversed",
+  "build_receipt": "docs/evidence/story-005/candidate-build-20261006T025838Z.json",
+  "compile_receipt": "docs/evidence/story-005/candidate-build-20261006T030450Z.json",
+  "outputs": {
+    "src/.libs/libvlccore.9.dylib": {
+      "sha256": "a2a3337c9d82e692943f5b31efc7c11bf0e525d0861d51e2560e5cfc8748fde0",
+      "bytes": 2745552
+    },
+    "lib/.libs/libvlc.12.dylib": {
+      "sha256": "dcb914c996ea99e28a07489f0860cf07cbccc45c3d64525e804cfe5ee6ca2ba9",
+      "bytes": 241296
+    },
+    "bin/vlc-preparser-static": {
+      "sha256": "1f415e90c94554f9ebdbbddc771c2e4f9853c4892bdaac388a897ee35eacd157",
+      "bytes": 82920
+    },
+    "modules/.libs/libmp4_plugin.dylib": {
+      "sha256": "c6ffb891d1aa27f33a15a377a0c3653fe551c09ea6f0845861aefc32ae45c1bd",
+      "bytes": 320672
+    },
+    "modules/.libs/libpreparserserializer_json_plugin.dylib": {
+      "sha256": "2dcc66c3779725d82625eeefce05f4646f8ddbe7efb4a548ca856b6116560a1e",
+      "bytes": 178120
+    },
+    "test/.libs/test_src_preparser_thumbnail": {
+      "sha256": "c0e8fc12f0eb7a8f7413ed2dff8f4b4c32fb11c0429ea719238049229b094779",
+      "bytes": 78736
+    },
+    "test/.libs/test_src_preparser_thumbnail_to_files": {
+      "sha256": "04757d3bc13022efbdb16d6d2241c662a2291459af6233cfca186fe9e3b65189",
+      "bytes": 76856
+    }
+  },
+  "runtime": {
+    "DYLD_LIBRARY_PATH": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/src/.libs:/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/lib/.libs",
+    "VLC_LIB_PATH": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/modules",
+    "VLC_PLUGIN_PATH": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/modules/.libs",
+    "VLC_TEST_TIMEOUT": "60"
+  },
+  "experimental_plugin_preserved": "work/story005-scout/experimental0004-preserved/libmp4_plugin.dylib",
+  "baseline_source_clean": true,
+  "scope": "Root-approved exact revision2-to3 delta applied. No app packaging/XCTest/nativeUI repeated. Candidate app remains historical0001+0003; actual runtime frozen for fresh real-URI parity acquisition.",
+  "tests": {
+    "thumbnail": {
+      "receipt": "docs/evidence/story-005/track-candidate-rev3-thumbnail-20261006T030500Z.json",
+      "passed": true,
+      "scope": "Each internal/external mode:6 original requests,1 cancellation,6 selected-ID constructions (4 callback completions +2 rejections),1 unsubmitted cleanup. Both request-type transport ownership/legacy/invalid/acknowledgment/direction/malformed checks;5 output-format transport cases (3 valid,2 out-of-range)."
+    },
+    "tofiles": {
+      "receipt": "docs/evidence/story-005/track-candidate-rev3-tofiles-20261006T030503Z.json",
+      "passed": true,
+      "scope": "Each internal/external mode:6 selected-ID constructions (4 callback completions +2 rejections),3 original PNG output cases. Internal alpha crop+alignment checks (2) complete. No skips logged."
+    }
+  },
+  "serializer_build_receipt": "docs/evidence/story-005/candidate-build-20261006T030443Z.json",
+  "revision2_preserved": "work/story005-scout/selected-track-rev2-preserved",
+  "patch": {
+    "path": "patches/vlc-master/0002-preparser-selected-video-track.patch",
+    "sha256": "47ffdf635a3db8becf75cb9629f7ecefe4d185421de15546a2a0a50782c35a9b"
+  },
+  "previous_failure_preserved": "docs/evidence/story-005/track-candidate-tofiles-20261006T030030Z.json",
+  "outer_guard": "90s limit; both actual tests exit0; no live group members after cleanup"
+}

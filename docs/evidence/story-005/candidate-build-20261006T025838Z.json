@@ -1,0 +1,62 @@
+{
+  "source_pin": "2e358f3098c2f2b7621d1dc568de8b61ad786322",
+  "source": "work/upstream/vlc-master-story005-candidate",
+  "output": "work/story005-master-candidate",
+  "command": [
+    "make",
+    "-C",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate",
+    "-j4",
+    "all"
+  ],
+  "cwd": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs",
+  "environment_overrides": {
+    "VLC_PATH": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/bin:/opt/homebrew/opt/python@3.14/bin:/usr/local/bin",
+    "PKG_CONFIG_LIBDIR": "/nonexistent/story005-pkgconfig-isolation",
+    "PKG_CONFIG_PATH": "",
+    "ACLOCAL_PATH": "/usr/local/share/aclocal",
+    "VLC_FORCE_KERNELVERSION": "19",
+    "VLC_PREBUILT_CONTRIBS_URL": "https://artifacts.videolan.org/vlc/macos-arm64/vlc-contrib-aarch64-apple-darwin19-15b71e3fa6d49ed2845dfb1324760984eae6101c.tar.zst",
+    "NCURSES_LIBS": "-L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/contrib/aarch64-apple-darwin19/lib -lncursesw",
+    "SDKROOT": "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk"
+  },
+  "host_arch": "arm64",
+  "initial_free_bytes": 5828194304,
+  "disk_stop_floor_bytes": 1073741824,
+  "status": "succeeded",
+  "log": "docs/evidence/story-005/candidate-build-20261006T025838Z.log",
+  "source_hashes": {
+    "extras/package/macosx/build.sh": "30f1c4a98fa015c442689ab195f394fd9ce1ff75d355a35d6589027556867b2b",
+    "extras/package/macosx/env.build.sh": "08feac636d8eb778bd4f6738ffca5bc4bd6f03c6006aef520733d4f6d031be15",
+    "extras/tools/packages.mak": "ae3dfcd9d6ddc6e25e76ba5e63cc52ba91912ca6bb82772d92bb445ba79a1fc4",
+    "contrib/src/main.mak": "95119bbb9f3171a71bd20159fb894bc315b99ef39f2db6c2af81adef6f31e053"
+  },
+  "source_status": " M bin/preparser/main.c\n M include/vlc_preparser.h\n M include/vlc_preparser_ipc.h\n M include/vlc_process.h\n M lib/parser.c\n M modules/misc/preparser_serializer/json/fromjson.c\n M modules/misc/preparser_serializer/json/tojson.c\n M src/misc/picture.c\n M src/posix/process.c\n M src/preparser/external.c\n M src/preparser/internal.c\n M src/preparser/ipc.c\n M test/Makefile.am\n M test/src/meson.build\n M test/src/misc/image.c\n M test/src/preparser/thumbnail.c\n M test/src/preparser/thumbnail_to_files.c\n?? test/src/misc/process.c\n",
+  "source_diff_sha256": "a7771dcc13988095f2bf6260d7c4df0abfa5ab68b079cd26241446ac50fe6d8e",
+  "candidate_product_inputs": {
+    "bin/preparser/main.c": "1e32732877b14d98d2154c730f6550bd9479388fef8268ed1a23d059589753f2",
+    "include/vlc_preparser.h": "9d04bdf059e94753b82deb91f9a7436a17501a3ccacb47e95b1b79f863449a1b",
+    "include/vlc_preparser_ipc.h": "0f020a7755e83c496a04ab0aa9b9420518a710ca60cb0369dea362065f72fe5c",
+    "include/vlc_process.h": "56c0262e33d3129444597650de71c9b74b496e2d23b8bae0535ad0b31df2bbbb",
+    "lib/parser.c": "01c15c7998063ffa8a3e4a5a8da7354637b69b7473d1fd90388db77f4a6f6842",
+    "modules/misc/preparser_serializer/json/fromjson.c": "daaa6737d2ad5b85152558d86ee703be6ec6414029f9b1f999f482589c78b91f",
+    "modules/misc/preparser_serializer/json/tojson.c": "4b5b6ec6089328775f5e7c3cf7b814be639f1845a6394c8dc1c98df6c11926de",
+    "src/misc/picture.c": "b8bf7b22839f514880c4df4dd783849b0287b3dbbe15d93dc9e757b401f582a5",
+    "src/posix/process.c": "2f777b8c4930bd11187491921a6f2b56061bb2de058528fe861a88f08192e501",
+    "src/preparser/external.c": "b097b36618a954ed9ad3de58afa88f5858c7d6d8641ac09acc07d0c645fcacf6",
+    "src/preparser/internal.c": "d68b3659267cf54b7512b6bdcb5ecea3e9d8eea39ebd9846ccdf27c3997b4c0e",
+    "src/preparser/ipc.c": "31e26fe707e6e24dd205d56c0aa40705d489566701267d396323f668044adbd1",
+    "test/Makefile.am": "1f856406c9e31880556d9267b427ec283b3eb583c2a4a51ff55f5ad77bd3b30a",
+    "test/src/meson.build": "0bac81b330dbf284eb7f42f8490d1d44005c6dc1bffed25ac305151c545fd500",
+    "test/src/misc/image.c": "5df565faa6162879e4dfdf6b9799c56ce379b04632504c752e1045a251ed14fd",
+    "test/src/misc/process.c": "a2ac9ae837852c970ce58621a456130c33bbeb8a0a4d3d7567e24923a2679daf",
+    "test/src/preparser/thumbnail.c": "f958c6ebb626f559f644965063e799783902d1a8d2bb798b9491273e60a3e10b",
+    "test/src/preparser/thumbnail_to_files.c": "4b1569a534fde49646324cf70c855ab152da6beeb5b3885e831aae0553113111"
+  },
+  "elapsed_seconds": 46.2,
+  "minimum_free_bytes": 5772304384,
+  "pid": 65724,
+  "exit_code": 0,
+  "final_free_bytes": 5771669504,
+  "preservation": "No deletion or cleanup performed. Existing builds/apps untouched."
+}

@@ -1,0 +1,12 @@
+Test Suite 'Selected tests' started at 2026-10-06 00:01:56.422.
+Test Suite 'VLCMacOSXTests.xctest' started at 2026-10-06 00:01:56.423.
+Test Suite 'VLCThumbnailCacheTest' started at 2026-10-06 00:01:56.423.
+Test Case '-[VLCThumbnailCacheTest testOwnedVolumeENOSPCRAMAndRecovery]' started.
+ENOSPC owned_volume=/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-cache-enospc-proof/20261006T060056Z/mount device=/dev/disk6s1 errno=28 filler_bytes=20185088 ram_fallback=1 seed_reopen=1 disk_recovery=1
+Test Case '-[VLCThumbnailCacheTest testOwnedVolumeENOSPCRAMAndRecovery]' passed (0.031 seconds).
+Test Suite 'VLCThumbnailCacheTest' passed at 2026-10-06 00:01:56.454.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.031 (0.032) seconds
+Test Suite 'VLCMacOSXTests.xctest' passed at 2026-10-06 00:01:56.454.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.031 (0.032) seconds
+Test Suite 'Selected tests' passed at 2026-10-06 00:01:56.454.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.031 (0.032) seconds

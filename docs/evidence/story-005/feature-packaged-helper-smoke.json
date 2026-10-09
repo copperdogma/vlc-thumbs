@@ -1,0 +1,106 @@
+{
+  "scope": "Packaged signed helper direct execution from unrelated cwd with no DYLD/FFmpeg path; no app movement, GUI launch, pointer or playback proof",
+  "helper_sha256": "5f5142d4f6bc268fa3cb6c51aa8842df0fd6700ebaef9ffbef4c9163e8e8e1a6",
+  "rows": [
+    {
+      "command": [
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/VLC.app/Contents/MacOS/vlc-timeline-preview",
+        "--time-us",
+        "125000",
+        "--input",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-public-fixtures002/media/standard.mp4",
+        "--video-input-id",
+        "0",
+        "--video-count",
+        "1",
+        "--max-width",
+        "320",
+        "--max-height",
+        "180"
+      ],
+      "cwd": "/private/tmp",
+      "environment": {
+        "PATH": "/usr/bin:/bin"
+      },
+      "returncode": 0,
+      "reply": {
+        "version": 4,
+        "ok": true,
+        "sampling": "keyframe",
+        "requested_us": 125000,
+        "actual_us": 0,
+        "width": 320,
+        "height": 180,
+        "channels": 4,
+        "payload_bytes": 230400,
+        "video_input_id": 0,
+        "video_count": 1,
+        "mapping": "single",
+        "video_track_number": -1,
+        "decoded_frames": 1,
+        "timeline_origin_us": 0,
+        "bytes_read": 229376,
+        "read_calls": 7,
+        "seek_calls": 0,
+        "open_count": 1,
+        "operation_us": 12559,
+        "flat_scan_bytes": 0,
+        "flat_scan_reads": 0,
+        "flat_scan_seeks": 0,
+        "flat_scan_nodes": 0
+      },
+      "pixel_sha256": "260f3f5224d46a1b1fd6ef95d421b4d12cb927b60d2e2421b3d027c8a5269fa7",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/VLC.app/Contents/MacOS/vlc-timeline-preview",
+        "--time-us",
+        "125000",
+        "--input",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-public-fixtures002/media/positive-start.mkv",
+        "--video-input-id",
+        "1",
+        "--video-count",
+        "1",
+        "--max-width",
+        "320",
+        "--max-height",
+        "180"
+      ],
+      "cwd": "/private/tmp",
+      "environment": {
+        "PATH": "/usr/bin:/bin"
+      },
+      "returncode": 0,
+      "reply": {
+        "version": 4,
+        "ok": true,
+        "sampling": "keyframe",
+        "requested_us": 125000,
+        "actual_us": 5000000,
+        "width": 320,
+        "height": 180,
+        "channels": 4,
+        "payload_bytes": 230400,
+        "video_input_id": 1,
+        "video_count": 1,
+        "mapping": "matroska-track-number-flat-v1",
+        "video_track_number": 1,
+        "decoded_frames": 1,
+        "timeline_origin_us": 0,
+        "bytes_read": 380419,
+        "read_calls": 20,
+        "seek_calls": 9,
+        "open_count": 1,
+        "operation_us": 11803,
+        "flat_scan_bytes": 2097,
+        "flat_scan_reads": 5,
+        "flat_scan_seeks": 6,
+        "flat_scan_nodes": 15
+      },
+      "pixel_sha256": "5fa29cca7e879fb75136a03398e0f26c2b98ac162e264313eedbd48d1f4655b6",
+      "stderr": ""
+    }
+  ]
+}

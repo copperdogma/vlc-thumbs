@@ -1,0 +1,2 @@
+/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/autotools/test-driver: line 119: 62943 Abort trap: 6           "$@" >> "$log_file" 2>&1
+FAIL: test_modules_video_output_opengl_filters

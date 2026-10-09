@@ -1,0 +1,11 @@
+# Unmodified upstream Apple archive header omissions
+
+The guarded conventional run 070917Z passed distribution/archive generation, minimal VPATH configure and core compilation with GNU sed and scoped Git discovery. Mandatory Apple audio compilation failed because `audio_output/apple/channel_layout.h` was absent from the generated distribution. The same header exists in the exact pinned checkout and unchanged normal app builds compile it successfully.
+
+The pinned modules/audio_output/Makefile.am target SOURCES for avsamplebuffer, auhal and audiounit_ios include channel_layout.c but omit its header. The compiler then reports the same missing header from channel_layout.c, coreaudio_common.c and avsamplebuffer.m. This is an upstream distribution manifest failure, not a hover-helper product failure.
+
+Before recommending a retry, a read-only inventory compared local/relative quoted header includes in archived C/Objective-C/C++ sources with the archive entries. It found six upstream omissions (not a full conditional dependency proof). The same macOS graph has mandatory samplebufferdisplay under HAVE_DARWIN with unconditional imports of `video_output/apple/VLCDrawable.h` and `video_output/apple/vlc_pip_controller.h`, both absent. Additional conditional omissions are audio_output/apple/avaudiosession_common.h (iOS family), misc/medialibrary/LazyPreparser.h and video_output/win32/sensors.h; these are outside the current macOS compiler failure.
+
+Conventional solution: declare the existing required headers in the normal Automake distribution/source lists. [Automake's distribution manual](https://www.gnu.org/software/automake/manual/1.9.2/html_node/Dist.html) documents automatic source distribution and EXTRA_DIST. Do not copy synthetic headers into an extracted archive, weaken its read-only protections, disable the mandatory platform graph, or claim distcheck passed.
+
+Root owns scope decision before any source/manifest change or further recipe retry. The failed archive is retained by exact APFS clone/hash in distcheck-git-boundary-archive-provenance.json; local dependency observations are in distcheck-local-header-inventory.json. Current 56-file public series and app production sources remain unchanged.

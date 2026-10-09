@@ -1,0 +1,29 @@
+-- The CXX compiler identification is AppleClang 21.0.0.21000334
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- IPO / LTO enabled
+-- Performing Test flag_no_deprecated
+-- Performing Test flag_no_deprecated - Success
+-- Looking for ppoll
+-- Looking for ppoll - not found
+CMake Warning at CMakeLists.txt:82 (message):
+  re2c 2 or later was not found; changes to src/*.in.cc will not affect your
+  build.
+
+
+-- Looking for fork
+-- Looking for fork - found
+-- Looking for pipe
+-- Looking for pipe - found
+-- Configuring done (3.7s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_APPLE_SILICON_PROCESSOR
+
+
+-- Build files have been written to: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-reproduction/extras/tools/ninja/vlc_build

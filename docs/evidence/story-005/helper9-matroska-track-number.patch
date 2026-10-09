@@ -1,0 +1,12 @@
+--- a/libavformat/matroskadec.c
++++ b/libavformat/matroskadec.c
+@@ -3253,6 +3253,9 @@
+             av_free(key_id_base64);
+             return AVERROR(ENOMEM);
+         }
++        /* Helper-private TrackNumber identity; out-of-range is unmappable. */
++        st->id = track->num > 0 && track->num <= INT_MAX
++               ? (int)track->num : -1;
+         par = st->codecpar;
+ 
+         par->codec_id  = codec_id;

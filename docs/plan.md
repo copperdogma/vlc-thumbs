@@ -1,5 +1,7 @@
 # Implementation plan
 
+**Current source10 closeout, 2026-10-09:** Current three-pair playback/audio/drop/resource qualification passes with measured overhead; ordinary main reader proof is legitimately inherited after source comparison. All test processes are closed and VoiceOver is ON. The final 29-artifact reviewer-copy checker passes; Phases1/2 are complete at the disclosed bounded scope and work halts ready for owner review. See [current verification](evidence/story-005/current-source10-final-verification.md). The final local package is `work/story005-current-source10-final-reviewer001/package`; Phase3 is untouched.
+
 The deep dive is recorded in [timeline implementation planning](research/timeline-implementation-plan.md).
 The Ideal remains the implementation-free North Star. The source/build route,
 proposed architecture, tests and compromises live in that synthesis, the spec
@@ -40,14 +42,44 @@ and the feature and contribution stories.
    preview app is updated; [acceptance ledger](evidence/story-004/current-acceptance-ledger.md)
    retains resource costs, inherited reader proof and unqualified broader claims.
 4. **[Story 002b / 005 — open-source contribution](stories/story-005-open-source-contribution.md)
-   (Pending, next):** investigate VLC's current contribution process, conventions
+   (In Progress; phases1/2 complete at disclosed bounded scope, phase3 untouched):** investigate VLC's current contribution process, conventions
    and existing thumbnail architecture; improve/port and independently qualify
    a focused contribution; then submit through the official process and shepherd
    review. The [initial scout](research/upstream-contribution-scout.md) finds
    current development infrastructure worth testing before retaining our helper.
    Phase 1 must settle the target and architecture before broad implementation.
-   Cam requested this before bookmarks. This turn creates the plan only;
-   upstream acceptance and the full investigation remain unproven.
+   Current source10 evidence qualifies normal checks, helper77, complete conventional
+   distcheck, app packaging and bounded main/custom-fullscreen hover. Three matched
+   60-second playback pairs pass with captured audio and measured CPU/RSS overhead;
+   ordinary main reader evidence is inherited after the exact source comparison.
+   The final reviewer-copy checker passes. Preview-visible/fullscreen reader,
+   unavailable platforms, uninterrupted public-recipe execution and the
+   owner-deferred shutdown cause remain disclosed limits in
+   [current verification](evidence/story-005/current-source10-final-verification.md).
+   The following blocker-loop history preserves earlier failures and decisions;
+   its old readiness statements do not override that current verification.
+   Cam now authorizes investigation and improvement with SOL6.1 medium builders,
+   stopping ready to submit. ADR004 now selects a retained helper through normal
+   FFmpeg9 contrib/build and master's existing hover owner after comparison.
+   [Port plan](evidence/story-005/feature-port-plan.md) fixes disjoint ownership
+   and contracts. Normal helper/dependency builds and focused native tests pass
+   within their recorded freezes; independent source review repairs are clear.
+   On resume, the normal helper passed77 checks with unchanged pixel/time
+   replies, the feature app packaged successfully and two warm NAS layouts
+   preserved36 paired results. Phase1 is complete. Approved12-target cleanup is
+   complete; fresh resume capacity was26.2GiB. Corrected hover-duration mapping
+   passes12 registered tests and app relocation/isolation. Test-only fixture
+   isolation/synchronization repairs pass independent review and the final quiet
+   registered suite:288 counted cases, one optional ENOSPC skip, zero failures.
+   Independent helper77/custom-AVIO and separate actual ENOSPC checks pass.
+   Revision11 has59source paths/five patches; revision10 and its historical tests/runtime remain preserved. The series adds five existing headers to three source lists.
+   The extracted archive compiles/links, but lean distcheck fails at runtime tests:
+   80 pass,5 skip,7 fail. Preserve those failures and bounded attribution in
+   [the triage note](evidence/story-005/distcheck-runtime-triage.md); no broader
+   upstream repair or test waiver follows.
+   Native candidate007 displays actual previews on all four surfaces and replaces
+   images after media/track changes. Cam approved screen/mouse use and open-source
+   contributor credit with existing GPL/LGPL notices and AI disclosure. Controls20/arm and six60s playback intervals are recorded; finite native closeout supports scoped ordinary-control preservation. Actual reader activation and broader platform coverage remain unavailable. The candidate shutdown crash and proven unchanged upstream discovery-reference defect are disclosed with exact causality unproved. See the current readiness ledger and final validation. Keep the1GiB reserve; the newly authorized blocker-resolution loop now addresses required full-build/distribution, shutdown and fresh app/native/reader/platform gaps before halting short of submission or contact.
 5. **[Story 003 — bookmarks](stories/story-003-timeline-bookmarks.md):** compact
    one-to-three-word labels, visible markers, hover, add/edit/delete/seek and
    independent durable storage. Reuse 002's timeline context/presentation.

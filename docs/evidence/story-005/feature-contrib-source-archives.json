@@ -1,0 +1,26 @@
+{
+  "ffmpeg-9.0.tar.xz": {
+    "sha512": "2e2fea606b290c306bdef13b4c8efb7a4b138ffa16f94f608f85877f5e7ca93980bda8219eeeed8343c463d302c7a2c46b14902ccbbe1e53483f9411b31b9c69",
+    "bytes": 12032020,
+    "source": "prior official sourcefetch cache; checked pinned SHA512SUMS again",
+    "checksum_file": "work/upstream/vlc-master-story005-candidate/contrib/src/ffmpeg/SHA512SUMS"
+  },
+  "gsm-1.0-pl22.tar.gz": {
+    "sha512": "f4284f096ed4d606ddece5c1b28edb63feacc26a0b664f1350c040dbf50113d27bedfd9896bf1620cb4fc3a6c8f6a5244955a6c625ded833dcee607c63c97dd2",
+    "bytes": 66583,
+    "source": "prior official sourcefetch cache; checked pinned SHA512SUMS again",
+    "checksum_file": "work/upstream/vlc-master-story005-candidate/contrib/src/gsm/SHA512SUMS"
+  },
+  "lame-3.100.tar.gz": {
+    "sha512": "0844b9eadb4aacf8000444621451277de365041cc1d97b7f7a589da0b7a23899310afd4e4d81114b9912aa97832621d20588034715573d417b2923948c08634b",
+    "bytes": 1524133,
+    "source": "prior official sourcefetch cache; checked pinned SHA512SUMS again",
+    "checksum_file": "work/upstream/vlc-master-story005-candidate/contrib/src/lame/SHA512SUMS"
+  },
+  "openjpeg-2.5.4.tar.gz": {
+    "sha512": "702a10e20caaf8209684ded7c9fcf32f5ba6a972cf2d9fcf2611cdc6a446d2c3bb60324205758e6b6f92278c8cf4ef0fbae511e6ffb45ed6e8df514db0c6ab25",
+    "bytes": 2157028,
+    "source": "prior official sourcefetch cache; checked pinned SHA512SUMS again",
+    "checksum_file": "work/upstream/vlc-master-story005-candidate/contrib/src/openjpeg/SHA512SUMS"
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "scope": "Bounded warm generated-only local/NAS admission comparison; no nativeUI,coldcache,p95or causal claim",
+  "helper_hashes": {
+    "prior": "6d90de5bded764f4471d7c70db86fe62da1df72685493d7e93720ab418880483",
+    "current": "b2b5e5d13bf6d3e92f9e23193ec516d86b1f54547783fb5c53ce2fbbf6dadf73"
+  },
+  "acquisitions": [
+    {
+      "receipt": "work/story005-nas-admission001/results.json",
+      "receipt_sha256": "b1d0d6746b6b22b708eb64075ad36b998e687d90756eaf18807d84b1cce6b698",
+      "complete": true,
+      "stop_reason": null,
+      "fixture": {
+        "sha256": "4a2355ecf6551a265aee936f5ef0a475de0e2517b96208bb24ab05502e2a4da8",
+        "bytes": 801904,
+        "cluster_count": 1200,
+        "input_id": 1,
+        "video_count": 1
+      },
+      "minimum_free_bytes": 1502244864,
+      "matches": 18,
+      "pairs": 18,
+      "NAS": {
+        "prior": {
+          "ready_ms": [
+            39.14400000212481,
+            44.13570799806621,
+            22.465540998382494
+          ],
+          "ready_counters": {
+            "bytes_read": 32768,
+            "read_calls": 1,
+            "seek_calls": 0,
+            "open_count": 1
+          }
+        },
+        "current": {
+          "ready_ms": [
+            42.90029200637946,
+            23.098416997527238,
+            50.74149999563815
+          ],
+          "ready_counters": {
+            "bytes_read": 647169,
+            "read_calls": 1202,
+            "seek_calls": 1202,
+            "open_count": 1,
+            "flat_scan_bytes": 614401,
+            "flat_scan_reads": 1201,
+            "flat_scan_seeks": 1202,
+            "flat_scan_nodes": 1207
+          }
+        }
+      }
+    },
+    {
+      "receipt": "work/story005-nas-admission002/results.json",
+      "receipt_sha256": "df9e73291a5f75927b30f53fb86427eea71025b3de4d4bd4c76f4114684b8555",
+      "complete": true,
+      "stop_reason": null,
+      "fixture": {
+        "sha256": "b4ec452c1c95b8cc18cd9802617444402a4dc6f2994536584621653cff5c7f8e",
+        "bytes": 9452522,
+        "cluster_count": 228,
+        "input_id": 1,
+        "video_count": 1
+      },
+      "minimum_free_bytes": 1164750848,
+      "matches": 18,
+      "pairs": 18,
+      "NAS": {
+        "prior": {
+          "ready_ms": [
+            55.06483399949502,
+            44.446375002735294,
+            23.14079200004926
+          ],
+          "ready_counters": {
+            "bytes_read": 32768,
+            "read_calls": 1,
+            "seek_calls": 0,
+            "open_count": 1
+          }
+        },
+        "current": {
+          "ready_ms": [
+            50.01862499921117,
+            86.019958005636,
+            38.089915993623435
+          ],
+          "ready_counters": {
+            "bytes_read": 150144,
+            "read_calls": 231,
+            "seek_calls": 231,
+            "open_count": 1,
+            "flat_scan_bytes": 117376,
+            "flat_scan_reads": 230,
+            "flat_scan_seeks": 231,
+            "flat_scan_nodes": 240
+          }
+        }
+      }
+    }
+  ],
+  "remaining_owned_process_group_members": [],
+  "user_preview_pid_alive": true,
+  "preserved_NAS_copies": "Exact unique paths and owner/hash/stat receipts remain in ignored work; no deletion performed"
+}

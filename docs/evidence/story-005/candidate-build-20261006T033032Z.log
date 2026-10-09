@@ -1,0 +1,41 @@
+  GEN      stamp-revision
+/Applications/Xcode.app/Contents/Developer/usr/bin/make  all-am
+  CC       libvlccore_la-missing.lo
+  CC       libvlccore_la-libvlc.lo
+  CC       media_source/libvlccore_la-media_source.lo
+  CC       media_source/libvlccore_la-media_tree.lo
+  CC       interface/libvlccore_la-interface.lo
+  CC       playlist/libvlccore_la-content.lo
+  CC       playlist/libvlccore_la-control.lo
+  CC       playlist/libvlccore_la-export.lo
+  CC       playlist/libvlccore_la-item.lo
+  CC       playlist/libvlccore_la-notify.lo
+  CC       playlist/libvlccore_la-player.lo
+  CC       playlist/libvlccore_la-playlist.lo
+  CC       playlist/libvlccore_la-preparse.lo
+  CC       playlist/libvlccore_la-request.lo
+  CC       playlist/libvlccore_la-shuffle.lo
+  CC       playlist/libvlccore_la-sort.lo
+  CC       preparser/libvlccore_la-fetcher.lo
+  CC       preparser/libvlccore_la-ipc.lo
+  CC       preparser/libvlccore_la-internal.lo
+  CC       preparser/libvlccore_la-preparser.lo
+  CC       preparser/libvlccore_la-external.lo
+  CC       misc/libvlccore_la-picture.lo
+  CC       posix/libvlccore_la-process.lo
+/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-candidate/extras/package/macosx/../../../src/misc/picture.c:81:12: warning: 'aligned_alloc' is only available on macOS 10.15 or newer [-Wunguarded-availability-new]
+   81 |     return aligned_alloc(64, size);
+      |            ^~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/malloc/_malloc.h:67:35: note: 'aligned_alloc' has been marked as being introduced in macOS 10.15 here, but the deployment target is macOS 10.13.0
+   67 | void * __sized_by_or_null(__size) aligned_alloc(size_t __alignment, size_t __size) __result_use_check __alloc_align(1) __alloc_size(2) _MALLOC_TYPED(malloc_type_aligned_alloc, 2) __OSX_AVAILABLE(10.15) __IOS_AVAILABLE(13.0) __TVOS_AVAILABLE(13.0) __WATCHOS_AVAILABLE(6.0);
+      |                                   ^
+/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-candidate/extras/package/macosx/../../../src/misc/picture.c:81:12: note: enclose 'aligned_alloc' in a __builtin_available check to silence this warning
+   81 |     return aligned_alloc(64, size);
+      |            ^~~~~~~~~~~~~           
+  GEN      vlc-plugin.pc
+1 warning generated.
+  CCLD     libvlccore.la
+ld: warning: double slash removed from -dylib_install_name (//lib/libvlccore.9.dylib)
+config.status: creating src/vlc-plugin.pc
+ld: warning: object file (/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/src/.libs/libvlccore_objc.a[2](libvlccore_objc_la-dirs.o)) was built for newer 'macOS' version (27.0) than being linked (11.0)
+ld: warning: object file (/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/src/.libs/libvlccore_objc.a[3](libvlccore_objc_la-netconf.o)) was built for newer 'macOS' version (27.0) than being linked (11.0)

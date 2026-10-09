@@ -1,0 +1,88 @@
+diff --git a/modules/audio_output/Makefile.am b/modules/audio_output/Makefile.am
+index 291c4092ff9046866b673c16d1670cf9dd5bd7a2..962cef96c47f40198a6cc400b6afe684bb92b5a3 100644
+--- a/modules/audio_output/Makefile.am
++++ b/modules/audio_output/Makefile.am
+@@ -148,18 +148,22 @@ aout_PLUGINS += libwaveout_plugin.la
+ endif
+ 
+ libavsamplebuffer_plugin_la_SOURCES = audio_output/apple/avsamplebuffer.m \
+-	audio_output/apple/channel_layout.c
++	audio_output/apple/channel_layout.c audio_output/apple/channel_layout.h
+ if HAVE_IOS
+-libavsamplebuffer_plugin_la_SOURCES += audio_output/apple/avaudiosession_common.m
++libavsamplebuffer_plugin_la_SOURCES += audio_output/apple/avaudiosession_common.m \
++	audio_output/apple/avaudiosession_common.h
+ endif
+ if HAVE_TVOS
+-libavsamplebuffer_plugin_la_SOURCES += audio_output/apple/avaudiosession_common.m
++libavsamplebuffer_plugin_la_SOURCES += audio_output/apple/avaudiosession_common.m \
++	audio_output/apple/avaudiosession_common.h
+ endif
+ if HAVE_XROS
+-libavsamplebuffer_plugin_la_SOURCES += audio_output/apple/avaudiosession_common.m
++libavsamplebuffer_plugin_la_SOURCES += audio_output/apple/avaudiosession_common.m \
++	audio_output/apple/avaudiosession_common.h
+ endif
+ if HAVE_WATCHOS
+-libavsamplebuffer_plugin_la_SOURCES += audio_output/apple/avaudiosession_common.m
++libavsamplebuffer_plugin_la_SOURCES += audio_output/apple/avaudiosession_common.m \
++	audio_output/apple/avaudiosession_common.h
+ endif
+ libavsamplebuffer_plugin_la_LDFLAGS = $(AM_LDFLAGS) \
+ 	-Wl,-framework,CoreMedia,-framework,Foundation,-framework,AVFoundation
+@@ -167,7 +171,7 @@ libavsamplebuffer_plugin_la_OBJCFLAGS = $(AM_OBJCFLAGS) -fobjc-arc
+ 
+ libauhal_plugin_la_SOURCES = audio_output/apple/auhal.c \
+ 	audio_output/apple/coreaudio_common.c audio_output/apple/coreaudio_common.h \
+-	audio_output/apple/channel_layout.c
++	audio_output/apple/channel_layout.c audio_output/apple/channel_layout.h
+ 
+ libauhal_plugin_la_LDFLAGS = $(AM_LDFLAGS) $(aout_RPATH) \
+ 	-Wl,-framework,CoreAudio,-framework,AudioUnit,-framework,AudioToolbox,-framework,CoreServices
+@@ -176,7 +180,8 @@ aout_PLUGINS += libauhal_plugin.la libavsamplebuffer_plugin.la
+ endif
+ libaudiounit_ios_plugin_la_SOURCES = audio_output/apple/audiounit_ios.m \
+ 	audio_output/apple/coreaudio_common.c audio_output/apple/coreaudio_common.h \
+-	audio_output/apple/channel_layout.c audio_output/apple/avaudiosession_common.m
++	audio_output/apple/channel_layout.c audio_output/apple/channel_layout.h \
++	audio_output/apple/avaudiosession_common.m audio_output/apple/avaudiosession_common.h
+ libaudiounit_ios_plugin_la_LDFLAGS = $(AM_LDFLAGS) $(aout_RPATH) \
+ 	-Wl,-framework,Foundation,-framework,CoreAudio,-framework,AudioToolbox,-framework,UIKit,-framework,AVFoundation
+ if HAVE_IOS_OR_TVOS
+diff --git a/modules/misc/Makefile.am b/modules/misc/Makefile.am
+index dc0e4da9c216d69e5d8e598cf9be582d639f0967..06b8ba1493a5c8111074cfcbc3bd4c6e557bf238 100644
+--- a/modules/misc/Makefile.am
++++ b/modules/misc/Makefile.am
+@@ -133,6 +133,7 @@ libmedialibrary_plugin_la_SOURCES = \
+ 	misc/medialibrary/entities.cpp \
+ 	misc/medialibrary/Thumbnailer.cpp \
+ 	misc/medialibrary/medialibrary.h \
++	misc/medialibrary/LazyPreparser.h \
+ 	misc/medialibrary/fs/device.h \
+ 	misc/medialibrary/fs/device.cpp \
+ 	misc/medialibrary/fs/directory.h \
+diff --git a/modules/video_output/Makefile.am b/modules/video_output/Makefile.am
+index 4488d6b37fb3e77d98601324b9d3b89e9e01035d..f274a87464f69dc8f5d9a9b58ca8fc8704308a98 100644
+--- a/modules/video_output/Makefile.am
++++ b/modules/video_output/Makefile.am
+@@ -90,7 +90,9 @@ endif
+ 
+ if HAVE_DARWIN
+ if !HAVE_WATCHOS
+-libsamplebufferdisplay_plugin_la_SOURCES = video_output/apple/VLCSampleBufferDisplay.m codec/vt_utils.c codec/vt_utils.h
++libsamplebufferdisplay_plugin_la_SOURCES = video_output/apple/VLCSampleBufferDisplay.m \
++	video_output/apple/VLCDrawable.h video_output/apple/vlc_pip_controller.h \
++	codec/vt_utils.c codec/vt_utils.h
+ libsamplebufferdisplay_plugin_la_OBJCFLAGS = $(AM_OBJCFLAGS) -fobjc-arc
+ if HAVE_OSX
+ libsamplebufferdisplay_plugin_la_LDFLAGS = $(AM_LDFLAGS) $(vout_RPATH) \
+@@ -104,7 +106,8 @@ endif
+ endif
+ 
+ if HAVE_IOS_OR_TVOS
+-libpictureinpicturecontroller_plugin_la_SOURCES = video_output/apple/VLCPictureInPictureController.m
++libpictureinpicturecontroller_plugin_la_SOURCES = video_output/apple/VLCPictureInPictureController.m \
++	video_output/apple/VLCDrawable.h video_output/apple/vlc_pip_controller.h
+ libpictureinpicturecontroller_plugin_la_OBJCFLAGS = $(AM_OBJCFLAGS) -fobjc-arc
+ libpictureinpicturecontroller_plugin_la_LDFLAGS = $(AM_LDFLAGS) $(vout_RPATH) \
+ 	-Wl,-framework,AVFoundation,-framework,Foundation,-framework,AVKit,-framework,UIKit,-framework,QuartzCore,-framework,CoreMedia

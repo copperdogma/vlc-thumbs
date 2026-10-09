@@ -1,0 +1,10 @@
+{
+  "test_receipt": "docs/evidence/story-005/process-candidate-registered-20261006T023110Z.json",
+  "compile_receipt": "docs/evidence/story-005/candidate-build-20261006T023054Z.json",
+  "core": "work/story005-master-candidate/src/.libs/libvlccore.9.dylib",
+  "core_sha256": "e3064ad3e1b1f205bc7a3115b26a5bc77252eb231ebc5313eabbc2f316dc321c",
+  "runtime_environment": {
+    "DYLD_LIBRARY_PATH": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/src/.libs:/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/lib/.libs"
+  },
+  "source_diff_sha256": "7fbe053beb59309761a487777886acae9c7bd77b44ef5b8576ceed58ec9f5a74"
+}

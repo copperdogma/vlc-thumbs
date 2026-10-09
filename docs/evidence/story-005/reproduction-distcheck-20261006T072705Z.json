@@ -1,0 +1,18 @@
+{
+  "stage": "distcheck",
+  "command": [
+    "/bin/bash",
+    "work/story005-scout/reproduction-distcheck-source-headers-frozen.sh"
+  ],
+  "cwd": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs",
+  "initial_free_bytes": 6877626368,
+  "stage_preflight_gib": 3.5,
+  "floor_bytes": 1073741824,
+  "time_limit_seconds": 1200,
+  "status": "failed",
+  "pid": 88510,
+  "elapsed_seconds": 437.5,
+  "minimum_free_bytes": 6876102656,
+  "exit_code": 2,
+  "final_free_bytes": 28268838912
+}

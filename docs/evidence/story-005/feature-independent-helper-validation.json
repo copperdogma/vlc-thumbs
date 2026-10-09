@@ -1,0 +1,52 @@
+{
+  "utc": "2026-10-06T06:30:23Z",
+  "source_tree": "8ec1cdec6939c67eeb6bef0ff1bb035c168d0592",
+  "normal_helper": {
+    "path": "work/story005-master-reproduction/bin/vlc-timeline-preview",
+    "sha256": "5783e21c3cc0fc18a475a31037cfaadbc80374ad4c910b7495edb72420b5a17f"
+  },
+  "helper_checks": {
+    "count": 77,
+    "pass": true,
+    "results_path": "work/story005-master-reproduction/independent-fixtures/helper-results.json",
+    "sha256": "2d2e5342b29746d4514019f304b38b26abcfe2f49307ade18f87cc1ba46e5f46",
+    "receipt": "reproduction-checks-20261006T062812Z.json"
+  },
+  "fixture_manifests": {
+    "media": {
+      "sha256": "8142b67dcd662ed98cd2b3eeb1bd2ddc0486a5c5d1e62844c56c89478d24d5a9",
+      "path": "work/story005-master-reproduction/independent-fixtures/media/manifest.json"
+    },
+    "identity": {
+      "sha256": "1dabfc5be9c8b38c72541844da5eb606c95b7ac826d37805712aa11a2e029a7d",
+      "path": "work/story005-master-reproduction/independent-fixtures/identity/manifest.json"
+    },
+    "admission": {
+      "sha256": "87072303cc4de829f0d9b70e40be3de91cfe79ef00167991b2d0d24ed82716ab",
+      "path": "work/story005-master-reproduction/independent-fixtures/admission/manifest.json"
+    }
+  },
+  "static_archives": {
+    "libavformat.a": "9f0b239fe91a1c14608de25739896823af0c938f7fdb1246c21f5154664c2b24",
+    "libavcodec.a": "68874594b689febc4e15e244727c6b2d36ab8418242476b8e2a75361e1d9e946",
+    "libavutil.a": "44e34bb72100ccda24d6669f273f28629ccdb3a6283ad3abcb3afea61accc38e",
+    "libswscale.a": "0fe2ecaf6ef318042e98cc5d1b7d414aa330aa7ae5a5f9bae1b7f5a3960c0b3c"
+  },
+  "custom_avio": {
+    "receipt": "reproduction-io-20261006T062901Z.json",
+    "binary_sha256": "6ccdbf340161dac2e6e08b885d4deb94186f64915335515fcff984f0a6ad2b1f",
+    "pass": true,
+    "packet_count": 1200,
+    "faults": [
+      "unsupported size query",
+      "injected restoration failure",
+      "injected mid-scan read failure"
+    ],
+    "instrumentation": "ASan/UBSan on public probe/callback code; linked FFmpeg not instrumented, leak detection disabled"
+  },
+  "transcripts": {
+    "reproduction-conventional-transcript.sh": "3be8553b60450cf59292e7dc6485204e4d30dfb58054b78d15392db7b5278374",
+    "reproduction-public-io.sh": "9d1f70a67ec64da081a5f6caaff9b5b93d7fcbfe36a0cd2672cedd72ce094d76"
+  },
+  "scope": "Independent tools/contrib/source/helper/app output, immutable verified archives only. Public fixture recipes compiled and executed, no ignored feature implementation or borrowed mutable objects. Final native registered test order and lean distcheck pending test-only support delta."
+}

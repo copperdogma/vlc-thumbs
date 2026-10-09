@@ -1,0 +1,2007 @@
+diff --git a/modules/gui/macosx/Makefile.am b/modules/gui/macosx/Makefile.am
+index e9b1caf66ce843cb9db3734ea6ebae66594082be..dcd8e0250b85b72e508a5e47b608df0388097b1b 100644
+--- a/modules/gui/macosx/Makefile.am
++++ b/modules/gui/macosx/Makefile.am
+@@ -889,6 +889,8 @@ endif
+ libmacosx_plugin_ladir = $(prefix)/share/macosx/Contents/Resources
+ 
+ libmacosx_plugin_la_SOURCES += \
++	gui/macosx/timeline/VLCTimelineContext.h \
++	gui/macosx/timeline/VLCTimelineContext.m \
+ 	gui/macosx/timeline/VLCThumbnailService.h \
+ 	gui/macosx/timeline/VLCThumbnailService.m \
+ 	gui/macosx/timeline/VLCThumbnailWorker.h \
+diff --git a/modules/gui/macosx/UI/SimplePreferences.xib b/modules/gui/macosx/UI/SimplePreferences.xib
+index 8cffa079f50ad67cbbcd0abda0ea227aa76cd83e..66661897c2dc0edcba2e0b2a51384f9331fd2d27 100644
+--- a/modules/gui/macosx/UI/SimplePreferences.xib
++++ b/modules/gui/macosx/UI/SimplePreferences.xib
+@@ -77,6 +77,7 @@
+                 <outlet property="intf_pauseitunesPopup" destination="3911" id="UZN-lH-STQ"/>
+                 <outlet property="intf_playbackBehaviourBox" destination="EKZ-iB-CMo" id="mbV-7q-aS2"/>
+                 <outlet property="intf_playbackControlBox" destination="CZP-ZN-k6p" id="voN-Ji-9aw"/>
++                <outlet property="intf_timelineThumbnailsCheckbox" destination="timeline-preview-checkbox" id="timeline-preview-outlet"/>
+                 <outlet property="intf_statusIconCheckbox" destination="r3P-eU-tEX" id="ixl-Al-ddh"/>
+                 <outlet property="intf_updateCheckbox" destination="3556" id="YsJ-GG-xVt"/>
+                 <outlet property="mediaLibraryAddFolderButton" destination="AsR-G7-aHo" id="rWZ-Ns-RgB"/>
+@@ -299,10 +300,10 @@ Gw
+         </window>
+         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+         <customView translatesAutoresizingMaskIntoConstraints="NO" id="2311" userLabel="Interface">
+-            <rect key="frame" x="0.0" y="0.0" width="597" height="573"/>
++            <rect key="frame" x="0.0" y="0.0" width="597" height="599"/>
+             <subviews>
+                 <box borderType="line" title="General Settings" translatesAutoresizingMaskIntoConstraints="NO" id="kup-aY-Wqq">
+-                    <rect key="frame" x="18" y="421" width="563" height="131"/>
++                    <rect key="frame" x="18" y="447" width="563" height="131"/>
+                     <view key="contentView" id="wFl-aV-3Hn">
+                         <rect key="frame" x="4" y="5" width="555" height="111"/>
+                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+@@ -371,9 +372,9 @@ Gw
+                     </view>
+                 </box>
+                 <box borderType="line" title="Playback control" translatesAutoresizingMaskIntoConstraints="NO" id="CZP-ZN-k6p">
+-                    <rect key="frame" x="18" y="328" width="563" height="89"/>
++                    <rect key="frame" x="18" y="328" width="563" height="115"/>
+                     <view key="contentView" id="gj4-zO-E26">
+-                        <rect key="frame" x="4" y="5" width="555" height="69"/>
++                        <rect key="frame" x="4" y="5" width="555" height="95"/>
+                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                         <subviews>
+                             <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3919">
+@@ -385,7 +386,7 @@ Gw
+                                 </textFieldCell>
+                             </textField>
+                             <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3920">
+-                                <rect key="frame" x="144" y="35" width="398" height="25"/>
++                                <rect key="frame" x="144" y="61" width="398" height="25"/>
+                                 <popUpButtonCell key="cell" type="push" bezelStyle="rounded" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" id="3921">
+                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                     <font key="font" metaFont="message"/>
+@@ -396,7 +397,7 @@ Gw
+                                 </connections>
+                             </popUpButton>
+                             <button mirrorLayoutDirectionWhenInternationalizing="always" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SYi-7I-cKE">
+-                                <rect key="frame" x="15" y="14" width="201" height="18"/>
++                                <rect key="frame" x="15" y="40" width="201" height="18"/>
+                                 <buttonCell key="cell" type="check" title="Display end of playback view" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="Vsg-0v-H35">
+                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                     <font key="font" metaFont="system"/>
+@@ -405,8 +406,21 @@ Gw
+                                     <action selector="interfaceSettingChanged:" target="-2" id="SR0-g4-Kx9"/>
+                                 </connections>
+                             </button>
++                            <button mirrorLayoutDirectionWhenInternationalizing="always" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="timeline-preview-checkbox">
++                                <rect key="frame" x="15" y="14" width="220" height="18"/>
++                                <buttonCell key="cell" type="check" title="Show timeline thumbnails" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="timeline-preview-cell">
++                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
++                                    <font key="font" metaFont="system"/>
++                                </buttonCell>
++                                <connections>
++                                    <action selector="interfaceSettingChanged:" target="-2" id="timeline-preview-action"/>
++                                </connections>
++                            </button>
+                         </subviews>
+                         <constraints>
++                            <constraint firstItem="timeline-preview-checkbox" firstAttribute="leading" secondItem="SYi-7I-cKE" secondAttribute="leading" id="timeline-preview-leading"/>
++                            <constraint firstItem="timeline-preview-checkbox" firstAttribute="top" secondItem="SYi-7I-cKE" secondAttribute="bottom" constant="8" id="timeline-preview-top"/>
++                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="timeline-preview-checkbox" secondAttribute="trailing" constant="17" id="timeline-preview-trailing"/>
+                             <constraint firstItem="SYi-7I-cKE" firstAttribute="leading" secondItem="gj4-zO-E26" secondAttribute="leading" constant="17" id="5SR-Aq-aAG"/>
+                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="SYi-7I-cKE" secondAttribute="trailing" constant="17" id="5a5-Eq-PCg"/>
+                             <constraint firstAttribute="trailing" secondItem="3920" secondAttribute="trailing" constant="17" id="M7f-H3-4Mk"/>
+@@ -420,7 +434,7 @@ Gw
+                                     </userDefinedRuntimeAttribute>
+                                 </userDefinedRuntimeAttributes>
+                             </constraint>
+-                            <constraint firstAttribute="bottom" secondItem="SYi-7I-cKE" secondAttribute="bottom" constant="12" id="d1m-O6-Uxb"/>
++                            <constraint firstAttribute="bottom" secondItem="timeline-preview-checkbox" secondAttribute="bottom" constant="12" id="d1m-O6-Uxb"/>
+                             <constraint firstItem="3920" firstAttribute="leading" secondItem="3919" secondAttribute="trailing" constant="17" id="gLu-nZ-tla"/>
+                         </constraints>
+                     </view>
+diff --git a/modules/gui/macosx/main/VLCMain.m b/modules/gui/macosx/main/VLCMain.m
+index 4992cf4d6367fa4fab96a5661670df11305e7237..3cb76b91d2925a336d6389d9669725f056c7fe52 100644
+--- a/modules/gui/macosx/main/VLCMain.m
++++ b/modules/gui/macosx/main/VLCMain.m
+@@ -31,6 +31,8 @@
+ #endif
+ 
+ #import "main/VLCMain.h"
++#import "timeline/VLCTimelineContext.h"
++#import "timeline/VLCThumbnailService.h"
+ 
+ #include <stdlib.h>                                      /* malloc(), free() */
+ #include <string.h>
+@@ -325,6 +327,7 @@ static VLCMain *sharedInstance = nil;
+ 
+ - (void)applicationWillFinishLaunching:(NSNotification *)aNotification
+ {
++    [VLCTimelineContext sharedContext];
+     // Only Metal shader in use at the moment is for holiday theming, so only load during this time.
+     // Change this if you are going to add new shaders!
+     if (((VLCApplication *)NSApplication.sharedApplication).winterHolidaysTheming) {
+@@ -413,6 +416,9 @@ static VLCMain *sharedInstance = nil;
+         return;
+     _interfaceIsTerminating = true;
+ 
++    [[VLCTimelineContext sharedContext] invalidate];
++    [[VLCThumbnailService sharedService] shutdown];
++
+     NSNotificationCenter *notiticationCenter = NSNotificationCenter.defaultCenter;
+     if (notification == nil) {
+         [notiticationCenter postNotificationName: NSApplicationWillTerminateNotification object: nil];
+diff --git a/modules/gui/macosx/main/macosx.m b/modules/gui/macosx/main/macosx.m
+index 79626d622688dfbf891b05cd57772f0d6760a1ea..ad4a342322623d62fe9066ca2a43209753159d2f 100644
+--- a/modules/gui/macosx/main/macosx.m
++++ b/modules/gui/macosx/main/macosx.m
+@@ -51,6 +51,9 @@ int  WindowOpen   (vlc_window_t *);
+                          "videos in 'fullscreen'. The screen number correspondence can be found in "\
+                          "the video device selection menu.")
+ 
++#define TIMELINE_THUMBNAILS_TEXT N_("Show timeline thumbnails")
++#define TIMELINE_THUMBNAILS_LONGTEXT N_("Show keyframe previews while hovering over the playback timeline.")
++
+ #define OPAQUENESS_TEXT N_("Opaqueness")
+ #define OPAQUENESS_LONGTEXT N_("Set the transparency of the video output. 1 is non-transparent (default) " \
+                                 "0 is fully transparent.")
+@@ -138,6 +141,7 @@ vlc_module_begin()
+     set_section(N_("Appearance"), 0)
+         add_bool("macosx-nativefullscreenmode", true, NATIVE_FULLSCREEN_MODE_ON_LION_TEXT, NATIVE_FULLSCREEN_MODE_ON_LION_LONGTEXT)
+         add_bool("macosx-statusicon", true, DISPLAY_STATUS_ICONMENU_TEXT, DISPLAY_STATUS_ICONMENU_LONGTEXT)
++        add_bool("macosx-timeline-previews", true, TIMELINE_THUMBNAILS_TEXT, TIMELINE_THUMBNAILS_LONGTEXT)
+         add_bool("macosx-icon-change", true, ICONCHANGE_TEXT, ICONCHANGE_LONGTEXT)
+         add_integer_with_range("macosx-max-volume", 125, 60, 200, VOLUME_MAX_TEXT, NULL)
+         add_obsolete_bool("macosx-large-text")  /* since 4.0.0 */
+diff --git a/modules/gui/macosx/playqueue/VLCPlayerController.h b/modules/gui/macosx/playqueue/VLCPlayerController.h
+index 500ffcf297490163443a0e8f6ec85e44eada3f01..e6a667d1f02142f439dafec72283be46a3320243 100644
+--- a/modules/gui/macosx/playqueue/VLCPlayerController.h
++++ b/modules/gui/macosx/playqueue/VLCPlayerController.h
+@@ -331,6 +331,10 @@ extern const CGFloat VLCVolumeDefault;
+  */
+ @property (readonly, nullable) VLCInputItem *currentMedia;
+ 
++/** Owned timeline preview values copied coherently under the player lock.
++ * No input item, track or ES identifier pointer is returned. */
++- (NSDictionary *)timelinePreviewSnapshot;
++
+ /**
+  * get the relevant media library item for the current media item
+  * @return the current media library media, NULL if no current input item OR is not an ML item
+diff --git a/modules/gui/macosx/playqueue/VLCPlayerController.m b/modules/gui/macosx/playqueue/VLCPlayerController.m
+index 0ede0c43088e17c2306747311028469ff410360b..eda72a3b14a1480d71e79a0633714ae627cb6c22 100644
+--- a/modules/gui/macosx/playqueue/VLCPlayerController.m
++++ b/modules/gui/macosx/playqueue/VLCPlayerController.m
+@@ -111,6 +111,9 @@ const CGFloat VLCVolumeDefault = 1.;
+     NSTimer *_playbackHasTruelyEndedTimer;
+     VLCInputItem *_currentMedia;
+ 
++    /* Accessed only under the player lock, including synchronous listener callbacks. */
++    uint64_t _timelineSourceEpoch;
++
+     struct vlc_player_timer_point _player_time;
+ }
+ 
+@@ -127,6 +130,7 @@ const CGFloat VLCVolumeDefault = 1.;
+ - (void)updateTimeWithTimer:(NSTimer *)timer;
+ - (void)updateTime:(vlc_tick_t)time forceUpdate:(BOOL)force;
+ - (void)currentMediaItemChanged:(input_item_t *)newMediaItem;
++- (void)advanceTimelineSourceEpoch;
+ - (void)stateChanged:(enum vlc_player_state)state;
+ - (void)errorChanged:(enum vlc_player_error)error;
+ - (void)newBufferingValue:(float)bufferValue;
+@@ -169,6 +173,7 @@ const CGFloat VLCVolumeDefault = 1.;
+ static void cb_player_current_media_changed(vlc_player_t *p_player, input_item_t *p_newMediaItem, void *p_data)
+ {
+     VLC_UNUSED(p_player);
++    [(__bridge VLCPlayerController *)p_data advanceTimelineSourceEpoch];
+     dispatch_async(dispatch_get_main_queue(), ^{
+         VLCPlayerController *playerController = (__bridge VLCPlayerController *)p_data;
+         [playerController currentMediaItemChanged:p_newMediaItem];
+@@ -178,6 +183,9 @@ static void cb_player_current_media_changed(vlc_player_t *p_player, input_item_t
+ static void cb_player_state_changed(vlc_player_t *p_player, enum vlc_player_state state, void *p_data)
+ {
+     VLC_UNUSED(p_player);
++    if (state == VLC_PLAYER_STATE_STARTED || state == VLC_PLAYER_STATE_STOPPING ||
++        state == VLC_PLAYER_STATE_STOPPED)
++        [(__bridge VLCPlayerController *)p_data advanceTimelineSourceEpoch];
+     dispatch_async(dispatch_get_main_queue(), ^{
+         VLCPlayerController *playerController = (__bridge VLCPlayerController *)p_data;
+         [playerController stateChanged:state];
+@@ -656,6 +664,7 @@ static int BossCallback(vlc_object_t *p_this,
+         _position = -1.f;
+         _time = VLC_TICK_INVALID;
+         _p_player = player;
++        _timelineSourceEpoch = 0;
+         vlc_player_Lock(_p_player);
+         // FIXME: initialize state machine here
+         _playerListenerID = vlc_player_AddListener(_p_player,
+@@ -774,6 +783,63 @@ static int BossCallback(vlc_object_t *p_this,
+     return _currentMedia;
+ }
+ 
++- (void)advanceTimelineSourceEpoch
++{
++    /* vlc_player_cbs are synchronous and player-locked; do not dispatch this update. */
++    NSAssert(_timelineSourceEpoch < UINT64_MAX, @"Timeline source epoch exhausted");
++    _timelineSourceEpoch++;
++}
++
++- (NSDictionary *)timelinePreviewSnapshot
++{
++    NSString *uri = nil;
++    NSString *stableID = @"";
++    int inputID = -1;
++    size_t selectedCount = 0;
++    vlc_player_Lock(_p_player);
++    input_item_t *item = vlc_player_GetCurrentMedia(_p_player);
++    if (item) {
++        char *value = input_item_GetURI(item);
++        if (value)
++            uri = [[NSString alloc] initWithUTF8String:value];
++        free(value);
++    }
++    uint64_t sourceEpoch = _timelineSourceEpoch;
++    vlc_tick_t duration = vlc_player_GetLength(_p_player);
++    int capabilities = vlc_player_GetCapabilities(_p_player);
++    BOOL started = vlc_player_IsStarted(_p_player);
++    size_t count = vlc_player_GetTrackCount(_p_player, VIDEO_ES);
++    if (count <= 128) {
++        for (size_t index = 0; index < count; index++) {
++            const struct vlc_player_track *track = vlc_player_GetTrackAt(_p_player, VIDEO_ES, index);
++            if (!track->selected)
++                continue;
++            selectedCount++;
++            if (vlc_es_id_IsStrIdStable(track->es_id)) {
++                const char *value = vlc_es_id_GetStrId(track->es_id);
++                stableID = value ? [[NSString alloc] initWithUTF8String:value] : @"";
++                inputID = vlc_es_id_GetInputId(track->es_id);
++            }
++        }
++    }
++    vlc_player_Unlock(_p_player);
++
++    NSURL *url = uri ? [NSURL URLWithString:uri] : nil;
++    BOOL localURL = url.isFileURL && (!url.host.length || [url.host isEqualToString:@"localhost"]);
++    BOOL eligible = started && localURL && duration > 0 &&
++        (capabilities & VLC_PLAYER_CAP_SEEK) && count > 0 && count <= 128 &&
++        selectedCount == 1 && stableID.length > 0 && inputID >= 0;
++    NSMutableDictionary *snapshot = [@{
++        @"sourceEpoch": @(sourceEpoch),
++        @"duration": @(MAX(duration, 0)), @"eligible": @(eligible),
++        @"videoStableID": stableID ?: @"", @"videoInputID": @(inputID),
++        @"videoCount": @(count)
++    } mutableCopy];
++    if (url)
++        snapshot[@"url"] = url;
++    return [snapshot copy];
++}
++
+ - (nullable VLCMediaLibraryMediaItem *)currentMediaLibraryItem
+ {
+     NSURL * const url = [NSURL URLWithString:self.currentMedia.MRL];
+diff --git a/modules/gui/macosx/preferences/VLCSimplePrefsController.h b/modules/gui/macosx/preferences/VLCSimplePrefsController.h
+index 2569a0f3cce61d82a543e00c6e4f6804f3d30781..cd850cd9d253b33e777304fc7a23b23594e3a25e 100644
+--- a/modules/gui/macosx/preferences/VLCSimplePrefsController.h
++++ b/modules/gui/macosx/preferences/VLCSimplePrefsController.h
+@@ -112,6 +112,7 @@
+ @property (readwrite, weak) IBOutlet NSPopUpButton *intf_languagePopup;
+ @property (readwrite, weak) IBOutlet NSTextField *intf_languageLabel;
+ @property (readwrite, weak) IBOutlet NSButton *intf_statusIconCheckbox;
++@property (readwrite, weak) IBOutlet NSButton *intf_timelineThumbnailsCheckbox;
+ @property (readwrite, weak) IBOutlet NSButton *intf_displayTrackNumberPlayQueueCheckBox;
+ 
+ // intf pane - control box
+diff --git a/modules/gui/macosx/preferences/VLCSimplePrefsController.m b/modules/gui/macosx/preferences/VLCSimplePrefsController.m
+index d3e4318a28c085be0e5c126af26c84161948cc41..cb0cc50ce1ea97796155ac4496d0656c35c83f57 100644
+--- a/modules/gui/macosx/preferences/VLCSimplePrefsController.m
++++ b/modules/gui/macosx/preferences/VLCSimplePrefsController.m
+@@ -414,6 +414,7 @@ create_toolbar_item(NSString *itemIdent, NSString *name, NSString *desc, NSStrin
+     [_intf_continueplaybackLabel setStringValue:_NS("Continue playback")];
+     [_intf_displayEndOfPlaybackViewCheckBox setTitle:_NS("Display end of playback view")];
+     [_intf_statusIconCheckbox setTitle: _NS("Display VLC status menu icon")];
++    [_intf_timelineThumbnailsCheckbox setTitle:_NS("Show timeline thumbnails")];
+     [_intf_displayTrackNumberPlayQueueCheckBox setTitle: _NS("Display album track numbers in play queue")];
+ 
+     [_intf_playbackBehaviourBox setTitle:_NS("Playback behaviour")];
+@@ -645,6 +646,7 @@ create_toolbar_item(NSString *itemIdent, NSString *name, NSString *desc, NSStrin
+     self.intf_displayTrackNumberPlayQueueCheckBox.state = [defaults boolForKey:VLCDisplayTrackNumberPlayQueueKey] ? NSControlStateValueOn : NSControlStateValueOff;
+ 
+     [self setupButton:_intf_statusIconCheckbox forBoolValue: "macosx-statusicon"];
++    [self setupButton:_intf_timelineThumbnailsCheckbox forBoolValue:"macosx-timeline-previews"];
+ 
+     [self setupButton:_video_nativeFullscreenCheckbox forBoolValue: "macosx-nativefullscreenmode"];
+     [self setupButton:_video_embeddedCheckbox forBoolValue: "embedded-video"];
+@@ -987,6 +989,9 @@ static inline void save_string_list(intf_thread_t * __unused p_intf, id object,
+         config_PutInt("metadata-network-access", [_intf_artCheckbox state]);
+ 
+         config_PutInt("macosx-statusicon", [_intf_statusIconCheckbox state]);
++        config_PutInt("macosx-timeline-previews", _intf_timelineThumbnailsCheckbox.state);
++        /* The standard configuration-change notification below applies this
++         * setting at runtime; explicit command-line variables retain precedence. */
+ 
+         [self changeModule:@"growl" inConfig:@"control" enable:[_intf_enableNotificationsCheckbox state] == NSOnState];
+ 
+diff --git a/modules/gui/macosx/tests/Makefile.am b/modules/gui/macosx/tests/Makefile.am
+index 370d477628a15a1f861e63bb50c38faf7c6b9092..236372a136271c11a6870747fdabd463bcf5cc26 100644
+--- a/modules/gui/macosx/tests/Makefile.am
++++ b/modules/gui/macosx/tests/Makefile.am
+@@ -37,7 +37,12 @@ VLCMacOSXTests_SOURCES += \
+ 	gui/macosx/timeline/VLCThumbnailCache.m \
+ 	gui/macosx/timeline/VLCThumbnailScheduler.m \
+ 	gui/macosx/timeline/VLCThumbnailWorker.m \
+-	gui/macosx/timeline/VLCThumbnailService.m
++	gui/macosx/timeline/VLCThumbnailService.m \
++	gui/macosx/timeline/VLCTimelinePlayerContextTest.m \
++	gui/macosx/timeline/VLCTimelineContext.m \
++	gui/macosx/playqueue/VLCPlayerController.m \
++	gui/macosx/playqueue/VLCPlayerTitle.m \
++	gui/macosx/playqueue/VLCPlayerChapter.m
+ check_PROGRAMS += vlc-thumbnail-test-helper
+ vlc_thumbnail_test_helper_SOURCES = gui/macosx/tests/VLCThumbnailTestHelper.c
+ VLCMacOSXTests.xctest: vlc-thumbnail-test-helper$(EXEEXT)
+@@ -71,7 +76,8 @@ VLCMacOSXTests_LDFLAGS = \
+ 	-Wl,-framework,XCTest \
+ 	-Wl,-framework,Foundation \
+ 	-Wl,-framework,Cocoa \
+-	-Wl,-framework,IOKit
++	-Wl,-framework,IOKit \
++	-Wl,-framework,ScriptingBridge
+ 
+ VLCMacOSXTests_LDADD = \
+ 	$(top_builddir)/lib/libvlc.la \
+@@ -97,7 +103,66 @@ mostlyclean-local: mostlyclean-local-macosx-xctest
+ mostlyclean-local-macosx-xctest:
+ 	rm -rf $(macosx_gui_xctest_bundles)
+ 
+-check-macosx: VLCMacOSXTests.xctest
++# Read real plugin configuration from the normal build tree. Cache generation
++# runs in its own process; XCTest disables plugin scanning to avoid loading a
++# second copy of the Objective-C GUI classes linked into its test bundle.
++# Invoke the built Mach-O directly: macOS SIP purges DYLD_* before the libtool
++# shell wrapper can use the scoped uninstalled library/framework paths.
++macosx-test-plugin-cache: libmacosx_plugin.la
++	$(AM_V_at)$(MAKE) -C $(top_builddir)/bin vlc-cache-gen$(EXEEXT)
++	$(AM_V_at)DYLD_LIBRARY_PATH="$(abs_top_builddir)/src/.libs:$(abs_top_builddir)/lib/.libs" \
++		DYLD_FRAMEWORK_PATH="$(CONTRIB_DIR):$(CONTRIB_DIR)/Frameworks" \
++		"$(abs_top_builddir)/bin/.libs/vlc-cache-gen$(EXEEXT)" "$(abs_builddir)"
++
++$(macosx_gui_xctest_bundles): | macosx-test-plugin-cache
++AM_TESTS_ENVIRONMENT = VLC_PLUGIN_PATH="$(abs_builddir)"; export VLC_PLUGIN_PATH;
++
++check-macosx: $(macosx_gui_xctest_bundles)
++	$(AM_V_at)VLC_PLUGIN_PATH="$(abs_builddir)"; export VLC_PLUGIN_PATH; result=0; for bundle in $(macosx_gui_xctest_bundles); do $(XCTEST_LOG_COMPILER) $$bundle || result=$$?; done; exit $$result
++
++# Focused context seam keeps its injected stubs separate from service tests.
++check_PROGRAMS += VLCTimelineContextTests
++macosx_gui_xctest_bundles += VLCTimelineContextTests.xctest
++VLCTimelineContextTests_SOURCES = \
++	gui/macosx/timeline/VLCTimelineContext.m \
++	gui/macosx/timeline/VLCTimelineContextTests.m \
++	gui/macosx/timeline/VLCTimelineContextTestSupport.m
++VLCTimelineContextTests_CPPFLAGS = $(VLCMacOSXTests_CPPFLAGS)
++VLCTimelineContextTests_OBJCFLAGS = $(VLCMacOSXTests_OBJCFLAGS)
++VLCTimelineContextTests_LDFLAGS = $(VLCMacOSXTests_LDFLAGS)
++VLCTimelineContextTests_LDADD = $(top_builddir)/src/libvlccore.la
++VLCTimelineContextTests_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
++	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(OBJCLD) \
++	$(VLCTimelineContextTests_OBJCFLAGS) $(OBJCFLAGS) \
++	$(VLCTimelineContextTests_LDFLAGS) $(LDFLAGS) -o $@
++VLCTimelineContextTests.xctest: VLCTimelineContextTests$(EXEEXT) $(srcdir)/gui/macosx/tests/VLCMacOSXTests-Info.plist
++	$(AM_V_GEN)$(MKDIR_P) $@/Contents/MacOS
++	$(AM_V_at)$(LIBTOOL) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=install \
++		$(INSTALL_PROGRAM) VLCTimelineContextTests$(EXEEXT) \
++		$(abs_builddir)/$@/Contents/MacOS/VLCTimelineContextTests
++	$(AM_V_at)sed 's/VLCMacOSXTests/VLCTimelineContextTests/g' $(srcdir)/gui/macosx/tests/VLCMacOSXTests-Info.plist > $@/Contents/Info.plist
++check_PROGRAMS += VLCTimelineHoverReentrancyTests
++macosx_gui_xctest_bundles += VLCTimelineHoverReentrancyTests.xctest
++VLCTimelineHoverReentrancyTests_SOURCES = \
++	gui/macosx/views/VLCPlaybackProgressSlider.m \
++	gui/macosx/tests/VLCTimelineHoverReentrancyTest.m \
++	gui/macosx/tests/VLCTimelineHoverTestSupport.m \
++	gui/macosx/tests/VLCTimelineHoverTest.m
++VLCTimelineHoverReentrancyTests_CPPFLAGS = $(VLCMacOSXTests_CPPFLAGS)
++VLCTimelineHoverReentrancyTests_OBJCFLAGS = $(VLCMacOSXTests_OBJCFLAGS)
++VLCTimelineHoverReentrancyTests_LDFLAGS = $(VLCMacOSXTests_LDFLAGS)
++VLCTimelineHoverReentrancyTests_LDADD = $(top_builddir)/src/libvlccore.la
++VLCTimelineHoverReentrancyTests_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
++	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(OBJCLD) \
++	$(VLCTimelineHoverReentrancyTests_OBJCFLAGS) $(OBJCFLAGS) \
++	$(VLCTimelineHoverReentrancyTests_LDFLAGS) $(LDFLAGS) -o $@
++VLCTimelineHoverReentrancyTests.xctest: VLCTimelineHoverReentrancyTests$(EXEEXT) $(srcdir)/gui/macosx/tests/VLCMacOSXTests-Info.plist
++	$(AM_V_GEN)$(MKDIR_P) $@/Contents/MacOS
++	$(AM_V_at)$(LIBTOOL) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=install \
++		$(INSTALL_PROGRAM) VLCTimelineHoverReentrancyTests$(EXEEXT) \
++		$(abs_builddir)/$@/Contents/MacOS/VLCTimelineHoverReentrancyTests
++	$(AM_V_at)sed 's/VLCMacOSXTests/VLCTimelineHoverReentrancyTests/g' $(srcdir)/gui/macosx/tests/VLCMacOSXTests-Info.plist > $@/Contents/Info.plist
++check-timeline-hover-reentrancy: VLCTimelineHoverReentrancyTests.xctest
+ 	$(XCTEST_LOG_COMPILER) $<
+ 
+ check-timeline-service-edges: VLCMacOSXTests.xctest
+@@ -106,9 +171,15 @@ check-timeline-service-edges: VLCMacOSXTests.xctest
+ check-timeline-service-faults: VLCMacOSXTests.xctest
+ 	VLC_PLUGIN_PATH="$(abs_builddir)" $(XCRUN) xctest -XCTest VLCThumbnailServiceTest/testQueuedValidationDoesNotExtendProvisionalDeadline,VLCThumbnailServiceTest/testFinitePreparationBecomesQuiescent,VLCThumbnailServiceTest/testHungWorkerPIDDisappearsBeforeRecovery $(abs_builddir)/$<
+ 
++check-timeline-player-context: VLCMacOSXTests.xctest
++	VLC_PLUGIN_PATH="$(abs_builddir)" $(XCRUN) xctest -XCTest VLCTimelinePlayerContextTest $(abs_builddir)/$<
++
+ check-timeline-cache: VLCMacOSXTests.xctest
+ 	VLC_PLUGIN_PATH="$(abs_builddir)" $(XCRUN) xctest -XCTest VLCThumbnailCacheTest $(abs_builddir)/$<
+ 
++check-timeline-context: VLCTimelineContextTests.xctest
++	$(XCTEST_LOG_COMPILER) $<
++
+ else
+ 
+ check-macosx:
+@@ -116,6 +187,6 @@ check-macosx:
+ 
+ endif
+ 
+-.PHONY: check-timeline-service-edges check-timeline-service-faults check-timeline-cache check-macosx mostlyclean-local-macosx-xctest
++.PHONY: macosx-test-plugin-cache check-timeline-player-context check-timeline-service-faults check-macosx check-timeline-cache check-timeline-context check-timeline-hover-reentrancy check-timeline-service-edges mostlyclean-local-macosx-xctest
+ 
+ endif
+diff --git a/modules/gui/macosx/tests/VLCLibraryDataTypesIntegrationTestSupport.m b/modules/gui/macosx/tests/VLCLibraryDataTypesIntegrationTestSupport.m
+index fb20fcc6d12f80384aae3709b6f98b934c8462ed..70b7665e71a2ed4c0e281b466a493ead74e87c0e 100644
+--- a/modules/gui/macosx/tests/VLCLibraryDataTypesIntegrationTestSupport.m
++++ b/modules/gui/macosx/tests/VLCLibraryDataTypesIntegrationTestSupport.m
+@@ -16,6 +16,7 @@
+ #import <vlc/libvlc.h>
+ 
+ #include <string.h>
++#include <stdlib.h>
+ #include <dispatch/dispatch.h>
+ #include <sqlite3.h>
+ #include <unistd.h>
+@@ -47,6 +48,50 @@ static int64_t sGroupID;
+ static BOOL sFactoryFixturesPrepared;
+ static NSString *sUserDataPath;
+ 
++/* This class-scoped fixture owns its process-environment mutations. Keep byte
++ * copies so an absent value and an explicitly empty value remain distinct. */
++static const char * const sEnvironmentNames[] = {
++    "VLC_USERDATA_PATH", "VLC_PLUGIN_PATH", "VLC_LIB_PATH", "VLC_LIBEXEC_PATH"
++};
++static char *sOriginalEnvironment[ARRAY_SIZE(sEnvironmentNames)];
++static BOOL sEnvironmentSaved;
++
++static BOOL SaveIntegrationEnvironment(void)
++{
++    if (sEnvironmentSaved)
++        return NO;
++    for (size_t i = 0; i < ARRAY_SIZE(sEnvironmentNames); ++i) {
++        const char *value = getenv(sEnvironmentNames[i]);
++        if (value != NULL) {
++            sOriginalEnvironment[i] = strdup(value);
++            if (sOriginalEnvironment[i] == NULL) {
++                for (size_t j = 0; j < i; ++j) {
++                    free(sOriginalEnvironment[j]);
++                    sOriginalEnvironment[j] = NULL;
++                }
++                return NO; /* No environment mutation has happened yet. */
++            }
++        }
++    }
++    sEnvironmentSaved = YES;
++    return YES;
++}
++
++static void RestoreIntegrationEnvironment(void)
++{
++    if (!sEnvironmentSaved)
++        return;
++    for (size_t i = 0; i < ARRAY_SIZE(sEnvironmentNames); ++i) {
++        if (sOriginalEnvironment[i] != NULL)
++            setenv(sEnvironmentNames[i], sOriginalEnvironment[i], 1);
++        else
++            unsetenv(sEnvironmentNames[i]);
++        free(sOriginalEnvironment[i]);
++        sOriginalEnvironment[i] = NULL;
++    }
++    sEnvironmentSaved = NO;
++}
++
+ typedef struct
+ {
+     dispatch_semaphore_t semaphore;
+@@ -230,9 +275,13 @@ BOOL VLCLibraryDataTypesIntegrationStart(void)
+         return YES;
+     }
+ 
++    if (!SaveIntegrationEnvironment())
++        return NO;
++
+     char userDataTemplate[] = "/private/tmp/vlc-macosx-medialibrary.XXXXXX";
+     const char * const userDataPath = mkdtemp(userDataTemplate);
+     if (userDataPath == NULL) {
++        VLCLibraryDataTypesIntegrationStop();
+         return NO;
+     }
+     sUserDataPath = [[NSString alloc] initWithUTF8String:userDataPath];
+@@ -324,6 +373,8 @@ void VLCLibraryDataTypesIntegrationStop(void)
+         libvlc_release(sLibVLC);
+         sLibVLC = nil;
+     }
++    /* Release first: LibVLC's workers may still read the fixture environment. */
++    RestoreIntegrationEnvironment();
+     if (sUserDataPath != nil) {
+         [[NSFileManager defaultManager] removeItemAtPath:sUserDataPath error:nil];
+         sUserDataPath = nil;
+diff --git a/modules/gui/macosx/tests/VLCTimelineHoverReentrancyTest.m b/modules/gui/macosx/tests/VLCTimelineHoverReentrancyTest.m
+new file mode 100644
+index 0000000000000000000000000000000000000000..f73d8b806d0e3a949e0f5509fa080518ea6630a1
+--- /dev/null
++++ b/modules/gui/macosx/tests/VLCTimelineHoverReentrancyTest.m
+@@ -0,0 +1,144 @@
++/* SPDX-License-Identifier: GPL-2.0-or-later */
++#import <XCTest/XCTest.h>
++#import "views/VLCPlaybackProgressSlider.h"
++#import "timeline/VLCTimelineContext.h"
++#import "timeline/VLCThumbnailService.h"
++
++/* Private seams only: the production class has no public testing API. */
++@interface VLCPlaybackProgressSlider (SnapshotTesting)
++- (NSDictionary *)timelineSnapshot;
++- (void)reportHoverAtPoint:(NSPoint)point;
++- (BOOL)previewCompletionIsCurrentForPresentation:(uint64_t)presentation generation:(id)generation;
++- (void)observeHoverLifecycleIfNeeded;
++@end
++
++@interface VLCThumbnailService (DelayedTestReply)
+++ (void)deliverDelayedCompletion;
++@end
++
++@interface VLCNotifyingHoverSlider : VLCPlaybackProgressSlider
++@property BOOL notifyDuringSnapshot;
++@property NSUInteger snapshotCalls;
++@property NSUInteger showCalls;
++@property vlc_tick_t shownTime;
++@property id contextDuration;
++@property BOOL eligible;
++@property BOOL previewsEnabled;
++@end
++@implementation VLCNotifyingHoverSlider
++- (BOOL)hoverIsAvailable { return YES; }
++- (void)viewDidChangeEffectiveAppearance { }
++- (void)createHoverWindowIfNeeded { }
++- (void)showHoverAtSliderX:(CGFloat)x time:(vlc_tick_t)time { ++_showCalls; _shownTime = time; }
++- (BOOL)timelinePreviewsEnabled { return _previewsEnabled; }
++- (NSDictionary *)timelineSnapshot
++{
++    ++_snapshotCalls;
++    if (_notifyDuringSnapshot)
++        [NSNotificationCenter.defaultCenter postNotificationName:VLCTimelineContextChanged object:nil];
++    return @{ @"eligible": @(_eligible), @"generation": @"test:1",
++              @"duration": _contextDuration ?: @0 };
++}
++@end
++
++@interface VLCTimelineHoverReentrancyTest : XCTestCase
++@end
++@implementation VLCTimelineHoverReentrancyTest
++- (void)testSnapshotNotificationPrecedesNewHoverPresentation
++{
++    VLCNotifyingHoverSlider *slider = [[VLCNotifyingHoverSlider alloc] initWithFrame:NSMakeRect(0, 0, 100, 20)];
++    [slider observeHoverLifecycleIfNeeded];
++    slider.mediaDuration = 10000000;
++    slider.notifyDuringSnapshot = YES;
++    [slider reportHoverAtPoint:NSMakePoint(50, 10)];
++    XCTAssertEqual(slider.snapshotCalls, 1u);
++    XCTAssertEqual(slider.showCalls, 1u);
++    XCTAssertTrue([[slider valueForKey:@"hovering"] boolValue]);
++}
++- (void)testSnapshotNotificationInvalidatesCompletionBeforeGuardReadsState
++{
++    VLCNotifyingHoverSlider *slider = [[VLCNotifyingHoverSlider alloc] initWithFrame:NSMakeRect(0, 0, 100, 20)];
++    [slider observeHoverLifecycleIfNeeded];
++    slider.mediaDuration = 10000000;
++    [slider reportHoverAtPoint:NSMakePoint(50, 10)];
++    uint64_t presentation = [[slider valueForKey:@"previewPresentation"] unsignedLongLongValue];
++    slider.notifyDuringSnapshot = YES;
++    XCTAssertFalse([slider previewCompletionIsCurrentForPresentation:presentation generation:@"test:1"]);
++    XCTAssertFalse([[slider valueForKey:@"hovering"] boolValue]);
++    XCTAssertEqual(slider.snapshotCalls, 2u);
++}
++- (VLCNotifyingHoverSlider *)sliderWithBarDuration:(vlc_tick_t)barDuration contextDuration:(id)duration
++{
++    [VLCThumbnailService.sharedService cancel];
++    VLCNotifyingHoverSlider *slider = [[VLCNotifyingHoverSlider alloc] initWithFrame:NSMakeRect(0, 0, 100, 20)];
++    [slider observeHoverLifecycleIfNeeded];
++    slider.mediaDuration = barDuration;
++    slider.contextDuration = duration;
++    slider.eligible = YES;
++    slider.previewsEnabled = YES;
++    return slider;
++}
++- (void)testFreshLongerDurationDrivesBothPointerAndActualRequest
++{
++    VLCNotifyingHoverSlider *slider = [self sliderWithBarDuration:10000000 contextDuration:@20000000];
++    [slider reportHoverAtPoint:NSMakePoint(50, 10)];
++    NSDictionary *metrics = VLCThumbnailService.sharedService.metrics;
++    XCTAssertEqual(slider.shownTime, 10000000);
++    XCTAssertEqual([metrics[@"lastRequest"][@"time"] longLongValue], slider.shownTime);
++    XCTAssertEqual([metrics[@"lastRequest"][@"context"][@"duration"] longLongValue], 20000000);
++    XCTAssertEqual(slider.mediaDuration, 10000000);
++}
++- (void)testFreshShorterDurationDrivesBothPointerAndActualRequest
++{
++    VLCNotifyingHoverSlider *slider = [self sliderWithBarDuration:20000000 contextDuration:@10000000];
++    [slider reportHoverAtPoint:NSMakePoint(50, 10)];
++    XCTAssertEqual(slider.shownTime, 5000000);
++    XCTAssertEqual([VLCThumbnailService.sharedService.metrics[@"lastRequest"][@"time"] longLongValue], 5000000);
++    XCTAssertEqual(slider.mediaDuration, 20000000);
++}
++- (void)testFreshDurationRightEdgeKeepsCaptionAndClampsRequest
++{
++    VLCNotifyingHoverSlider *slider = [self sliderWithBarDuration:0 contextDuration:@20000000];
++    [slider reportHoverAtPoint:NSMakePoint(94, 10)];
++    XCTAssertEqual(slider.shownTime, 20000000);
++    XCTAssertEqual([VLCThumbnailService.sharedService.metrics[@"lastRequest"][@"time"] longLongValue], 19999999);
++    XCTAssertEqual(slider.mediaDuration, 0);
++}
++- (void)testDurationChangeRejectsDelayedCompletionEvenWithoutGenerationAnnouncement
++{
++    VLCNotifyingHoverSlider *slider = [self sliderWithBarDuration:10000000 contextDuration:@20000000];
++    [slider reportHoverAtPoint:NSMakePoint(50, 10)];
++    NSImageView *imageView = [[NSImageView alloc] initWithFrame:NSMakeRect(0, 0, 32, 18)];
++    imageView.image = [[NSImage alloc] initWithSize:NSMakeSize(32, 18)];
++    [slider setValue:imageView forKey:@"hoverImage"];
++    XCTAssertTrue(imageView.image != nil);
++    slider.contextDuration = @30000000; /* Same mocked generation: capture is independently checked. */
++    [VLCThumbnailService deliverDelayedCompletion];
++    XCTAssertEqual(slider.showCalls, 1u);
++    XCTAssertTrue(imageView.image == nil);
++    XCTAssertFalse([[slider valueForKey:@"hovering"] boolValue]);
++    XCTAssertEqual([[slider valueForKey:@"previewRequest"] unsignedIntegerValue], 0u);
++}
++- (void)testMalformedOrIneligibleContextUsesTimeOnlyFallback
++{
++    for (id duration in @[@YES, @1.5, @"20000000", @0, @-1]) {
++        VLCNotifyingHoverSlider *slider = [self sliderWithBarDuration:10000000 contextDuration:duration];
++        [slider reportHoverAtPoint:NSMakePoint(50, 10)];
++        XCTAssertEqual(slider.shownTime, 5000000);
++        XCTAssertEqual([VLCThumbnailService.sharedService.metrics[@"requests"] unsignedIntegerValue], 0u);
++    }
++    VLCNotifyingHoverSlider *slider = [self sliderWithBarDuration:10000000 contextDuration:@20000000];
++    slider.eligible = NO;
++    [slider reportHoverAtPoint:NSMakePoint(50, 10)];
++    XCTAssertEqual(slider.shownTime, 5000000);
++    XCTAssertEqual([VLCThumbnailService.sharedService.metrics[@"requests"] unsignedIntegerValue], 0u);
++}
++- (void)testDisabledPreviewUsesFreshPointerTimeWithoutRequest
++{
++    VLCNotifyingHoverSlider *slider = [self sliderWithBarDuration:10000000 contextDuration:@20000000];
++    slider.previewsEnabled = NO;
++    [slider reportHoverAtPoint:NSMakePoint(50, 10)];
++    XCTAssertEqual(slider.shownTime, 10000000);
++    XCTAssertEqual([VLCThumbnailService.sharedService.metrics[@"requests"] unsignedIntegerValue], 0u);
++}
++@end
+diff --git a/modules/gui/macosx/tests/VLCTimelineHoverTest.m b/modules/gui/macosx/tests/VLCTimelineHoverTest.m
+new file mode 100644
+index 0000000000000000000000000000000000000000..8f7c917a4adf3eb66600e6819f81a128768ad2ef
+--- /dev/null
++++ b/modules/gui/macosx/tests/VLCTimelineHoverTest.m
+@@ -0,0 +1,40 @@
++/* SPDX-License-Identifier: GPL-2.0-or-later */
++#import <XCTest/XCTest.h>
++#import "views/VLCPlaybackProgressSlider.h"
++
++@interface VLCTimelineHoverTest : XCTestCase
++@end
++@implementation VLCTimelineHoverTest
++- (void)testCenteredBandUsesBarAndClipsItsHorizontalRange
++{
++    NSRect band = VLCTimelineHoverRect(NSMakeRect(0, 0, 100, 20), NSMakeRect(6, 8, 88, 4));
++    XCTAssertEqualWithAccuracy(NSMidY(band), 10, 0.001);
++    XCTAssertEqualWithAccuracy(NSHeight(band), 32, 0.001);
++    XCTAssertEqualWithAccuracy(NSMinX(band), 6, 0.001);
++    XCTAssertEqualWithAccuracy(NSMaxX(band), 94, 0.001);
++    NSRect clipped = VLCTimelineHoverRect(NSMakeRect(0, 0, 100, 20), NSMakeRect(-10, 8, 120, 4));
++    XCTAssertEqualWithAccuracy(NSMinX(clipped), 0, 0.001);
++    XCTAssertEqualWithAccuracy(NSMaxX(clipped), 100, 0.001);
++}
++- (void)testPointerFractionUsesActualBarAndClampsEndpoints
++{
++    NSRect bar = NSMakeRect(6, 8, 88, 4);
++    XCTAssertEqual(VLCTimelinePreviewRequestTime(10000000, 10000000), 9999999);
++    XCTAssertEqual(VLCTimelinePreviewRequestTime(5000000, 10000000), 5000000);
++    XCTAssertEqual(VLCTimelinePreviewRequestTime(0, 1), 0);
++    XCTAssertEqual(VLCTimelinePreviewRequestTime(0, 0), 0);
++    XCTAssertEqualWithAccuracy(VLCTimelineHoverFraction(6, bar), 0, 0.001);
++    XCTAssertEqualWithAccuracy(VLCTimelineHoverFraction(50, bar), 0.5, 0.001);
++    XCTAssertEqualWithAccuracy(VLCTimelineHoverFraction(94, bar), 1, 0.001);
++    XCTAssertEqualWithAccuracy(VLCTimelineHoverFraction(-100, bar), 0, 0.001);
++    XCTAssertEqualWithAccuracy(VLCTimelineHoverFraction(200, bar), 1, 0.001);
++    XCTAssertEqualWithAccuracy(VLCTimelineHoverFraction(10, NSZeroRect), 0, 0.001);
++}
++- (void)testDelayedPresentationRequiresBothRequestAndContextGeneration
++{
++    XCTAssertTrue(VLCTimelinePreviewIsCurrent(7, 7, @"session:2", @"session:2"));
++    XCTAssertFalse(VLCTimelinePreviewIsCurrent(8, 7, @"session:2", @"session:2"));
++    XCTAssertFalse(VLCTimelinePreviewIsCurrent(7, 7, @"session:3", @"session:2"));
++    XCTAssertFalse(VLCTimelinePreviewIsCurrent(7, 7, nil, nil));
++}
++@end
+diff --git a/modules/gui/macosx/tests/VLCTimelineHoverTestSupport.m b/modules/gui/macosx/tests/VLCTimelineHoverTestSupport.m
+new file mode 100644
+index 0000000000000000000000000000000000000000..18f9e237833deb85f08df6000179bb5225c3d18e
+--- /dev/null
++++ b/modules/gui/macosx/tests/VLCTimelineHoverTestSupport.m
+@@ -0,0 +1,52 @@
++/* SPDX-License-Identifier: GPL-2.0-or-later */
++/* Link only into the isolated headless slider test, never into the GUI plugin.
++ * No NSWindow, player, source IO or decoder is created by these narrow doubles. */
++#import "main/VLCMain.h"
++#import "views/VLCPlaybackProgressSliderCell.h"
++#import "timeline/VLCTimelineContext.h"
++#import "timeline/VLCThumbnailService.h"
++NSString * const VLCTimelineContextChanged = @"VLCTimelineContextChanged";
++NSString *VLCConfigurationChangedNotification = @"VLCConfigurationChangedNotification";
++intf_thread_t *getIntf(void) { return NULL; }
++NSString *toNSStr(const char *str) { return str ? [NSString stringWithUTF8String:str] : @""; }
++@implementation VLCPlaybackProgressSliderCell
++- (NSRect)barRectFlipped:(BOOL)flipped { return NSMakeRect(6, 8, 88, 4); }
++- (void)setSliderStyleLight { }
++- (void)setSliderStyleDark { }
++@end
++@implementation VLCTimelineContext
+++ (instancetype)sharedContext { return nil; }
++- (NSDictionary *)snapshot { return @{}; }
++- (void)refresh { }
++- (void)invalidate { }
++@end
++static NSDictionary *lastRequest;
++static VLCThumbnailCompletion delayedCompletion;
++static NSUInteger requests;
++@implementation VLCThumbnailService
+++ (instancetype)sharedService
++{
++    static VLCThumbnailService *service;
++    static dispatch_once_t once;
++    dispatch_once(&once, ^{ service = [self new]; });
++    return service;
++}
++- (NSUInteger)requestForContext:(NSDictionary *)context time:(int64_t)time completion:(VLCThumbnailCompletion)completion
++{
++    lastRequest = @{ @"time": @(time), @"context": [context copy] };
++    delayedCompletion = [completion copy];
++    return ++requests;
++}
++/* Retain the captured callback despite cancel, modeling already-dispatched work. */
+++ (void)deliverDelayedCompletion
++{
++    if (delayedCompletion)
++        delayedCompletion(nil, @{ @"error": @"test-unavailable" });
++}
++- (instancetype)initWithHelperPath:(NSString *)helperPath cacheRoot:(NSString *)cacheRoot { return [super init]; }
++- (void)prepareContext:(NSDictionary *)context enabled:(BOOL)enabled { }
++- (void)cancelRequest:(NSUInteger)token { }
++- (void)cancel { requests = 0; lastRequest = nil; delayedCompletion = nil; }
++- (void)shutdown { }
++- (NSDictionary *)metrics { return @{ @"requests": @(requests), @"lastRequest": lastRequest ?: @{} }; }
++@end
+diff --git a/modules/gui/macosx/timeline/VLCTimelineContext.h b/modules/gui/macosx/timeline/VLCTimelineContext.h
+new file mode 100644
+index 0000000000000000000000000000000000000000..1a5d4261fd5153e3e12f4079984882280852dd3f
+--- /dev/null
++++ b/modules/gui/macosx/timeline/VLCTimelineContext.h
+@@ -0,0 +1,15 @@
++/* SPDX-License-Identifier: GPL-2.0-or-later */
++#import <Foundation/Foundation.h>
++
++NS_ASSUME_NONNULL_BEGIN
++extern NSString * const VLCTimelineContextChanged;
++
++/** Main-thread owner of a coherent preview context and its presentation generation. */
++@interface VLCTimelineContext : NSObject
+++ (instancetype)sharedContext;
++- (NSDictionary *)snapshot;
++- (void)refresh;
++/** Terminal invalidation before application/service shutdown. */
++- (void)invalidate;
++@end
++NS_ASSUME_NONNULL_END
+diff --git a/modules/gui/macosx/timeline/VLCTimelineContext.m b/modules/gui/macosx/timeline/VLCTimelineContext.m
+new file mode 100644
+index 0000000000000000000000000000000000000000..56596cdedd877e01138f3fb1cfe7cd9345542b47
+--- /dev/null
++++ b/modules/gui/macosx/timeline/VLCTimelineContext.m
+@@ -0,0 +1,168 @@
++/* SPDX-License-Identifier: GPL-2.0-or-later */
++#import "VLCTimelineContext.h"
++#import "VLCThumbnailService.h"
++#import "main/VLCMain.h"
++#import "playqueue/VLCPlayQueueController.h"
++#import "playqueue/VLCPlayerController.h"
++
++NSString * const VLCTimelineContextChanged = @"VLCTimelineContextChanged";
++
++@interface VLCTimelineContext ()
++@property (copy) NSString *session;
++@property NSUInteger generation;
++@property (copy) NSDictionary *current;
++@property (copy) NSDictionary *(^snapshotProvider)(void);
++@property (copy) BOOL (^enabledProvider)(void);
++@property (copy) void (^prepare)(NSDictionary *, BOOL);
++@property (strong) NSNotificationCenter *notificationCenter;
++@property BOOL lastEnabled;
++@property BOOL stopped;
++- (instancetype)initWithSnapshotProvider:(NSDictionary *(^)(void))snapshotProvider
++                        enabledProvider:(BOOL (^)(void))enabledProvider
++                                prepare:(void (^)(NSDictionary *, BOOL))prepare
++                     notificationCenter:(NSNotificationCenter *)notificationCenter
++                                 player:(id)player;
++@end
++
++@implementation VLCTimelineContext
+++ (instancetype)sharedContext
++{
++    NSAssert(NSThread.isMainThread, @"Timeline context belongs to the main thread");
++    static VLCTimelineContext *context;
++    static dispatch_once_t once;
++    dispatch_once(&once, ^{
++        VLCPlayerController *player = VLCMain.sharedInstance.playQueueController.playerController;
++        context = [[self alloc] initWithSnapshotProvider:^{ return [player timelinePreviewSnapshot]; }
++            enabledProvider:^{ return (BOOL)(getIntf() && var_InheritBool(getIntf(), "macosx-timeline-previews")); }
++            prepare:^(NSDictionary *snapshot, BOOL enabled) {
++                [[VLCThumbnailService sharedService] prepareContext:snapshot enabled:enabled];
++            } notificationCenter:NSNotificationCenter.defaultCenter player:player];
++    });
++    return context;
++}
++
++- (instancetype)initWithSnapshotProvider:(NSDictionary *(^)(void))snapshotProvider
++                        enabledProvider:(BOOL (^)(void))enabledProvider
++                                prepare:(void (^)(NSDictionary *, BOOL))prepare
++                     notificationCenter:(NSNotificationCenter *)notificationCenter
++                                 player:(id)player
++{
++    self = [super init];
++    if (self) {
++        _session = NSUUID.UUID.UUIDString;
++        _current = @{};
++        _snapshotProvider = [snapshotProvider copy];
++        _enabledProvider = [enabledProvider copy];
++        _prepare = [prepare copy];
++        _notificationCenter = notificationCenter;
++        NSArray *events = @[VLCPlayerCurrentMediaItemChanged, VLCPlayerTrackListChanged,
++            VLCPlayerTrackSelectionChanged, VLCPlayerLengthChanged, VLCPlayerCapabilitiesChanged,
++            VLCPlayerStateChanged, VLCPlayerProgramSelectionChanged, VLCPlayerProgramListChanged,
++            VLCPlayerTitleSelectionChanged, VLCPlayerTitleListChanged];
++        for (NSString *event in events)
++            [_notificationCenter addObserver:self selector:@selector(playerChanged:) name:event object:player];
++        [_notificationCenter addObserver:self selector:@selector(preferenceChanged:)
++            name:VLCConfigurationChangedNotification object:nil];
++        [_notificationCenter addObserver:self selector:@selector(applicationWillTerminate:)
++            name:NSApplicationWillTerminateNotification object:nil];
++        [self refresh];
++    }
++    return self;
++}
++
++- (void)dealloc
++{
++    [_notificationCenter removeObserver:self];
++}
++
++- (void)playerChanged:(NSNotification *)notification
++{
++    /* The notification argument carries no media values. Always read the latest player. */
++    BOOL reopened = [notification.name isEqualToString:VLCPlayerCurrentMediaItemChanged];
++    if (!NSThread.isMainThread) {
++        dispatch_async(dispatch_get_main_queue(), ^{
++            if (self.stopped)
++                return;
++            if (reopened)
++                [self invalidateSnapshot];
++            [self refresh];
++        });
++        return;
++    }
++    if (_stopped)
++        return;
++    if (reopened)
++        [self invalidateSnapshot];
++    [self refresh];
++}
++
++- (void)preferenceChanged:(NSNotification *)notification
++{
++    /* Inherit the effective runtime value; saved preferences must not override CLI values. */
++    if (!NSThread.isMainThread) {
++        dispatch_async(dispatch_get_main_queue(), ^{ [self refresh]; });
++        return;
++    }
++    [self refresh];
++}
++
++- (void)applicationWillTerminate:(NSNotification *)notification
++{
++    if (!NSThread.isMainThread) {
++        dispatch_async(dispatch_get_main_queue(), ^{ [self applicationWillTerminate:nil]; });
++        return;
++    }
++    [self invalidate];
++}
++
++- (NSDictionary *)snapshot
++{
++    NSAssert(NSThread.isMainThread, @"Timeline context belongs to the main thread");
++    [self refresh];
++    return _current;
++}
++
++- (void)refresh
++{
++    NSAssert(NSThread.isMainThread, @"Timeline context belongs to the main thread");
++    if (_stopped)
++        return;
++    NSDictionary *values = [[NSDictionary alloc] initWithDictionary:_snapshotProvider() copyItems:YES];
++    NSMutableDictionary *previous = [_current mutableCopy];
++    [previous removeObjectForKey:@"generation"];
++    BOOL changed = ![previous isEqualToDictionary:values];
++    if (changed)
++        _generation++;
++    NSMutableDictionary *next = [values mutableCopy];
++    next[@"generation"] = [NSString stringWithFormat:@"%@-%lu", _session, (unsigned long)_generation];
++    _current = [next copy];
++    BOOL enabled = _enabledProvider();
++    BOOL enabledChanged = enabled != _lastEnabled;
++    _lastEnabled = enabled; /* Commit before synchronous external callbacks can read snapshot. */
++    if (changed || enabledChanged) {
++        _prepare(_current, enabled);
++        [_notificationCenter postNotificationName:VLCTimelineContextChanged object:self];
++    }
++}
++
++- (void)invalidate
++{
++    NSAssert(NSThread.isMainThread, @"Timeline context belongs to the main thread");
++    if (_stopped)
++        return;
++    _stopped = YES;
++    [_notificationCenter removeObserver:self];
++    [self invalidateSnapshot];
++}
++
++- (void)invalidateSnapshot
++{
++    NSAssert(NSThread.isMainThread, @"Timeline context belongs to the main thread");
++    _generation++;
++    _current = @{@"generation": [NSString stringWithFormat:@"%@-%lu", _session, (unsigned long)_generation],
++        @"sourceEpoch": @0, @"eligible": @NO, @"duration": @0, @"videoStableID": @"", @"videoInputID": @-1, @"videoCount": @0};
++    _lastEnabled = NO;
++    _prepare(_current, NO);
++    [_notificationCenter postNotificationName:VLCTimelineContextChanged object:self];
++}
++@end
+diff --git a/modules/gui/macosx/timeline/VLCTimelineContextTestSupport.m b/modules/gui/macosx/timeline/VLCTimelineContextTestSupport.m
+new file mode 100644
+index 0000000000000000000000000000000000000000..8086cfaca2c048adefcf72f273f60933b875dbdf
+--- /dev/null
++++ b/modules/gui/macosx/timeline/VLCTimelineContextTestSupport.m
+@@ -0,0 +1,55 @@
++/* SPDX-License-Identifier: GPL-2.0-or-later
++ * Link support for the isolated context XCTest bundle ONLY.
++ * The tests inject player/preference/service functions and never enter these singletons.
++ * Do not include this file in the application or a bundle containing real player/Main classes. */
++#import <Foundation/Foundation.h>
++#import <vlc_common.h>
++#import <vlc_interface.h>
++
++intf_thread_t *getIntf(void) { return NULL; }
++NSString *VLCConfigurationChangedNotification = @"VLCConfigurationChangedNotification";
++
++#define PLAYER_EVENT(name) NSString *name = @#name
++PLAYER_EVENT(VLCPlayerCurrentMediaItemChanged);
++PLAYER_EVENT(VLCPlayerTrackListChanged);
++PLAYER_EVENT(VLCPlayerTrackSelectionChanged);
++PLAYER_EVENT(VLCPlayerLengthChanged);
++PLAYER_EVENT(VLCPlayerCapabilitiesChanged);
++PLAYER_EVENT(VLCPlayerStateChanged);
++PLAYER_EVENT(VLCPlayerProgramSelectionChanged);
++PLAYER_EVENT(VLCPlayerProgramListChanged);
++PLAYER_EVENT(VLCPlayerTitleSelectionChanged);
++PLAYER_EVENT(VLCPlayerTitleListChanged);
++#undef PLAYER_EVENT
++
++@interface VLCMain : NSObject
+++ (instancetype)sharedInstance;
++@end
++@implementation VLCMain
+++ (instancetype)sharedInstance
++{
++    [NSException raise:NSInternalInconsistencyException format:@"Context test unexpectedly entered VLCMain"];
++    return nil;
++}
++@end
++
++@interface VLCPlayQueueController : NSObject
++@end
++@implementation VLCPlayQueueController
++@end
++
++@interface VLCPlayerController : NSObject
++@end
++@implementation VLCPlayerController
++@end
++
++@interface VLCThumbnailService : NSObject
+++ (instancetype)sharedService;
++@end
++@implementation VLCThumbnailService
+++ (instancetype)sharedService
++{
++    [NSException raise:NSInternalInconsistencyException format:@"Context test unexpectedly entered the service"];
++    return nil;
++}
++@end
+diff --git a/modules/gui/macosx/timeline/VLCTimelineContextTests.m b/modules/gui/macosx/timeline/VLCTimelineContextTests.m
+new file mode 100644
+index 0000000000000000000000000000000000000000..a722ca104603f042bb165172941d148f6d508c17
+--- /dev/null
++++ b/modules/gui/macosx/timeline/VLCTimelineContextTests.m
+@@ -0,0 +1,205 @@
++/* SPDX-License-Identifier: GPL-2.0-or-later */
++#import <XCTest/XCTest.h>
++#import <AppKit/AppKit.h>
++#import "VLCTimelineContext.h"
++#import "playqueue/VLCPlayerController.h"
++extern NSString *VLCConfigurationChangedNotification;
++
++/* Private dependency injection keeps these lifecycle tests independent of files/decoders. */
++@interface VLCTimelineContext (Testing)
++- (instancetype)initWithSnapshotProvider:(NSDictionary *(^)(void))snapshotProvider
++                        enabledProvider:(BOOL (^)(void))enabledProvider
++                                prepare:(void (^)(NSDictionary *, BOOL))prepare
++                     notificationCenter:(NSNotificationCenter *)notificationCenter
++                                 player:(id)player;
++@end
++
++@interface VLCTimelineContextTests : XCTestCase
++@end
++
++@implementation VLCTimelineContextTests
++- (NSMutableDictionary *)eligibleValues
++{
++    return [@{@"sourceEpoch": @1, @"url": [NSURL fileURLWithPath:@"/fixture/movie.mkv"],
++        @"duration": @12000000, @"eligible": @YES, @"videoStableID": @"video/1",
++        @"videoInputID": @1, @"videoCount": @2} mutableCopy];
++}
++
++- (void)testSourceEpochDetectsSameURIReopenBeforeMainNotification
++{
++    NSMutableDictionary *values = [self eligibleValues];
++    NSMutableArray *prepared = [NSMutableArray array];
++    VLCTimelineContext *context = [[VLCTimelineContext alloc] initWithSnapshotProvider:^{ return values; }
++        enabledProvider:^{ return YES; } prepare:^(NSDictionary *value, BOOL enabled) { (void)value; (void)enabled;
++            [prepared addObject:value];
++        } notificationCenter:[NSNotificationCenter new] player:[NSObject new]];
++    NSDictionary *first = context.snapshot;
++    values[@"sourceEpoch"] = @2; /* synchronous listener update, no main notification yet */
++    NSDictionary *second = context.snapshot;
++    XCTAssertNotEqualObjects(first[@"generation"], second[@"generation"]);
++    XCTAssertEqualObjects(first[@"url"], second[@"url"]);
++    XCTAssertEqualObjects(second[@"sourceEpoch"], @2);
++    XCTAssertEqual(prepared.count, 2u);
++    XCTAssertEqualObjects(first[@"sourceEpoch"], @1); /* no dictionary alias */
++}
++
++- (void)testUnchangedPointerChecksCannotRenewPreparation
++{
++    NSDictionary *values = [self eligibleValues];
++    __block NSUInteger preparations = 0;
++    VLCTimelineContext *context = [[VLCTimelineContext alloc] initWithSnapshotProvider:^{ return values; }
++        enabledProvider:^{ return YES; } prepare:^(NSDictionary *value, BOOL enabled) { (void)value; (void)enabled; preparations++; }
++        notificationCenter:[NSNotificationCenter new] player:[NSObject new]];
++    NSString *generation = context.snapshot[@"generation"];
++    for (NSUInteger i = 0; i < 20; i++) {
++        XCTAssertEqualObjects(context.snapshot[@"generation"], generation);
++        [context refresh];
++    }
++    XCTAssertEqual(preparations, 1u);
++}
++
++- (void)testOwnedStringsAndEachSelectionComponentInvalidates
++{
++    NSMutableDictionary *values = [self eligibleValues];
++    NSMutableString *identifier = [@"video/1" mutableCopy];
++    values[@"videoStableID"] = identifier;
++    VLCTimelineContext *context = [[VLCTimelineContext alloc] initWithSnapshotProvider:^{ return values; }
++        enabledProvider:^{ return YES; } prepare:^(NSDictionary *value, BOOL enabled) { (void)value; (void)enabled;}
++        notificationCenter:[NSNotificationCenter new] player:[NSObject new]];
++    NSDictionary *old = context.snapshot;
++    [identifier setString:@"video/2"];
++    XCTAssertEqualObjects(old[@"videoStableID"], @"video/1");
++    NSDictionary *next = context.snapshot;
++    XCTAssertNotEqualObjects(old[@"generation"], next[@"generation"]);
++    for (NSString *key in @[@"videoInputID", @"videoCount", @"duration", @"eligible"]) {
++        old = context.snapshot;
++        values[key] = [key isEqualToString:@"eligible"] ? @NO : @3;
++        XCTAssertNotEqualObjects(old[@"generation"], context.snapshot[@"generation"]);
++    }
++}
++
++- (void)testSameURIEventAndDelayedNotificationUseLatestSnapshot
++{
++    NSMutableDictionary *values = [self eligibleValues];
++    NSNotificationCenter *center = [NSNotificationCenter new];
++    NSObject *player = [NSObject new];
++    VLCTimelineContext *context = [[VLCTimelineContext alloc] initWithSnapshotProvider:^{ return values; }
++        enabledProvider:^{ return YES; } prepare:^(NSDictionary *value, BOOL enabled) { (void)value; (void)enabled;}
++        notificationCenter:center player:player];
++    NSString *first = context.snapshot[@"generation"];
++    [center postNotificationName:VLCPlayerCurrentMediaItemChanged object:player];
++    XCTAssertNotEqualObjects(first, context.snapshot[@"generation"]);
++    XCTestExpectation *queued = [self expectationWithDescription:@"queued refresh reads latest values"];
++    dispatch_async(dispatch_get_global_queue(QOS_CLASS_DEFAULT, 0), ^{
++        [center postNotificationName:VLCPlayerTrackSelectionChanged object:player
++            userInfo:@{@"videoStableID": @"stale"}];
++        dispatch_async(dispatch_get_main_queue(), ^{
++            XCTAssertEqualObjects(context.snapshot[@"videoStableID"], @"video/2");
++            [queued fulfill];
++        });
++    });
++    values[@"videoStableID"] = @"video/2";
++    values[@"videoInputID"] = @2;
++    [self waitForExpectations:@[queued] timeout:2];
++}
++
++- (void)testReentrantObserverReadsSnapshotDuringToggleAndDirectShutdown
++{
++    NSDictionary *values = [self eligibleValues];
++    __block BOOL effectiveEnabled = YES;
++    __block NSUInteger preparations = 0;
++    __block NSUInteger notifications = 0;
++    NSNotificationCenter *center = [NSNotificationCenter new];
++    NSObject *player = [NSObject new];
++    VLCTimelineContext *context = [[VLCTimelineContext alloc] initWithSnapshotProvider:^{ return values; }
++        enabledProvider:^{ return effectiveEnabled; } prepare:^(NSDictionary *value, BOOL enabled) {
++            (void)value; (void)enabled; preparations++;
++        } notificationCenter:center player:player];
++    __block __weak id observer;
++    __weak NSNotificationCenter *observedCenter = center;
++    __weak VLCTimelineContext *observedContext = context;
++    observer = [center addObserverForName:VLCTimelineContextChanged object:context queue:nil
++        usingBlock:^(NSNotification *notification) {
++            (void)notification;
++            notifications++;
++            if (notifications > 4) {
++                [observedCenter removeObserver:observer]; /* bound the regression's former recursive failure */
++                XCTFail(@"Reentrant snapshot recursively published a context change");
++                return;
++            }
++            NSDictionary *snapshot = observedContext.snapshot;
++            XCTAssertNotNil(snapshot[@"generation"]);
++        }];
++    effectiveEnabled = NO;
++    [center postNotificationName:VLCConfigurationChangedNotification object:nil];
++    XCTAssertEqual(preparations, 2u);
++    XCTAssertEqual(notifications, 1u);
++    /* Queue a core-style media event before VLCMain's direct shutdown call. */
++    dispatch_semaphore_t queued = dispatch_semaphore_create(0);
++    dispatch_async(dispatch_get_global_queue(QOS_CLASS_DEFAULT, 0), ^{
++        XCTAssertFalse(NSThread.isMainThread);
++        [center postNotificationName:VLCPlayerCurrentMediaItemChanged object:player];
++        dispatch_semaphore_signal(queued);
++    });
++    XCTAssertEqual(dispatch_semaphore_wait(queued, dispatch_time(DISPATCH_TIME_NOW, 2 * NSEC_PER_SEC)), 0);
++    /* This is VLCMain's direct shutdown call, before the standard app notification. */
++    [context invalidate];
++    XCTestExpectation *drained = [self expectationWithDescription:@"queued player event drained after shutdown"];
++    dispatch_async(dispatch_get_main_queue(), ^{ [drained fulfill]; });
++    [self waitForExpectations:@[drained] timeout:2];
++    XCTAssertFalse([context.snapshot[@"eligible"] boolValue]);
++    XCTAssertEqual(preparations, 3u);
++    XCTAssertEqual(notifications, 2u);
++    [center postNotificationName:NSApplicationWillTerminateNotification object:nil];
++    [context refresh];
++    [context invalidate];
++    XCTAssertFalse([context.snapshot[@"eligible"] boolValue]);
++    XCTAssertEqual(preparations, 3u);
++    XCTAssertEqual(notifications, 2u);
++    [center removeObserver:observer];
++}
++
++- (void)testConfigurationNotificationRefreshesEffectivePreferenceOnce
++{
++    NSDictionary *values = [self eligibleValues];
++    __block BOOL effectiveEnabled = YES;
++    __block NSUInteger preparations = 0;
++    NSNotificationCenter *center = [NSNotificationCenter new];
++    VLCTimelineContext *context = [[VLCTimelineContext alloc] initWithSnapshotProvider:^{ return values; }
++        enabledProvider:^{ return effectiveEnabled; } prepare:^(NSDictionary *value, BOOL enabled) {
++            (void)value; (void)enabled; preparations++;
++        } notificationCenter:center player:[NSObject new]];
++    NSString *generation = context.snapshot[@"generation"];
++    effectiveEnabled = NO;
++    [center postNotificationName:VLCConfigurationChangedNotification object:nil];
++    XCTAssertEqual(preparations, 2u);
++    [center postNotificationName:VLCConfigurationChangedNotification object:nil];
++    XCTAssertEqual(preparations, 2u); /* duplicate configuration announcements do not renew preparation */
++    XCTAssertEqualObjects(generation, context.snapshot[@"generation"]);
++}
++
++- (void)testPreferenceUsesEffectiveValueAndTerminationCannotRestart
++{
++    NSDictionary *values = [self eligibleValues];
++    __block BOOL effectiveEnabled = YES;
++    __block BOOL lastEnabled = YES;
++    __block NSUInteger preparations = 0;
++    NSNotificationCenter *center = [NSNotificationCenter new];
++    VLCTimelineContext *context = [[VLCTimelineContext alloc] initWithSnapshotProvider:^{ return values; }
++        enabledProvider:^{ return effectiveEnabled; } prepare:^(NSDictionary *value, BOOL enabled) { (void)value; (void)enabled;
++            lastEnabled = enabled; preparations++;
++        } notificationCenter:center player:[NSObject new]];
++    NSString *generation = context.snapshot[@"generation"];
++    [center postNotificationName:VLCConfigurationChangedNotification object:nil userInfo:@{@"enabled": @NO}];
++    XCTAssertTrue(lastEnabled); /* saved value does not override effective CLI value */
++    effectiveEnabled = NO;
++    [center postNotificationName:VLCConfigurationChangedNotification object:nil];
++    XCTAssertFalse(lastEnabled);
++    XCTAssertEqualObjects(generation, context.snapshot[@"generation"]);
++    [center postNotificationName:NSApplicationWillTerminateNotification object:nil];
++    NSUInteger stoppedPreparations = preparations;
++    [context refresh];
++    XCTAssertFalse([context.snapshot[@"eligible"] boolValue]);
++    XCTAssertEqual(preparations, stoppedPreparations);
++}
++@end
+diff --git a/modules/gui/macosx/timeline/VLCTimelinePlayerContextTest.m b/modules/gui/macosx/timeline/VLCTimelinePlayerContextTest.m
+new file mode 100644
+index 0000000000000000000000000000000000000000..a70a29edeb20360c964545b351e431dff8148165
+--- /dev/null
++++ b/modules/gui/macosx/timeline/VLCTimelinePlayerContextTest.m
+@@ -0,0 +1,217 @@
++/* SPDX-License-Identifier: GPL-2.0-or-later */
++#import <XCTest/XCTest.h>
++#import <Cocoa/Cocoa.h>
++#include <vlc_common.h>
++#include <vlc_interface.h>
++#include <vlc_configuration.h>
++#include <vlc_player.h>
++#include "lib/libvlc_internal.h"
++#import "playqueue/VLCPlayerController.h"
++#import "timeline/VLCTimelineContext.h"
++#import "tests/VLCInputItemTestSupport.h"
++#import "os-integration/VLCRemoteControlService.h"
++
++/* The normal test bundle does not link the application/configuration UI. */
++NSString *VLCConfigurationChangedNotification = @"VLCConfigurationChangedNotification";
++
++/* Link-only support for an application-launch path this test must not enter. */
++@implementation VLCRemoteControlService
++- (instancetype)init
++{
++    [NSException raise:NSInternalInconsistencyException format:@"Unexpected remote-control launch in player context test"];
++    return nil;
++}
++- (void)subscribeToRemoteCommands
++{
++    [NSException raise:NSInternalInconsistencyException format:@"Unexpected remote-control subscription"];
++}
++- (void)unsubscribeFromRemoteCommands
++{
++    [NSException raise:NSInternalInconsistencyException format:@"Unexpected remote-control teardown"];
++}
++@end
++
++@interface VLCPlayerController (TimelinePlayerContextTesting)
++- (void)applicationWillTerminate:(NSNotification *)notification;
++@end
++@interface VLCTimelineContext (TimelinePlayerContextTesting)
++- (instancetype)initWithSnapshotProvider:(NSDictionary *(^)(void))snapshotProvider
++                        enabledProvider:(BOOL (^)(void))enabledProvider
++                                prepare:(void (^)(NSDictionary *, BOOL))prepare
++                     notificationCenter:(NSNotificationCenter *)notificationCenter
++                                 player:(id)player;
++@end
++
++struct MediaObservation {
++    __unsafe_unretained dispatch_semaphore_t changed;
++    input_item_t *lastItem; /* Comparison only; the test retains both inputs. */
++    unsigned count;        /* Read and written only under the real player lock. */
++};
++
++static void ObserveCurrentMedia(vlc_player_t *player, input_item_t *item, void *opaque)
++{
++    (void)player;
++    struct MediaObservation *observation = opaque;
++    observation->lastItem = item;
++    observation->count++;
++    dispatch_semaphore_signal(observation->changed);
++}
++
++@interface VLCTimelinePlayerContextTest : XCTestCase
++@end
++
++@implementation VLCTimelinePlayerContextTest
++- (void)testSameURIReopenAdvancesRealEpochBeforeMainNotification
++{
++    XCTAssertTrue(NSThread.isMainThread);
++    if (!NSThread.isMainThread)
++        return;
++
++    const char *arguments[] = { "--ignore-config", "-Idummy", "--no-media-library",
++        "--vout=none", "--aout=none", "--no-audio", "--no-video", "--no-plugins-scan" };
++    libvlc_instance_t *instance = libvlc_new(ARRAY_SIZE(arguments), arguments);
++    XCTAssertNotEqual(instance, NULL);
++    if (!instance)
++        return;
++    intf_thread_t *interface = vlc_object_create(instance->p_libvlc_int, sizeof(*interface));
++    vlc_player_t *player = NULL;
++    vlc_player_listener_id *listener = NULL;
++    input_item_t *firstItem = NULL;
++    input_item_t *secondItem = NULL;
++    VLCPlayerController *controller = nil;
++    VLCTimelineContext *context = nil;
++    id notificationObserver = nil;
++    NSNotificationCenter *center = NSNotificationCenter.defaultCenter;
++    dispatch_semaphore_t changed = dispatch_semaphore_create(0);
++    struct MediaObservation observation = { .changed = changed };
++    __block NSUInteger mainNotifications = 0;
++
++    @try {
++        XCTAssertNotEqual(interface, NULL);
++        if (!interface)
++            return;
++        /* The focused target supplies the normal build's modules/plugins.dat.
++         * Read its descriptors without loading the macOS UI dylib (which would
++         * duplicate classes in this test bundle). Teardown reads this option. */
++        int controlOtherPlayersType = config_GetType("macosx-control-itunes");
++        XCTAssertEqual(controlOtherPlayersType, VLC_VAR_INTEGER,
++            @"Generate the normal modules/plugins.dat and set VLC_PLUGIN_PATH to its modules directory");
++        if (controlOtherPlayersType != VLC_VAR_INTEGER)
++            return; /* Never construct a controller whose normal teardown cannot read its option. */
++        VLCInputItemTestSetInterface(interface);
++        player = vlc_player_New(VLC_OBJECT(instance->p_libvlc_int), VLC_PLAYER_LOCK_NORMAL);
++        XCTAssertNotEqual(player, NULL);
++        if (!player)
++            return;
++        controller = [[VLCPlayerController alloc] initWithPlayer:player];
++        XCTAssertNotNil(controller);
++        if (!controller)
++            return;
++        static const struct vlc_player_cbs callbacks = { .on_current_media_changed = ObserveCurrentMedia };
++        vlc_player_Lock(player);
++        listener = vlc_player_AddListener(player, &callbacks, &observation);
++        vlc_player_Unlock(player);
++        XCTAssertNotEqual(listener, NULL);
++        if (!listener)
++            return;
++        notificationObserver = [center addObserverForName:VLCPlayerCurrentMediaItemChanged
++            object:controller queue:nil usingBlock:^(NSNotification *notification) {
++                (void)notification;
++                XCTAssertTrue(NSThread.isMainThread);
++                mainNotifications++;
++            }];
++        firstItem = input_item_New("file:///vlc-timeline-test/same.mkv", "same");
++        secondItem = input_item_New("file:///vlc-timeline-test/same.mkv", "same");
++        XCTAssertNotEqual(firstItem, NULL);
++        XCTAssertNotEqual(secondItem, NULL);
++        if (!firstItem || !secondItem)
++            return;
++
++        /* Never start playback: this proves epoch/ownership, not selected-track or duration eligibility. */
++        vlc_player_Lock(player);
++        int result = vlc_player_SetCurrentMedia(player, firstItem);
++        vlc_player_Unlock(player);
++        XCTAssertEqual(result, VLC_SUCCESS);
++        if (result != VLC_SUCCESS)
++            return;
++        long waited = dispatch_semaphore_wait(changed, dispatch_time(DISPATCH_TIME_NOW, 5 * NSEC_PER_SEC));
++        XCTAssertEqual(waited, 0L);
++        if (waited)
++            return;
++        vlc_player_Lock(player);
++        XCTAssertEqual(observation.lastItem, firstItem);
++        XCTAssertEqual(observation.count, 1u);
++        vlc_player_Unlock(player);
++        XCTAssertEqual(mainNotifications, 0u); /* No main-queue drain before either snapshot. */
++        NSDictionary *first = [controller timelinePreviewSnapshot];
++        XCTAssertGreaterThan([first[@"sourceEpoch"] unsignedLongLongValue], 0ull);
++        XCTAssertFalse([first[@"eligible"] boolValue]);
++        XCTAssertEqualObjects(first[@"videoCount"], @0);
++        XCTAssertEqualObjects(first[@"duration"], @0);
++        context = [[VLCTimelineContext alloc] initWithSnapshotProvider:^{ return [controller timelinePreviewSnapshot]; }
++            enabledProvider:^{ return YES; } prepare:^(NSDictionary *snapshot, BOOL enabled) {
++                (void)snapshot; (void)enabled;
++            } notificationCenter:center player:controller];
++        NSDictionary *firstContext = context.snapshot;
++
++        /* SetCurrentMedia can notify synchronously or from its destructor thread; both are player-locked. */
++        vlc_player_Lock(player);
++        result = vlc_player_SetCurrentMedia(player, secondItem);
++        vlc_player_Unlock(player);
++        XCTAssertEqual(result, VLC_SUCCESS);
++        if (result != VLC_SUCCESS)
++            return;
++        waited = dispatch_semaphore_wait(changed, dispatch_time(DISPATCH_TIME_NOW, 5 * NSEC_PER_SEC));
++        XCTAssertEqual(waited, 0L);
++        if (waited)
++            return;
++        vlc_player_Lock(player);
++        XCTAssertEqual(observation.lastItem, secondItem);
++        XCTAssertEqual(observation.count, 2u);
++        vlc_player_Unlock(player);
++        XCTAssertEqual(mainNotifications, 0u);
++        NSDictionary *second = [controller timelinePreviewSnapshot];
++        XCTAssertEqualObjects(first[@"url"], second[@"url"]);
++        XCTAssertGreaterThan([second[@"sourceEpoch"] unsignedLongLongValue],
++                             [first[@"sourceEpoch"] unsignedLongLongValue]);
++        XCTAssertEqualObjects(first[@"sourceEpoch"], firstContext[@"sourceEpoch"]);
++        NSDictionary *secondContext = context.snapshot;
++        XCTAssertEqualObjects(second[@"sourceEpoch"], secondContext[@"sourceEpoch"]);
++        XCTAssertNotEqualObjects(firstContext[@"generation"], secondContext[@"generation"]);
++        XCTAssertFalse([secondContext[@"eligible"] boolValue]);
++        XCTAssertEqual(mainNotifications, 0u);
++
++        XCTestExpectation *drained = [self expectationWithDescription:@"actual controller media notifications drained"];
++        dispatch_async(dispatch_get_main_queue(), ^{ [drained fulfill]; });
++        [self waitForExpectations:@[drained] timeout:5];
++        XCTAssertEqual(mainNotifications, 2u);
++    } @finally {
++        /* Stop callback sources before draining queued main work, then delete the real player. */
++        [context invalidate];
++        if (controller)
++            [controller applicationWillTerminate:nil];
++        if (listener) {
++            vlc_player_Lock(player);
++            vlc_player_RemoveListener(player, listener);
++            vlc_player_Unlock(player);
++        }
++        XCTestExpectation *cleanupDrained = [self expectationWithDescription:@"controller callbacks drained before player deletion"];
++        dispatch_async(dispatch_get_main_queue(), ^{ [cleanupDrained fulfill]; });
++        [self waitForExpectations:@[cleanupDrained] timeout:5];
++        if (notificationObserver)
++            [center removeObserver:notificationObserver];
++        context = nil;
++        controller = nil;
++        if (player)
++            vlc_player_Delete(player);
++        VLCInputItemTestSetInterface(NULL);
++        if (interface)
++            vlc_object_delete(interface);
++        if (firstItem)
++            input_item_Release(firstItem);
++        if (secondItem)
++            input_item_Release(secondItem);
++        libvlc_release(instance);
++    }
++}
++@end
+diff --git a/modules/gui/macosx/views/VLCPlaybackProgressSlider.h b/modules/gui/macosx/views/VLCPlaybackProgressSlider.h
+index 03135136ef3602450bff3ea1f7c3944a0d901810..60118280dfe3c1a03a95e11f711480ba808bcf19 100644
+--- a/modules/gui/macosx/views/VLCPlaybackProgressSlider.h
++++ b/modules/gui/macosx/views/VLCPlaybackProgressSlider.h
+@@ -24,6 +24,32 @@
+ 
+ #import <vlc_tick.h>
+ 
++/* Hover coordinates use the actual bar, independently of knob geometry. */
++static inline NSRect VLCTimelineHoverRect(NSRect bounds, NSRect bar)
++{
++    const CGFloat left = MAX(NSMinX(bounds), NSMinX(bar));
++    const CGFloat right = MIN(NSMaxX(bounds), NSMaxX(bar));
++    return NSMakeRect(left, NSMidY(bar) - 16.0, MAX(0.0, right - left), 32.0);
++}
++
++static inline CGFloat VLCTimelineHoverFraction(CGFloat x, NSRect bar)
++{
++    return NSWidth(bar) > 0 ? MAX(0.0, MIN(1.0, (x - NSMinX(bar)) / NSWidth(bar))) : 0.0;
++}
++
++/* Media requests use [0, duration); the pointer label may show duration. */
++static inline vlc_tick_t VLCTimelinePreviewRequestTime(vlc_tick_t pointerTime, vlc_tick_t duration)
++{
++    return MAX((vlc_tick_t)0, MIN(pointerTime, MAX((vlc_tick_t)0, duration - 1)));
++}
++
++static inline BOOL VLCTimelinePreviewIsCurrent(uint64_t current, uint64_t expected,
++                                              id generation, id expectedGeneration)
++{
++    return current == expected && generation != nil &&
++           [generation isEqual:expectedGeneration];
++}
++
+ @interface VLCPlaybackProgressSlider : NSSlider
+ 
+ @property (readwrite, nonatomic) BOOL indefinite;
+@@ -35,4 +61,7 @@
+ /* Duration of the current item, used to compute the time shown on hover. */
+ @property (readwrite, nonatomic) vlc_tick_t mediaDuration;
+ 
++/* Controls owners set this before starting a fade; no ancestor inspection. */
++@property (readwrite, nonatomic) BOOL timelineControlsVisible;
++
+ @end
+diff --git a/modules/gui/macosx/views/VLCPlaybackProgressSlider.m b/modules/gui/macosx/views/VLCPlaybackProgressSlider.m
+index e7df868b75d3e7fba42019e408b3c6d07d6382b1..20c415ca522a915540e2fa9ba7d61b8dcdce8b8c 100644
+--- a/modules/gui/macosx/views/VLCPlaybackProgressSlider.m
++++ b/modules/gui/macosx/views/VLCPlaybackProgressSlider.m
+@@ -26,11 +26,27 @@
+ #import "extensions/NSView+VLCAdditions.h"
+ #import "main/CompatibilityFixes.h"
+ #import "views/VLCPlaybackProgressSliderCell.h"
++#import "main/VLCMain.h"
++#import "timeline/VLCTimelineContext.h"
++#import "timeline/VLCThumbnailService.h"
++#include <math.h>
++
+ 
+ @implementation VLCPlaybackProgressSlider {
+     NSTrackingArea *_hoverTrackingArea;
+     NSWindow *_hoverWindow;
+     NSTextField *_hoverLabel;
++    NSTextField *_hoverCaption;
++    NSImageView *_hoverImage;
++    __weak NSView *_hoverTrackingView;
++    NSUInteger _previewRequest;
++    uint64_t _previewPresentation;
++    BOOL _hovering;
++    BOOL _dragging;
++    NSPoint _hoverPoint;
++    vlc_tick_t _hoverTime;
++    vlc_tick_t _hoverDuration;
++    BOOL _observingHoverLifecycle;
+ }
+ 
+ + (Class)cellClass
+@@ -38,6 +54,16 @@
+     return VLCPlaybackProgressSliderCell.class;
+ }
+ 
++- (instancetype)initWithFrame:(NSRect)frame
++{
++    self = [super initWithFrame:frame];
++    if (self) {
++        self.scrollable = YES;
++        self.timelineControlsVisible = YES;
++    }
++    return self;
++}
++
+ - (instancetype)initWithCoder:(NSCoder *)coder
+ {
+     self = [super initWithCoder:coder];
+@@ -46,6 +72,7 @@
+         NSAssert([self.cell isKindOfClass:[VLCPlaybackProgressSlider cellClass]],
+                  @"VLCPlaybackProgressSlider cell is not a VLCPlaybackProgressSliderCell");
+         self.scrollable = YES;
++        self.timelineControlsVisible = YES;
+         if (@available(macOS 10.14, *)) {
+             [self viewDidChangeEffectiveAppearance];
+             self.clipsToBounds = YES;
+@@ -101,6 +128,8 @@
+ - (void)setIndefinite:(BOOL)indefinite
+ {
+     [(VLCPlaybackProgressSliderCell*)self.cell setIndefinite:indefinite];
++    if (indefinite)
++        [self hideHoverWindow];
+ }
+ 
+ - (BOOL)knobHidden
+@@ -131,16 +160,63 @@
+ #pragma mark -
+ #pragma mark Hover tracking
+ 
++- (void)observeHoverLifecycleIfNeeded
++{
++    if (_observingHoverLifecycle)
++        return;
++    _observingHoverLifecycle = YES;
++    NSNotificationCenter *center = NSNotificationCenter.defaultCenter;
++    for (NSNotificationName name in @[VLCTimelineContextChanged,
++                                      VLCConfigurationChangedNotification,
++                                      NSApplicationWillResignActiveNotification])
++        [center addObserver:self selector:@selector(hoverLifecycleChanged:) name:name object:nil];
++    for (NSNotificationName name in @[NSWindowDidResignKeyNotification,
++                                      NSWindowWillCloseNotification,
++                                      NSWindowWillMiniaturizeNotification])
++        [center addObserver:self selector:@selector(hoverWindowChanged:) name:name object:nil];
++}
++
++- (void)hoverLifecycleChanged:(NSNotification *)notification
++{
++    const BOOL wasHovering = _hovering;
++    const NSPoint point = _hoverPoint;
++    [self hideHoverWindow];
++    if ([notification.name isEqualToString:VLCConfigurationChangedNotification] &&
++        wasHovering && [self hoverIsAvailable])
++        [self reportHoverAtPoint:point];
++}
++
++- (void)hoverWindowChanged:(NSNotification *)notification
++{
++    if (notification.object == self.window)
++        [self hideHoverWindow];
++}
++
++- (void)removeHoverTrackingArea
++{
++    if (_hoverTrackingArea != nil)
++        [_hoverTrackingView removeTrackingArea:_hoverTrackingArea];
++    _hoverTrackingArea = nil;
++    _hoverTrackingView = nil;
++}
++
+ - (void)installHoverTrackingAreaIfNeeded
+ {
+-    if (_hoverTrackingArea != nil) {
++    [self observeHoverLifecycleIfNeeded];
++    [self removeHoverTrackingArea];
++    if (self.window == nil || self.cell == nil)
+         return;
+-    }
+-    _hoverTrackingArea = [[NSTrackingArea alloc] initWithRect:NSZeroRect
+-                                                      options:NSTrackingMouseEnteredAndExited | NSTrackingMouseMoved | NSTrackingInVisibleRect | NSTrackingActiveInKeyWindow
+-                                                        owner:self
+-                                                     userInfo:nil];
+-    [self addTrackingArea:_hoverTrackingArea];
++    /* Keep a single tracking owner. The direct parent hosts the expanded band
++     * without changing the slider's seek hit testing or inspecting ancestors. */
++    NSView *host = self.superview ?: self;
++    NSRect band = VLCTimelineHoverRect(self.bounds,
++                         [(NSSliderCell *)self.cell barRectFlipped:NO]);
++    band = NSIntersectionRect([self convertRect:band toView:host], host.bounds);
++    _hoverTrackingArea = [[NSTrackingArea alloc] initWithRect:band
++        options:NSTrackingMouseEnteredAndExited | NSTrackingMouseMoved | NSTrackingActiveInKeyWindow
++        owner:self userInfo:nil];
++    _hoverTrackingView = host;
++    [host addTrackingArea:_hoverTrackingArea];
+ }
+ 
+ - (void)updateTrackingAreas
+@@ -149,24 +225,91 @@
+     [self installHoverTrackingAreaIfNeeded];
+ }
+ 
++- (void)viewWillMoveToWindow:(NSWindow *)newWindow
++{
++    [self hideHoverWindow];
++    [self removeHoverTrackingArea];
++    [super viewWillMoveToWindow:newWindow];
++}
++
++- (void)viewWillMoveToSuperview:(NSView *)newSuperview
++{
++    [self hideHoverWindow];
++    [self removeHoverTrackingArea];
++    [super viewWillMoveToSuperview:newSuperview];
++}
++
+ - (void)viewDidMoveToWindow
+ {
+     [super viewDidMoveToWindow];
+-    if (self.window == nil) {
++    [self installHoverTrackingAreaIfNeeded];
++}
++
++- (void)setFrameSize:(NSSize)size
++{
++    if (!NSEqualSizes(size, self.frame.size))
+         [self hideHoverWindow];
+-        return;
+-    }
++    [super setFrameSize:size];
++    [self installHoverTrackingAreaIfNeeded];
++}
++
++- (void)setFrameOrigin:(NSPoint)origin
++{
++    if (!NSEqualPoints(origin, self.frame.origin))
++        [self hideHoverWindow];
++    [super setFrameOrigin:origin];
++    [self installHoverTrackingAreaIfNeeded];
++}
++
++- (void)setBoundsSize:(NSSize)size
++{
++    if (!NSEqualSizes(size, self.bounds.size))
++        [self hideHoverWindow];
++    [super setBoundsSize:size];
++    [self installHoverTrackingAreaIfNeeded];
++}
++
++- (void)setBoundsOrigin:(NSPoint)origin
++{
++    if (!NSEqualPoints(origin, self.bounds.origin))
++        [self hideHoverWindow];
++    [super setBoundsOrigin:origin];
+     [self installHoverTrackingAreaIfNeeded];
+ }
+ 
+ - (void)dealloc
+ {
++    [NSNotificationCenter.defaultCenter removeObserver:self];
++    [self removeHoverTrackingArea];
+     [self hideHoverWindow];
+ }
+ 
++- (void)setEnabled:(BOOL)enabled
++{
++    [super setEnabled:enabled];
++    if (!enabled)
++        [self hideHoverWindow];
++}
++
++- (void)setHidden:(BOOL)hidden
++{
++    [super setHidden:hidden];
++    if (hidden)
++        [self hideHoverWindow];
++}
++
++- (void)setTimelineControlsVisible:(BOOL)visible
++{
++    _timelineControlsVisible = visible;
++    if (!visible)
++        [self hideHoverWindow];
++}
++
+ - (BOOL)hoverIsAvailable
+ {
+-    return self.enabled && !self.indefinite && self.mediaDuration > 0;
++    return self.enabled && !self.indefinite &&
++           self.window != nil && self.window.visible && !self.hidden && self.timelineControlsVisible &&
++           !_dragging && NSApp.isActive;
+ }
+ 
+ - (void)createHoverWindowIfNeeded
+@@ -187,6 +330,17 @@
+     contentView.layer.borderWidth = 0.5;
+     contentView.layer.cornerRadius = 3.0;
+     [contentView addSubview:_hoverLabel];
++    _hoverImage = [[NSImageView alloc] initWithFrame:NSZeroRect];
++    _hoverImage.imageScaling = NSImageScaleProportionallyDown;
++    _hoverImage.hidden = YES;
++    _hoverImage.accessibilityElement = NO;
++    [contentView addSubview:_hoverImage];
++    _hoverCaption = [NSTextField labelWithString:@""];
++    _hoverCaption.font = [NSFont systemFontOfSize:NSFont.smallSystemFontSize];
++    _hoverCaption.alignment = NSTextAlignmentCenter;
++    _hoverCaption.accessibilityElement = NO;
++    _hoverCaption.hidden = YES;
++    [contentView addSubview:_hoverCaption];
+ 
+     _hoverWindow = [[NSPanel alloc] initWithContentRect:NSMakeRect(0, 0, 60, 20)
+                                               styleMask:NSWindowStyleMaskBorderless | NSWindowStyleMaskNonactivatingPanel
+@@ -225,8 +379,22 @@
+     contentView.layer.borderColor = NSColor.gridColor.CGColor;
+ }
+ 
++- (void)cancelPreviewRequest
++{
++    ++_previewPresentation;
++    if (_previewRequest != 0)
++        [VLCThumbnailService.sharedService cancelRequest:_previewRequest];
++    _previewRequest = 0;
++}
++
+ - (void)hideHoverWindow
+ {
++    _hovering = NO;
++    [self cancelPreviewRequest];
++    _hoverImage.image = nil;
++    _hoverImage.hidden = YES;
++    _hoverCaption.stringValue = @"";
++    _hoverCaption.hidden = YES;
+     if (_hoverWindow == nil) {
+         return;
+     }
+@@ -250,22 +418,35 @@
+     [_hoverLabel sizeToFit];
+ 
+     const NSSize textSize = _hoverLabel.frame.size;
+-    const CGFloat horizontalPadding = 6.0;
+-    const CGFloat verticalPadding = 2.0;
++    const CGFloat padding = 6.0;
+     const CGFloat verticalGap = 6.0;
+-    const NSSize windowSize = NSMakeSize(textSize.width + horizontalPadding * 2.0,
+-                                         textSize.height + verticalPadding * 2.0);
+-    _hoverLabel.frame = NSMakeRect(horizontalPadding, verticalPadding,
+-                                   textSize.width, textSize.height);
+-
++    const BOOL hasImage = _hoverImage.image != nil;
++    const BOOL hasCaption = !_hoverCaption.hidden;
++    [_hoverCaption sizeToFit];
++    CGFloat width = MAX(textSize.width, hasCaption ? _hoverCaption.frame.size.width : 0);
++    width = MAX(width, hasImage ? 320.0 : 0) + padding * 2.0;
++    CGFloat y = padding;
++    if (hasCaption) {
++        _hoverCaption.frame = NSMakeRect(padding, y, width - padding * 2.0,
++                                         _hoverCaption.frame.size.height);
++        y += _hoverCaption.frame.size.height + padding;
++    }
++    _hoverImage.hidden = !hasImage;
++    if (hasImage) {
++        _hoverImage.frame = NSMakeRect(padding, y, width - padding * 2.0, 180.0);
++        y += 180.0 + padding;
++    }
++    _hoverLabel.frame = NSMakeRect(padding, y, width - padding * 2.0, textSize.height);
++    const NSSize windowSize = NSMakeSize(width, y + textSize.height + padding);
+     const NSRect sliderOnScreen =
+         [parentWindow convertRectToScreen:[self convertRect:self.bounds toView:nil]];
++    const NSRect screen = parentWindow.screen.visibleFrame;
+     const CGFloat anchorScreenX = NSMinX(sliderOnScreen) + xInSlider;
+-
+-    CGFloat originX = anchorScreenX - windowSize.width / 2.0;
+-    originX = MAX(NSMinX(sliderOnScreen),
+-                  MIN(originX, NSMaxX(sliderOnScreen) - windowSize.width));
+-    const CGFloat originY = NSMaxY(sliderOnScreen) + verticalGap;
++    CGFloat originX = MAX(NSMinX(screen), MIN(anchorScreenX - width / 2.0,
++                                              NSMaxX(screen) - width));
++    CGFloat originY = NSMaxY(sliderOnScreen) + verticalGap;
++    if (originY + windowSize.height > NSMaxY(screen))
++        originY = MAX(NSMinY(screen), NSMinY(sliderOnScreen) - verticalGap - windowSize.height);
+ 
+     [_hoverWindow setFrame:NSMakeRect(originX, originY,
+                                       windowSize.width, windowSize.height)
+@@ -278,6 +459,53 @@
+     }
+ }
+ 
++/* Only a positive integral owned snapshot duration can authorize an image.
++ * The controls bar's item duration may lag the player's current input length. */
++static vlc_tick_t TimelineContextDuration(NSDictionary *context)
++{
++    id value = context[@"duration"];
++    id eligible = context[@"eligible"];
++    if (![eligible isKindOfClass:NSNumber.class] ||
++        CFGetTypeID((__bridge CFTypeRef)eligible) != CFBooleanGetTypeID() ||
++        ![eligible boolValue] || ![value isKindOfClass:NSNumber.class] ||
++        CFGetTypeID((__bridge CFTypeRef)value) == CFBooleanGetTypeID())
++        return 0;
++    double number = [value doubleValue];
++    if (!isfinite(number) || floor(number) != number ||
++        [value compare:@1] == NSOrderedAscending ||
++        [value compare:@(INT64_MAX)] == NSOrderedDescending)
++        return 0;
++    return [value longLongValue];
++}
++
++/* Snapshot refresh can synchronously announce a context change. Keep that
++ * reentrancy before publishing a new hover, and before validating a callback. */
++- (NSDictionary *)timelineSnapshot
++{
++    return [VLCTimelineContext.sharedContext snapshot];
++}
++
++- (BOOL)previewCompletionIsCurrentForPresentation:(uint64_t)presentation
++                                      generation:(id)generation
++{
++    NSDictionary *current = [self timelineSnapshot];
++    if (!_hovering || ![self hoverIsAvailable] ||
++        !VLCTimelinePreviewIsCurrent(_previewPresentation, presentation,
++                                     current[@"generation"], generation))
++        return NO;
++    if (TimelineContextDuration(current) != _hoverDuration) {
++        [self hideHoverWindow];
++        return NO;
++    }
++    return YES;
++}
++
++- (BOOL)timelinePreviewsEnabled
++{
++    intf_thread_t *intf = getIntf();
++    return intf != NULL && var_InheritBool(intf, "macosx-timeline-previews");
++}
++
+ - (void)reportHoverAtPoint:(NSPoint)locationInSelf
+ {
+     if (![self hoverIsAvailable]) {
+@@ -285,20 +513,62 @@
+         return;
+     }
+ 
++    NSDictionary *context = [self timelineSnapshot];
++    if (![self hoverIsAvailable]) {
++        [self hideHoverWindow];
++        return;
++    }
+     const NSRect trackRect = [(NSSliderCell *)self.cell barRectFlipped:NO];
+     if (NSWidth(trackRect) <= 0) {
+         [self hideHoverWindow];
+         return;
+     }
+ 
+-    CGFloat fraction = (locationInSelf.x - NSMinX(trackRect)) / NSWidth(trackRect);
+-    if (fraction < 0.0) {
+-        fraction = 0.0;
+-    } else if (fraction > 1.0) {
+-        fraction = 1.0;
++    const vlc_tick_t contextDuration = TimelineContextDuration(context);
++    const vlc_tick_t duration = contextDuration > 0 ? contextDuration : self.mediaDuration;
++    if (duration <= 0) {
++        [self hideHoverWindow];
++        return;
++    }
++    const CGFloat fraction = VLCTimelineHoverFraction(locationInSelf.x, trackRect);
++    const vlc_tick_t time = fraction >= 1.0 ? duration :
++        (vlc_tick_t)((long double)fraction * duration);
++    _hovering = YES;
++    _hoverPoint = locationInSelf;
++    _hoverTime = time;
++    _hoverDuration = duration;
++    [self cancelPreviewRequest];
++    [self createHoverWindowIfNeeded];
++    _hoverImage.image = nil;
++    _hoverCaption.hidden = YES;
++    if ([self timelinePreviewsEnabled] && contextDuration > 0) {
++        _hoverCaption.stringValue = _NS("Preparing");
++        _hoverCaption.hidden = NO;
++        const uint64_t presentation = _previewPresentation;
++        id generation = context[@"generation"];
++        __weak VLCPlaybackProgressSlider *weakSelf = self;
++        _previewRequest = [VLCThumbnailService.sharedService requestForContext:context
++            time:VLCTimelinePreviewRequestTime(time, duration)
++            completion:^(NSImage *image, NSDictionary *metadata) {
++                VLCPlaybackProgressSlider *slider = weakSelf;
++                if (slider == nil ||
++                    ![slider previewCompletionIsCurrentForPresentation:presentation generation:generation])
++                    return;
++                slider->_hoverImage.image = image;
++                if (image != nil) {
++                    NSString *actual = [NSString stringWithTimeFromTicks:[metadata[@"actual_us"] longLongValue]];
++                    NSString *format = [metadata[@"verification_pending"] boolValue] ?
++                        _NS("Keyframe %@ · Checking source") :
++                        ([metadata[@"preparing"] boolValue] ? _NS("Keyframe %@ · Preparing") : _NS("Keyframe %@"));
++                    slider->_hoverCaption.stringValue = [NSString stringWithFormat:format, actual];
++                } else {
++                    slider->_hoverCaption.stringValue = [metadata[@"verification_pending"] boolValue] ?
++                        _NS("Checking source") : ([metadata[@"preparing"] boolValue] ? _NS("Preparing") : _NS("Unavailable"));
++                }
++                slider->_hoverCaption.hidden = NO;
++                [slider showHoverAtSliderX:slider->_hoverPoint.x time:slider->_hoverTime];
++            }];
+     }
+-
+-    const vlc_tick_t time = (vlc_tick_t)(fraction * self.mediaDuration);
+     [self showHoverAtSliderX:locationInSelf.x time:time];
+ }
+ 
+@@ -322,11 +592,15 @@
+     // NSSlider runs its own tracking loop here; mouseMoved is not delivered
+     // during the drag, so the hover would otherwise show a stale time.
+     [self hideHoverWindow];
++    _dragging = YES;
+     [super mouseDown:event];
++    _dragging = NO;
+ }
+ 
+ - (void)setMediaDuration:(vlc_tick_t)mediaDuration
+ {
++    if (_mediaDuration != mediaDuration)
++        [self hideHoverWindow];
+     _mediaDuration = mediaDuration;
+     if (![self hoverIsAvailable]) {
+         [self hideHoverWindow];
+diff --git a/modules/gui/macosx/windows/video/VLCMainVideoViewController.m b/modules/gui/macosx/windows/video/VLCMainVideoViewController.m
+index 4c03ab46ab1f56fdf82cd0370acedcc76434fe6c..bcb2b73a3934e05965deb1c22c759531404ab5c4 100644
+--- a/modules/gui/macosx/windows/video/VLCMainVideoViewController.m
++++ b/modules/gui/macosx/windows/video/VLCMainVideoViewController.m
+@@ -36,6 +36,7 @@
+ #import "library/VLCLibraryWindowSplitViewController.h"
+ 
+ #import "main/VLCMain.h"
++#import "views/VLCPlaybackProgressSlider.h"
+ 
+ #import "playqueue/VLCPlayerController.h"
+ #import "playqueue/VLCPlayQueueController.h"
+@@ -462,6 +463,8 @@ NSString * const VLCUseClassicVideoPlayerLayoutKey = @"VLCUseClassicVideoPlayerL
+         self.videoViewBottomToViewConstraint.active = YES;
+     }
+ 
++    self.controlsBar.timeSlider.timelineControlsVisible = NO;
++
+     [NSAnimationContext runAnimationRespectingPreferencesWithDuration:VLCUIUnits.controlsFadeAnimationDuration
+                                                               changes:^(NSAnimationContext * const _Nonnull __unused context) {
+         [self->_mainControlsView.animator setAlphaValue:0.0f];
+@@ -495,6 +498,7 @@ NSString * const VLCUseClassicVideoPlayerLayoutKey = @"VLCUseClassicVideoPlayerL
+         return;
+     }
+ 
++    self.controlsBar.timeSlider.timelineControlsVisible = YES;
+     [self stopAutohideTimer];
+     [self updatePlayQueueToggleState];
+     [self updateLibraryControls];

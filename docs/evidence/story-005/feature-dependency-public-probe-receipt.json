@@ -1,0 +1,17 @@
+{
+  "stage": "Public direct FFmpeg9 dependency regression sources and executed standard pkg-config build recipe",
+  "source_pin": "2e358f3098c2f2b7621d1dc568de8b61ad786322",
+  "raw_receipt": "work/story005-public-dependency005/command-receipt.json",
+  "candidate_results": "work/story005-public-dependency005/candidate-results/results.json",
+  "baseline_results": "work/story005-public-dependency005/baseline-results/results.json",
+  "archive_unchanged": true,
+  "public_sources_sha256": {
+    "avformat-identity.c": "c2d8128e24ee35f3b5ed40325f7b46d0ed69ed6417af23ed2dca06b16684723e",
+    "compare-identity.py": "bfe99307ef3e8ea119652a0b18d1c5cc052bd042d46725af13f7abd4eac6db4d",
+    "README.md": "6493683f1b59c9dd92cb8856556f9f5464d46043d9b7f678ed87f15cb492cc76"
+  },
+  "cases": 6,
+  "valid_cases": 4,
+  "pass": true,
+  "coverage": "Direct stream IDs, #ID/i:ID selectors and packet/property parity for four legal generated cases. Two malformed controls observational only; no DOVI runtime/FATE readiness claim."
+}

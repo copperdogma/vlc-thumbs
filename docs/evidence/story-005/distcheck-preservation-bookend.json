@@ -1,0 +1,31 @@
+{
+  "archives": [
+    {
+      "receipt": "distcheck-first-archive-provenance.json",
+      "preserved_archive": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/distcheck-first-vlc-4.0.0-dev.tar.xz",
+      "sha256": "fba70e8b9c59c97dcf3b0edf822f6c84d9de59289b12651fbfc5a5c2ad9d49d1",
+      "verified_still_present": true
+    },
+    {
+      "receipt": "distcheck-git-boundary-archive-provenance.json",
+      "preserved_archive": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/distcheck-git-boundary-vlc-4.0.0-dev.tar.xz",
+      "sha256": "e3b7b607f96129224b496f032cedc8f1e35bc6b0365a644626467ba041b2c0a4",
+      "verified_still_present": true
+    },
+    {
+      "receipt": "distcheck-apple-membership-archive-provenance.json",
+      "preserved_archive": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/distcheck-apple-membership-vlc-4.0.0-dev.tar.xz",
+      "sha256": "dde0c5c5490265d99f7b0f27af4ae1d6fa815a109f2522a0818fd78b04b16978",
+      "verified_still_present": true
+    },
+    {
+      "receipt": "distcheck-runtime-failure-preservation.json",
+      "preserved_archive": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/distcheck-runtime-failures-20261006T072705Z/vlc-4.0.0-dev.tar.xz",
+      "sha256": "652ffa3ebade9aba48defc63c1390f5074e8b823e1628b35f0edcbc99041ea5e",
+      "verified_still_present": true
+    }
+  ],
+  "exact_latest_failure_logs_verified": 17,
+  "generated_delta_inverse_receipt": "distcheck-generated-po-exact-inverse.json",
+  "no_build_test_or_app_change": true
+}

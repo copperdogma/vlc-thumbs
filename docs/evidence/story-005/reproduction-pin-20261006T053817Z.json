@@ -1,0 +1,21 @@
+{
+  "stage": "pin",
+  "command": [
+    "git",
+    "-C",
+    "work/upstream/vlc-master-story005-reproduction",
+    "checkout",
+    "--detach",
+    "2e358f3098c2f2b7621d1dc568de8b61ad786322"
+  ],
+  "cwd": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs",
+  "initial_free_bytes": 27701694464,
+  "floor_bytes": 1073741824,
+  "time_limit_seconds": 600,
+  "status": "succeeded",
+  "pid": 67403,
+  "elapsed_seconds": 8.0,
+  "minimum_free_bytes": 27671375872,
+  "exit_code": 0,
+  "final_free_bytes": 27490844672
+}

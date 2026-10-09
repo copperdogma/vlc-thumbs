@@ -1,0 +1,26 @@
+{
+  "pin": "2e358f3098c2f2b7621d1dc568de8b61ad786322",
+  "candidate_contrib_manifest": "docs/evidence/story-005/feature-contrib-build-manifest.json",
+  "candidate_runtime_manifest": "docs/evidence/story-005/feature-runtime-build-manifest.json",
+  "sha256": {
+    "work/story005-master-baseline/src/.libs/libvlccore.9.dylib": "c6c4f10547b35391893f37b45779026872938f75eac3b5594d00d6414a67d7a0",
+    "work/story005-master-baseline/lib/.libs/libvlc.12.dylib": "fb74fde22b5becb4ffcc2554f5ca3236cff363d238f50010bbab419ad76dd484",
+    "work/story005-master-baseline/modules/.libs/libavcodec_plugin.dylib": "5aa3a5276742e2d584904a774ba9a66b5dba2997708462fe395162537cd11888",
+    "work/story005-master-baseline/modules/.libs/libswscale_plugin.dylib": "a0eb44645cdbfac3cc1051c94090b2dae9a648d27420493994e008569cf8114c",
+    "work/story005-master-baseline/contrib/aarch64-apple-darwin19/lib/libavformat.a": "f18bb3ced0b6cced9d161b776f96ffc165e5e5ef37d61735f3cf5b5b87415bfa",
+    "work/story005-feature-dependency-probes001/.libs/playback-baseline": "4ec085d335e561f9ed59ba0d5f1d190e048335178938e429a2f77aff05cd4131",
+    "work/story005-feature-dependency-probes001/.libs/vlc_packet-baseline": "8b422c3e8e88d4ad5d51196fb2932f6b0bfdd3aa7776dc8b4c8c055d12e14298",
+    "work/story005-master-candidate/src/.libs/libvlccore.9.dylib": "686613cc6d47689dc6a306b63d83835bf0a324de5131b028294a5424fea2fbbe",
+    "work/story005-master-candidate/lib/.libs/libvlc.12.dylib": "7323b5240232074a8d914064238dc87e75413cefb75be14f06976741e323696e",
+    "work/story005-master-candidate/modules/.libs/libavcodec_plugin.dylib": "12a2baef1773232885b23bcb7ab4daa439820f67747625fb1068901c59cb7ba5",
+    "work/story005-master-candidate/modules/.libs/libswscale_plugin.dylib": "b5c2f2614a397ff96626fa4189ad86388d3a0d9fb9a54efdf143edc7e6f5138e",
+    "work/story005-master-candidate/contrib/aarch64-apple-darwin19/lib/libavformat.a": "2932267e550adb7fb88261c44599df4b6c5cb729f9dc08cc03d1a0045e4d3abb",
+    "work/story005-feature-dependency-probes001/.libs/playback-candidate": "5fb03c9c0db47839162fe892dbf06a7b9c85b847bd5d527962a7dccd853f9e82",
+    "work/story005-feature-dependency-probes001/.libs/vlc_packet-candidate": "c0c55d65bfe4b7e029d0ec07202fd80ac976304c371a5ddb135e5cab113f45e4",
+    "tests/story-005/feature_dependency_probe.c": "c2d8128e24ee35f3b5ed40325f7b46d0ed69ed6417af23ed2dca06b16684723e",
+    "tests/story-005/feature_dependency_playback_probe.c": "6c65fced1794d78ec0afc2cce5e387fee94cc0bf2ca992edb92845cc5b15520c",
+    "tests/story-005/feature_dependency_vlc_packet_probe.c": "1084b1b3b0b3d2bba4f0591b1b9b7ec07aea5d56914b498cce539e158bb05ae5",
+    "work/story005-feature-dependency-probes001/probe-baseline": "f177939abae3eb5dcf50404ae5c1926f87b9fec5383923e127d28cbe032d2d33",
+    "work/story005-feature-dependency-probes001/probe-candidate": "6df176ee0fe2c35ceddfba7af5b7b15cb1dcb9e02f1d1ff607a5cd1e1dccbae2"
+  }
+}

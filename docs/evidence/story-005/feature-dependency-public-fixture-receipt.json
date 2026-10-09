@@ -1,0 +1,24 @@
+{
+  "stage": "Self-contained current39 helper fixtures; H1 admission cases separately owned",
+  "source_pin": "2e358f3098c2f2b7621d1dc568de8b61ad786322",
+  "raw_receipt": "work/story005-public-fixtures002/command-receipt.json",
+  "test_results": "work/story005-public-fixtures002/normal-tests.json",
+  "checks": 39,
+  "pass": true,
+  "exit": 0,
+  "inputs_unchanged": true,
+  "source_helper_sha256": {
+    "work/upstream/vlc-master-story005-candidate/bin/timeline-preview/test.py": "199d1d30e7f72d17dec2699a627ed194b7ff83e315b263cf4370b29b048d580b",
+    "work/upstream/vlc-master-story005-candidate/bin/timeline-preview/tests/generate_fixtures.py": "5674e89492f03baa0eccfea55ab7a2cc72db0ff950384ef41530ed88a3e9a150",
+    "work/upstream/vlc-master-story005-candidate/bin/timeline-preview/tests/generate_dependency_fixtures.py": "f4f081c317799617aeaef3b14018c4b5e98870cb2f23a890f28fe0358db05b8c",
+    "work/upstream/vlc-master-story005-candidate/bin/timeline-preview/tests/README.md": "4b650bdcef056e83e3a4bf4d605f102cb4f4134f1a55a206b9ba7aa9dbbc2dd9",
+    "work/story005-master-candidate/bin/vlc-timeline-preview": "6d90de5bded764f4471d7c70db86fe62da1df72685493d7e93720ab418880483"
+  },
+  "tools": {
+    "ffmpeg": "ffmpeg version 8.0 Copyright (c) 2000-2025 the FFmpeg developers\nbuilt with Apple clang version 16.0.0 (clang-1600.0.26.6)\nconfiguration: --prefix=/usr/local/Cellar/ffmpeg/8.0_1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags='-Wl,-ld_classic' --enable-ffplay --enable-gnutls --enable-gpl --enable-libaom --enable-libaribb24 --enable-libbluray --enable-libdav1d --enable-libharfbuzz --enable-libjxl --enable-libmp3lame --enable-libopus --enable-librav1e --enable-librist --enable-librubberband --enable-libsnappy --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtesseract --enable-libtheora --enable-libvidstab --enable-libvmaf --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libxvid --enable-lzma --enable-libfontconfig --enable-libfreetype --enable-frei0r --enable-libass --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-libspeex --enable-libsoxr --enable-libzmq --enable-libzimg --disable-libjack --disable-indev=jack --enable-videotoolbox --enable-audiotoolbox\nlibavutil      60.  8.100 / 60.  8.100\nlibavcodec     62. 11.100 / 62. 11.100\nlibavformat    62.  3.100 / 62.  3.100\nlibavdevice    62.  1.100 / 62.  1.100\nlibavfilter    11.  4.100 / 11.  4.100\nlibswscale      9.  1.100 /  9.  1.100\nlibswresample   6.  1.100 /  6.  1.100\n\nExiting with exit code 0\n",
+    "ffprobe": "ffprobe version 8.0 Copyright (c) 2007-2025 the FFmpeg developers\nbuilt with Apple clang version 16.0.0 (clang-1600.0.26.6)\nconfiguration: --prefix=/usr/local/Cellar/ffmpeg/8.0_1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags='-Wl,-ld_classic' --enable-ffplay --enable-gnutls --enable-gpl --enable-libaom --enable-libaribb24 --enable-libbluray --enable-libdav1d --enable-libharfbuzz --enable-libjxl --enable-libmp3lame --enable-libopus --enable-librav1e --enable-librist --enable-librubberband --enable-libsnappy --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtesseract --enable-libtheora --enable-libvidstab --enable-libvmaf --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libxvid --enable-lzma --enable-libfontconfig --enable-libfreetype --enable-frei0r --enable-libass --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-libspeex --enable-libsoxr --enable-libzmq --enable-libzimg --disable-libjack --disable-indev=jack --enable-videotoolbox --enable-audiotoolbox\nlibavutil      60.  8.100 / 60.  8.100\nlibavcodec     62. 11.100 / 62. 11.100\nlibavformat    62.  3.100 / 62.  3.100\nlibavdevice    62.  1.100 / 62.  1.100\nlibavfilter    11.  4.100 / 11.  4.100\nlibswscale      9.  1.100 /  9.  1.100\nlibswresample   6.  1.100 /  6.  1.100\n"
+  },
+  "media_manifest_sha256": "fc2584dda405de6e5033f0848cde56e81568e694a2fe1dbc1dc5c1e9689f8c2f",
+  "identity_manifest_sha256": "5b3004bc58abd4f19789ea4b2c587622591d7f2a10b6aea0dd6147812de4b689",
+  "scope": "New3 public recipe/doc files only; no tracked media, app/install/library change, origin repair or readiness claim."
+}

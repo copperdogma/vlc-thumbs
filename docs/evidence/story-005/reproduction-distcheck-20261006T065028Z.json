@@ -1,0 +1,18 @@
+{
+  "stage": "distcheck",
+  "command": [
+    "bash",
+    "work/story005-scout/reproduction-distcheck.sh"
+  ],
+  "cwd": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs",
+  "initial_free_bytes": 10501275648,
+  "stage_preflight_gib": 3.5,
+  "floor_bytes": 1073741824,
+  "time_limit_seconds": 3600,
+  "status": "failed",
+  "pid": 22550,
+  "elapsed_seconds": 2.0,
+  "minimum_free_bytes": 10501263360,
+  "exit_code": 1,
+  "final_free_bytes": 10500923392
+}

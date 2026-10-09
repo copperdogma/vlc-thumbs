@@ -1,0 +1,98 @@
+{
+  "revision": 2,
+  "base": "2e358f3098c2f2b7621d1dc568de8b61ad786322",
+  "patch_directory": "patches/vlc-master/feature-series",
+  "source_tree": "65a741e6f10b60cf42bbf4a8eac81c07d5a8db63",
+  "previous_source_tree": "58facf6f4017a5226d9537144c1758ceb1277c43",
+  "previous_manifest_sha256": "8790614299e5716a533a586c09355c5be8801ebf57f946ab1ca7c15e3b162488",
+  "previous_receipt": "docs/evidence/story-005/public-feature-series-validation-001.json",
+  "preserved_previous_series": "work/story005-feature-series-freeze001",
+  "manifest_sha256": "0101f4cfbb40288c3e5bcae72918600cbfdd9c7210474e5df36be8fb6af602ac",
+  "applications": [
+    {
+      "patch": "0001-contrib-matroska-identity-and-admission.patch",
+      "tree": "9792911ece946e332fd9d2ebc319dd3a29274823",
+      "apply_check": "pass",
+      "apply": "pass"
+    },
+    {
+      "patch": "0002-timeline-helper-build-package-and-tests.patch",
+      "tree": "b0f1078f76508f5f998369bb2ca9c84e847cceea",
+      "apply_check": "pass",
+      "apply": "pass"
+    },
+    {
+      "patch": "0003-macosx-timeline-context-service-and-hover.patch",
+      "tree": "65a741e6f10b60cf42bbf4a8eac81c07d5a8db63",
+      "apply_check": "pass",
+      "apply": "pass"
+    }
+  ],
+  "exact_source_tree_match": true,
+  "source_indexes_before": {
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/.git/index": "7f2f5931db7b4dba20f741eb7c3ffc9a42ef65be2a6cd94dd66f15113512e895",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/.git/worktrees/vlc-master-story005-candidate/index": "89f3541234e65d5ff8f9ea6928d78d03b65850b61232ca376416750860d44be6"
+  },
+  "source_indexes_after": {
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/.git/index": "7f2f5931db7b4dba20f741eb7c3ffc9a42ef65be2a6cd94dd66f15113512e895",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/.git/worktrees/vlc-master-story005-candidate/index": "89f3541234e65d5ff8f9ea6928d78d03b65850b61232ca376416750860d44be6"
+  },
+  "storage_cap_bytes": 20971520,
+  "temp_removed_on_exit": true,
+  "source_tree_byte_count": 1213236,
+  "patch_bytes": 433438,
+  "excluded_generated_paths": [
+    "bin/timeline-preview/__pycache__/test.cpython-314.pyc",
+    "bin/timeline-preview/tests/__pycache__/compare-identity.cpython-314.pyc",
+    "bin/timeline-preview/tests/__pycache__/generate_admission_fixtures.cpython-314.pyc",
+    "bin/timeline-preview/tests/__pycache__/generate_dependency_fixtures.cpython-314.pyc",
+    "bin/timeline-preview/tests/__pycache__/generate_fixtures.cpython-314.pyc"
+  ],
+  "bounded_private_prototype_marker_scan": "pass",
+  "meaning": "exact source correspondence only; scoped qualification and remaining gates stated separately",
+  "artifact_bytes": 463767,
+  "license_counts": {
+    "GPL-2.0-or-later": 22,
+    "LGPL-2.1-or-later": 5
+  },
+  "preserved_existing_macOS_header_count": 9,
+  "public_review": "docs/evidence/story-005/public-feature-series-review-002.md",
+  "bounded_private_prototype_and_key_marker_scan": "pass",
+  "final_helper_guide_sha256": "778ef973382f11613920011454ee742d5fed3774257d34b4aff636874c7ae198",
+  "final_helper_distribution_list_sha256": "b8127423a839e158c689327916f6abe9976738ae9025c39e5f63928390a50b4d",
+  "artifact_files": [
+    {
+      "file": "0001-contrib-matroska-identity-and-admission.patch",
+      "bytes": 13511,
+      "sha256": "27772936e6068efe11bd44dd6265cd1fb61114dfd8aa7cd9ba693c609e54abf1"
+    },
+    {
+      "file": "0002-timeline-helper-build-package-and-tests.patch",
+      "bytes": 153744,
+      "sha256": "1def5337e1d5c7973483d296ecdfd29ceb604650dad988dcba2e75cdbf8c4b72"
+    },
+    {
+      "file": "0003-macosx-timeline-context-service-and-hover.patch",
+      "bytes": 266183,
+      "sha256": "efb963f03f00682cfa2eb530163e658ad59a14ea55d69aa14292956df2f2cf3b"
+    },
+    {
+      "file": "README.md",
+      "bytes": 6194,
+      "sha256": "6444585c5ef16ee15fe60af32c5c760c042b17d343556a4fbcb9bb5797dea215"
+    },
+    {
+      "file": "manifest.json",
+      "bytes": 23980,
+      "sha256": "0101f4cfbb40288c3e5bcae72918600cbfdd9c7210474e5df36be8fb6af602ac"
+    },
+    {
+      "file": "series",
+      "bytes": 155,
+      "sha256": "d80bcf10f4c48ef8cdf2c4f3f647cbffbe5545f6b98bc4ebd03116f9e06b2c58"
+    }
+  ],
+  "observed_peak_before_final_metadata_bytes": 2485817,
+  "conservative_peak_with_final_metadata_bytes": 2949584,
+  "storage_measurement_boundary": "Observed maximum counted public artifacts, preserved prior series, temporary indexes/objects after each Git operation; conservative upper bound additionally charges the complete final artifact size for final metadata writes."
+}

@@ -1,0 +1,14 @@
+  CC       codec/avcodec/libavcodec_plugin_la-subtitle.lo
+  CC       codec/avcodec/libavcodec_plugin_la-video.lo
+  CC       codec/avcodec/libavcodec_plugin_la-audio.lo
+  CC       codec/avcodec/libavcodec_plugin_la-va.lo
+  CC       codec/avcodec/libavcodec_plugin_la-avcodec.lo
+  CC       codec/avcodec/libavcodec_plugin_la-encoder.lo
+  CC       demux/avformat/libavcodec_plugin_la-demux.lo
+  CC       access/libavcodec_plugin_la-avio.lo
+  CC       packetizer/libavcodec_plugin_la-avparser.lo
+  CC       demux/avformat/libavcodec_plugin_la-mux.lo
+  CC       codec/avcodec/libavcodec_common_la-fourcc.lo
+  CC       codec/avcodec/libavcodec_common_la-chroma.lo
+  CCLD     libavcodec_common.la
+  CCLD     libavcodec_plugin.la

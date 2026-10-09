@@ -1,0 +1,233 @@
+{
+  "schema_version": 1,
+  "result": "PASS",
+  "recorded_utc": "2026-10-06T06:07:45.709941+00:00",
+  "command": "python3 bin/timeline-preview/tests/generate_fixtures.py --playback-loop-source /path/to/generated-five-minute/long-preparation.mp4 --output /new/two-hour-fixtures",
+  "local_command": "python3 work/upstream/vlc-master-story005-candidate/bin/timeline-preview/tests/generate_fixtures.py --playback-loop-source work/story005-public-long001/long-preparation.mp4 --output work/story005-public-playback-long001",
+  "output_directory": "work/story005-public-playback-long001",
+  "manifest_sha256": "d99d7541be57df959e1c32b016ace1f1fe439d8b3f667c813160ab98f2d0e1ea",
+  "manifest": {
+    "schema_version": 1,
+    "mode": "optional-playback-loop",
+    "generator_sha256": "7122c3a80b4f6ade690b47e8854a57d84bdda8684d144ea7e6a6dd4c274f00ec",
+    "tools": {
+      "ffmpeg": "ffmpeg version 8.0 Copyright (c) 2000-2025 the FFmpeg developers\nbuilt with Apple clang version 16.0.0 (clang-1600.0.26.6)\nconfiguration: --prefix=/usr/local/Cellar/ffmpeg/8.0_1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags='-Wl,-ld_classic' --enable-ffplay --enable-gnutls --enable-gpl --enable-libaom --enable-libaribb24 --enable-libbluray --enable-libdav1d --enable-libharfbuzz --enable-libjxl --enable-libmp3lame --enable-libopus --enable-librav1e --enable-librist --enable-librubberband --enable-libsnappy --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtesseract --enable-libtheora --enable-libvidstab --enable-libvmaf --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libxvid --enable-lzma --enable-libfontconfig --enable-libfreetype --enable-frei0r --enable-libass --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-libspeex --enable-libsoxr --enable-libzmq --enable-libzimg --disable-libjack --disable-indev=jack --enable-videotoolbox --enable-audiotoolbox\nlibavutil      60.  8.100 / 60.  8.100\nlibavcodec     62. 11.100 / 62. 11.100\nlibavformat    62.  3.100 / 62.  3.100\nlibavdevice    62.  1.100 / 62.  1.100\nlibavfilter    11.  4.100 / 11.  4.100\nlibswscale      9.  1.100 /  9.  1.100\nlibswresample   6.  1.100 /  6.  1.100\n\nExiting with exit code 0\n",
+      "ffprobe": "ffprobe version 8.0 Copyright (c) 2007-2025 the FFmpeg developers\nbuilt with Apple clang version 16.0.0 (clang-1600.0.26.6)\nconfiguration: --prefix=/usr/local/Cellar/ffmpeg/8.0_1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags='-Wl,-ld_classic' --enable-ffplay --enable-gnutls --enable-gpl --enable-libaom --enable-libaribb24 --enable-libbluray --enable-libdav1d --enable-libharfbuzz --enable-libjxl --enable-libmp3lame --enable-libopus --enable-librav1e --enable-librist --enable-librubberband --enable-libsnappy --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtesseract --enable-libtheora --enable-libvidstab --enable-libvmaf --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libxvid --enable-lzma --enable-libfontconfig --enable-libfreetype --enable-frei0r --enable-libass --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-libspeex --enable-libsoxr --enable-libzmq --enable-libzimg --disable-libjack --disable-indev=jack --enable-videotoolbox --enable-audiotoolbox\nlibavutil      60.  8.100 / 60.  8.100\nlibavcodec     62. 11.100 / 62. 11.100\nlibavformat    62.  3.100 / 62.  3.100\nlibavdevice    62.  1.100 / 62.  1.100\nlibavfilter    11.  4.100 / 11.  4.100\nlibswscale      9.  1.100 /  9.  1.100\nlibswresample   6.  1.100 /  6.  1.100\n"
+    },
+    "source": {
+      "name": "long-preparation.mp4",
+      "sha256": "c5dfcf4a710b8db66e5032a06b862da8dcc0e09df00c4a3597b5c0f0ea7b9e8a",
+      "bytes": 14704138
+    },
+    "commands": [
+      {
+        "tool": "ffprobe",
+        "argv": [
+          "-v",
+          "error",
+          "-show_streams",
+          "-show_format",
+          "-of",
+          "json",
+          "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-public-long001/long-preparation.mp4"
+        ],
+        "stdout": "source.probe.json"
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-stream_loop",
+          "23",
+          "-i",
+          "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-public-long001/long-preparation.mp4",
+          "-map",
+          "0:v:0",
+          "-map",
+          "0:a:0",
+          "-c",
+          "copy",
+          "-t",
+          "7200",
+          "-movflags",
+          "+faststart",
+          "-fs",
+          "419430400",
+          "preparation-two-hours.mp4"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffprobe",
+        "argv": [
+          "-v",
+          "error",
+          "-show_streams",
+          "-show_format",
+          "-of",
+          "json",
+          "preparation-two-hours.mp4"
+        ],
+        "stdout": "playback.probe.json"
+      },
+      {
+        "tool": "ffprobe",
+        "argv": [
+          "-v",
+          "error",
+          "-show_packets",
+          "-show_entries",
+          "packet=stream_index,pts_time,dts_time,duration_time",
+          "-of",
+          "compact=p=0:nk=0",
+          "preparation-two-hours.mp4"
+        ],
+        "stdout": "packets.txt"
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-i",
+          "preparation-two-hours.mp4",
+          "-map",
+          "0:v:0",
+          "-t",
+          "60",
+          "-an",
+          "-pix_fmt",
+          "rgba",
+          "-f",
+          "framehash",
+          "-hash",
+          "sha256",
+          "first-minute.framehash"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-i",
+          "preparation-two-hours.mp4",
+          "-map",
+          "0:a:0",
+          "-t",
+          "60",
+          "-vn",
+          "-c:a",
+          "pcm_s16le",
+          "-f",
+          "s16le",
+          "first-minute.pcm"
+        ],
+        "stdout": null
+      }
+    ],
+    "fixture": {
+      "name": "preparation-two-hours.mp4",
+      "sha256": "2963284d9b0119abeda64a011729000b28849f83cccd1951bed12282098d9770",
+      "bytes": 352867894
+    },
+    "duration_seconds": 7200,
+    "loop_passes": 24,
+    "video_packets": 172800,
+    "oracle": {
+      "video_pts_grid_seconds": "n/24",
+      "video_dts_contiguous": true,
+      "audio_packet_end_seconds": 7200.0,
+      "first_minute_video_frames": 1440,
+      "audio_one_second_rms": [
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339,
+        2895.66130069339
+      ]
+    },
+    "bounds": {
+      "file_bytes": 419430400,
+      "total_bytes": 482344960,
+      "reserve_bytes": 1073741824,
+      "tool_seconds": 120,
+      "minimum_free_bytes": 5058920448
+    },
+    "qualification": "Synthetic stream-copy loop, not historical seed equivalence. FFmpeg timeline/decoded-signal checks are not native playback or proof of active thumbnail preparation."
+  },
+  "public_sources": {
+    "generate_fixtures.py": "7122c3a80b4f6ade690b47e8854a57d84bdda8684d144ea7e6a6dd4c274f00ec",
+    "README.md": "a160c03628a05cb6cf06d9a69e3a56cf3f7cf9cb90ed76ab4968c0efddb8d8e1"
+  },
+  "preflight_free_bytes": 5548814336,
+  "current_free_bytes": 5206417408,
+  "enospc_overlap": "Root reported test done/detached; hdiutil info immediately before generation listed only system MetalToolchain image, no owned test volume.",
+  "scope": "One generation, no helper/app/native/NAS trial. Source/application freeze untouched. New generated stream-copy workload not equivalent unknown historical seed/hash."
+}

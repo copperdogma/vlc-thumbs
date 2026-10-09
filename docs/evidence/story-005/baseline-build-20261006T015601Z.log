@@ -1,0 +1,1438 @@
+[\033[1;32mbuild\033[0m] Building VLC for macOS, architecture aarch64 (aka: arm64) on a aarch64 device
+Setting base environment
+Using VLC root dir /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005, build triplet aarch64-apple-darwin19 and host triplet aarch64-apple-darwin19
+[\033[1;32mbuild\033[0m] Checking for python3 ...
+Python 3.14.3
+[\033[1;32mbuild\033[0m] Building in "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs"
+[\033[1;32mbuild\033[0m] Building building tools
+autoconf not found
+automake not found
+m4 incompatible version (expected 1.4.16, got 1.4.6)
+libtool not found
+bison incompatible version (expected 3.0.0, got 2.3)
+nasm not found
+gettext not found
+ninja missing jobserver support
+To-be-built packages: configguess autoconf automake m4 libtool bison nasm gettext ninja
+curl -f -L --retry 3 --output "m4-1.4.21.tar.gz" -- "https://downloads.videolan.org/pub/contrib/m4/m4-1.4.21.tar.gz" || ( curl -f -L --retry 3 --output "m4-1.4.21.tar.gz" -- "https://ftpmirror.gnu.org/gnu/m4/m4-1.4.21.tar.gz" && echo "Please upload this package m4-1.4.21.tar.gz to our FTP" ) && grep m4-1.4.21.tar.gz /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/SHA512SUMS| sha512sum -c /dev/stdin
+cd bison; ./configure --prefix=/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build
+cd nasm; ./configure --prefix=/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build
+curl -f -L --retry 3 --output "gettext-0.26.tar.gz" -- "https://downloads.videolan.org/pub/contrib/gettext/gettext-0.26.tar.gz" || ( curl -f -L --retry 3 --output "gettext-0.26.tar.gz" -- "https://ftpmirror.gnu.org/gnu/gettext/gettext-0.26.tar.gz" && echo "Please upload this package gettext-0.26.tar.gz to our FTP" ) && grep gettext-0.26.tar.gz /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/SHA512SUMS| sha512sum -c /dev/stdin
+cmake -S ninja -B ninja/vlc_build -DCMAKE_INSTALL_PREFIX:STRING=/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build -DBUILD_TESTING=OFF
+  % Total    % Received % Xferd  Averag  % Te Speedotal    % R  ecei Time    Time     Time  Current
+                      ved % Xferd  Avera    ge Speed        Time    Time     Tim  De  load  UpCurrent
+   load   Total   Spent            Left  Speed
+  0     0               0     0    0     0      0              Dlo   0 ad  Upload   --:--:-- --:--:-- --:--:--     0Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0checking for a BSD-compatible install... checking build system type... /usr/local/bin/ginstall -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... aarch64-apple-darwin27.0.0
+checking host system type... aarch64-apple-darwin27.0.0
+checking for gcc... /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang
+/usr/local/bin/gmkdir -p
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether make supports nested variables... (cached) yes
+checking for gcc... /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... checking whether the C compiler works... 
+checking whether we are cross compiling... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang accepts -g...   0   153   0   153    0     0    0     0      0      0 --:--:-- --:--:-   0     0    0    - --:--:--     0
+ 0      0      0 --:--:-- --:--:-- --:--:--     0
+curl: (56) The requestcurl: (56) The requesteed URL red URL returntured erroned error:r: 404
+ 404
+no
+checking for suffix of object files...   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                      % Total    % Received % Xferd  Av             Dloaerage Speed   Time    d  Upload   TotaTime     Time  l   Spent    CurrLeft  Speed
+ent
+                                   Dload  Upload   Total   Spent    Left  Speed
+  0     00         0     00       0     0    0     0  0        0        00        0 --   :--:-- --:--:-- --:- 0 --:---:--     0:-- --:--:-- --:--:--     0yes
+checking for /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang option to enable C11 features... o
+checking whether the compiler supports GNU C... yes
+checking whether /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang accepts -g... none needed
+checking for stdio.h... yes
+checking for /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang option to enable C11 features... yes
+checking for stdlib.h... yes
+checking for string.h... none needed
+checking whether /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang understands -c and -o together... yes
+checking for inttypes.h... yes
+checking whether the compiler is clang... yes
+checking for stdint.h... yes
+checking for compiler option needed when checking for declarations... yes
+checking for strings.h... -Werror=implicit-function-declaration
+checking whether make supports the include directive... yes
+checking for sys/stat.h... yes (GNU style)
+checking dependency style of /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang... yes
+checking for sys/types.h... yes
+checking for unistd.h... gcc3
+yes
+checking for wchar.h... checking whether the compiler supports GNU C++... yes
+checking for minix/config.h... yes
+checking whether /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ accepts -g... yes
+checking for /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ option to enable C++11 features... no
+checking for sys/param.h... yes
+checking whether it is safe to define __EXTENSIONS__... none needed
+checking dependency style of /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++... yes
+checking whether _XOPEN_SOURCE should be defined... -- IPO / LTO enabled
+CMake Warning at CMakeLists.txt:82 (message):
+  re2c 2 or later was not found; changes to src/*.in.cc will not affect your
+  build.
+
+
+no
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang accepts -std=c17... gcc3
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang accepts -ggdb3... -- Configuring done (1.0s)
+yes
+checking for string.h... -- Generating done (0.0s)
+-- Build files have been written to: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/ninja/vlc_build
+cmake --build ninja/vlc_build
+yes
+checking for inttypes.h... yes
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... yes
+checking for stdint.h... make[1]: warning: jobserver unavailable: using -j1.  Add `+' to parent make rule.
+no
+checking for size_t... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang accepts -Werror=unknown-warning-option... yes
+checking for sys/types.h... yes
+checking for unistd.h... [  5%] Built target libninja-re2c
+yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang accepts -fwrapv... yes
+checking for wchar.h... yes
+checking for minix/config.h... yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang accepts -ftrivial-auto-var-init=zero... no
+checking for locale.h... [  8%] Building CXX object CMakeFiles/libninja.dir/src/dyndep.cc.o
+yes
+checking for sys/param.h... yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang accepts -U__STRICT_ANSI__... yes
+checking for sys/socket.h... yes
+checking for stdio_ext.h... yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang accepts -fno-common... no
+checking for features.h... yes
+checking for suffix of library files... a
+checking whether ln -s works... yes
+checking whether make sets $(MAKE)...   0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0no
+yes
+checking for getopt.h... checking for a BSD-compatible install... /usr/local/bin/ginstall -c
+checking for a race-free mkdir -p... /usr/local/bin/gmkdir -p
+checking for nroff... no
+checking for asciidoc... no
+checking for xmlto... no
+checking for xz... xz
+configure: WARNING: No asciidoc package found, cannot build man pages
+configure: WARNING: No xmlto package found, cannot build man pages
+checking for ar... /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar
+checking for ranlib... /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib
+checking for strip... /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip
+checking for an ANSI C-conforming const... yes
+checking for sys/cdefs.h... yes
+checking for inline... yes
+checking for sys/time.h... inline
+checking for C/C++ restrict keyword... yes
+checking for iconv.h... __restrict__
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang supports variadic macros... yes
+checking for limits.h... yes
+checking for crtdefs.h... yes
+checking for string.h... (cached) yes
+checking for stdarg.h... [ 11%] Building CXX object CMakeFiles/libninja.dir/src/dyndep_parser.cc.o
+yes
+checking for inttypes.h... (cached) yes
+checking for strings.h... (cached) yes
+checking for _Bool... no
+checking for wctype.h... yes
+checking for threads.h... yes
+checking for stdbool.h that conforms to C99... no
+checking for math.h... yes
+checking for stdnoreturn.h... yes
+checking for sys/mman.h... yes
+checking for io.h... yes
+checking for spawn.h... yes
+checking for sys/ioctl.h... no
+checking for fcntl.h... yes
+checking for sys/resource.h... yes
+checking for unistd.h... (cached) yes
+checking for sys/mman.h... yes
+checking for sys/times.h... yes
+checking for sys/types.h... (cached) yes
+checking for sys/stat.h... (cached) yes
+checking for sys/resource.h... yes
+checking for sys/wait.h... yes
+checking for strcasecmp... yes
+checking for termios.h... yes
+checking for stricmp... yes
+checking for dirent.h... [ 14%] Building CXX object CMakeFiles/libninja.dir/src/debug_flags.cc.o
+yes
+checking for xlocale.h... no
+checking for strncasecmp... yes
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether _XOPEN_SOURCE should be defined... yes
+checking for strnicmp... no
+checking build system type... no
+checking for strsep... aarch64-apple-darwin27.0.0
+checking host system type... aarch64-apple-darwin27.0.0
+checking how to run the C preprocessor... /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -E
+yes
+checking for strnlen... checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for Minix Amsterdam compiler... yes
+checking for strrchrnul... no
+checking for ar... /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+[ 17%] Building CXX object CMakeFiles/libninja.dir/src/deps_log.cc.o
+checking for ld used by /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang... no
+checking for iscntrl... /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld
+checking if the linker (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld) is GNU ld... no
+checking for shared library run path origin... done
+checking 32-bit host C ABI... yes
+checking for isascii... no
+checking for ELF binary format... no
+checking for the common suffixes of directories in the library search path... lib,lib,lib
+checking for libtextstyle... yes
+checking for mempcpy...   0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0no
+checking for inline... inline
+checking for tcdrain... no
+checking for mempset... yes
+checking for canonicalize_file_name... no
+checking for getuid... no
+checking for faccessat... yes
+checking for getgid... [ 20%] Building CXX object CMakeFiles/libninja.dir/src/disk_interface.cc.o
+yes
+yes
+checking for getrlimit... checking for realpath... yes
+yes
+checking for realpath... checking for lstat... yes
+yes
+checking for readlinkat... checking for canonicalize_file_name... yes
+no
+checking for _set_invalid_parameter_handler... checking for _fullpath... no
+no
+checking for pathconf... checking for fchdir... [ 22%] Building CXX object CMakeFiles/libninja.dir/src/edit_distance.cc.o
+yes
+yes
+checking for _LARGEFILE_SOURCE value needed for large files... checking for fcntl... yes
+checking for symlink... no
+checking for _fseeki64... yes
+checking for ffsl... no
+checking for ftruncate... yes
+yes
+checking for _chsize... checking for vasnprintf... [ 25%] Building CXX object CMakeFiles/libninja.dir/src/elide_middle.cc.o
+no
+checking for _chsize_s... no
+checking for snprintf... no
+checking for fileno... yes
+checking for fsync... yes
+checking for _fileno... yes
+checking for microuptime... [ 28%] Building CXX object CMakeFiles/libninja.dir/src/eval_env.cc.o
+no
+checking for getpagesize... no
+checking for nanouptime... no
+checking for getprogname... yes
+checking for working mmap...   0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0yes
+checking for getexecname... no
+checking for getrusage... yes
+checking for gettimeofday... yes
+checking for getpagesize... (cached) yes
+checking for sysconf... yes
+checking for iswcntrl... [ 31%] Building CXX object CMakeFiles/libninja.dir/src/graph.cc.o
+yes
+checking for access... yes
+checking for iswblank... yes
+checking for _access... yes
+checking for mbsinit... no
+checking for faccessat... yes
+checking for mbrtowc... yes
+checking for __builtin_expect... yes
+checking for isascii... yes
+checking for intrin.h... yes
+checking for mprotect... no
+checking for __builtin_clz... yes
+checking for obstack_printf... yes
+checking for __builtin_clzl... no
+checking for strerror_r... [ 34%] Building CXX object CMakeFiles/libninja.dir/src/graphviz.cc.o
+yes
+yes
+checking for __builtin_clzll... checking for __xpg_strerror_r... no
+checking for pipe... yes
+checking for _BitScanReverse... no
+checking for _BitScanReverse64... yes
+checking for pipe2... no
+checking for sprintf... yes
+checking for posix_spawn_file_actions_addchdir_np... yes
+snprintf
+checking for vsnprintf... checking for posix_spawn_file_actions_addchdir... yes
+checking for readlink... vsnprintf
+checking for strlcpy... [ 37%] Building CXX object CMakeFiles/libninja.dir/src/jobserver.cc.o
+yes
+checking for setenv... yes
+checking for strrchrnul... (cached) no
+checking for struct _stati64...   0     0    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0no
+checking for struct stat... yes
+checking for link... yes
+checking for sigaction... yes
+checking for stat... yes
+checking for sigaltstack... yes
+checking for _stati64... [ 40%] Building CXX object CMakeFiles/libninja.dir/src/json.cc.o
+yes
+checking for siginterrupt... no
+checking for fstat... yes
+checking for stpncpy... yes
+checking for _fstati64... yes
+checking for strndup... no
+checking for S_ISREG... [ 42%] Building CXX object CMakeFiles/libninja.dir/src/line_printer.cc.o
+no
+checking for /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang options needed to detect all undeclared functions... yes
+checking for wcwidth... none needed
+checking whether strcasecmp is declared... yes
+checking for fdopendir... yes
+checking whether stricmp is declared... yes
+checking for mempcpy... no
+checking whether strncasecmp is declared... no
+checking for __fseterr... yes
+checking whether strnicmp is declared... no
+checking for fstatat... no
+checking whether strsep is declared... [ 45%] Building CXX object CMakeFiles/libninja.dir/src/manifest_parser.cc.o
+yes
+checking whether strlcpy is declared... yes
+checking for getdelim... yes
+checking whether strnlen is declared... yes
+checking for getdtablesize... yes
+checking whether strrchrnul is declared... yes
+checking for openat... no
+checking for uintptr_t... yes
+checking for catgets... yes
+checking whether byte ordering is bigendian... yes
+checking for setlocale... yes
+checking whether pragma GCC diagnostic push works... no
+checking for endian.h... yes
+checking whether C++ compiler handles -Werror -Wunknown-warning-option... no
+checking for sys/endian.h... [ 48%] Building CXX object CMakeFiles/libninja.dir/src/metrics.cc.o
+yes
+checking for machine/endian.h... yes
+checking whether C++ compiler handles -fno-exceptions...   0     0    0     0    0     0      0      0 --:--:--  0:00:05 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:05 --:--:--     0yes
+checking for cpu_to_le16... yes
+checking whether C++ compiler accepts -std=c++98... no
+checking for cpu_to_le32... yes
+checking whether C++ compiler accepts -std=c++03... no
+checking for cpu_to_le64... no
+checking for __cpu_to_le16... yes
+checking whether C++ compiler accepts -std=c++11... no
+checking for __cpu_to_le32... [ 51%] Building CXX object CMakeFiles/libninja.dir/src/missing_deps.cc.o
+no
+checking for __cpu_to_le64... no
+checking for htole16... yes
+checking for htole32... yes
+checking for htole64... yes
+checking for __bswap_16... yes
+checking whether C++ compiler accepts -std=c++14... no
+checking for __bswap_32... no
+checking for __bswap_64... no
+checking for __builtin_bswap16... [ 54%] Building CXX object CMakeFiles/libninja.dir/src/parser.cc.o
+yes
+checking for __builtin_bswap32... yes
+checking for __builtin_bswap64... yes
+checking for _byteswap_ushort... no
+checking for _byteswap_ulong... [ 57%] Building CXX object CMakeFiles/libninja.dir/src/real_command_runner.cc.o
+yes
+checking whether C++ compiler accepts -std=c++17... no
+checking for _byteswap_uint64... no
+checking for __builtin_constant_p... yes
+checking for __builtin_choose_expr...   0     0    0     0    0       0      0      0 --:--:--  0:00:06 --:--:--     00     0    0     0    0     0      0      0 --:--:--  0:00:06 --:--:--     0yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang accepts -Werror=attributes... yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang supports the noreturn function attribute... yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang supports the noreturn function attribute on pointers... yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang supports the returns_nonnull function attribute... [ 60%] Building CXX object CMakeFiles/libninja.dir/src/state.cc.o
+yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang supports the returns_nonnull function attribute on pointers... no
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang supports the malloc function attribute... yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang supports the malloc function attribute on pointers... yes
+checking whether C++ compiler accepts -std=c++20... no
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang supports the alloc_size(1) function attribute... yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang supports the alloc_size(1) function attribute on pointers... yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang supports the alloc_size(1,2) function attribute... yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang supports the alloc_size(1,2) function attribute on pointers... yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang supports the sentinel function attribute... yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang supports the sentinel function attribute on pointers... no
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang supports the format(printf,1,2) function attribute... [ 62%] Building CXX object CMakeFiles/libninja.dir/src/status_printer.cc.o
+yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang supports the format(printf,1,2) function attribute on pointers... yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang supports the const function attribute... yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang supports the const function attribute on pointers... yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang supports the pure function attribute... yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang supports the pure function attribute on pointers... yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang supports the cold function attribute... yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang supports the cold function attribute on pointers... no
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang supports the unused function attribute... yes
+yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang supports the unused function attribute on pointers... checking whether C++ compiler accepts -std=c++2b... yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang supports the error function attribute... [ 65%] Building CXX object CMakeFiles/libninja.dir/src/string_piece_util.cc.o
+yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang accepts -Wl,--as-needed... no
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang accepts -ffunction-sections...   0     0    0     0    0     0      0      0 --:--:--  0:00:07 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:07 --:--:--     0yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang accepts -fdata-sections... yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang accepts -Wl,--gc-sections... [ 68%] Building CXX object CMakeFiles/libninja.dir/src/util.cc.o
+no
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang accepts -fvisibility=hidden... yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang accepts -Wall... yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang accepts -W... yes
+yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang accepts -pedantic... checking whether /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang supports POSIXLY_CORRECT=1... [ 71%] Building CXX object CMakeFiles/libninja.dir/src/version.cc.o
+yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang accepts -Werror=implicit... yes
+checking whether /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ builds executables that work... yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang accepts -Werror=missing-braces... yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang accepts -Werror=return-type... yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang accepts -Werror=trigraphs... [ 74%] Building CXX object CMakeFiles/libninja.dir/src/jobserver-posix.cc.o
+yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang accepts -Werror=pointer-arith... yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang accepts -Werror=strict-prototypes... yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang accepts -Werror=missing-prototypes... yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang accepts -Werror=missing-declarations... [ 77%] Building CXX object CMakeFiles/libninja.dir/src/subprocess-posix.cc.o
+yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang accepts -Werror=comment... yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang accepts -Werror=vla... yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang accepts -Wvariadic-macros...   0     0    0     0    0     0      0      0 --:--:--  0:00:08 --:--:  0--         0 0    0     0    0     0      0      0 --:--:--  0:00:08 --:--:--     0yes
+checking whether /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ supports POSIXLY_CORRECT=1... yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang accepts -Wpedantic-ms-format... yes
+checking for dmd... no
+checking for -g... no
+no
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang accepts -Wlong-long... checking for Java compiler... [ 88%] Built target libninja
+yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang accepts -Wstringop-truncation... [ 91%] Generating build/browse_py.h
+no
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang accepts -Wshift-negative-value... yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang supports C99 external inlines... yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang supports typeof... [ 94%] Building CXX object CMakeFiles/ninja.dir/src/ninja.cc.o
+__typeof
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating doc/Makefile
+config.status: creating config/config.h
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C nasm
+/usr/local/bin/gmkdir -p stdlib nasmlib include config output asm disasm x86 common macros test doc nsis win
+/Applications/Xcode.app/Contents/Developer/usr/bin/make nasm ndisasm
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o asm/nasm.o asm/nasm.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o stdlib/snprintf.o stdlib/snprintf.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o stdlib/vsnprintf.o stdlib/vsnprintf.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o stdlib/strlcpy.o stdlib/strlcpy.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o stdlib/strnlen.o stdlib/strnlen.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o stdlib/strrchrnul.o stdlib/strrchrnul.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o nasmlib/ver.o nasmlib/ver.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o nasmlib/alloc.o nasmlib/alloc.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o nasmlib/asprintf.o nasmlib/asprintf.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o nasmlib/errfile.o nasmlib/errfile.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o nasmlib/crc32.o nasmlib/crc32.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o nasmlib/crc64.o nasmlib/crc64.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o nasmlib/md5c.o nasmlib/md5c.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o nasmlib/string.o nasmlib/string.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o nasmlib/nctype.o nasmlib/nctype.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o nasmlib/file.o nasmlib/file.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o nasmlib/mmap.o nasmlib/mmap.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o nasmlib/ilog2.o nasmlib/ilog2.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o nasmlib/realpath.o nasmlib/realpath.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o nasmlib/path.o nasmlib/path.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o nasmlib/filename.o nasmlib/filename.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o nasmlib/rlimit.o nasmlib/rlimit.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o nasmlib/readnum.o nasmlib/readnum.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o nasmlib/numstr.o nasmlib/numstr.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o nasmlib/zerobuf.o nasmlib/zerobuf.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o nasmlib/bsi.o nasmlib/bsi.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o nasmlib/rbtree.o nasmlib/rbtree.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o nasmlib/hashtbl.o nasmlib/hashtbl.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o nasmlib/raa.o nasmlib/raa.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o nasmlib/saa.o nasmlib/saa.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o nasmlib/strlist.o nasmlib/strlist.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o nasmlib/perfhash.o nasmlib/perfhash.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o nasmlib/badenum.o nasmlib/badenum.c
+[ 97%] Building CXX object CMakeFiles/ninja.dir/src/browse.cc.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o common/common.o common/common.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o x86/insnsa.o x86/insnsa.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o x86/insnsb.o x86/insnsb.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o x86/insnsd.o x86/insnsd.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o x86/insnsn.o x86/insnsn.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o x86/regs.o x86/regs.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o x86/regvals.o x86/regvals.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o x86/regflags.o x86/regflags.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o x86/regdis.o x86/regdis.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o x86/disp8.o x86/disp8.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o x86/iflag.o x86/iflag.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o asm/error.o asm/error.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o asm/floats.o asm/floats.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o asm/directiv.o asm/directiv.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o asm/directbl.o asm/directbl.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o asm/pragma.o asm/pragma.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o asm/assemble.o asm/assemble.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o asm/labels.o asm/labels.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o asm/parser.o asm/parser.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o asm/preproc.o asm/preproc.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o asm/quote.o asm/quote.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o asm/pptok.o asm/pptok.c
+asm/preproc.c:2314:10: warning: variable 'skip_open' set but not used [-Wunused-but-set-variable]
+ 2314 |     bool skip_open = (omode == INC_PROBE);
+      |          ^
+asm/preproc.c:2780:43: warning: use of bitwise '|' with boolean operands [-Wbitwise-instead-of-logical]
+ 2780 |                (needtype == TOKEN_NUM && (tok_is(t, '-') | tok_is(t, '+'))))
+      |                                          ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                          ||
+asm/preproc.c:2780:43: note: cast one or both operands to int to silence this warning
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o asm/listing.o asm/listing.c
+asm/preproc.c:5945:10: warning: variable 'bad_bracket' set but not used [-Wunused-but-set-variable]
+ 5945 |     bool bad_bracket = false;
+      |          ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o asm/eval.o asm/eval.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o asm/exprlib.o asm/exprlib.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o asm/exprdump.o asm/exprdump.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o asm/stdscan.o asm/stdscan.c
+  0     0    0     0    0     0      0      0 --:--:--  0:00:09 --:--:--     0/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o asm/strfunc.o asm/strfunc.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o asm/tokhash.o asm/tokhash.c
+  0     0    0     0    0     0      0      0 --:--:--  0:00:09 --:--:--     0/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o asm/segalloc.o asm/segalloc.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o asm/rdstrnum.o asm/rdstrnum.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o asm/srcfile.o asm/srcfile.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o macros/macros.o macros/macros.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o output/outform.o output/outform.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o output/outlib.o output/outlib.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o output/legacy.o output/legacy.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o output/nulldbg.o output/nulldbg.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o output/nullout.o output/nullout.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o output/outbin.o output/outbin.c
+[100%] Linking CXX executable ninja
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o output/outaout.o output/outaout.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o output/outcoff.o output/outcoff.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o output/outelf.o output/outelf.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o output/outobj.o output/outobj.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o output/outas86.o output/outas86.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o output/outdbg.o output/outdbg.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o output/outieee.o output/outieee.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o output/outmacho.o output/outmacho.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o output/codeview.o output/codeview.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o disasm/disasm.o disasm/disasm.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o disasm/sync.o disasm/sync.c
+[100%] Built target ninja
+cmake --install ninja/vlc_build
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o asm/warnings.o asm/warnings.c
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output -o disasm/ndisasm.o disasm/ndisasm.c
+-- Install configuration: ""
+-- Installing: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/bin/ninja
+touch .buildninja
+3 warnings generated.
+rm -f libnasm.a
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar cq libnasm.a stdlib/snprintf.o stdlib/vsnprintf.o stdlib/strlcpy.o stdlib/strnlen.o stdlib/strrchrnul.o nasmlib/ver.o nasmlib/alloc.o nasmlib/asprintf.o nasmlib/errfile.o nasmlib/crc32.o nasmlib/crc64.o nasmlib/md5c.o nasmlib/string.o nasmlib/nctype.o nasmlib/file.o nasmlib/mmap.o nasmlib/ilog2.o nasmlib/realpath.o nasmlib/path.o nasmlib/filename.o nasmlib/rlimit.o nasmlib/readnum.o nasmlib/numstr.o nasmlib/zerobuf.o nasmlib/bsi.o nasmlib/rbtree.o nasmlib/hashtbl.o nasmlib/raa.o nasmlib/saa.o nasmlib/strlist.o nasmlib/perfhash.o nasmlib/badenum.o common/common.o x86/insnsa.o x86/insnsb.o x86/insnsd.o x86/insnsn.o x86/regs.o x86/regvals.o x86/regflags.o x86/regdis.o x86/disp8.o x86/iflag.o asm/error.o asm/floats.o asm/directiv.o asm/directbl.o asm/pragma.o asm/assemble.o asm/labels.o asm/parser.o asm/preproc.o asm/quote.o asm/pptok.o asm/listing.o asm/eval.o asm/exprlib.o asm/exprdump.o asm/stdscan.o asm/strfunc.o asm/tokhash.o asm/segalloc.o asm/rdstrnum.o asm/srcfile.o macros/macros.o output/outform.o output/outlib.o output/legacy.o output/nulldbg.o output/nullout.o output/outbin.o output/outaout.o output/outcoff.o output/outelf.o output/outobj.o output/outas86.o output/outdbg.o output/outieee.o output/outmacho.o output/codeview.o disasm/disasm.o disasm/sync.o asm/warnings.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libnasm.a
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output  -o nasm asm/nasm.o libnasm.a 
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -std=c17 -Werror=attributes -g -O2 -ggdb3 -Werror=unknown-warning-option -fwrapv -ftrivial-auto-var-init=zero -U__STRICT_ANSI__ -fno-common -ffunction-sections -fdata-sections -fvisibility=hidden -Wall -W -pedantic -Werror=implicit -Werror=missing-braces -Werror=return-type -Werror=trigraphs -Werror=pointer-arith -Werror=strict-prototypes -Werror=missing-prototypes -Werror=missing-declarations -Werror=comment -Werror=vla -Wno-variadic-macros -Wno-long-long -Wno-shift-negative-value -DHAVE_CONFIG_H -I. -I. -I./include -I./include -I./x86 -I./x86 -I./asm -I./asm -I./disasm -I./disasm -I./output -I./output  -o ndisasm disasm/ndisasm.o libnasm.a 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C nasm install
+/usr/local/bin/gmkdir -p /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/bin
+/usr/local/bin/ginstall -c nasm ndisasm /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/bin/
+/usr/local/bin/gmkdir -p /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/man/man1
+/usr/local/bin/ginstall -c -m 644 ./nasm.1 /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/man/man1/nasm.1
+/usr/local/bin/ginstall -c -m 644 ./ndisasm.1 /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/man/man1/ndisasm.1
+touch .buildnasm
+  0     0    0     0    0     0      0      0 --:--:--  0:00:10 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:10 --:--:--     0javac -target 1.7 -source 1.7
+checking for Java virtual machine... java
+checking for flex... flex
+checking whether lex is flex... yes
+checking whether flex supports --header=FILE... yes
+checking lex output file root... lex.yy
+checking lex library...   0     0    0     0    0     0      0      0 --:--:--  0:00:11 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:11 --:--:--     0-ll
+checking whether yytext is a pointer... yes
+checking for bison... bison -y
+checking for ranlib... /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib
+checking for GNU M4 that supports accurate traces... /usr/bin/m4
+checking whether /usr/bin/m4 accepts --gnu... no
+configure: WARNING: the version of M4 that was found does not support -g
+configure: WARNING: using it with POSIXLY_CORRECT set may cause problems
+checking how m4 supports trace files... --error-output
+checking for perl... /usr/bin/perl
+checking for xsltproc... /usr/bin/xsltproc
+checking for inline... (cached) inline
+checking for size_t... yes
+checking for working alloca.h... yes
+checking for alloca... yes
+checking whether malloc is ptrdiff_t safe... yes
+checking whether malloc, realloc, calloc set errno on failure... yes
+checking whether lstat correctly handles trailing slash... yes
+checking whether // is distinct from /... no
+checking whether realpath works...   0     0    0     0    0     0      0      0 --:--:--  0:00:12 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:12 --:--:--     0no
+checking for getcwd... yes
+checking for C/C++ restrict keyword... __restrict__
+checking if environ is properly declared... no
+checking whether the preprocessor supports include_next... yes
+checking whether source code line length is unlimited... yes
+checking for complete errno.h... yes
+checking for /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang options needed to detect all undeclared functions... none needed
+checking whether strerror_r is declared... yes
+checking whether strerror_r returns char *... no
+checking for mode_t... yes
+checking for sig_atomic_t... yes
+checking for working fcntl.h...   0     0    0     0    0     0      0      0 --:--:--  0:00:13 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:13 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:14 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:14 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:15 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:15 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:16 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:16 --:--:--     0yes
+checking for pid_t... yes
+checking for eaccess... no
+checking for stdint.h... yes
+checking for inttypes.h... yes
+checking whether printf supports size specifiers as in C99... yes
+checking whether printf supports 'long double' arguments... yes
+checking whether printf supports infinite 'double' arguments...   0     0    0     0    0     0      0      0 --:--:--  0:00:17 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:17 --:--:--     0yes
+checking whether byte ordering is bigendian... no
+checking whether long double and double are the same... yes
+checking whether printf supports infinite 'long double' arguments... yes
+checking whether printf supports the 'a' and 'A' directives... no
+checking whether printf supports the 'F' directive... yes
+checking whether printf supports the 'n' directive...   0     0    0     0    0     0      0      0 --:--:--  0:00:18 --:--:--      0     0    0     0    0  0    0      0      0 --:--:--  0:00:18 --:--:--     0no
+checking whether printf supports the 'ls' directive... yes
+checking whether printf supports POSIX/XSI format strings with positions... yes
+checking whether printf supports the grouping flag... yes
+checking whether printf supports the left-adjust flag correctly... yes
+checking whether printf supports the zero flag correctly...   0     0    0     0    0     0      0      0 --:--:--  0:00:19 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:19 --:--:--     0yes
+checking whether printf supports large precisions... yes
+checking whether the compiler produces multi-arch binaries... no
+checking whether printf survives out-of-memory conditions... guessing no
+checking for wchar_t... yes
+checking for wint_t... yes
+checking whether wint_t is large enough... yes
+checking for intmax_t... yes
+checking where to find the exponent in a 'double'... word 1 bit 20
+checking whether snprintf returns a byte count as in C99...   0     0    0     0    0     0      0      0 --:--:--  0:00:20 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:20 --:--:--     0yes
+checking whether snprintf truncates the result as in C99... yes
+checking for snprintf... (cached) yes
+checking for strnlen... yes
+checking for wcslen... yes
+checking for wcsnlen... yes
+checking for mbrtowc... (cached) yes
+checking for wcrtomb... yes
+checking whether _snprintf is declared... no
+checking whether frexp() can be used without linking with libm... yes
+checking whether alarm is declared... yes
+checking whether getcwd (NULL, 0) allocates memory for result... yes
+checking for getcwd with POSIX signature... yes
+checking whether getcwd is declared... yes
+checking for d_ino member in directory struct...   0     0    0     0    0     0      0      0 --:--:--  0:00:21 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:21 --:--:--     0yes
+checking for arithmetic hrtime_t... no
+checking for getopt.h... (cached) yes
+checking for getopt_long_only... yes
+checking whether getopt is POSIX compatible... no
+checking for struct timeval... yes
+checking for wide-enough struct timeval.tv_sec member... yes
+checking for iconv... yes
+checking for working iconv...   0     0    0     0    0     0      0      0 --:--:--  0:00:22 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:22 --:--:--     0yes
+checking how to link with libiconv... -liconv
+checking whether iconv is compatible with its POSIX signature... yes
+checking whether limits.h has WORD_BIT, BOOL_WIDTH etc.... no
+checking whether stdint.h conforms to C99... yes
+checking whether stdint.h works without ISO C predefines... yes
+checking whether stdint.h has UINTMAX_WIDTH etc.... no
+checking whether INT32_MAX < INTMAX_MAX... yes
+checking whether INT64_MAX == LONG_MAX... yes
+checking whether UINT32_MAX < UINTMAX_MAX... yes
+checking whether UINT64_MAX == ULONG_MAX... yes
+checking where to find the exponent in a 'float'... word 0 bit 23
+checking whether isnan(float) can be used without linking with libm... yes
+checking whether isnan(float) works... yes
+checking whether isnan(double) can be used without linking with libm...   0     0    0     0     0    0       0 0   0     0      0      0 --:--:--  0:00    0:23 --:--:--     0       0      0 --:    --:0--  0:00:23 --:--:--     0yes
+checking whether isnan(long double) can be used without linking with libm... yes
+checking whether isnanl works... yes
+checking whether iswcntrl works... yes
+checking for towlower... yes
+checking for wctype_t... yes
+checking for wctrans_t... yes
+checking for nl_langinfo and CODESET... yes
+checking for a traditional french locale... fr_FR.ISO8859-1
+checking for a traditional japanese locale...   0     0    0     0    0     0      0      0 --:--:--  0:00:24 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:24 --:--:--     0ja_JP.eucJP
+checking for a french Unicode locale... fr_FR.UTF-8
+checking for a transitional chinese locale... zh_CN.GB18030
+checking whether ldexp() can be used without linking with libm... yes
+checking whether imported symbols can be declared weak... no
+checking for pthread.h... yes
+checking for pthread_kill in -lpthread... yes
+checking whether POSIX threads API is available... yes
+checking for multithread API to use... posix
+checking for a sed that does not truncate output... /usr/bin/sed
+checking whether NAN macro works...   0     0    0     0    0     0      0   0     0    0     0    0     0      0      0 --:--:--  0:00:25 --:--:--     0     0 --:--:--  0:00:25 --:--:--     0yes
+checking whether HUGE_VAL works... yes
+checking for mbstate_t... yes
+checking for mmap... yes
+checking for MAP_ANONYMOUS... yes
+checking whether memchr works... yes
+checking whether <limits.h> defines MIN and MAX... no
+checking whether <sys/param.h> defines MIN and MAX... yes
+checking whether obstack_printf is declared... no
+checking for O_CLOEXEC... yes
+checking for promoted mode_t type... int
+checking whether strerror(0) succeeds... no
+checking for library containing posix_spawn... none required
+checking for posix_spawn... yes
+checking whether posix_spawn is declared... yes
+checking whether posix_spawn works...   0     0    0     0    0     0      0      0 --:--:--  0:00:26 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:26 --:--:--     0yes
+checking whether posix_spawn rejects scripts without shebang... yes
+checking whether posix_spawnp rejects scripts without shebang... no
+checking for nl_langinfo... yes
+checking for ptrdiff_t... yes
+checking whether C symbols are prefixed with underscore at the linker level... yes
+checking for sigset_t... yes
+checking for shared library path variable... DYLD_LIBRARY_PATH
+checking whether to activate relocatable installation... no
+checking whether malloc (0) returns nonnull...   0     0    0     0    0     0      0      0 --:--:--  0:00:27 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:27 --:--:--     0yes
+checking whether setenv is declared... yes
+checking for sched.h... yes
+checking for struct sched_param... yes
+checking for uid_t in sys/types.h... yes
+checking for volatile sig_atomic_t... yes
+checking for sighandler_t... no
+checking whether snprintf is declared... yes
+checking for posix_spawnattr_t... yes
+checking for posix_spawn_file_actions_t... yes
+checking whether stat file-mode macros are broken... no
+checking for nlink_t... yes
+checking for stdbool.h that conforms to C99... yes
+checking for _Bool... yes
+checking for good max_align_t... yes
+checking whether NULL can be used in arbitrary expressions... yes
+checking whether fcloseall is declared... no
+checking which flavor of printf attribute matches inttypes macros... system
+checking whether ecvt is declared... yes
+checking whether fcvt is declared... yes
+checking whether gcvt is declared... yes
+checking whether stpncpy is declared... yes
+checking whether strdup is declared...   0     0    0     0    0     0      0      0 --:--:--  0:00:28 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:28 --:--:--     0yes
+checking whether strndup is declared... yes
+checking whether <sys/ioctl.h> declares ioctl... yes
+checking for struct tms... yes
+checking for struct timespec in <time.h>... yes
+checking for TIME_UTC in <time.h>... yes
+checking whether execvpe is declared... no
+checking whether clearerr_unlocked is declared... yes
+checking whether feof_unlocked is declared... yes
+checking whether ferror_unlocked is declared... yes
+checking whether fflush_unlocked is declared... no
+checking whether fgets_unlocked is declared... no
+checking whether fputc_unlocked is declared... no
+checking whether fputs_unlocked is declared... no
+checking whether fread_unlocked is declared... no
+checking whether fwrite_unlocked is declared... no
+checking whether getc_unlocked is declared... yes
+checking whether getchar_unlocked is declared... yes
+checking whether putc_unlocked is declared... yes
+checking whether putchar_unlocked is declared... yes
+checking whether unsetenv is declared... yes
+checking whether vsnprintf is declared... yes
+checking whether <wchar.h> uses 'inline' correctly... yes
+checking whether wcsdup is declared... yes
+checking POSIX termios...   0     0    0     0    0     0      0      0 --:--:--  0:00:29 --:--:--     0yes
+checking whether use of TIOCGWINSZ requires termios.h...   0     0    0     0    0     0      0      0 --:--:--  0:00:29 --:--:--     0yes
+checking whether fchdir is declared... yes
+checking whether getdelim is declared... yes
+checking whether getdtablesize is declared... yes
+checking whether getline is declared... yes
+checking whether setlocale (LC_ALL, NULL) is multithread-safe... no
+checking whether setlocale (category, NULL) is multithread-safe... yes
+checking whether imported symbols can be declared weak... (cached) no
+checking whether locale.h defines locale_t... yes
+checking whether locale.h conforms to POSIX:2001... yes
+checking whether struct lconv is properly defined... yes
+checking whether memrchr is declared... no
+checking whether strnlen is declared... yes
+checking for alloca as a compiler built-in... yes
+checking whether to enable assertions... yes
+checking for __builtin_expect... yes
+checking whether calloc (0, n) and calloc (n, 0) return nonnull... yes
+checking for library containing clock_gettime... none required
+checking for clock_gettime... yes
+checking for clock_settime... yes
+checking whether // is distinct from /... (cached) no
+checking whether dup2 works... yes
+checking for error_at_line...   0     0    0     0    0     0      0      0 --:--:--  0:00:30 --:--:--     0no
+checking whether fcntl handles F_DUPFD correctly...   0     0    0     0    0     0      0      0 --:--:--  0:00:30 --:--:--     0yes
+checking whether fcntl understands F_DUPFD_CLOEXEC... yes
+checking whether conversion from 'int' to 'long double' works... yes
+checking whether fopen recognizes a trailing slash... yes
+checking whether fopen supports the mode character 'x'... yes
+checking whether fopen supports the mode character 'e'...   0     0    0     0    0     0      0      0 --:--:--  0:00:31 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:31 --:--:--     0no
+checking for __fpending... no
+checking for nl_langinfo... (cached) yes
+checking for ptrdiff_t... (cached) yes
+checking whether free is known to preserve errno... no
+checking whether frexp works... yes
+checking whether frexpl is declared... yes
+checking whether frexpl() can be used without linking with libm... yes
+checking whether frexpl works... yes
+checking whether getcwd handles long file names properly...   0     0    0     0    0     0      0      0 --:--:--  0:00:32 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:32 --:--:--     0yes
+checking for getpagesize... yes
+checking whether getcwd succeeds when 4k < cwd_length < 16k... yes
+checking whether gethrtime is declared... no
+checking whether CLOCK_MONOTONIC or CLOCK_REALTIME is defined... yes
+checking whether program_invocation_name is declared... no
+checking whether program_invocation_short_name is declared... no
+checking whether __argv is declared... no
+checking whether __progname is defined in default libraries... yes
+checking for gettimeofday with POSIX signature... yes
+checking whether the compiler generally respects inline... yes
+checking whether isnan macro works... yes
+checking whether isnan(double) can be used without linking with libm... (cached) yes
+checking whether isnan(double) can be used without linking with libm... (cached) yes
+checking whether isnan(float) can be used without linking with libm... (cached) yes
+checking whether isnan(float) works... (cached) yes
+checking whether isnan(long double) can be used without linking with libm... (cached) yes
+checking whether isnanl works... (cached) yes
+checking whether isnan(long double) can be used without linking with libm... (cached) yes
+checking whether isnanl works... (cached) yes
+checking whether iswblank is declared... yes
+checking whether iswdigit is ISO C compliant...   0     0    0     0    0     0      0      0 --:--:--  0:00:33 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:33 --:--:--     0yes
+checking whether iswxdigit is ISO C compliant... yes
+checking whether ldexpl is declared... yes
+checking whether ldexpl() can be used without linking with libm... yes
+checking whether ldexpl works... yes
+checking whether the compiler supports the __inline keyword... yes
+checking for pthread_rwlock_t... yes
+checking whether pthread_rwlock_rdlock prefers a writer to a reader...   0     0    0     0    0     0      0      0 --:--:--  0:00:34 --:--:--     0yes
+  0     0    0     0    0     0      0      0 --:--:--  0:00:34 --:--:--     0checking whether malloc (0) returns nonnull... (cached) yes
+checking whether mbrtowc handles incomplete characters... yes
+checking whether mbrtowc works as well as mbtowc... yes
+checking whether mbrtowc handles a NULL pwc argument... yes
+checking whether mbrtowc handles a NULL string argument... yes
+checking whether mbrtowc has a correct return value...   0     0    0     0    0     0      0      0 --:--:--  0:00:35 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:35 --:--:--     0yes
+checking whether mbrtowc returns 0 when parsing a NUL character... yes
+checking whether mbrtowc stores incomplete characters... no
+checking whether mbrtowc works on empty input... yes
+checking whether the C locale is free of encoding errors... yes
+checking whether mbrtowc handles incomplete characters... (cached) yes
+checking whether mbrtowc works as well as mbtowc... (cached) yes
+checking whether mbswidth is declared in <wchar.h>... no
+checking for mbstate_t... (cached) yes
+checking for mempcpy... (cached) no
+checking for obstacks that work with any size object... no
+checking whether open recognizes a trailing slash...   0     0    0     0    0     0      0      0 --:--:--  0:00:36 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:36 --:--:--     0yes
+checking whether perror matches strerror... yes
+checking whether frexp works... (cached) yes
+checking whether ldexp can be used without linking with libm... (cached) yes
+checking whether frexpl() can be used without linking with libm... (cached) yes
+checking whether frexpl works... (cached) yes
+checking whether frexpl is declared... (cached) yes
+checking whether ldexpl() can be used without linking with libm... (cached) yes
+checking whether ldexpl works... (cached) yes
+checking whether ldexpl is declared... (cached) yes
+checking whether program_invocation_name is declared... (cached) no
+checking whether program_invocation_short_name is declared... (cached) no
+checking for raise... yes
+checking for sigprocmask... yes
+checking for rawmemchr... no
+checking for readline... yes
+checking how to link with libreadline... -lreadline
+checking for readline/readline.h... yes
+checking for readline/history.h... yes
+checking whether readlink signature is correct... yes
+checking whether readlink handles trailing slash correctly... yes
+checking whether readlink truncates results correctly... yes
+checking whether realloc (0, 0) returns nonnull...   0     0    0     0    0     0      0      0 --:--:--  0:00:37 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:37 --:--:--     0yes
+checking for reallocarray... no
+checking for getcwd... (cached) yes
+checking whether free is known to preserve errno... (cached) no
+checking for mempcpy... (cached) no
+checking for rawmemchr... (cached) no
+checking for search.h... yes
+checking for tsearch... yes
+checking whether rename honors trailing slash on destination... yes
+checking whether rename honors trailing slash on source... yes
+checking whether rename manages hard links correctly... yes
+checking whether rename manages existing destinations correctly...   0     0    0     0    0     0      0      0 --:--:--  0:00:38 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:38 --:--:--     0yes
+checking for struct sigaction.sa_sigaction... yes
+checking for signbit macro... yes
+checking for signbit compiler built-ins... yes
+checking for sigprocmask... (cached) yes
+checking for stdint.h... (cached) yes
+checking for SIZE_MAX... yes
+checking for snprintf... (cached) yes
+checking whether snprintf respects a size of 1... yes
+checking whether printf supports POSIX/XSI format strings with positions... (cached) yes
+checking for snprintf... (cached) yes
+checking whether snprintf fully supports the 'n' directive... no
+checking whether snprintf respects a size of 1... (cached) yes
+checking whether vsnprintf respects a zero size as in C99...   0     0    0     0    0     0      0      0 --:--:--  0:00:39 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:39 --:--:--     0yes
+checking for nl_langinfo... (cached) yes
+checking for ptrdiff_t... (cached) yes
+checking for nl_langinfo... (cached) yes
+checking for ptrdiff_t... (cached) yes
+checking for ssize_t... yes
+checking whether stat handles trailing slashes on files... yes
+checking for working stdalign.h... yes
+checking for stpcpy... yes
+checking for working stpncpy... yes
+checking for working strndup... yes
+checking whether strtod obeys C99...   0     0    0     0    0     0      0      0 --:--:--  0:00:40 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:40 --:--:--     0yes
+checking for strverscmp... no
+checking for sys/single_threaded.h... no
+checking whether unlink honors trailing slashes... yes
+checking whether unlink of a parent directory fails as it should... yes
+checking for unsetenv... yes
+checking for unsetenv() return type... int
+checking whether unsetenv obeys POSIX... yes
+checking for ptrdiff_t... (cached) yes
+checking for vasprintf... yes
+checking for vasprintf... (cached) yes
+checking for nl_langinfo... (cached) yes
+checking for ptrdiff_t... (cached) yes
+checking for vsnprintf... yes
+checking whether snprintf respects a size of 1... (cached) yes
+checking whether printf supports POSIX/XSI format strings with positions... (cached) yes
+checking for vsnprintf... (cached) yes
+checking whether snprintf fully supports the 'n' directive... (cached) no
+checking whether snprintf respects a size of 1... (cached) yes
+checking whether vsnprintf respects a zero size as in C99... (cached) yes
+checking for nl_langinfo... (cached) yes
+checking for ptrdiff_t... (cached) yes
+checking for nl_langinfo... (cached) yes
+checking for ptrdiff_t... (cached) yes
+checking for waitid... yes
+checking whether wcwidth is declared... yes
+checking whether wcwidth works reasonably in UTF-8 locales...   0     0    0     0    0     0      0      0 --:--:--  0:00:41 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:41 --:--:--     0yes
+checking whether use of TIOCGWINSZ requires sys/ioctl.h... no
+checking whether use of TIOCGWINSZ requires termios.h... (cached) yes
+checking whether use of struct winsize requires sys/ptem.h... no
+checking for stdint.h... (cached) yes
+checking for paths.h... yes
+checking for confstr... yes
+checking for sched_setparam... no
+checking for sched_setscheduler... no
+checking for setegid... yes
+checking for seteuid... yes
+checking for vfork... yes
+checking for strchrnul... yes
+checking whether strchrnul works... yes
+checking whether getdtablesize works... yes
+checking for nl_langinfo... (cached) yes
+checking for ptrdiff_t... (cached) yes
+checking whether NLS is requested... yes
+checking for msgfmt... no
+checking for gmsgfmt... :
+checking for xgettext... no
+checking for msgmerge... no
+checking for CFPreferencesCopyAppValue...   0     0    0     0    0     0      0      0 --:--:--  0:00:42 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:42 --:--:--     0yes
+checking for CFLocaleCopyCurrent... yes
+checking for GNU gettext in libc... no
+checking for iconv... (cached) yes
+checking for working iconv... (cached) yes
+checking how to link with libiconv... -liconv
+checking for GNU gettext in libintl... no
+checking whether to use NLS... no
+checking for valgrind... no
+checking Valgrind suppression file... 
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating src/yacc
+config.status: creating javacomp.sh
+config.status: creating javaexec.sh
+config.status: creating gnulib-po/Makefile.in
+config.status: creating runtime-po/Makefile.in
+config.status: creating etc/bench.pl
+config.status: creating tests/atlocal
+config.status: creating tests/bison
+config.status: creating Makefile
+config.status: creating po/Makefile.in
+config.status: creating doc/yacc.1
+config.status: creating lib/config.h
+config.status: executing depfiles commands
+  0     0    0     0    0     0      0      0 --:--:--  0:00:43 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:43 --:--:--     0  0     0    0     0    0    0     0    0     0    0     0      0   0      0      0 --:--:--  0:00:44 --:--:--     0      0 --:--:--  0:00:44 --:--:--     0  0     0    0     0    0     0      0    0     0    0     0    0     0      0      0 --:--:--  0:00:45 -    0 --:--:--  0:00:45 --:--:--     0-:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:46 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:46 --:--:--     0config.status: executing po-directories commands
+config.status: creating gnulib-po/POTFILES
+config.status: creating gnulib-po/Makefile
+config.status: creating runtime-po/POTFILES
+config.status: creating runtime-po/Makefile
+config.status: creating po/POTFILES
+config.status: creating po/Makefile
+config.status: executing tests/atconfig commands
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C bison
+  LEX      examples/c/reccalc/scan.stamp
+  GEN      lib/alloca.h
+  GEN      lib/configmake.h
+  GEN      lib/getopt.h
+  GEN      lib/fcntl.h
+  GEN      lib/iconv.h
+  GEN      lib/inttypes.h
+  GEN      lib/getopt-cdefs.h
+  GEN      lib/textstyle.h
+  GEN      lib/limits.h
+  GEN      lib/math.h
+  GEN      lib/sched.h
+  GEN      lib/signal.h
+  GEN      lib/spawn.h
+  GEN      lib/stdio.h
+  GEN      lib/stdint.h
+  GEN      lib/string.h
+  GEN      lib/stdlib.h
+  GEN      lib/malloc/scratch_buffer.gl.h
+  GEN      lib/sys/ioctl.h
+  GEN      lib/sys/stat.h
+  GEN      lib/sys/resource.h
+  GEN      lib/termios.h
+  GEN      lib/sys/time.h
+  GEN      lib/time.h
+  GEN      lib/sys/times.h
+  0     0    0     0    0     0      0      0 --:--:--  0:00:47 --:-  GEN      lib/sys/types.h
+-:--     0  GEN      lib/unistd.h
+  GEN      lib/unistr.h
+  GEN      lib/uniwidth.h
+  GEN      lib/unitypes.h
+  GEN      lib/wchar.h
+  GEN      lib/wctype.h
+  0     0    0     0    0     0      0      0 --:--:--  0:00:47 --:--:--     0  GEN      lib/sys/wait.h
+/Applications/Xcode.app/Contents/Developer/usr/bin/make  all-recursive
+Making all in po
+make[3]: Nothing to be done for `all'.
+Making all in runtime-po
+make[3]: Nothing to be done for `all'.
+Making all in gnulib-po
+make[3]: Nothing to be done for `all'.
+Making all in .
+  CC       lib/libbison_a-wait-process.o
+  CC       lib/libbison_a-xmalloc.o
+  CC       lib/libbison_a-wctype-h.o
+  CC       lib/libbison_a-xalloc-die.o
+  CC       lib/libbison_a-xconcat-filename.o
+  CC       lib/libbison_a-xhash.o
+  CC       lib/libbison_a-gl_xlist.o
+  CC       lib/libbison_a-xmemdup0.o
+  CC       lib/libbison_a-gl_xmap.o
+  CC       lib/libbison_a-xsize.o
+  CC       lib/libbison_a-xreadlink.o
+  CC       lib/libbison_a-xstrndup.o
+  CC       lib/libbison_a-get-errno.o
+  CC       lib/libbison_a-path-join.o
+  CC       lib/libbison_a-asnprintf.o
+  CC       lib/libbison_a-canonicalize-lgpl.o
+  CC       lib/libbison_a-fopen.o
+  CC       lib/libbison_a-error.o
+  CC       lib/libbison_a-asprintf.o
+  CC       lib/libbison_a-fpending.o
+  CC       lib/libbison_a-fprintf.o
+  CC       lib/libbison_a-free.o
+  CC       lib/libbison_a-fseterr.o
+  CC       lib/libbison_a-getopt.o
+  CC       lib/libbison_a-getopt1.o
+  CC       lib/libbison_a-mempcpy.o
+  CC       lib/libbison_a-obstack_printf.o
+  CC       lib/libbison_a-obstack.o
+  CC       lib/libbison_a-perror.o
+  CC       lib/libbison_a-printf.o
+  CC       lib/libbison_a-printf-args.o
+  CC       lib/libbison_a-printf-parse.o
+  CC       lib/libbison_a-rawmemchr.o
+  CC       lib/libbison_a-reallocarray.o
+  CC       lib/libbison_a-snprintf.o
+  CC       lib/libbison_a-spawn.o
+  CC       lib/libbison_a-spawn_faction_addchdir.o
+  CC       lib/libbison_a-spawn_faction_addclose.o
+  CC       lib/libbison_a-spawn_faction_adddup2.o
+  CC       lib/libbison_a-spawn_faction_addopen.o
+  CC       lib/libbison_a-spawn_faction_init.o
+  CC       lib/libbison_a-spawn_faction_destroy.o
+  CC       lib/libbison_a-spawnattr_destroy.o
+  CC       lib/libbison_a-spawnattr_init.o
+  CC       lib/libbison_a-spawnattr_setflags.o
+  CC       lib/libbison_a-spawnattr_setpgroup.o
+  CC       lib/libbison_a-spawnattr_setsigmask.o
+  CC       lib/libbison_a-spawni.o
+  CC       lib/libbison_a-sprintf.o
+  CC       lib/libbison_a-spawnp.o
+  CC       lib/libbison_a-strerror-override.o
+  CC       lib/libbison_a-strerror.o
+  CC       lib/libbison_a-strerror_r.o
+  CC       lib/libbison_a-strverscmp.o
+  CC       lib/libbison_a-vasnprintf.o
+  CC       lib/libbison_a-vasprintf.o
+  CC       lib/libbison_a-vfprintf.o
+  CC       lib/libbison_a-vsnprintf.o
+lib/spawni.c:752:15: warning: 'vfork' is deprecated: Use posix_spawn or fork [-Wdeprecated-declarations]
+  752 |     new_pid = vfork ();
+      |               ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/unistd.h:618:1: note: 'vfork' has been explicitly marked deprecated here
+  618 | __deprecated_msg("Use posix_spawn or fork")
+      | ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/sys/cdefs.h:227:48: note: expanded from macro '__deprecated_msg'
+  227 |         #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))
+      |                                                       ^
+  CC       lib/libbison_a-vsprintf.o
+lib/strerror.c:59:7: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+   59 |       sprintf (buf, fmt, n);
+      |       ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/_stdio.h:278:1: note: 'sprintf' has been explicitly marked deprecated here
+  278 | __deprecated_msg("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.")
+      | ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/sys/cdefs.h:227:48: note: expanded from macro '__deprecated_msg'
+  227 |         #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))
+      |                                                       ^
+  CC       lib/main.o
+1 warning generated.
+1 warning generated.
+  CC       lib/yyerror.o
+  CC       src/bison-AnnotationList.o
+  CC       src/bison-Sbitset.o
+  CC       src/bison-InadequacyList.o
+  CC       src/bison-assoc.o
+  CC       src/bison-closure.o
+lib/vasnprintf.c:3437:35: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+ 3437 |                                   sprintf ((char *) p, "%+d", exponent);
+      |                                   ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/_stdio.h:278:1: note: 'sprintf' has been explicitly marked deprecated here
+  278 | __deprecated_msg("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.")
+      | ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/sys/cdefs.h:227:48: note: expanded from macro '__deprecated_msg'
+  227 |         #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))
+      |                                                       ^
+lib/vasnprintf.c:3445:35: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+ 3445 |                                   sprintf (expbuf, "%+d", exponent);
+      |                                   ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/_stdio.h:278:1: note: 'sprintf' has been explicitly marked deprecated here
+  278 | __deprecated_msg("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.")
+      | ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/sys/cdefs.h:227:48: note: expanded from macro '__deprecated_msg'
+  227 |         #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))
+      |                                                       ^
+  CC       src/bison-complain.o
+  CC       src/bison-conflicts.o
+lib/vasnprintf.c:3588:35: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+ 3588 |                                   sprintf ((char *) p, "%+d", exponent);
+      |                                   ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/_stdio.h:278:1: note: 'sprintf' has been explicitly marked deprecated here
+  278 | __deprecated_msg("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.")
+      | ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/sys/cdefs.h:227:48: note: expanded from macro '__deprecated_msg'
+  227 |         #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))
+      |                                                       ^
+lib/vasnprintf.c:3596:35: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+ 3596 |                                   sprintf (expbuf, "%+d", exponent);
+      |                                   ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/_stdio.h:278:1: note: 'sprintf' has been explicitly marked deprecated here
+  278 | __deprecated_msg("This function is provided fo  CC       src/bison-counterexample.o
+r compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.")
+      | ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/sys/cdefs.h:227:48: note: expanded from macro '__deprecated_msg'
+  227 |         #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))
+      |                                                       ^
+lib/vasnprintf.c:4048:37: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+ 4048 |                                     sprintf ((char *) p, "%+.2d", exponent);
+      |                                     ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/_stdio.h:278:1: note: 'sprintf' has been explicitly marked deprecated here
+  278 | __deprecated_msg("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.")
+      | ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/sys/cdefs.h:227:48: note: expanded from macro '__deprecated_msg'
+  227 |         #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))
+      |                                                       ^
+lib/vasnprintf.c:4056:37: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+ 4056 |                                     sprintf (expbuf, "%+.2d", exponent);
+      |                                     ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/_stdio.h:278:1: note: 'sprintf' has been explicitly marked deprecated here
+  278 | __deprecated_msg("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.")
+      | ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/sys/cdefs.h:227:48: note: expanded from macro '__deprecated_msg'
+  227 |         #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))
+      |                                                       ^
+lib/vasnprintf.c:4229:45: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+ 4229 |                                             sprintf ((char *) p, "%+.2d", exponent);
+      |                                             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/_stdio.h:278:1: note: 'sprintf' has been explicitly marked deprecated here
+  278 | __deprecated_msg("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprin  CC       src/bison-derivation.o
+tf(3), it is highly recommended that you use snprintf(3) instead.")
+      | ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/sys/cdefs.h:227:48: note: expanded from macro '__deprecated_msg'
+  227 |         #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))
+      |                                                       ^
+lib/vasnprintf.c:4237:45: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+ 4237 |          CC       src/bison-derives.o
+                                     sprintf (expbuf, "%+.2d", exponent);
+      |                                             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/_stdio.h:278:1: note: 'sprintf' has been explicitly marked deprecated here
+  278 | __deprecated_msg("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.")
+      | ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/sys/cdefs.h:227:48: note: expanded from macro '__deprecated_msg'
+  227 |         #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))
+      |                                                       ^
+lib/vasnprintf.c:4521:39: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+ 4521 |                                       sprintf ((char *) p, decimal_format, exponent);
+      |                                       ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/_stdio.h:278:1: note: 'sprintf' has been explicitly marked deprecated here
+  278 | __deprecated_msg("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.")
+      | ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/sys/cdefs.h:227:48: note: expanded from macro '__deprecated_msg'
+  227 |         #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))
+      |                                                       ^
+lib/vasnprintf.c:4529:39: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+ 4529 |                                       sprintf (expbuf, decimal_format, exponent);
+      |                                       ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/_stdio.h:278:1: note: 'sprintf' has been explicitly marked deprecated here
+  278 | __deprecated_msg("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.")
+      | ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/sys/cdefs.h:227:48: note: expanded from macro '__deprecated_msg'
+  227 |         #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))
+      |                                                       ^
+lib/vasnprintf.c:4714:47: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+ 4714 |                                               sprintf ((char *) p, decimal_format, exponent);
+      |                                               ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/_stdio.h:278:1: note: 'sprintf' has been explicitly marked deprecated here
+  278 | __deprecated_msg("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.")
+      | ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/sys/cdefs.h:227:48: note: expanded from macro '__deprecated_msg'
+  227 |         #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))
+      |                                                       ^
+lib/vasnprintf.c:4722:47: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+ 4722 |                                               sprintf (expbuf, decimal_format, exponent);
+      |                                               ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/_stdio.h:278:1: note: 'sprintf' has been explicitly marked deprecated here
+  278 | __deprecated_msg("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.")
+      | ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/sys/cdefs.h:227:48: note: expanded from macro '__deprecated_msg'
+  227 |         #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))
+      |                                                       ^
+  CC       src/bison-files.o
+  CC       src/bison-fixits.o
+  CC       src/bison-getargs.o
+  CC       src/bison-glyphs.o
+  CC       src/bison-gram.o
+  CC       src/bison-graphviz.o
+  CC       src/bison-ielr.o
+  CC       src/bison-lalr.o
+  CC       src/bison-location.o
+  CC       src/bison-lr0.o
+  CC       src/bison-muscle-tab.o
+  CC       src/bison-main.o
+  CC       src/bison-lssi.o
+  CC       src/bison-named-ref.o
+  CC       src/bison-nullable.o
+  CC       src/bison-output.o
+  CC       src/bison-parse-gram.o
+  CC       src/bison-print-graph.o
+  CC       src/bison-parse-simulation.o
+  CC       src/bison-print-xml.o
+  CC       src/bison-reader.o
+  CC       src/bison-print.o
+  CC       src/bison-reduce.o
+  CC       src/bison-relation.o
+  CC       src/bison-scan-code-c.o
+  CC       src/bison-scan-gram-c.o
+12 warnings generated.
+  CC       src/bison-scan-skel-c.o
+  CC       src/bison-state.o
+  CC       src/bison-state-item.o
+  CC       src/bison-strversion.o
+  CC       src/bison-symlist.o
+  CC       src/bison-symtab.o
+  CC       src/bison-tables.o
+  CC       src/bison-uniqstr.o
+  CC       lib/libbison_a-allocator.o
+  CC       lib/libbison_a-areadlink.o
+  CC       lib/libbison_a-argmatch.o
+  CC       lib/libbison_a-gl_array_list.o
+  CC       lib/libbison_a-basename-lgpl.o
+  CC       lib/libbison_a-binary-io.o
+  CC       lib/libbison_a-bitrotate.o
+  CC       lib/libbison_a-bitset.o
+  CC       lib/bitset/libbison_a-array.o
+  CC       lib/bitset/libbison_a-stats.o
+  CC       lib/bitset/libbison_a-list.o
+  CC       lib/bitset/libbison_a-table.o
+  CC       lib/bitset/libbison_a-vector.o
+  CC       lib/libbison_a-bitsetv.o
+  CC       lib/libbison_a-c-ctype.o
+  CC       lib/libbison_a-c-strcasecmp.o
+  CC       lib/libbison_a-c-strncasecmp.o
+  CC       lib/libbison_a-canonicalize.o
+  CC       lib/libbison_a-careadlinkat.o
+  CC       lib/libbison_a-cloexec.o
+  CC       lib/libbison_a-close-stream.o
+  CC       lib/libbison_a-closeout.o
+  CC       lib/libbison_a-concat-filename.o
+  CC       lib/libbison_a-dirname.o
+  CC       lib/libbison_a-dirname-lgpl.o
+  CC       lib/libbison_a-stripslash.o
+  CC       lib/libbison_a-basename.o
+  CC       lib/libbison_a-execute.o
+  CC       lib/libbison_a-exitfail.o
+  CC       lib/libbison_a-fatal-signal.o
+  CC       lib/libbison_a-fd-safer-flag.o
+  CC       lib/libbison_a-file-set.o
+  CC       lib/libbison_a-dup-safer-flag.o
+  CC       lib/libbison_a-findprog-in.o
+  CC       lib/libbison_a-fopen-safer.o
+  0     0    0     0    0     0      0      0 --:--:--  0:00:48 --:--:--     0  CC       lib/libbison_a-fstrcmp.o
+  0     0    0     0    0     0      0      0 --:--:--  0:00:48 --:--:--     0  CC       lib/libbison_a-gethrxtime.o
+  CC       lib/libbison_a-xtime.o
+  CC       lib/libbison_a-getprogname.o
+  CC       lib/libbison_a-gettime.o
+  CC       lib/libbison_a-hash.o
+  CC       lib/libbison_a-gl_hash_map.o
+  CC       lib/libbison_a-hash-pjw.o
+  CC       lib/libbison_a-hash-triple-simple.o
+  CC       lib/libbison_a-ialloc.o
+  CC       lib/libbison_a-integer_length.o
+  CC       lib/libbison_a-integer_length_l.o
+  CC       lib/libbison_a-gl_linked_list.o
+  CC       lib/libbison_a-gl_list.o
+  CC       lib/libbison_a-localcharset.o
+  CC       lib/libbison_a-gl_map.o
+  CC       lib/glthread/libbison_a-lock.o
+  CC       lib/libbison_a-math.o
+  CC       lib/libbison_a-mbchar.o
+  CC       lib/libbison_a-mbfile.o
+  CC       lib/libbison_a-mbswidth.o
+  CC       lib/libbison_a-gl_oset.o
+  CC       lib/libbison_a-pipe2.o
+  CC       lib/libbison_a-pipe2-safer.o
+  CC       lib/libbison_a-printf-frexp.o
+  CC       lib/libbison_a-printf-frexpl.o
+  CC       lib/libbison_a-progname.o
+  CC       lib/libbison_a-quotearg.o
+  CC       lib/libbison_a-gl_rbtree_oset.o
+  CC       lib/malloc/libbison_a-scratch_buffer_dupfree.o
+  CC       lib/libbison_a-gl_rbtreehash_list.o
+  CC       lib/malloc/libbison_a-scratch_buffer_grow.o
+  CC       lib/malloc/libbison_a-scratch_buffer_grow_preserve.o
+  CC       lib/malloc/libbison_a-scratch_buffer_set_array_size.o
+  CC       lib/libbison_a-spawn-pipe.o
+  CC       lib/libbison_a-sig-handler.o
+  CC       lib/glthread/libbison_a-threadlib.o
+  CC       lib/libbison_a-timespec.o
+  CC       lib/libbison_a-timevar.o
+  CC       lib/libbison_a-unicodeio.o
+  CC       lib/libbison_a-unistd.o
+  CC       lib/libbison_a-dup-safer.o
+  CC       lib/glthread/libbison_a-tls.o
+  CC       lib/libbison_a-fd-safer.o
+  CC       lib/libbison_a-pipe-safer.o
+  CC       lib/unistr/libbison_a-u8-mbtoucr.o
+  CC       lib/unistr/libbison_a-u8-uctomb.o
+  CC       lib/unistr/libbison_a-u8-uctomb-aux.o
+  CC       lib/uniwidth/libbison_a-width.o
+  AR       lib/liby.a
+  AR       lib/libbison.a
+  CCLD     src/bison
+  GEN      doc/bison.help
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C bison install
+/Applications/Xcode.app/Contents/Developer/usr/bin/make  install-recursive
+Making install in po
+if test "bison" = "gettext-tools"; then \
+	  /usr/local/bin/gmkdir -p /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/gettext/po; \
+	  for file in Makefile.in.in remove-potcdate.sin quot.sed boldquot.sed en@quot.header en@boldquot.header insert-header.sin Rules-quot   Makevars.template; do \
+	    /usr/local/bin/ginstall -c -m 644 ./$file \
+			    /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/gettext/po/$file; \
+	  done; \
+	  for file in Makevars; do \
+	    rm -f /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/gettext/po/$file; \
+	  done; \
+	else \
+	  : ; \
+	fi
+Making install in runtime-po
+if test "bison" = "gettext-tools"; then \
+	  /usr/local/bin/gmkdir -p /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/gettext/po; \
+	  for file in Makefile.in.in remove-potcdate.sin quot.sed boldquot.sed en@quot.header en@boldquot.header insert-header.sin Rules-quot   Makevars.template; do \
+	    /usr/local/bin/ginstall -c -m 644 ./$file \
+			    /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/gettext/po/$file; \
+	  done; \
+	  for file in Makevars; do \
+	    rm -f /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/gettext/po/$file; \
+	  done; \
+	else \
+	  : ; \
+	fi
+Making install in gnulib-po
+if test "bison" = "gettext-tools"; then \
+	  /usr/local/bin/gmkdir -p /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/gettext/po; \
+	  for file in Makefile.in.in remove-potcdate.sin quot.sed boldquot.sed en@quot.header en@boldquot.header insert-header.sin Rules-quot   Makevars.template; do \
+	    /usr/local/bin/ginstall -c -m 644 ./$file \
+			    /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/gettext/po/$file; \
+	  done; \
+	  for file in Makevars; do \
+	    rm -f /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/gettext/po/$file; \
+	  done; \
+	else \
+	  : ; \
+	fi
+  0     0    0     0    0     0      0      0 --:--:--  0:00:49 --:--:--     0Making install in .
+  0     0    0     0    0     0      0      0 --:--:--  0:00:49 --:--:--     0  GEN      doc/bison.help
+ /usr/local/bin/gmkdir -p '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/lib'
+ /usr/local/bin/gmkdir -p '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/doc/bison/examples/c++/calc++'
+ /usr/local/bin/gmkdir -p '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/bin'
+ /usr/local/bin/gmkdir -p '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/bin'
+ /usr/local/bin/gmkdir -p '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/doc/bison/examples/c++'
+ /usr/local/bin/gmkdir -p '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/aclocal'
+ /usr/local/bin/gmkdir -p '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/doc/bison/examples/c/bistromathic'
+ /usr/local/bin/gmkdir -p '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/doc/bison/examples/c'
+ /usr/local/bin/gmkdir -p '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/doc/bison/examples/d/calc'
+ /usr/local/bin/gmkdir -p '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/doc/bison/examples/c/calc'
+ /usr/local/bin/gmkdir -p '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/doc/bison/examples/c++'
+ /usr/local/bin/gmkdir -p '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/doc/bison/examples/c++/calc++'
+ /usr/local/bin/ginstall -c -m 644  lib/liby.a '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/lib'
+ /usr/local/bin/ginstall -c -m 644 m4/bison-i18n.m4 '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/aclocal'
+ /usr/local/bin/ginstall -c -m 644 examples/c/bistromathic/parse.y examples/c/bistromathic/Makefile examples/c/bistromathic/README.md '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/doc/bison/examples/c/bistromathic'
+ /usr/local/bin/ginstall -c src/yacc '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/bin'
+ /usr/local/bin/ginstall -c -m 644 examples/c++/README.md examples/c++/Makefile examples/c++/variant.yy examples/c++/variant-11.yy '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/doc/bison/examples/c++'
+ /usr/local/bin/ginstall -c -m 644 examples/c++/calc++/README.md examples/c++/calc++/Makefile '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/doc/bison/examples/c++/calc++'
+ /usr/local/bin/ginstall -c -m 644 examples/c/README.md '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/doc/bison/examples/c'
+ /usr/local/bin/ginstall -c -m 644 examples/c++/simple.yy '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/doc/bison/examples/c++'
+  /usr/local/bin/ginstall -c src/bison '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/bin'
+ /usr/local/bin/ginstall -c -m 644 examples/c/calc/calc.y examples/c/calc/Makefile examples/c/calc/README.md '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/doc/bison/examples/c/calc'
+ /usr/local/bin/ginstall -c -m 644 examples/c++/calc++/driver.cc examples/c++/calc++/driver.hh examples/c++/calc++/scanner.ll examples/c++/calc++/calc++.cc examples/c++/calc++/parser.yy '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/doc/bison/examples/c++/calc++'
+ /usr/local/bin/ginstall -c -m 644 examples/d/calc/calc.y examples/d/calc/Makefile '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/doc/bison/examples/d/calc'
+ /usr/local/bin/gmkdir -p '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/doc/bison/examples/d'
+ /usr/local/bin/gmkdir -p '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/doc/bison/examples'
+ /usr/local/bin/gmkdir -p '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/doc/bison'
+ /usr/local/bin/gmkdir -p '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/doc/bison/examples/java/calc'
+ /usr/local/bin/gmkdir -p '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/doc/bison/examples/c/glr'
+ /usr/local/bin/gmkdir -p '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/doc/bison/examples/java'
+ /usr/local/bin/gmkdir -p '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/doc/bison/examples/java/simple'
+ /usr/local/bin/gmkdir -p '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/bison/m4sugar'
+ /usr/local/bin/gmkdir -p '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/doc/bison/examples/c/lexcalc'
+ ( cd '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/lib' && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib liby.a )
+ /usr/local/bin/gmkdir -p '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/doc/bison/examples/c/mfcalc'
+ /usr/local/bin/gmkdir -p '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/bison'
+ /usr/local/bin/ginstall -c -m 644 examples/README.md '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/doc/bison/examples'
+ /usr/local/bin/ginstall -c -m 644 data/m4sugar/foreach.m4 data/m4sugar/m4sugar.m4 '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/bison/m4sugar'
+ /usr/local/bin/ginstall -c -m 644 AUTHORS COPYING NEWS README THANKS TODO '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/doc/bison'
+ /usr/local/bin/ginstall -c -m 644 examples/c/glr/c++-types.y examples/c/glr/Makefile examples/c/glr/README.md '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/doc/bison/examples/c/glr'
+ /usr/local/bin/ginstall -c -m 644 examples/c/lexcalc/parse.y examples/c/lexcalc/scan.l examples/c/lexcalc/Makefile examples/c/lexcalc/README.md '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/doc/bison/examples/c/lexcalc'
+ /usr/local/bin/ginstall -c -m 644 examples/d/README.md '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/doc/bison/examples/d'
+ /usr/local/bin/ginstall -c -m 644 examples/java/README.md '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/doc/bison/examples/java'
+ /usr/local/bin/ginstall -c -m 644 examples/java/calc/Calc.y examples/java/calc/Makefile '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/doc/bison/examples/java/calc'
+ /usr/local/bin/ginstall -c -m 644 examples/java/simple/Calc.y examples/java/simple/Makefile '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/doc/bison/examples/java/simple'
+ /usr/local/bin/gmkdir -p '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/doc/bison/examples/c/pushcalc'
+ /usr/local/bin/ginstall -c -m 644 examples/c/mfcalc/Makefile '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/doc/bison/examples/c/mfcalc'
+ /usr/local/bin/ginstall -c -m 644 data/README.md data/bison-default.css '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/bison'
+ /usr/local/bin/gmkdir -p '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/doc/bison/examples/c/reccalc'
+ /usr/local/bin/ginstall -c -m 644 examples/c/pushcalc/calc.y examples/c/pushcalc/Makefile examples/c/pushcalc/README.md '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/doc/bison/examples/c/pushcalc'
+ /usr/local/bin/gmkdir -p '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/doc/bison/examples/c/rpcalc'
+ /usr/local/bin/gmkdir -p '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/doc/bison/examples/d/simple'
+ /usr/local/bin/gmkdir -p '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/bison/skeletons'
+ /usr/local/bin/gmkdir -p '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/bison/xslt'
+  GEN      doc/bison.help
+ /usr/local/bin/gmkdir -p '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/doc/bison/examples/c/rpcalc'
+ /usr/local/bin/gmkdir -p '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/doc/bison/examples/c/mfcalc'
+ /usr/local/bin/ginstall -c -m 644 examples/c/reccalc/parse.y examples/c/reccalc/scan.l examples/c/reccalc/Makefile examples/c/reccalc/README.md '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/doc/bison/examples/c/reccalc'
+ /usr/local/bin/ginstall -c -m 644 examples/d/simple/calc.y examples/d/simple/Makefile '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/doc/bison/examples/d/simple'
+ /usr/local/bin/ginstall -c -m 644 data/xslt/bison.xsl data/xslt/xml2dot.xsl data/xslt/xml2text.xsl data/xslt/xml2xhtml.xsl '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/bison/xslt'
+ /usr/local/bin/ginstall -c -m 644 examples/c/mfcalc/calc.h examples/c/mfcalc/mfcalc.y '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/doc/bison/examples/c/mfcalc'
+ /usr/local/bin/ginstall -c -m 644 examples/c/rpcalc/Makefile '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/doc/bison/examples/c/rpcalc'
+ /usr/local/bin/ginstall -c -m 644 examples/c/rpcalc/rpcalc.y '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/doc/bison/examples/c/rpcalc'
+ /usr/local/bin/ginstall -c -m 644 data/skeletons/bison.m4 data/skeletons/c++-skel.m4 data/skeletons/c++.m4 data/skeletons/c-like.m4 data/skeletons/c-skel.m4 data/skeletons/c.m4 data/skeletons/glr.c data/skeletons/glr.cc data/skeletons/glr2.cc data/skeletons/java-skel.m4 data/skeletons/java.m4 data/skeletons/lalr1.cc data/skeletons/lalr1.java data/skeletons/location.cc data/skeletons/stack.hh data/skeletons/traceon.m4 data/skeletons/variant.hh data/skeletons/yacc.c data/skeletons/d-skel.m4 data/skeletons/d.m4 data/skeletons/lalr1.d '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/bison/skeletons'
+ /usr/local/bin/gmkdir -p '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/man/man1'
+ /usr/local/bin/gmkdir -p '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/info'
+ /usr/local/bin/ginstall -c -m 644 ./doc/bison.1 doc/yacc.1 '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/man/man1'
+ /usr/local/bin/ginstall -c -m 644 ./doc/bison.info '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/info'
+touch .buildbison
+  0     0    0     0    0     0      0      0 --:--:--  0:00:50 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:50 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:51 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:51 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:52 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:52 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:53 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:53 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:54 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:54 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:55 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:55 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:56 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:56 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:57 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:57 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:58 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:58 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:59 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:59 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:00 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:00 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:02 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:02 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:03 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:03 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:04 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:04 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:05 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:05 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:06 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:06 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:07 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:07 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:08 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:08 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:09 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:09 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:10 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:10 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:11 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:11 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:12 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:12 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:13 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:13 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:14 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:14 --:--:--     0  0      0  0    0     0    0    0    0      0      0      0 --:--:    0    --  0     0    0:01:15 --:--:--     0
+  0      0 --:--:curl: (28) Failed to connect--  0:01:15 --:--:--     0
+c url: (28) Failed to connect to ftpmirto ftpmirror.gnu.org port 443 after 75005 ms: Couldrorn'.gt connect to nu.org port 443 after 75005 ms: Couldn't connect to server
+server
+Warning: Problem : timeout. Will retry in 1 seconds. 3 retries left.Warning: Problem : timeout. Will retry in 1 seconds. 3 retries left.
+
+  0     0   0     0    0     0    0        0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     00      0      0 --:--:-- --:--:-- --:--:--     0   0   0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:   0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0make: *** [gettext-0.26.tar.gz] Terminated: 15
+make: *** [m4-1.4.21.tar.gz] Terminated: 15

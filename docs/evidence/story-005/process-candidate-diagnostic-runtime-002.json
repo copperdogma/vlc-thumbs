@@ -1,0 +1,19 @@
+{
+  "binary": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-process-candidate-diagnostic/.libs/process-test",
+  "binary_sha256": "5b463d47a7eca3c4e06384d0c2dd5552cddc21279106380355753295d3558437",
+  "launcher_pid": 57934,
+  "launcher_pgid": 57934,
+  "timeout_seconds": 8,
+  "test_pgid": 58195,
+  "returncode": -6,
+  "timeout": false,
+  "final_members": [],
+  "final_live_members": [],
+  "final_returncode": -6,
+  "elapsed_seconds": 0.2849432080038241,
+  "stdout": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/docs/evidence/story-005/process-candidate-diagnostic-runtime-002.stdout.log",
+  "stderr": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/docs/evidence/story-005/process-candidate-diagnostic-runtime-002.stderr.log",
+  "child_groups_verified": true,
+  "child_count": 2,
+  "passed": false
+}

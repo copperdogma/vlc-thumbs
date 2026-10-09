@@ -1,0 +1,18 @@
+{
+  "source_pin": "2e358f3098c2f2b7621d1dc568de8b61ad786322",
+  "file": "work/upstream/vlc-master-story005-candidate/modules/gui/macosx/tests/VLCThumbnailServiceTest.m",
+  "previous_fresh_sha256": "848bcb7db8f49bbdc8cca42faddf3c0fe57774c33a817f4f171b07c118434226",
+  "new_sha256": "2e8840b8177d1824e12d658dffbc93cd8e8c506f4d8feb29d5c86b6f60e874fe",
+  "diff": "docs/evidence/story-005/service-test-sync-repair.diff",
+  "diff_sha256": "e54732ba3caaa9c88cc61bb5d7126715cfe83d93073b3327f1afdbf90b44db65",
+  "scope": "Test-only service completion synchronization and independent deterministic Darwin pipe fault scenarios; production/helper unchanged",
+  "compile_exit_code": 0,
+  "compile_log": "work/story005-service-diagnostic/compile-010.stderr.log",
+  "runtime": "Pending independent review, public patch refresh, and one normal focused two-selector run",
+  "selectors": [
+    "VLCThumbnailServiceTest/testServiceContracts",
+    "VLCThumbnailServiceTest/testWorkerCommandDeadlineAndPartialWrites"
+  ],
+  "probe": "work/story005-pipe-causal-probe/results.jsonl",
+  "probe_outcome": "32/32 tiny commands also EAGAIN afterbulkEAGAIN; quietfailure not reproduced; dynamiccapacity mechanism compatible, not proven cause"
+}

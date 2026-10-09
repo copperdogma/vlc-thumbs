@@ -1,0 +1,14 @@
+{
+  "before_tree": "31e913d79495db387ab21fc07aac5c7427d3f535",
+  "public_apply_temp_index": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/public-revision8-header-index",
+  "public_tree": "c545256d9ca20aed8e75a57f9fdb76091ddecf9d",
+  "after_tree": "c545256d9ca20aed8e75a57f9fdb76091ddecf9d",
+  "delta_paths": [
+    "modules/misc/Makefile.am"
+  ],
+  "derived_only_from_frozen_public_series": true,
+  "derived_delta": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/reproduction-revision8-public-header-delta.patch",
+  "derived_delta_sha256": "bc492f3516c6f9eac253c0b4906d78fdd5417a5f6175d8c5dffd1c31e6e3c4b8",
+  "verified_public_files": 59,
+  "unchanged_app_helper_tests_reused": true
+}

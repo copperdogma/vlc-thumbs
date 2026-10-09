@@ -1,0 +1,2 @@
+{"event":"termination_begin"}
+{"event":"termination_return","raw_wait_status":15,"signalled":1,"signal":15}

@@ -1,0 +1,257 @@
+{
+  "revision": 9,
+  "before_tree": "c545256d9ca20aed8e75a57f9fdb76091ddecf9d",
+  "final_public_tree": "48a6b53f29d7f99ea410ba0e9d7085f7d9673acb",
+  "public_temp_index": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/public-revision9-doc-index",
+  "derived_delta_paths": [
+    "bin/timeline-preview/README.md"
+  ],
+  "derived_delta_sha256": "d96f509f4618e5f8cec637eb3ecd9f0b8afd38bdca838a1775fe2029422530ff",
+  "verified_public_file_count": 59,
+  "files": [
+    {
+      "path": "Makefile.am",
+      "sha256": "9399c30643b98b1054c3894f39354ce7f500f53d4a7d993d2928f939c721c4db"
+    },
+    {
+      "path": "bin/Makefile.am",
+      "sha256": "468f5f88c7e38b6c7851686cd5006f020e5c79bac7cffc45126c655440ae1a84"
+    },
+    {
+      "path": "bin/meson.build",
+      "sha256": "76f7d8d7ac0dc6a3368325375b21ba80247a2f8b230606482264e1f488ece643"
+    },
+    {
+      "path": "bin/preparser/Makefile.am",
+      "sha256": "dada2f836625a068ae55e8f2159c9093ea32f2de92374cc2c70172687e12cccf"
+    },
+    {
+      "path": "bin/timeline-preview/Makefile.am",
+      "sha256": "b8127423a839e158c689327916f6abe9976738ae9025c39e5f63928390a50b4d"
+    },
+    {
+      "path": "bin/timeline-preview/PROTOCOL.md",
+      "sha256": "30063a4f71a945238d5e34515514f2fdf35355f436c7bf5ffaaff53fcbb5e708"
+    },
+    {
+      "path": "bin/timeline-preview/README.md",
+      "sha256": "649adefe266aead0583863fd378f797faee4c62b9db3759d1ff5b8de66f68287"
+    },
+    {
+      "path": "bin/timeline-preview/test-io.c",
+      "sha256": "6521c10f5187a353487bf874f6e0663ff5f155c4da0a9e13d8cb484d7a12dc60"
+    },
+    {
+      "path": "bin/timeline-preview/test.py",
+      "sha256": "dd42b041891b84e347fb6253259f6c2bb4a7781d91398e98546d16d9f4ce1414"
+    },
+    {
+      "path": "bin/timeline-preview/tests/README.md",
+      "sha256": "c2d32cf067b6fe180d6892eff68989e6dbab72da323eb73c7d6cd42d776f8fc4"
+    },
+    {
+      "path": "bin/timeline-preview/tests/avformat-identity.c",
+      "sha256": "c2d8128e24ee35f3b5ed40325f7b46d0ed69ed6417af23ed2dca06b16684723e"
+    },
+    {
+      "path": "bin/timeline-preview/tests/compare-identity.py",
+      "sha256": "bfe99307ef3e8ea119652a0b18d1c5cc052bd042d46725af13f7abd4eac6db4d"
+    },
+    {
+      "path": "bin/timeline-preview/tests/generate_admission_fixtures.py",
+      "sha256": "92be89ff835bfdb8eaddac8cef634e2a9d58aa69b750d035b1979db563add3a4"
+    },
+    {
+      "path": "bin/timeline-preview/tests/generate_dependency_fixtures.py",
+      "sha256": "f4f081c317799617aeaef3b14018c4b5e98870cb2f23a890f28fe0358db05b8c"
+    },
+    {
+      "path": "bin/timeline-preview/tests/generate_fixtures.py",
+      "sha256": "7122c3a80b4f6ade690b47e8854a57d84bdda8684d144ea7e6a6dd4c274f00ec"
+    },
+    {
+      "path": "bin/timeline-preview/timeline-preview.c",
+      "sha256": "61fa2c51d2dd62a0bd7ea7d5b07744a166725a6dac0e5eb0fb6292bf4b604e0f"
+    },
+    {
+      "path": "configure.ac",
+      "sha256": "9dd8d65a1a272dcf919b85bc6ed5c3180ff48fba7ccfa339096777aae74c974d"
+    },
+    {
+      "path": "contrib/src/ffmpeg/matroska-flat-timeline.patch",
+      "sha256": "abd605f770de85f739929c5d333bd45e8d35075b2b69720cfaecbdc0d278450e"
+    },
+    {
+      "path": "contrib/src/ffmpeg/matroska-track-number.patch",
+      "sha256": "23baeb78b81fcb51e5068feaba2ad6f8ddfedfc3eb7dd5bca3b7d56df5ce2602"
+    },
+    {
+      "path": "contrib/src/ffmpeg/rules.mak",
+      "sha256": "c3f3f5c5b54e93de3b3a954431809edc7a965691f1f7a411b56e941b83421028"
+    },
+    {
+      "path": "extras/package/macosx/codesign.sh",
+      "sha256": "157217d4cb062efb2af688cc0c9c36ef9dfc58b6d0c5c367f524d83bb1de5ea6"
+    },
+    {
+      "path": "extras/package/macosx/package.mak",
+      "sha256": "4ec3d50726545bbeabf3219a4ccb355f5e3610487873f60a3eeec0b2d6a878db"
+    },
+    {
+      "path": "meson_options.txt",
+      "sha256": "c48a07be30c3b79a835ec7cc79487472c77026bbfff2885cbe579bcac359a8ef"
+    },
+    {
+      "path": "modules/audio_output/Makefile.am",
+      "sha256": "de9e4602adbaa9838049b1dca5fcc8aa3c1b280ef8b3ec82a0c5200523a211ae"
+    },
+    {
+      "path": "modules/gui/macosx/Makefile.am",
+      "sha256": "e5246de5d51e44132a6d8e2804ba6b6f7e70924f9f4b8e473f79bbb8cb737480"
+    },
+    {
+      "path": "modules/gui/macosx/UI/SimplePreferences.xib",
+      "sha256": "ad1e498b2b543e6812ab23ab196d0936889f8ea000e0bc05a70828d66f1d6bb1"
+    },
+    {
+      "path": "modules/gui/macosx/main/VLCMain.m",
+      "sha256": "a4b6c24610624a551b0d8afbf697bcd3cf2ce0522791c4632fdf753e97194867"
+    },
+    {
+      "path": "modules/gui/macosx/main/macosx.m",
+      "sha256": "b23d0ce0c6e2d23e9865c44597366935e1ec15b0f633a3f13b30307710632428"
+    },
+    {
+      "path": "modules/gui/macosx/playqueue/VLCPlayerController.h",
+      "sha256": "7594a27881387adb1ee071f3ada089e0f4003805672e4aa91526855b8d3fa2a4"
+    },
+    {
+      "path": "modules/gui/macosx/playqueue/VLCPlayerController.m",
+      "sha256": "a42a61bc7f2e1ee055f895a72d1534d98da6d9c018819b13190576d0e91f6353"
+    },
+    {
+      "path": "modules/gui/macosx/preferences/VLCSimplePrefsController.h",
+      "sha256": "2aad432fe62778b4275cfff30fd30461e2ef6bdf8e3543120b2aceeb1b7a35b8"
+    },
+    {
+      "path": "modules/gui/macosx/preferences/VLCSimplePrefsController.m",
+      "sha256": "7d31ff701c1793c849dc0b0317d5744fcebd93ba102b571484d68c1f38bcf704"
+    },
+    {
+      "path": "modules/gui/macosx/tests/Makefile.am",
+      "sha256": "fe199564f7be3514bec3b0c81304dcb31cb4c0de8f754fe29629b53a99fb7271"
+    },
+    {
+      "path": "modules/gui/macosx/tests/VLCLibraryDataTypesIntegrationTestSupport.m",
+      "sha256": "6847913b961fabfb3d03d8144e37c2ecba130893e495e2e0cb7d297f7a349c92"
+    },
+    {
+      "path": "modules/gui/macosx/tests/VLCThumbnailCacheTest.m",
+      "sha256": "09a9aa16cde2471569c39d95425ee15243525c0a1b4d8651f40aaa636c1669a0"
+    },
+    {
+      "path": "modules/gui/macosx/tests/VLCThumbnailSchedulerTest.m",
+      "sha256": "a0cc60c7f761e59761ba225f8ef16f02ffe65552632de045dd70b1eb9aaa7f1e"
+    },
+    {
+      "path": "modules/gui/macosx/tests/VLCThumbnailServiceTest.m",
+      "sha256": "2e8840b8177d1824e12d658dffbc93cd8e8c506f4d8feb29d5c86b6f60e874fe"
+    },
+    {
+      "path": "modules/gui/macosx/tests/VLCThumbnailTestHelper.c",
+      "sha256": "c671a501f3d378d595ebeff255fc9dfd9a7997a22bcf4e3f9d93f242ce9e8374"
+    },
+    {
+      "path": "modules/gui/macosx/tests/VLCTimelineHoverReentrancyTest.m",
+      "sha256": "850dc33a8032b3a7c8fb4329d651ee46a6bd6d24a5b4b7fd8bc1224dd64c3715"
+    },
+    {
+      "path": "modules/gui/macosx/tests/VLCTimelineHoverTest.m",
+      "sha256": "310b616ceea66eda8ef8703706b68599b8586ba5097d4b05e3e9677e7e4a9812"
+    },
+    {
+      "path": "modules/gui/macosx/tests/VLCTimelineHoverTestSupport.m",
+      "sha256": "2a242068cc0b32b4e3ee5e94d490e6cf64ae4fe88f040f54317e420327ca07e3"
+    },
+    {
+      "path": "modules/gui/macosx/timeline/VLCThumbnailCache.h",
+      "sha256": "6e529b5db2c69f64276fee828977bab0db512109d1a8ced542ec734138e59640"
+    },
+    {
+      "path": "modules/gui/macosx/timeline/VLCThumbnailCache.m",
+      "sha256": "2207283584e23c0c44ec235b89ae3baed676afb11d5d2585d0f2e59b52bb4297"
+    },
+    {
+      "path": "modules/gui/macosx/timeline/VLCThumbnailScheduler.h",
+      "sha256": "3358d1078438a65971e67c116d7f1400c69b8033a700427faf7a480419e3c5ec"
+    },
+    {
+      "path": "modules/gui/macosx/timeline/VLCThumbnailScheduler.m",
+      "sha256": "49b2b4e37b69978c38ef6bd99eba66c65a2a299a4d3f4751bf28a7f3ebcb79e0"
+    },
+    {
+      "path": "modules/gui/macosx/timeline/VLCThumbnailService.h",
+      "sha256": "77446215166b7a9f1527c92c1380503d6c411666e06b4306b753fa4bee8d1767"
+    },
+    {
+      "path": "modules/gui/macosx/timeline/VLCThumbnailService.m",
+      "sha256": "2f39645a0783fcb53a19e77dfe6b3117eb2a91fd570d80fb208be52337629343"
+    },
+    {
+      "path": "modules/gui/macosx/timeline/VLCThumbnailWorker.h",
+      "sha256": "f39aaaad41e397ddbdf8f7b6e3602fc010404ab62287f4cea72af85328bc6296"
+    },
+    {
+      "path": "modules/gui/macosx/timeline/VLCThumbnailWorker.m",
+      "sha256": "18f4aa213f2f8823b69a340ef2e3849c6461cd71070332c814fe44f8ed1ec5b7"
+    },
+    {
+      "path": "modules/gui/macosx/timeline/VLCTimelineContext.h",
+      "sha256": "634bdd6e5b3663ae503ec24b8c6b4d7881c63b661088f31390d4f16f2d8d3373"
+    },
+    {
+      "path": "modules/gui/macosx/timeline/VLCTimelineContext.m",
+      "sha256": "152237519a537e2c92e55a6c8b9829dda13f51fc5d55101b8246637c9177ca8f"
+    },
+    {
+      "path": "modules/gui/macosx/timeline/VLCTimelineContextTestSupport.m",
+      "sha256": "9820fc0f4e0b406ad89989ecd0ec44fc6be8f08a5e4424320713d3a174c54092"
+    },
+    {
+      "path": "modules/gui/macosx/timeline/VLCTimelineContextTests.m",
+      "sha256": "21c1b5cb71f319102a23241070458871153c1c2f133c6a970f4c0b3920fb9127"
+    },
+    {
+      "path": "modules/gui/macosx/timeline/VLCTimelinePlayerContextTest.m",
+      "sha256": "f2abf48c08dbcbc56b7eed82dff443b9857c38675dd1ddc136a1759cc5b957bb"
+    },
+    {
+      "path": "modules/gui/macosx/views/VLCPlaybackProgressSlider.h",
+      "sha256": "2df50c2c4dd2ce5486d228b8b6b4ad3549fe37c70e5adcb3a47e8789cd8e4e63"
+    },
+    {
+      "path": "modules/gui/macosx/views/VLCPlaybackProgressSlider.m",
+      "sha256": "76289b6be84e615fa8746a5b18a600165b3d6755c7a85b25d7b8b10a4cbbdd10"
+    },
+    {
+      "path": "modules/gui/macosx/windows/video/VLCMainVideoViewController.m",
+      "sha256": "00a1fafd21316101dda91b8bcdf4e00615b7bb14c74269b9959c02019b2ab128"
+    },
+    {
+      "path": "modules/misc/Makefile.am",
+      "sha256": "202f4a95ab9de075df6f64b7ea2bf3dd21a11d795e81544c5a1ff97a721734b0"
+    },
+    {
+      "path": "modules/video_output/Makefile.am",
+      "sha256": "8e2f7181ea2eea363dedcb19a3390c63eb7d7c1b9a322ff247a1be9b573589f9"
+    }
+  ],
+  "no_unstaged_tracked_source_dirt": true,
+  "staged_source_paths_exactly_public_59": true,
+  "base_pin_unchanged": true,
+  "no_runtime_build_or_tests_rerun": true,
+  "preserved_generated_delta_inverse_receipt": "distcheck-generated-po-exact-inverse.json",
+  "application_manifest_sha256": "f8752694d3aa2e63638a881df913c74b99a2a84a2e07091426044c0eed588e94",
+  "current_wrapper_manifest_sha256": "eecec3b9ff986940d227ba8cff0343faac8892f9ac97bdd2a99b2458e557ac6a",
+  "subsequent_manifest_change": "Wrapper lineage/evidence wording only; all source/patch bytes unchanged"
+}

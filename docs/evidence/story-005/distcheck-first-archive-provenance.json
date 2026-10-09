@@ -1,0 +1,26 @@
+{
+  "archive": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-reproduction/vlc-4.0.0-dev.tar.xz",
+  "bytes": 30147348,
+  "sha256": "fba70e8b9c59c97dcf3b0edf822f6c84d9de59289b12651fbfc5a5c2ad9d49d1",
+  "distcheck_status": "failed upstream revision stamp due unrelated ancestor Git discovery",
+  "public_tree": "1a567b8705d3f744afc2b873458a5e8af02f7a7b",
+  "generated_translation_receipt": "distcheck-generated-po-preservation.json",
+  "entry_count": 5799,
+  "timeline_entry_paths": [
+    "vlc-4.0.0-dev/bin/timeline-preview/timeline-preview.c",
+    "vlc-4.0.0-dev/bin/timeline-preview/tests",
+    "vlc-4.0.0-dev/bin/timeline-preview/test.py",
+    "vlc-4.0.0-dev/bin/timeline-preview/Makefile.am",
+    "vlc-4.0.0-dev/bin/timeline-preview/README.md",
+    "vlc-4.0.0-dev/bin/timeline-preview/test-io.c",
+    "vlc-4.0.0-dev/bin/timeline-preview/PROTOCOL.md",
+    "vlc-4.0.0-dev/bin/timeline-preview/tests/compare-identity.py",
+    "vlc-4.0.0-dev/bin/timeline-preview/tests/avformat-identity.c",
+    "vlc-4.0.0-dev/bin/timeline-preview/tests/generate_admission_fixtures.py",
+    "vlc-4.0.0-dev/bin/timeline-preview/tests/README.md",
+    "vlc-4.0.0-dev/bin/timeline-preview/tests/generate_fixtures.py",
+    "vlc-4.0.0-dev/bin/timeline-preview/tests/generate_dependency_fixtures.py"
+  ],
+  "preserved_archive": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/distcheck-first-vlc-4.0.0-dev.tar.xz",
+  "preservation": "APFS same-volume clone; exact SHA256 equality verified"
+}

@@ -1,0 +1,265 @@
+{
+  "revision": 11,
+  "base": "2e358f3098c2f2b7621d1dc568de8b61ad786322",
+  "patch_directory": "patches/vlc-master/feature-series",
+  "source_tree": "f8f7d0fdb46c1ae25ba94049143d12ecb7daf96c",
+  "previous_source_tree": "cc0ec69e8be5ba2e60ccae6ea095b471b500a6ff",
+  "previous_manifest_sha256": "0279ae61e3bb54b0e448a00d61521cf8f51654808f2efc7e578689f633a2dab5",
+  "previous_receipt": "docs/evidence/story-005/public-feature-series-validation-010.json",
+  "preserved_previous_series": "work/story005-review-baseline010/patches/vlc-master/feature-series",
+  "manifest_sha256": "87e9831a3c7b4bc544251c9a5ba9b8594eabec579e10ac2bd959d586ff5e529c",
+  "applications": [
+    {
+      "patch": "0000-source-header-distribution.patch",
+      "tree": "8d4bb7aa150137045b9ff020fe49e264a9b06682",
+      "apply_check": "pass",
+      "apply": "pass"
+    },
+    {
+      "patch": "0001-contrib-matroska-identity-and-admission.patch",
+      "tree": "8f02c02f582c2f96dcecb99593397d49e7edaeda",
+      "apply_check": "pass",
+      "apply": "pass"
+    },
+    {
+      "patch": "0002-timeline-helper-build-package-and-tests.patch",
+      "tree": "31dff1d217b8175ddc1ea79881c2f582a6d59f21",
+      "apply_check": "pass",
+      "apply": "pass"
+    },
+    {
+      "patch": "0003-macosx-thumbnail-service-cache-worker.patch",
+      "tree": "450571e66edf9795d2a72030cb73abe2db184473",
+      "apply_check": "pass",
+      "apply": "pass"
+    },
+    {
+      "patch": "0004-macosx-timeline-context-and-hover.patch",
+      "tree": "f8f7d0fdb46c1ae25ba94049143d12ecb7daf96c",
+      "apply_check": "pass",
+      "apply": "pass"
+    }
+  ],
+  "exact_source_tree_match": true,
+  "source_indexes_before": {
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/.git/index": "7f2f5931db7b4dba20f741eb7c3ffc9a42ef65be2a6cd94dd66f15113512e895",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/.git/worktrees/vlc-master-story005-candidate/index": "89f3541234e65d5ff8f9ea6928d78d03b65850b61232ca376416750860d44be6",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-reproduction/.git/index": "1b43d3374542d8e45e305b1d50008b127ad7cd0179ecf5e38cf2ca406bc91215"
+  },
+  "source_indexes_after": {
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/.git/index": "7f2f5931db7b4dba20f741eb7c3ffc9a42ef65be2a6cd94dd66f15113512e895",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/.git/worktrees/vlc-master-story005-candidate/index": "89f3541234e65d5ff8f9ea6928d78d03b65850b61232ca376416750860d44be6",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-reproduction/.git/index": "1b43d3374542d8e45e305b1d50008b127ad7cd0179ecf5e38cf2ca406bc91215"
+  },
+  "storage_cap_bytes": 20971520,
+  "temp_removed_on_exit": true,
+  "source_tree_byte_count": 1337050,
+  "patch_bytes": 515238,
+  "artifact_bytes": 4300005,
+  "artifact_files": [
+    {
+      "file": "0000-source-header-distribution.patch",
+      "bytes": 4732,
+      "sha256": "70da9e24f27de04128c59b1484379d1d9813f7e1af04d3792e971a07a24cd57e"
+    },
+    {
+      "file": "0001-contrib-matroska-identity-and-admission.patch",
+      "bytes": 13511,
+      "sha256": "27772936e6068efe11bd44dd6265cd1fb61114dfd8aa7cd9ba693c609e54abf1"
+    },
+    {
+      "file": "0002-timeline-helper-build-package-and-tests.patch",
+      "bytes": 187618,
+      "sha256": "5170356114a17af636ba3828958fc7de8246e97f2ba88d2569c6a7e6e6cf57c3"
+    },
+    {
+      "file": "0003-macosx-thumbnail-service-cache-worker.patch",
+      "bytes": 214638,
+      "sha256": "a5957f0d61b77f3fad7c7bc34e5611f2a737d3f9ec2ea0f48f365b4df8a87515"
+    },
+    {
+      "file": "0004-macosx-timeline-context-and-hover.patch",
+      "bytes": 94739,
+      "sha256": "3e480f7c59a2b51b7f645f12076a243f2c0598e9331466c4407ba39e16515de4"
+    },
+    {
+      "file": "LIMITATIONS.md",
+      "bytes": 11607,
+      "sha256": "7715f7d24253ded9faa0d58a5b73833595f7926570d7de0f58fa41b2f1f70d5f"
+    },
+    {
+      "file": "README.md",
+      "bytes": 8574,
+      "sha256": "1a940e0036b1c3f2d34676304f0b52e06eeecb156719816935ad93d691c5c737"
+    },
+    {
+      "file": "contribution-description-draft.md",
+      "bytes": 3347,
+      "sha256": "139e2d3b80b2845055538c52e4f31e80e607e78278f60b0a716a891410ff260b"
+    },
+    {
+      "file": "demonstration/README.md",
+      "bytes": 2550,
+      "sha256": "b3362d872a44ae2b30c7597e842338a8b3b27e60895c755794d74291f295b6ad"
+    },
+    {
+      "file": "demonstration/custom-fullscreen-hover.png",
+      "bytes": 3512667,
+      "sha256": "3b11c683299899abbf8d6ff640456853afa7e83ec06ab40147e8f3116106abd1"
+    },
+    {
+      "file": "demonstration/detached-hover.png",
+      "bytes": 192239,
+      "sha256": "d32dd707d09bfd70731c2b0438d1e4c8c83f04dbe4391ed3d1be2cb100bc5050"
+    },
+    {
+      "file": "demonstration/provenance.json",
+      "bytes": 4910,
+      "sha256": "d13d38c14460ca7020b63cdc209128c4ec7472b151caef106600a8c423f79293"
+    },
+    {
+      "file": "manifest.json",
+      "bytes": 45223,
+      "sha256": "87e9831a3c7b4bc544251c9a5ba9b8594eabec579e10ac2bd959d586ff5e529c"
+    },
+    {
+      "file": "proposed-commit-messages.md",
+      "bytes": 3416,
+      "sha256": "6281b7342e5083954b79375a8f800c7ed8bb991154c3fcb4636055cd727eedf7"
+    },
+    {
+      "file": "series",
+      "bytes": 234,
+      "sha256": "f854b2a326586c75f5e06cfcc384927b126f66f96384a7a477c7dd1b728d9761"
+    }
+  ],
+  "license_counts": {
+    "GPL-2.0-or-later": 23,
+    "LGPL-2.1-or-later": 5
+  },
+  "preserved_existing_macOS_header_count": 10,
+  "bounded_private_prototype_and_key_marker_scan": "pass",
+  "meaning": "Independent exact current source application proof; current scoped headless qualification and historical app/runtime limits stated separately",
+  "observed_peak_before_final_metadata_bytes": 10699165,
+  "conservative_peak_with_final_metadata_bytes": 14999170,
+  "storage_measurement_boundary": "Logical bytes of public package, preserved revision10 package, temporary isolated indexes/objects/patches after each Git operation; conservative upper bound adds complete final package for metadata. Excludes unrelated build/decomposition/source checkouts.",
+  "final_source_owner_freezes": {
+    "Makefile.am": "9399c30643b98b1054c3894f39354ce7f500f53d4a7d993d2928f939c721c4db",
+    "bin/Makefile.am": "468f5f88c7e38b6c7851686cd5006f020e5c79bac7cffc45126c655440ae1a84",
+    "bin/meson.build": "76f7d8d7ac0dc6a3368325375b21ba80247a2f8b230606482264e1f488ece643",
+    "bin/preparser/Makefile.am": "dada2f836625a068ae55e8f2159c9093ea32f2de92374cc2c70172687e12cccf",
+    "bin/timeline-preview/Makefile.am": "b8127423a839e158c689327916f6abe9976738ae9025c39e5f63928390a50b4d",
+    "bin/timeline-preview/PROTOCOL.md": "30063a4f71a945238d5e34515514f2fdf35355f436c7bf5ffaaff53fcbb5e708",
+    "bin/timeline-preview/README.md": "c0a75f2f508066ee4d82daa7f10253c0fa2c498c3d956e0022efdce55cce428f",
+    "bin/timeline-preview/test-io.c": "6521c10f5187a353487bf874f6e0663ff5f155c4da0a9e13d8cb484d7a12dc60",
+    "bin/timeline-preview/test.py": "b06465555eea09dfc17d18f8695a9c52f4cf3ecec22259199f092339df07f24f",
+    "bin/timeline-preview/tests/README.md": "c2d32cf067b6fe180d6892eff68989e6dbab72da323eb73c7d6cd42d776f8fc4",
+    "bin/timeline-preview/tests/avformat-identity.c": "c2d8128e24ee35f3b5ed40325f7b46d0ed69ed6417af23ed2dca06b16684723e",
+    "bin/timeline-preview/tests/compare-identity.py": "bfe99307ef3e8ea119652a0b18d1c5cc052bd042d46725af13f7abd4eac6db4d",
+    "bin/timeline-preview/tests/generate_admission_fixtures.py": "92be89ff835bfdb8eaddac8cef634e2a9d58aa69b750d035b1979db563add3a4",
+    "bin/timeline-preview/tests/generate_dependency_fixtures.py": "f4f081c317799617aeaef3b14018c4b5e98870cb2f23a890f28fe0358db05b8c",
+    "bin/timeline-preview/tests/generate_fixtures.py": "7122c3a80b4f6ade690b47e8854a57d84bdda8684d144ea7e6a6dd4c274f00ec",
+    "bin/timeline-preview/timeline-preview.c": "bcbcdcdb46b17028ce1a41d0626cb8c0396a3efeedf86ea2e756a255e2c29643",
+    "configure.ac": "9dd8d65a1a272dcf919b85bc6ed5c3180ff48fba7ccfa339096777aae74c974d",
+    "contrib/src/ffmpeg/matroska-flat-timeline.patch": "abd605f770de85f739929c5d333bd45e8d35075b2b69720cfaecbdc0d278450e",
+    "contrib/src/ffmpeg/matroska-track-number.patch": "23baeb78b81fcb51e5068feaba2ad6f8ddfedfc3eb7dd5bca3b7d56df5ce2602",
+    "contrib/src/ffmpeg/rules.mak": "c3f3f5c5b54e93de3b3a954431809edc7a965691f1f7a411b56e941b83421028",
+    "extras/package/macosx/codesign.sh": "157217d4cb062efb2af688cc0c9c36ef9dfc58b6d0c5c367f524d83bb1de5ea6",
+    "extras/package/macosx/package.mak": "4ec3d50726545bbeabf3219a4ccb355f5e3610487873f60a3eeec0b2d6a878db",
+    "meson_options.txt": "c48a07be30c3b79a835ec7cc79487472c77026bbfff2885cbe579bcac359a8ef",
+    "modules/audio_output/Makefile.am": "de9e4602adbaa9838049b1dca5fcc8aa3c1b280ef8b3ec82a0c5200523a211ae",
+    "modules/gui/macosx/Makefile.am": "e5246de5d51e44132a6d8e2804ba6b6f7e70924f9f4b8e473f79bbb8cb737480",
+    "modules/gui/macosx/UI/SimplePreferences.xib": "ad1e498b2b543e6812ab23ab196d0936889f8ea000e0bc05a70828d66f1d6bb1",
+    "modules/gui/macosx/main/VLCMain.m": "a4b6c24610624a551b0d8afbf697bcd3cf2ce0522791c4632fdf753e97194867",
+    "modules/gui/macosx/main/macosx.m": "b23d0ce0c6e2d23e9865c44597366935e1ec15b0f633a3f13b30307710632428",
+    "modules/gui/macosx/playqueue/VLCPlayerController.h": "7594a27881387adb1ee071f3ada089e0f4003805672e4aa91526855b8d3fa2a4",
+    "modules/gui/macosx/playqueue/VLCPlayerController.m": "a42a61bc7f2e1ee055f895a72d1534d98da6d9c018819b13190576d0e91f6353",
+    "modules/gui/macosx/preferences/VLCSimplePrefsController.h": "2aad432fe62778b4275cfff30fd30461e2ef6bdf8e3543120b2aceeb1b7a35b8",
+    "modules/gui/macosx/preferences/VLCSimplePrefsController.m": "7d31ff701c1793c849dc0b0317d5744fcebd93ba102b571484d68c1f38bcf704",
+    "modules/gui/macosx/tests/Makefile.am": "402fddc59a12527a4c37c754e3f20c9e001d34285b5534f5a18f94dc5be6d9d3",
+    "modules/gui/macosx/tests/VLCLibraryDataTypesIntegrationTestSupport.m": "6847913b961fabfb3d03d8144e37c2ecba130893e495e2e0cb7d297f7a349c92",
+    "modules/gui/macosx/tests/VLCThumbnailCacheTest.m": "09a9aa16cde2471569c39d95425ee15243525c0a1b4d8651f40aaa636c1669a0",
+    "modules/gui/macosx/tests/VLCThumbnailSchedulerTest.m": "a0cc60c7f761e59761ba225f8ef16f02ffe65552632de045dd70b1eb9aaa7f1e",
+    "modules/gui/macosx/tests/VLCThumbnailServiceTest.m": "e5f342fd311e74c3bca84e7e41c948b97d41672760b65a1cf8e40fcd2d0936e0",
+    "modules/gui/macosx/tests/VLCThumbnailTestHelper.c": "c671a501f3d378d595ebeff255fc9dfd9a7997a22bcf4e3f9d93f242ce9e8374",
+    "modules/gui/macosx/tests/VLCTimelineHoverReentrancyTest.m": "850dc33a8032b3a7c8fb4329d651ee46a6bd6d24a5b4b7fd8bc1224dd64c3715",
+    "modules/gui/macosx/tests/VLCTimelineHoverTest.m": "7fbea0b5c5144bc291c358ed6eeeb35dcbb7fe2f036468d789c50c085b643207",
+    "modules/gui/macosx/tests/VLCTimelineHoverTestSupport.m": "2a242068cc0b32b4e3ee5e94d490e6cf64ae4fe88f040f54317e420327ca07e3",
+    "modules/gui/macosx/timeline/VLCThumbnailCache.h": "6e529b5db2c69f64276fee828977bab0db512109d1a8ced542ec734138e59640",
+    "modules/gui/macosx/timeline/VLCThumbnailCache.m": "2207283584e23c0c44ec235b89ae3baed676afb11d5d2585d0f2e59b52bb4297",
+    "modules/gui/macosx/timeline/VLCThumbnailScheduler.h": "3358d1078438a65971e67c116d7f1400c69b8033a700427faf7a480419e3c5ec",
+    "modules/gui/macosx/timeline/VLCThumbnailScheduler.m": "49b2b4e37b69978c38ef6bd99eba66c65a2a299a4d3f4751bf28a7f3ebcb79e0",
+    "modules/gui/macosx/timeline/VLCThumbnailService.h": "77446215166b7a9f1527c92c1380503d6c411666e06b4306b753fa4bee8d1767",
+    "modules/gui/macosx/timeline/VLCThumbnailService.m": "4194b294155e7f7a1c5435d5217ae2dfdfd411090b15a9914f3638eb395095e4",
+    "modules/gui/macosx/timeline/VLCThumbnailWorker.h": "f39aaaad41e397ddbdf8f7b6e3602fc010404ab62287f4cea72af85328bc6296",
+    "modules/gui/macosx/timeline/VLCThumbnailWorker.m": "18f4aa213f2f8823b69a340ef2e3849c6461cd71070332c814fe44f8ed1ec5b7",
+    "modules/gui/macosx/timeline/VLCTimelineContext.h": "634bdd6e5b3663ae503ec24b8c6b4d7881c63b661088f31390d4f16f2d8d3373",
+    "modules/gui/macosx/timeline/VLCTimelineContext.m": "152237519a537e2c92e55a6c8b9829dda13f51fc5d55101b8246637c9177ca8f",
+    "modules/gui/macosx/timeline/VLCTimelineContextTestSupport.m": "9820fc0f4e0b406ad89989ecd0ec44fc6be8f08a5e4424320713d3a174c54092",
+    "modules/gui/macosx/timeline/VLCTimelineContextTests.m": "21c1b5cb71f319102a23241070458871153c1c2f133c6a970f4c0b3920fb9127",
+    "modules/gui/macosx/timeline/VLCTimelinePlayerContextTest.m": "f2abf48c08dbcbc56b7eed82dff443b9857c38675dd1ddc136a1759cc5b957bb",
+    "modules/gui/macosx/views/VLCPlaybackProgressSlider.h": "2df50c2c4dd2ce5486d228b8b6b4ad3549fe37c70e5adcb3a47e8789cd8e4e63",
+    "modules/gui/macosx/views/VLCPlaybackProgressSlider.m": "76289b6be84e615fa8746a5b18a600165b3d6755c7a85b25d7b8b10a4cbbdd10",
+    "modules/gui/macosx/windows/video/VLCMainVideoViewController.m": "00a1fafd21316101dda91b8bcdf4e00615b7bb14c74269b9959c02019b2ab128",
+    "modules/misc/Makefile.am": "202f4a95ab9de075df6f64b7ea2bf3dd21a11d795e81544c5a1ff97a721734b0",
+    "modules/video_output/Makefile.am": "8e2f7181ea2eea363dedcb19a3390c63eb7d7c1b9a322ff247a1be9b573589f9"
+  },
+  "reviewer_improvement_statistics": {
+    "meaning": "Whole-file bytes across 59 distributed source inputs; code suffixes c,m,h,py; test bucket includes tests directories and named test/support sources; other includes docs/build/patch/XIB inputs. Not executable size or added-lines metric.",
+    "revision10": {
+      "test_code_bytes": 252776,
+      "production_code_bytes": 429095,
+      "other_input_bytes": 652734,
+      "total_source_bytes": 1334605,
+      "source_paths": 59
+    },
+    "revision11": {
+      "test_code_bytes": 255429,
+      "production_code_bytes": 429018,
+      "other_input_bytes": 652603,
+      "total_source_bytes": 1337050,
+      "source_paths": 59
+    },
+    "patch_bytes_before": 510405,
+    "patch_bytes_after": 515238,
+    "patch_count_before": 4,
+    "patch_count_after": 5,
+    "largest_native_additions_before": 6021,
+    "largest_native_additions_after": 4598,
+    "native_additions_reduction_percent": 23.633947849194488
+  },
+  "current_qualification": {
+    "scope": "Current normal helper/module builds and headless tests only; no new app packaging or GUI qualification",
+    "helper_checks": 77,
+    "native_unique_executions": 284,
+    "native_passes": 283,
+    "native_optional_skips": 1,
+    "native_failures": 0,
+    "terminal_completion_counterfactual": "fixed passes; isolated original-service object fails expected replacement image wait",
+    "helper_counterfactual": "strengthened success checks reject three error-only worker replies",
+    "test_aggregation": "exactly three unique XCTest bundles and test logs; final two-line list-only correction",
+    "intermediate_service_foundation": {
+      "tree": "450571e66edf9795d2a72030cb73abe2db184473",
+      "normal_native_compile_link": "pass; freshly built native objects",
+      "native_executions": 265,
+      "optional_skips": 1,
+      "failures": 0,
+      "helper_build_basic": "pass",
+      "reuse": "verified unchanged core/contrib/runtime inputs; no from-scratch whole-core/contrib claim",
+      "initial_failures_preserved": true
+    },
+    "historical_runtime_source_tree": "cc0ec69e8be5ba2e60ccae6ea095b471b500a6ff",
+    "historical_runtime": "Screenshots, packaged independent app, native/NAS/control/playback evidence remain historical through revision10; changed helper/service are not GUI qualified by them",
+    "unmet_submission_gates": "error-free make check and complete distcheck",
+    "unresolved": "actual shutdown SIGSEGV; exact causality unproved; reader, Intel/older macOS and declared native/NAS/performance limits retained"
+  },
+  "independent_apply_receipt": "docs/evidence/story-005/public-feature-series-apply-011.json",
+  "headless_validation_receipt": "docs/evidence/story-005/reviewer-improvement-validation-001.json",
+  "headless_validation_receipt_sha256": "5254191dcdffebacc7d4225b85f7d55ccacc84c842e9f69b14d91c771f13d339",
+  "test_registration_receipt": "work/story005-review-test-registration-fix/receipt.json",
+  "test_registration_receipt_sha256": "934569bd74710297d4bf4d6ed494f3f287f821f0ed199843428cf19d11f302bd",
+  "intermediate_build_receipt": "work/story005-native-decomposition-proof/build-proof.json",
+  "intermediate_build_receipt_sha256": "89cd5e56711170bbad1981a7ef7770e4d46cc677e630511dad70e3173a1f2460",
+  "reproduction_checkout": "preserved revision10; not synchronized or claimed as current independent app reproduction",
+  "independent_apply_receipt_sha256": "432eb9fa2abfc79b1aace9630dd9e42f08806b502f2a642362c502d7f5e5a9a8"
+}

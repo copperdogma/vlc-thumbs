@@ -1,0 +1,32 @@
+{
+  "recorded_at_utc": "2026-10-06T03:42:40.846513+00:00",
+  "source_pin": "2e358f3098c2f2b7621d1dc568de8b61ad786322",
+  "source_root": "work/upstream/vlc-master-story005-candidate",
+  "owned_source_sha256": {
+    "modules/gui/macosx/timeline/VLCThumbnailCache.h": "6e529b5db2c69f64276fee828977bab0db512109d1a8ced542ec734138e59640",
+    "modules/gui/macosx/timeline/VLCThumbnailCache.m": "2207283584e23c0c44ec235b89ae3baed676afb11d5d2585d0f2e59b52bb4297",
+    "modules/gui/macosx/timeline/VLCThumbnailScheduler.h": "3358d1078438a65971e67c116d7f1400c69b8033a700427faf7a480419e3c5ec",
+    "modules/gui/macosx/timeline/VLCThumbnailScheduler.m": "49b2b4e37b69978c38ef6bd99eba66c65a2a299a4d3f4751bf28a7f3ebcb79e0",
+    "modules/gui/macosx/timeline/VLCThumbnailService.h": "77446215166b7a9f1527c92c1380503d6c411666e06b4306b753fa4bee8d1767",
+    "modules/gui/macosx/timeline/VLCThumbnailService.m": "2f39645a0783fcb53a19e77dfe6b3117eb2a91fd570d80fb208be52337629343",
+    "modules/gui/macosx/timeline/VLCThumbnailWorker.h": "f39aaaad41e397ddbdf8f7b6e3602fc010404ab62287f4cea72af85328bc6296",
+    "modules/gui/macosx/timeline/VLCThumbnailWorker.m": "18f4aa213f2f8823b69a340ef2e3849c6461cd71070332c814fe44f8ed1ec5b7",
+    "modules/gui/macosx/tests/VLCThumbnailCacheTest.m": "a20d2840937a77f9a46b173d209724ed21e70fd6640bf6b365dfe51bf051b2b4",
+    "modules/gui/macosx/tests/VLCThumbnailSchedulerTest.m": "a0cc60c7f761e59761ba225f8ef16f02ffe65552632de045dd70b1eb9aaa7f1e",
+    "modules/gui/macosx/tests/VLCThumbnailServiceTest.m": "50c06c0a2945ec84bbb90de11272ea657e5b893a0066277686f7082b38142bd1",
+    "modules/gui/macosx/tests/VLCThumbnailTestHelper.c": "492a4be90691f574375b919458b850f0d8992426491769f7bcd3ad76a5069e21"
+  },
+  "changes": [
+    "Fixed video_count raw-type validation before coercion",
+    "Bounded nonblocking command full-write with fixed shared write/read deadline and cancellation epoch",
+    "Strict true CFBoolean eligibility and integral nonboolean NSUInteger sourceEpoch",
+    "Exact channel count NSNumber equality prevents intValue truncation",
+    "Admitted-flat-Matroska protocol4 mapping and distinct cache identity"
+  ],
+  "focused_diagnostic_logs": [
+    "work/story005-service-diagnostic/write-runtime-006.log",
+    "work/story005-service-diagnostic/validation-runtime-006.log",
+    "work/story005-service-diagnostic/mapping-context-runtime-007.log"
+  ],
+  "scope": "Manually linked actual XCTest source; production target execution recorded separately by build owner. New old-mapping/numeric-eligibility assertions are included in final mapping-context-007 run."
+}

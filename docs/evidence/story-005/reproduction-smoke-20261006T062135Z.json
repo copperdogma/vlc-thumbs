@@ -1,0 +1,18 @@
+{
+  "stage": "smoke",
+  "command": [
+    "/opt/homebrew/opt/python@3.14/bin/python3",
+    "work/story005-scout/feature-duration-fixed-relocate-isolate.py"
+  ],
+  "cwd": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs",
+  "initial_free_bytes": 4669837312,
+  "stage_preflight_gib": 1.5,
+  "floor_bytes": 1073741824,
+  "time_limit_seconds": 90,
+  "status": "succeeded",
+  "pid": 19148,
+  "elapsed_seconds": 2.0,
+  "minimum_free_bytes": 4669820928,
+  "exit_code": 0,
+  "final_free_bytes": 4667392000
+}

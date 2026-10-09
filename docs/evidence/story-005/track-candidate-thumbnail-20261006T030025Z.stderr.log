@@ -1,0 +1,7 @@
+[00000076b5001cc0] main libvlc warning: cannot read /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/modules/plugins/plugins.dat: No such file or directory
+[000000016bd8d9f0] main generic error: cannot load plug-in /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/modules/.libs/libmacosx_plugin.dylib: dlopen(/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/modules/.libs/libmacosx_plugin.dylib, 0x0001): Library not loaded: @rpath/Sparkle.framework/Versions/B/Sparkle
+  Referenced from: <C0402D52-B997-3C8F-860D-889BF5A5935F> /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/modules/.libs/libmacosx_plugin.dylib
+  Reason: no LC_RPATH's found
+[00000076b5001cc0] main libvlc warning: Key "Command+0" bound to multiple actions
+Run with internal preparser...
+Run with external preparser...

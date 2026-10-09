@@ -1,0 +1,13 @@
+blocker-prerequisites/0008-macosx-hit-test-autohide-controls-in-local-coordinates.patch
+feature-series/0000-source-header-distribution.patch
+feature-series/0001-contrib-matroska-identity-and-admission.patch
+feature-series/0002-timeline-helper-build-package-and-tests.patch
+feature-series/0003-macosx-thumbnail-service-cache-worker.patch
+feature-series/0004-macosx-timeline-context-and-hover.patch
+blocker-prerequisites/0001-build-order-macosx-install-and-clean-vtutils.patch
+blocker-prerequisites/0002-clock-preserve-observed-system-origin.patch
+blocker-prerequisites/0003-tests-select-gnutls-for-pem-trust-fixture.patch
+blocker-prerequisites/0004-opengl-initialize-legacy-version-fallback.patch
+blocker-prerequisites/0005-macosx-release-caller-owned-media-source.patch
+blocker-prerequisites/0006-macosx-retire-playback-ended-timer-during-termination.patch
+blocker-prerequisites/0007-macosx-fence-video-window-callback-lifetime.patch

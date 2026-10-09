@@ -1,0 +1,2399 @@
+{
+  "date": "2026-10-05",
+  "scope": "Story005 phase1/2 portable synthetic diagnostic fixtures; no VLC acceptance claim",
+  "files_changed": [
+    "tests/story-005/generate_fixtures.py",
+    "tests/story-005/FIXTURES.md"
+  ],
+  "command": [
+    "python3",
+    "tests/story-005/generate_fixtures.py"
+  ],
+  "output": "work/story005-fixtures",
+  "total_output_bytes": 5231017,
+  "manifest_sha256": "6ce708b4728090bd799adb5ac66048a817b9dc48acff8b7e84bd55d6c5c20aab",
+  "generation_manifest": {
+    "schema_version": 1,
+    "generator_sha256": "154d820ef129f869b1cf60b653ea39376b04b3f4819a0af8e7bab76100dd7b89",
+    "duration_seconds": 12,
+    "nominal_frame_rate": 24,
+    "tools": {
+      "ffmpeg": "ffmpeg version 8.0 Copyright (c) 2000-2025 the FFmpeg developers\nbuilt with Apple clang version 16.0.0 (clang-1600.0.26.6)\nconfiguration: --prefix=/usr/local/Cellar/ffmpeg/8.0_1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags='-Wl,-ld_classic' --enable-ffplay --enable-gnutls --enable-gpl --enable-libaom --enable-libaribb24 --enable-libbluray --enable-libdav1d --enable-libharfbuzz --enable-libjxl --enable-libmp3lame --enable-libopus --enable-librav1e --enable-librist --enable-librubberband --enable-libsnappy --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtesseract --enable-libtheora --enable-libvidstab --enable-libvmaf --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libxvid --enable-lzma --enable-libfontconfig --enable-libfreetype --enable-frei0r --enable-libass --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-libspeex --enable-libsoxr --enable-libzmq --enable-libzimg --disable-libjack --disable-indev=jack --enable-videotoolbox --enable-audiotoolbox\nlibavutil      60.  8.100 / 60.  8.100\nlibavcodec     62. 11.100 / 62. 11.100\nlibavformat    62.  3.100 / 62.  3.100\nlibavdevice    62.  1.100 / 62.  1.100\nlibavfilter    11.  4.100 / 11.  4.100\nlibswscale      9.  1.100 /  9.  1.100\nlibswresample   6.  1.100 /  6.  1.100\n\nExiting with exit code 0\n",
+      "ffprobe": "ffprobe version 8.0 Copyright (c) 2007-2025 the FFmpeg developers\nbuilt with Apple clang version 16.0.0 (clang-1600.0.26.6)\nconfiguration: --prefix=/usr/local/Cellar/ffmpeg/8.0_1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags='-Wl,-ld_classic' --enable-ffplay --enable-gnutls --enable-gpl --enable-libaom --enable-libaribb24 --enable-libbluray --enable-libdav1d --enable-libharfbuzz --enable-libjxl --enable-libmp3lame --enable-libopus --enable-librav1e --enable-librist --enable-librubberband --enable-libsnappy --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtesseract --enable-libtheora --enable-libvidstab --enable-libvmaf --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libxvid --enable-lzma --enable-libfontconfig --enable-libfreetype --enable-frei0r --enable-libass --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-libspeex --enable-libsoxr --enable-libzmq --enable-libzimg --disable-libjack --disable-indev=jack --enable-videotoolbox --enable-audiotoolbox\nlibavutil      60.  8.100 / 60.  8.100\nlibavcodec     62. 11.100 / 62. 11.100\nlibavformat    62.  3.100 / 62.  3.100\nlibavdevice    62.  1.100 / 62.  1.100\nlibavfilter    11.  4.100 / 11.  4.100\nlibswscale      9.  1.100 /  9.  1.100\nlibswresample   6.  1.100 /  6.  1.100\n"
+    },
+    "commands": [
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-f",
+          "lavfi",
+          "-i",
+          "testsrc2=size=320x180:rate=24:duration=12",
+          "-f",
+          "lavfi",
+          "-i",
+          "sine=frequency=440:sample_rate=48000:duration=12",
+          "-c:v",
+          "libx264",
+          "-preset",
+          "veryfast",
+          "-crf",
+          "23",
+          "-pix_fmt",
+          "yuv420p",
+          "-threads",
+          "2",
+          "-g",
+          "48",
+          "-keyint_min",
+          "48",
+          "-sc_threshold",
+          "0",
+          "-c:a",
+          "alac",
+          "-movflags",
+          "+faststart",
+          "-fs",
+          "33554432",
+          "standard.mp4"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-i",
+          "standard.mp4",
+          "-map",
+          "0",
+          "-c",
+          "copy",
+          "-fs",
+          "33554432",
+          "standard.mkv"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-f",
+          "lavfi",
+          "-i",
+          "testsrc2=size=320x180:rate=24:duration=12",
+          "-c:v",
+          "libx264",
+          "-preset",
+          "veryfast",
+          "-crf",
+          "23",
+          "-pix_fmt",
+          "yuv420p",
+          "-threads",
+          "2",
+          "-g",
+          "240",
+          "-keyint_min",
+          "240",
+          "-sc_threshold",
+          "0",
+          "-bf",
+          "3",
+          "-b_strategy",
+          "0",
+          "-fs",
+          "33554432",
+          "long-gop.mp4"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-f",
+          "lavfi",
+          "-i",
+          "testsrc2=size=320x180:rate=24:duration=12",
+          "-vf",
+          "select='if(lt(t,6),not(mod(n,2)),not(mod(n,3)))'",
+          "-fps_mode",
+          "vfr",
+          "-c:v",
+          "libx264",
+          "-preset",
+          "veryfast",
+          "-crf",
+          "23",
+          "-pix_fmt",
+          "yuv420p",
+          "-threads",
+          "2",
+          "-g",
+          "48",
+          "-keyint_min",
+          "48",
+          "-sc_threshold",
+          "0",
+          "-fs",
+          "33554432",
+          "vfr.mkv"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-i",
+          "long-gop.mp4",
+          "-c",
+          "copy",
+          "-output_ts_offset",
+          "5",
+          "-fs",
+          "33554432",
+          "positive-start.mkv"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-itsoffset",
+          "2",
+          "-i",
+          "long-gop.mp4",
+          "-f",
+          "lavfi",
+          "-i",
+          "sine=frequency=440:sample_rate=48000:duration=12",
+          "-map",
+          "0:v",
+          "-map",
+          "1:a",
+          "-c:v",
+          "copy",
+          "-c:a",
+          "alac",
+          "-use_editlist",
+          "1",
+          "-fs",
+          "33554432",
+          "edit-offset.mp4"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-display_rotation",
+          "90",
+          "-i",
+          "long-gop.mp4",
+          "-c",
+          "copy",
+          "-fs",
+          "33554432",
+          "rotation.mp4"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-f",
+          "lavfi",
+          "-i",
+          "testsrc2=size=320x180:rate=24:duration=12",
+          "-vf",
+          "setsar=2/1",
+          "-c:v",
+          "libx264",
+          "-preset",
+          "veryfast",
+          "-crf",
+          "23",
+          "-pix_fmt",
+          "yuv420p",
+          "-threads",
+          "2",
+          "-g",
+          "48",
+          "-keyint_min",
+          "48",
+          "-sc_threshold",
+          "0",
+          "-fs",
+          "33554432",
+          "sar.mp4"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-f",
+          "lavfi",
+          "-i",
+          "color=c=red:size=320x180:rate=24:duration=12",
+          "-f",
+          "lavfi",
+          "-i",
+          "color=c=blue:size=320x180:rate=24:duration=12",
+          "-map",
+          "0:v",
+          "-map",
+          "1:v",
+          "-c:v",
+          "libx264",
+          "-preset",
+          "veryfast",
+          "-crf",
+          "23",
+          "-pix_fmt",
+          "yuv420p",
+          "-threads",
+          "2",
+          "-g",
+          "48",
+          "-keyint_min",
+          "48",
+          "-sc_threshold",
+          "0",
+          "-metadata:s:v:0",
+          "title=synthetic-red",
+          "-metadata:s:v:1",
+          "title=synthetic-blue",
+          "-disposition:v:0",
+          "default",
+          "-disposition:v:1",
+          "0",
+          "-fs",
+          "33554432",
+          "two-tracks.mkv"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffprobe",
+        "argv": [
+          "-v",
+          "error",
+          "-show_streams",
+          "-show_format",
+          "-of",
+          "json",
+          "standard.mp4"
+        ],
+        "stdout": "standard.mp4.probe.json"
+      },
+      {
+        "tool": "ffprobe",
+        "argv": [
+          "-v",
+          "error",
+          "-select_streams",
+          "v",
+          "-show_frames",
+          "-show_entries",
+          "frame=stream_index,pts,pts_time,best_effort_timestamp,best_effort_timestamp_time,duration_time,key_frame,pict_type",
+          "-of",
+          "json",
+          "standard.mp4"
+        ],
+        "stdout": "standard.mp4.frames.json"
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-copyts",
+          "-noautorotate",
+          "-i",
+          "standard.mp4",
+          "-map",
+          "0:0",
+          "-an",
+          "-fps_mode",
+          "passthrough",
+          "-pix_fmt",
+          "rgba",
+          "-c:v",
+          "rawvideo",
+          "-f",
+          "framehash",
+          "-hash",
+          "sha256",
+          "standard.mp4.v0.framehash"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-i",
+          "standard.mp4",
+          "-map",
+          "0:0",
+          "-an",
+          "-vf",
+          "select=eq(n\\,0),scale=w=trunc(min(320\\,180*dar)):h=trunc(min(180\\,320/dar)),setsar=1",
+          "-frames:v",
+          "1",
+          "-fps_mode",
+          "passthrough",
+          "standard.mp4.v0.frame000.png"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-i",
+          "standard.mp4",
+          "-map",
+          "0:0",
+          "-an",
+          "-vf",
+          "select=eq(n\\,144),scale=w=trunc(min(320\\,180*dar)):h=trunc(min(180\\,320/dar)),setsar=1",
+          "-frames:v",
+          "1",
+          "-fps_mode",
+          "passthrough",
+          "standard.mp4.v0.frame144.png"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-i",
+          "standard.mp4",
+          "-map",
+          "0:0",
+          "-an",
+          "-vf",
+          "select=eq(n\\,287),scale=w=trunc(min(320\\,180*dar)):h=trunc(min(180\\,320/dar)),setsar=1",
+          "-frames:v",
+          "1",
+          "-fps_mode",
+          "passthrough",
+          "standard.mp4.v0.frame287.png"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffprobe",
+        "argv": [
+          "-v",
+          "error",
+          "-show_streams",
+          "-show_format",
+          "-of",
+          "json",
+          "standard.mkv"
+        ],
+        "stdout": "standard.mkv.probe.json"
+      },
+      {
+        "tool": "ffprobe",
+        "argv": [
+          "-v",
+          "error",
+          "-select_streams",
+          "v",
+          "-show_frames",
+          "-show_entries",
+          "frame=stream_index,pts,pts_time,best_effort_timestamp,best_effort_timestamp_time,duration_time,key_frame,pict_type",
+          "-of",
+          "json",
+          "standard.mkv"
+        ],
+        "stdout": "standard.mkv.frames.json"
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-copyts",
+          "-noautorotate",
+          "-i",
+          "standard.mkv",
+          "-map",
+          "0:0",
+          "-an",
+          "-fps_mode",
+          "passthrough",
+          "-pix_fmt",
+          "rgba",
+          "-c:v",
+          "rawvideo",
+          "-f",
+          "framehash",
+          "-hash",
+          "sha256",
+          "standard.mkv.v0.framehash"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-i",
+          "standard.mkv",
+          "-map",
+          "0:0",
+          "-an",
+          "-vf",
+          "select=eq(n\\,0),scale=w=trunc(min(320\\,180*dar)):h=trunc(min(180\\,320/dar)),setsar=1",
+          "-frames:v",
+          "1",
+          "-fps_mode",
+          "passthrough",
+          "standard.mkv.v0.frame000.png"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-i",
+          "standard.mkv",
+          "-map",
+          "0:0",
+          "-an",
+          "-vf",
+          "select=eq(n\\,144),scale=w=trunc(min(320\\,180*dar)):h=trunc(min(180\\,320/dar)),setsar=1",
+          "-frames:v",
+          "1",
+          "-fps_mode",
+          "passthrough",
+          "standard.mkv.v0.frame144.png"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-i",
+          "standard.mkv",
+          "-map",
+          "0:0",
+          "-an",
+          "-vf",
+          "select=eq(n\\,287),scale=w=trunc(min(320\\,180*dar)):h=trunc(min(180\\,320/dar)),setsar=1",
+          "-frames:v",
+          "1",
+          "-fps_mode",
+          "passthrough",
+          "standard.mkv.v0.frame287.png"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffprobe",
+        "argv": [
+          "-v",
+          "error",
+          "-show_streams",
+          "-show_format",
+          "-of",
+          "json",
+          "long-gop.mp4"
+        ],
+        "stdout": "long-gop.mp4.probe.json"
+      },
+      {
+        "tool": "ffprobe",
+        "argv": [
+          "-v",
+          "error",
+          "-select_streams",
+          "v",
+          "-show_frames",
+          "-show_entries",
+          "frame=stream_index,pts,pts_time,best_effort_timestamp,best_effort_timestamp_time,duration_time,key_frame,pict_type",
+          "-of",
+          "json",
+          "long-gop.mp4"
+        ],
+        "stdout": "long-gop.mp4.frames.json"
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-copyts",
+          "-noautorotate",
+          "-i",
+          "long-gop.mp4",
+          "-map",
+          "0:0",
+          "-an",
+          "-fps_mode",
+          "passthrough",
+          "-pix_fmt",
+          "rgba",
+          "-c:v",
+          "rawvideo",
+          "-f",
+          "framehash",
+          "-hash",
+          "sha256",
+          "long-gop.mp4.v0.framehash"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-i",
+          "long-gop.mp4",
+          "-map",
+          "0:0",
+          "-an",
+          "-vf",
+          "select=eq(n\\,0),scale=w=trunc(min(320\\,180*dar)):h=trunc(min(180\\,320/dar)),setsar=1",
+          "-frames:v",
+          "1",
+          "-fps_mode",
+          "passthrough",
+          "long-gop.mp4.v0.frame000.png"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-i",
+          "long-gop.mp4",
+          "-map",
+          "0:0",
+          "-an",
+          "-vf",
+          "select=eq(n\\,144),scale=w=trunc(min(320\\,180*dar)):h=trunc(min(180\\,320/dar)),setsar=1",
+          "-frames:v",
+          "1",
+          "-fps_mode",
+          "passthrough",
+          "long-gop.mp4.v0.frame144.png"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-i",
+          "long-gop.mp4",
+          "-map",
+          "0:0",
+          "-an",
+          "-vf",
+          "select=eq(n\\,287),scale=w=trunc(min(320\\,180*dar)):h=trunc(min(180\\,320/dar)),setsar=1",
+          "-frames:v",
+          "1",
+          "-fps_mode",
+          "passthrough",
+          "long-gop.mp4.v0.frame287.png"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffprobe",
+        "argv": [
+          "-v",
+          "error",
+          "-show_streams",
+          "-show_format",
+          "-of",
+          "json",
+          "vfr.mkv"
+        ],
+        "stdout": "vfr.mkv.probe.json"
+      },
+      {
+        "tool": "ffprobe",
+        "argv": [
+          "-v",
+          "error",
+          "-select_streams",
+          "v",
+          "-show_frames",
+          "-show_entries",
+          "frame=stream_index,pts,pts_time,best_effort_timestamp,best_effort_timestamp_time,duration_time,key_frame,pict_type",
+          "-of",
+          "json",
+          "vfr.mkv"
+        ],
+        "stdout": "vfr.mkv.frames.json"
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-copyts",
+          "-noautorotate",
+          "-i",
+          "vfr.mkv",
+          "-map",
+          "0:0",
+          "-an",
+          "-fps_mode",
+          "passthrough",
+          "-pix_fmt",
+          "rgba",
+          "-c:v",
+          "rawvideo",
+          "-f",
+          "framehash",
+          "-hash",
+          "sha256",
+          "vfr.mkv.v0.framehash"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-i",
+          "vfr.mkv",
+          "-map",
+          "0:0",
+          "-an",
+          "-vf",
+          "select=eq(n\\,0),scale=w=trunc(min(320\\,180*dar)):h=trunc(min(180\\,320/dar)),setsar=1",
+          "-frames:v",
+          "1",
+          "-fps_mode",
+          "passthrough",
+          "vfr.mkv.v0.frame000.png"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-i",
+          "vfr.mkv",
+          "-map",
+          "0:0",
+          "-an",
+          "-vf",
+          "select=eq(n\\,60),scale=w=trunc(min(320\\,180*dar)):h=trunc(min(180\\,320/dar)),setsar=1",
+          "-frames:v",
+          "1",
+          "-fps_mode",
+          "passthrough",
+          "vfr.mkv.v0.frame060.png"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-i",
+          "vfr.mkv",
+          "-map",
+          "0:0",
+          "-an",
+          "-vf",
+          "select=eq(n\\,119),scale=w=trunc(min(320\\,180*dar)):h=trunc(min(180\\,320/dar)),setsar=1",
+          "-frames:v",
+          "1",
+          "-fps_mode",
+          "passthrough",
+          "vfr.mkv.v0.frame119.png"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffprobe",
+        "argv": [
+          "-v",
+          "error",
+          "-show_streams",
+          "-show_format",
+          "-of",
+          "json",
+          "positive-start.mkv"
+        ],
+        "stdout": "positive-start.mkv.probe.json"
+      },
+      {
+        "tool": "ffprobe",
+        "argv": [
+          "-v",
+          "error",
+          "-select_streams",
+          "v",
+          "-show_frames",
+          "-show_entries",
+          "frame=stream_index,pts,pts_time,best_effort_timestamp,best_effort_timestamp_time,duration_time,key_frame,pict_type",
+          "-of",
+          "json",
+          "positive-start.mkv"
+        ],
+        "stdout": "positive-start.mkv.frames.json"
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-copyts",
+          "-noautorotate",
+          "-i",
+          "positive-start.mkv",
+          "-map",
+          "0:0",
+          "-an",
+          "-fps_mode",
+          "passthrough",
+          "-pix_fmt",
+          "rgba",
+          "-c:v",
+          "rawvideo",
+          "-f",
+          "framehash",
+          "-hash",
+          "sha256",
+          "positive-start.mkv.v0.framehash"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-i",
+          "positive-start.mkv",
+          "-map",
+          "0:0",
+          "-an",
+          "-vf",
+          "select=eq(n\\,0),scale=w=trunc(min(320\\,180*dar)):h=trunc(min(180\\,320/dar)),setsar=1",
+          "-frames:v",
+          "1",
+          "-fps_mode",
+          "passthrough",
+          "positive-start.mkv.v0.frame000.png"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-i",
+          "positive-start.mkv",
+          "-map",
+          "0:0",
+          "-an",
+          "-vf",
+          "select=eq(n\\,144),scale=w=trunc(min(320\\,180*dar)):h=trunc(min(180\\,320/dar)),setsar=1",
+          "-frames:v",
+          "1",
+          "-fps_mode",
+          "passthrough",
+          "positive-start.mkv.v0.frame144.png"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-i",
+          "positive-start.mkv",
+          "-map",
+          "0:0",
+          "-an",
+          "-vf",
+          "select=eq(n\\,287),scale=w=trunc(min(320\\,180*dar)):h=trunc(min(180\\,320/dar)),setsar=1",
+          "-frames:v",
+          "1",
+          "-fps_mode",
+          "passthrough",
+          "positive-start.mkv.v0.frame287.png"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffprobe",
+        "argv": [
+          "-v",
+          "error",
+          "-show_streams",
+          "-show_format",
+          "-of",
+          "json",
+          "edit-offset.mp4"
+        ],
+        "stdout": "edit-offset.mp4.probe.json"
+      },
+      {
+        "tool": "ffprobe",
+        "argv": [
+          "-v",
+          "error",
+          "-select_streams",
+          "v",
+          "-show_frames",
+          "-show_entries",
+          "frame=stream_index,pts,pts_time,best_effort_timestamp,best_effort_timestamp_time,duration_time,key_frame,pict_type",
+          "-of",
+          "json",
+          "edit-offset.mp4"
+        ],
+        "stdout": "edit-offset.mp4.frames.json"
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-copyts",
+          "-noautorotate",
+          "-i",
+          "edit-offset.mp4",
+          "-map",
+          "0:0",
+          "-an",
+          "-fps_mode",
+          "passthrough",
+          "-pix_fmt",
+          "rgba",
+          "-c:v",
+          "rawvideo",
+          "-f",
+          "framehash",
+          "-hash",
+          "sha256",
+          "edit-offset.mp4.v0.framehash"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-i",
+          "edit-offset.mp4",
+          "-map",
+          "0:0",
+          "-an",
+          "-vf",
+          "select=eq(n\\,0),scale=w=trunc(min(320\\,180*dar)):h=trunc(min(180\\,320/dar)),setsar=1",
+          "-frames:v",
+          "1",
+          "-fps_mode",
+          "passthrough",
+          "edit-offset.mp4.v0.frame000.png"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-i",
+          "edit-offset.mp4",
+          "-map",
+          "0:0",
+          "-an",
+          "-vf",
+          "select=eq(n\\,144),scale=w=trunc(min(320\\,180*dar)):h=trunc(min(180\\,320/dar)),setsar=1",
+          "-frames:v",
+          "1",
+          "-fps_mode",
+          "passthrough",
+          "edit-offset.mp4.v0.frame144.png"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-i",
+          "edit-offset.mp4",
+          "-map",
+          "0:0",
+          "-an",
+          "-vf",
+          "select=eq(n\\,287),scale=w=trunc(min(320\\,180*dar)):h=trunc(min(180\\,320/dar)),setsar=1",
+          "-frames:v",
+          "1",
+          "-fps_mode",
+          "passthrough",
+          "edit-offset.mp4.v0.frame287.png"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffprobe",
+        "argv": [
+          "-v",
+          "error",
+          "-show_streams",
+          "-show_format",
+          "-of",
+          "json",
+          "rotation.mp4"
+        ],
+        "stdout": "rotation.mp4.probe.json"
+      },
+      {
+        "tool": "ffprobe",
+        "argv": [
+          "-v",
+          "error",
+          "-select_streams",
+          "v",
+          "-show_frames",
+          "-show_entries",
+          "frame=stream_index,pts,pts_time,best_effort_timestamp,best_effort_timestamp_time,duration_time,key_frame,pict_type",
+          "-of",
+          "json",
+          "rotation.mp4"
+        ],
+        "stdout": "rotation.mp4.frames.json"
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-copyts",
+          "-noautorotate",
+          "-i",
+          "rotation.mp4",
+          "-map",
+          "0:0",
+          "-an",
+          "-fps_mode",
+          "passthrough",
+          "-pix_fmt",
+          "rgba",
+          "-c:v",
+          "rawvideo",
+          "-f",
+          "framehash",
+          "-hash",
+          "sha256",
+          "rotation.mp4.v0.framehash"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-i",
+          "rotation.mp4",
+          "-map",
+          "0:0",
+          "-an",
+          "-vf",
+          "select=eq(n\\,0),scale=w=trunc(min(320\\,180*dar)):h=trunc(min(180\\,320/dar)),setsar=1",
+          "-frames:v",
+          "1",
+          "-fps_mode",
+          "passthrough",
+          "rotation.mp4.v0.frame000.png"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-i",
+          "rotation.mp4",
+          "-map",
+          "0:0",
+          "-an",
+          "-vf",
+          "select=eq(n\\,144),scale=w=trunc(min(320\\,180*dar)):h=trunc(min(180\\,320/dar)),setsar=1",
+          "-frames:v",
+          "1",
+          "-fps_mode",
+          "passthrough",
+          "rotation.mp4.v0.frame144.png"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-i",
+          "rotation.mp4",
+          "-map",
+          "0:0",
+          "-an",
+          "-vf",
+          "select=eq(n\\,287),scale=w=trunc(min(320\\,180*dar)):h=trunc(min(180\\,320/dar)),setsar=1",
+          "-frames:v",
+          "1",
+          "-fps_mode",
+          "passthrough",
+          "rotation.mp4.v0.frame287.png"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffprobe",
+        "argv": [
+          "-v",
+          "error",
+          "-show_streams",
+          "-show_format",
+          "-of",
+          "json",
+          "sar.mp4"
+        ],
+        "stdout": "sar.mp4.probe.json"
+      },
+      {
+        "tool": "ffprobe",
+        "argv": [
+          "-v",
+          "error",
+          "-select_streams",
+          "v",
+          "-show_frames",
+          "-show_entries",
+          "frame=stream_index,pts,pts_time,best_effort_timestamp,best_effort_timestamp_time,duration_time,key_frame,pict_type",
+          "-of",
+          "json",
+          "sar.mp4"
+        ],
+        "stdout": "sar.mp4.frames.json"
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-copyts",
+          "-noautorotate",
+          "-i",
+          "sar.mp4",
+          "-map",
+          "0:0",
+          "-an",
+          "-fps_mode",
+          "passthrough",
+          "-pix_fmt",
+          "rgba",
+          "-c:v",
+          "rawvideo",
+          "-f",
+          "framehash",
+          "-hash",
+          "sha256",
+          "sar.mp4.v0.framehash"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-i",
+          "sar.mp4",
+          "-map",
+          "0:0",
+          "-an",
+          "-vf",
+          "select=eq(n\\,0),scale=w=trunc(min(320\\,180*dar)):h=trunc(min(180\\,320/dar)),setsar=1",
+          "-frames:v",
+          "1",
+          "-fps_mode",
+          "passthrough",
+          "sar.mp4.v0.frame000.png"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-i",
+          "sar.mp4",
+          "-map",
+          "0:0",
+          "-an",
+          "-vf",
+          "select=eq(n\\,144),scale=w=trunc(min(320\\,180*dar)):h=trunc(min(180\\,320/dar)),setsar=1",
+          "-frames:v",
+          "1",
+          "-fps_mode",
+          "passthrough",
+          "sar.mp4.v0.frame144.png"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-i",
+          "sar.mp4",
+          "-map",
+          "0:0",
+          "-an",
+          "-vf",
+          "select=eq(n\\,287),scale=w=trunc(min(320\\,180*dar)):h=trunc(min(180\\,320/dar)),setsar=1",
+          "-frames:v",
+          "1",
+          "-fps_mode",
+          "passthrough",
+          "sar.mp4.v0.frame287.png"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffprobe",
+        "argv": [
+          "-v",
+          "error",
+          "-show_streams",
+          "-show_format",
+          "-of",
+          "json",
+          "two-tracks.mkv"
+        ],
+        "stdout": "two-tracks.mkv.probe.json"
+      },
+      {
+        "tool": "ffprobe",
+        "argv": [
+          "-v",
+          "error",
+          "-select_streams",
+          "v",
+          "-show_frames",
+          "-show_entries",
+          "frame=stream_index,pts,pts_time,best_effort_timestamp,best_effort_timestamp_time,duration_time,key_frame,pict_type",
+          "-of",
+          "json",
+          "two-tracks.mkv"
+        ],
+        "stdout": "two-tracks.mkv.frames.json"
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-copyts",
+          "-noautorotate",
+          "-i",
+          "two-tracks.mkv",
+          "-map",
+          "0:0",
+          "-an",
+          "-fps_mode",
+          "passthrough",
+          "-pix_fmt",
+          "rgba",
+          "-c:v",
+          "rawvideo",
+          "-f",
+          "framehash",
+          "-hash",
+          "sha256",
+          "two-tracks.mkv.v0.framehash"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-i",
+          "two-tracks.mkv",
+          "-map",
+          "0:0",
+          "-an",
+          "-vf",
+          "select=eq(n\\,0),scale=w=trunc(min(320\\,180*dar)):h=trunc(min(180\\,320/dar)),setsar=1",
+          "-frames:v",
+          "1",
+          "-fps_mode",
+          "passthrough",
+          "two-tracks.mkv.v0.frame000.png"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-i",
+          "two-tracks.mkv",
+          "-map",
+          "0:0",
+          "-an",
+          "-vf",
+          "select=eq(n\\,144),scale=w=trunc(min(320\\,180*dar)):h=trunc(min(180\\,320/dar)),setsar=1",
+          "-frames:v",
+          "1",
+          "-fps_mode",
+          "passthrough",
+          "two-tracks.mkv.v0.frame144.png"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-i",
+          "two-tracks.mkv",
+          "-map",
+          "0:0",
+          "-an",
+          "-vf",
+          "select=eq(n\\,287),scale=w=trunc(min(320\\,180*dar)):h=trunc(min(180\\,320/dar)),setsar=1",
+          "-frames:v",
+          "1",
+          "-fps_mode",
+          "passthrough",
+          "two-tracks.mkv.v0.frame287.png"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-copyts",
+          "-noautorotate",
+          "-i",
+          "two-tracks.mkv",
+          "-map",
+          "0:1",
+          "-an",
+          "-fps_mode",
+          "passthrough",
+          "-pix_fmt",
+          "rgba",
+          "-c:v",
+          "rawvideo",
+          "-f",
+          "framehash",
+          "-hash",
+          "sha256",
+          "two-tracks.mkv.v1.framehash"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-i",
+          "two-tracks.mkv",
+          "-map",
+          "0:1",
+          "-an",
+          "-vf",
+          "select=eq(n\\,0),scale=w=trunc(min(320\\,180*dar)):h=trunc(min(180\\,320/dar)),setsar=1",
+          "-frames:v",
+          "1",
+          "-fps_mode",
+          "passthrough",
+          "two-tracks.mkv.v1.frame000.png"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-i",
+          "two-tracks.mkv",
+          "-map",
+          "0:1",
+          "-an",
+          "-vf",
+          "select=eq(n\\,144),scale=w=trunc(min(320\\,180*dar)):h=trunc(min(180\\,320/dar)),setsar=1",
+          "-frames:v",
+          "1",
+          "-fps_mode",
+          "passthrough",
+          "two-tracks.mkv.v1.frame144.png"
+        ],
+        "stdout": null
+      },
+      {
+        "tool": "ffmpeg",
+        "argv": [
+          "-nostdin",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-n",
+          "-i",
+          "two-tracks.mkv",
+          "-map",
+          "0:1",
+          "-an",
+          "-vf",
+          "select=eq(n\\,287),scale=w=trunc(min(320\\,180*dar)):h=trunc(min(180\\,320/dar)),setsar=1",
+          "-frames:v",
+          "1",
+          "-fps_mode",
+          "passthrough",
+          "two-tracks.mkv.v1.frame287.png"
+        ],
+        "stdout": null
+      }
+    ],
+    "fixtures": [
+      {
+        "name": "standard.mp4",
+        "description": "12 s testsrc2 320x180 24 fps; generated 440 Hz ALAC tone",
+        "bytes": 589343,
+        "sha256": "8bc46b663c6b42269c9f81ea46b50f18833d40f8014a26850ab51c1c534098dc",
+        "probe": "standard.mp4.probe.json",
+        "frames": "standard.mp4.frames.json",
+        "streams": [
+          {
+            "index": 0,
+            "frame_count": 288,
+            "first_pts": "0.000000",
+            "last_pts": "11.958333",
+            "keyframe_pts": [
+              "0.000000",
+              "2.000000",
+              "4.000000",
+              "6.000000",
+              "8.000000",
+              "10.000000"
+            ],
+            "coded_rgba_framehash": "standard.mp4.v0.framehash",
+            "display_examples": [
+              {
+                "decoded_frame_index": 0,
+                "pts_time": "0.000000",
+                "name": "standard.mp4.v0.frame000.png",
+                "sha256": "2e43bef439a91b7bcf6dfda72a2ef2cae0f35dade2928d2dd3603913e37c6a0f"
+              },
+              {
+                "decoded_frame_index": 144,
+                "pts_time": "6.000000",
+                "name": "standard.mp4.v0.frame144.png",
+                "sha256": "b3bb2683cb5e01a705f32f81f3cbfac015bd38c8e6c5245bbde99bedbcd9915b"
+              },
+              {
+                "decoded_frame_index": 287,
+                "pts_time": "11.958333",
+                "name": "standard.mp4.v0.frame287.png",
+                "sha256": "96b3a041dfaf34f0e40b1532eee91edfb7fef12bed96f9bc7fa66b3f76818ac7"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "standard.mkv",
+        "description": "Same encoded video/audio as standard.mp4, Matroska container",
+        "bytes": 586906,
+        "sha256": "0c7989cce8e59a17dc30f83ea2af0252ad32e9079a17e0880bbc1b6236c3e65d",
+        "probe": "standard.mkv.probe.json",
+        "frames": "standard.mkv.frames.json",
+        "streams": [
+          {
+            "index": 0,
+            "frame_count": 288,
+            "first_pts": "0.000000",
+            "last_pts": "11.958000",
+            "keyframe_pts": [
+              "0.000000",
+              "2.000000",
+              "4.000000",
+              "6.000000",
+              "8.000000",
+              "10.000000"
+            ],
+            "coded_rgba_framehash": "standard.mkv.v0.framehash",
+            "display_examples": [
+              {
+                "decoded_frame_index": 0,
+                "pts_time": "0.000000",
+                "name": "standard.mkv.v0.frame000.png",
+                "sha256": "2e43bef439a91b7bcf6dfda72a2ef2cae0f35dade2928d2dd3603913e37c6a0f"
+              },
+              {
+                "decoded_frame_index": 144,
+                "pts_time": "6.000000",
+                "name": "standard.mkv.v0.frame144.png",
+                "sha256": "b3bb2683cb5e01a705f32f81f3cbfac015bd38c8e6c5245bbde99bedbcd9915b"
+              },
+              {
+                "decoded_frame_index": 287,
+                "pts_time": "11.958000",
+                "name": "standard.mkv.v0.frame287.png",
+                "sha256": "96b3a041dfaf34f0e40b1532eee91edfb7fef12bed96f9bc7fa66b3f76818ac7"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "long-gop.mp4",
+        "description": "12 s testsrc2; ten-second GOP and three B-frames (verify actual frame map)",
+        "bytes": 347708,
+        "sha256": "0a799a96c129d26170bb5f5195df532eeffd8cd00c34416644d10a08820a6e91",
+        "probe": "long-gop.mp4.probe.json",
+        "frames": "long-gop.mp4.frames.json",
+        "streams": [
+          {
+            "index": 0,
+            "frame_count": 288,
+            "first_pts": "0.000000",
+            "last_pts": "11.958333",
+            "keyframe_pts": [
+              "0.000000",
+              "10.000000"
+            ],
+            "coded_rgba_framehash": "long-gop.mp4.v0.framehash",
+            "display_examples": [
+              {
+                "decoded_frame_index": 0,
+                "pts_time": "0.000000",
+                "name": "long-gop.mp4.v0.frame000.png",
+                "sha256": "e84f8250203dfd7493e7403e0e68b6a05f916ebd0f4ac30eeb3e393332816f8f"
+              },
+              {
+                "decoded_frame_index": 144,
+                "pts_time": "6.000000",
+                "name": "long-gop.mp4.v0.frame144.png",
+                "sha256": "a742969805de1daddd162f8744b2d7a9209adfe99b4d63869794e934457b55d3"
+              },
+              {
+                "decoded_frame_index": 287,
+                "pts_time": "11.958333",
+                "name": "long-gop.mp4.v0.frame287.png",
+                "sha256": "a50fc0369f00d185941befe54e082751c714ab675bffcb5974956920a3939b70"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "vfr.mkv",
+        "description": "12 fps then 8 fps; selected original testsrc2 frames, variable PTS spacing",
+        "bytes": 221328,
+        "sha256": "4d0432ad3c54271721f8b0ecbe88c203e308231877b6f21a4205819f01d268e2",
+        "probe": "vfr.mkv.probe.json",
+        "frames": "vfr.mkv.frames.json",
+        "streams": [
+          {
+            "index": 0,
+            "frame_count": 120,
+            "first_pts": "0.000000",
+            "last_pts": "11.875000",
+            "keyframe_pts": [
+              "0.000000",
+              "4.000000",
+              "9.000000"
+            ],
+            "coded_rgba_framehash": "vfr.mkv.v0.framehash",
+            "display_examples": [
+              {
+                "decoded_frame_index": 0,
+                "pts_time": "0.000000",
+                "name": "vfr.mkv.v0.frame000.png",
+                "sha256": "f0382848e4a1d11c743894ebefa6a2ff7a2f794803639bc900280ee823b6d03b"
+              },
+              {
+                "decoded_frame_index": 60,
+                "pts_time": "5.000000",
+                "name": "vfr.mkv.v0.frame060.png",
+                "sha256": "d5ac0bb2c18fdd513090ed8adb536ac0a9324322bc940b8b1fcaf20cc668b387"
+              },
+              {
+                "decoded_frame_index": 119,
+                "pts_time": "11.875000",
+                "name": "vfr.mkv.v0.frame119.png",
+                "sha256": "9ad43df560c3b65f6043f0adf56a4ae41175125de8a3fbaa811fed13af640386"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "positive-start.mkv",
+        "description": "Video PTS begins at +5 s; original pixels retained",
+        "bytes": 346247,
+        "sha256": "7ddb8c7272f835612b5f665cf7816e3aaba53a3487640e5daa1858241f0ec0b3",
+        "probe": "positive-start.mkv.probe.json",
+        "frames": "positive-start.mkv.frames.json",
+        "streams": [
+          {
+            "index": 0,
+            "frame_count": 288,
+            "first_pts": "5.000000",
+            "last_pts": "16.958000",
+            "keyframe_pts": [
+              "5.000000",
+              "15.000000"
+            ],
+            "coded_rgba_framehash": "positive-start.mkv.v0.framehash",
+            "display_examples": [
+              {
+                "decoded_frame_index": 0,
+                "pts_time": "5.000000",
+                "name": "positive-start.mkv.v0.frame000.png",
+                "sha256": "e84f8250203dfd7493e7403e0e68b6a05f916ebd0f4ac30eeb3e393332816f8f"
+              },
+              {
+                "decoded_frame_index": 144,
+                "pts_time": "11.000000",
+                "name": "positive-start.mkv.v0.frame144.png",
+                "sha256": "a742969805de1daddd162f8744b2d7a9209adfe99b4d63869794e934457b55d3"
+              },
+              {
+                "decoded_frame_index": 287,
+                "pts_time": "16.958000",
+                "name": "positive-start.mkv.v0.frame287.png",
+                "sha256": "a50fc0369f00d185941befe54e082751c714ab675bffcb5974956920a3939b70"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "edit-offset.mp4",
+        "description": "Video begins at +2 s; audio/container near zero (12 s audio, 14 s extent)",
+        "bytes": 577963,
+        "sha256": "387c7688c5e3df3196a6e49af67fd0bffbdee6bc8472a74bca49a89d440bebf1",
+        "probe": "edit-offset.mp4.probe.json",
+        "frames": "edit-offset.mp4.frames.json",
+        "streams": [
+          {
+            "index": 0,
+            "frame_count": 288,
+            "first_pts": "2.000000",
+            "last_pts": "13.958333",
+            "keyframe_pts": [
+              "2.000000",
+              "12.000000"
+            ],
+            "coded_rgba_framehash": "edit-offset.mp4.v0.framehash",
+            "display_examples": [
+              {
+                "decoded_frame_index": 0,
+                "pts_time": "2.000000",
+                "name": "edit-offset.mp4.v0.frame000.png",
+                "sha256": "e84f8250203dfd7493e7403e0e68b6a05f916ebd0f4ac30eeb3e393332816f8f"
+              },
+              {
+                "decoded_frame_index": 144,
+                "pts_time": "8.000000",
+                "name": "edit-offset.mp4.v0.frame144.png",
+                "sha256": "a742969805de1daddd162f8744b2d7a9209adfe99b4d63869794e934457b55d3"
+              },
+              {
+                "decoded_frame_index": 287,
+                "pts_time": "13.958333",
+                "name": "edit-offset.mp4.v0.frame287.png",
+                "sha256": "a50fc0369f00d185941befe54e082751c714ab675bffcb5974956920a3939b70"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "rotation.mp4",
+        "description": "90-degree display matrix; encoded samples retain landscape geometry",
+        "bytes": 347708,
+        "sha256": "5f877209d39a53e581709deed5cd515955719497d4197d4e74c93a6d55223ed2",
+        "probe": "rotation.mp4.probe.json",
+        "frames": "rotation.mp4.frames.json",
+        "streams": [
+          {
+            "index": 0,
+            "frame_count": 288,
+            "first_pts": "0.000000",
+            "last_pts": "11.958333",
+            "keyframe_pts": [
+              "0.000000",
+              "10.000000"
+            ],
+            "coded_rgba_framehash": "rotation.mp4.v0.framehash",
+            "display_examples": [
+              {
+                "decoded_frame_index": 0,
+                "pts_time": "0.000000",
+                "name": "rotation.mp4.v0.frame000.png",
+                "sha256": "d566d7728d9b413afac81ab0d211a48d66aa0817cc5684dbff4202fbdbf98edc"
+              },
+              {
+                "decoded_frame_index": 144,
+                "pts_time": "6.000000",
+                "name": "rotation.mp4.v0.frame144.png",
+                "sha256": "3afa4603d8a03497a730b46124d6b5a7e03f9328d8bef1da6bf7fe5d68fdfab0"
+              },
+              {
+                "decoded_frame_index": 287,
+                "pts_time": "11.958333",
+                "name": "rotation.mp4.v0.frame287.png",
+                "sha256": "005551418ae810553f8942d79bf30a331acff3455bcfc3bc88b38e66e87b3539"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "sar.mp4",
+        "description": "320x180 coded samples, 2:1 SAR; intended display aspect 32:9",
+        "bytes": 358900,
+        "sha256": "4f925ee5155fcf63ba795240986cb17dad2b8c9eb9fc173a28004aa7e2328af3",
+        "probe": "sar.mp4.probe.json",
+        "frames": "sar.mp4.frames.json",
+        "streams": [
+          {
+            "index": 0,
+            "frame_count": 288,
+            "first_pts": "0.000000",
+            "last_pts": "11.958333",
+            "keyframe_pts": [
+              "0.000000",
+              "2.000000",
+              "4.000000",
+              "6.000000",
+              "8.000000",
+              "10.000000"
+            ],
+            "coded_rgba_framehash": "sar.mp4.v0.framehash",
+            "display_examples": [
+              {
+                "decoded_frame_index": 0,
+                "pts_time": "0.000000",
+                "name": "sar.mp4.v0.frame000.png",
+                "sha256": "6628843348348a92badd474804ec152d00dbe269848119d54701362d0785d2b8"
+              },
+              {
+                "decoded_frame_index": 144,
+                "pts_time": "6.000000",
+                "name": "sar.mp4.v0.frame144.png",
+                "sha256": "9db52a10f9359917566a7447ef8912d78b7a38d76621b1920e91db3230e036b1"
+              },
+              {
+                "decoded_frame_index": 287,
+                "pts_time": "11.958333",
+                "name": "sar.mp4.v0.frame287.png",
+                "sha256": "98db0cd1ab1d72b15633a9ab2dfe419cd4a90de9e249246587f2343dd3e92569"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "two-tracks.mkv",
+        "description": "Video ordinal 0 red/default; ordinal 1 blue. Ordinals are not VLC ES IDs",
+        "bytes": 14948,
+        "sha256": "140fb2321b56579b5840be66c9d0c3a2e61079db740300a124b32d98ad245336",
+        "probe": "two-tracks.mkv.probe.json",
+        "frames": "two-tracks.mkv.frames.json",
+        "streams": [
+          {
+            "index": 0,
+            "frame_count": 288,
+            "first_pts": "0.000000",
+            "last_pts": "11.958000",
+            "keyframe_pts": [
+              "0.000000",
+              "2.000000",
+              "4.000000",
+              "6.000000",
+              "8.000000",
+              "10.000000"
+            ],
+            "coded_rgba_framehash": "two-tracks.mkv.v0.framehash",
+            "display_examples": [
+              {
+                "decoded_frame_index": 0,
+                "pts_time": "0.000000",
+                "name": "two-tracks.mkv.v0.frame000.png",
+                "sha256": "fc06a8bc31d48724f2184c7c2dde67de4b06d8dbaa6be9b62d358a5f88ead75c"
+              },
+              {
+                "decoded_frame_index": 144,
+                "pts_time": "6.000000",
+                "name": "two-tracks.mkv.v0.frame144.png",
+                "sha256": "fc06a8bc31d48724f2184c7c2dde67de4b06d8dbaa6be9b62d358a5f88ead75c"
+              },
+              {
+                "decoded_frame_index": 287,
+                "pts_time": "11.958000",
+                "name": "two-tracks.mkv.v0.frame287.png",
+                "sha256": "fc06a8bc31d48724f2184c7c2dde67de4b06d8dbaa6be9b62d358a5f88ead75c"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "frame_count": 288,
+            "first_pts": "0.000000",
+            "last_pts": "11.958000",
+            "keyframe_pts": [
+              "0.000000",
+              "2.000000",
+              "4.000000",
+              "6.000000",
+              "8.000000",
+              "10.000000"
+            ],
+            "coded_rgba_framehash": "two-tracks.mkv.v1.framehash",
+            "display_examples": [
+              {
+                "decoded_frame_index": 0,
+                "pts_time": "0.000000",
+                "name": "two-tracks.mkv.v1.frame000.png",
+                "sha256": "bc7e001bbbb7bf106d3d7c968c6828b75e9ccd285845ac26b822df6396942548"
+              },
+              {
+                "decoded_frame_index": 144,
+                "pts_time": "6.000000",
+                "name": "two-tracks.mkv.v1.frame144.png",
+                "sha256": "bc7e001bbbb7bf106d3d7c968c6828b75e9ccd285845ac26b822df6396942548"
+              },
+              {
+                "decoded_frame_index": 287,
+                "pts_time": "11.958000",
+                "name": "two-tracks.mkv.v1.frame287.png",
+                "sha256": "bc7e001bbbb7bf106d3d7c968c6828b75e9ccd285845ac26b822df6396942548"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "files": [
+      {
+        "name": "edit-offset.mp4",
+        "bytes": 577963,
+        "sha256": "387c7688c5e3df3196a6e49af67fd0bffbdee6bc8472a74bca49a89d440bebf1"
+      },
+      {
+        "name": "edit-offset.mp4.frames.json",
+        "bytes": 89944,
+        "sha256": "c2cb2a39dced69e1e612763f4779458d0a7989cb950b47df31e2d37ef49ae484"
+      },
+      {
+        "name": "edit-offset.mp4.probe.json",
+        "bytes": 4375,
+        "sha256": "3c3e1638a4f2e4be5f5bccab6ef28121d8872e2065168f2ecd4f9a54e5edb7ab"
+      },
+      {
+        "name": "edit-offset.mp4.v0.frame000.png",
+        "bytes": 19330,
+        "sha256": "e84f8250203dfd7493e7403e0e68b6a05f916ebd0f4ac30eeb3e393332816f8f"
+      },
+      {
+        "name": "edit-offset.mp4.v0.frame144.png",
+        "bytes": 27391,
+        "sha256": "a742969805de1daddd162f8744b2d7a9209adfe99b4d63869794e934457b55d3"
+      },
+      {
+        "name": "edit-offset.mp4.v0.frame287.png",
+        "bytes": 24195,
+        "sha256": "a50fc0369f00d185941befe54e082751c714ab675bffcb5974956920a3939b70"
+      },
+      {
+        "name": "edit-offset.mp4.v0.framehash",
+        "bytes": 32473,
+        "sha256": "08efb3a7fb08f8060304123ed486723b84edbd473de26a4924170c821b9ca1ff"
+      },
+      {
+        "name": "long-gop.mp4",
+        "bytes": 347708,
+        "sha256": "0a799a96c129d26170bb5f5195df532eeffd8cd00c34416644d10a08820a6e91"
+      },
+      {
+        "name": "long-gop.mp4.frames.json",
+        "bytes": 89704,
+        "sha256": "905a3046bf926884d564b9c934a2881410abd6a887293ce0597548f43d7d6a6c"
+      },
+      {
+        "name": "long-gop.mp4.probe.json",
+        "bytes": 2663,
+        "sha256": "72fd1e54c630b2e975f4795c52ee4005ef5f0688db42f333a2e33013b79532ea"
+      },
+      {
+        "name": "long-gop.mp4.v0.frame000.png",
+        "bytes": 19330,
+        "sha256": "e84f8250203dfd7493e7403e0e68b6a05f916ebd0f4ac30eeb3e393332816f8f"
+      },
+      {
+        "name": "long-gop.mp4.v0.frame144.png",
+        "bytes": 27391,
+        "sha256": "a742969805de1daddd162f8744b2d7a9209adfe99b4d63869794e934457b55d3"
+      },
+      {
+        "name": "long-gop.mp4.v0.frame287.png",
+        "bytes": 24195,
+        "sha256": "a50fc0369f00d185941befe54e082751c714ab675bffcb5974956920a3939b70"
+      },
+      {
+        "name": "long-gop.mp4.v0.framehash",
+        "bytes": 32473,
+        "sha256": "6a16ad258d8c097b2c0cb554698a853fa3ada7ca97bb6707bbe6d0968a4bd7d0"
+      },
+      {
+        "name": "positive-start.mkv",
+        "bytes": 346247,
+        "sha256": "7ddb8c7272f835612b5f665cf7816e3aaba53a3487640e5daa1858241f0ec0b3"
+      },
+      {
+        "name": "positive-start.mkv.frames.json",
+        "bytes": 89568,
+        "sha256": "a58ac0a8c2b5e33a12cabd179b4663f5e777d715753315d94878c7ef22bc5963"
+      },
+      {
+        "name": "positive-start.mkv.probe.json",
+        "bytes": 2517,
+        "sha256": "1a335cef0b0ae271f55a11024cf92e5b894b8ac89ee4998567cab5a94e6f5379"
+      },
+      {
+        "name": "positive-start.mkv.v0.frame000.png",
+        "bytes": 19330,
+        "sha256": "e84f8250203dfd7493e7403e0e68b6a05f916ebd0f4ac30eeb3e393332816f8f"
+      },
+      {
+        "name": "positive-start.mkv.v0.frame144.png",
+        "bytes": 27391,
+        "sha256": "a742969805de1daddd162f8744b2d7a9209adfe99b4d63869794e934457b55d3"
+      },
+      {
+        "name": "positive-start.mkv.v0.frame287.png",
+        "bytes": 24195,
+        "sha256": "a50fc0369f00d185941befe54e082751c714ab675bffcb5974956920a3939b70"
+      },
+      {
+        "name": "positive-start.mkv.v0.framehash",
+        "bytes": 32473,
+        "sha256": "a3985b1d5fd9a0218b9e3b23833a08cdc098e8744962d35dec6f538378982507"
+      },
+      {
+        "name": "rotation.mp4",
+        "bytes": 347708,
+        "sha256": "5f877209d39a53e581709deed5cd515955719497d4197d4e74c93a6d55223ed2"
+      },
+      {
+        "name": "rotation.mp4.frames.json",
+        "bytes": 194490,
+        "sha256": "e0827553e9bbcc8ac86b60c936bda6bba7e22f8afdc94ebfbe6e09da53df0521"
+      },
+      {
+        "name": "rotation.mp4.probe.json",
+        "bytes": 3024,
+        "sha256": "b41fefc898dca939a57515046f03038a3460a1a87099f56ae2b66f631a6c761d"
+      },
+      {
+        "name": "rotation.mp4.v0.frame000.png",
+        "bytes": 10856,
+        "sha256": "d566d7728d9b413afac81ab0d211a48d66aa0817cc5684dbff4202fbdbf98edc"
+      },
+      {
+        "name": "rotation.mp4.v0.frame144.png",
+        "bytes": 14327,
+        "sha256": "3afa4603d8a03497a730b46124d6b5a7e03f9328d8bef1da6bf7fe5d68fdfab0"
+      },
+      {
+        "name": "rotation.mp4.v0.frame287.png",
+        "bytes": 12672,
+        "sha256": "005551418ae810553f8942d79bf30a331acff3455bcfc3bc88b38e66e87b3539"
+      },
+      {
+        "name": "rotation.mp4.v0.framehash",
+        "bytes": 32473,
+        "sha256": "6a16ad258d8c097b2c0cb554698a853fa3ada7ca97bb6707bbe6d0968a4bd7d0"
+      },
+      {
+        "name": "sar.mp4",
+        "bytes": 358900,
+        "sha256": "4f925ee5155fcf63ba795240986cb17dad2b8c9eb9fc173a28004aa7e2328af3"
+      },
+      {
+        "name": "sar.mp4.frames.json",
+        "bytes": 89704,
+        "sha256": "5a2ccf86ca073e2498f66813a0055402c76abad06d12bf35f36d9d7ea3db0202"
+      },
+      {
+        "name": "sar.mp4.probe.json",
+        "bytes": 2658,
+        "sha256": "e40482fc30f7eb0c1536c8623dea25f6b476487b4c258629c0223ce709298419"
+      },
+      {
+        "name": "sar.mp4.v0.frame000.png",
+        "bytes": 13488,
+        "sha256": "6628843348348a92badd474804ec152d00dbe269848119d54701362d0785d2b8"
+      },
+      {
+        "name": "sar.mp4.v0.frame144.png",
+        "bytes": 15352,
+        "sha256": "9db52a10f9359917566a7447ef8912d78b7a38d76621b1920e91db3230e036b1"
+      },
+      {
+        "name": "sar.mp4.v0.frame287.png",
+        "bytes": 16306,
+        "sha256": "98db0cd1ab1d72b15633a9ab2dfe419cd4a90de9e249246587f2343dd3e92569"
+      },
+      {
+        "name": "sar.mp4.v0.framehash",
+        "bytes": 32473,
+        "sha256": "932840dac778938d41abd2c6d15cb72ca157cff8e27ce58f62158cd00250970f"
+      },
+      {
+        "name": "standard.mkv",
+        "bytes": 586906,
+        "sha256": "0c7989cce8e59a17dc30f83ea2af0252ad32e9079a17e0880bbc1b6236c3e65d"
+      },
+      {
+        "name": "standard.mkv.frames.json",
+        "bytes": 89032,
+        "sha256": "76731e69c197fe97b19457f797c518bfb74187ef6fbc29607ad843f77e60e725"
+      },
+      {
+        "name": "standard.mkv.probe.json",
+        "bytes": 4068,
+        "sha256": "b471de54cabb6111fea2ce351ed4e2808eb1eefeedb310aafe90754736a2e225"
+      },
+      {
+        "name": "standard.mkv.v0.frame000.png",
+        "bytes": 19306,
+        "sha256": "2e43bef439a91b7bcf6dfda72a2ef2cae0f35dade2928d2dd3603913e37c6a0f"
+      },
+      {
+        "name": "standard.mkv.v0.frame144.png",
+        "bytes": 21532,
+        "sha256": "b3bb2683cb5e01a705f32f81f3cbfac015bd38c8e6c5245bbde99bedbcd9915b"
+      },
+      {
+        "name": "standard.mkv.v0.frame287.png",
+        "bytes": 24192,
+        "sha256": "96b3a041dfaf34f0e40b1532eee91edfb7fef12bed96f9bc7fa66b3f76818ac7"
+      },
+      {
+        "name": "standard.mkv.v0.framehash",
+        "bytes": 32473,
+        "sha256": "a0565c79d88461230eabcca2845d83c55953c653c6ed1bad021b57a9fb597bb0"
+      },
+      {
+        "name": "standard.mp4",
+        "bytes": 589343,
+        "sha256": "8bc46b663c6b42269c9f81ea46b50f18833d40f8014a26850ab51c1c534098dc"
+      },
+      {
+        "name": "standard.mp4.frames.json",
+        "bytes": 89704,
+        "sha256": "5a2ccf86ca073e2498f66813a0055402c76abad06d12bf35f36d9d7ea3db0202"
+      },
+      {
+        "name": "standard.mp4.probe.json",
+        "bytes": 4368,
+        "sha256": "6f23c8551c89f6433f380f46a1750fe1ae0e146593743003403bf0dc1858433a"
+      },
+      {
+        "name": "standard.mp4.v0.frame000.png",
+        "bytes": 19306,
+        "sha256": "2e43bef439a91b7bcf6dfda72a2ef2cae0f35dade2928d2dd3603913e37c6a0f"
+      },
+      {
+        "name": "standard.mp4.v0.frame144.png",
+        "bytes": 21532,
+        "sha256": "b3bb2683cb5e01a705f32f81f3cbfac015bd38c8e6c5245bbde99bedbcd9915b"
+      },
+      {
+        "name": "standard.mp4.v0.frame287.png",
+        "bytes": 24192,
+        "sha256": "96b3a041dfaf34f0e40b1532eee91edfb7fef12bed96f9bc7fa66b3f76818ac7"
+      },
+      {
+        "name": "standard.mp4.v0.framehash",
+        "bytes": 32473,
+        "sha256": "a0565c79d88461230eabcca2845d83c55953c653c6ed1bad021b57a9fb597bb0"
+      },
+      {
+        "name": "tool-stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "two-tracks.mkv",
+        "bytes": 14948,
+        "sha256": "140fb2321b56579b5840be66c9d0c3a2e61079db740300a124b32d98ad245336"
+      },
+      {
+        "name": "two-tracks.mkv.frames.json",
+        "bytes": 178039,
+        "sha256": "80bff7a78776a7b640b9af1a20a39a778d398cae4a8f311e26ce4168444be0ad"
+      },
+      {
+        "name": "two-tracks.mkv.probe.json",
+        "bytes": 4261,
+        "sha256": "06327351e044c4ab8c25de5ca78581f9fab8123b7a5ab4d62ddd410fdc9f4853"
+      },
+      {
+        "name": "two-tracks.mkv.v0.frame000.png",
+        "bytes": 626,
+        "sha256": "fc06a8bc31d48724f2184c7c2dde67de4b06d8dbaa6be9b62d358a5f88ead75c"
+      },
+      {
+        "name": "two-tracks.mkv.v0.frame144.png",
+        "bytes": 626,
+        "sha256": "fc06a8bc31d48724f2184c7c2dde67de4b06d8dbaa6be9b62d358a5f88ead75c"
+      },
+      {
+        "name": "two-tracks.mkv.v0.frame287.png",
+        "bytes": 626,
+        "sha256": "fc06a8bc31d48724f2184c7c2dde67de4b06d8dbaa6be9b62d358a5f88ead75c"
+      },
+      {
+        "name": "two-tracks.mkv.v0.framehash",
+        "bytes": 32473,
+        "sha256": "69c5c30d426a9d3d07ae10e0f8a71c8543a9ef46c5709cc97baca4264c4881e3"
+      },
+      {
+        "name": "two-tracks.mkv.v1.frame000.png",
+        "bytes": 627,
+        "sha256": "bc7e001bbbb7bf106d3d7c968c6828b75e9ccd285845ac26b822df6396942548"
+      },
+      {
+        "name": "two-tracks.mkv.v1.frame144.png",
+        "bytes": 627,
+        "sha256": "bc7e001bbbb7bf106d3d7c968c6828b75e9ccd285845ac26b822df6396942548"
+      },
+      {
+        "name": "two-tracks.mkv.v1.frame287.png",
+        "bytes": 627,
+        "sha256": "bc7e001bbbb7bf106d3d7c968c6828b75e9ccd285845ac26b822df6396942548"
+      },
+      {
+        "name": "two-tracks.mkv.v1.framehash",
+        "bytes": 32473,
+        "sha256": "c1b0bf2160bde2d34b067b133e9e52a64d9b34508cec57d169e868cfb767046e"
+      },
+      {
+        "name": "vfr.mkv",
+        "bytes": 221328,
+        "sha256": "4d0432ad3c54271721f8b0ecbe88c203e308231877b6f21a4205819f01d268e2"
+      },
+      {
+        "name": "vfr.mkv.frames.json",
+        "bytes": 37186,
+        "sha256": "fe0356e675578ebd9f77b65951b7ae51cc788b0ed62b5d0d48f307588a24e0c3"
+      },
+      {
+        "name": "vfr.mkv.probe.json",
+        "bytes": 2319,
+        "sha256": "985cb113882f4db6ef3ec45903d46e74323082c384ddab9ace8b6156063f69b0"
+      },
+      {
+        "name": "vfr.mkv.v0.frame000.png",
+        "bytes": 18564,
+        "sha256": "f0382848e4a1d11c743894ebefa6a2ff7a2f794803639bc900280ee823b6d03b"
+      },
+      {
+        "name": "vfr.mkv.v0.frame060.png",
+        "bytes": 25082,
+        "sha256": "d5ac0bb2c18fdd513090ed8adb536ac0a9324322bc940b8b1fcaf20cc668b387"
+      },
+      {
+        "name": "vfr.mkv.v0.frame119.png",
+        "bytes": 22683,
+        "sha256": "9ad43df560c3b65f6043f0adf56a4ae41175125de8a3fbaa811fed13af640386"
+      },
+      {
+        "name": "vfr.mkv.v0.framehash",
+        "bytes": 13657,
+        "sha256": "440873a4d3b93c3375673791afdddb7bac406827e36b360879c9c82c2598890c"
+      }
+    ],
+    "bounds": {
+      "max_output_bytes": 314572800,
+      "min_free_reserve_bytes": 1073741824,
+      "max_command_seconds": 120
+    },
+    "oracle": "FFprobe demux/decode PTS and FFmpeg coded RGBA SHA256; independent of VLC. FFmpeg shares the generation toolchain: this is not an independent FFmpeg correctness proof. Display PNGs apply autorotation and SAR; scaler/color differences prohibit exact cross-decoder hash acceptance."
+  },
+  "validation": {
+    "standard_remux_coded_pixels_equal": true,
+    "positive-start.mkv_coded_pixels_equal_long_gop": true,
+    "edit-offset.mp4_coded_pixels_equal_long_gop": true,
+    "rotation.mp4_coded_pixels_equal_long_gop": true,
+    "red_blue_pixels_distinct": true,
+    "long_gop_unique_frames": true,
+    "existing_directory_refused_without_modification": true,
+    "manifest_and_all_artifact_hashes_verified": true,
+    "dangling_output_symlink_refused_without_creating_target": true,
+    "simulated_low_disk_space_refused_before_output_creation": true,
+    "python_source_parses": true
+  },
+  "visually_inspected": {
+    "rotation.mp4.v0.frame144.png": {
+      "dimensions": [
+        101,
+        180
+      ],
+      "sha256": "3afa4603d8a03497a730b46124d6b5a7e03f9328d8bef1da6bf7fe5d68fdfab0"
+    },
+    "sar.mp4.v0.frame144.png": {
+      "dimensions": [
+        320,
+        90
+      ],
+      "sha256": "9db52a10f9359917566a7447ef8912d78b7a38d76621b1920e91db3230e036b1"
+    },
+    "two-tracks.mkv.v0.frame144.png": {
+      "dimensions": [
+        320,
+        180
+      ],
+      "sha256": "fc06a8bc31d48724f2184c7c2dde67de4b06d8dbaa6be9b62d358a5f88ead75c"
+    },
+    "two-tracks.mkv.v1.frame144.png": {
+      "dimensions": [
+        320,
+        180
+      ],
+      "sha256": "bc7e001bbbb7bf106d3d7c968c6828b75e9ccd285845ac26b822df6396942548"
+    },
+    "long-gop.mp4.v0.frame144.png": {
+      "dimensions": [
+        320,
+        180
+      ],
+      "sha256": "a742969805de1daddd162f8744b2d7a9209adfe99b4d63869794e934457b55d3"
+    }
+  },
+  "initial_failed_attempt": {
+    "preserved_output": "work/story005-fixtures-failed-rotation",
+    "failure": "FFmpeg8.0 output rotate metadata tag did not write a display matrix; post-generation validation rejected it",
+    "research": "https://ffmpeg.org/ffmpeg.html#Video-Options",
+    "decision": "Use documented input -display_rotation90 with streamcopy; local ffprobe experiment confirmed90degree side data; fresh full run passed"
+  },
+  "limitations": [
+    "FFmpeg generation and oracle share a toolchain; independent of VLC but not independent FFmpeg correctness proof",
+    "Cross-decoder colorspace/scaler differences mean RGBA hash mismatch alone is not wrong-frame proof",
+    "Only FFmpeg/ffprobe8.0 on current host validated; no VLC preparser/nativeUI/performance result from fixture generation",
+    "300MiB/1GiB checks are polled working bounds, not OS hard quotas; command/file caps also apply",
+    "No font/media assets copied; codec patent/binary redistribution assessment remains separate"
+  ],
+  "preserved_prior_successful_run": "work/story005-fixtures-before-output-check"
+}

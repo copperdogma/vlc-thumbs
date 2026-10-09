@@ -1,0 +1,15 @@
+{
+  "stage": "pristine libavformat probe and independent generated-color oracle only; normal-contrib candidate pending",
+  "source_pin": "2e358f3098c2f2b7621d1dc568de8b61ad786322",
+  "sha256": {
+    "tests/story-005/feature_dependency_probe.c": "c2d8128e24ee35f3b5ed40325f7b46d0ed69ed6417af23ed2dca06b16684723e",
+    "tests/story-005/feature_dependency_fixtures.py": "fe7266629643bf841c6780c903f248f922dcfb769a24e462e6e4f6517555ad49",
+    "tests/story-005/feature_dependency_run.py": "bfe99307ef3e8ea119652a0b18d1c5cc052bd042d46725af13f7abd4eac6db4d",
+    "work/story005-feature-dependency-probes001/probe-baseline": "f177939abae3eb5dcf50404ae5c1926f87b9fec5383923e127d28cbe032d2d33",
+    "work/story005-master-baseline/contrib/aarch64-apple-darwin19/lib/libavformat.a": "f18bb3ced0b6cced9d161b776f96ffc165e5e5ef37d61735f3cf5b5b87415bfa",
+    "work/story005-feature-dependency-fixtures002/manifest.json": "8e708ef91818b433d4f28c9d4c01daa818f1696ad4744fa87e12aa715225024e"
+  },
+  "build": "work/story005-feature-dependency-probes001/baseline-build.json",
+  "results": "work/story005-feature-dependency-baseline002/results.json",
+  "pixels": "work/story005-feature-dependency-baseline002/independent-pixels.json"
+}

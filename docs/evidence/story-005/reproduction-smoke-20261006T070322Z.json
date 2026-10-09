@@ -1,0 +1,18 @@
+{
+  "stage": "smoke",
+  "command": [
+    "/bin/bash",
+    "work/story005-scout/build-gnu-sed-frozen.sh"
+  ],
+  "cwd": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs",
+  "initial_free_bytes": 9586909184,
+  "stage_preflight_gib": 1.5,
+  "floor_bytes": 1073741824,
+  "time_limit_seconds": 600,
+  "status": "succeeded",
+  "pid": 41441,
+  "elapsed_seconds": 70.3,
+  "minimum_free_bytes": 9441128448,
+  "exit_code": 0,
+  "final_free_bytes": 9437343744
+}

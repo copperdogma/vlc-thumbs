@@ -1,0 +1,3 @@
+  CC       src/misc/process.o
+  CCLD     test_src_misc_process
+clang: warning: argument unused during compilation: '-fcx-limited-range' [-Wunused-command-line-argument]

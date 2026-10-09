@@ -1,0 +1,14 @@
+{
+  "utc": "2026-10-06T06:32:26Z",
+  "previous_tree": "8ec1cdec6939c67eeb6bef0ff1bb035c168d0592",
+  "final_tree": "02772c6469196f2de3476c5f57bb7cd0526e904a",
+  "public_manifest_sha256": "c78eb54adcc2d13763e3c835ca6cf35ed1f19754d03b9e8be4f21e1983b16efc",
+  "changed_source_paths": [
+    "modules/gui/macosx/tests/VLCLibraryDataTypesIntegrationTestSupport.m"
+  ],
+  "exact_public_part3_sha256": "e2dc7a62ea46ffc96bb859213a00476c47658de65e7180ec18b4fd93593b8b00",
+  "extracted_delta_sha256": "49f7ef97bffd0a2155232fa456d76ac1289c31b14ca6c1a0dfd11936664c9abc",
+  "matched_source_files": 56,
+  "scope": "Exact public support-only delta; final56filetree verified. No reset/clean/rewrite of unchanged production source; independent final app productionfiles remain unchanged.",
+  "setup_failure": "First extracted chunk lacked final newline; git apply --check rejected before source mutation. Shell sequencing mistakenly started native compile despite rejected precheck; owner terminated own process group at16s before XCTest ran, receipt063137Z retained. Final newline restored, exact fulltree verified; next runner starts only after successful source preflight."
+}

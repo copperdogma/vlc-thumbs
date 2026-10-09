@@ -1,0 +1,24 @@
+[000000016b7d5ba0] main generic error: cannot load plug-in /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/modules/.libs/libmacosx_plugin.dylib: dlopen(/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/modules/.libs/libmacosx_plugin.dylib, 0x0001): Library not loaded: @rpath/Sparkle.framework/Versions/B/Sparkle
+  Referenced from: <C0402D52-B997-3C8F-860D-889BF5A5935F> /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/modules/.libs/libmacosx_plugin.dylib
+  Reason: tried: '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/lib/.libs/Sparkle.framework/Versions/B/Sparkle' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/lib/.libs/Sparkle.framework/Versions/B/Sparkle' (no such file), '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/src/.libs/Sparkle.framework/Versions/B/Sparkle' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/src/.libs/Sparkle.framework/Versions/B/Sparkle' (no such file)
+Run with internal preparser...
+[00000001051fa7c0] avcodec encoder error: Unknown option "border_mask"
+[00000001051fa7c0] avcodec encoder error: Unknown option "noise_reduction"
+TRACK_FILE_RESULT external=0 index=0 id=NULL status=0 success=1 bytes=3072
+[00000001051fa7c0] avcodec encoder error: Unknown option "border_mask"
+[00000001051fa7c0] avcodec encoder error: Unknown option "noise_reduction"
+TRACK_FILE_RESULT external=0 index=1 id=video/0 status=0 success=1 bytes=3072
+[00000001051fa7c0] avcodec encoder error: Unknown option "border_mask"
+[00000001051fa7c0] avcodec encoder error: Unknown option "noise_reduction"
+TRACK_FILE_RESULT external=0 index=2 id=video/1 status=0 success=1 bytes=15360
+TRACK_FILE_RESULT external=0 index=3 id=video/999 status=-2147483648 success=0 bytes=0
+thumbnail_to_files: using format: png
+Run alpha crop test with internal preparser...
+[00000001051fa7c0] avcodec encoder error: Unknown option "border_mask"
+[00000001051fa7c0] avcodec encoder error: Unknown option "noise_reduction"
+Run alpha align test with internal preparser...
+[0000007c96e7c000] avcodec encoder error: Unknown option "border_mask"
+[0000007c96e7c000] avcodec encoder error: Unknown option "noise_reduction"
+Run with external preparser...
+TRACK_FILE_RESULT external=1 index=0 id=NULL status=-2147483648 success=0 bytes=0
+Assertion failed: (ctx.success == (sizes[i] != 0)), function test_file_video_track, file tofiles-diagnostic.c, line 562.

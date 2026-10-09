@@ -1,0 +1,67 @@
+diff --git a/bin/Makefile.am b/bin/Makefile.am
+index c1540ce69e1d667021eb8d3927f3d5d878d81b26..d2e04f1d8c8499b27a39d7e0eafc3600552cf0da 100644
+--- a/bin/Makefile.am
++++ b/bin/Makefile.am
+@@ -148,8 +148,17 @@ MOSTLYCLEANFILES = $(noinst_DATA)
+ 
+ if HAVE_OSX
+ if BUILD_VLC
+-install-data-local:
+-	cd "$(DESTDIR)$(bindir)"; mv vlc-osx vlc
++install-exec-hook:
++	@installed_osx=`echo 'vlc-osx' | sed -e '$(transform)' -e 's/$$/$(EXEEXT)/'`; \
++	installed_vlc=`echo 'vlc' | sed -e '$(transform)' -e 's/$$/$(EXEEXT)/'`; \
++	cd "$(DESTDIR)$(bindir)" && \
++	if test "$$installed_osx" != "$$installed_vlc"; then \
++		mv -f "$$installed_osx" "$$installed_vlc"; \
++	fi
++
++uninstall-hook:
++	@installed_vlc=`echo 'vlc' | sed -e '$(transform)' -e 's/$$/$(EXEEXT)/'`; \
++	rm -f "$(DESTDIR)$(bindir)/$$installed_vlc"
+ 
+ endif
+ endif
+diff --git a/modules/codec/Makefile.am b/modules/codec/Makefile.am
+index eb68cda9eb6ca5f058b36d554bb16fa3c929ab34..2733bfb80182dda120996522f80747cf7aa4cdbc 100644
+--- a/modules/codec/Makefile.am
++++ b/modules/codec/Makefile.am
+@@ -689,3 +689,4 @@ noinst_PLUGINS += libhxxxhelper_testdec_plugin.la
+ libvlc_vtutils_la_SOURCES = codec/vt_utils.c codec/vt_utils.h codec/vt_utils_native.m
+ libvlc_vtutils_la_LDFLAGS = -static -no-undefined
+ EXTRA_LTLIBRARIES += libvlc_vtutils.la
++CLEANFILES += libvlc_vtutils.la
+diff --git a/modules/gui/macosx/Makefile.am b/modules/gui/macosx/Makefile.am
+index dcd8e0250b85b72e508a5e47b608df0388097b1b..865913a7dee20bf1190d84d91bf16bcd2ccb18a1 100644
+--- a/modules/gui/macosx/Makefile.am
++++ b/modules/gui/macosx/Makefile.am
+@@ -564,6 +564,7 @@
+ 	gui/macosx/windows/video/VLCFullVideoViewWindow.m \
+ 	gui/macosx/windows/video/VLCMainVideoViewAudioMediaDecorativeView.h \
+ 	gui/macosx/windows/video/VLCMainVideoViewAudioMediaDecorativeView.m \
++	gui/macosx/private/PIPSPI.h \
+ 	gui/macosx/windows/video/VLCMainVideoViewController.h \
+ 	gui/macosx/windows/video/VLCMainVideoViewController.m \
+ 	gui/macosx/windows/video/VLCMainVideoViewOverlayView.h \
+diff --git a/modules/gui/macosx/Makefile.am b/modules/gui/macosx/Makefile.am
+index 865913a7dee20bf1190d84d91bf16bcd2ccb18a1..5e537d3e212e9fed4e401298dc4f53fd2082905d 100644
+--- a/modules/gui/macosx/Makefile.am
++++ b/modules/gui/macosx/Makefile.am
+@@ -634,9 +634,16 @@
+ 
+ libmacosx_plugin_la_SOURCES += $(libmacosx_plugin_la_XIB_SOURCES)
+ 
++libmacosx_plugin_la_NIBS = $(libmacosx_plugin_la_XIB_SOURCES:.xib=.nib)
++
+ if ENABLE_MACOSX_UI
+ gui_PLUGINS += libmacosx_plugin.la
+-BUILT_SOURCES += $(libmacosx_plugin_la_XIB_SOURCES:.xib=.nib)
++all-local: $(libmacosx_plugin_la_NIBS)
++
++clean-local: clean-macosx-nibs
++.PHONY: clean-macosx-nibs
++clean-macosx-nibs:
++	$(RM) -r -- $(libmacosx_plugin_la_NIBS)
+ endif
+ 
+ libmacosx_plugin_la_RES = \

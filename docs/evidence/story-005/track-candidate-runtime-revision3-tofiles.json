@@ -1,0 +1,271 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-06T03:05:29.750280+00:00",
+  "selected_track_patch_revision": 3,
+  "selected_track_patch_sha256": "47ffdf635a3db8becf75cb9629f7ecefe4d185421de15546a2a0a50782c35a9b",
+  "candidate_contains": [
+    "0001",
+    "0002 revision3",
+    "0003"
+  ],
+  "compile": {
+    "argv": [
+      "clang",
+      "-DHAVE_CONFIG_H",
+      "-std=gnu11",
+      "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate",
+      "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-candidate/include",
+      "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-candidate",
+      "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/include",
+      "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-candidate/src",
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-track-runtime/selected-track-tofiles-probe.c",
+      "-L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/lib/.libs",
+      "-L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/src/.libs",
+      "-lvlc",
+      "-lvlccore",
+      "-Wl,-rpath,/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/lib/.libs",
+      "-Wl,-rpath,/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/src/.libs",
+      "-o",
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-track-runtime/selected-track-tofiles-probe"
+    ],
+    "exit_code": 0,
+    "output": ""
+  },
+  "source_probe": "work/story005-track-runtime/selected-track-tofiles-probe.c",
+  "rows": [
+    {
+      "mode": "internal",
+      "case": "default",
+      "track_id": null,
+      "argv": [
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-track-runtime/selected-track-tofiles-probe",
+        "internal",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-fixtures/two-tracks.mkv",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-track-runtime/internal-default-file.rgba"
+      ],
+      "exit_code": 0,
+      "result": {
+        "mode": "internal",
+        "status": 0,
+        "success": true,
+        "bytes": 230400,
+        "callbacks": 1,
+        "original_options_unchanged": true
+      },
+      "rgba": {
+        "bytes": 230400,
+        "sha256": "9a45fb8f66f97870ba7af45ddd5d50c5991b30efb1af1882cab4e6ac8d487fc3",
+        "mean_channels": [
+          254.0,
+          0.0,
+          0.0,
+          255.0
+        ]
+      }
+    },
+    {
+      "mode": "internal",
+      "case": "red",
+      "track_id": "video/1",
+      "argv": [
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-track-runtime/selected-track-tofiles-probe",
+        "internal",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-fixtures/two-tracks.mkv",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-track-runtime/internal-red-file.rgba",
+        "video/1"
+      ],
+      "exit_code": 0,
+      "result": {
+        "mode": "internal",
+        "status": 0,
+        "success": true,
+        "bytes": 230400,
+        "callbacks": 1,
+        "original_options_unchanged": true
+      },
+      "rgba": {
+        "bytes": 230400,
+        "sha256": "9a45fb8f66f97870ba7af45ddd5d50c5991b30efb1af1882cab4e6ac8d487fc3",
+        "mean_channels": [
+          254.0,
+          0.0,
+          0.0,
+          255.0
+        ]
+      }
+    },
+    {
+      "mode": "internal",
+      "case": "blue",
+      "track_id": "video/2",
+      "argv": [
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-track-runtime/selected-track-tofiles-probe",
+        "internal",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-fixtures/two-tracks.mkv",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-track-runtime/internal-blue-file.rgba",
+        "video/2"
+      ],
+      "exit_code": 0,
+      "result": {
+        "mode": "internal",
+        "status": 0,
+        "success": true,
+        "bytes": 230400,
+        "callbacks": 1,
+        "original_options_unchanged": true
+      },
+      "rgba": {
+        "bytes": 230400,
+        "sha256": "982a25337e2df2268c6e4d43c797fdaa053a206e09f7915dc3556a05086a20d1",
+        "mean_channels": [
+          0.0,
+          0.0,
+          255.0,
+          255.0
+        ]
+      }
+    },
+    {
+      "mode": "internal",
+      "case": "invalid",
+      "track_id": "video/999",
+      "argv": [
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-track-runtime/selected-track-tofiles-probe",
+        "internal",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-fixtures/two-tracks.mkv",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-track-runtime/internal-invalid-file.rgba",
+        "video/999"
+      ],
+      "exit_code": 6,
+      "result": {
+        "mode": "internal",
+        "status": -2147483648,
+        "success": false,
+        "bytes": -1,
+        "callbacks": 1,
+        "original_options_unchanged": true
+      }
+    },
+    {
+      "mode": "external",
+      "case": "default",
+      "track_id": null,
+      "argv": [
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-track-runtime/selected-track-tofiles-probe",
+        "external",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-fixtures/two-tracks.mkv",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-track-runtime/external-default-file.rgba"
+      ],
+      "exit_code": 0,
+      "result": {
+        "mode": "external",
+        "status": 0,
+        "success": true,
+        "bytes": 230400,
+        "callbacks": 1,
+        "original_options_unchanged": true
+      },
+      "rgba": {
+        "bytes": 230400,
+        "sha256": "9a45fb8f66f97870ba7af45ddd5d50c5991b30efb1af1882cab4e6ac8d487fc3",
+        "mean_channels": [
+          254.0,
+          0.0,
+          0.0,
+          255.0
+        ]
+      }
+    },
+    {
+      "mode": "external",
+      "case": "red",
+      "track_id": "video/1",
+      "argv": [
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-track-runtime/selected-track-tofiles-probe",
+        "external",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-fixtures/two-tracks.mkv",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-track-runtime/external-red-file.rgba",
+        "video/1"
+      ],
+      "exit_code": 0,
+      "result": {
+        "mode": "external",
+        "status": 0,
+        "success": true,
+        "bytes": 230400,
+        "callbacks": 1,
+        "original_options_unchanged": true
+      },
+      "rgba": {
+        "bytes": 230400,
+        "sha256": "9a45fb8f66f97870ba7af45ddd5d50c5991b30efb1af1882cab4e6ac8d487fc3",
+        "mean_channels": [
+          254.0,
+          0.0,
+          0.0,
+          255.0
+        ]
+      }
+    },
+    {
+      "mode": "external",
+      "case": "blue",
+      "track_id": "video/2",
+      "argv": [
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-track-runtime/selected-track-tofiles-probe",
+        "external",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-fixtures/two-tracks.mkv",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-track-runtime/external-blue-file.rgba",
+        "video/2"
+      ],
+      "exit_code": 0,
+      "result": {
+        "mode": "external",
+        "status": 0,
+        "success": true,
+        "bytes": 230400,
+        "callbacks": 1,
+        "original_options_unchanged": true
+      },
+      "rgba": {
+        "bytes": 230400,
+        "sha256": "982a25337e2df2268c6e4d43c797fdaa053a206e09f7915dc3556a05086a20d1",
+        "mean_channels": [
+          0.0,
+          0.0,
+          255.0,
+          255.0
+        ]
+      }
+    },
+    {
+      "mode": "external",
+      "case": "invalid",
+      "track_id": "video/999",
+      "argv": [
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-track-runtime/selected-track-tofiles-probe",
+        "external",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-fixtures/two-tracks.mkv",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-track-runtime/external-invalid-file.rgba",
+        "video/999"
+      ],
+      "exit_code": 6,
+      "result": {
+        "mode": "external",
+        "status": -2147483648,
+        "success": false,
+        "bytes": -1,
+        "callbacks": 1,
+        "original_options_unchanged": true
+      }
+    }
+  ],
+  "binary_hashes": {
+    "work/story005-track-runtime/selected-track-tofiles-probe": "ce6edd80cd12d50de1886c50275df40941c22acbabd8f08125dac39af6870c5c",
+    "work/story005-master-candidate/src/.libs/libvlccore.dylib": "a2a3337c9d82e692943f5b31efc7c11bf0e525d0861d51e2560e5cfc8748fde0",
+    "work/story005-master-candidate/lib/.libs/libvlc.dylib": "dcb914c996ea99e28a07489f0860cf07cbccc45c3d64525e804cfe5ee6ca2ba9",
+    "work/story005-master-candidate/bin/.libs/vlc-preparser": "470d42beffb618989c170199e6b7899f633744e56e35cd93e8ff0ea9fd3899d1",
+    "work/story005-master-candidate/modules/.libs/libpreparserserializer_json_plugin.dylib": "2dcc66c3779725d82625eeefce05f4646f8ddbe7efb4a548ca856b6116560a1e"
+  },
+  "limits": "Eight to-files requests exactly once each. This is selected-track/file parity and ownership proof, not source-time fidelity, hover/NAS/performance or exhaustive format proof."
+}

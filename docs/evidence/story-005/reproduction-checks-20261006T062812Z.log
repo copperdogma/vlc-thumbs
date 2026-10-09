@@ -1,0 +1,219 @@
+Setting base environment
+Using VLC root dir /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-reproduction, build triplet aarch64-apple-darwin19 and host triplet aarch64-apple-darwin19
+  GEN      check-timeline-preview
+{
+  "checks": [
+    {
+      "case": "invalid-arguments-0",
+      "returncode": 1,
+      "elapsed_seconds": 0.4358788329991512,
+      "replies": [
+        {
+          "version": 4,
+          "ok": false,
+          "error": "invalid_arguments",
+          "payload_bytes": 0,
+          "pixel_sha256": null
+        }
+      ]
+    },
+    {
+      "case": "invalid-arguments-1",
+      "returncode": 1,
+      "elapsed_seconds": 0.033855583002150524,
+      "replies": [
+        {
+          "version": 4,
+          "ok": false,
+          "error": "invalid_arguments",
+          "payload_bytes": 0,
+          "id": 0,
+          "pixel_sha256": null
+        }
+      ]
+    },
+    {
+      "case": "invalid-arguments-2",
+      "returncode": 1,
+      "elapsed_seconds": 0.03391787500004284,
+      "replies": [
+        {
+          "version": 4,
+          "ok": false,
+          "error": "invalid_arguments",
+          "payload_bytes": 0,
+          "id": 0,
+          "pixel_sha256": null
+        }
+      ]
+    },
+    {
+      "case": "invalid-arguments-3",
+      "returncode": 1,
+      "elapsed_seconds": 0.033730082999682054,
+      "replies": [
+        {
+          "version": 4,
+          "ok": false,
+          "error": "invalid_arguments",
+          "payload_bytes": 0,
+          "id": 0,
+          "pixel_sha256": null
+        }
+      ]
+    },
+    {
+      "case": "invalid-arguments-4",
+      "returncode": 1,
+      "elapsed_seconds": 0.03451074999611592,
+      "replies": [
+        {
+          "version": 4,
+          "ok": false,
+          "error": "invalid_arguments",
+          "payload_bytes": 0,
+          "id": 0,
+          "pixel_sha256": null
+        }
+      ]
+    },
+    {
+      "case": "invalid-arguments-5",
+      "returncode": 1,
+      "elapsed_seconds": 0.03518895900197094,
+      "replies": [
+        {
+          "version": 4,
+          "ok": false,
+          "error": "invalid_arguments",
+          "payload_bytes": 0,
+          "id": 0,
+          "pixel_sha256": null
+        }
+      ]
+    },
+    {
+      "case": "invalid-arguments-6",
+      "returncode": 1,
+      "elapsed_seconds": 0.034247417002916336,
+      "replies": [
+        {
+          "version": 4,
+          "ok": false,
+          "error": "invalid_arguments",
+          "payload_bytes": 0,
+          "id": 0,
+          "pixel_sha256": null
+        }
+      ]
+    },
+    {
+      "case": "invalid-arguments-7",
+      "returncode": 1,
+      "elapsed_seconds": 0.0345302910063765,
+      "replies": [
+        {
+          "version": 4,
+          "ok": false,
+          "error": "invalid_arguments",
+          "payload_bytes": 0,
+          "id": 0,
+          "pixel_sha256": null
+        }
+      ]
+    },
+    {
+      "case": "fingerprint-stat",
+      "returncode": 0,
+      "elapsed_seconds": 0.04714912499912316,
+      "replies": [
+        {
+          "version": 4,
+          "type": "identity",
+          "ok": true,
+          "fingerprint": "5d646bd176f87eead44ce32e72bc8fd4451a54afb97a04f57b963cbe2bc391c1",
+          "policy": "stat",
+          "stat_identity": "16777234:883865738:2097152:1791268093:45040803:1791268093:45040803",
+          "bytes_read": 0,
+          "read_calls": 0,
+          "payload_bytes": 0,
+          "pixel_sha256": null
+        }
+      ]
+    },
+    {
+      "case": "fingerprint-full",
+      "returncode": 0,
+      "elapsed_seconds": 0.04638195799634559,
+      "replies": [
+        {
+          "version": 4,
+          "type": "identity",
+          "ok": true,
+          "fingerprint": "91d3beb88a9b2f778a6c44a1c53b63d3c79931845a9aef84b3fb414610bd1938",
+          "policy": "full",
+          "stat_identity": "16777234:883865738:2097152:1791268093:45040803:1791268093:45040803",
+          "bytes_read": 2097152,
+          "read_calls": 32,
+          "payload_bytes": 0,
+          "pixel_sha256": null
+        }
+      ]
+    },
+    {
+      "case": "fingerprint-sampled",
+      "returncode": 0,
+      "elapsed_seconds": 0.04637412499869242,
+      "replies": [
+        {
+          "version": 4,
+          "type": "identity",
+          "ok": true,
+          "fingerprint": "d84795deac8983a8962ba49612074fea6c4ea99bd39d5d771ea2f08dd9b0349e",
+          "policy": "sampled",
+          "stat_identity": "16777234:883865738:2097152:1791268093:45040803:1791268093:45040803",
+          "bytes_read": 1048576,
+          "read_calls": 16,
+          "payload_bytes": 0,
+          "pixel_sha256": null
+        }
+      ]
+    },
+    {
+      "case": "fingerprint-small",
+      "returncode": 0,
+      "elapsed_seconds": 0.04443162499956088,
+      "replies": [
+        {
+          "version": 4,
+          "type": "identity",
+          "ok": true,
+          "fingerprint": "c8f5d0341d54d951a71b136e6e2afcb14d11ed8489a7ae126a8fee0df6ecf193",
+          "policy": "sampled",
+          "stat_identity": "16777234:883865738:4096:1791268093:884657687:1791268093:884657687",
+          "bytes_read": 4096,
+          "read_calls": 1,
+          "payload_bytes": 0,
+          "pixel_sha256": null
+        }
+      ]
+    },
+    {
+      "case": "missing-source",
+      "returncode": 1,
+      "elapsed_seconds": 0.04722866700467421,
+      "replies": [
+        {
+          "version": 4,
+          "type": "identity",
+          "ok": false,
+          "error": "invalid_input",
+          "payload_bytes": 0,
+          "pixel_sha256": null
+        }
+      ]
+    }
+  ],
+  "count": 13,
+  "pass": true
+}

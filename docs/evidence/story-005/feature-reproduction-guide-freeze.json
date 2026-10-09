@@ -1,0 +1,8 @@
+{
+  "path": "bin/timeline-preview/README.md",
+  "sha256": "b5abf97195fa9d4331a438d08f1c22d1b251d59c352e1b0fbe10dc251ff6c8bc",
+  "change_scope": "Root-selected clean prebuilt remaining-contrib plus normal patched FFmpeg source route; full explicit shell transcript, optionalall-contrib unqualified",
+  "shell_syntax": "bash -n passed all shell blocks",
+  "execution": "Pending independent checkout/final public series freeze",
+  "safety_monitor": "work/story005-scout/reproduction-guard.py instruments explicit commands only; no feature implementation dependency"
+}

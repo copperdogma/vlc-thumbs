@@ -1,0 +1,8 @@
+{
+  "archive": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/distcheck-git-boundary-vlc-4.0.0-dev.tar.xz",
+  "sha256": "e3b7b607f96129224b496f032cedc8f1e35bc6b0365a644626467ba041b2c0a4",
+  "bytes": 30147020,
+  "status": "distribution/archive/configure/core compile passed; mandatory Apple audio compile failed missing upstream channel_layout.h",
+  "failed_guard_receipt": "reproduction-distcheck-20261006T070917Z.json",
+  "preservation": "APFS clone, SHA256 equality verified"
+}

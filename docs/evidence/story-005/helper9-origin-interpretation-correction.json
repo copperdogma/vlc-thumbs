@@ -1,0 +1,19 @@
+{
+  "correction": "Withdraw unsupported origin2/sourcePTS4 collapse claim; exact existing helper9 observations show origin0/actual2/sourcePTS2. No raw receipt changed or new acquisition run.",
+  "superseded_sha256": "cd18efda89ec1d134fb8a3ee1ae9ecbaf44852e3d4bf34a9c5e7c560ea323656",
+  "corrected_sha256": "797e38c96e3b3056ea09be6e0f02a29ab3148cec2b9a15796186713f79c39c8d",
+  "exact_paths": [
+    "work/story005-helper9-proof/unpatched-cases002/results.json",
+    "work/story005-helper9-proof/private-cases/results.json",
+    "work/story005-helper9-proof/unpatched-oracle/comparisons.json"
+  ],
+  "locator": "edit-offset.mp4 case, image replies id1, id2, id3; comparisons case edit-offset.mp4 id1-3",
+  "observed": {
+    "timeline_origin_us": 0,
+    "actual_us": 2000000,
+    "duration_us": 14000000,
+    "reference_pts_us": 2000000,
+    "reference_frame_index": 0,
+    "rgb_mae": 0.4697280092592593
+  }
+}

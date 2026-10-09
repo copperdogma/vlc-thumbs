@@ -1,0 +1,77 @@
+diff --git a/modules/gui/macosx/playqueue/VLCPlayerController.m b/modules/gui/macosx/playqueue/VLCPlayerController.m
+index eda72a3b14a1480d71e79a0633714ae627cb6c22..ed7fc3e6d299a6d57e701fb7a0bd99c382cf9ecf 100644
+--- a/modules/gui/macosx/playqueue/VLCPlayerController.m
++++ b/modules/gui/macosx/playqueue/VLCPlayerController.m
+@@ -108,6 +108,7 @@ const CGFloat VLCVolumeDefault = 1.;
+     BOOL _appleMusicPlaybackWasPaused;
+     BOOL _spotifyPlaybackWasPaused;
+ 
++    BOOL _isTerminating; /* Main-thread terminal state; queued callbacks may outlive listeners. */
+     NSTimer *_playbackHasTruelyEndedTimer;
+     VLCInputItem *_currentMedia;
+ 
+@@ -728,6 +729,10 @@ static int BossCallback(vlc_object_t *p_this,
+ 
+ - (void)applicationWillTerminate:(NSNotification *)aNotification
+ {
++    if (_isTerminating)
++        return;
++    _isTerminating = YES;
++
+     libvlc_int_t *libvlc = vlc_object_instance(getIntf());
+     var_DelCallback(libvlc, "intf-boss", BossCallback, (__bridge void *)self);
+ 
+@@ -1010,6 +1015,9 @@ static int BossCallback(vlc_object_t *p_this,
+ 
+ - (void)stateChanged:(enum vlc_player_state)state
+ {
++    if (_isTerminating)
++        return;
++
+     /* instead of using vlc_player_GetState, we cache the state and provide it through a synthesized getter
+      * as the direct call might not reflect the actual state due the asynchronous API nature */
+     _playerState = state;
+@@ -1052,10 +1060,12 @@ static int BossCallback(vlc_object_t *p_this,
+ // Called when playback has truly ended and likely no subsequent media will start playing
+ - (void)onPlaybackHasTruelyEnded:(id)sender
+ {
++    [_playbackHasTruelyEndedTimer invalidate];
++    _playbackHasTruelyEndedTimer = nil;
++
+     msg_Dbg(getIntf(), "Playback has been ended");
+ 
+     [self resumeOtherAudioPlaybackApps];
+-    _playbackHasTruelyEndedTimer = nil;
+     _currentMedia = nil;
+ }
+ 
+diff --git a/modules/gui/macosx/timeline/VLCTimelinePlayerContextTest.m b/modules/gui/macosx/timeline/VLCTimelinePlayerContextTest.m
+index a70a29edeb20360c964545b351e431dff8148165..9625387de311fdaf0e78398df30a38a0f373cbbf 100644
+--- a/modules/gui/macosx/timeline/VLCTimelinePlayerContextTest.m
++++ b/modules/gui/macosx/timeline/VLCTimelinePlayerContextTest.m
+@@ -33,6 +33,7 @@ NSString *VLCConfigurationChangedNotification = @"VLCConfigurationChangedNotific
+ 
+ @interface VLCPlayerController (TimelinePlayerContextTesting)
+ - (void)applicationWillTerminate:(NSNotification *)notification;
++- (void)stateChanged:(enum vlc_player_state)state;
+ @end
+ @interface VLCTimelineContext (TimelinePlayerContextTesting)
+ - (instancetype)initWithSnapshotProvider:(NSDictionary *(^)(void))snapshotProvider
+@@ -185,6 +186,17 @@ static void ObserveCurrentMedia(vlc_player_t *player, input_item_t *item, void *
+         dispatch_async(dispatch_get_main_queue(), ^{ [drained fulfill]; });
+         [self waitForExpectations:@[drained] timeout:5];
+         XCTAssertEqual(mainNotifications, 2u);
++
++        /* Shutdown must cancel scheduled completion and reject queued STOPPED work. */
++        [controller stateChanged:VLC_PLAYER_STATE_STOPPED];
++        NSTimer *completionTimer = [controller valueForKey:@"playbackHasTruelyEndedTimer"];
++        XCTAssertNotNil(completionTimer);
++        XCTAssertTrue(completionTimer.isValid);
++        [controller applicationWillTerminate:nil];
++        XCTAssertFalse(completionTimer.isValid);
++        XCTAssertNil([controller valueForKey:@"playbackHasTruelyEndedTimer"]);
++        [controller stateChanged:VLC_PLAYER_STATE_STOPPED];
++        XCTAssertNil([controller valueForKey:@"playbackHasTruelyEndedTimer"]);
+     } @finally {
+         /* Stop callback sources before draining queued main work, then delete the real player. */
+         [context invalidate];

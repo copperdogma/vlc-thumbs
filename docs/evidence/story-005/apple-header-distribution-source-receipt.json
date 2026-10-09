@@ -1,0 +1,25 @@
+{
+  "scope": "Only existing Apple header declarations beside source consumers; no header/code/condition/flag changes",
+  "before": {
+    "modules/audio_output/Makefile.am": "fb1654bbe161cc85dbf293faad489a917664c3fedce77a1a73b5a219db15f908",
+    "modules/video_output/Makefile.am": "021d7c4db2bcdc7937d1d1f2316b33d2c91236dc56feb4d283822b351b858264"
+  },
+  "after": {
+    "modules/audio_output/Makefile.am": "de9e4602adbaa9838049b1dca5fcc8aa3c1b280ef8b3ec82a0c5200523a211ae",
+    "modules/video_output/Makefile.am": "8e2f7181ea2eea363dedcb19a3390c63eb7d7c1b9a322ff247a1be9b573589f9"
+  },
+  "diff": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/docs/evidence/story-005/apple-header-distribution-review.diff",
+  "diff_sha256": "6c6ece5550bd4a05705c0308e3efbb4adc4ba0786ad5901c187c3017b2c6d788",
+  "header_paths": [
+    "modules/audio_output/apple/channel_layout.h",
+    "modules/audio_output/apple/avaudiosession_common.h",
+    "modules/video_output/apple/VLCDrawable.h",
+    "modules/video_output/apple/vlc_pip_controller.h"
+  ],
+  "existing_header_sha256": {
+    "modules/audio_output/apple/channel_layout.h": "41aa504553e4008da188fb2628fed10d5dde67c6a10f852db5a834f34afcb9f6",
+    "modules/audio_output/apple/avaudiosession_common.h": "0bd8e6732201c59d977d00731dbe9db62f24c18dce5a72726f0cbd2ded5a7296",
+    "modules/video_output/apple/VLCDrawable.h": "c3d8143c494eadd4a2d08ccec0f2626ec49cc616372370f08cff0590c718cedc",
+    "modules/video_output/apple/vlc_pip_controller.h": "9f617c096f4479cb498a1ffe8b46281ad7237f57d399a6959cd78de40d7ed5a6"
+  }
+}

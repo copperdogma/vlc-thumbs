@@ -1,0 +1,24 @@
+{
+  "utc": "2026-10-06T03:48:40Z",
+  "candidate_archive": {
+    "absolute_path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/contrib/contrib-aarch64-apple-darwin19/vlc-contrib-aarch64-apple-darwin19-latest.tar.zst",
+    "bytes": 216247250,
+    "allocated_kib": 211180,
+    "sha256": "4eb8a33a9ea17c78bf348f922eff3d5f815673cb2839b1f6ef5796654867d973"
+  },
+  "baseline_matching_archive": {
+    "absolute_path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/contrib-aarch64-apple-darwin19/vlc-contrib-aarch64-apple-darwin19-latest.tar.zst",
+    "bytes": 216247250,
+    "allocated_kib": 211180,
+    "sha256": "4eb8a33a9ea17c78bf348f922eff3d5f815673cb2839b1f6ef5796654867d973"
+  },
+  "staging": {
+    "absolute_path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/macos-install",
+    "allocated_kib": 183564,
+    "reproducer": "make -C /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate macos-install (with normal native SDK/build environment); package.mak16-22 uses DESTDIR make install",
+    "current_use": "Cancelled official build PID27296 exited-15 before packaging. No current appbuild/staging owner found in process inventory. Nativefocusedtestbuilds use modules/.libs, not macos-install.",
+    "app_links_to_staging": [],
+    "active_build_stage_processes": []
+  },
+  "decision": "Read-only proposal. No deletion authorized/performed; preserve baselinearchive/apps/libraries/sources/testresults."
+}

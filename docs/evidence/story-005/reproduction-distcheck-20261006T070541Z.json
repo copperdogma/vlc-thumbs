@@ -1,0 +1,18 @@
+{
+  "stage": "distcheck",
+  "command": [
+    "/bin/bash",
+    "work/story005-scout/reproduction-distcheck-gnu-sed-vlcpath-frozen.sh"
+  ],
+  "cwd": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs",
+  "initial_free_bytes": 9298956288,
+  "stage_preflight_gib": 3.5,
+  "floor_bytes": 1073741824,
+  "time_limit_seconds": 1200,
+  "status": "failed",
+  "pid": 53172,
+  "elapsed_seconds": 104.4,
+  "minimum_free_bytes": 9148276736,
+  "exit_code": 2,
+  "final_free_bytes": 9146974208
+}

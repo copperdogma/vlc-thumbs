@@ -1,0 +1,6 @@
+mode=0 flat=0 result=-541478725 checked=0 injected=0 restore_attempts=0
+mode=0 flat=1 result=-541478725 checked=1 injected=0 restore_attempts=1
+mode=1 flat=1 result=-1094995529 checked=0 injected=0 restore_attempts=0
+mode=2 flat=1 result=-5 checked=0 injected=1 restore_attempts=1
+mode=3 flat=1 result=-5 checked=0 injected=1 restore_attempts=1
+PASS: same full packet stream; size/restore/read failures fail closed

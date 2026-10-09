@@ -1,0 +1,40 @@
+{
+  "stage": "Cleanpin VLC core/lib/preparser/serializer, feature helper, normally patched FFmpegmergedavcodec/swscale",
+  "receipt": "docs/evidence/story-005/candidate-build-20261006T033221Z.json",
+  "outputs": {
+    "src/.libs/libvlccore.9.dylib": {
+      "sha256": "686613cc6d47689dc6a306b63d83835bf0a324de5131b028294a5424fea2fbbe",
+      "bytes": 2745344
+    },
+    "lib/.libs/libvlc.12.dylib": {
+      "sha256": "7323b5240232074a8d914064238dc87e75413cefb75be14f06976741e323696e",
+      "bytes": 241296
+    },
+    "bin/vlc-preparser-static": {
+      "sha256": "bea5d30dec914dba060a763b0fcf5abb83f6c920d0978bfe286130b727a31f00",
+      "bytes": 82920
+    },
+    "bin/vlc-timeline-preview": {
+      "sha256": "6d90de5bded764f4471d7c70db86fe62da1df72685493d7e93720ab418880483",
+      "bytes": 20235368
+    },
+    "modules/.libs/libavcodec_plugin.dylib": {
+      "sha256": "12a2baef1773232885b23bcb7ab4daa439820f67747625fb1068901c59cb7ba5",
+      "bytes": 19640296
+    },
+    "modules/.libs/libswscale_plugin.dylib": {
+      "sha256": "b5c2f2614a397ff96626fa4189ad86388d3a0d9fb9a54efdf143edc7e6f5138e",
+      "bytes": 1904680
+    },
+    "modules/.libs/libpreparserserializer_json_plugin.dylib": {
+      "sha256": "4b771d193c06bf7bd6e23175a2a96051f4513a789f2d3b6d541610f1478b0f6e",
+      "bytes": 178072
+    }
+  },
+  "runtime": {
+    "DYLD_LIBRARY_PATH": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/src/.libs:/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/lib/.libs",
+    "VLC_LIB_PATH": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/modules",
+    "VLC_PLUGIN_PATH": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/modules/.libs"
+  },
+  "scope": "No prototype core fixes retained; normalmergedFFmpegplugin rebuilt not staleprebuilt. No apppackaging/forcedavformatqualification yet."
+}

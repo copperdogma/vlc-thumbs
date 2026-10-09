@@ -1,0 +1,8 @@
+In file included from /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-orientation/test/src/misc/image.c:31:
+/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-orientation/test/src/misc/../../libvlc/test.h:68:31: error: use of undeclared identifier 'TOP_BUILDDIR'
+   68 |     setenv("VLC_PLUGIN_PATH", TOP_BUILDDIR"/modules", 1);
+      |                               ^~~~~~~~~~~~
+/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-orientation/test/src/misc/../../libvlc/test.h:69:28: error: use of undeclared identifier 'TOP_BUILDDIR'
+   69 |     setenv("VLC_LIB_PATH", TOP_BUILDDIR"/modules", 1);
+      |                            ^~~~~~~~~~~~
+2 errors generated.

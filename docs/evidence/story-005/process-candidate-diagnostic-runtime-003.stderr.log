@@ -1,0 +1,7 @@
+testapi: child ready: pid=75984 pgid=75975 mode=wait
+testapi: forced termination passed
+testapi: child ready: pid=75985 pgid=75975 mode=wait
+testapi: write after kill errno=22
+testapi: repeated kill, I/O and reap passed
+testapi: child ready: pid=75986 pgid=75975 mode=close
+testapi: unforced close and reap passed

@@ -1,0 +1,18 @@
+{
+  "stage": "distcheck",
+  "command": [
+    "/bin/bash",
+    "work/story005-scout/reproduction-distcheck-apple-manifest-frozen.sh"
+  ],
+  "cwd": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs",
+  "initial_free_bytes": 8354967552,
+  "stage_preflight_gib": 3.5,
+  "floor_bytes": 1073741824,
+  "time_limit_seconds": 1200,
+  "status": "failed",
+  "pid": 19993,
+  "elapsed_seconds": 194.8,
+  "minimum_free_bytes": 6564380672,
+  "exit_code": 2,
+  "final_free_bytes": 6930370560
+}

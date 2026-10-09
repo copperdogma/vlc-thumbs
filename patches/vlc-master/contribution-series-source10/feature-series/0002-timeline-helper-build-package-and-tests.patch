@@ -1,0 +1,3850 @@
+diff --git a/Makefile.am b/Makefile.am
+index 97b41b5c720010d535a7aaf9fb2ab4a21f1b21e0..e158f968e01efd7d775db0004d4f576f172e31fb 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -32,6 +32,7 @@ AM_DISTCHECK_CONFIGURE_FLAGS = \
+ 	--disable-alsa \
+ 	--disable-avcodec --disable-avformat \
+ 	--disable-postproc --disable-swscale \
++	--disable-timeline-preview \
+ 	--disable-dbus \
+ 	--disable-mad \
+ 	--disable-faad --disable-skins2 \
+diff --git a/bin/Makefile.am b/bin/Makefile.am
+index 24406df9309396f1d2ee7ec27c9fcdab2604a94a..c1540ce69e1d667021eb8d3927f3d5d878d81b26 100644
+--- a/bin/Makefile.am
++++ b/bin/Makefile.am
+@@ -9,6 +9,7 @@ bin_PROGRAMS = vlc
+ noinst_PROGRAMS = vlc-static
+ endif
+ endif
++pkglibexec_PROGRAMS =
+ EXTRA_DIST = vlc_win32_rc.rc.in
+ CLEANFILES = vlc_win32_rc.rc
+ 
+@@ -114,7 +115,7 @@ vlc_win32_rc.$(OBJEXT): vlc_win32_rc.rc $(top_srcdir)/extras/package/win32/vlc.e
+ # Plug-ins cache generator
+ #
+ if HAVE_DYNAMIC_PLUGINS
+-pkglibexec_PROGRAMS = vlc-cache-gen
++pkglibexec_PROGRAMS += vlc-cache-gen
+ endif
+ vlc_cache_gen_SOURCES = cachegen.c
+ vlc_cache_gen_LDADD = \
+@@ -153,7 +154,7 @@ install-data-local:
+ endif
+ endif
+ 
+-.PHONY: ../modules/plugins.dat
++.PHONY: ../modules/plugins.dat check-timeline-preview
+ 
+ ../modules/plugins.dat: vlc-cache-gen$(EXEEXT)
+ 	$(AM_V_at)rm -f ../modules/plugins.dat
+@@ -164,3 +165,5 @@ endif
+ 	fi
+ 
+ include preparser/Makefile.am
++
++include timeline-preview/Makefile.am
+diff --git a/bin/meson.build b/bin/meson.build
+index b02d0769b233a363323c66426a71298a88e1cc34..f701ead29066a77afded20835fb39979bffdd1b4 100644
+--- a/bin/meson.build
++++ b/bin/meson.build
+@@ -113,3 +113,35 @@ if build_vlc and (host_system != 'darwin' or have_osx) and not have_win_store an
+     )
+ 
+ endif
++
++timeline_preview_option = get_option('timeline-preview').require(have_osx and build_vlc,
++    error_message: 'Timeline preview requires macOS desktop and the VLC executable')
++if timeline_preview_option.allowed()
++    timeline_preview_deps = [
++        dependency('libavformat', version: '>= 63.1.100', static: true, required: timeline_preview_option),
++        dependency('libavcodec', version: '>= 63.1.100', static: true, required: timeline_preview_option),
++        dependency('libavutil', version: '>= 61.1.100', static: true, required: timeline_preview_option),
++        dependency('libswscale', version: '>= 10.1.100', static: true, required: timeline_preview_option),
++        threads_dep,
++    ]
++    timeline_preview_deps_found = true
++    foreach dep : timeline_preview_deps
++        timeline_preview_deps_found = timeline_preview_deps_found and dep.found()
++    endforeach
++    if timeline_preview_deps_found
++        timeline_preview = executable('vlc-timeline-preview', 'timeline-preview/timeline-preview.c',
++            dependencies: timeline_preview_deps,
++            c_args: ['-std=c11'],
++            install: true,
++            install_dir: pkglibexecdir_path,
++        )
++        timeline_preview_python = find_program('python3')
++        if run_command(timeline_preview_python, '-c', 'import sys; sys.exit(sys.version_info < (3, 9))', check: false).returncode() != 0
++            error('Timeline preview tests require Python 3.9 or newer')
++        endif
++        test('timeline-preview', timeline_preview_python,
++            args: [files('timeline-preview/test.py'), '--helper', timeline_preview],
++            timeout: 60,
++        )
++    endif
++endif
+diff --git a/bin/preparser/Makefile.am b/bin/preparser/Makefile.am
+index 769a8c26ff91b1052ce6d4ad5c3436dc30db30b2..e81f11659d13dc98cb5e9bb10d5717d9a0407c28 100644
+--- a/bin/preparser/Makefile.am
++++ b/bin/preparser/Makefile.am
+@@ -5,11 +5,7 @@ AUTOMAKE_OPTIONS = subdir-objects
+ #
+ if BUILD_VLC
+ if HAVE_EXTERNAL_PREPARSER
+-if HAVE_DYNAMIC_PLUGINS
+ pkglibexec_PROGRAMS += vlc-preparser
+-else
+-pkglibexec_PROGRAMS = vlc-preparser
+-endif
+ noinst_PROGRAMS += vlc-preparser-static
+ endif
+ endif
+diff --git a/bin/timeline-preview/Makefile.am b/bin/timeline-preview/Makefile.am
+new file mode 100644
+index 0000000000000000000000000000000000000000..62c3dc795650426c636d70739b216563517b7b0e
+--- /dev/null
++++ b/bin/timeline-preview/Makefile.am
+@@ -0,0 +1,35 @@
++if BUILD_VLC
++if BUILD_TIMELINE_PREVIEW
++pkglibexec_PROGRAMS += vlc-timeline-preview
++endif
++endif
++
++vlc_timeline_preview_SOURCES = timeline-preview/timeline-preview.c
++vlc_timeline_preview_CFLAGS = $(AM_CFLAGS) $(TIMELINE_PREVIEW_CFLAGS) -std=c11
++vlc_timeline_preview_LDADD = $(TIMELINE_PREVIEW_LIBS)
++vlc_timeline_preview_LDFLAGS = -Wl,-dead_strip
++EXTRA_DIST += timeline-preview/PROTOCOL.md timeline-preview/test.py
++
++if BUILD_VLC
++if BUILD_TIMELINE_PREVIEW
++check-local: check-timeline-preview
++check-timeline-preview: vlc-timeline-preview$(EXEEXT)
++	@test -n "$(TIMELINE_PREVIEW_PYTHON)" || { echo "Timeline preview tests require Python 3.9 or newer" >&2; exit 1; }
++	@"$(TIMELINE_PREVIEW_PYTHON)" -c 'import sys; sys.exit(sys.version_info < (3, 9))' || { echo "Timeline preview tests require Python 3.9 or newer" >&2; exit 1; }
++	$(AM_V_GEN)"$(TIMELINE_PREVIEW_PYTHON)" $(srcdir)/timeline-preview/test.py --helper $(abs_builddir)/vlc-timeline-preview$(EXEEXT)
++endif
++endif
++
++EXTRA_DIST += \
++	timeline-preview/tests/generate_fixtures.py \
++	timeline-preview/tests/generate_dependency_fixtures.py \
++	timeline-preview/tests/README.md
++
++EXTRA_DIST += \
++	timeline-preview/README.md \
++	timeline-preview/tests/avformat-identity.c \
++	timeline-preview/tests/compare-identity.py
++
++EXTRA_DIST += timeline-preview/test-io.c
++
++EXTRA_DIST += timeline-preview/tests/generate_admission_fixtures.py
+diff --git a/bin/timeline-preview/PROTOCOL.md b/bin/timeline-preview/PROTOCOL.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..7f3fea2c652360eb052e9b8fbcc3036a08a7828b
+--- /dev/null
++++ b/bin/timeline-preview/PROTOCOL.md
+@@ -0,0 +1,100 @@
++# VLC timeline preview protocol 4
++
++This macOS helper isolates local media decoding and source fingerprint reads.
++It does not load network protocols or secondary resources. Inputs are absolute
++paths to nonempty regular files (mounted NAS paths are still local paths).
++
++## Invocation and framing
++
++`vlc-timeline-preview --worker --input PATH --video-input-id ID --video-count COUNT --max-width WIDTH --max-height HEIGHT`
++
++One-shot mode omits `--worker` and additionally requires `--time-us TIME`.
++All selection arguments are required. ID is a decimal integer in 0..INT_MAX,
++COUNT in 1..128, WIDTH in 1..320 and HEIGHT in 1..180. Duplicate or unknown flags,
++negative numbers and omitted arguments fail. Flag values cannot name a protocol.
++
++Worker stdout begins with a JSON `ready` header. Requests on stdin are exactly
++`ID TIME\n`, two nonnegative decimal integers separated by one space, at most
++96 bytes including newline. Request IDs and times fit signed64-bit integers.
++EOF retires the worker. Malformed requests terminate with a failure header.
++There is no cancellation command: the parent owns process retirement and must
++bound all reads/writes, terminate failed workers, and reap them.
++
++Each stdout record is one JSON line followed immediately by exactly
++`payload_bytes` raw bytes. Headers fit4096 bytes. Pixel replies are tightly packed
++row-major RGBA8, `width*height*4`, at most320*180*4 bytes. Failure and control
++headers have no pixel payload. No text follows a partial pixel payload: output
++failure terminates the process. Stderr is not a protocol channel.
++
++Every header has `version:4` and boolean `ok`. The ready header has `type:ready`,
++positive `duration_us`, and the identity fields below. A successful pixel reply
++adds `sampling:keyframe`, `requested_us`, `actual_us`, dimensions/channels,
++`decoded_frames` and `timeline_origin_us`. Worker replies echo request `id`.
++The actual timestamp belongs to the decoded sample on the helper movie timeline;
++it may precede or follow the target. It is never relabeled as the request/player
++clock. Existing container origin rules are retained.
++
++## Identity and fail-closed mapping
++
++Ready and pixel headers contain `video_input_id`, `video_count`, `mapping`, and
++`video_track_number`. The input ID comes from the player's owned numeric ES input
++identity; the helper never parses an opaque stable string or menu position.
++
++For flat Matroska/WebM, `mapping:matroska-track-number-flat-v1` means exact selection
++by positive TrackNumber exposed by the selected contrib libavformat in AVStream.id.
++TrackNumbers must be representable and unique across nonattachment streams; count
++must match. The returned `video_track_number` equals the requested ID. Multi-video
++Matroska remains limited to the qualified AVC scope. Ordered editions and other
++unqualified container behavior are not certified by this protocol.
++
++For another container's sole nonattached video, `mapping:single`, count1 and
++tracknumber-1 identify its sole video. Other multi-video/program mappings fail.
++Missing Matroska ID returns `track_unavailable`; count, duplicate, nonpositive or
++unrepresentable identity returns `ambiguous_track_mapping`. Explicit failures do
++not fall back. Parent must check all identity fields against its immutable
++context before accepting pixels. Errors after validated selection carry that
++identity; early argument/input failures cannot assert a validated mapping.
++
++## Bounds and freshness
++
++Limits:128 streams,4MiB probe,2s stream analysis,4096² decoded pixels,
++128MiB per allocation,320MiB accounted decoder buffers,512MiB measured RSS/physical
++footprint,200000 packets and100000 decoded frames. A10ms watchdog checks memory
++and wall/process CPU deadlines independently of FFmpeg's interrupt callback.
++One-shot work has5s deadlines; worker open/request/teardown has15s. Idle waiting
++has no operation deadline; parent retains finite lifetime and IPC deadlines.
++Worker watchdog failures exit without interleaving emergency JSON with pixels.
++These are userspace bounds, not hard realtime kernel-I/O guarantees.
++
++Source metadata is checked before/after acquisition and each request. Changed
++source, timeout and resource exhaustion retire the worker. Replies expose cumulative
++`bytes_read`, `read_calls`, `seek_calls`, `open_count`, `operation_us`; worker
++requests additionally expose request deltas. Counters are diagnostics, not clocks.
++
++`--fingerprint {stat|sampled|full} --input PATH` is a separate invocation. Its
++`type:identity` reply includes policy, SHA256 `fingerprint`, `stat_identity`,
++bytes/read counters and payload0. Full and sampled files<=1MiB hash all bytes.
++Larger sampled files hash16 evenly spaced64KiB windows with domain separation
++(`vlc-thumbnail-sampled-v1` plus terminating NUL), then big-endian64-bit offset
++and length followed by each window. Stat mode hashes only a domain-separated
++metadata record and is never content proof. Unsampled edits can escape sampled
++hashes. Persistent reuse requires the parent's fresh-open/freshness qualification.
++No path, untrusted metadata or parser log is emitted by the helper.
++
++## Flat-timeline admission policy
++
++Matroska requires parser-owned read-only `flat_timeline_checked` after opt-in
++`flat_timeline` admission. A complete bounded Segment scan rejects any ordered
++edition, Prev/NextUID, chapter segment link or SegmentFamily. Unknown-sized
++nested elements/Clusters, incomplete/malformed/multiple-Segment layouts and
++work/restore failures fail closed. An unknown-sized Segment itself is bounded
++to the known source end. Some valid layouts are conservatively unavailable.
++Tags cannot override admission. No general ordered/linked playback is supported.
++
++Ready/image headers add `flat_scan_bytes`, `flat_scan_reads`, `flat_scan_seeks`,
++`flat_scan_nodes` (zero for other formats). They count physical successful bytes,
++physical read calls including failures, physical seek calls including restore
++and failures, and structural nodes. Cached size queries are not physical seeks.
++The512B scan buffer has8MiB/20000physical-seek/100000node bounds and the existing
++active15s operation deadline. One seek is reserved for restoration. Cost and NAS
++responsiveness need separate qualification. Cache policy adds `transform1:flat-mkv1`.
+diff --git a/bin/timeline-preview/README.md b/bin/timeline-preview/README.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..ecf69b61f92477d2c7afd9582e42e6caf9d9c1be
+--- /dev/null
++++ b/bin/timeline-preview/README.md
+@@ -0,0 +1,287 @@
++# macOS timeline previews — contribution candidate
++
++This candidate extends VLC's existing native macOS hover panel with a keyframe
++image. Pointer time remains the seek target; the separate localized **Keyframe**
++caption reports the displayed sample's actual movie time. Sparse keyframes may be
++far from the pointer. Failure or disabling previews retains ordinary time hover.
++Seeking, scrolling, keyboard and accessibility controls keep their existing owners.
++
++Product seams are in [`modules/gui/macosx/timeline`](../../modules/gui/macosx/timeline) and
++[`VLCPlaybackProgressSlider.m`](../../modules/gui/macosx/views/VLCPlaybackProgressSlider.m).
++[PROTOCOL.md](PROTOCOL.md) specifies helper framing, selection and limits.
++
++## Why retain a helper?
++
++Native preparser reuse exposed unresolved movie-time and presentation-lifecycle
++requirements. Experimental selected-track/process patches are not dependencies.
++The retained `vlc-timeline-preview` helper isolates bounded decoding/fingerprint
++work and supplies explicit actual-sample metadata. This is a scoped choice, not
++an assertion that native preparser previews are impossible after further work.
++
++Developed for this contribution from the prior macOS timeline preview
++implementation; AI-assisted. Existing notices are retained; this provenance is
++not a new copyright, contributor identity or sign-off. Helper/application sources
++use GPL-2.0-or-later; standalone fixture scripts retain LGPL-2.1-or-later notices.
++Contrib notices remain; binary distribution needs an exact dependency/source review.
++
++## Source policy, privacy and bounds
++
++Only nonempty regular local files qualify; mounted NAS regular files count as
++local. URLs, secondary resources and helper network protocols are not admitted.
++The player snapshot must select exactly one video. A sole video maps directly;
++flat AVC Matroska multi-video requires exact unique,
++representable TrackNumber identity. Other mappings fail closed, without fallback.
++
++Disposable images live under the user Caches directory, app bundle identifier
++and `TimelineThumbnails`; they are unrelated to bookmarks/annotations. Identity
++includes source policy, selected video and transform version. Old protocol/ordinal
++images cannot enter the new namespace. RAM/disk budgets are 32MiB/256MiB; manifests
++allow 512 samples/2048 aliases; preparation has at most 255 targets and finite
++retained demand/retries. Images are at most 320×180 RGBA.
++
++Persistent reuse needs metadata plus sampled SHA256: sixteen 64KiB windows for
++larger files, all bytes up to 1MiB. Unsampled changes may escape this policy.
++Fresh reopen qualifies again, including same-URI reopen. Media/filesystem IO runs
++outside the UI thread/player lock. Current-session RAM images may show **Checking
++source** within one 15-second deadline, never renewed by pointer movement. Source
++change, failure or expiry clears provisional images. Protocol userspace bounds
++do not promise hard kernel-IO/process-reap timing on stalled mounts.
++
++## Configuration and build
++
++`macosx-timeline-previews` remains enabled by default. Simple Preferences →
++Interface has **Show timeline thumbnails**. Standard configuration notifications
++apply Simple/Advanced changes; explicit CLI values take precedence over saved config:
++
++```sh
++VLC --macosx-timeline-previews
++VLC --no-macosx-timeline-previews
++```
++
++Use the built app's executable. It locates the packaged helper beside itself,
++never through PATH. Native macOS builds need Xcode/SDK, configured Metal and VLC's
++normal tools/contrib. The helper defaults on with desktop macOS VLC; configure
++`--disable-timeline-preview` disables its build. Selected FFmpeg9 libraries require
++both normal contrib patches: [TrackNumber](../../contrib/src/ffmpeg/matroska-track-number.patch)
++and [opt-in flat timeline](../../contrib/src/ffmpeg/matroska-flat-timeline.patch).
++The declared clean reproduction route uses an independent pinned source checkout,
++fresh build tools and output, the exact official prebuilt remaining contrib, and
++normal source FFmpeg with both patches. Apply this contribution's public series to
++that checkout first and verify the series checksums. No installed prefix, configured
++tree, object or private build script is copied. On a native arm64 host, use Bash:
++
++```sh
++set -eo pipefail
++# Start in the independently checked-out, patched VLC source root.
++vlc_source=$(pwd -P)
++vlc_output="$vlc_source/build-macosx"
++test ! -e "$vlc_output"
++export VLC_FORCE_KERNELVERSION=19 # same triplet as pinned macOS CI
++export SDKROOT=$(xcrun --sdk macosx --show-sdk-path)
++export CMAKE_APPLE_SILICON_PROCESSOR=arm64 # native tools even with Rosetta CMake
++# Set this to a native Python3.9+ directory and required host prerequisite tools.
++export VLC_PATH=/path/to/native-python/bin:/usr/local/bin
++export ACLOCAL_PATH=/usr/local/share/aclocal
++export PKG_CONFIG_PATH=
++export PKG_CONFIG_LIBDIR=/nonexistent/vlc-pkgconfig-isolation
++source extras/package/macosx/env.build.sh none
++HOST_ARCH=aarch64
++ACTUAL_HOST_ARCH=arm64
++BUILD_TRIPLET=$(vlcGetBuildTriplet)
++HOST_TRIPLET=$(vlcGetHostTriplet)
++vlcSetBaseEnvironment
++(cd extras/tools && ./bootstrap && make -j4 MAKEFLAGS=-j4)
++mkdir -p "$vlc_output/contrib/contrib-$HOST_TRIPLET"
++vlcSetSymbolEnvironment
++vlcSetContribEnvironment "$MINIMAL_OSX_VERSION"
++cd "$vlc_output/contrib/contrib-$HOST_TRIPLET"
++"$vlc_source/contrib/bootstrap" --build="$BUILD_TRIPLET" --host="$HOST_TRIPLET"
++archive="vlc-contrib-$HOST_TRIPLET-latest.tar.zst"
++url=https://artifacts.videolan.org/vlc/macos-arm64/vlc-contrib-aarch64-apple-darwin19-15b71e3fa6d49ed2845dfb1324760984eae6101c.tar.zst
++make "$archive" PREBUILT_URL="$url"
++expected=46ff351556f8b9f54e9d550a987621e6bf3c005fb9d00922befc538b9ae1ba5628d238ff5c1defecdc81ff3cfe386db0442a0a45050f4462545f01ef89399d57
++actual=$(shasum -a 512 "$archive" | awk '{print $1}')
++test "$actual" = "$expected"
++make prebuilt PREBUILT_URL="$url"
++export PKG_CONFIG_LIBDIR="$vlc_output/contrib/$HOST_TRIPLET/lib/pkgconfig"
++# Fresh area has no .ffmpeg marker: upstream verifies source SHA512SUMS,
++# applies both rules.mak patches and installs the normal static dependency.
++make -j4 .ffmpeg
++vlcUnsetContribEnvironment
++cd "$vlc_source"
++export PKG_CONFIG_LIBDIR=/nonexistent/vlc-pkgconfig-isolation
++export NCURSES_LIBS="-L$vlc_output/contrib/$HOST_TRIPLET/lib -lncursesw"
++extras/package/macosx/build.sh -a aarch64 -x -j4 -C "$vlc_output"
++cd "$vlc_output"
++make -C bin check-timeline-preview
++make -C modules check-macosx
++```
++
++The artifact digest records the pinned official HTTPS acquisition; it is not a
++separate publisher signature. Host prerequisites include Xcode's configured Metal
++component and the `AM_PATH_LIBGCRYPT` macro in `ACLOCAL_PATH`. Archive downloads may
++use exact-source mirrors only with upstream checksum validation. Monitor available
++writable space with a 1GiB reserve and bound subprocess groups; Finder purgeable
++space is not guaranteed headroom. The independent checkout, fresh host tools,
++verified remaining-contrib archive and normal patched FFmpeg build were executed
++on native arm64. Its helper passed 77 fixture checks and the custom-AVIO probe.
++The final app compile/package/sign log completed; the artifact (997 files and
++10 symlinks) passed deep strict signature/component verification. Its outer launcher nevertheless
++exited 1 after an executing local script was modified; that failure is preserved,
++and this is not a claim that one clean end-to-end launcher exited successfully.
++The final normal registered XCTest run counted 288 tests, with one explicit optional
++owned-volume ENOSPC skip and zero failures. The separate owned-volume selector
++had already demonstrated literal ENOSPC, RAM fallback and recovery.
++
++### Conventional distribution check
++
++The pinned distribution hook requires GNU sed's in-place/change-command syntax;
++macOS BSD sed does not accept it. GNU sed 4.10 was source-built in an owned prefix,
++verified against the [primary release announcement](https://lists.gnu.org/archive/html/info-gnu/2026-04/msg00009.html).
++An equivalent local host-tool setup, from the patched source root, is:
++
++```sh
++sed_host=$(mktemp -d "$vlc_source/../vlc-sed-host.XXXXXX")
++curl --fail --location --max-time 60 --max-filesize 4000000 \
++  --output "$sed_host/sed-4.10.tar.gz" \
++  https://mirrors.kernel.org/gnu/sed/sed-4.10.tar.gz
++expected=4d179ffaf92ec4dcec541f7c032be1c3b9a1856f4970adb95a505221702f5277
++actual=$(shasum -a 256 "$sed_host/sed-4.10.tar.gz" | awk '{print $1}')
++test "$actual" = "$expected"
++tar -xzf "$sed_host/sed-4.10.tar.gz" -C "$sed_host"
++(cd "$sed_host/sed-4.10" && ./configure --prefix="$sed_host/prefix" \
++  --disable-nls && make -j4 && make install)
++export VLC_PATH="$sed_host/prefix/bin:$VLC_PATH"
++cd "$vlc_source"
++vlcSetBaseEnvironment # reconstructs PATH from VLC_PATH, not the previous PATH
++sed --version # verify GNU sed remains selected after the official environment
++export GIT_CEILING_DIRECTORIES="$vlc_output"
++make -C "$vlc_output" -j4 distcheck \
++  DISTCHECK_CONFIGURE_FLAGS="--host=$HOST_TRIPLET --build=$BUILD_TRIPLET --with-contrib=$vlc_output/contrib/$HOST_TRIPLET --disable-macosx"
++```
++
++The scoped [Git discovery ceiling](https://git-scm.com/docs/git/2.45.1.html)
++prevents an extracted archive from discovering an ancestor checkout and replacing
++its shipped revision. The real source checkout remains identifiable; no source
++permission or revision rule is changed. Use `set -eo pipefail`, not `set -u`, when
++sourcing the official environment because it expects optional unset variables.
++The separate leading source-header distribution patch lists five existing headers
++omitted by the pinned archive manifests; it changes no runtime code.
++
++The guarded conventional run passed archive membership/bytes, minimal configure,
++platform compilation and linking, then failed during runtime tests. The main test
++directory reported 92 tests: 80 pass, five skip, seven fail. Failures were clock
++drift, decoder subpicture, SPU creation, TLS certificate/handshake, unavailable BMP
++encoding, OpenGL operation and CVPX conversion. Relevant source/test bytes remain
++identical to the pin; causes are not all established. A bounded untouched-master
++normal-configuration comparison reproduced the clock drift_72 and TLS tls.c:188
++failures. That full baseline configuration differs from minimal distcheck, and the
++selected TLS client cause remains unproven. Upstream minimal flags disable
++avcodec/swscale, and this profile separately disables the helper and macOS GUI.
++Install/installcheck/uninstall/DESTDIR cleanup/redist/distclean stages were not
++reached: conventional distcheck is not qualified. No tests were disabled to force
++a pass. This remains separate from the feature-enabled app/helper/XCTest proofs.
++
++Preserved failures include the initial unset-variable launcher, BSD sed hook,
++pre-environment PATH placement, ancestor Git revision discovery and missing Apple/
++medialibrary archive headers. Generated gettext translation deltas and failed
++archives are preserved separately from the proposed source series. Host fixes and
++manifest prerequisites do not erase that execution history.
++
++Optional `extras/package/macosx/build.sh -a aarch64 -c -x -j4 -C build-macosx`
++rebuilds all selected contrib sources; that stronger dependency closure remains
++unqualified. Preserve existing apps. Focused registered checks in a resulting build:
++
++```sh
++make -C modules check-timeline-cache check-timeline-service-edges
++make -C modules check-timeline-context check-timeline-hover-reentrancy
++```
++
++Basic helper checks omit fixture matrices. Python3.9+ and a separate FFmpeg/ffprobe CLI with lavfi/libx264 and the listed encoders/options are test-only
++requirements; helper contrib libraries cannot generate fixtures. Follow
++[tests/README.md](tests/README.md) to generate fresh `media`/`identity` directories
++and record tools/manifests. No imported media/fonts/network assets are required.
++FFmpeg references are independent of VLC but share FFmpeg's decoder; preserve
++actual PTS/frame maps rather than treating encoder success as fidelity proof.
++
++## Flat-timeline admission and custom AVIO reproduction
++
++After the media/identity recipes, from the source root with `fixture_root` still
++set to that fresh scratch root and `helper` to the matched built executable:
++
++```sh
++python3 bin/timeline-preview/tests/generate_admission_fixtures.py \
++  --output "$fixture_root/admission" --ffmpeg ffmpeg --ffprobe ffprobe
++python3 bin/timeline-preview/test.py --helper "$helper" \
++  --fixtures "$fixture_root/media" --trim-fixtures "$fixture_root/media" \
++  --identity-fixtures "$fixture_root/identity" \
++  --admission-fixtures "$fixture_root/admission" > "$fixture_root/results.json"
++```
++
++The direct [test-io.c](test-io.c) probe must link the same modified FFmpeg prefix,
++including static dependencies; use an independent outer process-group deadline.
++From the source root (replace the prefix):
++
++```sh
++candidate_prefix=/path/to/modified/ffmpeg-prefix
++cc -std=c11 -g -O1 -Wall -Wextra -Werror -fsanitize=address,undefined \
++  bin/timeline-preview/test-io.c -o "$fixture_root/test-io" \
++  $(PKG_CONFIG_LIBDIR="$candidate_prefix/lib/pkgconfig" PKG_CONFIG_PATH= \
++    pkg-config --static --cflags --libs libavformat libavcodec libavutil)
++segment_offset=$(python3 - "$fixture_root/admission/flat-two-hours-1200-clusters.mkv" <<'PY'
++import pathlib, runpy, sys
++recipe = runpy.run_path('bin/timeline-preview/tests/generate_admission_fixtures.py')
++print(next(n['begin'] for n in recipe['parse'](pathlib.Path(sys.argv[1]).read_bytes())
++           if n['id'] == recipe['SEGMENT']))
++PY
++)
++ASAN_OPTIONS=halt_on_error=1:detect_leaks=0 UBSAN_OPTIONS=halt_on_error=1 \
++  "$fixture_root/test-io" "$fixture_root/admission/flat-two-hours-1200-clusters.mkv" "$segment_offset"
++```
++
++Local normal-contrib acquisition passed 77 checks: 39 existing plus 38 admission
++cases (8 accepted/30 rejected before ready/pixels). All 32 pixel/time replies over
++16 existing cases matched the prior helper freeze; intentional mapping/counters
++were excluded. Custom AVIO admission on/off preserved the full 1200-packet SHA256;
++size-query, restoration and mid-scan read faults failed closed. Probe/callback code
++used ASan/UBSan; linked FFmpeg was not instrumented and leak detection was disabled.
++Read/seek budget exhaustion was source-reviewed; node exhaustion was exercised.
++These local fixture results do not establish exhaustive decoder safety or general NAS cost.
++
++## Remaining qualification
++
++Admission conservatively excludes ordered editions, Prev/NextUID/chapter links,
++SegmentFamily, unknown-sized nested elements/Clusters and incomplete/malformed/
++multiple-Segment layouts. An unknown-sized Segment is bounded to file end. Some
++valid layouts remain unavailable; see [PROTOCOL.md](PROTOCOL.md). The current warm NAS
++repeat uses the portable five-minute, 300-Cluster fixture: 36 requests/18 paired
++images retain exact pixels and actual sample times. The older 72-request/36-pair
++comparison with tiny 1200-Cluster and recipe-incomplete 228-Cluster media is
++supplementary. Warmth was uncontrolled; AVIO counts are not network round trips.
++Warm fixture results do not establish cold/stalled NAS or larger-source cost.
++Use separately bounded trials for those conditions.
++
++XCTest covers cache/service/context and isolated hover source behavior; headless
++slider doubles create no window. For native verification, exercise all four
++control surfaces: physical hover/fades/drag/reparenting, keyboard/scroll/reader,
++saved/CLI preferences, delayed context/reopen races, source mutation/stalled NAS/
++provisional expiry, corruption/eviction and matched baseline playback/control
++workloads. Record exact source/app/helper hashes, media identity, observed sample
++time and trial scope. Headless tests do not qualify physical pointer, reader or
++matched playback/control behavior; retain separate native observations and
++matched measurements for those claims.
++
++Intel, older supported macOS, exhaustive formats and universal latency remain
++unqualified. Keep conventional distcheck results separate from feature-enabled
++native evidence, and review attribution and source/license scope before submission.
++No ready-to-submit or upstream-acceptance claim is made.
++
++The registered macOS XCTest bundles generate the normal build-tree plugin cache
++after building the GUI module, using the uninstalled cache generator and scoped
++contrib framework paths. The real-controller test reads cached configuration with
++plugin scanning disabled, avoiding duplicate Objective-C GUI classes. It does not
++require a packaged app. Run its focused check from the configured build directory:
++
++```sh
++make -C modules check-timeline-player-context
++```
+diff --git a/bin/timeline-preview/test-io.c b/bin/timeline-preview/test-io.c
+new file mode 100644
+index 0000000000000000000000000000000000000000..729d0e64f933d70d3fc0ce7b430213b2e0c99bb0
+--- /dev/null
++++ b/bin/timeline-preview/test-io.c
+@@ -0,0 +1,138 @@
++/* SPDX-License-Identifier: GPL-2.0-or-later
++ * Actual libavformat custom-AVIO admission regression, not a parser substitute.
++ * Use the independently generated flat-two-hours-1200-clusters.mkv fixture.
++ */
++#include <assert.h>
++#include <errno.h>
++#include <inttypes.h>
++#include <stdio.h>
++#include <stdlib.h>
++#include <string.h>
++#include <unistd.h>
++#include <libavformat/avformat.h>
++#include <libavutil/opt.h>
++#include <libavutil/sha.h>
++
++typedef struct {
++    const uint8_t *data;
++    int64_t size, cursor, segment_start, saved_cursor;
++    int mode, scanning, injected, restore_attempts;
++} Source;
++
++static int read_memory(void *opaque, uint8_t *buffer, int size)
++{
++    Source *source = opaque;
++    if (source->mode == 3 && source->scanning && !source->injected) {
++        source->injected = 1;
++        return AVERROR(EIO);
++    }
++    if (source->cursor == source->size) return AVERROR_EOF;
++    int64_t left = source->size - source->cursor;
++    if (size > left) size = (int)left;
++    memcpy(buffer, source->data + source->cursor, size);
++    source->cursor += size;
++    return size;
++}
++
++static int64_t seek_memory(void *opaque, int64_t offset, int whence)
++{
++    Source *source = opaque;
++    if (whence == AVSEEK_SIZE)
++        return source->mode == 1 ? AVERROR(ENOSYS) : source->size;
++    if (whence == SEEK_END) offset += source->size;
++    else if (whence == SEEK_CUR) offset += source->cursor;
++    else if (whence != SEEK_SET) return AVERROR(EINVAL);
++    if (offset < 0 || offset > source->size) return AVERROR(EINVAL);
++    if (!source->scanning && offset == source->segment_start) {
++        source->scanning = 1;
++        source->saved_cursor = source->cursor;
++    } else if (source->scanning && offset == source->saved_cursor &&
++               (source->cursor == source->size || source->injected)) {
++        source->restore_attempts++;
++        source->scanning = 0;
++        if (source->mode == 2) {
++            source->injected = 1;
++            source->cursor = 0; /* Prove restore failure cannot certify admission. */
++            return AVERROR(EIO);
++        }
++    }
++    source->cursor = offset;
++    return offset;
++}
++
++static int acquire(const uint8_t *data, int64_t size, int64_t segment_start,
++                   int flat, int mode, uint8_t digest[32])
++{
++    Source source = { .data = data, .size = size, .segment_start = segment_start, .mode = mode };
++    uint8_t *buffer = av_malloc(32768);
++    AVIOContext *io = avio_alloc_context(buffer, 32768, 0, &source, read_memory, NULL, seek_memory);
++    AVFormatContext *format = avformat_alloc_context();
++    assert(buffer && io && format);
++    format->pb = io;
++    format->flags |= AVFMT_FLAG_CUSTOM_IO;
++    AVDictionary *options = NULL;
++    av_dict_set(&options, "flat_timeline", flat ? "1" : "0", 0);
++    int ret = avformat_open_input(&format, NULL, av_find_input_format("matroska"), &options);
++    int64_t checked = 0;
++    if (ret >= 0) {
++        assert(!av_dict_get(options, "flat_timeline", NULL, 0));
++        assert(av_opt_get_int(format->priv_data, "flat_timeline_checked", 0, &checked) >= 0);
++    }
++    av_dict_free(&options);
++    if (mode) {
++        assert(ret < 0 && checked == 0);
++        if (mode == 2 || mode == 3)
++            assert(source.injected && source.restore_attempts == 1);
++    } else {
++        assert(ret >= 0 && checked == flat);
++        if (flat) assert(source.restore_attempts == 1);
++        assert(avformat_find_stream_info(format, NULL) >= 0);
++        AVPacket *packet = av_packet_alloc();
++        struct AVSHA *sha = av_sha_alloc();
++        assert(packet && sha && av_sha_init(sha, 256) == 0);
++        int count = 0;
++        while ((ret = av_read_frame(format, packet)) >= 0) {
++            av_sha_update(sha, packet->data, packet->size);
++            count++;
++            av_packet_unref(packet);
++        }
++        assert(ret == AVERROR_EOF && count == 1200);
++        av_sha_final(sha, digest);
++        av_free(sha);
++        av_packet_free(&packet);
++    }
++    printf("mode=%d flat=%d result=%d checked=%" PRId64 " injected=%d restore_attempts=%d\n",
++           mode, flat, ret, checked, source.injected, source.restore_attempts);
++    avformat_close_input(&format);
++    av_freep(&io->buffer);
++    avio_context_free(&io);
++    return 0;
++}
++
++int main(int argc, char **argv)
++{
++    assert(argc == 3); /* fixture path and its independent root Segment data offset */
++    alarm(15); /* Independent outer launcher must also kill/reap the process group. */
++    char *end;
++    errno = 0;
++    int64_t segment_start = strtoll(argv[2], &end, 10);
++    assert(!errno && !*end && segment_start > 0);
++    FILE *file = fopen(argv[1], "rb");
++    assert(file && fseek(file, 0, SEEK_END) == 0);
++    long size = ftell(file);
++    assert(size > segment_start && size <= 2 * 1024 * 1024);
++    rewind(file);
++    uint8_t *data = av_malloc(size);
++    assert(data && fread(data, 1, size, file) == (size_t)size);
++    assert(fclose(file) == 0);
++    uint8_t plain[32], admitted[32];
++    av_log_set_level(AV_LOG_QUIET);
++    acquire(data, size, segment_start, 0, 0, plain);
++    acquire(data, size, segment_start, 1, 0, admitted);
++    assert(memcmp(plain, admitted, 32) == 0);
++    for (int mode = 1; mode <= 3; mode++)
++        acquire(data, size, segment_start, 1, mode, admitted);
++    av_free(data);
++    puts("PASS: same full packet stream; size/restore/read failures fail closed");
++    return 0;
++}
+diff --git a/bin/timeline-preview/test.py b/bin/timeline-preview/test.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..1c9f36184c8a25284917bbb7871475880945d608
+--- /dev/null
++++ b/bin/timeline-preview/test.py
+@@ -0,0 +1,218 @@
++#!/usr/bin/env python3
++# SPDX-License-Identifier: GPL-2.0-or-later
++"""Bounded protocol/identity regressions. Media fixtures are generated separately.
++
++Basic mode needs only the built helper. --fixtures adds the documented legal
++standard/edit/trim/rotation/SAR suite; --identity-fixtures adds TrackNumber cases.
++Every helper runs in a dedicated POSIX process group with an independent timeout.
++"""
++import argparse
++import hashlib
++import json
++import os
++from pathlib import Path
++import signal
++import struct
++import subprocess
++import tempfile
++import time
++
++parser = argparse.ArgumentParser(description=__doc__)
++parser.add_argument('--helper', type=Path, required=True)
++parser.add_argument('--fixtures', type=Path)
++parser.add_argument('--trim-fixtures', type=Path)
++parser.add_argument('--identity-fixtures', type=Path)
++parser.add_argument('--admission-fixtures', type=Path)
++args = parser.parse_args()
++helper = args.helper.resolve(strict=True)
++checks = []
++
++
++def run(name, arguments, request=b'', success=True):
++    process = subprocess.Popen([str(helper), *map(str, arguments)], stdin=subprocess.PIPE,
++                               stdout=subprocess.PIPE, stderr=subprocess.PIPE,
++                               start_new_session=True)
++    started = time.monotonic()
++    try:
++        output, errors = process.communicate(request, timeout=20)
++    finally:
++        try:
++            os.killpg(process.pid, signal.SIGKILL)
++        except ProcessLookupError:
++            pass
++        process.wait(timeout=2)
++    members = subprocess.run(['ps', '-axo', 'pid=,pgid=,stat='], capture_output=True,
++                             text=True, check=True, timeout=2)
++    assert not any(int(fields[1]) == process.pid for line in members.stdout.splitlines()
++                   if len(fields := line.split()) >= 3), 'Live process-group member'
++    assert (process.returncode == 0) == success, (name, process.returncode, errors)
++    # These tests request at most three bounded images, never unbounded output.
++    assert len(output) <= 3 * (320 * 180 * 4 + 4097) + 8194
++    replies = []
++    while output:
++        header, newline, output = output.partition(b'\n')
++        assert newline and len(header) <= 4096, name
++        reply = json.loads(header)
++        assert reply['version'] == 4 and type(reply['ok']) is bool
++        size = reply.get('payload_bytes', 0)
++        assert type(size) is int and 0 <= size <= 320 * 180 * 4 and len(output) >= size
++        pixels, output = output[:size], output[size:]
++        if size:
++            assert reply['ok'] and reply['channels'] == 4
++            assert size == reply['width'] * reply['height'] * 4
++        else:
++            assert not reply.get('width'), name
++        replies.append((reply, pixels))
++    assert replies, name
++    checks.append({'case': name, 'returncode': process.returncode, 'elapsed_seconds': time.monotonic() - started,
++                   'replies': [dict(reply, pixel_sha256=hashlib.sha256(pixels).hexdigest()
++                                    if pixels else None) for reply, pixels in replies]})
++    return replies
++
++
++def argv(path, input_id=1, count=1, worker=True):
++    result = ['--worker'] if worker else ['--time-us', '125000']
++    return result + ['--input', str(path.resolve()), '--video-input-id', str(input_id),
++                     '--video-count', str(count), '--max-width', '320', '--max-height', '180']
++
++
++def identity(reply, input_id, count, matroska):
++    assert reply['video_input_id'] == input_id and reply['video_count'] == count
++    assert reply['mapping'] == ('matroska-track-number-flat-v1' if matroska else 'single')
++    assert reply['video_track_number'] == (input_id if matroska else -1)
++
++
++def worker_success(replies, request_ids):
++    """Require one ready header and exactly one image for each request, in order."""
++    assert len(replies) == len(request_ids) + 1, 'Unexpected worker reply count'
++    ready, pixels = replies[0]
++    assert ready['type'] == 'ready' and ready['ok'] and not pixels
++    assert ready['duration_us'] > 0
++    for (reply, pixels), request_id in zip(replies[1:], request_ids):
++        assert type(reply['id']) is int and reply['id'] == request_id, 'Unexpected request ID'
++        assert reply['ok'] and pixels, 'Expected successful image reply'
++
++
++with tempfile.TemporaryDirectory(prefix='vlc-timeline-test-') as temporary:
++    path = Path(temporary) / 'data'
++    path.write_bytes(bytes(range(256)) * 8192)
++    # Required flags and numeric range checks run before any decoder is opened.
++    bad = [[], ['--worker'], argv(path, -1), argv(path, 2**31), argv(path, 1, 0),
++           argv(path, 1, 129), argv(path) + ['--unknown', '1'],
++           [item if item != '--video-input-id' else '--video-ordinal' for item in argv(path)]]
++    for index, arguments in enumerate(bad):
++        replies = run('invalid-arguments-%d' % index, arguments, success=False)
++        assert replies[-1][0]['error'] == 'invalid_arguments'
++    data = path.read_bytes()
++    for policy in ['stat', 'full', 'sampled']:
++        reply = run('fingerprint-' + policy,
++                    ['--fingerprint', policy, '--input', path])[0][0]
++        assert reply['type'] == 'identity' and reply['policy'] == policy and reply['ok']
++        if policy == 'full':
++            assert reply['fingerprint'] == hashlib.sha256(data).hexdigest()
++        elif policy == 'sampled':
++            digest = hashlib.sha256(b'vlc-thumbnail-sampled-v1\0')
++            for window in range(16):
++                offset = (len(data) - 65536) * window // 15
++                digest.update(struct.pack('>QQ', offset, 65536))
++                digest.update(data[offset:offset + 65536])
++            assert reply['fingerprint'] == digest.hexdigest()
++            assert reply['bytes_read'] == 16 * 65536
++        else:
++            assert reply['bytes_read'] == 0
++    path.write_bytes(data[:4096])
++    reply = run('fingerprint-small', ['--fingerprint', 'sampled', '--input', path])[0][0]
++    assert reply['fingerprint'] == hashlib.sha256(data[:4096]).hexdigest()
++    assert reply['bytes_read'] == 4096
++    run('missing-source', ['--fingerprint', 'sampled', '--input', path.with_name('missing')],
++        success=False)
++
++if args.fixtures:
++    fixtures = args.fixtures.resolve(strict=True)
++    for name, input_id, matroska in [('standard.mp4', 0, False),
++                                     ('positive-start.mkv', 1, True),
++                                     ('edit-offset.mp4', 0, False),
++                                     ('rotation.mp4', 0, False), ('sar.mp4', 0, False)]:
++        replies = run(name, argv(fixtures / name, input_id), b'1 125000\n2 4125000\n3 125000\n')
++        worker_success(replies, (1, 2, 3))
++        for reply, pixels in replies:
++            identity(reply, input_id, 1, matroska)
++            assert reply['ok'] and reply['open_count'] == 1
++            if pixels:
++                assert reply['actual_us'] >= 0 and reply['sampling'] == 'keyframe'
++        assert replies[1][1] == replies[3][1], 'Backward request changed same sample'
++        if name == 'edit-offset.mp4':
++            assert all(reply['timeline_origin_us'] == 0 and reply['actual_us'] == 2000000
++                       for reply, pixels in replies if pixels)
++        elif name == 'rotation.mp4':
++            assert (replies[1][0]['width'], replies[1][0]['height']) == (101, 180)
++        elif name == 'sar.mp4':
++            assert (replies[1][0]['width'], replies[1][0]['height']) == (320, 90)
++    for text in [b'1 -1\n', b'1  0\n', b'1 0', b'1 0\0\n', b'9' * 97 + b'\n']:
++        replies = run('malformed-request-' + text.hex(), argv(fixtures / 'standard.mp4', 0),
++                      text, success=False)
++        assert replies[-1][0]['error'] == 'invalid_request'
++        identity(replies[-1][0], 0, 1, False)
++    replies = run('one-shot', argv(fixtures / 'standard.mp4', 0, worker=False))
++    identity(replies[0][0], 0, 1, False)
++    assert replies[0][1] and replies[0][0]['open_count'] == 1
++    for input_id, color in [(1, 0), (2, 2)]:
++        replies = run('selected-%d' % input_id, argv(fixtures / 'two-tracks.mkv', input_id, 2),
++                      b'1 125000\n')
++        identity(replies[-1][0], input_id, 2, True)
++        rgb = replies[-1][1][:3]
++        assert rgb[color] > 200 and rgb[2 - color] < 30
++    for input_id, count, error in [(3, 2, 'track_unavailable'), (1, 1, 'ambiguous_track_mapping')]:
++        replies = run('rejected-selection-%d-%d' % (input_id, count),
++                      argv(fixtures / 'two-tracks.mkv', input_id, count), success=False)
++        assert replies[-1][0]['error'] == error
++
++if args.trim_fixtures:
++    for name in ['nonkeyframe-trim.mp4', 'negative-ctts-trim.mp4', 'negative-ctts.mp4']:
++        replies = run(name, argv(args.trim_fixtures / name, 0), b'1 0\n2 4125000\n3 0\n')
++        worker_success(replies, (1, 2, 3))
++        for reply, pixels in replies:
++            identity(reply, 0, 1, False)
++        for reply, pixels in replies[1:]:
++            assert reply['timeline_origin_us'] == 0
++            assert reply['actual_us'] == (0 if name == 'negative-ctts.mp4' else 6750000)
++
++if args.identity_fixtures:
++    # Fixture manifest's cases are validated externally; filenames are explicit.
++    fixtures = args.identity_fixtures.resolve(strict=True)
++    for name in ['nonconsecutive.mkv', 'reordered.mkv']:
++        assert (fixtures / name).is_file(), name
++        for input_id, channel in [(7, 0), (31, 2)]:
++            replies = run(name + '-%d' % input_id, argv(fixtures / name, input_id, 2), b'1 0\n')
++            identity(replies[-1][0], input_id, 2, True)
++            assert replies[-1][1][channel] > 200
++    replies = run('int-max', argv(fixtures / 'int-max.mkv', 2147483647, 2), b'1 0\n')
++    identity(replies[-1][0], 2147483647, 2, True)
++    assert replies[-1][1][2] > 200
++    for name in ['too-large.mkv', 'duplicate.mkv', 'zero.mkv']:
++        replies = run(name, argv(fixtures / name, 7, 2), b'1 0\n', success=False)
++        assert not any(pixels for reply, pixels in replies)
++        assert replies[-1][0]['error'] in ('ambiguous_track_mapping', 'unsupported_input')
++if args.admission_fixtures:
++    fixtures = args.admission_fixtures.resolve(strict=True)
++    manifest = json.loads((fixtures / 'manifest.json').read_text())
++    for case in manifest['cases']:
++        path = fixtures / case['file']
++        assert path.is_file() and path.resolve().is_relative_to(fixtures), case['file']
++        replies = run('admission-' + case['file'], argv(path, 1), b'1 0\n2 125000\n3 0\n',
++                      success=case['admitted'])
++        if case['admitted']:
++            worker_success(replies, (1, 2, 3))
++            for reply, pixels in replies:
++                identity(reply, 1, 1, True)
++                assert reply['ok'] and reply['open_count'] == 1
++                assert 0 <= reply['flat_scan_bytes'] <= 8 * 1024 * 1024
++                assert 0 < reply['flat_scan_reads']
++                assert 0 < reply['flat_scan_seeks'] <= 20000
++                assert 0 < reply['flat_scan_nodes'] <= 100000
++            assert replies[1][1] == replies[3][1], 'Admission changed buffered decoder state'
++            # Measured counters are recorded; do not assert an unqualified NAS budget.
++        else:
++            assert not any(pixels for reply, pixels in replies)
++            assert not any(reply.get('type') == 'ready' for reply, pixels in replies)
++print(json.dumps({'checks': checks, 'count': len(checks), 'pass': True}, indent=2))
+diff --git a/bin/timeline-preview/tests/README.md b/bin/timeline-preview/tests/README.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..8100c05dccdc80ae6e7e3f4e68454f62ae3514ed
+--- /dev/null
++++ b/bin/timeline-preview/tests/README.md
+@@ -0,0 +1,297 @@
++# Generated timeline-preview fixtures
++
++Run from the VLC source root. No fixture media is checked in. Python3.9 or newer,
++FFmpeg and ffprobe are required; FFmpeg8.0 was exercised. The tools need lavfi
++`testsrc2`, `color` and `sine`, libx264, ALAC/AAC, Matroska/MP4 muxers, PNG/rawvideo
++encoders, and the `-display_rotation` option. `mkvmerge` is not required. The
++helper harness uses POSIX process groups and `ps`; these recipes do not qualify
++Windows, another encoder version, or every codec/container.
++
++The scripts generate test patterns, colors, tones, subtitle text and a2x2 PNG
++using their own recipes. No video, audio recording, font, network asset, or
++copyright-external Dolby Vision sample is required. Script licenses are
++LGPL-2.1-or-later; the helper/harness retain their own license notices. Generated
++files are disposable test outputs, not third-party licensed source inputs.
++
++## Reproduce the helper checks
++
++Choose a built helper explicitly; do not depend on an installed app or PATH helper.
++Both generators refuse an existing output directory. Paths below are examples
++independent of any wrapper repository:
++
++```sh
++fixture_root=$(mktemp -d)
++python3 bin/timeline-preview/tests/generate_fixtures.py \
++  --output "$fixture_root/media" --ffmpeg ffmpeg --ffprobe ffprobe
++python3 bin/timeline-preview/tests/generate_dependency_fixtures.py \
++  --output "$fixture_root/identity" --ffmpeg ffmpeg
++python3 bin/timeline-preview/test.py \
++  --helper /path/to/build/bin/vlc-timeline-preview \
++  --fixtures "$fixture_root/media" --trim-fixtures "$fixture_root/media" \
++  --identity-fixtures "$fixture_root/identity" > "$fixture_root/helper-results.json"
++```
++
++Without an admission-fixture argument this covers the39 protocol, fingerprint,
++identity, timing, transform and malformed-request checks. Additional admission
++fixtures are generated by their separate recipe when available. Preserve the
++result, tool versions, commands, manifest hashes and helper hash for review.
++Do not treat encoder command success alone as a pass. The media generator also
++checks decoded frame counts, keyframe positions, rotation, SAR and initial PTS.
++Its aggregate bound is300MiB with a1GiB free reserve and120s per tool command.
++The identity recipe allows16MiB seed data and30s for encoding; the harness bounds
++each helper process separately. No automatic download or reuse of real media occurs.
++
++## Expected content and time
++
++The general suite contains twelve-second320x180 testsrc2 at24fps. The long-GOP
++source has keyframes at0 and10 seconds; positive-start Matroska retains its5s
++gap, and the MP4 video's2s empty edit is preserved. Two-track Matroska uses red
++TrackNumber1 and blue TrackNumber2. Rotation is90degrees;2:1 SAR produces a32:9
++display aspect. The trim recipes edit source3.25 through11.25 into an eight-second
++movie; its next available source keyframe10 is at movie6.75. Sparse keyframe
++selection can therefore be far from a requested time. Labels must describe the
++actual selected sample, not move it to the pointer's requested time.
++
++The dependency suite contains two-second64x48 red/blue AVC, audio47, subtitle63,
++and a synthetic cover attachment. Valid video identities are7/red and31/blue;
++reversed TrackEntries change ordinal order without changing identity. INT_MAX
++is a valid int identity;2147483648 is a valid Matroska number that must not be
++truncated to an int. Duplicate and zero TrackNumbers are deliberately malformed
++controls. Their parser acceptance is not a valid-input behavior regression.
++The cover is not a playable video choice. `manifest.json` describes every case.
++
++## Independent pixel and timestamp review
++
++The media manifest records each stream's decoded frame PTS, keyframe positions,
++coded RGBA frame hashes and a few display PNGs. The latter apply normal rotation
++and SAR; coded hashes use `-noautorotate`. These references are independent of
++VLC but share FFmpeg's generation/decoding toolchain, so they are not independent
++proof of FFmpeg correctness. Exact cross-decoder hashes are not a color/scaler
++acceptance criterion. Retain the helper's actual returned PTS and independently
++identify the displayed frame, using the emitted frame map rather than request time.
++
++For a compact raw color reference, select the known stream explicitly:
++
++```sh
++ffmpeg -v error -i "$fixture_root/identity/nonconsecutive.mkv" \
++  -map 0:0 -frames:v 1 -pix_fmt rgb24 -f rawvideo "$fixture_root/red.rgb"
++ffmpeg -v error -i "$fixture_root/identity/reordered.mkv" \
++  -map 0:2 -frames:v 1 -pix_fmt rgb24 -f rawvideo "$fixture_root/blue.rgb"
++```
++
++## Direct dependency regression
++
++`avformat-identity.c` observes `AVStream.id`, both `#ID` and `i:ID` selectors,
++stream-group IDs, and packet MD5/PTS/DTS/duration/flags. It requires FFmpeg9 headers
++and libraries. Build two executables against matched pristine and modified
++FFmpeg9 prefixes. The static dependencies listed by each prefix's pkg-config
++files must also be available. Use the appropriate target compiler and deployment
++flags; the following commands do not qualify another architecture or OS floor:
++
++```sh
++baseline_prefix=/path/to/pristine/ffmpeg-prefix
++candidate_prefix=/path/to/modified/ffmpeg-prefix
++PKG_CONFIG_LIBDIR="$baseline_prefix/lib/pkgconfig" PKG_CONFIG_PATH= \
++  pkg-config --static --cflags --libs libavformat libavcodec libavutil
++cc -std=c11 -Wall -Wextra -Werror \
++  bin/timeline-preview/tests/avformat-identity.c -o "$fixture_root/identity-baseline" \
++  $(PKG_CONFIG_LIBDIR="$baseline_prefix/lib/pkgconfig" PKG_CONFIG_PATH= \
++    pkg-config --static --cflags --libs libavformat libavcodec libavutil)
++cc -std=c11 -Wall -Wextra -Werror \
++  bin/timeline-preview/tests/avformat-identity.c -o "$fixture_root/identity-candidate" \
++  $(PKG_CONFIG_LIBDIR="$candidate_prefix/lib/pkgconfig" PKG_CONFIG_PATH= \
++    pkg-config --static --cflags --libs libavformat libavcodec libavutil)
++python3 bin/timeline-preview/tests/compare-identity.py \
++  --probe "$fixture_root/identity-baseline" --fixtures "$fixture_root/identity" \
++  --output "$fixture_root/baseline-identity-results"
++python3 bin/timeline-preview/tests/compare-identity.py \
++  --probe "$fixture_root/identity-candidate" --fixtures "$fixture_root/identity" \
++  --output "$fixture_root/candidate-identity-results" --expect-modified \
++  --baseline "$fixture_root/baseline-identity-results"
++```
++
++For shared libraries, configure the loader's search path for each executable's
++own prefix separately. Do not mix the two library sets. The runner records probe
++and fixture hashes, enforces15s per invocation and refuses existing result output
++directories. Four valid cases assert expected candidate IDs/selectors and exact
++baseline packet/property equality. Duplicate and zero cases are observations of
++malformed input, never valid-input parity tests. The PNG cover retains ID0;
++unrepresentable TrackNumber2147483648 becomes−1. No Dolby Vision runtime group is
++generated: reporting no groups is a coverage gap, not a group regression pass.
++This is a standalone diagnostic, not a promised FFmpeg FATE integration.
++
++Matroska ffprobe may print `id=N/A` because the demuxer does not request ID display;
++that is not evidence of the actual field. For VLC playback regression, force
++`--demux=avformat` using each build's
++own core/modules, enumerate/select its actual video IDs, and compare decoded
++pixels and packet times. The configured merged avcodec plugin can supply this
++demux capability. Forced-VLC playback probes are not supplied by this helper test
++folder, and no native UI proof is implied.
++
++## Optional five-minute source and larger-byte Matroska layout
++
++This optional recipe does not enlarge the ordinary helper suite. It makes a new
++representative fixture; it does not reconstruct or claim the hash of an older
++locally generated NAS seed whose original encoding recipe was not retained.
++Choose a fresh output directory and retain the resulting manifest:
++
++```sh
++python3 bin/timeline-preview/tests/generate_fixtures.py --long-only \
++  --output "$fixture_root/long" --ffmpeg ffmpeg --ffprobe ffprobe
++```
++
++`long-preparation.mp4` is300s of moving320x180 testsrc2 at24fps with a generated
++continuous440Hz,48000Hz ALAC tone. Encoder options are explicit: libx264,
++veryfast, CRF23, yuv420p, two threads, GOP48/minimum48, scene-cut disabled,
++three B-frames, fixed B-frame strategy and faststart. Each file is capped at25MiB;
++the complete directory is capped at60MiB with a1GiB reserve. Every tool runs in a
++dedicated process group with a120s deadline and kill/reap cleanup. Failures and
++partial outputs remain inspectable; never treat a capped/truncated file as success.
++
++The MKV is video-only stream copy from that source, using a1000ms cluster time
++limit and the same25MiB cap. The script checks7200 decoded frames,300s duration,
++150 keyframes at0/2/.../298s, contiguous audio packet timestamps covering300s,
++and the public admission generator's structural oracle. It requires complete
++element bounds, one Segment and finite Clusters, and records their actual count.
++It never assumes the requested muxer setting guarantees an exact count.
++The sibling `generate_admission_fixtures.py` must be present for that oracle.
++
++Tool versions, full portable command arguments, source/remux hashes, frame maps,
++keyframe PTS and structural facts are recorded in `manifest.json`. FFmpeg/x264
++versions and container IDs may change encoded bytes, hashes and Cluster layout;
++the intended duration/content/GOP and measured structure are the comparison
++contract. Do not claim byte equivalence to another version or the old NAS fixture.
++
++For a bounded persistent-helper comparison, request0,150125000 and299000000us,
++retain actual sample time and pixel hashes, and compare AB/BA/AB using explicitly
++identified helper binaries. Keep local and NAS measurements distinct. A new owned
++NAS copy must have recorded before/after metadata and source/copy hashes; copying
++and hashing can warm the source and are not cold-cache evidence. Packet continuity
++does not establish audible playback, native controls or screen/audio continuity:
++use the generated MP4 for a separately recorded playback/control trial.
++
++## Optional native cache ENOSPC check
++
++The macOS XCTest selector `VLCThumbnailCacheTest/testOwnedVolumeENOSPCRAMAndRecovery`
++uses the current native cache and Foundation atomic writes. It is skipped unless
++an explicitly owned constrained HFS volume, device, ownership nonce and separate
++workspace guard root are supplied. It fills only an exclusive test-owned file
++on that verified volume, with a 32 MiB write cap and a 1 GiB workspace free-space
++floor. Actual errno 28 is required. The assertions cover RAM fallback, preservation
++of the earlier persisted sample after reopening, rejection of the failed new
++mapping after reopening, and disk recovery after deleting the owned filler.
++
++Run only this selector against a normally built macOS XCTest bundle. The following
++recipe creates a disposable 20 MiB image below the chosen workspace's `work/`
++directory, retains the image and attach receipt, and detaches the exact device in
++its exit trap. Use a fresh directory; never substitute a real volume or fill the
++workspace itself. No root privileges or permission changes are needed.
++
++```sh
++set -eu
++workspace=$(pwd -P)
++mkdir -p "$workspace/work"
++proof_root=$(mktemp -d "$workspace/work/cache-enospc.XXXXXX")
++owned_device=
++trap 'if [ -n "$owned_device" ]; then hdiutil detach "$owned_device"; fi' EXIT HUP INT TERM
++python3 - "$workspace" <<'PY'
++import os, sys
++space = os.statvfs(sys.argv[1])
++if space.f_bavail * space.f_frsize < 1024**3:
++    raise SystemExit("workspace free-space floor not met")
++PY
++hdiutil create -size 20m -fs HFS+ -volname VLCThumbnailTest \
++  -type UDIF "$proof_root/bounded-enospc.dmg"
++mkdir "$proof_root/mount"
++hdiutil attach -nobrowse -noautoopen -mountpoint "$proof_root/mount" \
++  -plist "$proof_root/bounded-enospc.dmg" > "$proof_root/attach.plist"
++owned_device=$(python3 - "$proof_root/attach.plist" "$proof_root/mount" <<'PY'
++import plistlib, re, sys
++with open(sys.argv[1], "rb") as stream:
++    entities = plistlib.load(stream)["system-entities"]
++entries = [entry for entry in entities if entry.get("mount-point") == sys.argv[2]]
++if len(entries) != 1 or not re.fullmatch(r"/dev/disk[0-9]+(?:s[0-9]+)?", entries[0]["dev-entry"]):
++    raise SystemExit("owned mount/device verification failed")
++print(entries[0]["dev-entry"])
++PY
++)
++nonce=$(python3 -c 'import uuid; print(uuid.uuid4().hex)')
++printf '%s' "$nonce" > "$proof_root/mount/.vlc-thumbnail-owned-volume"
++VLC_THUMBNAIL_ENOSPC_ROOT="$proof_root/mount" \
++VLC_THUMBNAIL_ENOSPC_DEVICE="$owned_device" \
++VLC_THUMBNAIL_ENOSPC_NONCE="$nonce" \
++VLC_THUMBNAIL_ENOSPC_WORKSPACE="$workspace" \
++xcrun xctest -XCTest VLCThumbnailCacheTest/testOwnedVolumeENOSPCRAMAndRecovery \
++  /path/to/build/modules/VLCMacOSXTests.xctest \
++  > "$proof_root/xctest.log" 2>&1
++```
++
++The test independently checks the mount filesystem, device, size, ownership file,
++workspace separation and free-space floor before filling anything. Keep source
++hashes, build provenance, the XCTest log, attach receipt and detach outcome with
++the retained image. This is a disk-full behavior check, not a literal power-loss
++or process-kill test during Foundation's atomic write. Safe publication ordering
++and partial-inventory reopen coverage are separate evidence.
++
++
++## Optional two-hour active-preparation playback workload
++
++This mode requires an explicit `long-preparation.mp4` produced by `--long-only`
++above. It stream-copies that 300-second synthetic testsrc2/440 Hz ALAC source
++24 times, retaining H.264 B-frames, 320x180 yuv420p, 24 fps and two-second GOPs.
++It never runs as part of the ordinary fixture suite and never re-encodes two hours.
++Use new output directories and preserve failed output/logs:
++
++```sh
++python3 bin/timeline-preview/tests/generate_fixtures.py --long-only --output /new/five-minute-fixtures
++python3 bin/timeline-preview/tests/generate_fixtures.py \
++  --playback-loop-source /new/five-minute-fixtures/long-preparation.mp4 \
++  --output /new/two-hour-fixtures
++```
++
++The recorded stream-copy command uses `-stream_loop 23 -map 0:v:0 -map 0:a:0
++-c copy -t 7200 -movflags +faststart`. FFmpeg documents the input loop and
++stream-copy options at <https://ffmpeg.org/ffmpeg.html>. With the locally measured
++14,704,138-byte five-minute source, 24 passes estimate about 353 MB (337 MiB)
++plus index overhead; this is an estimate, not a measured output size or hash.
++The generator permits at most 400 MiB for the MP4 and 460 MiB for the whole
++output directory, checks a 1 GiB free-space reserve, and kills/reaps each tool's
++process group after 120 seconds or a space violation. FFmpeg's file cap can
++slightly overshoot, so the completed file is checked too. Tool versions, exact
++commands, source/output hashes and measured bounds are retained in `manifest.json`.
++These are new representative synthetic bytes, never equivalent to an unknown
++historical workload seed.
++
++The oracle requires a 7200-second result, all 172,800 video presentation timestamps
++on the n/24 grid, continuous video DTS and continuous audio packet PTS/duration
++through every 300-second loop boundary. Negative initial video DTS from B-frame
++reordering is allowed. It separately decodes the first minute: 1440 changing
++video-frame hashes and 60 seconds of mono 48 kHz PCM with nonzero RMS in every
++one-second interval. The retained packet map, frame hashes and PCM support
++inspection; decoded signal energy does not replace audible native playback proof.
++Any failed continuity check stops qualification rather than adjusting timestamps.
++
++The current scheduler chooses the nearest count in 7,15,31,63,127,255 to
++`duration/30s`, favoring the lower count on a tie. Therefore 255 targets require
++more than 5730 seconds; 7200 seconds selects 255. Background work waits at least
++0.25 seconds after each completion, making a wholly eligible uncached plan roughly
++64 seconds or longer. This does not guarantee active work for a 60-second trial:
++cache hits, actual-sample suppression, failures and terminal conditions can end it.
++A 6000-second/20-pass loop also selects 255 and would save about 59 MB, but the
++7200-second contract gives a straightforward two-hour workload.
++
++For matched native playback trials, use fresh owned media identities and an
++isolated owned thumbnail cache, retaining the same bytes per baseline/candidate
++pair. Record the applicable cache JSON identity/key, initial/end `targets` and
++`samples` counts, periodic counts and modification times across the full window;
++require successful target mappings to keep increasing near its end. Cross-check
++with the actual helper PID and CPU/RSS activity. A helper merely existing, a
++Preparing label, or a static cache file is insufficient. Count growth proves
++persisted successful progress, not exact decoding latency. Inspect only the
++owned cache and retain observations separately from recorder/audio/drop results.
++There is no current timeline diagnostic-log emitter; do not invent logging proof
++or add production test hooks. The source plan, cache progress and worker activity
++must agree before calling a pair active preparation. Retain at least three matched
++60-second AB/BA/AB pairs, playing/audio/drop evidence and host-load confounds under
++the project's native validation protocol. Media generation and its FFmpeg oracle
++alone do not qualify native performance.
+diff --git a/bin/timeline-preview/tests/avformat-identity.c b/bin/timeline-preview/tests/avformat-identity.c
+new file mode 100644
+index 0000000000000000000000000000000000000000..ac40dbff68f56a1efcaa855d20faae2827f3ad7c
+--- /dev/null
++++ b/bin/timeline-preview/tests/avformat-identity.c
+@@ -0,0 +1,46 @@
++/* SPDX-License-Identifier: LGPL-2.1-or-later */
++/* Direct identity/selector/packet observation: no ffprobe display assumptions. */
++#include <inttypes.h>
++#include <stdio.h>
++#include <stdlib.h>
++#include <libavformat/avformat.h>
++#include <libavutil/md5.h>
++#include <libavutil/avutil.h>
++
++int main(int argc, char **argv)
++{
++    if (argc != 2) return 2;
++    AVFormatContext *fmt = NULL;
++    int ret = avformat_open_input(&fmt, argv[1], NULL, NULL);
++    if (ret < 0) { printf("{\"open_error\":%d}\n", ret); return 3; }
++    ret = avformat_find_stream_info(fmt, NULL);
++    if (ret < 0) { printf("{\"info_error\":%d}\n", ret); avformat_close_input(&fmt); return 4; }
++    printf("{\"avformat_version\":%u,\"streams\":%u,\"groups\":%u}\n",
++           avformat_version(), fmt->nb_streams, fmt->nb_stream_groups);
++    const char *selectors[] = {"#0", "#7", "i:7", "#31", "i:31", "#47", "#63", "#2147483647"};
++    for (unsigned i = 0; i < fmt->nb_streams; ++i) {
++        AVStream *s = fmt->streams[i];
++        printf("{\"stream\":%u,\"id\":%d,\"type\":%d,\"codec\":%d,\"disposition\":%d,\"selectors\":[",
++               i, s->id, s->codecpar->codec_type, s->codecpar->codec_id, s->disposition);
++        for (unsigned j = 0; j < sizeof(selectors)/sizeof(selectors[0]); ++j)
++            printf("%s%d", j ? "," : "", avformat_match_stream_specifier(fmt, s, selectors[j]));
++        printf("]}\n");
++    }
++    for (unsigned i = 0; i < fmt->nb_stream_groups; ++i)
++        printf("{\"group\":%u,\"id\":%"PRIu64",\"type\":%d}\n", i, fmt->stream_groups[i]->id, fmt->stream_groups[i]->type);
++    AVPacket *packet = av_packet_alloc();
++    if (!packet) { avformat_close_input(&fmt); return 5; }
++    unsigned count = 0;
++    while ((ret = av_read_frame(fmt, packet)) >= 0 && count < 1000) {
++        uint8_t digest[16];
++        av_md5_sum(digest, packet->data, packet->size);
++        printf("{\"packet\":%u,\"stream\":%d,\"pts\":%"PRId64",\"dts\":%"PRId64",\"duration\":%"PRId64",\"flags\":%d,\"md5\":\"",
++               count++, packet->stream_index, packet->pts, packet->dts, packet->duration, packet->flags);
++        for (unsigned i = 0; i < 16; ++i) printf("%02x", digest[i]);
++        printf("\"}\n");
++        av_packet_unref(packet);
++    }
++    av_packet_free(&packet);
++    avformat_close_input(&fmt);
++    return ret == AVERROR_EOF ? 0 : 6;
++}
+diff --git a/bin/timeline-preview/tests/compare-identity.py b/bin/timeline-preview/tests/compare-identity.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..75fc1e1b2deb4a0768d76920b1a477af3ed01f88
+--- /dev/null
++++ b/bin/timeline-preview/tests/compare-identity.py
+@@ -0,0 +1,76 @@
++#!/usr/bin/env python3
++# SPDX-License-Identifier: LGPL-2.1-or-later
++"""Capture direct ID/selectors/packet results; optional exact baseline parity.
++
++No playback claim: this observes libavformat before video decoding. Malformed
++controls are recorded separately from valid-input regressions.
++"""
++import argparse
++import hashlib
++import json
++from pathlib import Path
++import subprocess
++
++
++def sha(path):
++    return hashlib.sha256(path.read_bytes()).hexdigest()
++
++
++def main():
++    ap = argparse.ArgumentParser(description=__doc__)
++    ap.add_argument('--probe', type=Path, required=True)
++    ap.add_argument('--fixtures', type=Path, required=True)
++    ap.add_argument('--output', type=Path, required=True)
++    ap.add_argument('--baseline', type=Path)
++    ap.add_argument('--expect-modified', action='store_true')
++    args = ap.parse_args()
++    args.output.mkdir(parents=True, exist_ok=False)
++    manifest = json.loads((args.fixtures / 'manifest.json').read_text())
++    report = {'probe': str(args.probe.resolve()), 'probe_sha256': sha(args.probe),
++              'fixture_manifest_sha256': sha(args.fixtures / 'manifest.json'),
++              'selectors': ['#0', '#7', 'i:7', '#31', 'i:31', '#47', '#63', '#2147483647'],
++              'cases': [], 'pass': True}
++    for case in manifest['cases']:
++        path = args.fixtures / case['file']
++        assert sha(path) == case['sha256']
++        command = [str(args.probe.resolve()), str(path.resolve())]
++        result = subprocess.run(command, capture_output=True, text=True, timeout=15)
++        name = path.stem
++        (args.output / (name + '.jsonl')).write_text(result.stdout)
++        (args.output / (name + '.log')).write_text(result.stderr)
++        rows = [json.loads(line) for line in result.stdout.splitlines()]
++        streams = [r for r in rows if 'selectors' in r]
++        packets = [r for r in rows if 'packet' in r]
++        measured = {'file': case['file'], 'validity': case['validity'], 'command': command,
++                    'exit': result.returncode, 'streams': streams,
++                    'packets': len(packets), 'groups': [r for r in rows if 'group' in r]}
++        valid = case['validity'].startswith('valid')
++        if valid:
++            measured['valid_demux_eof'] = result.returncode == 0 and len(streams) == 5
++            report['pass'] &= measured['valid_demux_eof']
++            if args.expect_modified:
++                numbers = list(case['track_numbers'])
++                if case['reversed_entries']:
++                    numbers.reverse()
++                expected = [n if 0 < n <= 2147483647 else -1 for n in numbers] + [0]
++                measured['expected_ids'] = expected
++                measured['ids_match'] = [r['id'] for r in streams] == expected
++                measured['selectors_match'] = all(r['selectors'] == [int(r['id'] == int(s.split(':')[-1].lstrip('#'))) for s in report['selectors']] for r in streams)
++                report['pass'] &= measured['ids_match'] and measured['selectors_match']
++            if args.baseline:
++                old = [json.loads(line) for line in (args.baseline / (name + '.jsonl')).read_text().splitlines()]
++                old_packets = [r for r in old if 'packet' in r]
++                old_streams = [{k:v for k,v in r.items() if k not in ('id','selectors')} for r in old if 'selectors' in r]
++                measured['packets_equal'] = old_packets == packets
++                measured['stream_properties_equal'] = old_streams == [{k:v for k,v in r.items() if k not in ('id','selectors')} for r in streams]
++                report['pass'] &= measured['packets_equal'] and measured['stream_properties_equal']
++        else:
++            measured['scope'] = 'Malformed input observation; no valid-input parity assertion.'
++        report['cases'].append(measured)
++    (args.output / 'results.json').write_text(json.dumps(report, indent=2) + '\n')
++    print(json.dumps({'pass': report['pass'], 'cases': len(report['cases']), 'output': str(args.output)}))
++    raise SystemExit(0 if report['pass'] else 1)
++
++
++if __name__ == '__main__':
++    main()
+diff --git a/bin/timeline-preview/tests/generate_admission_fixtures.py b/bin/timeline-preview/tests/generate_admission_fixtures.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..9f5750ac3e5c24957b37b339bc52ee4d89357192
+--- /dev/null
++++ b/bin/timeline-preview/tests/generate_admission_fixtures.py
+@@ -0,0 +1,412 @@
++#!/usr/bin/env python3
++# SPDX-License-Identifier: LGPL-2.1-or-later
++"""Generate small synthetic Matroska flat-timeline admission controls.
++
++Standalone Python 3.8+ standard library and FFmpeg/libx264 plus ffprobe. Only one
++generated red AVC keyframe is encoded; repeated IDR payloads and new timestamps
++make the 1200-Cluster/two-hour scan-cost case under 2 MiB. This is test-container
++construction, never a production parser. A structural oracle checks the emitted
++tree independently of the admission demux option. FFprobe compatibility is an
++observation, not an ordered/link eligibility oracle or complete spec validator.
++
++Examples:
++  python3 generate_admission_fixtures.py --output /new/scratch/admission
++  python3 ../test.py --helper /built/vlc-timeline-preview --admission-fixtures /new/scratch/admission
++
++Sources: https://www.matroska.org/technical/elements.html
++         https://www.matroska.org/technical/chapters.html
++         https://www.matroska.org/technical/notes.html
++         https://www.rfc-editor.org/rfc/rfc8794.html (unknown-size/document boundaries)
++EBML writer primitives follow the neighboring LGPL generate_dependency_fixtures.py
++and are included here so the generator works when copied by itself.
++"""
++import argparse
++import hashlib
++import json
++from pathlib import Path
++import shutil
++import struct
++import subprocess
++
++
++EBML, SEGMENT, INFO, TRACKS, CLUSTER = 0x1A45DFA3, 0x18538067, 0x1549A966, 0x1654AE6B, 0x1F43B675
++CHAPTERS, EDITION, ATOM, ORDERED = 0x1043A770, 0x45B9, 0xB6, 0x45DD
++SEEKHEAD, SEEK, SEEKID, SEEKPOS = 0x114D9B74, 0x4DBB, 0x53AB, 0x53AC
++UID, PREV, NEXT, FAMILY, CHAPTER_LINK, EDITION_LINK = 0x73A4, 0x3CB923, 0x3EB923, 0x4444, 0x6E67, 0x6EBC
++OWN_UID = bytes.fromhex('102030405060708090a0b0c0d0e0f001')
++LINK_UID = bytes.fromhex('112233445566778899aabbccddeeff01')
++MASTER_IDS = {EBML, SEGMENT, INFO, TRACKS, 0xAE, 0xE0, 0xE1, CLUSTER,
++              0xA0, CHAPTERS, EDITION, ATOM, SEEKHEAD, SEEK,
++              0x1254C367, 0x7373, 0x63C0, 0x67C8}
++MAX_FILE = 2 * 1024 * 1024
++MAX_TOTAL = 16 * 1024 * 1024
++RESERVE = 1024 ** 3
++
++
++def id_bytes(ident):
++    return ident.to_bytes((ident.bit_length() + 7) // 8, 'big')
++
++
++def encode_vint(value, width=None):
++    for count in ([width] if width else range(1, 9)):
++        if 0 <= value < (1 << (7 * count)) - 1:
++            return ((1 << (7 * count)) | value).to_bytes(count, 'big')
++    raise ValueError('VINT overflow')
++
++
++def element(ident, body):
++    return id_bytes(ident) + encode_vint(len(body)) + body
++
++
++def uint(ident, value, width=None):
++    count = width or max(1, (value.bit_length() + 7) // 8)
++    return element(ident, value.to_bytes(count, 'big'))
++
++
++def unknown(ident, body):
++    return id_bytes(ident) + b'\x01' + b'\xff' * 7 + body
++
++
++def read_vint(data, at, ident=False):
++    if at >= len(data) or data[at] == 0:
++        raise ValueError('missing/zero VINT marker')
++    width = 1
++    while not data[at] & (1 << (8 - width)):
++        width += 1
++    if width > (4 if ident else 8) or at + width > len(data):
++        raise ValueError('invalid/truncated VINT')
++    raw = int.from_bytes(data[at:at + width], 'big')
++    value = raw if ident else raw & ((1 << (7 * width)) - 1)
++    return value, width, not ident and value == (1 << (7 * width)) - 1
++
++
++def parse(data, start=0, stop=None):
++    """Return bounded element extents; unknown size consumes the bounded parent."""
++    stop = len(data) if stop is None else stop
++    nodes = []
++    at = start
++    while at < stop:
++        ident, first, _ = read_vint(data, at, True)
++        length, second, unbounded = read_vint(data, at + first)
++        begin = at + first + second
++        end = stop if unbounded else begin + length
++        if begin > stop or end > stop or end <= at:
++            raise ValueError('element exceeds parent/file or makes no progress')
++        nodes.append({'id': ident, 'at': at, 'begin': begin, 'end': end,
++                      'unknown': unbounded})
++        at = end
++    return nodes
++
++
++def children(data, parent):
++    return parse(data, parent['begin'], parent['end'])
++
++
++def body(data, node):
++    return data[node['begin']:node['end']]
++
++
++def chapter(uid=1, nested=False, linked=False, edition_link=False):
++    fields = uint(0x73C4, uid) + uint(0x91, 0) + uint(0x92, 6000000000)
++    if linked:
++        fields += element(CHAPTER_LINK, LINK_UID)
++    if edition_link:
++        fields += uint(EDITION_LINK, 7)
++    if nested:
++        fields += chapter(uid + 1, linked=True)
++    return element(ATOM, fields)
++
++
++def edition(uid, flags=None, hidden=False, linked=False, nested=False, edition_link=False):
++    fields = uint(0x45BC, uid)
++    if hidden:
++        fields += uint(0x45BD, 1) + uint(0x45DB, 0)
++    for flag in flags or []:
++        fields += uint(ORDERED, flag)
++    return element(EDITION, fields + chapter(uid * 10, nested, linked, edition_link))
++
++
++def chapters(*editions):
++    return element(CHAPTERS, b''.join(editions))
++
++
++def fake_tags(value):
++    fields = []
++    for name in ['flat_timeline_checked', 'flat_timeline', 'TIMELINE_PREVIEW_ADMITTED']:
++        fields.append(element(0x67C8, element(0x45A3, name.encode('ascii')) +
++                              element(0x4487, value.encode('ascii'))))
++    return element(0x1254C367, element(0x7373, element(0x63C0, b'') + b''.join(fields)))
++
++
++def information(extra=b'', duration_ms=6000):
++    return element(INFO, element(UID, OWN_UID) + uint(0x2AD7B1, 1000000) +
++                   element(0x4489, struct.pack('>d', float(duration_ms))) +
++                   element(0x4D80, b'VLC synthetic admission fixtures 1') +
++                   element(0x5741, b'VLC synthetic admission fixtures 1') + extra)
++
++
++def seek_head(entries):
++    return element(SEEKHEAD, b''.join(element(SEEK, element(SEEKID, id_bytes(ident)) +
++                                            uint(SEEKPOS, position, 4))
++                                    for ident, position in entries))
++
++
++def assemble(header, parts, index=None, unbounded=False):
++    """Index positions are relative to Segment data; fixed-width avoids iteration."""
++    if index:
++        dummy = seek_head([(ident, 0) for ident in index])
++        positions = {}
++        at = len(dummy)
++        for ident, data in parts:
++            positions.setdefault(ident, at)
++            at += len(data)
++        entries = [(ident, positions[ident]) for ident in index]
++        if index == [CHAPTERS, INFO]:  # deliberately invalid seek position
++            entries[0] = (CHAPTERS, at + 4096)
++        prefix = seek_head(entries)
++        assert len(prefix) == len(dummy)
++    else:
++        prefix = b''
++    content = prefix + b''.join(data for _, data in parts)
++    return header + (unknown(SEGMENT, content) if unbounded else element(SEGMENT, content))
++
++
++def structural_oracle(data):
++    """Observe tree facts, not production-gate behavior or complete Matroska validity."""
++    facts = {'complete_bounds': True, 'segments': 0, 'cluster_count': 0,
++             'unknown_clusters': 0, 'ordered_flags': [], 'link_ids': [],
++             'own_segment_uids': [], 'chapter_offsets': [], 'first_cluster_offset': None,
++             'cluster_timestamps_ms': [], 'seek_entries': [], 'nodes': 0,
++             'segment_elements': 0, 'ebml_headers': 0,
++             'root_boundary_ids_within_unknown_segment': []}
++    try:
++        roots = parse(data)
++        segments = [n for n in roots if n['id'] == SEGMENT]
++        facts['segments'] = len(segments)
++        def walk(nodes, ancestry=(), unknown_segment=False):
++            for node in nodes:
++                facts['nodes'] += 1
++                ident, payload = node['id'], body(data, node)
++                if ident == SEGMENT:
++                    facts['segment_elements'] += 1
++                if ident == EBML:
++                    facts['ebml_headers'] += 1
++                if unknown_segment and ident in (SEGMENT, EBML):
++                    # The extent walker bounds unknown size to EOF, but RFC8794
++                    # schema levels terminate it at a new root/header boundary.
++                    # Report these explicitly; do not mislabel them child metadata.
++                    facts['root_boundary_ids_within_unknown_segment'].append(
++                        {'id': hex(ident), 'offset': node['at'], 'unknown': node['unknown']})
++                if ident == CLUSTER:
++                    facts['cluster_count'] += 1
++                    facts['unknown_clusters'] += int(node['unknown'])
++                    if facts['first_cluster_offset'] is None:
++                        facts['first_cluster_offset'] = node['at']
++                if ident == CHAPTERS:
++                    facts['chapter_offsets'].append(node['at'])
++                if ident == ORDERED and EDITION in ancestry:
++                    facts['ordered_flags'].append(int.from_bytes(payload, 'big'))
++                if ident in (PREV, NEXT, FAMILY, CHAPTER_LINK, EDITION_LINK):
++                    facts['link_ids'].append(hex(ident))
++                if ident == UID:
++                    facts['own_segment_uids'].append(payload.hex())
++                if ident == 0xE7 and CLUSTER in ancestry:
++                    facts['cluster_timestamps_ms'].append(int.from_bytes(payload, 'big'))
++                if ident == SEEK:
++                    fields = {c['id']: body(data, c) for c in children(data, node)}
++                    target = int.from_bytes(fields[SEEKID], 'big')
++                    position = int.from_bytes(fields[SEEKPOS], 'big')
++                    segment = next(s for s in segments if s['begin'] <= node['at'] < s['end'])
++                    absolute = segment['begin'] + position
++                    top = {c['at']: c['id'] for c in children(data, segment)}
++                    facts['seek_entries'].append({'target': hex(target), 'position': position,
++                                                   'matches': top.get(absolute) == target})
++                if ident in MASTER_IDS:
++                    walk(children(data, node), ancestry + (ident,),
++                         unknown_segment or (ident == SEGMENT and node['unknown']))
++        walk(roots)
++    except (ValueError, KeyError, StopIteration) as error:
++        facts['complete_bounds'] = False
++        facts['error'] = str(error)
++    return facts
++
++
++def main():
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument('--output', type=Path, required=True)
++    parser.add_argument('--ffmpeg', default='ffmpeg')
++    parser.add_argument('--ffprobe', default='ffprobe')
++    args = parser.parse_args()
++    if args.output.exists() or args.output.is_symlink():
++        parser.error('output must be a new directory, not an existing file/directory/symlink')
++    if not args.output.parent.is_dir():
++        parser.error('output parent must exist')
++    tools = {name: shutil.which(getattr(args, name)) for name in ('ffmpeg', 'ffprobe')}
++    if not all(tools.values()):
++        parser.error('FFmpeg with libx264/lavfi and ffprobe are required')
++    if shutil.disk_usage(args.output.parent).free < RESERVE + MAX_TOTAL:
++        parser.error('1 GiB free reserve plus 16 MiB fixture budget required')
++    args.output.mkdir()
++    out = args.output.resolve()
++    commands = []
++    def run(tool, argv):
++        commands.append([tool] + argv)
++        return subprocess.run([tools[tool]] + argv, cwd=out, capture_output=True,
++                              text=True, timeout=30)
++    argv = ['-hide_banner', '-loglevel', 'error', '-nostdin', '-f', 'lavfi', '-i',
++            'color=c=red:s=64x48:r=1/6:d=6', '-frames:v', '1', '-c:v', 'libx264',
++            '-threads:v', '1', '-pix_fmt', 'yuv420p', '-g', '1', '-bf', '0',
++            '-an', '-fs', str(MAX_FILE), 'seed.mkv']
++    seed_run = run('ffmpeg', argv)
++    (out / 'seed-ffmpeg.log').write_text(seed_run.stderr)
++    seed_run.check_returncode()
++    seed = (out / 'seed.mkv').read_bytes()
++    if len(seed) > MAX_FILE:
++        raise RuntimeError('seed exceeds fixture bound')
++    roots = parse(seed)
++    header = next(seed[n['at']:n['end']] for n in roots if n['id'] == EBML)
++    segment = next(n for n in roots if n['id'] == SEGMENT)
++    top = children(seed, segment)
++    tracks_node = next(n for n in top if n['id'] == TRACKS)
++    tracks = element(TRACKS, body(seed, tracks_node))
++    cluster_node = next(n for n in top if n['id'] == CLUSTER)
++    simple = next(n for n in children(seed, cluster_node) if n['id'] == 0xA3)
++    block = body(seed, simple)
++    number, number_width, _ = read_vint(block, 0)
++    if number != 1 or not block[number_width + 2] & 0x80:
++        raise RuntimeError('seed must contain TrackNumber1 independent AVC keyframe')
++    block = block[:number_width] + b'\x00\x00' + block[number_width + 2:]
++    def cluster(timestamp):
++        return element(CLUSTER, uint(0xE7, timestamp) + element(0xA3, block))
++    media = cluster(0)
++    info = information()
++    before = [(INFO, info), (TRACKS, tracks)]
++    flat = chapters(edition(1, [0]))
++    ordered = chapters(edition(1, [1]))
++    records = []
++    total = len(seed)
++    def emit(name, parts, admitted, reason, validity='valid', index=None,
++             unbounded=False, raw=None, clusters=1):
++        nonlocal total
++        content = raw if raw is not None else assemble(header, parts, index, unbounded)
++        if len(content) > MAX_FILE or total + len(content) > MAX_TOTAL:
++            raise RuntimeError('physical fixture budget exceeded')
++        if shutil.disk_usage(out).free < RESERVE + len(content):
++            raise RuntimeError('free-space reserve exhausted')
++        path = out / (name + '.mkv')
++        path.write_bytes(content)
++        total += len(content)
++        facts = structural_oracle(content)
++        if validity == 'valid' and not facts['complete_bounds']:
++            raise RuntimeError('unexpected valid fixture bounds failure: ' + name)
++        if facts['complete_bounds'] and facts['cluster_count'] != clusters:
++            raise RuntimeError('unexpected Cluster count: ' + name)
++        if admitted and (not facts['complete_bounds'] or facts['segments'] != 1 or
++                         facts['segment_elements'] != 1 or facts['ebml_headers'] != 1 or
++                         facts['unknown_clusters'] or any(facts['ordered_flags']) or facts['link_ids']):
++            raise RuntimeError('admitted oracle invariant failed: ' + name)
++        observation = run('ffprobe', ['-v', 'error', '-show_format', '-show_streams',
++                                     '-show_chapters', '-of', 'json', path.name])
++        (out / (name + '.ffprobe.json')).write_text(observation.stdout)
++        (out / (name + '.ffprobe.stderr')).write_text(observation.stderr)
++        if validity == 'valid' and observation.returncode != 0:
++            raise RuntimeError('valid fixture not opened by ffprobe: ' + name)
++        records.append({'file': path.name, 'admitted': admitted, 'reason': reason,
++                        'validity': validity, 'cluster_count': clusters,
++                        'bytes': len(content), 'sha256': hashlib.sha256(content).hexdigest(),
++                        'structural_oracle': facts, 'ffprobe_returncode': observation.returncode})
++    emit('flat-no-chapters', before + [(CLUSTER, media)], True, 'complete flat Segment')
++    emit('flat-own-segment-uid', before + [(CLUSTER, media)], True, 'own UID is not a link')
++    emit('flat-simple-chapters', before + [(CHAPTERS, flat), (CLUSTER, media)], True, 'explicit unordered edition')
++    emit('flat-default-edition', before + [(CHAPTERS, chapters(edition(1))), (CLUSTER, media)], True, 'absent ordered flag defaults0')
++    emit('flat-late-chapters', before + [(CLUSTER, media), (CHAPTERS, flat)], True, 'late finite unordered Chapters, no index')
++    emit('flat-unknown-segment', before + [(CLUSTER, media)], True, 'unknown Segment bounded by physical file', unbounded=True)
++    emit('ordered-single', before + [(CHAPTERS, ordered), (CLUSTER, media)], False, 'ordered edition')
++    emit('ordered-first-flat-last', before + [(CHAPTERS, chapters(edition(1, [1]), edition(2, [0]))), (CLUSTER, media)], False, 'positive ordered evidence cannot be overwritten')
++    emit('flat-first-ordered-last', before + [(CHAPTERS, chapters(edition(1, [0]), edition(2, [1]))), (CLUSTER, media)], False, 'any ordered edition')
++    emit('ordered-hidden-nondefault', before + [(CHAPTERS, chapters(edition(1, [0]), edition(2, [1], hidden=True))), (CLUSTER, media)], False, 'hidden nondefault ordered edition')
++    emit('ordered-duplicate-1-then-0', before + [(CHAPTERS, chapters(edition(1, [1, 0]))), (CLUSTER, media)], False, 'repeated non-multiple ordered flag', 'malformed-duplicate-flag')
++    late = before + [(CLUSTER, media), (CHAPTERS, ordered)]
++    emit('ordered-late-no-index', late, False, 'ordered Chapters after Cluster without SeekHead')
++    emit('ordered-late-correct-index', late, False, 'ordered late Chapters with correct SeekHead', index=[CHAPTERS])
++    emit('ordered-late-incomplete-index', late, False, 'sparse SeekHead omits Chapters', index=[INFO])
++    emit('ordered-late-broken-index', late, False, 'SeekHead position outside Segment', 'malformed-seek-position', index=[CHAPTERS, INFO])
++    emit('flat-bogus-tags', before + [(0x1254C367, fake_tags('false')), (CLUSTER, media)], True, 'tags cannot force flat rejection')
++    emit('ordered-bogus-tags', before + [(0x1254C367, fake_tags('true')), (CHAPTERS, ordered), (CLUSTER, media)], False, 'tags cannot spoof flat admission')
++    for name, extra in [('hard-prev', element(PREV, LINK_UID)), ('hard-next', element(NEXT, LINK_UID)),
++                        ('hard-prev-next', element(PREV, LINK_UID) + element(NEXT, LINK_UID)),
++                        ('segment-family', element(FAMILY, LINK_UID))]:
++        emit(name, [(INFO, information(extra)), (TRACKS, tracks), (CLUSTER, media)], False,
++             'link/family presence, linked file not supplied')
++    emit('hard-prev-late-info', [(TRACKS, tracks), (CLUSTER, media), (INFO, information(element(PREV, LINK_UID)))], False,
++         'late Info hard link, no index')
++    for name, entry in [('medium-unordered', edition(1, [0], linked=True)),
++                        ('medium-nested', edition(1, [0], nested=True)),
++                        ('medium-edition-uid', edition(1, [0], linked=True, edition_link=True))]:
++        emit(name, before + [(CHAPTERS, chapters(entry)), (CLUSTER, media)], False, 'unordered/nested ChapterSegment link')
++    emit('medium-late', before + [(CLUSTER, media), (CHAPTERS, chapters(edition(1, [0], nested=True)))], False, 'late nested link without index')
++    emit('medium-edition-without-segment', before + [(CHAPTERS, chapters(edition(1, [0], edition_link=True))), (CLUSTER, media)], False,
++         'ChapterSegmentEditionUID requires ChapterSegmentUUID', 'malformed-edition-link')
++    unknown_media = unknown(CLUSTER, uint(0xE7, 0) + element(0xA3, block))
++    emit('unknown-cluster', before + [(CLUSTER, unknown_media)], False, 'valid streaming layout conservatively unsupported', 'valid', unbounded=True)
++    good = assemble(header, before + [(CLUSTER, media), (CHAPTERS, flat)])
++    emit('truncated-chapters', [], False, 'physical EOF inside finite Chapters/Segment', 'malformed-truncated', raw=good[:-3])
++    excessive = id_bytes(CHAPTERS) + encode_vint(4096) + flat[5:]
++    emit('oversize-chapters', before + [(CLUSTER, media), (CHAPTERS, excessive)], False, 'Chapters length exceeds Segment', 'malformed-length')
++    emit('zero-vint', before + [(CLUSTER, media), (0, b'\x00\x80')], False, 'zero EBML ID marker', 'malformed-vint')
++    emit('multiple-segments', [], False, 'multiple Segment elements outside selected physical Segment', 'unsupported-multiple-segments',
++         raw=assemble(header, before + [(CLUSTER, media)]) + element(SEGMENT, info + tracks + media), clusters=2)
++    first_unknown = assemble(header, before + [(CLUSTER, media)], unbounded=True)
++    second_payload = info + tracks + media
++    emit('unknown-first-finite-second-segment', [], False,
++         'second Segment without new EBML Header violates one root per document',
++         'malformed-multiple-segments-one-document',
++         raw=first_unknown + element(SEGMENT, second_payload), clusters=2)
++    emit('unknown-first-unknown-second-segment', [], False,
++         'second unknown Segment without new EBML Header violates one root per document',
++         'malformed-multiple-segments-one-document',
++         raw=first_unknown + unknown(SEGMENT, second_payload), clusters=2)
++    emit('unknown-first-header-finite-second-segment', [], False,
++         'valid concatenated EBML documents unsupported by single-Segment admission',
++         'unsupported-valid-ebml-stream',
++         raw=first_unknown + header + element(SEGMENT, second_payload), clusters=2)
++    many = [(CLUSTER, cluster(index * 6000)) for index in range(1200)]
++    long_parts = [(INFO, information(duration_ms=7200000)), (TRACKS, tracks)] + many
++    emit('flat-two-hours-1200-clusters', long_parts, True, '1200 finite Clusters over7200s', clusters=1200)
++    emit('ordered-late-two-hours-1200-clusters', long_parts + [(CHAPTERS, ordered)], False,
++         'ordered Chapters only after1200 finite Clusters', clusters=1200)
++    # Thousands of finite Void elements exercise the node budget without decoding.
++    emit('node-budget-100001-voids', before + [(0xEC, element(0xEC, b''))] * 100001 + [(CLUSTER, media)], False,
++         'finite element count exceeds100000 admission budget', 'valid', clusters=1)
++    for record in records:
++        facts = record['structural_oracle']
++        if record['file'] == 'flat-two-hours-1200-clusters.mkv':
++            assert facts['cluster_timestamps_ms'] == list(range(0, 7200000, 6000))
++        if 'late' in record['file'] and facts['chapter_offsets']:
++            assert facts['chapter_offsets'][0] > facts['first_cluster_offset']
++        if 'correct-index' in record['file']:
++            assert all(s['matches'] for s in facts['seek_entries'])
++        if 'broken-index' in record['file']:
++            assert not all(s['matches'] for s in facts['seek_entries'])
++        if record['file'].startswith('unknown-first-'):
++            assert facts['segment_elements'] == 2
++            assert facts['root_boundary_ids_within_unknown_segment']
++            assert facts['ebml_headers'] == (2 if '-header-' in record['file'] else 1)
++    versions = {name: subprocess.check_output([path, '-version'], text=True, timeout=5)
++                for name, path in tools.items()}
++    manifest = {'schema': 'vlc-timeline-admission-fixtures-v1',
++                'generator_sha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
++                'tools': versions, 'commands': commands,
++                'legal': 'One generated lavfi red AVC keyframe; no private/imported media, fonts or network assets.',
++                'oracle_limits': 'Structural extent/flag/link/index/root-boundary observations, not a full Matroska validator. Unknown-size extent walking is bounded to EOF and explicitly reports later Segment/Header boundary IDs. RFC8794 requires one root per document; new EBML Header begins another document. FFprobe does not enforce ordered playback.',
++                'long_case': '1200 repeated independent AVC keyframes,6s default duration,0..7194s timestamps,7200s declared duration; tiny scan workload, not realistic bitrate/playback performance.',
++                'limits': {'per_file_bytes': MAX_FILE, 'media_total_bytes': MAX_TOTAL,
++                           'free_reserve_bytes': RESERVE, 'command_timeout_seconds': 30},
++                'cases': records}
++    (out / 'manifest.json').write_text(json.dumps(manifest, indent=2) + '\n')
++    print(json.dumps({'cases': len(records), 'media_bytes': total,
++                      'output': str(out), 'generator_sha256': manifest['generator_sha256']}))
++
++
++if __name__ == '__main__':
++    main()
+diff --git a/bin/timeline-preview/tests/generate_dependency_fixtures.py b/bin/timeline-preview/tests/generate_dependency_fixtures.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..6629d7584a23b6b85760fe87f6b40bdb3d0c4d49
+--- /dev/null
++++ b/bin/timeline-preview/tests/generate_dependency_fixtures.py
+@@ -0,0 +1,138 @@
++#!/usr/bin/env python3
++# SPDX-License-Identifier: LGPL-2.1-or-later
++"""Generate synthetic Matroska identity controls in a fresh directory.
++
++Requires FFmpeg with libx264. No imported media. Rewrites EBML lengths and block
++track VINTs; drops optional seek/cue tables and CRCs rather than leave stale ones.
++"""
++import argparse
++import hashlib
++import json
++from pathlib import Path
++import shutil
++import struct
++import subprocess
++import zlib
++
++
++def vint(data, at, ident=False):
++    lead = data[at]
++    if not lead:
++        raise ValueError('zero VINT marker')
++    width = 1
++    while not lead & (1 << (8 - width)):
++        width += 1
++    raw = int.from_bytes(data[at:at + width], 'big')
++    return (raw if ident else raw & ((1 << (7 * width)) - 1)), width
++
++
++def encode_vint(value):
++    for width in range(1, 9):
++        if value < (1 << (7 * width)) - 1:
++            return ((1 << (7 * width)) | value).to_bytes(width, 'big')
++    raise ValueError('VINT overflow')
++
++
++def elements(data):
++    at = 0
++    while at < len(data):
++        ident, a = vint(data, at, True)
++        size, b = vint(data, at + a)
++        begin = at + a + b
++        end = begin + size
++        if size == (1 << (7 * b)) - 1:
++            end = len(data)  # generated Segment may have unknown size
++        if end > len(data):
++            raise ValueError('element exceeds parent')
++        yield ident, data[begin:end]
++        at = end
++
++
++def element(ident, body):
++    return ident.to_bytes((ident.bit_length() + 7) // 8, 'big') + encode_vint(len(body)) + body
++
++
++MASTERS = {0x18538067, 0x1549A966, 0x1654AE6B, 0xAE, 0xE0, 0xE1,
++           0x1F43B675, 0xA0, 0x1941A469, 0x61A7, 0x1254C367, 0x7373,
++           0x63C0, 0x67C8}
++DROP = {0xBF, 0x114D9B74, 0x1C53BB6B, 0xA7, 0xAB}
++
++
++def rewrite(data, mapping, reverse=False):
++    pieces = []
++    for ident, body in elements(data):
++        if ident in DROP:
++            continue
++        if ident == 0xD7:
++            number = mapping[int.from_bytes(body, 'big')]
++            body = number.to_bytes(max(1, (number.bit_length() + 7) // 8), 'big')
++        elif ident in (0xA3, 0xA1):
++            old, width = vint(body, 0)
++            body = encode_vint(mapping[old]) + body[width:]
++        elif ident in MASTERS:
++            body = rewrite(body, mapping, reverse)
++        if ident == 0x1654AE6B and reverse:
++            entries = list(elements(body))
++            if any(i != 0xAE for i, _ in entries):
++                raise ValueError('unexpected Tracks child')
++            body = b''.join(element(i, b) for i, b in reversed(entries))
++        pieces.append(element(ident, body))
++    return b''.join(pieces)
++
++
++def main():
++    ap = argparse.ArgumentParser(description=__doc__)
++    ap.add_argument('--output', type=Path, required=True)
++    ap.add_argument('--ffmpeg', default='ffmpeg')
++    args = ap.parse_args()
++    if args.output.exists():
++        ap.error('output must be new')
++    args.output.parent.mkdir(parents=True, exist_ok=True)
++    if shutil.disk_usage(args.output.parent).free < 1024 ** 3 + 16 * 1024 ** 2:
++        ap.error('1 GiB reserve required')
++    args.output.mkdir()
++    out = args.output.resolve()
++    (out / 'subtitle.srt').write_text('1\n00:00:00,000 --> 00:00:01,500\nSynthetic identity control\n')
++    def chunk(name, body):
++        return struct.pack('>I', len(body)) + name + body + struct.pack('>I', zlib.crc32(name + body))
++    png = b'\x89PNG\r\n\x1a\n' + chunk(b'IHDR', struct.pack('>IIBBBBB', 2, 2, 8, 2, 0, 0, 0))
++    png += chunk(b'IDAT', zlib.compress((b'\x00' + bytes([255, 0, 0]) * 2) * 2)) + chunk(b'IEND', b'')
++    (out / 'cover.png').write_bytes(png)
++    command = [args.ffmpeg, '-hide_banner', '-loglevel', 'error', '-nostdin',
++               '-f', 'lavfi', '-i', 'color=c=red:s=64x48:r=12:d=2',
++               '-f', 'lavfi', '-i', 'color=c=blue:s=64x48:r=12:d=2',
++               '-f', 'lavfi', '-i', 'sine=frequency=440:duration=2',
++               '-i', 'subtitle.srt', '-map', '0:v', '-map', '1:v', '-map', '2:a', '-map', '3:s',
++               '-c:v', 'libx264', '-threads:v', '1', '-pix_fmt', 'yuv420p', '-g', '12',
++               '-c:a', 'aac', '-c:s', 'srt', '-attach', 'cover.png',
++               '-metadata:s:t', 'mimetype=image/png', '-metadata:s:t', 'filename=cover.png', 'seed.mkv']
++    run = subprocess.run(command, cwd=out, capture_output=True, text=True, timeout=30)
++    (out / 'ffmpeg.log').write_text(run.stderr)
++    run.check_returncode()
++    seed = (out / 'seed.mkv').read_bytes()
++    if len(seed) > 16 * 1024 ** 2:
++        raise RuntimeError('fixture bound exceeded')
++    cases = [('nonconsecutive', [7, 31, 47, 63], False, 'valid'),
++             ('reordered', [7, 31, 47, 63], True, 'valid'),
++             ('int-max', [7, 2147483647, 47, 63], False, 'valid'),
++             ('too-large', [7, 2147483648, 47, 63], False, 'valid-unrepresentable-int'),
++             ('duplicate', [7, 7, 47, 63], False, 'malformed-duplicate-number'),
++             ('zero', [7, 0, 47, 63], False, 'malformed-zero-number')]
++    records = []
++    for name, numbers, reverse, validity in cases:
++        path = out / (name + '.mkv')
++        path.write_bytes(rewrite(seed, dict(zip(range(1, 5), numbers)), reverse))
++        records.append({'file': path.name, 'track_numbers': numbers,
++                        'reversed_entries': reverse, 'validity': validity,
++                        'sha256': hashlib.sha256(path.read_bytes()).hexdigest()})
++    manifest = {'generator_sha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest(), 'command': command,
++                'tool_version': subprocess.check_output([args.ffmpeg, '-version'], text=True, timeout=5),
++                'legal': 'Generated colors, sine wave, text subtitle and 2x2 PNG; no external media.',
++                'ebml_policy': 'Reencode lengths and block TrackNumber VINTs; omit optional indexes and CRCs.',
++                'cases': records}
++    (out / 'manifest.json').write_text(json.dumps(manifest, indent=2) + '\n')
++    print(json.dumps({'cases': len(records), 'output': str(out)}))
++
++
++if __name__ == '__main__':
++    main()
+diff --git a/bin/timeline-preview/tests/generate_fixtures.py b/bin/timeline-preview/tests/generate_fixtures.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..b79fbf1c40bc4f7ef822ee4ef128f9314f88f153
+--- /dev/null
++++ b/bin/timeline-preview/tests/generate_fixtures.py
+@@ -0,0 +1,540 @@
++#!/usr/bin/env python3
++# SPDX-License-Identifier: LGPL-2.1-or-later
++"""Generate a new, bounded directory of synthetic VLC preview diagnostics.
++
++Python 3.9+ standard library; external FFmpeg/ffprobe with libx264 are required.
++No video, font, network input, VLC library, or machine-specific path is used.
++"""
++import argparse
++from contextlib import nullcontext
++import hashlib
++import json
++import os
++import shutil
++import signal
++import subprocess
++import struct
++import time
++from pathlib import Path
++
++LIMIT = 300 * 1024 * 1024
++RESERVE = 1024 ** 3
++DURATION = 12
++RATE = 24
++LONG_FILE_LIMIT = 25 * 1024 * 1024
++LONG_TOTAL_LIMIT = 60 * 1024 * 1024
++PLAYBACK_FILE_LIMIT = 400 * 1024 * 1024
++PLAYBACK_TOTAL_LIMIT = 460 * 1024 * 1024
++
++
++def sha256(path):
++    digest = hashlib.sha256()
++    with path.open('rb') as source:
++        for block in iter(lambda: source.read(1024 * 1024), b''):
++            digest.update(block)
++    return digest.hexdigest()
++
++
++CONTAINERS = {b'moov', b'trak', b'mdia', b'minf', b'stbl', b'edts'}
++
++def boxes(data):
++    result = []
++    offset = 0
++    while offset < len(data):
++        if len(data) - offset < 8:
++            raise ValueError('trailing box bytes')
++        size, kind = struct.unpack_from('>I4s', data, offset)
++        if size < 8 or offset + size > len(data):
++            raise ValueError('unsupported box bounds')
++        body = data[offset + 8:offset + size]
++        result.append([kind, boxes(body) if kind in CONTAINERS else body])
++        offset += size
++    return result
++
++def encode(nodes):
++    output = b''
++    for kind, body in nodes:
++        body = encode(body) if isinstance(body, list) else body
++        output += struct.pack('>I4s', len(body) + 8, kind) + body
++    return output
++
++def find(nodes, kind):
++    return next((node for node in nodes if node[0] == kind))
++
++def duration(node, value):
++    kind, body = node
++    if body[0] != 0:
++        raise ValueError('fixture requires version-zero timing headers')
++    offset = 20 if kind == b'tkhd' else 16
++    body = bytearray(body)
++    struct.pack_into('>I', body, offset, value)
++    node[1] = bytes(body)
++
++def edit(source, destination, segments):
++    tree = boxes(source.read_bytes())
++    kinds = [node[0] for node in tree]
++    # The rebuilt moov follows mdat, preserving existing chunk offsets.
++    if kinds.index(b'moov') < kinds.index(b'mdat'):
++        raise ValueError('moov must follow mdat')
++    moov = find(tree, b'moov')[1]
++    trak = find(moov, b'trak')[1]
++    movie_scale = struct.unpack_from('>I', find(moov, b'mvhd')[1], 12)[0]
++    media_scale = struct.unpack_from('>I', find(find(trak, b'mdia')[1], b'mdhd')[1], 12)[0]
++    edts = next((n for n in trak if n[0] == b'edts'), None)
++    if edts is None:
++        edts = [b'edts', []]
++        trak.append(edts)
++    elst = next((n for n in edts[1] if n[0] == b'elst'), None)
++    origin = 0
++    if elst:
++        if elst[1][0] != 0:
++            raise ValueError('fixture requires version-zero edit')
++        count = struct.unpack_from('>I', elst[1], 4)[0]
++        if count != 1:
++            raise ValueError('base must have at most one edit')
++        origin = struct.unpack_from('>i', elst[1], 12)[0]
++        if origin < 0:
++            raise ValueError('base edit must be nonempty')
++    else:
++        elst = [b'elst', b'']
++        edts[1].append(elst)
++    entries = []
++    for start, length, rate in segments:
++        entries.append((round(length * movie_scale), origin + round(start * media_scale), rate, 0))
++    elst[1] = b'\x00\x00\x00\x00' + struct.pack('>I', len(entries)) + b''.join((struct.pack('>Iihh', *entry) for entry in entries))
++    total = sum((entry[0] for entry in entries))
++    duration(find(moov, b'mvhd'), total)
++    duration(find(trak, b'tkhd'), total)
++    destination.write_bytes(encode(tree))
++    return {'movie_timescale': movie_scale, 'media_timescale': media_scale, 'base_edit_media_time': origin, 'entries': entries, 'segments_source_seconds': segments}
++
++
++def long_fixture(args, out, versions):
++    """Optional larger-byte layout; never substitutes for a historical fixture."""
++    from generate_admission_fixtures import structural_oracle
++    commands = []
++    minimum_free = shutil.disk_usage(out).free
++
++    def guard():
++        nonlocal minimum_free
++        minimum_free = min(minimum_free, shutil.disk_usage(out).free)
++        size = sum(p.stat().st_size for p in out.iterdir() if p.is_file())
++        if minimum_free < RESERVE or size > LONG_TOTAL_LIMIT:
++            raise RuntimeError('Long fixture output/reserve bound reached')
++
++    def run(tool, argv, output=None):
++        guard()
++        commands.append({'tool': tool, 'argv': argv, 'stdout': output})
++        with (out / output).open('xb') if output else nullcontext(subprocess.DEVNULL) as target:
++            with (out / 'tool-stderr.log').open('ab') as errors:
++                process = subprocess.Popen([getattr(args, tool)] + argv, cwd=out,
++                                           stdout=target, stderr=errors, start_new_session=True)
++                started = time.monotonic()
++                try:
++                    while process.poll() is None:
++                        guard()
++                        if time.monotonic() - started > 120:
++                            raise RuntimeError('Long fixture tool exceeded120s')
++                        time.sleep(0.1)
++                    if process.returncode:
++                        raise RuntimeError('Long fixture tool failed; inspect tool-stderr.log')
++                finally:
++                    try:
++                        os.killpg(process.pid, signal.SIGKILL)
++                    except ProcessLookupError:
++                        pass
++                    process.wait(timeout=2)
++        guard()
++
++    base = ['-nostdin', '-hide_banner', '-loglevel', 'error', '-n']
++    encoder = ['-c:v', 'libx264', '-preset', 'veryfast', '-crf', '23',
++               '-pix_fmt', 'yuv420p', '-threads', '2', '-g', '48',
++               '-keyint_min', '48', '-sc_threshold', '0', '-bf', '3', '-b_strategy', '0']
++    run('ffmpeg', base + ['-f', 'lavfi', '-i', 'testsrc2=size=320x180:rate=24:duration=300',
++                         '-f', 'lavfi', '-i', 'sine=frequency=440:sample_rate=48000:duration=300',
++                         '-map', '0:v:0', '-map', '1:a:0'] + encoder +
++        ['-c:a', 'alac', '-movflags', '+faststart', '-fs', str(LONG_FILE_LIMIT), 'long-preparation.mp4'])
++    run('ffmpeg', base + ['-i', 'long-preparation.mp4', '-map', '0:v:0', '-an', '-c', 'copy',
++                         '-cluster_time_limit', '1000', '-fs', str(LONG_FILE_LIMIT),
++                         'long-preparation-clusters.mkv'])
++    records = []
++    for name in ['long-preparation.mp4', 'long-preparation-clusters.mkv']:
++        if (out / name).stat().st_size > LONG_FILE_LIMIT:
++            raise RuntimeError('Long fixture file exceeded25MiB')
++        run('ffprobe', ['-v', 'error', '-count_frames', '-show_streams', '-show_format',
++                        '-of', 'json', name], name + '.probe.json')
++        probe = json.loads((out / (name + '.probe.json')).read_text())
++        videos = [s for s in probe['streams'] if s['codec_type'] == 'video']
++        if len(videos) != 1 or int(videos[0]['nb_read_frames']) != 7200:
++            raise RuntimeError('Incomplete long video fixture')
++        if abs(float(probe['format']['duration']) - 300) > 0.05:
++            raise RuntimeError('Long fixture is not300seconds')
++        run('ffprobe', ['-v', 'error', '-select_streams', 'v:0', '-show_frames',
++                        '-show_entries', 'frame=pts_time,key_frame,pict_type', '-of', 'json', name],
++            name + '.frames.json')
++        frames = json.loads((out / (name + '.frames.json')).read_text())['frames']
++        keys = [float(frame['pts_time']) for frame in frames if frame['key_frame']]
++        if len(keys) != 150 or any(abs(stamp - index * 2) > 0.001 for index, stamp in enumerate(keys)):
++            raise RuntimeError('Long fixture two-second keyframe spacing missing')
++        records.append({'name': name, 'bytes': (out / name).stat().st_size,
++                        'sha256': sha256(out / name), 'probe': name + '.probe.json',
++                        'frames': name + '.frames.json', 'keyframe_pts_seconds': keys})
++    run('ffprobe', ['-v', 'error', '-select_streams', 'a:0', '-show_packets',
++                    '-show_entries', 'packet=pts_time,duration_time', '-of', 'json',
++                    'long-preparation.mp4'], 'audio-packets.json')
++    audio = json.loads((out / 'audio-packets.json').read_text())['packets']
++    end = 0.0
++    for packet in audio:
++        start = float(packet['pts_time'])
++        length = float(packet['duration_time'])
++        if abs(start - end) > 0.00001 or length <= 0:
++            raise RuntimeError('Discontinuous long audio packet timeline')
++        end = start + length
++    if abs(end - 300) > 0.00001:
++        raise RuntimeError('Incomplete long audio timeline')
++    facts = structural_oracle((out / 'long-preparation-clusters.mkv').read_bytes())
++    if not facts['complete_bounds'] or facts['segments'] != 1 or facts['unknown_clusters'] or not facts['cluster_count']:
++        raise RuntimeError('Long remux lacks complete finite-Cluster layout')
++    manifest = {'schema_version': 1, 'mode': 'optional-long-only',
++                'legal': 'Generated testsrc2 and sine; no fonts, imported media or historical seed.',
++                'generator_sha256': sha256(Path(__file__)), 'tools': versions,
++                'encoder': encoder, 'duration_seconds': 300, 'frame_rate': 24,
++                'audio': {'codec': 'alac', 'frequency_hz': 440, 'sample_rate': 48000,
++                          'packet_timeline_contiguous': True, 'timeline_end_seconds': end},
++                'commands': commands, 'fixtures': records, 'structural_oracle': facts,
++                'structural_oracle_source_sha256': sha256(Path(__file__).with_name('generate_admission_fixtures.py')),
++                'bounds': {'file_bytes': LONG_FILE_LIMIT, 'total_bytes': LONG_TOTAL_LIMIT,
++                           'reserve_bytes': RESERVE, 'tool_seconds': 120,
++                           'minimum_free_bytes': minimum_free},
++                'qualification': 'New representative larger-byte layout, not equivalent historical bytes/hash. '
++                                 'Muxer versions/random container IDs can change hashes and Cluster counts. '
++                                 'Packet timeline continuity is not audible playback or nativeUI proof.'}
++    (out / 'manifest.json').write_text(json.dumps(manifest, indent=2) + '\n')
++    guard()
++    print(json.dumps({'mode': 'long-only', 'files': records,
++                      'finite_clusters': facts['cluster_count'], 'output': str(out)}))
++
++
++def playback_fixture(args, out, versions):
++    """Stream-copy the explicit five-minute generated source; never encode two hours."""
++    source = args.playback_loop_source.resolve(strict=True)
++    if not source.is_file() or source.stat().st_size > LONG_FILE_LIMIT:
++        raise RuntimeError('Playback input must be a <=25MiB generated source')
++    commands = []
++    minimum_free = shutil.disk_usage(out).free
++
++    def guard():
++        nonlocal minimum_free
++        minimum_free = min(minimum_free, shutil.disk_usage(out).free)
++        if minimum_free < RESERVE or sum(p.stat().st_size for p in out.iterdir()
++                                        if p.is_file()) > PLAYBACK_TOTAL_LIMIT:
++            raise RuntimeError('Playback output/reserve bound reached')
++
++    def run(tool, argv, output=None):
++        guard()
++        commands.append({'tool': tool, 'argv': argv, 'stdout': output})
++        with (out / output).open('xb') if output else nullcontext(subprocess.DEVNULL) as target:
++            with (out / 'tool-stderr.log').open('ab') as errors:
++                process = subprocess.Popen([getattr(args, tool)] + argv, cwd=out,
++                                           stdout=target, stderr=errors, start_new_session=True)
++                started = time.monotonic()
++                try:
++                    while process.poll() is None:
++                        guard()
++                        if time.monotonic() - started > 120:
++                            raise RuntimeError('Playback fixture tool exceeded120s')
++                        time.sleep(0.1)
++                    if process.returncode:
++                        raise RuntimeError('Playback fixture tool failed; inspect tool-stderr.log')
++                finally:
++                    try:
++                        os.killpg(process.pid, signal.SIGKILL)
++                    except ProcessLookupError:
++                        pass
++                    process.wait(timeout=2)
++        guard()
++
++    run('ffprobe', ['-v', 'error', '-show_streams', '-show_format', '-of', 'json',
++                    str(source)], 'source.probe.json')
++    original = json.loads((out / 'source.probe.json').read_text())
++    streams = original['streams']
++    if (len(streams) != 2 or streams[0]['codec_name'] != 'h264' or
++        streams[0]['r_frame_rate'] != '24/1' or streams[0]['width'] != 320 or
++        streams[0]['height'] != 180 or streams[0]['pix_fmt'] != 'yuv420p' or
++        streams[1]['codec_name'] != 'alac' or streams[1]['sample_rate'] != '48000' or
++        streams[1]['channels'] != 1 or
++        abs(float(original['format']['duration']) - 300) > 0.00001):
++        raise RuntimeError('Input does not match the generated300s source contract')
++    name = 'preparation-two-hours.mp4'
++    base = ['-nostdin', '-hide_banner', '-loglevel', 'error', '-n']
++    run('ffmpeg', base + ['-stream_loop', '23', '-i', str(source), '-map', '0:v:0',
++                         '-map', '0:a:0', '-c', 'copy', '-t', '7200', '-movflags',
++                         '+faststart', '-fs', str(PLAYBACK_FILE_LIMIT), name])
++    if (out / name).stat().st_size > PLAYBACK_FILE_LIMIT:
++        raise RuntimeError('Playback fixture exceeded400MiB')
++    run('ffprobe', ['-v', 'error', '-show_streams', '-show_format', '-of', 'json', name],
++        'playback.probe.json')
++    probe = json.loads((out / 'playback.probe.json').read_text())
++    if abs(float(probe['format']['duration']) - 7200) > 0.00001:
++        raise RuntimeError('Loop output is not7200seconds')
++    run('ffprobe', ['-v', 'error', '-show_packets', '-show_entries',
++                    'packet=stream_index,pts_time,dts_time,duration_time',
++                    '-of', 'compact=p=0:nk=0', name], 'packets.txt')
++    pts = []
++    video_dts = None
++    audio_end = 0.0
++    for line in (out / 'packets.txt').read_text().splitlines():
++        fields = dict(item.split('=', 1) for item in line.split('|') if '=' in item)
++        stamp = float(fields['pts_time'])
++        length = float(fields['duration_time'])
++        if fields['stream_index'] == '0':
++            dts = float(fields['dts_time'])
++            if video_dts is not None and abs(dts - video_dts - 1 / 24) > 0.000002:
++                raise RuntimeError('Video DTS discontinuity, including loop boundary')
++            video_dts = dts
++            pts.append(stamp)
++        elif fields['stream_index'] == '1':
++            if abs(stamp - audio_end) > 0.000002 or length <= 0:
++                raise RuntimeError('Audio packet discontinuity, including loop boundary')
++            audio_end = stamp + length
++        else:
++            raise RuntimeError('Unexpected playback stream')
++    if (len(pts) != 172800 or
++        any(abs(stamp - index / 24) > 0.000002 for index, stamp in enumerate(sorted(pts))) or
++        abs(audio_end - 7200) > 0.000002):
++        raise RuntimeError('Playback presentation timeline is incomplete')
++    run('ffmpeg', base + ['-i', name, '-map', '0:v:0', '-t', '60', '-an',
++                         '-pix_fmt', 'rgba', '-f', 'framehash', '-hash', 'sha256',
++                         'first-minute.framehash'])
++    hashes = [line.rsplit(',', 1)[-1].strip() for line in
++              (out / 'first-minute.framehash').read_text().splitlines()
++              if line and not line.startswith('#')]
++    if len(hashes) != 1440 or len(set(hashes)) < 100:
++        raise RuntimeError('First minute lacks ordinary moving24fps video')
++    run('ffmpeg', base + ['-i', name, '-map', '0:a:0', '-t', '60', '-vn',
++                         '-c:a', 'pcm_s16le', '-f', 's16le', 'first-minute.pcm'])
++    audio = (out / 'first-minute.pcm').read_bytes()
++    if len(audio) != 60 * 48000 * 2:
++        raise RuntimeError('First-minute decoded audio length mismatch')
++    rms = []
++    for second in range(60):
++        samples = struct.unpack('<48000h', audio[second * 96000:(second + 1) * 96000])
++        rms.append((sum(sample * sample for sample in samples) / 48000) ** .5)
++    if min(rms) < 100:
++        raise RuntimeError('First-minute decoded audio has a silent second')
++    manifest = {'schema_version': 1, 'mode': 'optional-playback-loop',
++                'generator_sha256': sha256(Path(__file__)), 'tools': versions,
++                'source': {'name': source.name, 'sha256': sha256(source),
++                           'bytes': source.stat().st_size}, 'commands': commands,
++                'fixture': {'name': name, 'sha256': sha256(out / name),
++                            'bytes': (out / name).stat().st_size},
++                'duration_seconds': 7200, 'loop_passes': 24, 'video_packets': len(pts),
++                'oracle': {'video_pts_grid_seconds': 'n/24', 'video_dts_contiguous': True,
++                           'audio_packet_end_seconds': audio_end,
++                           'first_minute_video_frames': len(hashes), 'audio_one_second_rms': rms},
++                'bounds': {'file_bytes': PLAYBACK_FILE_LIMIT, 'total_bytes': PLAYBACK_TOTAL_LIMIT,
++                           'reserve_bytes': RESERVE, 'tool_seconds': 120,
++                           'minimum_free_bytes': minimum_free},
++                'qualification': 'Synthetic stream-copy loop, not historical seed equivalence. '
++                                 'FFmpeg timeline/decoded-signal checks are not native playback '
++                                 'or proof of active thumbnail preparation.'}
++    (out / 'manifest.json').write_text(json.dumps(manifest, indent=2) + '\n')
++    guard()
++    print(json.dumps(manifest['fixture']))
++
++
++def main():
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument('--ffmpeg', default='ffmpeg')
++    parser.add_argument('--ffprobe', default='ffprobe')
++    parser.add_argument('--output', type=Path, required=True)
++    modes = parser.add_mutually_exclusive_group()
++    modes.add_argument('--long-only', action='store_true',
++                        help='Generate only the optional five-minute source/remux, not the ordinary suite')
++    modes.add_argument('--playback-loop-source', type=Path,
++                       help='Stream-copy an explicit generated300s MP4 into an optional7200s playback fixture')
++    args = parser.parse_args()
++    if args.output.exists() or args.output.is_symlink():
++        parser.error('Refusing existing output directory; select a new --output')
++    out = args.output.resolve()
++    for key in ('ffmpeg', 'ffprobe'):
++        executable = shutil.which(getattr(args, key))
++        if executable is None:
++            parser.error('Executable not found: ' + key)
++        setattr(args, key, str(Path(executable).resolve()))
++    # Validate tools before allocating any output. No implicit binary sibling paths.
++    versions = {}
++    for tool, executable in [('ffmpeg', args.ffmpeg), ('ffprobe', args.ffprobe)]:
++        versions[tool] = subprocess.check_output(
++            [executable, '-version'], text=True, timeout=15)
++    out.parent.mkdir(parents=True, exist_ok=True)
++    allowance = (PLAYBACK_TOTAL_LIMIT if args.playback_loop_source else
++                 LONG_TOTAL_LIMIT if args.long_only else LIMIT)
++    if shutil.disk_usage(out.parent).free < RESERVE + allowance:
++        parser.error('Need output allowance plus1GiB free reserve')
++    try:
++        out.mkdir(exist_ok=False)
++    except FileExistsError:
++        parser.error('Refusing existing output directory; select a new --output')
++    if args.long_only:
++        long_fixture(args, out, versions)
++        return
++    if args.playback_loop_source:
++        playback_fixture(args, out, versions)
++        return
++    commands = []
++
++    def check_space():
++        size = sum(path.stat().st_size for path in out.iterdir() if path.is_file())
++        if size > LIMIT or shutil.disk_usage(out).free < RESERVE + LIMIT:
++            raise RuntimeError('300 MiB output bound / 1 GiB reserve reached')
++        return size
++
++    def run(tool, argv, stdout_name=None):
++        check_space()
++        executable = args.ffmpeg if tool == 'ffmpeg' else args.ffprobe
++        # Commands run inside the new directory and record portable relative names.
++        commands.append({'tool': tool, 'argv': argv, 'stdout': stdout_name})
++        with (out / stdout_name).open('xb') if stdout_name else nullcontext(subprocess.DEVNULL) as target:
++            with (out / 'tool-stderr.log').open('ab') as errors:
++                process = subprocess.Popen([executable] + argv, cwd=out,
++                                           stdout=target, stderr=errors)
++                started = time.monotonic()
++                try:
++                    while process.poll() is None:
++                        check_space()
++                        if time.monotonic() - started > 120:
++                            raise RuntimeError('Tool exceeded 120-second command limit')
++                        time.sleep(0.1)
++                    check_space()
++                    if process.returncode:
++                        raise RuntimeError('%s failed; inspect tool-stderr.log' % tool)
++                finally:
++                    if process.poll() is None:
++                        process.kill()
++                        process.wait()
++
++    base = ['-nostdin', '-hide_banner', '-loglevel', 'error', '-n']
++    encoder = ['-c:v', 'libx264', '-preset', 'veryfast', '-crf', '23',
++               '-pix_fmt', 'yuv420p', '-threads', '2', '-g', '48',
++               '-keyint_min', '48', '-sc_threshold', '0']
++    source = ['-f', 'lavfi', '-i', 'testsrc2=size=320x180:rate=24:duration=12']
++    tone = ['-f', 'lavfi', '-i', 'sine=frequency=440:sample_rate=48000:duration=12']
++    fixtures = []
++
++    def media(name, argv, description):
++        # FFmpeg's file limit adds a per-output cap; monitor enforces aggregate bound.
++        run('ffmpeg', base + argv + ['-fs', str(32 * 1024 * 1024), name])
++        fixtures.append({'name': name, 'description': description})
++
++    media('standard.mp4', source + tone + encoder + ['-c:a', 'alac', '-movflags', '+faststart'],
++          '12 s testsrc2 320x180 24 fps; generated 440 Hz ALAC tone')
++    media('standard.mkv', ['-i', 'standard.mp4', '-map', '0', '-c', 'copy'],
++          'Same encoded video/audio as standard.mp4, Matroska container')
++    long_encoder = encoder[:-6] + ['-g', '240', '-keyint_min', '240',
++                                  '-sc_threshold', '0', '-bf', '3', '-b_strategy', '0']
++    media('long-gop.mp4', source + long_encoder,
++          '12 s testsrc2; ten-second GOP and three B-frames (verify actual frame map)')
++    media('vfr.mkv', source + ['-vf', "select='if(lt(t,6),not(mod(n,2)),not(mod(n,3)))'",
++                             '-fps_mode', 'vfr'] + encoder,
++          '12 fps then 8 fps; selected original testsrc2 frames, variable PTS spacing')
++    media('positive-start.mkv', ['-i', 'long-gop.mp4', '-c', 'copy', '-output_ts_offset', '5'],
++          'Video PTS begins at +5 s; original pixels retained')
++    media('edit-offset.mp4', ['-itsoffset', '2', '-i', 'long-gop.mp4'] + tone +
++          ['-map', '0:v', '-map', '1:a', '-c:v', 'copy', '-c:a', 'alac', '-use_editlist', '1'],
++          'Video begins at +2 s; audio/container near zero (12 s audio, 14 s extent)')
++    media('rotation.mp4', ['-display_rotation', '90', '-i', 'long-gop.mp4', '-c', 'copy'],
++          '90-degree display matrix; encoded samples retain landscape geometry')
++    media('sar.mp4', source + ['-vf', 'setsar=2/1'] + encoder,
++          '320x180 coded samples, 2:1 SAR; intended display aspect 32:9')
++    colors = []
++    for color in ['red', 'blue']:
++        colors += ['-f', 'lavfi', '-i', 'color=c=%s:size=320x180:rate=24:duration=12' % color]
++    media('two-tracks.mkv', colors + ['-map', '0:v', '-map', '1:v'] + encoder +
++          ['-metadata:s:v:0', 'title=synthetic-red', '-metadata:s:v:1', 'title=synthetic-blue',
++           '-disposition:v:0', 'default', '-disposition:v:1', '0'],
++          'Video ordinal 0 red/default; ordinal 1 blue. Ordinals are not VLC ES IDs')
++
++    media('negative-ctts.mp4', source + long_encoder + ['-movflags', '+negative_cts_offsets'],
++          'Signed composition offsets; twelve-second synthetic source')
++    for name, original in [('nonkeyframe-trim.mp4', 'long-gop.mp4'),
++                           ('negative-ctts-trim.mp4', 'negative-ctts.mp4')]:
++        details = edit(out / original, out / name, [(3.25, 8, 1)])
++        fixtures.append({'name': name, 'description': 'Source3.25 through11.25 mapped to eight-second movie; decode preroll retained',
++                         'edit': details})
++
++    for record in fixtures:
++        name = record['name']
++        run('ffprobe', ['-v', 'error', '-show_streams', '-show_format', '-of', 'json', name],
++            name + '.probe.json')
++        metadata = json.loads((out / (name + '.probe.json')).read_text())
++        run('ffprobe', ['-v', 'error', '-select_streams', 'v', '-show_frames',
++                       '-show_entries', 'frame=stream_index,pts,pts_time,best_effort_timestamp,best_effort_timestamp_time,duration_time,key_frame,pict_type',
++                       '-of', 'json', name], name + '.frames.json')
++        frame_map = json.loads((out / (name + '.frames.json')).read_text())['frames']
++        record.update(bytes=(out / name).stat().st_size, sha256=sha256(out / name),
++                      probe=name + '.probe.json', frames=name + '.frames.json', streams=[])
++        for stream in metadata['streams']:
++            if stream['codec_type'] != 'video':
++                continue
++            index = stream['index']
++            frames = [frame for frame in frame_map if frame['stream_index'] == index]
++            if not frames:
++                raise RuntimeError('Missing decoded frames for %s stream %s' % (name, index))
++            expected_count = (120 if name == 'vfr.mkv' else
++                              192 if name in ('nonkeyframe-trim.mp4', 'negative-ctts-trim.mp4') else 288)
++            if len(frames) != expected_count:
++                raise RuntimeError('Incomplete fixture: ' + name)
++            prefix = name + '.v' + str(index)
++            run('ffmpeg', base + ['-copyts', '-noautorotate', '-i', name, '-map', '0:' + str(index),
++                                 '-an', '-fps_mode', 'passthrough', '-pix_fmt', 'rgba',
++                                 '-c:v', 'rawvideo', '-f', 'framehash', '-hash', 'sha256', prefix + '.framehash'])
++            previews = []
++            for number in [0, len(frames) // 2, len(frames) - 1]:
++                image = prefix + '.frame%03d.png' % number
++                run('ffmpeg', base + ['-i', name, '-map', '0:' + str(index), '-an',
++                                     '-vf', 'select=eq(n\\,%d),scale=w=trunc(min(320\\,180*dar)):h=trunc(min(180\\,320/dar)),setsar=1' % number,
++                                     '-frames:v', '1', '-fps_mode', 'passthrough', image])
++                previews.append({'decoded_frame_index': number, 'pts_time': frames[number].get('pts_time'),
++                                 'name': image, 'sha256': sha256(out / image)})
++            record['streams'].append({'index': index, 'frame_count': len(frames),
++                                      'first_pts': frames[0].get('pts_time'),
++                                      'last_pts': frames[-1].get('pts_time'),
++                                      'keyframe_pts': [f.get('pts_time') for f in frames if f['key_frame']],
++                                      'coded_rgba_framehash': prefix + '.framehash', 'display_examples': previews})
++        print(name, record['bytes'], flush=True)
++
++    # Check fixture properties from FFprobe, not merely command intent.
++    by_name = {record['name']: record for record in fixtures}
++    for name, expected in [('positive-start.mkv', 5), ('edit-offset.mp4', 2)]:
++        if abs(float(by_name[name]['streams'][0]['first_pts']) - expected) > 0.05:
++            raise RuntimeError('Requested positive video start not present: ' + name)
++    rotation = json.loads((out / 'rotation.mp4.probe.json').read_text())['streams'][0]
++    if not any(abs(side.get('rotation', 0)) == 90 for side in rotation.get('side_data_list', [])):
++        raise RuntimeError('Rotation matrix missing')
++    sar = json.loads((out / 'sar.mp4.probe.json').read_text())['streams'][0]
++    if sar['sample_aspect_ratio'] != '2:1':
++        raise RuntimeError('2:1 SAR missing')
++    long_frames = json.loads((out / 'long-gop.mp4.frames.json').read_text())['frames']
++    if [f['pts_time'] for f in long_frames if f['key_frame']] != ['0.000000', '10.000000']:
++        raise RuntimeError('Ten-second GOP missing')
++    if not any(frame['pict_type'] == 'B' for frame in long_frames):
++        raise RuntimeError('B-frames missing')
++    inventory = [{'name': path.name, 'bytes': path.stat().st_size, 'sha256': sha256(path)}
++                 for path in sorted(out.iterdir()) if path.is_file()]
++    manifest = {'schema_version': 1, 'legal': 'Generated testsrc2, color, sine; no imported media or font assets.', 'generator_sha256': sha256(Path(__file__)),
++                'duration_seconds': DURATION, 'nominal_frame_rate': RATE,
++                'tools': versions, 'commands': commands, 'fixtures': fixtures, 'files': inventory,
++                'bounds': {'max_output_bytes': LIMIT, 'min_free_reserve_bytes': RESERVE,
++                           'max_command_seconds': 120},
++                'oracle': 'FFprobe demux/decode PTS and FFmpeg coded RGBA SHA256; independent of VLC. '
++                          'FFmpeg shares the generation toolchain: this is not an independent FFmpeg correctness proof. '
++                          'Display PNGs apply autorotation and SAR; scaler/color differences prohibit exact cross-decoder hash acceptance.'}
++    with (out / 'manifest.json').open('x') as target:
++        json.dump(manifest, target, indent=2)
++        target.write('\n')
++    print('Total output bytes:', check_space())
++
++
++if __name__ == '__main__':
++    main()
+diff --git a/bin/timeline-preview/timeline-preview.c b/bin/timeline-preview/timeline-preview.c
+new file mode 100644
+index 0000000000000000000000000000000000000000..92bf43f8cd6ef2c390ffa919e29a2e9a27493c4d
+--- /dev/null
++++ b/bin/timeline-preview/timeline-preview.c
+@@ -0,0 +1,1320 @@
++/* VLC timeline preview helper.
++ * Copyright (C) 2026 VLC timeline enhancements contributors.
++ * SPDX-License-Identifier: GPL-2.0-or-later
++ * This program is free software; you may redistribute and/or modify it under
++ * the GNU General Public License, version 2 or (at your option) any later version.
++ * This program is distributed WITHOUT ANY WARRANTY. See the GPL for details.
++ */
++#include <errno.h>
++#include <fcntl.h>
++#include <inttypes.h>
++#include <libavcodec/avcodec.h>
++#include <libavformat/avformat.h>
++#include <libavutil/display.h>
++#include <libavutil/imgutils.h>
++#include <libavutil/opt.h>
++#include <libavutil/pixdesc.h>
++#include <libavutil/sha.h>
++#include <libavutil/time.h>
++#include <libswscale/swscale.h>
++#include <limits.h>
++#include <mach/mach.h>
++#include <math.h>
++#include <pthread.h>
++#include <stdatomic.h>
++#include <stdint.h>
++#include <stdio.h>
++#include <stdlib.h>
++#include <string.h>
++#include <sys/resource.h>
++#include <sys/stat.h>
++#include <time.h>
++#include <unistd.h>
++
++#define RSS_LIMIT (512ULL * 1024 * 1024)
++#define ALLOC_LIMIT (128ULL * 1024 * 1024)
++#define DECODE_BUFFER_LIMIT (320ULL * 1024 * 1024)
++#define MAX_PIXELS (4096LL * 4096)
++#define MAX_PACKETS 200000
++#define MAX_FRAMES 100000
++#define DEADLINE_US 5000000
++#define WORKER_DEADLINE_US 15000000
++
++/* The independent watchdog also covers codecs/demuxers that do not poll an
++ * AVIO interrupt callback. Darwin RLIMIT_RSS is advisory; measure real memory.
++ * Per-allocation, pixel and stream limits prevent metadata-sized allocations;
++ * a 10ms RSS/physical-footprint sample kills a decoder exceeding the budget. */
++typedef struct
++{
++    int fd;
++    int64_t size;
++    atomic_int_fast64_t deadline, cpu_deadline;
++    atomic_int stop;
++    int worker;
++    uint64_t bytes_read, read_calls, seek_calls;
++    atomic_size_t decoder_bytes;
++} Guard;
++static const char *const timeout_reply =
++    "{\"version\":4,\"ok\":false,\"error\":\"timeout\",\"payload_bytes\":0}\n";
++static const char *const resource_reply =
++    "{\"version\":4,\"ok\":false,\"error\":\"resource_limit\",\"payload_bytes\":0}\n";
++static void emergency_exit(const char *reply)
++{
++    (void)write(STDOUT_FILENO, reply, strlen(reply));
++    _exit(1);
++}
++static int64_t cpu_time_us(void)
++{
++    struct timespec now;
++    if (clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &now))
++        return INT64_MAX;
++    return (int64_t)now.tv_sec * 1000000 + now.tv_nsec / 1000;
++}
++static int expired(Guard *g)
++{
++    return av_gettime_relative() >= atomic_load(&g->deadline) ||
++           cpu_time_us() >= atomic_load(&g->cpu_deadline);
++}
++static void begin_operation(Guard *g)
++{
++    atomic_store(&g->cpu_deadline, cpu_time_us() + (g->worker ? WORKER_DEADLINE_US : DEADLINE_US));
++    atomic_store(&g->deadline,
++                 av_gettime_relative() + (g->worker ? WORKER_DEADLINE_US : DEADLINE_US));
++}
++static void idle_operation(Guard *g)
++{
++    atomic_store(&g->deadline, INT64_MAX);
++    atomic_store(&g->cpu_deadline, INT64_MAX);
++}
++static void *watchdog(void *opaque)
++{
++    Guard *g = opaque;
++    while (!atomic_load(&g->stop))
++    {
++        if (expired(g))
++            emergency_exit(g->worker ? "" : timeout_reply);
++        task_vm_info_data_t info;
++        mach_msg_type_number_t count = TASK_VM_INFO_COUNT;
++        if (task_info(mach_task_self(), TASK_VM_INFO, (task_info_t)&info, &count) != KERN_SUCCESS)
++            emergency_exit(g->worker ? "" : resource_reply);
++        if (info.resident_size > RSS_LIMIT || info.phys_footprint > RSS_LIMIT)
++            emergency_exit(g->worker ? "" : resource_reply);
++        struct timespec delay = {0, 10000000};
++        nanosleep(&delay, NULL);
++    }
++    return NULL;
++}
++static int interrupt_io(void *opaque)
++{
++    return expired(opaque);
++}
++static int read_local(void *opaque, uint8_t *buffer, int size)
++{
++    Guard *g = opaque;
++    if (expired(g))
++        return AVERROR_EXIT;
++    ssize_t result;
++    do
++    {
++        result = read(g->fd, buffer, (size_t)size);
++    } while (result < 0 && errno == EINTR && !expired(g));
++    ++g->read_calls;
++    if (result > 0)
++        g->bytes_read += (uint64_t)result;
++    return result > 0 ? (int)result : result == 0 ? AVERROR_EOF : AVERROR(errno);
++}
++static int64_t seek_local(void *opaque, int64_t offset, int whence)
++{
++    Guard *g = opaque;
++    if (expired(g))
++        return AVERROR_EXIT;
++    if (whence == AVSEEK_SIZE)
++        return g->size;
++    whence &= ~AVSEEK_FORCE;
++    if (whence != SEEK_SET && whence != SEEK_CUR && whence != SEEK_END)
++        return AVERROR(EINVAL);
++    ++g->seek_calls;
++    off_t position = lseek(g->fd, offset, whence);
++    return position < 0 ? AVERROR(errno) : position;
++}
++static int deny_secondary_io(AVFormatContext *s, AVIOContext **pb, const char *url, int flags,
++                             AVDictionary **options)
++{
++    (void)s;
++    (void)pb;
++    (void)url;
++    (void)flags;
++    (void)options;
++    return AVERROR(EPERM);
++}
++/* Allocate frame buffers directly, without FFmpeg's default reusable pool.
++ * This makes the aggregate live allocation bound inspectable and enforceable
++ * before allocating another reference picture. Decoder scratch/demux metadata
++ * remain covered by the per-allocation and process memory watchdog limits. */
++typedef struct
++{
++    AVBufferRef *owned;
++    Guard *guard;
++    size_t size;
++} BufferAccount;
++static void release_frame_buffer(void *opaque, uint8_t *data)
++{
++    (void)data;
++    BufferAccount *account = opaque;
++    atomic_fetch_sub(&account->guard->decoder_bytes, account->size);
++    av_buffer_unref(&account->owned);
++    av_free(account);
++}
++static int bounded_get_buffer(AVCodecContext *codec, AVFrame *frame, int flags)
++{
++    (void)flags;
++    Guard *guard = codec->opaque;
++    if (expired(guard))
++        return AVERROR_EXIT;
++    int width = frame->width, height = frame->height, aligned_w = width, aligned_h = height;
++    int stride_alignment[AV_NUM_DATA_POINTERS] = {0}, alignment = 64;
++    avcodec_align_dimensions2(codec, &aligned_w, &aligned_h, stride_alignment);
++    for (int i = 0; i < AV_NUM_DATA_POINTERS; ++i)
++        if (stride_alignment[i] > alignment)
++            alignment = stride_alignment[i];
++    if (aligned_w <= 0 || aligned_h <= 0 || (int64_t)aligned_w * aligned_h > MAX_PIXELS + 65536)
++        return AVERROR(ENOMEM);
++    int estimate = av_image_get_buffer_size(frame->format, aligned_w, aligned_h, alignment);
++    size_t used = atomic_load(&guard->decoder_bytes);
++    if (estimate < 0 || (size_t)estimate + 65536 > ALLOC_LIMIT ||
++        used > DECODE_BUFFER_LIMIT - ((size_t)estimate + 65536))
++        return AVERROR(ENOMEM);
++    frame->width = aligned_w;
++    frame->height = aligned_h;
++    int result = av_frame_get_buffer(frame, alignment);
++    frame->width = width;
++    frame->height = height;
++    if (result < 0)
++        return result;
++    for (int i = 0; i < AV_NUM_DATA_POINTERS; ++i)
++    {
++        AVBufferRef *original = frame->buf[i];
++        if (!original)
++            continue;
++        BufferAccount *account = av_malloc(sizeof(*account));
++        used = atomic_load(&guard->decoder_bytes);
++        if (!account || original->size > DECODE_BUFFER_LIMIT - used)
++        {
++            av_free(account);
++            av_frame_unref(frame);
++            return AVERROR(ENOMEM);
++        }
++        *account = (BufferAccount){original, guard, original->size};
++        AVBufferRef *tracked =
++            av_buffer_create(original->data, original->size, release_frame_buffer, account, 0);
++        if (!tracked)
++        {
++            av_free(account);
++            av_frame_unref(frame);
++            return AVERROR(ENOMEM);
++        }
++        atomic_fetch_add(&guard->decoder_bytes, original->size);
++        frame->buf[i] = tracked;
++    }
++    return 0;
++}
++static int same_file(const struct stat *a, const struct stat *b)
++{
++    return a->st_dev == b->st_dev && a->st_ino == b->st_ino && a->st_size == b->st_size &&
++           a->st_mtimespec.tv_sec == b->st_mtimespec.tv_sec &&
++           a->st_mtimespec.tv_nsec == b->st_mtimespec.tv_nsec &&
++           a->st_ctimespec.tv_sec == b->st_ctimespec.tv_sec &&
++           a->st_ctimespec.tv_nsec == b->st_ctimespec.tv_nsec;
++}
++static int parse_number(const char *text, int64_t maximum, int64_t *result)
++{
++    if (!text || !*text)
++        return 0;
++    for (const char *p = text; *p; ++p)
++        if (*p < '0' || *p > '9')
++            return 0;
++    char *end = NULL;
++    errno = 0;
++    int64_t value = strtoll(text, &end, 10);
++    if (errno || *end || value < 0 || value > maximum)
++        return 0;
++    *result = value;
++    return 1;
++}
++static int origin_for(AVFormatContext *fmt, int64_t *origin)
++{
++    /* VLC's Matroska demuxer exposes block timecodes directly through
++     * GET_TIME/SET_TIME. A positive container start is an initial timeline gap,
++     * not an offset to subtract (native seek 6s in a +5s MKV shows source 1s).
++     * This policy covers flat Matroska/WebM; ordered editions are unqualified. */
++    if (fmt->iformat && fmt->iformat->name && strcmp(fmt->iformat->name, "matroska,webm") == 0)
++    {
++        if (fmt->start_time != AV_NOPTS_VALUE && fmt->start_time < 0)
++            return 0;
++        *origin = 0;
++        return 1;
++    }
++    if (fmt->start_time != AV_NOPTS_VALUE)
++    {
++        *origin = fmt->start_time;
++        return 1;
++    }
++    int found = 0;
++    int64_t earliest = INT64_MAX;
++    /* An unknown start for any timeline-bearing stream makes an earliest-stream
++     * origin ambiguous. Attachments/data/subtitles do not define playback zero. */
++    for (unsigned i = 0; i < fmt->nb_streams; ++i)
++    {
++        AVStream *s = fmt->streams[i];
++        if ((s->disposition & AV_DISPOSITION_ATTACHED_PIC) ||
++            (s->codecpar->codec_type != AVMEDIA_TYPE_VIDEO &&
++             s->codecpar->codec_type != AVMEDIA_TYPE_AUDIO))
++            continue;
++        if (s->start_time == AV_NOPTS_VALUE || s->time_base.num <= 0 || s->time_base.den <= 0)
++            return 0;
++        int64_t start = av_rescale_q(s->start_time, s->time_base, AV_TIME_BASE_Q);
++        if (start == INT64_MIN || start == INT64_MAX)
++            return 0;
++        if (start < earliest)
++            earliest = start;
++        found = 1;
++    }
++    if (found)
++        *origin = earliest;
++    return found;
++}
++
++typedef struct
++{
++    AVFrame *frame, *best;
++    AVStream *stream;
++    int64_t origin, actual, last_pts;
++    int decoded, reached;
++    const char *error;
++} Selection;
++static int receive_available(AVCodecContext *codec, Selection *s)
++{
++    for (;;)
++    {
++        int result = avcodec_receive_frame(codec, s->frame);
++        if (result == AVERROR(EAGAIN) || result == AVERROR_EOF)
++            return result;
++        if (result < 0)
++        {
++            s->error = "decode_failed";
++            return result;
++        }
++        if (++s->decoded > MAX_FRAMES)
++        {
++            s->error = "resource_limit";
++            return AVERROR(ENOMEM);
++        }
++        if (!(s->frame->flags & AV_FRAME_FLAG_KEY))
++        {
++            av_frame_unref(s->frame);
++            continue;
++        }
++        int64_t stamp = s->frame->best_effort_timestamp;
++        /* best_effort_timestamp may synthesize a value from DTS. Require an
++         * actual presentation timestamp too; unknown PTS is never a success. */
++        if (stamp == AV_NOPTS_VALUE || s->frame->pts == AV_NOPTS_VALUE ||
++            (s->frame->flags & AV_FRAME_FLAG_CORRUPT))
++        {
++            s->error = "unknown_timing";
++            return AVERROR_INVALIDDATA;
++        }
++        if (s->last_pts != AV_NOPTS_VALUE && stamp < s->last_pts)
++        {
++            s->error = "ambiguous_timing";
++            return AVERROR_INVALIDDATA;
++        }
++        s->last_pts = stamp;
++        int64_t absolute = av_rescale_q(stamp, s->stream->time_base, AV_TIME_BASE_Q);
++        if (absolute == INT64_MIN || absolute == INT64_MAX ||
++            (s->origin > 0 && absolute < INT64_MIN + s->origin) ||
++            (s->origin < 0 && absolute > INT64_MAX + s->origin))
++        {
++            s->error = "unknown_timing";
++            return AVERROR_INVALIDDATA;
++        }
++        int64_t normalized = absolute - s->origin;
++        /* Ignore negative preroll but keep decoding it for reference pictures. */
++        if (normalized >= 0)
++        {
++            /* Keyframe sampling returns the first qualified keyframe from the backward seek.
++             * Usually this precedes the pointer. Some demuxers/codecs can only
++             * deliver a later keyframe; return its truthful PTS without scanning
++             * across the GOP for a closer/future candidate. The GUI labels it.
++             */
++            av_frame_unref(s->best);
++            if (av_frame_ref(s->best, s->frame) < 0)
++            {
++                s->error = "resource_limit";
++                return AVERROR(ENOMEM);
++            }
++            s->actual = normalized;
++            s->reached = 1;
++        }
++        av_frame_unref(s->frame);
++        if (s->reached)
++            return 0;
++    }
++}
++static const char *decode_keyframe(AVFormatContext *fmt, AVCodecContext *codec, int stream_index,
++                                   Selection *selection, AVPacket *packet)
++{
++    int draining = 0, drain_sent = 0;
++    for (int packets = 0; packets < MAX_PACKETS; ++packets)
++    {
++        int read_result = draining ? AVERROR_EOF : av_read_frame(fmt, packet);
++        if (read_result == AVERROR_EOF)
++            draining = 1;
++        else if (read_result < 0)
++            return "read_failed";
++        if (!draining && packet->stream_index != stream_index)
++        {
++            av_packet_unref(packet);
++            continue;
++        }
++        int send_result;
++        for (;;)
++        {
++            send_result = avcodec_send_packet(codec, draining ? NULL : packet);
++            if (send_result != AVERROR(EAGAIN))
++                break;
++            int previous_frames = selection->decoded;
++            int receive_result = receive_available(codec, selection);
++            if (selection->error)
++                return selection->error;
++            if (selection->reached)
++                return NULL;
++            /* FFmpeg's API forbids send/receive both returning EAGAIN without
++             * progress. Fail rather than spinning if a codec violates it. */
++            if (receive_result == AVERROR(EAGAIN) && previous_frames == selection->decoded)
++                return "decode_failed";
++        }
++        av_packet_unref(packet);
++        if (send_result < 0 && send_result != AVERROR_EOF)
++            return "decode_failed";
++        if (draining)
++            drain_sent = 1;
++        int receive_result = receive_available(codec, selection);
++        if (selection->error)
++            return selection->error;
++        if (selection->reached || receive_result == AVERROR_EOF)
++            break;
++        if (drain_sent && receive_result == AVERROR(EAGAIN))
++            return "decode_failed";
++    }
++    if (!selection->best->data[0])
++        return "no_frame";
++    if (!selection->reached && !drain_sent)
++        return "resource_limit";
++    return NULL;
++}
++
++/* Orthogonal matrices cover rotations and mirrors without interpolation.
++ * Reject shear, arbitrary angle, perspective and scaling rather than guessing. */
++static int orientation_for(AVFrame *frame, AVStream *stream, int *a, int *b, int *c, int *d)
++{
++    const int32_t *matrix = NULL;
++    AVFrameSideData *side = av_frame_get_side_data(frame, AV_FRAME_DATA_DISPLAYMATRIX);
++    const AVPacketSideData *coded =
++        av_packet_side_data_get(stream->codecpar->coded_side_data,
++                                stream->codecpar->nb_coded_side_data, AV_PKT_DATA_DISPLAYMATRIX);
++    if (side)
++    {
++        if (side->size != 9 * sizeof(int32_t))
++            return 0;
++        matrix = (const int32_t *)side->data;
++    }
++    else if (coded)
++    {
++        if (coded->size != 9 * sizeof(int32_t))
++            return 0;
++        matrix = (const int32_t *)coded->data;
++    }
++    *a = *d = 1;
++    *b = *c = 0;
++    if (!matrix)
++    {
++        AVDictionaryEntry *rotate = av_dict_get(stream->metadata, "rotate", NULL, 0);
++        if (rotate)
++        {
++            char *end;
++            errno = 0;
++            double angle = strtod(rotate->value, &end);
++            if (errno || *end || !isfinite(angle) ||
++                fabs(angle / 90.0 - round(angle / 90.0)) > 0.0001)
++                return 0;
++            const double quarter_turns = fmod(round(angle / 90.0), 4.0);
++            int quarter = (int)quarter_turns;
++            if (quarter < 0)
++                quarter += 4;
++            if (quarter == 1)
++            {
++                *a = *d = 0;
++                *b = 1;
++                *c = -1;
++            }
++            if (quarter == 2)
++            {
++                *a = *d = -1;
++            }
++            if (quarter == 3)
++            {
++                *a = *d = 0;
++                *b = -1;
++                *c = 1;
++            }
++        }
++        return 1;
++    }
++    if (matrix[2] || matrix[5] || matrix[8] != (1 << 30))
++        return 0;
++    int positions[] = {0, 1, 3, 4}, values[4];
++    for (int i = 0; i < 4; ++i)
++    {
++        int32_t value = matrix[positions[i]];
++        if (value != 0 && value != 65536 && value != -65536)
++            return 0;
++        values[i] = value / 65536;
++    }
++    *a = values[0];
++    *b = values[1];
++    *c = values[2];
++    *d = values[3];
++    return abs(*a) + abs(*c) == 1 && abs(*b) + abs(*d) == 1 && *a * *b + *c * *d == 0;
++}
++static int sdr_supported(AVFrame *frame, AVStream *stream)
++{
++    enum AVPacketSideDataType unsupported_coded[] = {
++        AV_PKT_DATA_MASTERING_DISPLAY_METADATA, AV_PKT_DATA_CONTENT_LIGHT_LEVEL,
++        AV_PKT_DATA_DOVI_CONF, AV_PKT_DATA_DYNAMIC_HDR10_PLUS, AV_PKT_DATA_ICC_PROFILE};
++    for (size_t i = 0; i < sizeof(unsupported_coded) / sizeof(unsupported_coded[0]); ++i)
++        if (av_packet_side_data_get(stream->codecpar->coded_side_data,
++                                    stream->codecpar->nb_coded_side_data, unsupported_coded[i]))
++            return 0;
++    if (frame->color_trc == AVCOL_TRC_UNSPECIFIED)
++        frame->color_trc = stream->codecpar->color_trc;
++    if (frame->color_primaries == AVCOL_PRI_UNSPECIFIED)
++        frame->color_primaries = stream->codecpar->color_primaries;
++    if (frame->colorspace == AVCOL_SPC_UNSPECIFIED)
++        frame->colorspace = stream->codecpar->color_space;
++    if (frame->color_range == AVCOL_RANGE_UNSPECIFIED)
++        frame->color_range = stream->codecpar->color_range;
++    if (frame->color_trc == AVCOL_TRC_SMPTE2084 || frame->color_trc == AVCOL_TRC_ARIB_STD_B67 ||
++        frame->color_trc == AVCOL_TRC_BT2020_10 || frame->color_trc == AVCOL_TRC_BT2020_12 ||
++        frame->color_primaries == AVCOL_PRI_BT2020)
++        return 0;
++    enum AVFrameSideDataType unsupported[] = {AV_FRAME_DATA_MASTERING_DISPLAY_METADATA,
++                                              AV_FRAME_DATA_CONTENT_LIGHT_LEVEL,
++                                              AV_FRAME_DATA_DYNAMIC_HDR_PLUS,
++                                              AV_FRAME_DATA_DYNAMIC_HDR_VIVID,
++                                              AV_FRAME_DATA_DOVI_RPU_BUFFER,
++                                              AV_FRAME_DATA_DOVI_METADATA,
++                                              AV_FRAME_DATA_ICC_PROFILE};
++    for (size_t i = 0; i < sizeof(unsupported) / sizeof(unsupported[0]); ++i)
++        if (av_frame_get_side_data(frame, unsupported[i]))
++            return 0;
++    switch (frame->color_trc)
++    {
++    case AVCOL_TRC_UNSPECIFIED:
++    case AVCOL_TRC_BT709:
++    case AVCOL_TRC_GAMMA22:
++    case AVCOL_TRC_GAMMA28:
++    case AVCOL_TRC_SMPTE170M:
++    case AVCOL_TRC_SMPTE240M:
++    case AVCOL_TRC_IEC61966_2_1:
++        return 1;
++    default:
++        return 0;
++    }
++}
++static const char *render_frame(AVFrame *frame, AVStream *stream, int max_w, int max_h,
++                                uint8_t **rgba, int *width, int *height)
++{
++    if (!sdr_supported(frame, stream))
++        return "unsupported_color";
++    if (frame->width <= 0 || frame->height <= 0 ||
++        (int64_t)frame->width * frame->height > MAX_PIXELS)
++        return "resource_limit";
++    const AVPixFmtDescriptor *descriptor = av_pix_fmt_desc_get(frame->format);
++    if (!descriptor || (descriptor->flags & AV_PIX_FMT_FLAG_HWACCEL))
++        return "unsupported_format";
++    int a, b, c, d;
++    if (!orientation_for(frame, stream, &a, &b, &c, &d))
++        return "unsupported_transform";
++    AVRational sar = frame->sample_aspect_ratio;
++    if (sar.num == 0 && sar.den > 0)
++        sar = stream->sample_aspect_ratio;
++    if (sar.num == 0 && sar.den > 0)
++        sar = (AVRational){1, 1};
++    if (sar.num <= 0 || sar.den <= 0)
++        return "unsupported_aspect";
++    double display_w = frame->width * av_q2d(sar), display_h = frame->height;
++    if (!isfinite(display_w) || display_w <= 0 || display_w / display_h < 0.01 ||
++        display_w / display_h > 100)
++        return "unsupported_aspect";
++    if (b || c)
++    {
++        double swap = display_w;
++        display_w = display_h;
++        display_h = swap;
++    }
++    double fit = fmin(max_w / display_w, max_h / display_h);
++    const double fitted_width = fmax(1, floor(display_w * fit + 0.000001));
++    const double fitted_height = fmax(1, floor(display_h * fit + 0.000001));
++    *width = (int)fitted_width;
++    *height = (int)fitted_height;
++    int source_w = b || c ? *height : *width;
++    int source_h = b || c ? *width : *height;
++    size_t bytes = (size_t)*width * *height * 4;
++    uint8_t *scaled = av_malloc(bytes);
++    *rgba = av_malloc(bytes);
++    struct SwsContext *scale =
++        sws_getContext(frame->width, frame->height, frame->format, source_w, source_h,
++                       AV_PIX_FMT_RGBA, SWS_BILINEAR, NULL, NULL, NULL);
++    if (!scaled || !*rgba || !scale)
++    {
++        av_free(scaled);
++        sws_freeContext(scale);
++        return "resource_limit";
++    }
++    int matrix = SWS_CS_DEFAULT;
++    switch (frame->colorspace)
++    {
++    case AVCOL_SPC_BT709:
++        matrix = SWS_CS_ITU709;
++        break;
++    case AVCOL_SPC_FCC:
++        matrix = SWS_CS_FCC;
++        break;
++    case AVCOL_SPC_BT470BG:
++    case AVCOL_SPC_SMPTE170M:
++        matrix = SWS_CS_ITU601;
++        break;
++    case AVCOL_SPC_SMPTE240M:
++        matrix = SWS_CS_SMPTE240M;
++        break;
++    case AVCOL_SPC_UNSPECIFIED:
++        matrix = frame->height >= 720 ? SWS_CS_ITU709 : SWS_CS_ITU601;
++        break;
++    case AVCOL_SPC_RGB:
++        if (!(descriptor->flags & AV_PIX_FMT_FLAG_RGB))
++            matrix = -1;
++        break;
++    default:
++        matrix = -1;
++        break;
++    }
++    if (matrix < 0)
++    {
++        av_free(scaled);
++        sws_freeContext(scale);
++        return "unsupported_color";
++    }
++    int legacy_full_range =
++        frame->format == AV_PIX_FMT_YUVJ420P || frame->format == AV_PIX_FMT_YUVJ422P ||
++        frame->format == AV_PIX_FMT_YUVJ444P || frame->format == AV_PIX_FMT_YUVJ440P ||
++        frame->format == AV_PIX_FMT_YUVJ411P;
++    int full = frame->color_range == AVCOL_RANGE_JPEG ||
++               (descriptor->flags & AV_PIX_FMT_FLAG_RGB) ||
++               (frame->color_range == AVCOL_RANGE_UNSPECIFIED && legacy_full_range);
++    const int *coefficients = sws_getCoefficients(matrix);
++    if (sws_setColorspaceDetails(scale, coefficients, full, coefficients, 1, 0, 1 << 16, 1 << 16) <
++        0)
++    {
++        av_free(scaled);
++        sws_freeContext(scale);
++        return "unsupported_color";
++    }
++    uint8_t *output[] = {scaled, NULL, NULL, NULL};
++    int strides[] = {source_w * 4, 0, 0, 0};
++    int rows = sws_scale(scale, (const uint8_t *const *)frame->data, frame->linesize, 0,
++                         frame->height, output, strides);
++    sws_freeContext(scale);
++    if (rows != source_h)
++    {
++        av_free(scaled);
++        return "scale_failed";
++    }
++    int offset_x = (a < 0 ? source_w - 1 : 0) + (c < 0 ? source_h - 1 : 0);
++    int offset_y = (b < 0 ? source_w - 1 : 0) + (d < 0 ? source_h - 1 : 0);
++    for (int y = 0; y < source_h; ++y)
++        for (int x = 0; x < source_w; ++x)
++        {
++            int dst_x = a * x + c * y + offset_x, dst_y = b * x + d * y + offset_y;
++            memcpy(*rgba + ((size_t)dst_y * *width + dst_x) * 4,
++                   scaled + ((size_t)y * source_w + x) * 4, 4);
++        }
++    av_free(scaled);
++    return NULL;
++}
++
++/* Isolated identity acquisition: potentially blocking NAS reads stay outside
++ * VLC. A failed or timed-out full hash never qualifies persistent cache reuse. */
++static int fingerprint_main(int argc, char **argv)
++{
++    const char *mode = NULL, *path = NULL, *error = NULL;
++    Guard guard = {.fd = -1, .worker = 1, .deadline = INT64_MAX, .cpu_deadline = INT64_MAX};
++    pthread_t monitor;
++    int started = 0;
++    struct stat before, after, path_state;
++    struct AVSHA *sha = NULL;
++    uint8_t *buffer = NULL, digest[32];
++    char hex[65];
++    if (argc != 5 || strcmp(argv[1], "--fingerprint") || strcmp(argv[3], "--input") ||
++        (strcmp(argv[2], "full") && strcmp(argv[2], "sampled") && strcmp(argv[2], "stat")) ||
++        argv[4][0] != '/')
++    {
++        error = "invalid_arguments";
++        goto done;
++    }
++    mode = argv[2];
++    path = argv[4];
++    int metadata_only = !strcmp(mode, "stat");
++    begin_operation(&guard);
++    if (pthread_create(&monitor, NULL, watchdog, &guard))
++    {
++        error = "resource_limit";
++        goto done;
++    }
++    started = 1;
++    if (metadata_only)
++    {
++        /* stat follows the current pathname/symlink target. Metadata-only
++         * validation needs no descriptor or SMB open/close round trip. */
++        if (stat(path, &before) || !S_ISREG(before.st_mode) || before.st_size <= 0)
++        {
++            error = "invalid_input";
++            goto done;
++        }
++    }
++    else
++    {
++        guard.fd = open(path, O_RDONLY | O_CLOEXEC | O_NONBLOCK);
++        if (guard.fd < 0 || fstat(guard.fd, &before) || !S_ISREG(before.st_mode) ||
++            before.st_size <= 0 || stat(path, &path_state) || !same_file(&before, &path_state))
++        {
++            error = "invalid_input";
++            goto done;
++        }
++    }
++    guard.size = before.st_size;
++    sha = av_sha_alloc();
++    buffer = av_malloc(65536);
++    if (!sha || !buffer || av_sha_init(sha, 256))
++    {
++        error = "resource_limit";
++        goto done;
++    }
++    int full = !strcmp(mode, "full") || guard.size <= 1048576;
++    /* Full hashes are conventional SHA256 over bytes. Sampled hashes are
++     * domain-separated, followed by big-endian offset/length and each window. */
++    if (!full && strcmp(mode, "stat"))
++    {
++        const uint8_t domain[] = "vlc-thumbnail-sampled-v1";
++        av_sha_update(sha, domain, sizeof(domain));
++    }
++    if (metadata_only)
++    {
++        char record[256];
++        int length =
++            snprintf(record, sizeof(record),
++                     "vlc-thumbnail-stat-v1:%" PRIu64 ":%" PRIu64 ":%" PRId64 ":%" PRId64
++                     ":%ld:%" PRId64 ":%ld",
++                     (uint64_t)before.st_dev, (uint64_t)before.st_ino, (int64_t)before.st_size,
++                     (int64_t)before.st_mtimespec.tv_sec, before.st_mtimespec.tv_nsec,
++                     (int64_t)before.st_ctimespec.tv_sec, before.st_ctimespec.tv_nsec);
++        if (length < 0 || (size_t)length >= sizeof(record))
++        {
++            error = "resource_limit";
++            goto done;
++        }
++        /* Metadata digest is only a compact stat record, never content proof. */
++        av_sha_update(sha, (const uint8_t *)record, length);
++    }
++    int windows = metadata_only ? 0 : full ? 1 : 16;
++    for (int window = 0; window < windows; ++window)
++    {
++        int64_t offset =
++            full ? 0
++                 : ((guard.size - 65536) / 15) * window + ((guard.size - 65536) % 15) * window / 15;
++        int64_t remaining = full ? guard.size : 65536;
++        if (!full)
++        {
++            uint8_t descriptor[16];
++            for (int i = 0; i < 8; ++i)
++            {
++                descriptor[i] = (uint64_t)offset >> (56 - i * 8);
++                descriptor[i + 8] = (uint64_t)remaining >> (56 - i * 8);
++            }
++            av_sha_update(sha, descriptor, sizeof(descriptor));
++        }
++        if (seek_local(&guard, offset, SEEK_SET) < 0)
++        {
++            error = "read_failed";
++            goto done;
++        }
++        while (remaining > 0)
++        {
++            int chunk = remaining < 65536 ? (int)remaining : 65536;
++            int count = read_local(&guard, buffer, chunk);
++            if (count <= 0)
++            {
++                error = expired(&guard) ? "timeout" : "read_failed";
++                goto done;
++            }
++            av_sha_update(sha, buffer, count);
++            remaining -= count;
++        }
++    }
++    av_sha_final(sha, digest);
++    for (int i = 0; i < 32; ++i)
++        snprintf(hex + i * 2, 3, "%02x", digest[i]);
++    if (metadata_only)
++    {
++        if (stat(path, &after) || !same_file(&before, &after))
++            error = "media_changed";
++    }
++    else if (fstat(guard.fd, &after) || stat(path, &path_state) || !same_file(&before, &after) ||
++             !same_file(&before, &path_state))
++        error = "media_changed";
++    if (expired(&guard))
++        error = "timeout";
++done:
++    av_free(sha);
++    av_free(buffer);
++    if (guard.fd >= 0)
++        close(guard.fd);
++    if (started)
++    {
++        atomic_store(&guard.stop, 1);
++        pthread_join(monitor, NULL);
++    }
++    if (error)
++        printf("{\"version\":4,\"type\":\"identity\",\"ok\":false,\"error\":\"%s\",\"payload_"
++               "bytes\":0}\n",
++               error);
++    else
++        printf("{\"version\":4,\"type\":\"identity\",\"ok\":true,\"fingerprint\":\"%s\",\"policy\":"
++               "\"%s\","
++               "\"stat_identity\":\"%" PRIu64 ":%" PRIu64 ":%" PRId64 ":%" PRId64 ":%ld:%" PRId64
++               ":%ld\","
++               "\"bytes_read\":%" PRIu64 ",\"read_calls\":%" PRIu64 ",\"payload_bytes\":0}\n",
++               hex, mode, (uint64_t)before.st_dev, (uint64_t)before.st_ino, (int64_t)before.st_size,
++               (int64_t)before.st_mtimespec.tv_sec, before.st_mtimespec.tv_nsec,
++               (int64_t)before.st_ctimespec.tv_sec, before.st_ctimespec.tv_nsec, guard.bytes_read,
++               guard.read_calls);
++    return error ? 1 : 0;
++}
++
++/* Admission comes from read-only parser properties, never file Tags. */
++static int admitted_flat_timeline(AVFormatContext *fmt, int64_t counters[4])
++{
++    const char *names[] = {"flat_scan_bytes", "flat_scan_reads", "flat_scan_seeks",
++                           "flat_scan_nodes"};
++    int64_t checked = 0;
++    if (!fmt->priv_data ||
++        av_opt_get_int(fmt->priv_data, "flat_timeline_checked", 0, &checked) < 0 || checked != 1)
++        return 0;
++    for (size_t i = 0; i < 4; i++)
++    {
++        if (av_opt_get_int(fmt->priv_data, names[i], 0, &counters[i]) < 0 || counters[i] < 0)
++            return 0;
++    }
++    return 1;
++}
++static void print_admission_counters(const int64_t counters[4])
++{
++    printf(",\"flat_scan_bytes\":%" PRId64 ",\"flat_scan_reads\":%" PRId64
++           ",\"flat_scan_seeks\":%" PRId64 ",\"flat_scan_nodes\":%" PRId64,
++           counters[0], counters[1], counters[2], counters[3]);
++}
++
++int main(int argc, char **argv)
++{
++    if (argc > 1 && !strcmp(argv[1], "--fingerprint"))
++        return fingerprint_main(argc, argv);
++    const char *error = NULL, *path = NULL;
++    int64_t requested = -1, input_id = -1, max_w = -1, max_h = -1, expected_videos = -1;
++    const char *mapping = NULL;
++    int64_t admission[4] = {0};
++    int track_number = -1;
++    AVFormatContext *fmt = NULL;
++    AVIOContext *io = NULL;
++    AVCodecContext *codec = NULL;
++    AVPacket *packet = NULL;
++    AVFrame *frame = NULL, *best = NULL;
++    uint8_t *rgba = NULL;
++    Guard guard = {.fd = -1, .deadline = INT64_MAX, .cpu_deadline = INT64_MAX};
++    int worker = argc > 1 && !strcmp(argv[1], "--worker");
++    guard.worker = worker;
++    begin_operation(&guard);
++    int64_t operation_start = av_gettime_relative();
++    int64_t request_id = 0;
++    pthread_t monitor;
++    int monitor_started = 0, width = 0, height = 0;
++    int64_t origin = 0;
++    Selection selection = {0};
++    struct stat before, after, path_state;
++    if ((!worker && argc != 13) || (worker && argc != 12))
++    {
++        error = "invalid_arguments";
++        goto done;
++    }
++    for (int i = worker ? 2 : 1; i < argc; i += 2)
++    {
++        if (!strcmp(argv[i], "--input") && !path)
++            path = argv[i + 1];
++        else if (!worker && !strcmp(argv[i], "--time-us") && requested == -1 &&
++                 parse_number(argv[i + 1], INT64_MAX, &requested))
++        {
++        }
++        else if (!strcmp(argv[i], "--video-input-id") && input_id == -1 &&
++                 parse_number(argv[i + 1], INT_MAX, &input_id))
++        {
++        }
++        else if (!strcmp(argv[i], "--video-count") && expected_videos == -1 &&
++                 parse_number(argv[i + 1], 128, &expected_videos) && expected_videos > 0)
++        {
++        }
++        else if (!strcmp(argv[i], "--max-width") && max_w == -1 &&
++                 parse_number(argv[i + 1], 320, &max_w))
++        {
++        }
++        else if (!strcmp(argv[i], "--max-height") && max_h == -1 &&
++                 parse_number(argv[i + 1], 180, &max_h))
++        {
++        }
++        else
++        {
++            error = "invalid_arguments";
++            goto done;
++        }
++    }
++    if (!path || path[0] != '/' || (!worker && requested < 0) || expected_videos < 1 ||
++        input_id < 0 || max_w < 1 || max_h < 1)
++    {
++        error = "invalid_arguments";
++        goto done;
++    }
++    av_log_set_level(AV_LOG_QUIET); /* Untrusted metadata/paths never reach stdout or stderr. */
++    av_max_alloc(ALLOC_LIMIT);
++    struct rlimit cpu_limit = {5, 5};
++    if (!worker && setrlimit(RLIMIT_CPU, &cpu_limit))
++    {
++        error = "resource_limit";
++        goto done;
++    }
++    if (pthread_create(&monitor, NULL, watchdog, &guard))
++    {
++        error = "resource_limit";
++        goto done;
++    }
++    monitor_started = 1;
++    guard.fd = open(path, O_RDONLY | O_CLOEXEC | O_NONBLOCK);
++    if (guard.fd < 0 || fstat(guard.fd, &before) || !S_ISREG(before.st_mode) ||
++        before.st_size <= 0 || stat(path, &path_state) || !same_file(&before, &path_state))
++    {
++        error = "invalid_input";
++        goto done;
++    }
++    guard.size = before.st_size;
++    fmt = avformat_alloc_context();
++    uint8_t *io_buffer = av_malloc(32768);
++    if (!fmt || !io_buffer)
++    {
++        av_free(io_buffer);
++        error = "resource_limit";
++        goto done;
++    }
++    io = avio_alloc_context(io_buffer, 32768, 0, &guard, read_local, NULL, seek_local);
++    if (!io)
++    {
++        av_free(io_buffer);
++        error = "resource_limit";
++        goto done;
++    }
++    fmt->pb = io;
++    fmt->flags |= AVFMT_FLAG_CUSTOM_IO;
++    fmt->interrupt_callback = (AVIOInterruptCB){interrupt_io, &guard};
++    fmt->io_open = deny_secondary_io;
++    fmt->max_streams = 128;
++    fmt->probesize = 4 * 1024 * 1024;
++    fmt->max_analyze_duration = 2 * AV_TIME_BASE;
++    AVDictionary *options = NULL;
++    av_dict_set(&options, "protocol_whitelist", "", 0);
++    av_dict_set(&options, "format_whitelist",
++                "mov,matroska,webm,avi,mpegts,mpeg,ogg,flv,asf,rm,nut", 0);
++    av_dict_set(&options, "enable_drefs", "0", 0);
++    av_dict_set(&options, "use_absolute_path", "0", 0);
++    av_dict_set(&options, "flat_timeline", "1", 0);
++    int opened = avformat_open_input(&fmt, NULL, NULL, &options);
++    int flat = opened >= 0 && strcmp(fmt->iformat->name, "matroska,webm") == 0;
++    int admitted = !flat || (!av_dict_get(options, "flat_timeline", NULL, 0) &&
++                             admitted_flat_timeline(fmt, admission));
++    av_dict_free(&options);
++    if (opened < 0 || !admitted || avformat_find_stream_info(fmt, NULL) < 0)
++    {
++        error = "unsupported_input";
++        goto done;
++    }
++    /* A program-local player selection cannot identify a file-global stream. */
++    if (fmt->nb_programs > 1)
++    {
++        error = "ambiguous_track_mapping";
++        goto done;
++    }
++    if (fmt->nb_streams > 128)
++    {
++        error = "unsupported_input";
++        goto done;
++    }
++    int videos[128], video_count = 0;
++    for (unsigned i = 0; i < fmt->nb_streams; ++i)
++    {
++        AVStream *stream = fmt->streams[i];
++        if (stream->codecpar->codec_type == AVMEDIA_TYPE_VIDEO &&
++            !(stream->disposition & AV_DISPOSITION_ATTACHED_PIC))
++            videos[video_count++] = (int)i;
++    }
++    if (expected_videos != video_count)
++    {
++        error = "ambiguous_track_mapping";
++        goto done;
++    }
++    int matroska = strcmp(fmt->iformat->name, "matroska,webm") == 0;
++    int selected = -1;
++    if (matroska)
++    {
++        /* Normal contrib exposes representable TrackNumber in AVStream.id.
++         * Validate identities across tracks, including audio/subtitle, before
++         * matching the requested numeric input ID. Attachments have no track. */
++        for (unsigned i = 0; i < fmt->nb_streams; ++i)
++        {
++            AVStream *stream = fmt->streams[i];
++            if (stream->codecpar->codec_type == AVMEDIA_TYPE_ATTACHMENT ||
++                (stream->disposition & AV_DISPOSITION_ATTACHED_PIC))
++                continue;
++            if (stream->id <= 0)
++            {
++                error = "ambiguous_track_mapping";
++                goto done;
++            }
++            for (unsigned j = 0; j < i; ++j)
++            {
++                AVStream *other = fmt->streams[j];
++                if (other->codecpar->codec_type != AVMEDIA_TYPE_ATTACHMENT &&
++                    !(other->disposition & AV_DISPOSITION_ATTACHED_PIC) && other->id == stream->id)
++                {
++                    error = "ambiguous_track_mapping";
++                    goto done;
++                }
++            }
++        }
++        for (int i = 0; i < video_count; ++i)
++        {
++            AVStream *stream = fmt->streams[videos[i]];
++            /* The existing qualified multi-video scope is AVC only. */
++            if (video_count > 1 && stream->codecpar->codec_id != AV_CODEC_ID_H264)
++            {
++                error = "ambiguous_track_mapping";
++                goto done;
++            }
++            if (stream->id == input_id)
++                selected = videos[i];
++        }
++        if (selected < 0)
++        {
++            error = "track_unavailable";
++            goto done;
++        }
++        track_number = fmt->streams[selected]->id;
++        mapping = "matroska-track-number-flat-v1";
++    }
++    else
++    {
++        if (video_count != 1)
++        {
++            error = "ambiguous_track_mapping";
++            goto done;
++        }
++        selected = videos[0];
++        mapping = "single";
++    }
++    if (fmt->duration == AV_NOPTS_VALUE || fmt->duration <= 0)
++    {
++        error = "unknown_duration";
++        goto done;
++    }
++    if (!origin_for(fmt, &origin))
++    {
++        error = "ambiguous_origin";
++        goto done;
++    }
++    AVStream *stream = fmt->streams[selected];
++    if (stream->time_base.num <= 0 || stream->time_base.den <= 0 ||
++        (origin > 0 && requested > INT64_MAX - origin))
++    {
++        error = "unknown_timing";
++        goto done;
++    }
++    const AVCodec *decoder = avcodec_find_decoder(stream->codecpar->codec_id);
++    if (!decoder)
++    {
++        error = "unsupported_codec";
++        goto done;
++    }
++    codec = avcodec_alloc_context3(decoder);
++    if (!codec || avcodec_parameters_to_context(codec, stream->codecpar) < 0)
++    {
++        error = "resource_limit";
++        goto done;
++    }
++    if (!(decoder->capabilities & AV_CODEC_CAP_DR1))
++    {
++        error = "unsupported_codec";
++        goto done;
++    }
++    codec->opaque = &guard;
++    codec->get_buffer2 = bounded_get_buffer;
++    codec->thread_count = 1;
++    codec->thread_type = 0;
++    codec->skip_frame = AVDISCARD_NONKEY;
++    codec->max_pixels = MAX_PIXELS;
++    codec->pkt_timebase = stream->time_base;
++    codec->err_recognition = AV_EF_CAREFUL | AV_EF_EXPLODE;
++    if (avcodec_open2(codec, decoder, NULL) < 0)
++    {
++        error = "unsupported_codec";
++        goto done;
++    }
++    packet = av_packet_alloc();
++    frame = av_frame_alloc();
++    best = av_frame_alloc();
++    if (!packet || !frame || !best)
++    {
++        error = "resource_limit";
++        goto done;
++    }
++    if (worker)
++    {
++        if (fstat(guard.fd, &after) || stat(path, &path_state) || !same_file(&before, &after) ||
++            !same_file(&before, &path_state))
++        {
++            error = "media_changed";
++            goto done;
++        }
++        idle_operation(&guard);
++        printf("{\"version\":4,\"type\":\"ready\",\"ok\":true,\"duration_us\":%" PRId64
++               ",\"bytes_read\":%" PRIu64 ",\"read_calls\":%" PRIu64 ",\"seek_calls\":%" PRIu64
++               ",\"open_count\":1,\"operation_us\":%" PRId64 ",\"video_input_id\":%" PRId64
++               ",\"video_count\":%" PRId64 ",\"mapping\":\"%s\",\"video_track_number\":%d",
++               fmt->duration, guard.bytes_read, guard.read_calls, guard.seek_calls,
++               av_gettime_relative() - operation_start, input_id, expected_videos, mapping,
++               track_number);
++        print_admission_counters(admission);
++        printf("}\n");
++        if (fflush(stdout))
++            _exit(1);
++    }
++    for (;;)
++    {
++        uint64_t initial_bytes = guard.bytes_read, initial_reads = guard.read_calls,
++                 initial_seeks = guard.seek_calls;
++        if (worker)
++        {
++            char line[98];
++            if (!fgets(line, sizeof(line), stdin))
++                break;
++            /* One bounded decimal pair, exactly one separating space and newline. */
++            size_t length = strlen(line);
++            char *space = strchr(line, ' ');
++            if (!length || length > 96 || line[length - 1] != '\n' || !space ||
++                strchr(space + 1, ' '))
++            {
++                error = "invalid_request";
++                goto done;
++            }
++            *space = '\0';
++            line[length - 1] = '\0';
++            if (!parse_number(line, INT64_MAX, &request_id) ||
++                !parse_number(space + 1, INT64_MAX, &requested))
++            {
++                error = "invalid_request";
++                goto done;
++            }
++            begin_operation(&guard);
++            operation_start = av_gettime_relative();
++        }
++        error = NULL;
++        width = height = 0;
++        av_freep(&rgba);
++        av_packet_unref(packet);
++        av_frame_unref(frame);
++        av_frame_unref(best);
++        if (fstat(guard.fd, &after) || stat(path, &path_state) || !same_file(&before, &after) ||
++            !same_file(&before, &path_state))
++        {
++            error = "media_changed";
++            goto request_done;
++        }
++        if (origin > 0 && requested > INT64_MAX - origin)
++        {
++            error = "unknown_timing";
++            goto request_done;
++        }
++        int64_t target = av_rescale_q(requested + origin, AV_TIME_BASE_Q, stream->time_base);
++        if (target == INT64_MIN || target == INT64_MAX ||
++            av_seek_frame(fmt, selected, target, AVSEEK_FLAG_BACKWARD) < 0)
++        {
++            error = "seek_failed";
++            goto request_done;
++        }
++        avcodec_flush_buffers(codec);
++        selection = (Selection){.frame = frame,
++                                .best = best,
++                                .stream = stream,
++                                .origin = origin,
++                                .last_pts = AV_NOPTS_VALUE};
++        error = decode_keyframe(fmt, codec, selected, &selection, packet);
++        if (error)
++            goto request_done;
++        if (selection.actual > fmt->duration)
++        {
++            error = "unknown_timing";
++            goto request_done;
++        }
++        error = render_frame(best, stream, (int)max_w, (int)max_h, &rgba, &width, &height);
++        if (error)
++            goto request_done;
++        if (fstat(guard.fd, &after) || stat(path, &path_state) || !same_file(&before, &after) ||
++            !same_file(&before, &path_state))
++            error = "media_changed";
++        if (expired(&guard))
++            error = "timeout";
++    request_done:
++        if (worker && (fstat(guard.fd, &after) || stat(path, &path_state) ||
++                       !same_file(&before, &after) || !same_file(&before, &path_state)))
++            error = "media_changed";
++        if (expired(&guard))
++            error = "timeout";
++        if (!worker)
++            break;
++        int64_t operation_us = av_gettime_relative() - operation_start;
++        /* Watchdog never writes in worker mode. Idle the operation before a
++         * response; caller bounds IPC writes/reads and can kill a stuck helper. */
++        idle_operation(&guard);
++        if (error)
++        {
++            printf("{\"version\":4,\"id\":%" PRId64 ",\"requested_us\":%" PRId64
++                   ",\"ok\":false,\"error\":\"%s\",\"payload_bytes\":0",
++                   request_id, requested, error);
++        }
++        else
++        {
++            printf("{\"version\":4,\"id\":%" PRId64
++                   ",\"ok\":true,\"sampling\":\"keyframe\",\"requested_us\":%" PRId64
++                   ",\"actual_us\":%" PRId64
++                   ",\"width\":%d,\"height\":%d,\"channels\":4,\"payload_bytes\":%zu,\"decoded_"
++                   "frames\":%d,\"timeline_origin_us\":%" PRId64,
++                   request_id, requested, selection.actual, width, height,
++                   (size_t)width * height * 4, selection.decoded, origin);
++        }
++        printf(",\"video_input_id\":%" PRId64 ",\"video_count\":%" PRId64
++               ",\"mapping\":\"%s\",\"video_track_number\":%d",
++               input_id, expected_videos, mapping, track_number);
++        printf(",\"bytes_read\":%" PRIu64 ",\"read_calls\":%" PRIu64 ",\"seek_calls\":%" PRIu64
++               ",\"request_bytes_read\":%" PRIu64 ",\"request_read_calls\":%" PRIu64
++               ",\"request_seek_calls\":%" PRIu64 ",\"open_count\":1,\"operation_us\":%" PRId64,
++               guard.bytes_read, guard.read_calls, guard.seek_calls,
++               guard.bytes_read - initial_bytes, guard.read_calls - initial_reads,
++               guard.seek_calls - initial_seeks, operation_us);
++        print_admission_counters(admission);
++        printf("}\n");
++        if ((!error &&
++             fwrite(rgba, 1, (size_t)width * height * 4, stdout) != (size_t)width * height * 4) ||
++            fflush(stdout))
++        {
++            _exit(1); /* A partial raw payload must not be followed by JSON. */
++        }
++        if (error && (!strcmp(error, "media_changed") || !strcmp(error, "timeout") ||
++                      !strcmp(error, "resource_limit")))
++        {
++            error = NULL;
++            break;
++        }
++        error = NULL;
++    }
++
++done:
++    /* Worker EOF/retirement can arrive from idle state. Teardown is active work,
++     * including potentially blocking descriptor close, with its own watchdog.
++     * Preserve the one-shot whole-request deadline rather than extending it here. */
++    if (worker && monitor_started)
++        begin_operation(&guard);
++    /* Stop the monitor before final output; worker hard limits emit no bytes. */
++    av_packet_free(&packet);
++    av_frame_free(&frame);
++    av_frame_free(&best);
++    avcodec_free_context(&codec);
++    avformat_close_input(&fmt);
++    if (io)
++    {
++        av_freep(&io->buffer);
++        avio_context_free(&io);
++    }
++    if (guard.fd >= 0)
++        close(guard.fd);
++    if (monitor_started)
++    {
++        if (expired(&guard))
++            error = "timeout";
++        atomic_store(&guard.stop, 1);
++        pthread_join(monitor, NULL);
++    }
++    int status = 1;
++    if (error)
++    {
++        printf("{\"version\":4,\"ok\":false,\"error\":\"%s\",\"payload_bytes\":0", error);
++        if (worker)
++            printf(",\"id\":%" PRId64, request_id);
++        if (mapping)
++        {
++            printf(",\"video_input_id\":%" PRId64 ",\"video_count\":%" PRId64
++                   ",\"mapping\":\"%s\",\"video_track_number\":%d",
++                   input_id, expected_videos, mapping, track_number);
++        }
++        printf("}\n");
++        fflush(stdout);
++    }
++    else if (worker)
++    {
++        status = 0;
++    }
++    else
++    {
++        size_t bytes = (size_t)width * height * 4;
++        int written =
++            printf("{\"version\":4,\"ok\":true,\"sampling\":\"keyframe\",\"requested_us\":%" PRId64
++                   ",\"actual_us\":%" PRId64
++                   ",\"width\":%d,\"height\":%d,\"channels\":4,\"payload_bytes\":%zu"
++                   ",\"video_input_id\":%" PRId64 ",\"video_count\":%" PRId64
++                   ",\"mapping\":\"%s\",\"video_track_number\":%d"
++                   ",\"decoded_frames\":%d,\"timeline_origin_us\":%" PRId64
++                   ",\"bytes_read\":%" PRIu64 ",\"read_calls\":%" PRIu64 ",\"seek_calls\":%" PRIu64
++                   ",\"open_count\":1,\"operation_us\":%" PRId64,
++                   requested, selection.actual, width, height, bytes, input_id, expected_videos,
++                   mapping, track_number, selection.decoded, origin, guard.bytes_read,
++                   guard.read_calls, guard.seek_calls, av_gettime_relative() - operation_start);
++        print_admission_counters(admission);
++        if (printf("}\n") < 0)
++            written = -1;
++        if (written > 0 && fwrite(rgba, 1, bytes, stdout) == bytes && fflush(stdout) == 0)
++            status = 0;
++    }
++    av_free(rgba);
++    return status;
++}
+diff --git a/configure.ac b/configure.ac
+index 6c395e5d11051ccfdbf61579c332ad56a3b0326b..648e67b901c0298c7aa15c0dd381c13535153fa8 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -2878,6 +2878,24 @@ AS_IF([test "${enable_gst_decode}" != "no"], [
+ ])
+ AM_CONDITIONAL([HAVE_GST_DECODE], [test "${have_gst_decode}" = "yes"])
+ 
++dnl macOS timeline preview helper (separate GPL executable).
++AC_ARG_ENABLE([timeline-preview],
++  AS_HELP_STRING([--disable-timeline-preview], [disable the macOS timeline preview helper]),,
++  [AS_IF([test "$HAVE_OSX" = "1" -a "$enable_vlc" != "no"],
++    [enable_timeline_preview=yes], [enable_timeline_preview=no])])
++AS_IF([test "$enable_timeline_preview" != "no"], [
++  AS_IF([test "$enable_vlc" = "no"], [
++    AC_MSG_ERROR([timeline-preview requires the VLC executable; remove --disable-vlc or use --disable-timeline-preview])
++  ])
++  AS_IF([test "$HAVE_OSX" != "1"], [
++    AC_MSG_ERROR([timeline-preview is only supported on macOS desktop])
++  ])
++  AC_PATH_PROG([TIMELINE_PREVIEW_PYTHON], [python3])
++  PKG_CHECK_MODULES_STATIC([TIMELINE_PREVIEW],
++    [libavformat >= 63.1.100 libavcodec >= 63.1.100 libavutil >= 61.1.100 libswscale >= 10.1.100])
++])
++AM_CONDITIONAL([BUILD_TIMELINE_PREVIEW], [test "$enable_timeline_preview" != "no"])
++
+ dnl
+ dnl  avcodec decoder/encoder plugin
+ dnl
+diff --git a/extras/package/macosx/codesign.sh b/extras/package/macosx/codesign.sh
+index e3fe0cc061fdb75f7c98a41a96f8a9aa67de4440..cbf30c120fcfbc6f5e03def06b2170dc7ae7ea95 100755
+--- a/extras/package/macosx/codesign.sh
++++ b/extras/package/macosx/codesign.sh
+@@ -149,6 +149,9 @@ done
+ 
+ info "Signing the executables"
+ sign "VLC.app/Contents/MacOS/vlc-preparser"
++if [ -e "VLC.app/Contents/MacOS/vlc-timeline-preview" ]; then
++    sign "VLC.app/Contents/MacOS/vlc-timeline-preview"
++fi
+ sign "VLC.app"
+ 
+ 
+diff --git a/extras/package/macosx/package.mak b/extras/package/macosx/package.mak
+index 437dd961cc0e4a15c73fa11c03144abb5a1c0065..ad6650ccf08ba034d7200081f6716a4ec9ec6397 100644
+--- a/extras/package/macosx/package.mak
++++ b/extras/package/macosx/package.mak
+@@ -79,6 +79,9 @@ endif
+ 	install_name_tool -rpath "$(libdir)" "@executable_path/../Frameworks/" $@/Contents/MacOS/VLC
+ 	cp "$(macos_destdir)$(pkglibexecdir)/vlc-preparser" $@/Contents/MacOS/
+ 	install_name_tool -rpath "$(libdir)" "@executable_path/../Frameworks/" $@/Contents/MacOS/vlc-preparser
++if BUILD_TIMELINE_PREVIEW
++	cp "$(macos_destdir)$(pkglibexecdir)/vlc-timeline-preview" $@/Contents/MacOS/
++endif
+ 	## Generate plugin cache
+ 	if test "$(build)" = "$(host)"; then \
+ 		VLC_LIB_PATH="$@/Contents/Frameworks" bin/vlc-cache-gen $@/Contents/Frameworks/plugins ; \
+diff --git a/meson_options.txt b/meson_options.txt
+index a922829db71e5c9d190ed59ff7f5ac581d758874..2a6a99c8dfe142aef29e0583f720ba98c330b550 100644
+--- a/meson_options.txt
++++ b/meson_options.txt
+@@ -854,3 +854,5 @@ option('wix',
+ # TODO: Missing kwallet
+ # TODO: Missing osx_notifications
+ # TODO: Missing chromecast
++
++option('timeline-preview', type: 'feature', value: 'auto', description: 'macOS timeline preview helper')

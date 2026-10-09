@@ -1,0 +1,154 @@
+{
+  "source_pin": "2e358f3098c2f2b7621d1dc568de8b61ad786322",
+  "source": "work/upstream/vlc-master-story005-reproduction",
+  "remote": "https://github.com/videolan/vlc.git",
+  "source_tree": "dc28a08ab00aa6d4c43b6e5681dfe673cee72a70",
+  "patches": [
+    {
+      "file": "0001-contrib-matroska-identity-and-admission.patch",
+      "bytes": 13511,
+      "sha256": "27772936e6068efe11bd44dd6265cd1fb61114dfd8aa7cd9ba693c609e54abf1",
+      "paths": [
+        "contrib/src/ffmpeg/matroska-flat-timeline.patch",
+        "contrib/src/ffmpeg/matroska-track-number.patch",
+        "contrib/src/ffmpeg/rules.mak"
+      ]
+    },
+    {
+      "file": "0002-timeline-helper-build-package-and-tests.patch",
+      "bytes": 166522,
+      "sha256": "a936177b071894a9d888d6f3aec9466e0efc8b1e8075912455641e9c06608d59",
+      "paths": [
+        "Makefile.am",
+        "bin/Makefile.am",
+        "bin/meson.build",
+        "bin/preparser/Makefile.am",
+        "bin/timeline-preview/Makefile.am",
+        "bin/timeline-preview/PROTOCOL.md",
+        "bin/timeline-preview/README.md",
+        "bin/timeline-preview/test-io.c",
+        "bin/timeline-preview/test.py",
+        "bin/timeline-preview/tests/README.md",
+        "bin/timeline-preview/tests/avformat-identity.c",
+        "bin/timeline-preview/tests/compare-identity.py",
+        "bin/timeline-preview/tests/generate_admission_fixtures.py",
+        "bin/timeline-preview/tests/generate_dependency_fixtures.py",
+        "bin/timeline-preview/tests/generate_fixtures.py",
+        "bin/timeline-preview/timeline-preview.c",
+        "configure.ac",
+        "extras/package/macosx/codesign.sh",
+        "extras/package/macosx/package.mak",
+        "meson_options.txt"
+      ]
+    },
+    {
+      "file": "0003-macosx-timeline-context-service-and-hover.patch",
+      "bytes": 266183,
+      "sha256": "efb963f03f00682cfa2eb530163e658ad59a14ea55d69aa14292956df2f2cf3b",
+      "paths": [
+        "modules/gui/macosx/Makefile.am",
+        "modules/gui/macosx/UI/SimplePreferences.xib",
+        "modules/gui/macosx/main/VLCMain.m",
+        "modules/gui/macosx/main/macosx.m",
+        "modules/gui/macosx/playqueue/VLCPlayerController.h",
+        "modules/gui/macosx/playqueue/VLCPlayerController.m",
+        "modules/gui/macosx/preferences/VLCSimplePrefsController.h",
+        "modules/gui/macosx/preferences/VLCSimplePrefsController.m",
+        "modules/gui/macosx/tests/Makefile.am",
+        "modules/gui/macosx/tests/VLCThumbnailCacheTest.m",
+        "modules/gui/macosx/tests/VLCThumbnailSchedulerTest.m",
+        "modules/gui/macosx/tests/VLCThumbnailServiceTest.m",
+        "modules/gui/macosx/tests/VLCThumbnailTestHelper.c",
+        "modules/gui/macosx/tests/VLCTimelineHoverReentrancyTest.m",
+        "modules/gui/macosx/tests/VLCTimelineHoverTest.m",
+        "modules/gui/macosx/tests/VLCTimelineHoverTestSupport.m",
+        "modules/gui/macosx/timeline/VLCThumbnailCache.h",
+        "modules/gui/macosx/timeline/VLCThumbnailCache.m",
+        "modules/gui/macosx/timeline/VLCThumbnailScheduler.h",
+        "modules/gui/macosx/timeline/VLCThumbnailScheduler.m",
+        "modules/gui/macosx/timeline/VLCThumbnailService.h",
+        "modules/gui/macosx/timeline/VLCThumbnailService.m",
+        "modules/gui/macosx/timeline/VLCThumbnailWorker.h",
+        "modules/gui/macosx/timeline/VLCThumbnailWorker.m",
+        "modules/gui/macosx/timeline/VLCTimelineContext.h",
+        "modules/gui/macosx/timeline/VLCTimelineContext.m",
+        "modules/gui/macosx/timeline/VLCTimelineContextTestSupport.m",
+        "modules/gui/macosx/timeline/VLCTimelineContextTests.m",
+        "modules/gui/macosx/views/VLCPlaybackProgressSlider.h",
+        "modules/gui/macosx/views/VLCPlaybackProgressSlider.m",
+        "modules/gui/macosx/windows/video/VLCMainVideoViewController.m"
+      ]
+    }
+  ],
+  "immutable_tools_archive_cache_only": [
+    {
+      "archive": "apache-ant-1.9.7.tar.bz2",
+      "source": "work/upstream/vlc-master-story005/extras/tools/apache-ant-1.9.7.tar.bz2",
+      "sha512": "3954a6ad3f522c135f327ba0d376eb16ae42103849c8cc5cd6c8c6e87b8c5433c95a0f2d4dfa3e6c2705ee0b8996e5b27d0b2248f64a05fc8c902116cc45a7b2",
+      "bytes": 4392108
+    },
+    {
+      "archive": "autoconf-2.73.tar.gz",
+      "source": "work/upstream/vlc-master-story005/extras/tools/autoconf-2.73.tar.gz",
+      "sha512": "e9f68c75e2d7a1fa84b172180621f90bccc6ef77f923be6312de621692327ef8a2ebaeb953a4545fec8d33e28efc925f1908a17d3202280113b2826aee79e70e",
+      "bytes": 2183815
+    },
+    {
+      "archive": "automake-1.18.1.tar.gz",
+      "source": "work/upstream/vlc-master-story005/extras/tools/automake-1.18.1.tar.gz",
+      "sha512": "e07b439babea7101e04e37f65fbd2ac9df7b41809fc71bd412f21f396063713721c0215a63c87059dbaa0121049f7c39fc678c77373c303d79aba86d4b66f9c2",
+      "bytes": 2376062
+    },
+    {
+      "archive": "m4-1.4.21.tar.gz",
+      "source": "work/upstream/vlc-master-story005/extras/tools/m4-1.4.21.tar.gz",
+      "sha512": "4d573245d31e14a1b2856abf7cd16f82ec01036956bb2c9ee09e6d9d3fcca518cf77d6864c915d4defa07771bf8503241017b37ce9027dcf4fafdd0fb20db582",
+      "bytes": 3558201
+    },
+    {
+      "archive": "bison-3.8.2.tar.xz",
+      "source": "work/upstream/vlc-master-story005/extras/tools/bison-3.8.2.tar.xz",
+      "sha512": "d4d23af6671406e97257892f90651b67f2ab95219831372be032190b7156c10a3435d457857e677445df8b2327aacccc15344acbbc3808a6f332a93cce23b444",
+      "bytes": 2817324
+    },
+    {
+      "archive": "nasm-2.16.03.tar.gz",
+      "source": "work/upstream/vlc-master-story005/extras/tools/nasm-2.16.03.tar.gz",
+      "sha512": "ef6c3b9edc7d69c3847324134630a4fb4316e394fa3e38effb8ef3d0c03e48574d43cadf06a774355d7e43a4d7a70e4760c5242807cf4e67331af70d205b9cb0",
+      "bytes": 1688160
+    },
+    {
+      "archive": "gettext-0.26.tar.gz",
+      "source": "work/upstream/vlc-master-story005/extras/tools/gettext-0.26.tar.gz",
+      "sha512": "6c2afb0737843028e1cd27f1cd7dd5b81372ccff8cd8e01e17cfdc517afdd9a849c232f1ff5adca5eb4b03f2cc64f4a3f689ae8b84e523ceeae85384f3844083",
+      "bytes": 31353014
+    },
+    {
+      "archive": "help2man-1.47.6.tar.xz",
+      "source": "work/upstream/vlc-master-story005/extras/tools/help2man-1.47.6.tar.xz",
+      "sha512": "d24849b93de58b20f518c071687e7bfa653a96600382f36c4cf7fc1047656458f75f093b911b786b18b6931b2453cb60868ecbe07cc7d2984e5981a874b34942",
+      "bytes": 192980
+    },
+    {
+      "archive": "ninja-1.13.2.g7659b.kitware.jobserver-pipe-1.tar.gz",
+      "source": "work/upstream/vlc-master-story005/extras/tools/ninja-1.13.2.g7659b.kitware.jobserver-pipe-1.tar.gz",
+      "sha512": "f5aeb32ec007c31663488516765b6b37df472eee85047592e111914599b32003376a56bf79f501b14a0b317bb94e6c510d889dccf1aa76b5b057a277c719e859",
+      "bytes": 292930
+    },
+    {
+      "archive": "meson-1.12.0.tar.gz",
+      "source": "work/upstream/vlc-master-story005/extras/tools/meson-1.12.0.tar.gz",
+      "sha512": "776efa8e5c490285925738d0836474b309e43c5f12af9f1e61d0457c2f4c1d4c197fcc3fcb0166b523e1051bc0e37d2ef4e10f4f703e562278227805e311e0ef",
+      "bytes": 2518280
+    },
+    {
+      "archive": "libtool-2.6.2.tar.gz",
+      "source": "work/upstream/vlc-master-story005/extras/tools/libtool-2.6.2.tar.gz",
+      "sha512": "e4e4df9f191152241c813e3f79f6afdc4b8a0a6d9e94d76f2b9fbea6ab98a9f5280376ec34325b5a08bc93e5b702fb2e7183488294457ee8bed33e1ec8aa4a35",
+      "bytes": 2125092
+    }
+  ],
+  "reused_build_objects": false,
+  "shared_git_alternates": false,
+  "instrumentation_note": "Archive-cache receipt first pass stopped at tracked config.guess destination-exists check after11 verified archives copied. No unverified archive or tracked file copied; actual tool stage continued. This receipt reconstructs verified archives and source tree. Nestedpatch whitespace warnings retained in acquisition output; exactpublictree matches."
+}

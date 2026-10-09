@@ -1,0 +1,26 @@
+[000000016bd05c10] main generic error: cannot load plug-in /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/modules/.libs/libmacosx_plugin.dylib: dlopen(/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/modules/.libs/libmacosx_plugin.dylib, 0x0001): Library not loaded: @rpath/Sparkle.framework/Versions/B/Sparkle
+  Referenced from: <26234FF1-AE4B-31E3-A98A-DFFFAFF9D6CD> /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/modules/.libs/libmacosx_plugin.dylib
+  Reason: no LC_RPATH's found
+[0000007bd50b86c0] securetransport tls server error: Cannot get certificate with alias /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/package/macosx/../../../test/nonexistent, error: -25300
+[0000007bd50b86c0] gnutls tls server error: cannot read certificate chain from /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/package/macosx/../../../test/nonexistent: No such file or directory
+[0000007bd50b86c0] main tls server error: TLS server plugin not available
+[0000007bd50b86c0] securetransport tls server error: Cannot get certificate with alias /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/package/macosx/../../../test/samples/empty.voc, error: -25300
+[0000007bd50b86c0] gnutls tls server error: cannot load X.509 key: The requested data were not available.
+[0000007bd50b86c0] main tls server error: TLS server plugin not available
+[0000007bd50b86c0] securetransport tls server error: Cannot get certificate with alias /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/package/macosx/../../../test/samples/certs/certkey.pem, error: -25300
+[0000007bd50b86c0] gnutls tls server error: cannot read private key from /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/package/macosx/../../../test/nonexistent: No such file or directory
+[0000007bd50b86c0] main tls server error: TLS server plugin not available
+[0000007bd50b86c0] securetransport tls server error: Cannot get certificate with alias /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/package/macosx/../../../test/samples/certs/certkey.pem, error: -25300
+[0000007bd50b86c0] securetransport tls server error: Cannot get certificate with alias /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/package/macosx/../../../test/samples/certs/certkey.pem, error: -25300
+[0000007bd5844030] main tls client error: TLS session handshake error
+[0000007bd50b86c0] gnutls tls server error: The TLS connection was non-properly terminated.
+[0000007bd5844030] main tls client error: TLS session handshake error
+[0000007bd50b86c0] gnutls tls server error: The TLS connection was non-properly terminated.
+[000000016bd05c00] main generic error: cannot load plug-in /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/modules/.libs/libmacosx_plugin.dylib: dlopen(/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/modules/.libs/libmacosx_plugin.dylib, 0x0001): Library not loaded: @rpath/Sparkle.framework/Versions/B/Sparkle
+  Referenced from: <26234FF1-AE4B-31E3-A98A-DFFFAFF9D6CD> /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/modules/.libs/libmacosx_plugin.dylib
+  Reason: no LC_RPATH's found
+[0000007bd5844090] securetransport tls server error: Cannot get certificate with alias /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/package/macosx/../../../test/samples/certs/certkey.pem, error: -25300
+[0000007bd50b8db0] main tls client error: TLS session handshake error
+[0000007bd5844090] gnutls tls server error: The TLS connection was non-properly terminated.
+Assertion failed: (tls != NULL), function main, file tls.c, line 188.
+FAIL test_modules_tls (exit status: 134)

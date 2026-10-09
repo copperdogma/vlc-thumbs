@@ -1,0 +1,32 @@
+ cd /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-candidate/extras/package/macosx/../../.. && /bin/sh /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-candidate/autotools/missing automake-1.18 --foreign modules/Makefile
+ cd .. && /bin/sh ./config.status modules/Makefile depfiles
+config.status: creating modules/Makefile
+config.status: executing depfiles commands
+  OBJC     gui/macosx/tests/VLCMacOSXTests-VLCThumbnailCacheTest.o
+  OBJC     gui/macosx/tests/VLCMacOSXTests-VLCThumbnailSchedulerTest.o
+  OBJC     gui/macosx/tests/VLCMacOSXTests-VLCThumbnailServiceTest.o
+  OBJC     gui/macosx/timeline/VLCMacOSXTests-VLCThumbnailCache.o
+  OBJC     gui/macosx/timeline/VLCMacOSXTests-VLCThumbnailScheduler.o
+  OBJC     gui/macosx/timeline/VLCMacOSXTests-VLCThumbnailWorker.o
+  OBJC     gui/macosx/timeline/VLCMacOSXTests-VLCThumbnailService.o
+  CC       gui/macosx/tests/VLCThumbnailTestHelper.o
+  CCLD     vlc-thumbnail-test-helper
+clang: warning: argument unused during compilation: '-fcx-limited-range' [-Wunused-command-line-argument]
+  GEN      VLCMacOSXTests
+  GEN      VLCMacOSXTests.xctest
+libtool: warning: '../lib/libvlc.la' has not been installed in '//lib'
+libtool: warning: '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/src/libvlccore.la' has not been installed in '//lib'
+libtool: warning: '../src/libvlccore.la' has not been installed in '//lib'
+libtool: install: /usr/local/bin/ginstall -c .libs/VLCMacOSXTests /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/modules/VLCMacOSXTests.xctest/Contents/MacOS/VLCMacOSXTests
+/usr/bin/xcrun xctest -XCTest VLCThumbnailCacheTest /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/modules/VLCMacOSXTests.xctest
+Test Suite 'Selected tests' started at 2026-10-05 21:36:24.365.
+Test Suite 'VLCMacOSXTests.xctest' started at 2026-10-05 21:36:24.366.
+Test Suite 'VLCThumbnailCacheTest' started at 2026-10-05 21:36:24.366.
+Test Case '-[VLCThumbnailCacheTest testCacheContracts]' started.
+Test Case '-[VLCThumbnailCacheTest testCacheContracts]' passed (16.007 seconds).
+Test Suite 'VLCThumbnailCacheTest' passed at 2026-10-05 21:36:40.373.
+	 Executed 1 test, with 0 failures (0 unexpected) in 16.007 (16.007) seconds
+Test Suite 'VLCMacOSXTests.xctest' passed at 2026-10-05 21:36:40.373.
+	 Executed 1 test, with 0 failures (0 unexpected) in 16.007 (16.008) seconds
+Test Suite 'Selected tests' passed at 2026-10-05 21:36:40.373.
+	 Executed 1 test, with 0 failures (0 unexpected) in 16.007 (16.008) seconds

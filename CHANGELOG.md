@@ -1,5 +1,12 @@
 # Changelog
 
+## [2026-10-09] - Qualified VLC4 contribution and owner test app (Story005 Phases1/2)
+
+- Integrated retained FFmpeg9 timeline helper, bounded cache/preparation and existing native macOS hover controls on the pinned VLC master base.
+- Preserved the exact13-patch/29-artifact source10 contribution package, build commands, attribution and limitations for review. Full local normal checks, helper77 and conventional distcheck pass; three matched playback pairs report zero native video/audio losses with measured overhead.
+- Delivered a separate qualified VLC4 test app; owner reports it looks good. Standard VLC and older preview apps remain intact.
+- Corrected stale status and historical-package routing. GradeB validation retains deferred shutdown cause and broader reader/platform coverage limits. Whole Story005 remains open for upstream submission/review; no VLC submission occurred.
+
 ## [2026-10-05-03] - Responsive reusable timeline previews (Story 004)
 
 ### Added

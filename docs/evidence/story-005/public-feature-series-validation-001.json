@@ -1,0 +1,82 @@
+{
+  "base": "2e358f3098c2f2b7621d1dc568de8b61ad786322",
+  "patch_directory": "patches/vlc-master/feature-series",
+  "manifest_sha256": "8790614299e5716a533a586c09355c5be8801ebf57f946ab1ca7c15e3b162488",
+  "source_tree": "58facf6f4017a5226d9537144c1758ceb1277c43",
+  "applications": [
+    {
+      "patch": "0001-contrib-matroska-identity-and-admission.patch",
+      "tree": "9792911ece946e332fd9d2ebc319dd3a29274823",
+      "apply_check": "pass",
+      "apply": "pass"
+    },
+    {
+      "patch": "0002-timeline-helper-build-package-and-tests.patch",
+      "tree": "f2681d44bdf1e6d38c2040fd86987af0526ab2f2",
+      "apply_check": "pass",
+      "apply": "pass"
+    },
+    {
+      "patch": "0003-macosx-timeline-context-service-and-hover.patch",
+      "tree": "58facf6f4017a5226d9537144c1758ceb1277c43",
+      "apply_check": "pass",
+      "apply": "pass"
+    }
+  ],
+  "exact_source_tree_match": true,
+  "source_indexes_before": {
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/.git/index": "7f2f5931db7b4dba20f741eb7c3ffc9a42ef65be2a6cd94dd66f15113512e895",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/.git/worktrees/vlc-master-story005-candidate/index": "89f3541234e65d5ff8f9ea6928d78d03b65850b61232ca376416750860d44be6"
+  },
+  "source_indexes_after": {
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/.git/index": "7f2f5931db7b4dba20f741eb7c3ffc9a42ef65be2a6cd94dd66f15113512e895",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/.git/worktrees/vlc-master-story005-candidate/index": "89f3541234e65d5ff8f9ea6928d78d03b65850b61232ca376416750860d44be6"
+  },
+  "peak_artifact_plus_temp_bytes": 2016661,
+  "temp_removed_on_exit": true,
+  "source_tree_byte_count": 1212769,
+  "patch_bytes": 432964,
+  "excluded_generated_paths": [
+    "bin/timeline-preview/__pycache__/test.cpython-314.pyc",
+    "bin/timeline-preview/tests/__pycache__/compare-identity.cpython-314.pyc",
+    "bin/timeline-preview/tests/__pycache__/generate_admission_fixtures.cpython-314.pyc",
+    "bin/timeline-preview/tests/__pycache__/generate_dependency_fixtures.cpython-314.pyc",
+    "bin/timeline-preview/tests/__pycache__/generate_fixtures.cpython-314.pyc"
+  ],
+  "meaning": "exact source correspondence, not build/runtime/native readiness",
+  "artifact_bytes": 461727,
+  "artifact_files": [
+    {
+      "file": "0001-contrib-matroska-identity-and-admission.patch",
+      "bytes": 13511,
+      "sha256": "27772936e6068efe11bd44dd6265cd1fb61114dfd8aa7cd9ba693c609e54abf1"
+    },
+    {
+      "file": "0002-timeline-helper-build-package-and-tests.patch",
+      "bytes": 153270,
+      "sha256": "f02d2b32f8ba35924ed21948f81280ceefe49d84f64c3e411d596341064390ea"
+    },
+    {
+      "file": "0003-macosx-timeline-context-service-and-hover.patch",
+      "bytes": 266183,
+      "sha256": "efb963f03f00682cfa2eb530163e658ad59a14ea55d69aa14292956df2f2cf3b"
+    },
+    {
+      "file": "README.md",
+      "bytes": 5014,
+      "sha256": "be320f5d3d0756dd34597dc6ca8749220257e03828f06d04cb7e7176e3d28aad"
+    },
+    {
+      "file": "manifest.json",
+      "bytes": 23594,
+      "sha256": "8790614299e5716a533a586c09355c5be8801ebf57f946ab1ca7c15e3b162488"
+    },
+    {
+      "file": "series",
+      "bytes": 155,
+      "sha256": "d80bcf10f4c48ef8cdf2c4f3f647cbffbe5545f6b98bc4ebd03116f9e06b2c58"
+    }
+  ],
+  "bounded_private_prototype_marker_scan": "pass",
+  "artifacts_plus_temp_cap_bytes": 20971520
+}

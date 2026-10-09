@@ -1,0 +1,66 @@
+{
+  "steps": [
+    {
+      "name": "contrib-patch-00",
+      "command": [
+        "patch",
+        "--batch",
+        "--forward",
+        "-F0",
+        "-p1",
+        "-i",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/contrib/src/ffmpeg/dxva_vc1_crash.patch"
+      ],
+      "cwd": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-helper9-proof/ffmpeg-9.0",
+      "status": 0,
+      "elapsed_seconds": 0.3248369159991853,
+      "log": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-helper9-proof/contrib-patch-00.log"
+    },
+    {
+      "name": "contrib-patch-01",
+      "command": [
+        "patch",
+        "--batch",
+        "--forward",
+        "-F0",
+        "-p1",
+        "-i",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/contrib/src/ffmpeg/h264_early_SAR.patch"
+      ],
+      "cwd": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-helper9-proof/ffmpeg-9.0",
+      "status": 0,
+      "elapsed_seconds": 0.3232152499986114,
+      "log": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-helper9-proof/contrib-patch-01.log"
+    },
+    {
+      "name": "contrib-patch-02",
+      "command": [
+        "patch",
+        "--batch",
+        "--forward",
+        "-F0",
+        "-p1",
+        "-i",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/contrib/src/ffmpeg/0001-avcodec-dxva2-add-support-for-HEVC-RExt-DXVA-profile.patch"
+      ],
+      "cwd": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-helper9-proof/ffmpeg-9.0",
+      "status": 1,
+      "elapsed_seconds": 0.32076258300367044,
+      "log": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-helper9-proof/contrib-patch-02.log"
+    }
+  ],
+  "original_archive": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/aarch64-apple-darwin19/lib/libavformat.a",
+  "official_archive_sha512": "2e2fea606b290c306bdef13b4c8efb7a4b138ffa16f94f608f85877f5e7ca93980bda8219eeeed8343c463d302c7a2c46b14902ccbbe1e53483f9411b31b9c69",
+  "original_archive_sha256": "f18bb3ced0b6cced9d161b776f96ffc165e5e5ef37d61735f3cf5b5b87415bfa",
+  "contrib_patches_sha256": {
+    "dxva_vc1_crash.patch": "de7df82104cc5d12202ac566a54813eda8bab750769c94ffbaaa48f8b1e8e4c2",
+    "h264_early_SAR.patch": "18c77e27bde0eae46f4ad751b8ae9997d7ffe2167e592a75903e4eea62f33f41",
+    "0001-avcodec-dxva2-add-support-for-HEVC-RExt-DXVA-profile.patch": "0273e70a9fdde5e185e45bf01f31e7a2bcd97368228f80ac73d85ed181ba4987",
+    "0001-avcodec-mpeg12dec-don-t-call-hw-end_frame-when-start.patch": "0af48744e9ac1ed4be47eea04642b7458cb083a1820fac7fdea63e3928b11322",
+    "0002-avcodec-mpeg12dec-don-t-end-a-slice-without-first_sl.patch": "5e245971b8373b8b48c657c8605329232764378bd84e981de2f9b0e2594b7dc9",
+    "0001-fix-mf_utils-compilation-with-mingw64.patch": "9041b1c0fbbbfd02b943f6a4125ba74d472b51911832417a537941c3f3c1a659",
+    "0011-avcodec-videotoolboxenc-disable-calls-on-unsupported.patch": "e844e835f60195599d19156c334489d54098e8d33a1d5a6aed897dc48f04371d",
+    "avcodec-fix-compilation-visionos.patch": "53c373067dceee84c14561dcacb0faa82fce562c243539ba4c15ad8596d6879d",
+    "0009-swscale-x86-use-HOSTCPPFLAGS-instead-of-CPPFLAGS-for.patch": "9284233c78af997e657c3f8a8d939b73df5bd1276cb540856fa8a815a4103368"
+  }
+}

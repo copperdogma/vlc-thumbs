@@ -1,0 +1,52 @@
+{
+  "stage": "New representative public300s synthetic layout; not prior unknownNASseed reconstruction",
+  "source_pin": "2e358f3098c2f2b7621d1dc568de8b61ad786322",
+  "command": [
+    "python3",
+    "bin/timeline-preview/tests/generate_fixtures.py",
+    "--long-only",
+    "--output",
+    "NEW_OUTPUT_DIRECTORY"
+  ],
+  "raw_manifest": "work/story005-public-long001/manifest.json",
+  "manifest_sha256": "4713dabb6676b09e0d1bd062c29d5a8323a98857019c3612e98ab9bf257a8cc3",
+  "public_sources_sha256": {
+    "generate_fixtures.py": "8f1574da92ba62c1da44abb3e38156f24a37406bc3d1f0a2c2eaffdbf9c3516d",
+    "README.md": "8d8404e3cfa87b4823a4cb562297b729d9ddd77f8f2263112d90b8e9c34d4ce3",
+    "generate_admission_fixtures.py": "92be89ff835bfdb8eaddac8cef634e2a9d58aa69b750d035b1979db563add3a4"
+  },
+  "fixtures": [
+    {
+      "name": "long-preparation.mp4",
+      "bytes": 14704138,
+      "sha256": "c5dfcf4a710b8db66e5032a06b862da8dcc0e09df00c4a3597b5c0f0ea7b9e8a"
+    },
+    {
+      "name": "long-preparation-clusters.mkv",
+      "bytes": 8928648,
+      "sha256": "a2f2d8f8b0432c84c33c6cd3d2fa81777a9c8c5911d851be8d116bbf92d5a26a"
+    }
+  ],
+  "cluster_count": 300,
+  "unknown_clusters": 0,
+  "complete_bounds": true,
+  "audio": {
+    "codec": "alac",
+    "frequency_hz": 440,
+    "sample_rate": 48000,
+    "packet_timeline_contiguous": true,
+    "timeline_end_seconds": 300.0
+  },
+  "bounds": {
+    "file_bytes": 26214400,
+    "total_bytes": 62914560,
+    "reserve_bytes": 1073741824,
+    "tool_seconds": 120,
+    "minimum_free_bytes": 27841839104
+  },
+  "tools": {
+    "ffmpeg": "ffmpeg version 8.0 Copyright (c) 2000-2025 the FFmpeg developers\nbuilt with Apple clang version 16.0.0 (clang-1600.0.26.6)\nconfiguration: --prefix=/usr/local/Cellar/ffmpeg/8.0_1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags='-Wl,-ld_classic' --enable-ffplay --enable-gnutls --enable-gpl --enable-libaom --enable-libaribb24 --enable-libbluray --enable-libdav1d --enable-libharfbuzz --enable-libjxl --enable-libmp3lame --enable-libopus --enable-librav1e --enable-librist --enable-librubberband --enable-libsnappy --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtesseract --enable-libtheora --enable-libvidstab --enable-libvmaf --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libxvid --enable-lzma --enable-libfontconfig --enable-libfreetype --enable-frei0r --enable-libass --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-libspeex --enable-libsoxr --enable-libzmq --enable-libzimg --disable-libjack --disable-indev=jack --enable-videotoolbox --enable-audiotoolbox\nlibavutil      60.  8.100 / 60.  8.100\nlibavcodec     62. 11.100 / 62. 11.100\nlibavformat    62.  3.100 / 62.  3.100\nlibavdevice    62.  1.100 / 62.  1.100\nlibavfilter    11.  4.100 / 11.  4.100\nlibswscale      9.  1.100 /  9.  1.100\nlibswresample   6.  1.100 /  6.  1.100\n\nExiting with exit code 0\n",
+    "ffprobe": "ffprobe version 8.0 Copyright (c) 2007-2025 the FFmpeg developers\nbuilt with Apple clang version 16.0.0 (clang-1600.0.26.6)\nconfiguration: --prefix=/usr/local/Cellar/ffmpeg/8.0_1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags='-Wl,-ld_classic' --enable-ffplay --enable-gnutls --enable-gpl --enable-libaom --enable-libaribb24 --enable-libbluray --enable-libdav1d --enable-libharfbuzz --enable-libjxl --enable-libmp3lame --enable-libopus --enable-librav1e --enable-librist --enable-librubberband --enable-libsnappy --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtesseract --enable-libtheora --enable-libvidstab --enable-libvmaf --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libxvid --enable-lzma --enable-libfontconfig --enable-libfreetype --enable-frei0r --enable-libass --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-libspeex --enable-libsoxr --enable-libzmq --enable-libzimg --disable-libjack --disable-indev=jack --enable-videotoolbox --enable-audiotoolbox\nlibavutil      60.  8.100 / 60.  8.100\nlibavcodec     62. 11.100 / 62. 11.100\nlibavformat    62.  3.100 / 62.  3.100\nlibavdevice    62.  1.100 / 62.  1.100\nlibavfilter    11.  4.100 / 11.  4.100\nlibswscale      9.  1.100 /  9.  1.100\nlibswresample   6.  1.100 /  6.  1.100\n"
+  },
+  "qualification": "New representative larger-byte layout, not equivalent historical bytes/hash. Muxer versions/random container IDs can change hashes and Cluster counts. Packet timeline continuity is not audible playback or nativeUI proof."
+}

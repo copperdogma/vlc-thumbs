@@ -1,0 +1,18 @@
+{
+  "stage": "checks",
+  "command": [
+    "bash",
+    "work/story005-scout/reproduction-focused-service.sh"
+  ],
+  "cwd": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs",
+  "initial_free_bytes": 10461052928,
+  "stage_preflight_gib": 1.5,
+  "floor_bytes": 1073741824,
+  "time_limit_seconds": 120,
+  "status": "succeeded",
+  "pid": 10831,
+  "elapsed_seconds": 70.1,
+  "minimum_free_bytes": 10454904832,
+  "exit_code": 0,
+  "final_free_bytes": 10497798144
+}

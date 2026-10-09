@@ -1,0 +1,12 @@
+{
+  "before_tree": "1a567b8705d3f744afc2b873458a5e8af02f7a7b",
+  "after_tree": "31e913d79495db387ab21fc07aac5c7427d3f535",
+  "patch": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/patches/vlc-master/feature-series/0000-apple-header-source-distribution.patch",
+  "patch_sha256": "b7031f9011f961235795ce6dfe07302dcb50a87a2e738c12b6c86a6770e6a6c7",
+  "verified_public_file_count": 58,
+  "only_delta_paths": [
+    "modules/audio_output/Makefile.am",
+    "modules/video_output/Makefile.am"
+  ],
+  "unchanged_app_helper_and_test_evidence_reused": true
+}

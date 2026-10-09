@@ -1,0 +1,11 @@
+{
+  "files": {
+    "tests/story-005/helper9_score.py": "042eb01694e2dcc7d056714538daa0fc4f3ea3ff34dbd0b2ca8642466665b68f",
+    "tests/story-005/helper9_build.py": "3d32d4b8be3a48a456e77ae5dd002a7a847580cc149e99f43f4fe5e62453f5f1",
+    "tests/story-005/helper9_private_avformat.py": "76394c0bf7237e45ea0cd9f60cabcadd39bf22b2ab486ceffe022db2a1c86c1c",
+    "tests/story-005/helper9_cases.py": "f7b910652289314ca7707dedab88ef922a691f564ca7fc1156c6d68cbb5810ce",
+    "work/story005-helper9-proof/thumbnail-helper.c": "c55ebd1772d69432865b16726a67f167bef55947ff59f9f65a1a146e3db9a7a8"
+  },
+  "scratch_bytes": 295091493,
+  "disk_free_bytes": 3630452736
+}

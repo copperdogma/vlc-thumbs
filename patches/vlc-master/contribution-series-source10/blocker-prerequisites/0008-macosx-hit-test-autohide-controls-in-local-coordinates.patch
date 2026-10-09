@@ -1,0 +1,25 @@
+diff --git a/modules/gui/macosx/windows/video/VLCMainVideoViewController.m b/modules/gui/macosx/windows/video/VLCMainVideoViewController.m
+index 4c03ab46ab1f56fdf82cd0370acedcc76434fe6c..f31bd79ec97d32a5d3c456c81c138baf7208158d 100644
+--- a/modules/gui/macosx/windows/video/VLCMainVideoViewController.m
++++ b/modules/gui/macosx/windows/video/VLCMainVideoViewController.m
+@@ -410,10 +410,16 @@
+ {
+     NSPoint mousePos = [self.view.window mouseLocationOutsideOfEventStream];
+ 
+-    return [_centralControlsStackView mouse:mousePos inRect:_centralControlsStackView.frame] ||
+-        [_controlsBar.bottomBarView mouse:mousePos inRect: _controlsBar.bottomBarView.frame] ||
+-        [_returnButton mouse:mousePos inRect: _returnButton.frame] ||
+-        [_playQueueButton mouse:mousePos inRect: _playQueueButton.frame];
++    NSView *bottomBarView = self.bottomBarView;
++
++    return [_centralControlsStackView mouse:[_centralControlsStackView convertPoint:mousePos fromView:nil]
++                                    inRect:_centralControlsStackView.bounds] ||
++        [bottomBarView mouse:[bottomBarView convertPoint:mousePos fromView:nil]
++                      inRect:bottomBarView.bounds] ||
++        [_returnButton mouse:[_returnButton convertPoint:mousePos fromView:nil]
++                      inRect:_returnButton.bounds] ||
++        [_playQueueButton mouse:[_playQueueButton convertPoint:mousePos fromView:nil]
++                         inRect:_playQueueButton.bounds];
+ }
+ 
+ - (void)stopAutohideTimer

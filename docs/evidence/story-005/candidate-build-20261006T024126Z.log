@@ -1,0 +1,3 @@
+  CC       src/misc/image.o
+  CCLD     test_src_misc_image
+clang: warning: argument unused during compilation: '-fcx-limited-range' [-Wunused-command-line-argument]

@@ -1,0 +1,6 @@
+  CC       src/preparser/thumbnail.o
+  CC       src/preparser/thumbnail_to_files.o
+  CCLD     test_src_preparser_thumbnail_to_files
+  CCLD     test_src_preparser_thumbnail
+clang: warning: argument unused during compilation: '-fcx-limited-range' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fcx-limited-range' [-Wunused-command-line-argument]

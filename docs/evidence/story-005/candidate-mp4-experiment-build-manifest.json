@@ -1,0 +1,52 @@
+{
+  "stage": "0001 plus 0003 core and experimental0004 MP4 plugin; packaged app remains pre0004",
+  "source_pin": "2e358f3098c2f2b7621d1dc568de8b61ad786322",
+  "source_diff_sha256": "43af3f4d56588963738df7611ab648c2bb32a75be6bbb6d16df15d7cbbb4447c",
+  "candidate_product_inputs": {
+    "include/vlc_process.h": "56c0262e33d3129444597650de71c9b74b496e2d23b8bae0535ad0b31df2bbbb",
+    "modules/demux/mp4/mp4.c": "e9c27e09211c3aa29fac7c295ffacbcf79929d60393d8f0035c9fcbb1ae46fbf",
+    "src/misc/picture.c": "b8bf7b22839f514880c4df4dd783849b0287b3dbbe15d93dc9e757b401f582a5",
+    "src/posix/process.c": "2f777b8c4930bd11187491921a6f2b56061bb2de058528fe861a88f08192e501",
+    "test/Makefile.am": "1f856406c9e31880556d9267b427ec283b3eb583c2a4a51ff55f5ad77bd3b30a",
+    "test/src/meson.build": "0bac81b330dbf284eb7f42f8490d1d44005c6dc1bffed25ac305151c545fd500",
+    "test/src/misc/image.c": "5df565faa6162879e4dfdf6b9799c56ce379b04632504c752e1045a251ed14fd",
+    "test/src/misc/process.c": "a2ac9ae837852c970ce58621a456130c33bbeb8a0a4d3d7567e24923a2679daf"
+  },
+  "build_receipt": "docs/evidence/story-005/candidate-build-20261006T024610Z.json",
+  "patch": {
+    "path": "patches/vlc-master/experimental/0004-mp4-edit-timeline.patch",
+    "sha256": "03e95711a03a4a357cbdb588315188db45f3cf040bd5fc3026c4f165c62b84bf"
+  },
+  "preserved_pre_experiment_app": "work/story005-scout/candidate-before-mp4-experiment.app",
+  "preserved_pre_experiment_plugin": {
+    "path": "work/story005-scout/pre-mp4-experiment/libmp4_plugin.dylib",
+    "sha256": "1c0e2ebbacfaee897a32ae9c701cf1de1af9ae8938180322beaa137e63a49885"
+  },
+  "runtime": {
+    "DYLD_LIBRARY_PATH": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/src/.libs:/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/lib/.libs",
+    "VLC_PLUGIN_PATH": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/modules/.libs"
+  },
+  "outputs": {
+    "src/.libs/libvlccore.9.dylib": {
+      "bytes": 2745344,
+      "sha256": "d9901cfb98f17ec4eff691aac484fa98867460d9864a0b1cab997c9d7ae61c43",
+      "linkage": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/src/.libs/libvlccore.9.dylib:\n\t@rpath/libvlccore.dylib (compatibility version 10.0.0, current version 10.0.0)\n\t/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1359.0.0)\n\t/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation (compatibility version 300.0.0, current version 5027.0.69)\n\t/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices (compatibility version 1.0.0, current version 1226.0.0)\n\t/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 5027.0.69)\n\t/System/Library/Frameworks/CFNetwork.framework/Versions/A/CFNetwork (compatibility version 1.0.0, current version 3896.100.1)\n\t/usr/lib/libobjc.A.dylib (compatibility version 1.0.0, current version 228.0.0)\n"
+    },
+    "lib/.libs/libvlc.12.dylib": {
+      "bytes": 241296,
+      "sha256": "42471e20d00b1b51f4ee4bdec2cc60e49ec5d4d38cf5b656e3ae003eefc302bc",
+      "linkage": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/lib/.libs/libvlc.12.dylib:\n\t@rpath/libvlc.dylib (compatibility version 13.0.0, current version 13.0.0)\n\t@rpath/libvlccore.dylib (compatibility version 10.0.0, current version 10.0.0)\n\t/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1359.0.0)\n"
+    },
+    "bin/vlc-preparser-static": {
+      "bytes": 82920,
+      "sha256": "3627f0ee12674a61cadfecec890e4e5d11a2b95fcd01aec082aa05f11e0154ef",
+      "linkage": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/bin/vlc-preparser-static:\n\t/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 5027.0.69)\n\t/System/Library/Frameworks/Cocoa.framework/Versions/A/Cocoa (compatibility version 1.0.0, current version 24.0.0)\n\t@rpath/libvlc.dylib (compatibility version 13.0.0, current version 13.0.0)\n\t@rpath/libvlccore.dylib (compatibility version 10.0.0, current version 10.0.0)\n\t/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1359.0.0)\n"
+    },
+    "modules/.libs/libmp4_plugin.dylib": {
+      "bytes": 320672,
+      "sha256": "99ff53037f9b832259347d82d287d1dba027c97fc83380f1e49244dc0d9ca908",
+      "linkage": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/modules/.libs/libmp4_plugin.dylib:\n\t.libs/libmp4_plugin.dylib (compatibility version 0.0.0, current version 0.0.0)\n\t@rpath/libvlccore.dylib (compatibility version 10.0.0, current version 10.0.0)\n\t/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1359.0.0)\n"
+    }
+  },
+  "scope": "Targeted plugin compile only. No app packaging or functional packet/pixel qualification claimed. Baseline untouched."
+}

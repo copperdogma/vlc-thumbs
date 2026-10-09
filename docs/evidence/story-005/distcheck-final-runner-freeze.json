@@ -1,0 +1,9 @@
+{
+  "runner": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/reproduction-distcheck-git-boundary-frozen.sh",
+  "sha256": "2db2451050f0ac5be07381e1021224653b8570d0042ef2eaa46dc3a646cd90ea",
+  "approved_env_boundary": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-reproduction",
+  "discovery_smoke_receipt": "distcheck-git-discovery-smoke.json",
+  "gnu_tool_preflight_receipt": "reproduction-smoke-20261006T070532Z.json",
+  "unchanged_source": true,
+  "read_only_distcheck_source_protection": true
+}

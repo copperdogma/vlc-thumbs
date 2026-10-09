@@ -1,0 +1,49 @@
+{
+  "source_pin": "2e358f3098c2f2b7621d1dc568de8b61ad786322",
+  "source_status": "",
+  "app": "work/story005-master-baseline/VLC.app",
+  "version": "VLC version 4.0.0-dev Otto Chriek (2e358f3)\nCompiled by cam on mac.lan (Oct  5 2026 20:20:47)\nCompiler: Apple clang version 21.0.0 (clang-2100.3.34.2)\nThis program comes with NO WARRANTY, to the extent permitted by law.\nYou may redistribute it under the terms of the GNU General Public License;\nsee the file named COPYING for details.\nWritten by the VideoLAN team; see the AUTHORS file.\n",
+  "outputs": {
+    "Contents/MacOS/VLC": {
+      "bytes": 56496,
+      "sha256": "ef15c7ca6ba1a6bb5af9c5f36a9976f81b6f4d6f1677b64ac108dccc46b7148f"
+    },
+    "Contents/Info.plist": {
+      "bytes": 14593,
+      "sha256": "e4317d0774cc2609b1b922698504f122fe7f2b3c24365202bd7c23d947f0bb23"
+    },
+    "Contents/Frameworks/libvlccore.9.dylib": {
+      "bytes": 2727360,
+      "sha256": "6306df4a270eef77bf0cb346bdc01d773faedaf65f40be2f8b4c0a5ff8ec542e"
+    },
+    "Contents/Frameworks/libvlc.12.dylib": {
+      "bytes": 239824,
+      "sha256": "8d78827e86b8f85ba6e5a15f1ecfc8eb6f75f97a684ffece8266d6cb704fcff0"
+    },
+    "Contents/Frameworks/plugins/libavcodec_plugin.dylib": {
+      "bytes": 19317552,
+      "sha256": "08d354f0d30a3e8b5983a069302142d407cf70df60d642d7c933b05cfacfb56a"
+    },
+    "Contents/Frameworks/plugins/libmp4_plugin.dylib": {
+      "bytes": 318864,
+      "sha256": "e3e6c93b38481284849489f95988dd3c2c093e4a68567764b3bf1c6af0dae3d8"
+    },
+    "Contents/Frameworks/plugins/libncurses_plugin.dylib": {
+      "bytes": 410688,
+      "sha256": "15ef14e9c4ce6e3cbd5c2aac55f0d7c9710e92e8513d1154f4619932b6844549"
+    },
+    "Contents/Frameworks/plugins/plugins.dat": {
+      "bytes": 291372,
+      "sha256": "530f6307356e93b13682f67242e37f693210d97f245908f0b63c3f94aa5591d8"
+    }
+  },
+  "dynamic_linkage_checked_files": 395,
+  "nonportable_dynamic_linkage": [],
+  "linkage_receipt": "work/story005-scout/baseline-app-linkage.txt",
+  "build_receipt": "docs/evidence/story-005/baseline-build-20261006T022001Z.json",
+  "check_compile_receipt": "docs/evidence/story-005/baseline-build-20261006T022629Z.json",
+  "xctest_receipt": "docs/evidence/story-005/baseline-build-20261006T022721Z.json",
+  "xctest_executed": 253,
+  "xctest_failures": 0,
+  "native_UI_validation": "Not performed by builder; compile/signature/tests are separate from native hover/playback."
+}

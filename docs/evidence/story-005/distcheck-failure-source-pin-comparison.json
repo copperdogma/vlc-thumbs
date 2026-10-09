@@ -1,0 +1,61 @@
+{
+  "pin": "2e358f3098c2f2b7621d1dc568de8b61ad786322",
+  "rows": [
+    {
+      "path": "test/src/clock/clock.c",
+      "sha256": "9b224609dc762480e705844ad94a617906c35bdfbec2d24e852fe11b84879975",
+      "unchanged_from_pin": true
+    },
+    {
+      "path": "src/clock/clock.c",
+      "sha256": "bf0541ac22a94c3b98c000e184c6ab2d53feae1e306f67acd20cf2369f4993fd",
+      "unchanged_from_pin": true
+    },
+    {
+      "path": "src/clock/clock_internal.c",
+      "sha256": "9047b07ae1107ef916e0e72ad6bdd236441adb136e4d3bcc7e5d0fb49159a45d",
+      "unchanged_from_pin": true
+    },
+    {
+      "path": "test/src/input/decoder/input_decoder.c",
+      "sha256": "dac141f661fe7f80c6d7a49a37fe2b64bac5d93d5e36bb77ff4a48df458cdbca",
+      "unchanged_from_pin": true
+    },
+    {
+      "path": "test/src/input/decoder/input_decoder_scenarios.c",
+      "sha256": "899ddf47b6f4c2dad7cb37728272cc5f90a79ff812300dc7b9b0467847089f72",
+      "unchanged_from_pin": true
+    },
+    {
+      "path": "test/src/video_output/spu.c",
+      "sha256": "627aaae7f25214d81f41d7c98fa42fea874f63c36f4fde1033b7bbadb8809847",
+      "unchanged_from_pin": true
+    },
+    {
+      "path": "test/modules/misc/tls.c",
+      "sha256": "4b57bec906bb689850e32ace47cee2cd638c9f19dfb9fb16e5f9225a6fa160f1",
+      "unchanged_from_pin": true
+    },
+    {
+      "path": "test/src/player/attachments.c",
+      "sha256": "b98998df1d62dae74d40d71eb701cff11336ce2f1e0b4f52a1259afc0d91a30a",
+      "unchanged_from_pin": true
+    },
+    {
+      "path": "test/modules/video_output/opengl/filters.c",
+      "sha256": "966757dab0b291bfcc916de07d687e5c4d5773a133c7d07956f2511c963aa751",
+      "unchanged_from_pin": true
+    },
+    {
+      "path": "test/src/misc/image_cvpx.c",
+      "sha256": "dde3d4cf78ee8763587448fad263e2c076d356884096fac68288d3a5a2af45c0",
+      "unchanged_from_pin": true
+    },
+    {
+      "path": "test/Makefile.am",
+      "sha256": "cda00c05a356dc4f745a9f4757ff323ecc296d81c987a091db8307ad96e68875",
+      "unchanged_from_pin": true
+    }
+  ],
+  "scope": "Failure test sources, direct clock implementation and registrations; not a runtime baseline comparison"
+}

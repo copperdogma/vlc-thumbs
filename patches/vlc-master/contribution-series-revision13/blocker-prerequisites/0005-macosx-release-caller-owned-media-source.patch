@@ -1,0 +1,139 @@
+diff --git a/modules/gui/macosx/library/media-source/VLCMediaSourceProvider.m b/modules/gui/macosx/library/media-source/VLCMediaSourceProvider.m
+index f6b6ffcb99b88ed2116f2c96710b3a3c42fbbdc1..c75fb831c730e0d6595a429e1aa135a1ee52de75 100644
+--- a/modules/gui/macosx/library/media-source/VLCMediaSourceProvider.m
++++ b/modules/gui/macosx/library/media-source/VLCMediaSourceProvider.m
+@@ -47,6 +47,7 @@ static inline void getMediaSourcesForCategory(NSMutableArray <VLCMediaSource *>
+         }
+ 
+         VLCMediaSource *const mediaSource = [[VLCMediaSource alloc] initWithMediaSource:p_mediaSource andPreparser:p_preparser forCategory:category];
++        vlc_media_source_Release(p_mediaSource);
+         [outputArray addObject:mediaSource];
+     }
+ 
+diff --git a/test/Makefile.am b/test/Makefile.am
+index 9084eeb4eb4c73d430e453f1f0967a054cba4730..8c04a8a8cb1c245788b41cdb0f12f2ba1a927585 100644
+--- a/test/Makefile.am
++++ b/test/Makefile.am
+@@ -118,6 +118,17 @@ if HAVE_DARWIN
+ check_PROGRAMS += test_src_misc_image_cvpx
+ endif
+ 
++if HAVE_OSX
++check_PROGRAMS += test_macosx_media_source_ownership
++test_macosx_media_source_ownership_SOURCES = src/macosx/media_source_ownership.m
++test_macosx_media_source_ownership_CPPFLAGS = $(AM_CPPFLAGS) \
++	-I$(top_srcdir)/modules/gui/macosx \
++	-I$(top_srcdir)/modules/gui/macosx/library/media-source
++test_macosx_media_source_ownership_OBJCFLAGS = $(AM_OBJCFLAGS) -fobjc-arc -fobjc-exceptions
++test_macosx_media_source_ownership_LDFLAGS = $(AM_LDFLAGS) -Wl,-framework,Cocoa,-framework,MetalKit
++test_macosx_media_source_ownership_LDADD =
++endif
++
+ if BUILD_LUA
+ check_PROGRAMS += test_modules_lua_playlist_parser
+ endif
+diff --git a/test/src/macosx/media_source_ownership.m b/test/src/macosx/media_source_ownership.m
+new file mode 100644
+index 0000000000000000000000000000000000000000..17aa31a8849586ad8ab1bd8b16de87b102a10d32
+--- /dev/null
++++ b/test/src/macosx/media_source_ownership.m
+@@ -0,0 +1,99 @@
++/* SPDX-License-Identifier: GPL-2.0-or-later */
++/* Caller-owned C references must survive only through the returned wrapper.
++ * This compiles the actual provider source; the wrapper double follows the
++ * independently checked real wrapper's Hold-in-init/Release-in-dealloc contract.
++ */
++#include <vlc_common.h>
++#import <Foundation/Foundation.h>
++#import "VLCMediaSourceProvider.h"
++#import "VLCMediaSource.h"
++#import "VLCLocalMediaSource.h"
++#import "main/VLCMain.h"
++#include <stdio.h>
++
++static vlc_media_source_t source;
++static int references, getCalls, holds, releases, destructions, nullGets, listDeletes;
++static int failures;
++static struct vlc_media_source_meta metadata[] = {
++    { .name = "owned", .longname = "Owned", .category = SD_CAT_LAN },
++    { .name = "unavailable", .longname = "Unavailable", .category = SD_CAT_LAN },
++};
++#define CHECK(condition) do { if (!(condition)) { \
++    fprintf(stderr, "FAIL line %d: %s\n", __LINE__, #condition); ++failures; \
++} } while (0)
++
++vlc_media_source_meta_list_t *vlc_media_source_provider_List(
++    vlc_media_source_provider_t *provider, enum services_discovery_category_e category)
++{
++    (void)provider; CHECK(category == SD_CAT_LAN);
++    return (vlc_media_source_meta_list_t *)metadata;
++}
++size_t vlc_media_source_meta_list_Count(vlc_media_source_meta_list_t *list)
++{ CHECK(list == (void *)metadata); return 2; }
++struct vlc_media_source_meta *vlc_media_source_meta_list_Get(
++    vlc_media_source_meta_list_t *list, size_t index)
++{ CHECK(list == (void *)metadata); CHECK(index < 2); return &metadata[index]; }
++void vlc_media_source_meta_list_Delete(vlc_media_source_meta_list_t *list)
++{ CHECK(list == (void *)metadata); ++listDeletes; }
++vlc_media_source_t *vlc_media_source_provider_GetMediaSource(
++    vlc_media_source_provider_t *provider, const char *name)
++{
++    (void)provider;
++    if (strcmp(name, "unavailable") == 0) { ++nullGets; return NULL; }
++    CHECK(strcmp(name, "owned") == 0); ++getCalls; ++references; return &source;
++}
++void vlc_media_source_Hold(vlc_media_source_t *item)
++{ CHECK(item == &source); CHECK(references > 0); ++holds; ++references; }
++void vlc_media_source_Release(vlc_media_source_t *item)
++{ CHECK(item == &source); CHECK(references > 0); ++releases; --references; }
++vlc_media_source_provider_t *vlc_media_source_provider_Get(libvlc_int_t *instance)
++{ (void)instance; return NULL; }
++intf_thread_t *getIntf(void) { return NULL; }
++vlc_preparser_t *getNetworkPreparser(void) { return NULL; }
++#undef vlc_object_parent
++vlc_object_t *vlc_object_parent(vlc_object_t *object)
++{ (void)object; return NULL; }
++
++#pragma clang diagnostic push
++#pragma clang diagnostic ignored "-Wincomplete-implementation"
++@implementation VLCMediaSource
++- (instancetype)initWithMediaSource:(vlc_media_source_t *)item
++                       andPreparser:(vlc_preparser_t *)preparser
++                        forCategory:(enum services_discovery_category_e)category
++{
++    (void)preparser; CHECK(category == SD_CAT_LAN);
++    self = [super init]; if (self) vlc_media_source_Hold(item); return self;
++}
++- (instancetype)initForLocalDevices:(vlc_preparser_t *)preparser
++{ (void)preparser; return [super init]; }
++- (instancetype)initMyFoldersMediaSourceWithPreparser:(vlc_preparser_t *)preparser
++{ (void)preparser; return [super init]; }
++- (void)dealloc { ++destructions; vlc_media_source_Release(&source); }
++@end
++@implementation VLCLocalMediaSource
++@end
++#pragma clang diagnostic pop
++
++/* No copied category-enumeration implementation or test-only production seam. */
++#ifndef PROVIDER_SOURCE
++#define PROVIDER_SOURCE "library/media-source/VLCMediaSourceProvider.m"
++#endif
++#include PROVIDER_SOURCE
++
++int main(void)
++{
++    @autoreleasepool {
++        NSMutableArray<VLCMediaSource *> *output = NSMutableArray.array;
++        getMediaSourcesForCategory(output, NULL, NULL, SD_CAT_LAN);
++        CHECK(output.count == 1); CHECK(getCalls == 1); CHECK(nullGets == 1);
++        CHECK(holds == 1); CHECK(listDeletes == 1); CHECK(destructions == 0);
++        CHECK(references == 1); CHECK(releases == 1);
++        fprintf(stdout, "returned refs=%d getCalls=%d holds=%d releases=%d\n",
++                references, getCalls, holds, releases);
++        output = nil;
++    }
++    CHECK(destructions == 1); CHECK(references == 0); CHECK(releases == 2);
++    fprintf(stdout, "retired refs=%d destructions=%d releases=%d failures=%d\n",
++            references, destructions, releases, failures);
++    return failures ? 1 : 0;
++}

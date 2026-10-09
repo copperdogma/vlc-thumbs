@@ -1,0 +1,18 @@
+{
+  "stage": "host-tools-probe",
+  "command": [
+    "bash",
+    "-c",
+    "export SDKROOT=$(xcrun --sdk macosx --show-sdk-path); export CMAKE_APPLE_SILICON_PROCESSOR=arm64; cmake -S work/story005-host-tools-probe -B work/story005-host-tools-probe/build"
+  ],
+  "cwd": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs",
+  "initial_free_bytes": 21730447360,
+  "floor_bytes": 1073741824,
+  "time_limit_seconds": 120,
+  "status": "succeeded",
+  "pid": 26114,
+  "elapsed_seconds": 2.0,
+  "minimum_free_bytes": 21730439168,
+  "exit_code": 0,
+  "final_free_bytes": 21730267136
+}

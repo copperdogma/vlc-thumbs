@@ -1,0 +1,106 @@
+diff --git a/src/misc/picture.c b/src/misc/picture.c
+index 724471b..555858d 100644
+--- a/src/misc/picture.c
++++ b/src/misc/picture.c
+@@ -135,6 +135,7 @@ int picture_Setup( picture_t *p_picture, const video_format_t *restrict fmt )
+     video_format_Setup( &p_picture->format, fmt->i_chroma, fmt->i_width, fmt->i_height,
+                         fmt->i_visible_width, fmt->i_visible_height,
+                         fmt->i_sar_num, fmt->i_sar_den );
++    p_picture->format.orientation = fmt->orientation;
+     if( fmt->i_x_offset < fmt->i_width &&
+         fmt->i_y_offset < fmt->i_height &&
+         fmt->i_visible_width  > 0 && fmt->i_x_offset + fmt->i_visible_width  <= fmt->i_width &&
+diff --git a/test/src/misc/image.c b/test/src/misc/image.c
+index 2df50cf..cf54108 100644
+--- a/test/src/misc/image.c
++++ b/test/src/misc/image.c
+@@ -48,6 +48,81 @@ const char vlc_module_name[] = MODULE_STRING;
+ 
+ static atomic_bool encoder_opened = false;
+ 
++static void TestPictureOrientation(void)
++{
++    const vlc_fourcc_t chromas[] = { VLC_CODEC_RGBA, VLC_CODEC_I420 };
++    const video_orientation_t orientations[] = {
++        ORIENT_TOP_LEFT, ORIENT_TOP_RIGHT, ORIENT_BOTTOM_LEFT,
++        ORIENT_BOTTOM_RIGHT, ORIENT_LEFT_TOP, ORIENT_LEFT_BOTTOM,
++        ORIENT_RIGHT_TOP, ORIENT_RIGHT_BOTTOM,
++    };
++
++    for (size_t c = 0; c < ARRAY_SIZE(chromas); ++c)
++    {
++        video_format_t fmt;
++        video_format_Init(&fmt, chromas[c]);
++        video_format_Setup(&fmt, chromas[c], 320, 192, 300, 170, 4, 3);
++        fmt.i_x_offset = 8;
++        fmt.i_y_offset = 12;
++
++        picture_t *normal = picture_NewFromFormat(&fmt);
++        assert(normal != NULL);
++
++        for (size_t o = 0; o < ARRAY_SIZE(orientations); ++o)
++        {
++            fmt.orientation = orientations[o];
++            picture_t *pic = picture_NewFromFormat(&fmt);
++            assert(pic != NULL);
++            assert(pic->format.orientation == fmt.orientation);
++            assert(pic->format.i_chroma == fmt.i_chroma);
++            assert(pic->format.i_width == fmt.i_width);
++            assert(pic->format.i_height == fmt.i_height);
++            assert(pic->format.i_visible_width == fmt.i_visible_width);
++            assert(pic->format.i_visible_height == fmt.i_visible_height);
++            assert(pic->format.i_x_offset == fmt.i_x_offset);
++            assert(pic->format.i_y_offset == fmt.i_y_offset);
++            assert(pic->format.i_sar_num == fmt.i_sar_num);
++            assert(pic->format.i_sar_den == fmt.i_sar_den);
++
++            picture_t *clone = picture_Clone(pic);
++            assert(clone != NULL);
++            assert(clone->format.orientation == fmt.orientation);
++            assert(clone->format.i_chroma == fmt.i_chroma);
++            assert(clone->format.i_width == fmt.i_width);
++            assert(clone->format.i_height == fmt.i_height);
++            assert(clone->format.i_visible_width == fmt.i_visible_width);
++            assert(clone->format.i_visible_height == fmt.i_visible_height);
++            assert(clone->format.i_x_offset == fmt.i_x_offset);
++            assert(clone->format.i_y_offset == fmt.i_y_offset);
++            assert(clone->format.i_sar_num == fmt.i_sar_num);
++            assert(clone->format.i_sar_den == fmt.i_sar_den);
++            assert(pic->i_planes == normal->i_planes);
++            assert(clone->i_planes == pic->i_planes);
++
++            for (int p = 0; p < pic->i_planes; ++p)
++            {
++                /* Orientation metadata must not change the buffer layout. */
++                assert(pic->p[p].i_pitch == normal->p[p].i_pitch);
++                assert(pic->p[p].i_lines == normal->p[p].i_lines);
++                assert(pic->p[p].i_visible_pitch == normal->p[p].i_visible_pitch);
++                assert(pic->p[p].i_visible_lines == normal->p[p].i_visible_lines);
++                assert(pic->p[p].i_pixel_pitch == normal->p[p].i_pixel_pitch);
++                assert(clone->p[p].p_pixels == pic->p[p].p_pixels);
++                assert(clone->p[p].i_pitch == pic->p[p].i_pitch);
++                assert(clone->p[p].i_lines == pic->p[p].i_lines);
++                assert(clone->p[p].i_visible_pitch == pic->p[p].i_visible_pitch);
++                assert(clone->p[p].i_visible_lines == pic->p[p].i_visible_lines);
++                assert(clone->p[p].i_pixel_pitch == pic->p[p].i_pixel_pitch);
++            }
++
++            picture_Release(clone);
++            picture_Release(pic);
++        }
++        picture_Release(normal);
++        video_format_Clean(&fmt);
++    }
++}
++
+ static int OpenIntf(vlc_object_t *root)
+ {
+     image_handler_t *ih = image_HandlerCreate(root);
+@@ -148,6 +223,7 @@ VLC_EXPORT const vlc_plugin_cb vlc_static_modules[] = {
+ int main(void)
+ {
+     test_init();
++    TestPictureOrientation();
+ 
+     const char * const args[] = {
+         "-vvv", "--vout=dummy", "--aout=dummy", "--text-renderer=dummy",

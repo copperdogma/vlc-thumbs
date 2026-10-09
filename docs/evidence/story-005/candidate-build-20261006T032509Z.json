@@ -1,0 +1,55 @@
+{
+  "source_pin": "2e358f3098c2f2b7621d1dc568de8b61ad786322",
+  "source": "work/upstream/vlc-master-story005-candidate",
+  "output": "work/story005-master-candidate",
+  "command": [
+    "bash",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/build-feature-contrib.sh"
+  ],
+  "cwd": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs",
+  "environment_overrides": {
+    "VLC_PATH": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/bin:/opt/homebrew/opt/python@3.14/bin:/usr/local/bin",
+    "PKG_CONFIG_LIBDIR": "/nonexistent/story005-pkgconfig-isolation",
+    "PKG_CONFIG_PATH": "",
+    "ACLOCAL_PATH": "/usr/local/share/aclocal",
+    "VLC_FORCE_KERNELVERSION": "19",
+    "VLC_PREBUILT_CONTRIBS_URL": "https://artifacts.videolan.org/vlc/macos-arm64/vlc-contrib-aarch64-apple-darwin19-15b71e3fa6d49ed2845dfb1324760984eae6101c.tar.zst",
+    "NCURSES_LIBS": "-L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/contrib/aarch64-apple-darwin19/lib -lncursesw"
+  },
+  "host_arch": "arm64",
+  "initial_free_bytes": 4987617280,
+  "disk_stop_floor_bytes": 1073741824,
+  "status": "failed",
+  "log": "docs/evidence/story-005/candidate-build-20261006T032509Z.log",
+  "source_hashes": {
+    "extras/package/macosx/build.sh": "30f1c4a98fa015c442689ab195f394fd9ce1ff75d355a35d6589027556867b2b",
+    "extras/package/macosx/env.build.sh": "08feac636d8eb778bd4f6738ffca5bc4bd6f03c6006aef520733d4f6d031be15",
+    "extras/tools/packages.mak": "ae3dfcd9d6ddc6e25e76ba5e63cc52ba91912ca6bb82772d92bb445ba79a1fc4",
+    "contrib/src/main.mak": "95119bbb9f3171a71bd20159fb894bc315b99ef39f2db6c2af81adef6f31e053"
+  },
+  "source_status": " M bin/Makefile.am\n M bin/meson.build\n M configure.ac\n M contrib/src/ffmpeg/rules.mak\n M extras/package/macosx/codesign.sh\n M extras/package/macosx/package.mak\n M meson_options.txt\n M modules/gui/macosx/main/VLCMain.m\n M modules/gui/macosx/playqueue/VLCPlayerController.h\n M modules/gui/macosx/playqueue/VLCPlayerController.m\n?? bin/timeline-preview/\n?? contrib/src/ffmpeg/matroska-track-number.patch\n?? modules/gui/macosx/timeline/\n",
+  "source_diff_sha256": "0762e1f7fd61ed08684f9ff5ce7e9eab27de63a6108ab9ea1f55a496580c13fc",
+  "candidate_product_inputs": {
+    "bin/Makefile.am": "03bb4361718dd51eff85d2d37497d5ffa8059845de3d2cee31577eb8d3b9f90f",
+    "bin/meson.build": "b4d50f7eb0333297190105379e60ba35ea50b8f5e0a3afd40ee17038bbd3e23f",
+    "bin/timeline-preview/Makefile.am": "b0cd1d04fbc09540fb31a7b2a3260cee1a24c9eb8d4d8a0c75fecf93a5e42c28",
+    "bin/timeline-preview/timeline-preview.c": "8b6dbe3a28c45bab10d3286e28f119aff79687121fa2ed04ffe25c6a97ce8a82",
+    "configure.ac": "315cca73a7c016ec6eefafad31a1829c3dc472d0091a8be1135dc3e31fc2c6f3",
+    "contrib/src/ffmpeg/matroska-track-number.patch": "23baeb78b81fcb51e5068feaba2ad6f8ddfedfc3eb7dd5bca3b7d56df5ce2602",
+    "contrib/src/ffmpeg/rules.mak": "83bed518f2fa2fcf761f0b3a9c5175d5a00584caf36c097e7e974be450eb9e76",
+    "extras/package/macosx/codesign.sh": "157217d4cb062efb2af688cc0c9c36ef9dfc58b6d0c5c367f524d83bb1de5ea6",
+    "extras/package/macosx/package.mak": "4ec3d50726545bbeabf3219a4ccb355f5e3610487873f60a3eeec0b2d6a878db",
+    "meson_options.txt": "c48a07be30c3b79a835ec7cc79487472c77026bbfff2885cbe579bcac359a8ef",
+    "modules/gui/macosx/main/VLCMain.m": "a4b6c24610624a551b0d8afbf697bcd3cf2ce0522791c4632fdf753e97194867",
+    "modules/gui/macosx/playqueue/VLCPlayerController.h": "7594a27881387adb1ee071f3ada089e0f4003805672e4aa91526855b8d3fa2a4",
+    "modules/gui/macosx/playqueue/VLCPlayerController.m": "b5d8d33f27aabbc91dec9a4b0c6a4825382c2e9709cc95d1b3d1dfa2d1900d1d",
+    "modules/gui/macosx/timeline/VLCTimelineContext.h": "83054f2032e15c3f93f6c2150d5c3e33174a10be6c4d3a25e60bc47acb766348",
+    "modules/gui/macosx/timeline/VLCTimelineContext.m": "9e0de56028c611ea2b79a45afd3b7278bad477e73456ddc399d280c64e67f40a"
+  },
+  "elapsed_seconds": 2.1,
+  "minimum_free_bytes": 4987527168,
+  "pid": 46342,
+  "exit_code": 1,
+  "final_free_bytes": 4987555840,
+  "preservation": "No deletion or cleanup performed. Existing builds/apps untouched."
+}

@@ -1,0 +1,20 @@
+[0000000103a254a0] main libvlc error: stale plugins cache: modified /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/modules/.libs/libpreparserserializer_json_plugin.dylib
+[000000016d08dc00] main generic error: cannot load plug-in /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/modules/.libs/libmacosx_plugin.dylib: dlopen(/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/modules/.libs/libmacosx_plugin.dylib, 0x0001): Library not loaded: @rpath/Sparkle.framework/Versions/B/Sparkle
+  Referenced from: <C0402D52-B997-3C8F-860D-889BF5A5935F> /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/modules/.libs/libmacosx_plugin.dylib
+  Reason: no LC_RPATH's found
+Run with internal preparser...
+[0000000103a481d0] avcodec encoder error: Unknown option "border_mask"
+[0000000103a481d0] avcodec encoder error: Unknown option "noise_reduction"
+[0000000103a482b0] avcodec encoder error: Unknown option "border_mask"
+[0000000103a482b0] avcodec encoder error: Unknown option "noise_reduction"
+[0000000103a481d0] avcodec encoder error: Unknown option "border_mask"
+[0000000103a481d0] avcodec encoder error: Unknown option "noise_reduction"
+thumbnail_to_files: using format: png
+Run alpha crop test with internal preparser...
+[0000007484e14000] avcodec encoder error: Unknown option "border_mask"
+[0000007484e14000] avcodec encoder error: Unknown option "noise_reduction"
+Run alpha align test with internal preparser...
+[0000007484e14000] avcodec encoder error: Unknown option "border_mask"
+[0000007484e14000] avcodec encoder error: Unknown option "noise_reduction"
+Run with external preparser...
+thumbnail_to_files: using format: png

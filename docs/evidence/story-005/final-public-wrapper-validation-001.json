@@ -1,0 +1,162 @@
+{
+  "recorded_utc": "2026-10-07T01:07:53.810617+00:00",
+  "status": "ready_for_maintainer_review_submission_by_Cam_nothing_submitted",
+  "scope": "Root accepted focused contribution readiness with disclosed baseline lifetime limitation; wrapper/evidence only, no runtime, source/patch/image edits, commit, signoff or submission.",
+  "checker": {
+    "script": "docs/evidence/story-005/public-package-wrapper-check.py",
+    "sha256": "78023b6973b67f15c043e8e299f550cd86e84c8cfe5821136d62d6d4427690d1",
+    "command": "python3 docs/evidence/story-005/public-package-wrapper-check.py --reuse-verified-identity > docs/evidence/story-005/final-public-wrapper-validation-001.log",
+    "exit_code": 0,
+    "log": "docs/evidence/story-005/final-public-wrapper-validation-001.log",
+    "log_sha256": "99b91b4553d45f343a1f683969ae32b70e81bfff32c7e5b58ec34fd9cae4869e"
+  },
+  "git_limit": "Initial checker interrupted exit130 at Git config query after host-wide Git hang reported. No retry/repair/new Git. Passing direct-Python mode reuses unchanged prior verified identity. No fresh Git status/diff/whitespace/apply claim.",
+  "result": {
+    "status": "passed",
+    "checks": [
+      "59 frozen source hashes/sizes",
+      "13 artifact hashes/sizes",
+      "series order",
+      "relative wrapper links",
+      "complete artifact private/binary marker scan",
+      "Git identity and approval precision",
+      "two PNG copies/source hashes and public fixture hash; scoped screenshot limits",
+      "20MiB storage cap",
+      "0000/0001/0003 lineage unchanged",
+      "sanitized shutdown attribution hash/privacy/links and eight unchanged source pins"
+    ],
+    "identity_scope": "prior passing identity reused; fresh Git unavailable (host hang); no fresh Git query",
+    "source_tree": "cc0ec69e8be5ba2e60ccae6ea095b471b500a6ff",
+    "manifest_sha256": "0279ae61e3bb54b0e448a00d61521cf8f51654808f2efc7e578689f633a2dab5",
+    "artifact_bytes": 4281589,
+    "artifact_files": [
+      {
+        "file": "0000-source-header-distribution.patch",
+        "bytes": 4732,
+        "sha256": "70da9e24f27de04128c59b1484379d1d9813f7e1af04d3792e971a07a24cd57e"
+      },
+      {
+        "file": "0001-contrib-matroska-identity-and-admission.patch",
+        "bytes": 13511,
+        "sha256": "27772936e6068efe11bd44dd6265cd1fb61114dfd8aa7cd9ba693c609e54abf1"
+      },
+      {
+        "file": "0002-timeline-helper-build-package-and-tests.patch",
+        "bytes": 187209,
+        "sha256": "b2661e2a585ed4f543c97ba0f50ce401637dbc1b8404fe85572cf866a8f6875e"
+      },
+      {
+        "file": "0003-macosx-timeline-context-service-and-hover.patch",
+        "bytes": 304953,
+        "sha256": "ef9ad2f01482a06798495284c138b448637f91c417f467b2bd7a1c3fec2d7151"
+      },
+      {
+        "file": "README.md",
+        "bytes": 13933,
+        "sha256": "643152b8ca0dc44c297faadc789cb68d1a416cc3bacfa2b77543b00a2293f2f6"
+      },
+      {
+        "file": "contribution-description-draft.md",
+        "bytes": 7218,
+        "sha256": "a43b16e0ce6c1954374482a5997ba2b088a4fbc4f906bd845eb4dec57f3cce11"
+      },
+      {
+        "file": "demonstration/README.md",
+        "bytes": 3692,
+        "sha256": "58180470b0b37095332c20530459637ba246f8288ed6049e5faf497db2a24e80"
+      },
+      {
+        "file": "demonstration/custom-fullscreen-hover.png",
+        "bytes": 3512667,
+        "sha256": "3b11c683299899abbf8d6ff640456853afa7e83ec06ab40147e8f3116106abd1"
+      },
+      {
+        "file": "demonstration/detached-hover.png",
+        "bytes": 192239,
+        "sha256": "d32dd707d09bfd70731c2b0438d1e4c8c83f04dbe4391ed3d1be2cb100bc5050"
+      },
+      {
+        "file": "demonstration/provenance.json",
+        "bytes": 4418,
+        "sha256": "b02db1dcb018664eb4bedd8a325da56ae705cfe82ef09a706c26669a586459dc"
+      },
+      {
+        "file": "manifest.json",
+        "bytes": 33530,
+        "sha256": "0279ae61e3bb54b0e448a00d61521cf8f51654808f2efc7e578689f633a2dab5"
+      },
+      {
+        "file": "proposed-commit-messages.md",
+        "bytes": 3294,
+        "sha256": "7758e8763cfb587644d27cd7704d0a30e80d2ac304fc60030e5ad2d7b1b6a5d3"
+      },
+      {
+        "file": "series",
+        "bytes": 193,
+        "sha256": "db71116d7a68e3319f7fe0a220a17327c3bbb116c98253d29bdc28d688930d4f"
+      }
+    ]
+  },
+  "source_correspondence_receipt": {
+    "file": "docs/evidence/story-005/revision10-docs-source-validation.json",
+    "sha256": "4b8ca872fa289f2e76acdcc0cafafcc2d07918abac41309d2f92f3305bdf6f1c",
+    "scope": "Unchanged revision10 exact pinned-base apply/tree proof reused, not repeated."
+  },
+  "shutdown_attribution": {
+    "file": "../../../docs/evidence/story-005/shutdown-baseline-attribution.md",
+    "bytes": 5942,
+    "sha256": "ad2424a61cbe67affead5f736e421de1d1ab52ea742f26c3a9c9ffaee281f584",
+    "unchanged_sources": [
+      {
+        "path": "include/vlc_media_source.h",
+        "sha256": "80ac2c27a432e5991f4220007058d01d60e56ee2a5573eaa79787d0c990ed6bb"
+      },
+      {
+        "path": "modules/gui/macosx/library/media-source/VLCMediaSourceProvider.m",
+        "sha256": "2a844487fc97b61272c21be4223555a936439d9322edc72c1890cec78b3d57ef"
+      },
+      {
+        "path": "modules/gui/macosx/library/media-source/VLCMediaSource.m",
+        "sha256": "e23d631f8f46556307861da9255bcca918ac52fe721870651db6fc27b5d2d99c"
+      },
+      {
+        "path": "src/media_source/media_source.c",
+        "sha256": "cd8225c1081a45b58d7f5e117e169c61bd6b07ceee5eaa64f18249f66303c839"
+      },
+      {
+        "path": "src/modules/bank.c",
+        "sha256": "165ecfcaffa8c54931967f4e59b295b546eda8608df0d6d3e7ae804f75f3c8a6"
+      },
+      {
+        "path": "src/misc/objects.c",
+        "sha256": "d25da3893002609987227b5a8c2b381b3fc3c76163daaab89937ddc4844885c1"
+      },
+      {
+        "path": "modules/services_discovery/upnp-wrapper.cpp",
+        "sha256": "9da68e858a243b2a4a9dbff36a0ea66ce688d037f162d308ba71b841510b7e4a"
+      },
+      {
+        "path": "modules/services_discovery/upnp.cpp",
+        "sha256": "f60eb2b1bf0267160f4d742ae8cc8f48e40c046522d08c8206f7279b1634a82a"
+      }
+    ],
+    "meaning": "unchanged upstream owned-reference defect plus baseline activated-path evidence; no exact crash cause, live-worker/unmap/UUID proof, crash fix or exoneration"
+  },
+  "private_input_provenance": [
+    {
+      "file": "work/story005-upnp-verbose001/result.json",
+      "sha256": "62d00857d6589135aa7c2e151b7f439cadc6cfb41a16954a0715352a244dd522"
+    },
+    {
+      "file": "work/story005-upnp-verbose001/closeout.json",
+      "sha256": "b7863d012292eb3a5f992802a8d8f7bb3a75827dbb871c82556c44852042c798"
+    },
+    {
+      "file": "work/story005-playback-shutdown-attribution-plan001/gui-discovery-lifetime-research.md",
+      "sha256": "6cf9e19bc616bf5b37441696a49f03ca7e6c154edb1ffcf6e1bd0887ea448b0e"
+    }
+  ],
+  "protected_artifacts_unchanged": true,
+  "conservative_peak_bytes": 18718408,
+  "limits": "Actual candidate SIGTERM shutdown -11 remains; exact causality unproved. No live-worker/unmap/runtime-UUID proof, crash fix or exoneration. Distcheck80/5/7 failed, actual VO unavailable; native/control/resource/audio/frame-loss/screen-hole scopes retained."
+}

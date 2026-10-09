@@ -1,0 +1,23 @@
+{
+  "phase": "H1 prototype source batch frozen; normal build/runtime pending",
+  "files": {
+    "contrib/src/ffmpeg/matroska-flat-timeline.patch": "abd605f770de85f739929c5d333bd45e8d35075b2b69720cfaecbdc0d278450e",
+    "bin/timeline-preview/timeline-preview.c": "61fa2c51d2dd62a0bd7ea7d5b07744a166725a6dac0e5eb0fb6292bf4b604e0f",
+    "bin/timeline-preview/PROTOCOL.md": "30063a4f71a945238d5e34515514f2fdf35355f436c7bf5ffaaff53fcbb5e708",
+    "bin/timeline-preview/test.py": "dd42b041891b84e347fb6253259f6c2bb4a7781d91398e98546d16d9f4ce1414"
+  },
+  "superseded_patch_sha256": "34783e7e103df21b07c4ee44f8103cace27a22cac819702d991b75fa4da91975",
+  "repairs": [
+    "Reject SEGMENT/EBML header boundaries even when first Segment length is unknown",
+    "Query AVSEEK_SIZE only, never avio_size fallback; restore callback cursor on all post-query failure paths"
+  ],
+  "diagnostic_compile_command": "work/story005-helper9-proof/flat-compile/command005.json",
+  "diagnostic_compile_status": 0,
+  "limits": {
+    "buffer_bytes": 512,
+    "physical_read_bytes": 8388608,
+    "physical_seeks": 20000,
+    "nodes": 100000,
+    "wall_cpu_operation_us": 15000000
+  }
+}
