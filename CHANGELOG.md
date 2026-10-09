@@ -1,5 +1,11 @@
 # Changelog
 
+## [2026-10-09-02] - Concise upstream review package (Story006)
+
+- Refreshed thirteen current commit messages, compact cover/MR draft and a single validation table. Explained real prerequisite dependencies and kept qualified patch order.
+- Put ordinary build/check/distcheck instructions before optional GUI isolation; removed stale stage banners from current reviewer documents.
+- Focused artifact/link/shell checks pass; all patches, images, provenance and product code remain unchanged. Parent Story005 remains open for upstream submission/review.
+
 ## [2026-10-09] - Qualified VLC4 contribution and owner test app (Story005 Phases1/2)
 
 - Integrated retained FFmpeg9 timeline helper, bounded cache/preparation and existing native macOS hover controls on the pinned VLC master base.

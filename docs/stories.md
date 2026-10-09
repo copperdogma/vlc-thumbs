@@ -9,3 +9,4 @@
 | 003 | Story 003 — Persistent short labels on the macOS timeline | Pending | High | spec:1, spec:3, spec:4, spec:5 | 001, 005 |
 | 004 | Story 004 — Responsive previews with background preparation and reusable caching | Done | High | spec:1, spec:2, spec:4, spec:5 | 002 |
 | 005 | Story 005 — Open-source contribution (Story 002b) | In Progress | High | spec:1, spec:2, spec:4, spec:5 | 002, 004 |
+| 006 | Story006 — Story005 reviewer-package polish | Done | High | spec:1, spec:5 | 002, 004 |

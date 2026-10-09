@@ -1,5 +1,5 @@
 {
-  "status": "READY for bounded pre-submission review; Phases1/2 only; no submission",
+  "status": "Prepared source proposal; no upstream submission or acceptance",
   "upstream_base": "2e358f3098c2f2b7621d1dc568de8b61ad786322",
   "input_feature_tree": "cce7f9917b8dc4d5432e7f83b2c840f8c3c5027b",
   "resulting_source_tree": "b7c0f24e442c35a57bb108d56b801fd05b624943",
@@ -261,7 +261,7 @@
     "modules/gui/macosx/windows/video/VLCMainVideoViewController.m"
   ],
   "current_qualification": {
-    "status": "READY for bounded pre-submission review; Phases1/2 only; no submission",
+    "status": "Qualified combined source remains unchanged; documentation refresh only",
     "source": "Source10 exact72source and59featuremidpoint, canonical13staticfulltree correspondence PASS; root independently reviewed.",
     "helper_source_change": "Three named double temporaries remove direct function-result casts; actual target-class diagnostics removed and fresh77 passes; native qualification remains separate.",
     "normal_package": "PASS official normal package make exit0 and distinct independent normal package qualification; retained isolated package/signature/all398 loadable provenance qualification PASS. Package provenance is separate from the one paused-main physical hover and normalQuit scope recorded under runtime.",
@@ -281,8 +281,8 @@
   "review_artifacts": [
     {
       "file": "README.md",
-      "bytes": 3998,
-      "sha256": "038c5d28b6577ed2b86658bca69e3df6c17b3a5dc2add094135e7a603a5c55a9"
+      "bytes": 5314,
+      "sha256": "bb98da52bf3fe077ffa3ad76154ea39e20d9c5c3487a1b6c399cd96c9946e03b"
     },
     {
       "file": "series",
@@ -306,5 +306,11 @@
     }
   },
   "new0008_base_tree": "ab8a2728d242f8fe6ad3450a2ae39bec7a92a0ec",
-  "application_note": "Inventory/review order only; actual order is new0008, fivefeature, sevenfollowups in ../contribution-series; feature-created tests prevent contiguous prerequisite-first application."
+  "application_note": "Inventory/review order only; actual order is new0008, fivefeature, sevenfollowups in ../contribution-series; feature-created tests prevent contiguous prerequisite-first application.",
+  "documentation_revision": {
+    "story": "006",
+    "scope": "Current prose/messages/review map/reproduction presentation; patch bytes and qualified source unchanged",
+    "checks": "Artifact preservation, manifest hashes, local links and shell syntax; existing product evidence reused",
+    "ordinary_recipe": "Clearer ordinary route assembled from previously exercised commands; uninterrupted sequence unexecuted; optional GUI block unchanged"
+  }
 }

@@ -17,7 +17,7 @@
     "copyright_scope": "contributor credit does not assert sole ownership, assignment or waiver",
     "sign_off_or_formal_attestation": false
   },
-  "status": "READY for bounded pre-submission review; Phases1/2 only; no submission",
+  "status": "Prepared source proposal; no upstream submission or acceptance",
   "revision": 12,
   "previous_source_tree": "f8f7d0fdb46c1ae25ba94049143d12ecb7daf96c",
   "previous_manifest_sha256": "87e9831a3c7b4bc544251c9a5ba9b8594eabec579e10ac2bd959d586ff5e529c",
@@ -861,7 +861,7 @@
     "modules/gui/macosx/tests/VLCThumbnailSchedulerTest.m"
   ],
   "current_qualification": {
-    "status": "READY for bounded pre-submission review; Phases1/2 only; no submission",
+    "status": "Qualified combined source remains unchanged; documentation refresh only",
     "source": "Source10 exact72source and59featuremidpoint, canonical13staticfulltree correspondence PASS; root independently reviewed.",
     "helper_source_change": "Three named double temporaries remove direct function-result casts; actual target-class diagnostics removed and fresh77 passes; native qualification remains separate.",
     "normal_package": "PASS official normal package make exit0 and distinct independent normal package qualification; retained isolated package/signature/all398 loadable provenance qualification PASS. Package provenance is separate from the one paused-main physical hover and normalQuit scope recorded under runtime.",
@@ -994,23 +994,23 @@
   "review_artifacts": [
     {
       "file": "LIMITATIONS.md",
-      "bytes": 8072,
-      "sha256": "9414471dca3a2ed749a987f1f0c7df6f40dddfb9952b673d18343203097a42b4"
+      "bytes": 4890,
+      "sha256": "bdfa9933ad0d16b00282f7b04cd262aa3a030332b0e4094c566ce3967a63b1b4"
     },
     {
       "file": "README.md",
-      "bytes": 11547,
-      "sha256": "80a7c5add53e6dcfc4a98d5cd4c4d02b2da6c3bdcb02cdd5817355632c6ababc"
+      "bytes": 13235,
+      "sha256": "555bb5a6268e9b7e643ccbe6d3c7a2e8fd6ac8110593adb011405e7bca20d2d6"
     },
     {
       "file": "contribution-description-draft.md",
-      "bytes": 3827,
-      "sha256": "aa6891df8d3113bb5357806b3f9c60679be689c18847fb20f20d9aec7d57e558"
+      "bytes": 2131,
+      "sha256": "21abd1873d01352b94cafa2a4349d78a403bc52d6393eb331649b384eb4c6aed"
     },
     {
       "file": "demonstration/README.md",
-      "bytes": 3796,
-      "sha256": "7b44d852620ab507f7b00d4f7403c7c6faa61750468e8542a2b8a7c231329601"
+      "bytes": 1822,
+      "sha256": "5e28512a32d79407d2023f3bee365ebcfea06da3c06265ffcf0a72f848d313e2"
     },
     {
       "file": "demonstration/custom-fullscreen-hover.png",
@@ -1029,8 +1029,8 @@
     },
     {
       "file": "proposed-commit-messages.md",
-      "bytes": 4435,
-      "sha256": "6ebef0f63d2442676cde5987bb94bc7586c38ae2bb5888402e340d1dc2c6d21b"
+      "bytes": 6438,
+      "sha256": "b96292b08749e33855eb69246f895ac6bd141e0a4b62d95f2d52aed7e58f4c46"
     },
     {
       "file": "series",
@@ -1053,5 +1053,11 @@
       "aggregate_manifest_sha256": "1634718cb15890b0d4ac1bac3a8062bedaa3b93121402cc8fb6b66ba894e7276"
     }
   },
-  "composition_precondition": "new0008 first; canonical aggregate order in ../contribution-series; onlyF0002helpersection differs from stage014."
+  "composition_precondition": "new0008 first; canonical aggregate order in ../contribution-series; onlyF0002helpersection differs from stage014.",
+  "documentation_revision": {
+    "story": "006",
+    "scope": "Current prose/messages/review map/reproduction presentation; patch bytes and qualified source unchanged",
+    "checks": "Artifact preservation, manifest hashes, local links and shell syntax; existing product evidence reused",
+    "ordinary_recipe": "Clearer ordinary route assembled from previously exercised commands; uninterrupted sequence unexecuted; optional GUI block unchanged"
+  }
 }

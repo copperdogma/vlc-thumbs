@@ -1,57 +1,54 @@
-# Combined-tree prerequisites
+# Build, test and runtime prerequisites
 
-**READY for bounded pre-submission review of Phases1/2; no submission.** The whole story remains InProgress; Phase3 is not authorized. These repairs accompany the hover contribution
-because required combined-tree builds/tests and playback use their affected
-paths. Maintainers may review them separately; no independent application/build
-of the whole prerequisite component has been qualified.
+These repairs accompany the timeline-preview series because its complete build,
+distribution tests and native playback exercise the affected paths. The concerns
+can be reviewed separately; the serialized prerequisite component is not an
+independently qualified stack.
 
-Base: `2e358f3098c2f2b7621d1dc568de8b61ad786322`.
-Current combined tree: `b7c0f24e442c35a57bb108d56b801fd05b624943`.
-There are 19 prerequisite paths, six overlapping the 59 feature paths, for 72
-combined paths. All source bytes/modes and intermediate trees are pinned in the
-[aggregate manifest](../contribution-manifest.json).
+## Application and dependencies
 
-## Apply exactly once
-
-P denotes this directory; F denotes `feature-series/`:
+Apply the complete [aggregate series](../contribution-series) once from base
+`2e358f3098c2f2b7621d1dc568de8b61ad786322`:
 
 ```text
 P0008 → F0000 → F0001 → F0002 → F0003 → F0004
       → P0001 → P0002 → P0003 → P0004 → P0005 → P0006 → P0007
 ```
 
-Use the [aggregate application loop and build/check/distcheck recipe](../feature-series/README.md).
-Component `series` files are review inventories, not an alternate application
-sequence. P0006–7 extend feature-created regression substrate and cannot simply
-be moved ahead of the features. The five features alone are also not a newly
-qualified runnable release. Any smaller/reordered submission needs its own proof.
+P denotes this directory; F denotes `feature-series/`. Component `series` files
+are review inventories. The [aggregate manifest](../contribution-manifest.json)
+pins intermediate trees and the combined tree
+`b7c0f24e442c35a57bb108d56b801fd05b624943`: 19 prerequisite paths, six overlapping
+the 59 feature paths, for 72 combined paths.
 
-## Review map
+## Why each repair is included
 
-| Patch | Concern |
-|---|---|
-| P0008 | Controller-owned bottom bar and per-view local-coordinate autohide hit testing |
-| P0001 | Ordered transformed-name install/uninstall, required header distribution, generated-nib/vtutils cleanup |
-| P0002 | Preserve observed clock origin and same-point conversion invariant |
-| P0003 | Select GnuTLS for its PEM trust fixture while retaining default unknown-certificate phase |
-| P0004 | Initialize legacy OpenGL major-version fallback |
-| P0005 | Balance caller-owned media-source reference; actual-provider callsite regression |
-| P0006 | Retire playback-ended timer and guard termination; actual-controller regression |
-| P0007 | Fence video-window Disable/Destroy callback lifetime; actual-provider wiring and normal test registration |
+| Patch | Defect/reason and source boundary | Dependency and relevant coverage |
+|---|---|---|
+| P0008 | `VLCMainVideoViewController.mouseOnControls` uses the controller-owned bottom bar and converts the window point into each view's local bounds. The old outlet/coordinate assumptions miss controls. | Applies before F0004, which later changes the same controller. Eleven source-extracted AppKit hit-test cases pass; this does not establish the cause of returned-main fade. |
+| P0001 | `bin/Makefile.am` orders transformed-name install/uninstall correctly; macOS distribution includes `PIPSPI.h`; generated nibs and codec `libvlc_vtutils.la` are removed during cleanup. These paths prevented complete archive/install/cleanup qualification. | Serialized after feature build-list edits. Complete conventional distcheck exercises distribution, installation and final cleanup. |
+| P0002 | `src/clock/clock.c` preserves the observed stream/system origins instead of subtracting `VLC_TICK_0`, restoring exact conversion of the master's just-observed point. | Existing `test/src/clock/clock.c` adds the same-point invariant; clock tests and bounded matched playback cover the combined result. No feature API dependency is introduced. |
+| P0003 | The PEM trust fixture needs GnuTLS credentials, while automatic backend selection can choose another TLS client. `test/modules/misc/tls.c` explicitly selects GnuTLS for this fixture. | Test-only repair in the complete registered check. Missing GnuTLS is an optional skip; the default unknown-certificate phase and production backend selection are retained. |
+| P0004 | `modules/video_output/opengl/gl_api.c` initializes the legacy major-version fallback to 2 when the version query cannot supply it. | Native playback exercises the combined rendering path. No dedicated all-driver/legacy-hardware test or independent patch qualification is claimed. |
+| P0005 | `VLCMediaSourceProvider.m` releases the caller-owned `GetMediaSource` reference after the wrapper retains it, removing an extra ownership reference. | Adds a registered regression compiling the actual provider callsite with a wrapper double matching its Hold/Release contract. Covers the reference balance, not the cause of historical shutdown crashes. |
+| P0006 | `VLCPlayerController` invalidates its delayed playback-ended timer at termination and rejects queued state callbacks afterward. | Extends `VLCTimelinePlayerContextTest.m`, created by F0004, to test actual-controller timer cancellation and post-termination STOPPED handling. Moving it before F0004 would require extracting/re-registering that test. |
+| P0007 | `VLCVideoOutputProvider`/`VLCVoutView` fence callback ownership across Disable/Destroy and remove callbacks before their owner becomes invalid. | Uses the macOS test registration modified by F0003/F0004. Adds `vlc-vout-lifetime-test` compiling the actual provider/view operations with link-only support; tests queued destruction/in-flight callbacks without creating windows. It is not native window-removal or universal shutdown proof. |
 
-The exact combined tree passes normal build/full registered check and complete
-conventional distcheck. These qualify this composition, not untouched-base
-application/build of every part. P0008's focused source-extracted AppKit cases
-pass; the current returned-main title/button fade remains unattributed and is not
-claimed fixed. Clock/GL/lifetime changes required current matched playback/resources, now qualified by three bounded60s pairs. Three current matched60s AB/BA/AB pairs pass bounded playback/preparation/audio/drop/resource qualification. All native frame/audio loss counters are zero; candidate-minus-baseline sampled mean CPU is+1.47/+2.20/+2.29 percentage points and combined sampled maximum RSS is+100.3/+100.6/+97.6MiB. Recorder overhead is measured separately. Complete pair1 was retained across a human-permission pause; the interrupted second pair was excluded and its failed cohort remains failed. System-mixed AAC/PCM continuity, variable-rate capture observations and sampled resources retain their limits; no per-app callback or universal smoothness claim follows.
+Moving the existing patch files does not remove the coupling: P0006 needs
+F0004's actual-controller harness; P0007's serialized registration hunk expects
+F0004's context-test entries and uses shared test flags modified by F0003. The
+latter is packaging/test coupling, not a new feature API dependency. Extracting
+or re-registering the tests would change patch bytes and require intermediate
+build/test proof; no narrow benefit justifies that change here. Keep the existing
+order and use the table as logical review boundaries. Neither
+the feature-only stack nor a reordered repair-only stack is a qualified release.
 
-See the [current scope table and optional historical appendix](../feature-series/LIMITATIONS.md)
-for native, reader, playback, shutdown and unavailable-platform boundaries.
-Literal public normal-build/check commands passed in interrupted stages; the full
-public recipe including outer distcheck remains unexecuted. Narrow normal-Quit
-observations do not establish causal repair of historical shutdown failures.
+The [central validation table](../CONTRIBUTION.md#validation-and-limits) records
+combined build, distribution, native and playback proof. [Detailed limits](../feature-series/LIMITATIONS.md)
+retain measurement boundaries and unresolved shutdown causality. Use the
+[ordinary reproduction route](../feature-series/README.md); no private harness
+is required by the public build route.
 
-Patch basenames provide proposed subjects. Raw diffs contain no invented author,
-sign-off or assignment headers; notices remain. Contributor/contact and AI
-assistance disclosure are in the [feature overview](../feature-series/README.md).
-No binary, profile, private log or fixture media is included.
+Contributor/contact and AI assistance disclosure are in the [cover](../CONTRIBUTION.md#reproduce-and-credit).
+Raw patches retain their notices and contain no invented authorship, sign-off or
+assignment headers. No binary, profile, private log or fixture video is included.

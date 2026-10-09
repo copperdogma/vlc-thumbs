@@ -2,6 +2,11 @@
 
 **Current source10 closeout, 2026-10-09:** Current three-pair playback/audio/drop/resource qualification passes with measured overhead; ordinary main reader proof is legitimately inherited after source comparison. All test processes are closed and VoiceOver is ON. The final 29-artifact reviewer-copy checker passes; Phases1/2 are complete at the disclosed bounded scope and work halts ready for owner review. See [current verification](evidence/story-005/current-source10-final-verification.md). The final local package is `work/story005-current-source10-final-reviewer001/package`; Phase3 is untouched.
 
+**Completed bounded preparation task:** [Story006](stories/story-006-reviewer-package-polish.md),
+a child of Story005, has made current submission prose/messages/dependency maps
+and reproduction instructions concise and consistent. Qualified product evidence
+is preserved; focused validation passes. Story005 still owns actual submission.
+
 The deep dive is recorded in [timeline implementation planning](research/timeline-implementation-plan.md).
 The Ideal remains the implementation-free North Star. The source/build route,
 proposed architecture, tests and compromises live in that synthesis, the spec

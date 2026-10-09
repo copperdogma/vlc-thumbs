@@ -46,6 +46,16 @@ as a distinct validation boundary. Re-run affected preview capability checks on
 the selected upstream baseline and candidate. The integrated root stays deferred
 until bookmarks exist; a successful MR cannot pass that root.
 
+## Bounded submission-preparation child
+
+[Story006 — reviewer-package polish](story-006-reviewer-package-polish.md) addresses
+current draft-message consistency, concise presentation, dependency explanation
+and reproduction instructions. Cam excludes speculative reviewer preferences and
+requires focused, efficient changes with proportional evidence reuse. The child
+is Done; its [focused validation](../evidence/story-006/validation.md) records
+current messages, compact presentation, real dependencies and ordinary-first
+reproduction. It does not reopen runtime qualification or authorize submission.
+
 ## Acceptance Criteria
 
 ### Phase 1 — Investigate and choose an upstream approach
@@ -1492,3 +1502,5 @@ Within Cam's explicit three-hour window, SOL6.1-medium builders applied only the
 20261009 — Root closes Phases1/2 at the disclosed bounded scope: three matched playback pairs PASS, ordinary main reader evidence legitimately inherited after source comparison, final29-artifact/13-patch reviewer package checker PASS. Full local build/helper77/distcheck/native and preservation evidence stand. Platform/preview-visible reader coverage, interrupted public-recipe execution and owner-deferred shutdown cause remain explicitly disclosed in current-source10-final-verification.md. Whole story remains InProgress; Phase3 untouched. No submission/contact/install/commit/push.
 
 20261009 — Owner reports fresh qualified test app looks good and invokes finish-and-push for this project repository. Exact final29-artifact/13-patch reviewer copy promoted byte-exact to patches/vlc-master/contribution-series-source10; local acceptance recorded and inbox/changelog updated. Reuse current source72/build/native/playback and fresh gradeB validation; whole Story005 remains open for Phase3, no VLC contact/submission.
+
+20261009 — Child006 reviewer-package polish completed and validated. Current13 subjects/messages, one concise validation table, actual dependency rationale, ordinary-first reproduction and historical screenshots scope are clear. Package patches/product/source remain exact; child gradeA does not replace parent product gradeB or outstanding disclosed coverage. Parent remains InProgress for Phase3; no speculative reviewer-preference objection is a completion gate.

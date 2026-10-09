@@ -1,5 +1,5 @@
 {
-  "status": "READY for bounded pre-submission review; Phases1/2 only; no submission",
+  "status": "Prepared source proposal; no upstream submission or acceptance",
   "base": "2e358f3098c2f2b7621d1dc568de8b61ad786322",
   "base_tree": "ab8a2728d242f8fe6ad3450a2ae39bec7a92a0ec",
   "revision11_source_tree": "f8f7d0fdb46c1ae25ba94049143d12ecb7daf96c",
@@ -518,8 +518,8 @@
       "directory": "feature-series",
       "manifest": {
         "file": "feature-series/manifest.json",
-        "bytes": 40356,
-        "sha256": "b9a44bf3fa8dd860a44d67f11e6834b740f748f2a8c5e76510d32985a8f7793d"
+        "bytes": 40802,
+        "sha256": "250d894cda8e87ae5995c46611e621e0b603f35a8534203201b4c143f2bf4b2c"
       },
       "artifacts": [
         {
@@ -549,23 +549,23 @@
         },
         {
           "file": "feature-series/LIMITATIONS.md",
-          "bytes": 8072,
-          "sha256": "9414471dca3a2ed749a987f1f0c7df6f40dddfb9952b673d18343203097a42b4"
+          "bytes": 4890,
+          "sha256": "bdfa9933ad0d16b00282f7b04cd262aa3a030332b0e4094c566ce3967a63b1b4"
         },
         {
           "file": "feature-series/README.md",
-          "bytes": 11547,
-          "sha256": "80a7c5add53e6dcfc4a98d5cd4c4d02b2da6c3bdcb02cdd5817355632c6ababc"
+          "bytes": 13235,
+          "sha256": "555bb5a6268e9b7e643ccbe6d3c7a2e8fd6ac8110593adb011405e7bca20d2d6"
         },
         {
           "file": "feature-series/contribution-description-draft.md",
-          "bytes": 3827,
-          "sha256": "aa6891df8d3113bb5357806b3f9c60679be689c18847fb20f20d9aec7d57e558"
+          "bytes": 2131,
+          "sha256": "21abd1873d01352b94cafa2a4349d78a403bc52d6393eb331649b384eb4c6aed"
         },
         {
           "file": "feature-series/demonstration/README.md",
-          "bytes": 3796,
-          "sha256": "7b44d852620ab507f7b00d4f7403c7c6faa61750468e8542a2b8a7c231329601"
+          "bytes": 1822,
+          "sha256": "5e28512a32d79407d2023f3bee365ebcfea06da3c06265ffcf0a72f848d313e2"
         },
         {
           "file": "feature-series/demonstration/custom-fullscreen-hover.png",
@@ -584,13 +584,13 @@
         },
         {
           "file": "feature-series/manifest.json",
-          "bytes": 40356,
-          "sha256": "b9a44bf3fa8dd860a44d67f11e6834b740f748f2a8c5e76510d32985a8f7793d"
+          "bytes": 40802,
+          "sha256": "250d894cda8e87ae5995c46611e621e0b603f35a8534203201b4c143f2bf4b2c"
         },
         {
           "file": "feature-series/proposed-commit-messages.md",
-          "bytes": 4435,
-          "sha256": "6ebef0f63d2442676cde5987bb94bc7586c38ae2bb5888402e340d1dc2c6d21b"
+          "bytes": 6438,
+          "sha256": "b96292b08749e33855eb69246f895ac6bd141e0a4b62d95f2d52aed7e58f4c46"
         },
         {
           "file": "feature-series/series",
@@ -603,8 +603,8 @@
       "directory": "blocker-prerequisites",
       "manifest": {
         "file": "blocker-prerequisites/manifest.json",
-        "bytes": 16009,
-        "sha256": "ee2782351b4ee37ed01830b97b963ca07ea85a53b733a98657692d98b55db181"
+        "bytes": 16455,
+        "sha256": "da58c01bddafd156a2250c8d578da095bc6ec9707bd5f26150c9f3cd7ecefdcf"
       },
       "artifacts": [
         {
@@ -649,13 +649,13 @@
         },
         {
           "file": "blocker-prerequisites/README.md",
-          "bytes": 3998,
-          "sha256": "038c5d28b6577ed2b86658bca69e3df6c17b3a5dc2add094135e7a603a5c55a9"
+          "bytes": 5314,
+          "sha256": "bb98da52bf3fe077ffa3ad76154ea39e20d9c5c3487a1b6c399cd96c9946e03b"
         },
         {
           "file": "blocker-prerequisites/manifest.json",
-          "bytes": 16009,
-          "sha256": "ee2782351b4ee37ed01830b97b963ca07ea85a53b733a98657692d98b55db181"
+          "bytes": 16455,
+          "sha256": "da58c01bddafd156a2250c8d578da095bc6ec9707bd5f26150c9f3cd7ecefdcf"
         },
         {
           "file": "blocker-prerequisites/series",
@@ -746,7 +746,7 @@
     }
   ],
   "current_qualification": {
-    "status": "READY for bounded pre-submission review; Phases1/2 only; no submission",
+    "status": "Qualified combined source remains unchanged; documentation refresh only",
     "source": "Source10 exact72source and59featuremidpoint, canonical13staticfulltree correspondence PASS; root independently reviewed.",
     "helper_source_change": "Three named double temporaries remove direct function-result casts; actual target-class diagnostics removed and fresh77 passes; native qualification remains separate.",
     "normal_package": "PASS official normal package make exit0 and distinct independent normal package qualification; retained isolated package/signature/all398 loadable provenance qualification PASS. Package provenance is separate from the one paused-main physical hover and normalQuit scope recorded under runtime.",
@@ -767,8 +767,8 @@
   "aggregate_artifacts": [
     {
       "file": "CONTRIBUTION.md",
-      "bytes": 5143,
-      "sha256": "39b0b053f959cde209b3734bd2d5c4c04f21f2626fe62b79af25679503d25e04"
+      "bytes": 4190,
+      "sha256": "ba7cfd9052eae4b99402de5ac8e9e1f9f390ad5d6306680455811c0bda1c9157"
     },
     {
       "file": "contribution-series",
@@ -793,5 +793,11 @@
   },
   "feature_source_tree": "cce7f9917b8dc4d5432e7f83b2c840f8c3c5027b",
   "feature12_source_tree_scope": "Compatibility alias for current source10featuremidpoint after0008+fivefeature; source8/9 IDs explicitly historical.",
-  "new0008_overlay_tree": "ba4e0daa7ae4356b7d5466daea569fdaa3bfbd50"
+  "new0008_overlay_tree": "ba4e0daa7ae4356b7d5466daea569fdaa3bfbd50",
+  "documentation_revision": {
+    "story": "006",
+    "scope": "Current reviewer prose and metadata only; thirteen patches, images, capture provenance and source identities unchanged",
+    "checks": "29-artifact inventory, recursive artifact hashes, patch order/source pins, links, Bash syntax and documented flag equivalence",
+    "product_evidence": "Reused applicable normal checks/helper77/distcheck/native/playback evidence; no new runtime claim"
+  }
 }
