@@ -1,0 +1,51 @@
+Setting base environment
+Using VLC root dir /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-reproduction, build triplet aarch64-apple-darwin19 and host triplet aarch64-apple-darwin19
+  OBJC     gui/macosx/extensions/VLCMacOSXTests-VLCHexNumberFormatter.o
+  OBJC     gui/macosx/extensions/VLCMacOSXTests-VLCPositionFormatter.o
+  OBJC     gui/macosx/extensions/VLCMacOSXTests-NSString+Helpers.o
+  OBJC     gui/macosx/library/VLCMacOSXTests-VLCLibraryDataTypes.o
+  OBJC     gui/macosx/library/VLCMacOSXTests-VLCInputItem.o
+  OBJC     gui/macosx/library/VLCMacOSXTests-VLCInputNode.o
+/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-reproduction/extras/package/macosx/../../../modules/gui/macosx/extensions/NSString+Helpers.m:396:61: warning: 'kIOMasterPortDefault' is deprecated: first deprecated in macOS 12.0 [-Wdeprecated-declarations]
+  396 |     CFMutableDictionaryRef matchingDict = IOBSDNameMatching(kIOMasterPortDefault, 0, [bsdName UTF8String]);
+      |                                                             ^~~~~~~~~~~~~~~~~~~~
+      |                                                             kIOMainPortDefault
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h:133:19: note: 'kIOMasterPortDefault' has been explicitly marked deprecated here
+  133 | const mach_port_t kIOMasterPortDefault
+      |                   ^
+/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-reproduction/extras/package/macosx/../../../modules/gui/macosx/extensions/NSString+Helpers.m:399:56: warning: 'kIOMasterPortDefault' is deprecated: first deprecated in macOS 12.0 [-Wdeprecated-declarations]
+  399 |     io_service_t service = IOServiceGetMatchingService(kIOMasterPortDefault, matchingDict);
+      |                                                        ^~~~~~~~~~~~~~~~~~~~
+      |                                                        kIOMainPortDefault
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h:133:19: note: 'kIOMasterPortDefault' has been explicitly marked deprecated here
+  133 | const mach_port_t kIOMasterPortDefault
+      |                   ^
+2 warnings generated.
+  OBJC     gui/macosx/windows/logging/VLCMacOSXTests-VLCLogMessage.o
+  OBJC     gui/macosx/views/VLCMacOSXTests-VLCTimeFormatter.o
+  OBJC     gui/macosx/tests/VLCMacOSXTests-VLCThumbnailCacheTest.o
+  OBJC     gui/macosx/tests/VLCMacOSXTests-VLCThumbnailSchedulerTest.o
+  OBJC     gui/macosx/tests/VLCMacOSXTests-VLCThumbnailServiceTest.o
+  OBJC     gui/macosx/tests/VLCMacOSXTests-VLCTimelineHoverTest.o
+  OBJC     gui/macosx/timeline/VLCMacOSXTests-VLCThumbnailCache.o
+  OBJC     gui/macosx/timeline/VLCMacOSXTests-VLCThumbnailScheduler.o
+  OBJC     gui/macosx/timeline/VLCMacOSXTests-VLCThumbnailWorker.o
+  OBJC     gui/macosx/timeline/VLCMacOSXTests-VLCThumbnailService.o
+  OBJC     gui/macosx/timeline/VLCMacOSXTests-VLCTimelinePlayerContextTest.o
+  OBJC     gui/macosx/timeline/VLCMacOSXTests-VLCTimelineContext.o
+  OBJC     gui/macosx/playqueue/VLCMacOSXTests-VLCPlayerController.o
+  OBJC     gui/macosx/playqueue/VLCMacOSXTests-VLCPlayerTitle.o
+  OBJC     gui/macosx/playqueue/VLCMacOSXTests-VLCPlayerChapter.o
+  CC       gui/macosx/tests/VLCThumbnailTestHelper.o
+make[1]: `vlc-cache-gen' is up to date.
+  OBJC     gui/macosx/timeline/VLCTimelineContextTests-VLCTimelineContext.o
+  OBJC     gui/macosx/timeline/VLCTimelineContextTests-VLCTimelineContextTests.o
+  OBJC     gui/macosx/timeline/VLCTimelineContextTests-VLCTimelineContextTestSupport.o
+  OBJC     gui/macosx/views/VLCTimelineHoverReentrancyTests-VLCPlaybackProgressSlider.o
+  OBJC     gui/macosx/tests/VLCTimelineHoverReentrancyTests-VLCTimelineHoverReentrancyTest.o
+  OBJC     gui/macosx/tests/VLCTimelineHoverReentrancyTests-VLCTimelineHoverTestSupport.o
+make: *** wait: Interrupted system call.  Stop.
+make: *** Waiting for unfinished jobs....
+make: *** [gui/macosx/tests/VLCTimelineHoverReentrancyTests-VLCTimelineHoverTestSupport.o] Terminated: 15
+make: *** [gui/macosx/tests/VLCTimelineHoverReentrancyTests-VLCTimelineHoverReentrancyTest.o] Terminated: 15
+make: *** wait: Interrupted system call.  Stop.

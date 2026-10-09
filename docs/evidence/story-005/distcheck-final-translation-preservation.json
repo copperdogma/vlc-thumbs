@@ -1,0 +1,9 @@
+{
+  "latest_run": "reproduction-distcheck-20261006T072705Z.json",
+  "public_index_tree": "c545256d9ca20aed8e75a57f9fdb76091ddecf9d",
+  "translation_drift": [],
+  "exact_generated_delta_still_preserved": true,
+  "unstaged_generated_path_count": 99,
+  "compressed_delta_sha256": "6897944f15e36fee8a37de30ec91db33ef0db76d345ca79947c941a9e5313ddc",
+  "restoration_not_performed": true
+}

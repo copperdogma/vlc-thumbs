@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-06T03:02:45.069953+00:00",
+  "base_commit": "2e358f3098c2f2b7621d1dc568de8b61ad786322",
+  "source_worktree": "work/upstream/vlc-master-story005-track",
+  "patch": "patches/vlc-master/0002-preparser-selected-video-track.patch",
+  "patch_sha256": "47ffdf635a3db8becf75cb9629f7ecefe4d185421de15546a2a0a50782c35a9b",
+  "files": [
+    {
+      "path": "bin/preparser/main.c",
+      "sha256": "1e32732877b14d98d2154c730f6550bd9479388fef8268ed1a23d059589753f2"
+    },
+    {
+      "path": "include/vlc_preparser.h",
+      "sha256": "9d04bdf059e94753b82deb91f9a7436a17501a3ccacb47e95b1b79f863449a1b"
+    },
+    {
+      "path": "include/vlc_preparser_ipc.h",
+      "sha256": "0f020a7755e83c496a04ab0aa9b9420518a710ca60cb0369dea362065f72fe5c"
+    },
+    {
+      "path": "lib/parser.c",
+      "sha256": "01c15c7998063ffa8a3e4a5a8da7354637b69b7473d1fd90388db77f4a6f6842"
+    },
+    {
+      "path": "modules/misc/preparser_serializer/json/fromjson.c",
+      "sha256": "d1245a855ecc13391a2992bf3cb0b2b193d7b37a5a63ab9073875dc6b4eb0d8a"
+    },
+    {
+      "path": "modules/misc/preparser_serializer/json/tojson.c",
+      "sha256": "4b5b6ec6089328775f5e7c3cf7b814be639f1845a6394c8dc1c98df6c11926de"
+    },
+    {
+      "path": "src/preparser/external.c",
+      "sha256": "b097b36618a954ed9ad3de58afa88f5858c7d6d8641ac09acc07d0c645fcacf6"
+    },
+    {
+      "path": "src/preparser/internal.c",
+      "sha256": "d68b3659267cf54b7512b6bdcb5ecea3e9d8eea39ebd9846ccdf27c3997b4c0e"
+    },
+    {
+      "path": "src/preparser/ipc.c",
+      "sha256": "31e26fe707e6e24dd205d56c0aa40705d489566701267d396323f668044adbd1"
+    },
+    {
+      "path": "test/src/preparser/thumbnail.c",
+      "sha256": "db6ae473faccb1ace12fff4c192fa0bd0060dbec8477ef2dcb1e21c8c1312364"
+    },
+    {
+      "path": "test/src/preparser/thumbnail_to_files.c",
+      "sha256": "4b1569a534fde49646324cf70c855ab152da6beeb5b3885e831aae0553113111"
+    }
+  ],
+  "syntax_validation": {
+    "compiler": "Apple clang version 21.0.0 (clang-2100.3.34.2)\nTarget: arm64-apple-darwin27.0.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\n",
+    "flags": [
+      "-fsyntax-only",
+      "-DHAVE_CONFIG_H",
+      "-D__LIBVLC__",
+      "-std=gnu11",
+      "-Werror=implicit-function-declaration",
+      "-Werror=incompatible-pointer-types",
+      "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-track/include",
+      "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline",
+      "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/include",
+      "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-track/src",
+      "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-track/lib",
+      "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-track/bin",
+      "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/bin",
+      "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/aarch64-apple-darwin19/include",
+      "-DTOP_SRCDIR=\"/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-track\"",
+      "-DTOP_BUILDDIR=\"/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline\""
+    ],
+    "results": [
+      {
+        "file": "bin/preparser/main.c",
+        "exit_code": 0,
+        "diagnostics": ""
+      },
+      {
+        "file": "lib/parser.c",
+        "exit_code": 0,
+        "diagnostics": ""
+      },
+      {
+        "file": "modules/misc/preparser_serializer/json/fromjson.c",
+        "exit_code": 0,
+        "diagnostics": ""
+      },
+      {
+        "file": "modules/misc/preparser_serializer/json/tojson.c",
+        "exit_code": 0,
+        "diagnostics": ""
+      },
+      {
+        "file": "src/preparser/external.c",
+        "exit_code": 0,
+        "diagnostics": ""
+      },
+      {
+        "file": "src/preparser/internal.c",
+        "exit_code": 0,
+        "diagnostics": ""
+      },
+      {
+        "file": "src/preparser/ipc.c",
+        "exit_code": 0,
+        "diagnostics": ""
+      },
+      {
+        "file": "test/src/preparser/thumbnail.c",
+        "exit_code": 0,
+        "diagnostics": ""
+      },
+      {
+        "file": "test/src/preparser/thumbnail_to_files.c",
+        "exit_code": 0,
+        "diagnostics": ""
+      }
+    ]
+  },
+  "diff_check": {
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  "runtime_validation": "Matched revision3 candidate: actual registered thumbnail and to-files tests pass internal/external; eight real URI thumbnails (revision2 same ABI/selection) and eight real URI to-files requests (revision3) show matching red/default/blue hashes across modes; unavailable ID fails no picture/file. Exactly one callback, copied caller ID and unchanged shared item options asserted. Full process/time/hover acceptance not claimed.",
+  "contract": "Optional singular stable canonical video-track ID, copied by requests, strict private-input selection; acknowledgment proves applied requested-ID contract and is not independently measured decoded ES identity",
+  "compatibility": "NULL automatic requests accept an old missing field/ack; explicit requests reject missing or mismatched response acknowledgment before successful callback delivery",
+  "limitations": [
+    "Source field addition changes private VLC ABI; rebuild consumers and matched worker/serializer together.",
+    "Acknowledgment does not independently prove decoded ES identity.",
+    "Old worker may already have written files before its missing acknowledgment is rejected; success delivery is fail-closed, filesystem rollback is not provided.",
+    "Early input creation/start/private-copy/option allocation failures were reviewed in source and syntax checked; allocator failure was not artificially forced. New unavailable-ID regressions assert exactly one callback; runtime still pending.",
+    "New private-copy and option allocation failures are checked; nested existing input-selection allocation failures are not comprehensively validated."
+  ],
+  "mechanical_corrections": [
+    "lib/parser.c and thumbnail test stack arguments zero-initialized so new nullable field cannot contain garbage.",
+    "JSON SEEK_NONE does not require absent seek.pos; POS still requires seek.pos.",
+    "Both test external-process guards corrected from !defined to defined HAVE_VLC_EXTERNAL_PREPARSER.",
+    "Rejected external responses are cleaned before message reinitialization, preserving owned ACK/picture/item cleanup.",
+    "ThumbnailerRun input creation/start/private strict-selection setup failures share completion, published-task removal and exactly-once callback/release path."
+  ],
+  "revision": 3,
+  "previous_revision": "docs/evidence/story-005/track-candidate-revision2-before-raw-format-repair.json",
+  "review_corrections": [
+    "Apply strict last override options to a private input_item_Copy before input_Create; later setters cannot change EsOut selection snapshot.",
+    "Reject non-response message direction before reading response union; test actual deserialized request in response position.",
+    "Regression shared item carries conflicting track-zero options; explicit second-track result must override them without modifying original item options.",
+    "External tests use HAVE_VLC_EXTERNAL_PREPARSER rather than process-spawn capability.",
+    "Existing to-files JSON validator excluded RGBA/ARGB; range now covers PNG..ARGB with raw-format/boundary/out-of-range regressions."
+  ]
+}

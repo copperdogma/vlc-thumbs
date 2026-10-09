@@ -1,0 +1,139 @@
+{
+  "run": "reproduction-distcheck-20261006T072705Z",
+  "public_tree": "c545256d9ca20aed8e75a57f9fdb76091ddecf9d",
+  "archive": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/distcheck-runtime-failures-20261006T072705Z/vlc-4.0.0-dev.tar.xz",
+  "archive_sha256": "652ffa3ebade9aba48defc63c1390f5074e8b823e1628b35f0edcbc99041ea5e",
+  "archive_bytes": 30155164,
+  "failed_tests": [
+    "test_src_clock_clock",
+    "test_src_input_decoder",
+    "test_src_video_output_spu",
+    "test_modules_tls",
+    "test_src_player_attachments",
+    "test_modules_video_output_opengl_filters",
+    "test_src_misc_image_cvpx"
+  ],
+  "test_directory_counts": {
+    "total": 92,
+    "pass": 80,
+    "skip": 5,
+    "fail": 7,
+    "error": 0
+  },
+  "other_test_summaries": [
+    "# TOTAL: 6",
+    "# PASS:  6",
+    "# SKIP:  0",
+    "# FAIL:  0",
+    "# ERROR: 0",
+    "# TOTAL: 30",
+    "# PASS:  29",
+    "# SKIP:  1",
+    "# FAIL:  0",
+    "# ERROR: 0",
+    "# TOTAL: 0",
+    "# PASS:  0",
+    "# SKIP:  0",
+    "# FAIL:  0",
+    "# ERROR: 0",
+    "# TOTAL: 21",
+    "# PASS:  21",
+    "# SKIP:  0",
+    "# FAIL:  0",
+    "# ERROR: 0",
+    "# TOTAL: 92",
+    "# PASS:  80",
+    "# SKIP:  5",
+    "# FAIL:  7",
+    "# ERROR: 0"
+  ],
+  "logs": [
+    {
+      "path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/distcheck-runtime-failures-20261006T072705Z/test_src_clock_clock.log",
+      "bytes": 441,
+      "sha256": "ca5611b7a1373e2d7f38a05c7e0e69771ee863f174d0d35422bd4b168e9a8102"
+    },
+    {
+      "path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/distcheck-runtime-failures-20261006T072705Z/test_src_clock_clock.trs",
+      "bytes": 84,
+      "sha256": "f735fb0f37e6e4243c588dd6ca7a80f95f4d1ce56c67a78ddc4b871d97d262e8"
+    },
+    {
+      "path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/distcheck-runtime-failures-20261006T072705Z/test_src_input_decoder.log",
+      "bytes": 49598,
+      "sha256": "8011193be0913245739a88a93f2f736fa4cd97203ae95f898193763864716d1c"
+    },
+    {
+      "path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/distcheck-runtime-failures-20261006T072705Z/test_src_input_decoder.trs",
+      "bytes": 84,
+      "sha256": "f735fb0f37e6e4243c588dd6ca7a80f95f4d1ce56c67a78ddc4b871d97d262e8"
+    },
+    {
+      "path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/distcheck-runtime-failures-20261006T072705Z/test_src_video_output_spu.log",
+      "bytes": 416,
+      "sha256": "f705ff2128ce4f2f92814aa0826187e9481a8086e18ff929480f91aa58526e36"
+    },
+    {
+      "path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/distcheck-runtime-failures-20261006T072705Z/test_src_video_output_spu.trs",
+      "bytes": 84,
+      "sha256": "f735fb0f37e6e4243c588dd6ca7a80f95f4d1ce56c67a78ddc4b871d97d262e8"
+    },
+    {
+      "path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/distcheck-runtime-failures-20261006T072705Z/test_modules_tls.log",
+      "bytes": 2457,
+      "sha256": "f4277427a97f0ed42c3f7b514735911fa7fe9e5e2e815e22935c43bbb0b06466"
+    },
+    {
+      "path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/distcheck-runtime-failures-20261006T072705Z/test_modules_tls.trs",
+      "bytes": 84,
+      "sha256": "f735fb0f37e6e4243c588dd6ca7a80f95f4d1ce56c67a78ddc4b871d97d262e8"
+    },
+    {
+      "path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/distcheck-runtime-failures-20261006T072705Z/test_src_player_attachments.log",
+      "bytes": 510,
+      "sha256": "43701a37b25bd247a2c0dc441addb3f75a5674c63c4dd04f66bdd4565de18200"
+    },
+    {
+      "path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/distcheck-runtime-failures-20261006T072705Z/test_src_player_attachments.trs",
+      "bytes": 84,
+      "sha256": "f735fb0f37e6e4243c588dd6ca7a80f95f4d1ce56c67a78ddc4b871d97d262e8"
+    },
+    {
+      "path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/distcheck-runtime-failures-20261006T072705Z/test_modules_video_output_opengl_filters.log",
+      "bytes": 40263,
+      "sha256": "98c86119a09eb30f3b44fed425b91ac3df2598aad43cd6f3de25abbbeb15d89d"
+    },
+    {
+      "path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/distcheck-runtime-failures-20261006T072705Z/test_modules_video_output_opengl_filters.trs",
+      "bytes": 84,
+      "sha256": "f735fb0f37e6e4243c588dd6ca7a80f95f4d1ce56c67a78ddc4b871d97d262e8"
+    },
+    {
+      "path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/distcheck-runtime-failures-20261006T072705Z/test_src_misc_image_cvpx.log",
+      "bytes": 5057,
+      "sha256": "22800662d289db407806002002562357d898eb71050fc196f5f09d408987075d"
+    },
+    {
+      "path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/distcheck-runtime-failures-20261006T072705Z/test_src_misc_image_cvpx.trs",
+      "bytes": 84,
+      "sha256": "f735fb0f37e6e4243c588dd6ca7a80f95f4d1ce56c67a78ddc4b871d97d262e8"
+    },
+    {
+      "path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/distcheck-runtime-failures-20261006T072705Z/test-suite.log",
+      "bytes": 102637,
+      "sha256": "7bde2e1969fe6c32532deb96528c3a5f8a624a536cee2dea7cac41d55bbba969"
+    },
+    {
+      "path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/distcheck-runtime-failures-20261006T072705Z/reproduction-distcheck-20261006T072705Z.log",
+      "bytes": 670634,
+      "sha256": "dfdde1c6a6b6e68c4d25e1d9ec004b8056a35ccfb2dd70877c957f95204b5c35"
+    },
+    {
+      "path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/distcheck-runtime-failures-20261006T072705Z/reproduction-distcheck-20261006T072705Z.json",
+      "bytes": 485,
+      "sha256": "aed03e9c14e39d62927fbf14ad2cf370a18d2273b21c2da2971149b575e23e23"
+    }
+  ],
+  "status": "Archive generation/configure/platform compile pass; test failure prevents later install/uninstall/distclean stages",
+  "no_retry_or_test_disabling": true
+}

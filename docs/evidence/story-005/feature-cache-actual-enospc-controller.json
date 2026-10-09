@@ -1,0 +1,75 @@
+{
+  "workspace": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs",
+  "proof_root": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-cache-enospc-proof/20261006T060056Z",
+  "volume_limit_bytes": 33554432,
+  "workspace_floor_bytes": 1073741824,
+  "commands": [
+    {
+      "argv": [
+        "hdiutil",
+        "create",
+        "-size",
+        "20m",
+        "-fs",
+        "HFS+",
+        "-volname",
+        "VLCThumbnailTest",
+        "-type",
+        "UDIF",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-cache-enospc-proof/20261006T060056Z/bounded-enospc.dmg"
+      ],
+      "exit_code": 0,
+      "stderr": "hdiutil: WARNING: 'hdiutil create -size -volname ...' is deprecated. Please use 'diskutil image create from/blank -size --volumeName ...' instead.\n"
+    },
+    {
+      "argv": [
+        "hdiutil",
+        "attach",
+        "-nobrowse",
+        "-noautoopen",
+        "-mountpoint",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-cache-enospc-proof/20261006T060056Z/mount",
+        "-plist",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-cache-enospc-proof/20261006T060056Z/bounded-enospc.dmg"
+      ],
+      "exit_code": 0,
+      "stderr": "hdiutil: WARNING: 'hdiutil attach -nobrowse -mountpoint ...' is deprecated. Please use 'diskutil image attach --mountOptions nobrowse --mountPoint ...' instead.\n"
+    },
+    {
+      "argv": [
+        "diskutil",
+        "info",
+        "-plist",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-cache-enospc-proof/20261006T060056Z/mount"
+      ],
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "hdiutil",
+        "detach",
+        "/dev/disk6s1"
+      ],
+      "exit_code": 0,
+      "stderr": "hdiutil: WARNING: 'hdiutil detach ...' is deprecated. Please use 'diskutil eject ...' instead.\n"
+    }
+  ],
+  "minimum_workspace_free_bytes": 4782833664,
+  "environment": {
+    "VLC_THUMBNAIL_ENOSPC_ROOT": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-cache-enospc-proof/20261006T060056Z/mount",
+    "VLC_THUMBNAIL_ENOSPC_DEVICE": "/dev/disk6s1",
+    "VLC_THUMBNAIL_ENOSPC_NONCE": "d45736bbadb447239c4a204a95acf767",
+    "VLC_THUMBNAIL_ENOSPC_WORKSPACE": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs"
+  },
+  "filesystem_bytes": 20930560,
+  "status": "test_completed",
+  "test_completion": {
+    "exit_code": 0,
+    "receipt": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/docs/evidence/story-005/feature-cache-actual-enospc-20261006T060156Z.json",
+    "log": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/docs/evidence/story-005/feature-cache-actual-enospc-20261006T060156Z.log"
+  },
+  "detached": true,
+  "image_preserved": true,
+  "finished_utc": "2026-10-06T06:01:57Z"
+}

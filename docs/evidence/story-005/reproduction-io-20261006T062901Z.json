@@ -1,0 +1,18 @@
+{
+  "stage": "io",
+  "command": [
+    "bash",
+    "work/story005-scout/reproduction-public-io.sh"
+  ],
+  "cwd": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs",
+  "initial_free_bytes": 9896493056,
+  "stage_preflight_gib": 1.5,
+  "floor_bytes": 1073741824,
+  "time_limit_seconds": 60,
+  "status": "succeeded",
+  "pid": 52977,
+  "elapsed_seconds": 4.0,
+  "minimum_free_bytes": 9876418560,
+  "exit_code": 0,
+  "final_free_bytes": 9808486400
+}

@@ -1,0 +1,20 @@
+{
+  "general_problem": "archive build nested inside unrelated ancestor Git worktree: Git auto-discovery contaminates upstream revision stamp",
+  "ceiling": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-reproduction",
+  "rows": [
+    {
+      "cwd": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-reproduction",
+      "returncode": 0,
+      "stdout": "4.0.0-dev-39282-g2e358f3098",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-reproduction/vlc-4.0.0-dev",
+      "returncode": 128,
+      "stdout": "",
+      "stderr": "fatal: not a git repository (or any of the parent directories): .git"
+    }
+  ],
+  "fallback_revision": "4.0.0-dev-39282-g2e358f3098",
+  "status": "read-only discovery smoke passed; source untouched"
+}

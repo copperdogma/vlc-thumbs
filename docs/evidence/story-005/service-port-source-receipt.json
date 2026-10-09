@@ -1,0 +1,28 @@
+{
+  "recorded_at_utc": "2026-10-06T03:36:13.535658+00:00",
+  "source_pin": "2e358f3098c2f2b7621d1dc568de8b61ad786322",
+  "source_root": "work/upstream/vlc-master-story005-candidate",
+  "owned_source_sha256": {
+    "modules/gui/macosx/timeline/VLCThumbnailCache.h": "6e529b5db2c69f64276fee828977bab0db512109d1a8ced542ec734138e59640",
+    "modules/gui/macosx/timeline/VLCThumbnailCache.m": "fdd63448a6e4a561a8158e2dad34fb22e207360ea4a44a717a6fd0ea4dc546e2",
+    "modules/gui/macosx/timeline/VLCThumbnailScheduler.h": "3358d1078438a65971e67c116d7f1400c69b8033a700427faf7a480419e3c5ec",
+    "modules/gui/macosx/timeline/VLCThumbnailScheduler.m": "49b2b4e37b69978c38ef6bd99eba66c65a2a299a4d3f4751bf28a7f3ebcb79e0",
+    "modules/gui/macosx/timeline/VLCThumbnailService.h": "77446215166b7a9f1527c92c1380503d6c411666e06b4306b753fa4bee8d1767",
+    "modules/gui/macosx/timeline/VLCThumbnailService.m": "28783c9310ae523494e9c321fa2ff5fc765e36dc65155ba73e3d1e9c86211894",
+    "modules/gui/macosx/timeline/VLCThumbnailWorker.h": "f39aaaad41e397ddbdf8f7b6e3602fc010404ab62287f4cea72af85328bc6296",
+    "modules/gui/macosx/timeline/VLCThumbnailWorker.m": "1b435123f053af48c421f42385c741f3cb950ad319e5d7741bb84e3baa94a8ac",
+    "modules/gui/macosx/tests/VLCThumbnailCacheTest.m": "e3a6f36235b9d797ca163d3ecf8bb12b565abaed258c150e4ed40f19f6607ca5",
+    "modules/gui/macosx/tests/VLCThumbnailSchedulerTest.m": "a0cc60c7f761e59761ba225f8ef16f02ffe65552632de045dd70b1eb9aaa7f1e",
+    "modules/gui/macosx/tests/VLCThumbnailServiceTest.m": "66dc4893a48ef468e72b448ac11503cd090f1b14b836fd4716ff51e4b1c6f131",
+    "modules/gui/macosx/tests/VLCThumbnailTestHelper.c": "889d8cf5047cac42374e8303ac6fc786ea73575697cb9bb94a7c8067024fe87c"
+  },
+  "diagnostic_tests": {
+    "compile": "work/story005-service-diagnostic/compile-005.stderr.log",
+    "cache": "work/story005-service-diagnostic/cache-runtime-005.log",
+    "service_scheduler_selection_context": "work/story005-service-diagnostic/runtime-003.log",
+    "scope": "Manually linked XCTest diagnostic bundle; normal registered execution recorded separately by build owner."
+  },
+  "normal_registered_initial_run": "docs/evidence/story-005/candidate-build-20261006T033257Z.json",
+  "normal_registered_cache_fix_rerun": "pending build-owner receipt",
+  "native_interaction": "Not run; all native UI locked for this lane."
+}

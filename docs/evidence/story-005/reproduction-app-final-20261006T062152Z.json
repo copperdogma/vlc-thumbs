@@ -1,0 +1,19 @@
+{
+  "stage": "app-final",
+  "command": [
+    "bash",
+    "work/story005-scout/reproduction-conventional-transcript.sh",
+    "app"
+  ],
+  "cwd": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs",
+  "initial_free_bytes": 4648534016,
+  "stage_preflight_gib": 1.5,
+  "floor_bytes": 1073741824,
+  "time_limit_seconds": 600,
+  "status": "failed",
+  "pid": 19912,
+  "elapsed_seconds": 298.6,
+  "minimum_free_bytes": 4110802944,
+  "exit_code": 1,
+  "final_free_bytes": 9776889856
+}

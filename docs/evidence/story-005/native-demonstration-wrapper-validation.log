@@ -1,0 +1,84 @@
+{
+  "status": "passed",
+  "checks": [
+    "59 frozen source hashes/sizes",
+    "13 artifact hashes/sizes",
+    "series order",
+    "relative wrapper links",
+    "complete artifact private/binary marker scan",
+    "Git identity and approval precision",
+    "two PNG copies/source hashes and public fixture hash; scoped screenshot limits",
+    "20MiB storage cap",
+    "0000/0001/0003 lineage unchanged"
+  ],
+  "source_tree": "48a6b53f29d7f99ea410ba0e9d7085f7d9673acb",
+  "manifest_sha256": "f83f1598f70265baf938911395f0f939dd5cf93a77610b82ca93b4fad940f954",
+  "artifact_bytes": 4269270,
+  "artifact_files": [
+    {
+      "file": "0000-source-header-distribution.patch",
+      "bytes": 4732,
+      "sha256": "70da9e24f27de04128c59b1484379d1d9813f7e1af04d3792e971a07a24cd57e"
+    },
+    {
+      "file": "0001-contrib-matroska-identity-and-admission.patch",
+      "bytes": 13511,
+      "sha256": "27772936e6068efe11bd44dd6265cd1fb61114dfd8aa7cd9ba693c609e54abf1"
+    },
+    {
+      "file": "0002-timeline-helper-build-package-and-tests.patch",
+      "bytes": 186997,
+      "sha256": "e75a22d8720e940016617cffc338390652899945770e78ed1d177c5fe2587b63"
+    },
+    {
+      "file": "0003-macosx-timeline-context-service-and-hover.patch",
+      "bytes": 304953,
+      "sha256": "ef9ad2f01482a06798495284c138b448637f91c417f467b2bd7a1c3fec2d7151"
+    },
+    {
+      "file": "README.md",
+      "bytes": 9452,
+      "sha256": "a53bb59b2d015aec540b092047adc9d11f371cc13966e35c44d82a13fddb8c97"
+    },
+    {
+      "file": "contribution-description-draft.md",
+      "bytes": 5178,
+      "sha256": "71c7b981fc3454d6c9ab7ffd4c68fa50b2479fcdabf12c2e8d82bebd563acd39"
+    },
+    {
+      "file": "demonstration/README.md",
+      "bytes": 3117,
+      "sha256": "16c3bfac22336303ee2015b2d6a9ee3aa8c9fef98287eb28ea1d3bf4d4cd6e78"
+    },
+    {
+      "file": "demonstration/custom-fullscreen-hover.png",
+      "bytes": 3512667,
+      "sha256": "3b11c683299899abbf8d6ff640456853afa7e83ec06ab40147e8f3116106abd1"
+    },
+    {
+      "file": "demonstration/detached-hover.png",
+      "bytes": 192239,
+      "sha256": "d32dd707d09bfd70731c2b0438d1e4c8c83f04dbe4391ed3d1be2cb100bc5050"
+    },
+    {
+      "file": "demonstration/provenance.json",
+      "bytes": 3258,
+      "sha256": "976e36dc6a592ee7774c07b13156ac4165cf5305e80152a74804aa7dc3002e03"
+    },
+    {
+      "file": "manifest.json",
+      "bytes": 29679,
+      "sha256": "f83f1598f70265baf938911395f0f939dd5cf93a77610b82ca93b4fad940f954"
+    },
+    {
+      "file": "proposed-commit-messages.md",
+      "bytes": 3294,
+      "sha256": "7758e8763cfb587644d27cd7704d0a30e80d2ac304fc60030e5ad2d7b1b6a5d3"
+    },
+    {
+      "file": "series",
+      "bytes": 193,
+      "sha256": "db71116d7a68e3319f7fe0a220a17327c3bbb116c98253d29bdc28d688930d4f"
+    }
+  ]
+}

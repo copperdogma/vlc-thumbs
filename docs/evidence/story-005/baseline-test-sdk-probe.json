@@ -1,0 +1,14 @@
+[
+  {
+    "mode": "unset",
+    "SDKROOT": null,
+    "exit_code": 1,
+    "stderr": "work/story005-scout/foundation-header.m:1:9: fatal error: 'Foundation/Foundation.h' file not found\n    1 | #import <Foundation/Foundation.h>\n      |         ^~~~~~~~~~~~~~~~~~~~~~~~~\nwork/story005-scout/foundation-header.m:1:9: note: did not find header 'Foundation.h' in framework 'Foundation' (loaded from '/System/Library/Frameworks')\n1 error generated.\n"
+  },
+  {
+    "mode": "explicit",
+    "SDKROOT": "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk",
+    "exit_code": 0,
+    "stderr": ""
+  }
+]

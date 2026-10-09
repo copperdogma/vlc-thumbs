@@ -1,0 +1,13 @@
+{
+  "runner": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/reproduction-distcheck-source-headers-frozen.sh",
+  "sha256": "533def9e1dbd3261e582e31e794bff68b088236f8eae1e062b6d924547f43e3f",
+  "source_tree": "c545256d9ca20aed8e75a57f9fdb76091ddecf9d",
+  "steps": [
+    "normal automatic modules metadata regeneration",
+    "normal make dist",
+    "actual archive five-header membership and byte equality",
+    "same lean make distcheck"
+  ],
+  "guard_floor_bytes": 1073741824,
+  "product_app_helper_native_suite_not_repeated": true
+}

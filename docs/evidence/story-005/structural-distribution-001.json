@@ -1,0 +1,301 @@
+{
+  "utc": "2026-10-06T13:30:30Z",
+  "scope": "Separate structural stages only; unchanged failed make check; revision8 archive (revision9 differs only README)",
+  "status": "partial-structural-pass-distcleancheck-failed",
+  "stages": [
+    {
+      "name": "01-preserve-apfs",
+      "argv": [
+        "/bin/cp",
+        "-cR",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-reproduction/vlc-4.0.0-dev/_build/sub",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-structural-distribution-001/preserved-build"
+      ],
+      "log": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-structural-distribution-001/01-preserve-apfs.log",
+      "status": "passed",
+      "pid": 59960,
+      "exit_code": 0,
+      "elapsed_seconds": 1.427
+    },
+    {
+      "name": "02-install",
+      "argv": [
+        "/bin/bash",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/structural-distribution-env001.sh",
+        "make",
+        "-C",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-reproduction/vlc-4.0.0-dev/_build/sub",
+        "-j4",
+        "install"
+      ],
+      "log": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-structural-distribution-001/02-install.log",
+      "status": "passed",
+      "pid": 60027,
+      "exit_code": 0,
+      "elapsed_seconds": 78.704
+    },
+    {
+      "name": "03-installcheck",
+      "argv": [
+        "/bin/bash",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/structural-distribution-env001.sh",
+        "make",
+        "-C",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-reproduction/vlc-4.0.0-dev/_build/sub",
+        "installcheck"
+      ],
+      "log": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-structural-distribution-001/03-installcheck.log",
+      "status": "passed",
+      "pid": 67529,
+      "exit_code": 0,
+      "elapsed_seconds": 1.828
+    },
+    {
+      "name": "04-uninstall",
+      "argv": [
+        "/bin/bash",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/structural-distribution-env001.sh",
+        "make",
+        "-C",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-reproduction/vlc-4.0.0-dev/_build/sub",
+        "uninstall"
+      ],
+      "log": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-structural-distribution-001/04-uninstall.log",
+      "status": "passed",
+      "pid": 67623,
+      "exit_code": 0,
+      "elapsed_seconds": 25.742
+    },
+    {
+      "name": "05-uninstall-residual",
+      "argv": [
+        "/bin/bash",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/structural-distribution-env001.sh",
+        "make",
+        "-C",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-reproduction/vlc-4.0.0-dev/_build/sub",
+        "distuninstallcheck_dir=/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-reproduction/vlc-4.0.0-dev/_inst",
+        "distuninstallcheck"
+      ],
+      "log": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-structural-distribution-001/05-uninstall-residual.log",
+      "status": "passed",
+      "pid": 82291,
+      "exit_code": 0,
+      "elapsed_seconds": 0.205
+    },
+    {
+      "name": "06-prefix-readonly",
+      "argv": [
+        "/bin/chmod",
+        "-R",
+        "a-w",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-reproduction/vlc-4.0.0-dev/_inst"
+      ],
+      "log": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-structural-distribution-001/06-prefix-readonly.log",
+      "status": "passed",
+      "pid": 82349,
+      "exit_code": 0,
+      "elapsed_seconds": 0.206
+    },
+    {
+      "name": "07-destdir-install",
+      "argv": [
+        "/bin/bash",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/structural-distribution-env001.sh",
+        "make",
+        "-C",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-reproduction/vlc-4.0.0-dev/_build/sub",
+        "-j4",
+        "DESTDIR=/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-structural-distribution-001/destdir",
+        "install"
+      ],
+      "log": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-structural-distribution-001/07-destdir-install.log",
+      "status": "passed",
+      "pid": 82358,
+      "exit_code": 0,
+      "elapsed_seconds": 38.911
+    },
+    {
+      "name": "08-destdir-uninstall",
+      "argv": [
+        "/bin/bash",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/structural-distribution-env001.sh",
+        "make",
+        "-C",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-reproduction/vlc-4.0.0-dev/_build/sub",
+        "DESTDIR=/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-structural-distribution-001/destdir",
+        "uninstall"
+      ],
+      "log": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-structural-distribution-001/08-destdir-uninstall.log",
+      "status": "passed",
+      "pid": 89720,
+      "exit_code": 0,
+      "elapsed_seconds": 26.168
+    },
+    {
+      "name": "09-destdir-residual",
+      "argv": [
+        "/bin/bash",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/structural-distribution-env001.sh",
+        "make",
+        "-C",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-reproduction/vlc-4.0.0-dev/_build/sub",
+        "DESTDIR=/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-structural-distribution-001/destdir",
+        "distuninstallcheck_dir=/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-structural-distribution-001/destdir",
+        "distuninstallcheck"
+      ],
+      "log": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-structural-distribution-001/09-destdir-residual.log",
+      "status": "passed",
+      "pid": 5954,
+      "exit_code": 0,
+      "elapsed_seconds": 0.205
+    },
+    {
+      "name": "10-redistribute",
+      "argv": [
+        "/bin/bash",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/structural-distribution-env001.sh",
+        "make",
+        "-C",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-reproduction/vlc-4.0.0-dev/_build/sub",
+        "-j4",
+        "dist"
+      ],
+      "log": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-structural-distribution-001/10-redistribute.log",
+      "status": "passed",
+      "pid": 6016,
+      "exit_code": 0,
+      "elapsed_seconds": 36.082
+    },
+    {
+      "name": "10b-preserve-redist",
+      "argv": [
+        "/bin/cp",
+        "-c",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-reproduction/vlc-4.0.0-dev/_build/sub/vlc-4.0.0-dev.tar.xz",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-structural-distribution-001/redistributed-vlc-4.0.0-dev.tar.xz"
+      ],
+      "log": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-structural-distribution-001/10b-preserve-redist.log",
+      "status": "passed",
+      "pid": 14179,
+      "exit_code": 0,
+      "elapsed_seconds": 0.203
+    },
+    {
+      "name": "11-distcleancheck",
+      "argv": [
+        "/bin/bash",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/structural-distribution-env001.sh",
+        "make",
+        "-C",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-reproduction/vlc-4.0.0-dev/_build/sub",
+        "distcleancheck"
+      ],
+      "log": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-structural-distribution-001/11-distcleancheck.log",
+      "status": "failed",
+      "pid": 14209,
+      "exit_code": 2,
+      "elapsed_seconds": 12.228
+    }
+  ],
+  "initial_free_bytes": 49534402560,
+  "floor_bytes": 1073741824,
+  "additional_storage_cap_bytes": 1073741824,
+  "time_limit_seconds": 600,
+  "initial_build_prefix_allocated_bytes": 402788352,
+  "installcheck_limit": "Inspected installcheck rules empty; no installed functional suite",
+  "failed_tests_counts_preserved": {
+    "total": 92,
+    "pass": 80,
+    "skip": 5,
+    "fail": 7,
+    "error": 0
+  },
+  "paths": {
+    "archive": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-reproduction/vlc-4.0.0-dev",
+    "build": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-reproduction/vlc-4.0.0-dev/_build/sub",
+    "prefix": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-reproduction/vlc-4.0.0-dev/_inst",
+    "preserved_build": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-structural-distribution-001/preserved-build",
+    "destdir": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-structural-distribution-001/destdir"
+  },
+  "runner_sha256": "d35f22480a33d6f85d4dd7b65631b31058e1dd868d8aa3b60988e892ce2b636e",
+  "environment_wrapper_sha256": "38f7862b579fc964cea34d7dcd9d40c25fc98bc2ec998de2ac5efcf0a3dd46d3",
+  "minimum_free_bytes": 49222119424,
+  "maximum_additional_allocated_bytes": 675704832,
+  "failure_preservation_before": {
+    "archive_sha256": "652ffa3ebade9aba48defc63c1390f5074e8b823e1628b35f0edcbc99041ea5e",
+    "logs_verified": 17
+  },
+  "preservation_clone_verified": true,
+  "redist_required_headers": {
+    "modules/audio_output/apple/channel_layout.h": "41aa504553e4008da188fb2628fed10d5dde67c6a10f852db5a834f34afcb9f6",
+    "modules/audio_output/apple/avaudiosession_common.h": "0bd8e6732201c59d977d00731dbe9db62f24c18dce5a72726f0cbd2ded5a7296",
+    "modules/video_output/apple/VLCDrawable.h": "c3d8143c494eadd4a2d08ccec0f2626ec49cc616372370f08cff0590c718cedc",
+    "modules/video_output/apple/vlc_pip_controller.h": "9f617c096f4479cb498a1ffe8b46281ad7237f57d399a6959cd78de40d7ed5a6",
+    "modules/misc/medialibrary/LazyPreparser.h": "894d96b7b165d8bed79a5865c8da17f38c852d2c49266e6693c8b83267a153ad"
+  },
+  "redist_feature_files_verified": 12,
+  "redist_archive": {
+    "path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-structural-distribution-001/redistributed-vlc-4.0.0-dev.tar.xz",
+    "bytes": 30152856,
+    "sha256": "f3b553ffab0ef7815e4f0af14935687d53108a2b3cacc2f49010c8bd39f5fffa"
+  },
+  "error": "Stop('stage failure: 11-distcleancheck')",
+  "elapsed_seconds": 232.391,
+  "final_free_bytes": 51258511360,
+  "source_unchanged": true,
+  "preserved_diagnostics_unchanged": true,
+  "failure_preservation_after": {
+    "logs_verified": 17,
+    "archives_verified": 4,
+    "latest_archive_sha256": "652ffa3ebade9aba48defc63c1390f5074e8b823e1628b35f0edcbc99041ea5e"
+  },
+  "residual_paths": {
+    "bin/vlc": {
+      "sha256": "01ad8186722c1816e9086a9f3a6b1904c253f2fbc18b5c4696f0dc7722e58ea3",
+      "bytes": 7452,
+      "mode": "0o755",
+      "symlink": false
+    },
+    "modules/libvlc_vtutils.la": {
+      "sha256": "8cc96f0c19115db9745a522b59dfcf3133fe98afe55fc5596282cf235cc82005",
+      "bytes": 994,
+      "mode": "0o644",
+      "symlink": false
+    }
+  },
+  "no_retry_or_test_suppression": true,
+  "prefix_residual_regular_files": 0,
+  "destdir_residual_regular_files": 0,
+  "install_exit_zero_semantic_limit": "Both -j4 install cycles returned exit0 but unchanged install-data-local failed cd into not-yet-created bindir and then mv renamed build-tree vlc-osx to vlc. Correct installed executable name was not established; empty installcheck cannot detect this.",
+  "readonly_leftover_diagnosis": {
+    "general_class": "Automake lifecycle declarations and parallel-install ordering/error propagation",
+    "bin/vlc": {
+      "type": "GNU libtool temporary shell wrapper originally bin/vlc-osx",
+      "existed_before_experiment": false,
+      "bytes_equal_preserved_vlc_osx": true,
+      "creation_evidence": [
+        "02-install.log:1034-1036",
+        "07-destdir-install.log:1043-1045"
+      ],
+      "unchanged_pin_rule": "bin/Makefile.am:150-151 install-data-local: cd \"$(DESTDIR)$(bindir)\"; mv vlc-osx vlc",
+      "cleanup": "macOS bin_PROGRAMS declares vlc-osx, not resulting build-tree vlc; no CLEANFILES entry for vlc",
+      "feature_contribution": "No change to offending pinned install or cleanup declaration"
+    },
+    "modules/libvlc_vtutils.la": {
+      "type": "GNU libtool uninstalled static convenience library descriptor",
+      "existed_before_experiment": true,
+      "source": "modules/codec/Makefile.am:689-691 EXTRA_LTLIBRARIES declaration",
+      "dependencies": "CVPX image test and CVPX/VideoToolbox plugins depend on target",
+      "cleanup": "generated noinst/install LTLIBRARIES cleanup lists exclude extra-only libvlc_vtutils.la",
+      "source_full_file_byte_identical_pin": true,
+      "source_sha256": "03910c2a2d2707edcf66330fed0fa04ade5f5637ed5498936af9994aaac98364"
+    },
+    "established_documentation": [
+      "extras/tools/automake/doc/automake.texi:12336-12356 local targets have no execution-order guarantee; install-exec-hook executes after principal installation",
+      "extras/tools/automake/doc/automake.texi:9184-9198 distcleancheck checks all built-file removal and diagnoses missing cleanup declarations",
+      "extras/tools/automake/doc/automake.texi:5514-5520 convenience library target-class conventions"
+    ],
+    "no_removal_repair_or_retry": true
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "runner": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/reproduction-distcheck-apple-manifest-frozen.sh",
+  "sha256": "b6a0c30edd35c0de32f3f58d9bba7e80631573f7a956fc90595a115b83c65581",
+  "source_tree": "31e913d79495db387ab21fc07aac5c7427d3f535",
+  "steps": [
+    "normal automatic modules Makefile regeneration",
+    "normal make dist",
+    "actual archive four-header membership and byte equality",
+    "unchanged lean make distcheck"
+  ],
+  "same_guard_floor_bytes": 1073741824,
+  "existing_product_tests_not_repeated": true
+}

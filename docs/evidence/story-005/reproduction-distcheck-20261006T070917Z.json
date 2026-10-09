@@ -1,0 +1,18 @@
+{
+  "stage": "distcheck",
+  "command": [
+    "/bin/bash",
+    "work/story005-scout/reproduction-distcheck-git-boundary-frozen.sh"
+  ],
+  "cwd": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs",
+  "initial_free_bytes": 9183596544,
+  "stage_preflight_gib": 3.5,
+  "floor_bytes": 1073741824,
+  "time_limit_seconds": 1200,
+  "status": "failed",
+  "pid": 76187,
+  "elapsed_seconds": 130.5,
+  "minimum_free_bytes": 8495910912,
+  "exit_code": 2,
+  "final_free_bytes": 8451682304
+}

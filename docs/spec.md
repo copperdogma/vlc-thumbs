@@ -65,7 +65,16 @@ must be selected from a current source audit and minimal proof. Reuse upstream
 thumbnail/hover facilities where they meet the contract, documenting any changed
 mechanisms or behavior explicitly. Do not assume current local evidence qualifies
 a new branch. Story003 waits for this contribution's disposition or an explicit
-sequencing change. Story creation and its initial scout are planning only.
+sequencing change. Cam authorized phases1/2 on2026-10-05. ADR004 selects a retained
+FFmpeg9 helper through normal contrib/build integration, a current-player atomic
+context and the existing master hover panel after bounded reuse/comparison proof.
+The isolated port is locally qualified for Phases1/2 at the disclosed bounded
+scope in [current source10 verification](evidence/story-005/current-source10-final-verification.md).
+Platform and preview-visible reader coverage, uninterrupted public-recipe execution
+and the owner-deferred shutdown cause remain explicit limits; submission has not occurred. Prototype core patches are preserved separately, not dependencies
+of this feature series. Existing 3.0.24 decisions/evals below remain historical
+qualification. The master protocol4/native-input-ID/cachev5 plan preserves their
+behavioral limits while replacing branch-specific machinery.
 
 ## spec:2 - Thumbnail correspondence and responsiveness
 
@@ -271,8 +280,10 @@ already exists by Cam's request; no current permission to publish binaries or
 new commits is implied. Story001 is feasibility; 002/004 implement previews and
 003 owns durable labels. Story005 (002b) adds the upstream contribution boundary:
 clean reproduction, project conventions, reviewable source, licenses, tests and
-honest submission/disposition. Full investigation, implementation and submission
-remain pending after planning. Root completion still requires both features.
+honest submission/disposition. Investigation has selected ADR004; master
+implementation/qualification are complete at the disclosed bounded Phases1/2 scope
+and submission has not occurred. Root
+completion still requires both features.
 
 ### Story 004 correspondence/retention correction
 

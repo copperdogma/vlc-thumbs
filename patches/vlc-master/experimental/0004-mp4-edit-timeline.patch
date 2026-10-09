@@ -1,0 +1,16 @@
+diff --git a/modules/demux/mp4/mp4.c b/modules/demux/mp4/mp4.c
+index c11b998..13d21c5 100644
+--- a/modules/demux/mp4/mp4.c
++++ b/modules/demux/mp4/mp4.c
+@@ -513,8 +513,9 @@ static stime_t MP4_MapTrackTimeIntoTimeline( const mp4_track_t *p_track,
+     const MP4_Box_data_elst_entry_t *edit =
+             &p_track->BOXDATA(p_elst)->entries[p_track->i_elst];
+ 
+-    /* convert to offset in our current edit */
+-    if( edit->i_media_time > 0 && p_track->i_start_dts >= edit->i_media_time )
++    /* Decode preroll can precede the edit, but its presentation timestamps
++     * must still be mapped into the same movie timeline. */
++    if( edit->i_media_time > 0 )
+         i_time -= edit->i_media_time;
+ 
+     /* convert media timeline to track timescale */

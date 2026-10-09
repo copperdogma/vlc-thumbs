@@ -1,0 +1,3 @@
+Setting base environment
+Using VLC root dir /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-reproduction, build triplet aarch64-apple-darwin19 and host triplet aarch64-apple-darwin19
+extras/package/macosx/env.build.sh: line 78: VLC_CCACHE_BINS_PATH: unbound variable

@@ -1,0 +1,27 @@
+{
+  "utc": "2026-10-06T03:51:33.003867+00:00",
+  "scope": "Approved B1/B2/B3 source/configuration fixes and public input distribution; no bootstrap/configure/build during space hold",
+  "files": {
+    "Makefile.am": "9399c30643b98b1054c3894f39354ce7f500f53d4a7d993d2928f939c721c4db",
+    "configure.ac": "9dd8d65a1a272dcf919b85bc6ed5c3180ff48fba7ccfa339096777aae74c974d",
+    "bin/meson.build": "76f7d8d7ac0dc6a3368325375b21ba80247a2f8b230606482264e1f488ece643",
+    "bin/timeline-preview/Makefile.am": "e46f1d0ba4495301231fc524127464a2b407c7ebb42bbded26b294980e3d4f04",
+    "contrib/src/ffmpeg/rules.mak": "c3f3f5c5b54e93de3b3a954431809edc7a965691f1f7a411b56e941b83421028",
+    "contrib/src/ffmpeg/matroska-flat-timeline.patch": "abd605f770de85f739929c5d333bd45e8d35075b2b69720cfaecbdc0d278450e"
+  },
+  "option_graph_expected_not_executed": {
+    "meson_disabled": "no dependency discovery/target",
+    "meson_auto_non_macos_or_vlc_disabled": "feature require condition disables target",
+    "meson_enabled_non_macos_or_vlc_disabled": "feature require condition errors",
+    "meson_auto_missing_ffmpeg": "optional dependencies unfound; target/test omitted",
+    "meson_enabled_missing_ffmpeg": "required dependency errors",
+    "meson_auto_or_enabled_all_deps_found": "helper target and Python>=3.9 test registered",
+    "autotools_default_macos_vlc": "helper remains enabled, static dependencies required",
+    "autotools_default_vlc_disabled": "helper defaults disabled",
+    "autotools_explicit_enable_vlc_disabled": "clear configuration error",
+    "minimal_distcheck": "helper explicitly disabled; separate feature recipe required"
+  },
+  "validation": "git diff --check passes. Meson unavailable locally; actual Meson setup matrix and regenerated Autotools checks pending. No behavioral/build success claimed for these source fixes.",
+  "independent_source_review": "local_contract_audit confirms six initial receipt hashes and B1/B2/B3 graph; no Meson execution claim",
+  "later_distribution_addition": "timeline-preview/test-io.c added EXTRA_DIST after receipt; standalone actual customAVIO fixture test, no no-argument TESTS registration"
+}

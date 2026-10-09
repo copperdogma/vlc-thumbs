@@ -1,0 +1,1 @@
+{"passed": 2, "scope": "Packaged signed helper direct execution from unrelated cwd with no DYLD/FFmpeg path; no app movement, GUI launch, pointer or playback proof"}

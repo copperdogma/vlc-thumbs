@@ -1,0 +1,147 @@
+{
+  "scope": "Pristine pinned master internal native Matroska preparser exports only; no UI/admission qualification",
+  "binary_sha256": "681693622cc4ee9ce14a8dd33c01c028c24396b9506295321395d6fc88fc4c80",
+  "records": [
+    {
+      "fixture": "flat-no-chapters.mkv",
+      "argv": [
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/.libs/preparser-probe",
+        "internal",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-admission-fixtures001/flat-no-chapters.mkv",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-admission-fixtures001/flat-no-chapters.native",
+        "0",
+        "1",
+        "fast"
+      ],
+      "returncode": 0,
+      "elapsed_s": 0.33677116699982435,
+      "stdout": "{\"mode\":\"internal\",\"request_index\":0,\"requested_us\":0,\"fast\":true,\"explicit_track_id\":false,\"status\":0,\"outer_timeout\":false,\"elapsed_us\":184290,\"has_picture\":true,\"picture_date\":1,\"date_valid\":true,\"date_minus_tick_zero\":0,\"chroma\":808596553,\"visible_width\":64,\"visible_height\":48,\"orientation\":0,\"sar_num\":1,\"sar_den\":1,\"export_geometry\":\"display-fit\",\"export_requested_width\":240,\"export_requested_height\":180,\"export_status\":0,\"export_saved\":true,\"export_width\":240,\"export_height\":180,\"export_bytes\":172800,\"export_orientation\":0,\"export_sar_num\":1,\"export_sar_den\":1}\n",
+      "export_sha256": "3e550f37b9dcd5c0b0d0810176607b6d7108f070b09b9b3e5b27900348a849bd",
+      "red_pixel_fraction": 1.0,
+      "loaded_runtime_paths": [
+        "dyld[69153]: <73558B4D-2A3D-39D5-812D-6C048C8CCB60> /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/lib/.libs/libvlc.12.dylib",
+        "dyld[69153]: <FABEA7BE-B0DA-3B5D-A9FC-495A7F627012> /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/src/.libs/libvlccore.9.dylib",
+        "[00000001033a5840] main libvlc debug: VLC media player - 4.0.0-dev Otto Chriek",
+        "[00000001033a5840] main libvlc debug: Copyright \u00a9 1996-2026 the VideoLAN team",
+        "[00000001033a5840] main libvlc debug: revision 2e358f3",
+        "[00000001033a5840] main libvlc debug: configured with /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/package/macosx/../../../configure  '--prefix=/' '--enable-macosx' '--enable-merge-ffmpeg' '--enable-osx-notifications' '--enable-flac' '--enable-theora' '--enable-shout' '--enable-ncurses' '--enable-twolame' '--enable-libass' '--enable-macosx-avfoundation' '--disable-xcb' '--disable-caca' '--disable-pulse' '--disable-vnc' '--without-x' '--build=aarch64-apple-darwin19' '--host=aarch64-apple-darwin19' '--with-contrib=contrib/aarch64-apple-darwin19' '--with-macosx-version-min=10.13' '--with-macosx-sdk=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk' '--enable-extra-checks' 'build_alias=aarch64-apple-darwin19' 'host_alias=aarch64-apple-darwin19' 'CC=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang' 'CFLAGS=-g -arch arm64 -Werror=incompatible-function-pointer-types' 'LDFLAGS=-arch arm64' 'CXX=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++' 'CXXFLAGS=-g -arch arm64 -Werror=incompatible-function-pointer-types' 'OBJC=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang' 'OBJCFLAGS=-g -arch arm64 -Werror=incompatible-function-pointer-types' 'OBJCXX=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++' 'OBJCXXFLAGS=-g -arch arm64 -Werror=incompatible-function-pointer-types' 'PKG_CONFIG_PATH=' 'PKG_CONFIG_LIBDIR=/nonexistent/story005-pkgconfig-isolation' 'NCURSES_LIBS=-L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/aarch64-apple-darwin19/lib -lncursesw'",
+        "[00000001033a5840] main libvlc debug: searching plug-in modules",
+        "[00000001033a5840] main libvlc debug: loading plugins cache file //lib/vlc/plugins/plugins.dat",
+        "[00000001033a5840] main libvlc warning: cannot read //lib/vlc/plugins/plugins.dat: No such file or directory",
+        "[00000001033a5840] main libvlc debug: recursively browsing `//lib/vlc/plugins'"
+      ],
+      "native_mkv_plugin_loaded": true
+    },
+    {
+      "fixture": "flat-late-chapters.mkv",
+      "argv": [
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/.libs/preparser-probe",
+        "internal",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-admission-fixtures001/flat-late-chapters.mkv",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-admission-fixtures001/flat-late-chapters.native",
+        "0",
+        "1",
+        "fast"
+      ],
+      "returncode": 0,
+      "elapsed_s": 0.06301099999836879,
+      "stdout": "{\"mode\":\"internal\",\"request_index\":0,\"requested_us\":0,\"fast\":true,\"explicit_track_id\":false,\"status\":0,\"outer_timeout\":false,\"elapsed_us\":14541,\"has_picture\":true,\"picture_date\":1,\"date_valid\":true,\"date_minus_tick_zero\":0,\"chroma\":808596553,\"visible_width\":64,\"visible_height\":48,\"orientation\":0,\"sar_num\":1,\"sar_den\":1,\"export_geometry\":\"display-fit\",\"export_requested_width\":240,\"export_requested_height\":180,\"export_status\":0,\"export_saved\":true,\"export_width\":240,\"export_height\":180,\"export_bytes\":172800,\"export_orientation\":0,\"export_sar_num\":1,\"export_sar_den\":1}\n",
+      "export_sha256": "3e550f37b9dcd5c0b0d0810176607b6d7108f070b09b9b3e5b27900348a849bd",
+      "red_pixel_fraction": 1.0,
+      "loaded_runtime_paths": [
+        "dyld[69161]: <73558B4D-2A3D-39D5-812D-6C048C8CCB60> /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/lib/.libs/libvlc.12.dylib",
+        "dyld[69161]: <FABEA7BE-B0DA-3B5D-A9FC-495A7F627012> /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/src/.libs/libvlccore.9.dylib",
+        "[0000000104509840] main libvlc debug: VLC media player - 4.0.0-dev Otto Chriek",
+        "[0000000104509840] main libvlc debug: Copyright \u00a9 1996-2026 the VideoLAN team",
+        "[0000000104509840] main libvlc debug: revision 2e358f3",
+        "[0000000104509840] main libvlc debug: configured with /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/package/macosx/../../../configure  '--prefix=/' '--enable-macosx' '--enable-merge-ffmpeg' '--enable-osx-notifications' '--enable-flac' '--enable-theora' '--enable-shout' '--enable-ncurses' '--enable-twolame' '--enable-libass' '--enable-macosx-avfoundation' '--disable-xcb' '--disable-caca' '--disable-pulse' '--disable-vnc' '--without-x' '--build=aarch64-apple-darwin19' '--host=aarch64-apple-darwin19' '--with-contrib=contrib/aarch64-apple-darwin19' '--with-macosx-version-min=10.13' '--with-macosx-sdk=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk' '--enable-extra-checks' 'build_alias=aarch64-apple-darwin19' 'host_alias=aarch64-apple-darwin19' 'CC=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang' 'CFLAGS=-g -arch arm64 -Werror=incompatible-function-pointer-types' 'LDFLAGS=-arch arm64' 'CXX=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++' 'CXXFLAGS=-g -arch arm64 -Werror=incompatible-function-pointer-types' 'OBJC=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang' 'OBJCFLAGS=-g -arch arm64 -Werror=incompatible-function-pointer-types' 'OBJCXX=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++' 'OBJCXXFLAGS=-g -arch arm64 -Werror=incompatible-function-pointer-types' 'PKG_CONFIG_PATH=' 'PKG_CONFIG_LIBDIR=/nonexistent/story005-pkgconfig-isolation' 'NCURSES_LIBS=-L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/aarch64-apple-darwin19/lib -lncursesw'",
+        "[0000000104509840] main libvlc debug: searching plug-in modules",
+        "[0000000104509840] main libvlc debug: loading plugins cache file //lib/vlc/plugins/plugins.dat",
+        "[0000000104509840] main libvlc warning: cannot read //lib/vlc/plugins/plugins.dat: No such file or directory",
+        "[0000000104509840] main libvlc debug: recursively browsing `//lib/vlc/plugins'"
+      ],
+      "native_mkv_plugin_loaded": true
+    },
+    {
+      "fixture": "flat-two-hours-1200-clusters.mkv",
+      "argv": [
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/.libs/preparser-probe",
+        "internal",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-admission-fixtures001/flat-two-hours-1200-clusters.mkv",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-admission-fixtures001/flat-two-hours-1200-clusters.native",
+        "0",
+        "1",
+        "fast"
+      ],
+      "returncode": 0,
+      "elapsed_s": 0.06845395800337428,
+      "stdout": "{\"mode\":\"internal\",\"request_index\":0,\"requested_us\":0,\"fast\":true,\"explicit_track_id\":false,\"status\":0,\"outer_timeout\":false,\"elapsed_us\":18788,\"has_picture\":true,\"picture_date\":1,\"date_valid\":true,\"date_minus_tick_zero\":0,\"chroma\":808596553,\"visible_width\":64,\"visible_height\":48,\"orientation\":0,\"sar_num\":1,\"sar_den\":1,\"export_geometry\":\"display-fit\",\"export_requested_width\":240,\"export_requested_height\":180,\"export_status\":0,\"export_saved\":true,\"export_width\":240,\"export_height\":180,\"export_bytes\":172800,\"export_orientation\":0,\"export_sar_num\":1,\"export_sar_den\":1}\n",
+      "export_sha256": "3e550f37b9dcd5c0b0d0810176607b6d7108f070b09b9b3e5b27900348a849bd",
+      "red_pixel_fraction": 1.0,
+      "loaded_runtime_paths": [
+        "dyld[69164]: <73558B4D-2A3D-39D5-812D-6C048C8CCB60> /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/lib/.libs/libvlc.12.dylib",
+        "dyld[69164]: <FABEA7BE-B0DA-3B5D-A9FC-495A7F627012> /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/src/.libs/libvlccore.9.dylib",
+        "[000000010175d880] main libvlc debug: VLC media player - 4.0.0-dev Otto Chriek",
+        "[000000010175d880] main libvlc debug: Copyright \u00a9 1996-2026 the VideoLAN team",
+        "[000000010175d880] main libvlc debug: revision 2e358f3",
+        "[000000010175d880] main libvlc debug: configured with /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/package/macosx/../../../configure  '--prefix=/' '--enable-macosx' '--enable-merge-ffmpeg' '--enable-osx-notifications' '--enable-flac' '--enable-theora' '--enable-shout' '--enable-ncurses' '--enable-twolame' '--enable-libass' '--enable-macosx-avfoundation' '--disable-xcb' '--disable-caca' '--disable-pulse' '--disable-vnc' '--without-x' '--build=aarch64-apple-darwin19' '--host=aarch64-apple-darwin19' '--with-contrib=contrib/aarch64-apple-darwin19' '--with-macosx-version-min=10.13' '--with-macosx-sdk=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk' '--enable-extra-checks' 'build_alias=aarch64-apple-darwin19' 'host_alias=aarch64-apple-darwin19' 'CC=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang' 'CFLAGS=-g -arch arm64 -Werror=incompatible-function-pointer-types' 'LDFLAGS=-arch arm64' 'CXX=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++' 'CXXFLAGS=-g -arch arm64 -Werror=incompatible-function-pointer-types' 'OBJC=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang' 'OBJCFLAGS=-g -arch arm64 -Werror=incompatible-function-pointer-types' 'OBJCXX=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++' 'OBJCXXFLAGS=-g -arch arm64 -Werror=incompatible-function-pointer-types' 'PKG_CONFIG_PATH=' 'PKG_CONFIG_LIBDIR=/nonexistent/story005-pkgconfig-isolation' 'NCURSES_LIBS=-L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/aarch64-apple-darwin19/lib -lncursesw'",
+        "[000000010175d880] main libvlc debug: searching plug-in modules",
+        "[000000010175d880] main libvlc debug: loading plugins cache file //lib/vlc/plugins/plugins.dat",
+        "[000000010175d880] main libvlc warning: cannot read //lib/vlc/plugins/plugins.dat: No such file or directory",
+        "[000000010175d880] main libvlc debug: recursively browsing `//lib/vlc/plugins'"
+      ],
+      "native_mkv_plugin_loaded": true
+    }
+  ],
+  "environment": {
+    "DYLD_LIBRARY_PATH": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/lib/.libs:/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/src/.libs",
+    "VLC_PLUGIN_PATH": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/modules",
+    "DYLD_PRINT_LIBRARIES": "1"
+  },
+  "runtime_sha256": {
+    "work/story005-master-baseline/src/.libs/libvlccore.9.dylib": "c6c4f10547b35391893f37b45779026872938f75eac3b5594d00d6414a67d7a0",
+    "work/story005-master-baseline/lib/.libs/libvlc.12.dylib": "fb74fde22b5becb4ffcc2554f5ca3236cff363d238f50010bbab419ad76dd484",
+    "work/story005-master-baseline/modules/.libs/libmkv_plugin.dylib": "2dad5531ee47a90c0ea3305fcd96d1252f8b760afa683b6d3fd44ed3df2820b0",
+    "work/story005-master-baseline/modules/.libs/libavcodec_plugin.dylib": "5aa3a5276742e2d584904a774ba9a66b5dba2997708462fe395162537cd11888"
+  },
+  "long_frame_count": {
+    "argv": [
+      "ffprobe",
+      "-v",
+      "error",
+      "-count_frames",
+      "-select_streams",
+      "v:0",
+      "-show_entries",
+      "stream=nb_read_frames,avg_frame_rate",
+      "-of",
+      "json",
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-admission-fixtures001/flat-two-hours-1200-clusters.mkv"
+    ],
+    "returncode": 0,
+    "output": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "avg_frame_rate": "1/6",
+          "nb_read_frames": "1200"
+        }
+      ]
+    }
+  },
+  "long_last_request": {
+    "argv": [
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/.libs/preparser-probe",
+      "internal",
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-admission-fixtures001/flat-two-hours-1200-clusters.mkv",
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-admission-fixtures001/long-last.native",
+      "7194000000",
+      "1",
+      "fast"
+    ],
+    "returncode": 0,
+    "stdout": "{\"mode\":\"internal\",\"request_index\":0,\"requested_us\":7194000000,\"fast\":true,\"explicit_track_id\":false,\"status\":0,\"outer_timeout\":false,\"elapsed_us\":177320,\"has_picture\":true,\"picture_date\":7194000001,\"date_valid\":true,\"date_minus_tick_zero\":7194000000,\"chroma\":808596553,\"visible_width\":64,\"visible_height\":48,\"orientation\":0,\"sar_num\":1,\"sar_den\":1,\"export_geometry\":\"display-fit\",\"export_requested_width\":240,\"export_requested_height\":180,\"export_status\":0,\"export_saved\":true,\"export_width\":240,\"export_height\":180,\"export_bytes\":172800,\"export_orientation\":0,\"export_sar_num\":1,\"export_sar_den\":1}\n",
+    "fixture_sha256": "6a960dede226d6ecfa1ec7cf7f7b00e7b22cf5723e005f44fab29556d06918ce"
+  }
+}

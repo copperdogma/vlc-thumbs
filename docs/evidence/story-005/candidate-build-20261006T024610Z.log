@@ -1,0 +1,2 @@
+  CC       demux/mp4/mp4.lo
+  CCLD     libmp4_plugin.la

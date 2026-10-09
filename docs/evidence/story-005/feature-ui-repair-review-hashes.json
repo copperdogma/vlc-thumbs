@@ -1,0 +1,16 @@
+{
+  "files": {
+    "modules/gui/macosx/views/VLCPlaybackProgressSlider.h": "2df50c2c4dd2ce5486d228b8b6b4ad3549fe37c70e5adcb3a47e8789cd8e4e63",
+    "modules/gui/macosx/views/VLCPlaybackProgressSlider.m": "e8231c1ee69d88cdfc489dcd3d89a28a561aadc356a246d6b00eea0e9c298d4b",
+    "modules/gui/macosx/windows/video/VLCMainVideoViewController.m": "00a1fafd21316101dda91b8bcdf4e00615b7bb14c74269b9959c02019b2ab128",
+    "modules/gui/macosx/preferences/VLCSimplePrefsController.h": "2aad432fe62778b4275cfff30fd30461e2ef6bdf8e3543120b2aceeb1b7a35b8",
+    "modules/gui/macosx/preferences/VLCSimplePrefsController.m": "7d31ff701c1793c849dc0b0317d5744fcebd93ba102b571484d68c1f38bcf704",
+    "modules/gui/macosx/UI/SimplePreferences.xib": "ad1e498b2b543e6812ab23ab196d0936889f8ea000e0bc05a70828d66f1d6bb1",
+    "modules/gui/macosx/main/macosx.m": "b23d0ce0c6e2d23e9865c44597366935e1ec15b0f633a3f13b30307710632428",
+    "modules/gui/macosx/tests/VLCTimelineHoverTest.m": "310b616ceea66eda8ef8703706b68599b8586ba5097d4b05e3e9677e7e4a9812",
+    "modules/gui/macosx/tests/VLCTimelineHoverReentrancyTest.m": "89f149fea22b195c343ae03d360fca1d702a2579576f0af6555de3d1565012b8",
+    "modules/gui/macosx/tests/VLCTimelineHoverTestSupport.m": "08b50d400e893136b15852d5c19ed1a9ff86832089f7e9faef62a886649e06ab"
+  },
+  "recorded_match": true,
+  "reentrancy_binary_sha256": "17dc522634f4702eb817895aeaf7c06ab908b17ed374b9b6324ab0c18e09cb85"
+}

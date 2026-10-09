@@ -1,0 +1,10 @@
+{
+  "path": "modules/misc/Makefile.am",
+  "before_sha256": "dca8bc9fd01e19bf0bd3393df8910dde8382deb68f863ae954999edb01b59698",
+  "after_sha256": "202f4a95ab9de075df6f64b7ea2bf3dd21a11d795e81544c5a1ff97a721734b0",
+  "diff": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/docs/evidence/story-005/medialibrary-header-distribution-review.diff",
+  "diff_sha256": "d07a53c76716c304ce95f77675410e58ed07f49fd27270f862da9ebc32c8cfa3",
+  "unchanged_header": "modules/misc/medialibrary/LazyPreparser.h",
+  "unchanged_header_sha256": "894d96b7b165d8bed79a5865c8da17f38c852d2c49266e6693c8b83267a153ad",
+  "scope": "One existing header declaration only, no flags/conditions/runtime change"
+}

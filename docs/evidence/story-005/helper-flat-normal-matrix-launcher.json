@@ -1,0 +1,193 @@
+{
+  "command": [
+    "python3",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-candidate/bin/timeline-preview/test.py",
+    "--helper",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/bin/vlc-timeline-preview",
+    "--fixtures",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-fixtures",
+    "--trim-fixtures",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-mp4-fixtures001",
+    "--identity-fixtures",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-feature-dependency-fixtures002",
+    "--admission-fixtures",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-admission-fixtures002"
+  ],
+  "returncode": 0,
+  "failure": null,
+  "elapsed_seconds": 3.742311708003399,
+  "minimum_free_bytes": 1835364352,
+  "reserve_bytes": 1073741824,
+  "observed_processes": [
+    {
+      "pid": 3756,
+      "ppid": 3754,
+      "pgid": 3756,
+      "state": "Ss"
+    },
+    {
+      "pid": 3763,
+      "ppid": 3756,
+      "pgid": 3756,
+      "state": "R"
+    },
+    {
+      "pid": 3772,
+      "ppid": 3756,
+      "pgid": 3756,
+      "state": "R"
+    },
+    {
+      "pid": 3786,
+      "ppid": 3756,
+      "pgid": 3756,
+      "state": "R"
+    },
+    {
+      "pid": 3794,
+      "ppid": 3756,
+      "pgid": 3756,
+      "state": "R"
+    },
+    {
+      "pid": 3799,
+      "ppid": 3756,
+      "pgid": 3756,
+      "state": "R"
+    },
+    {
+      "pid": 3809,
+      "ppid": 3756,
+      "pgid": 3809,
+      "state": "Ss"
+    },
+    {
+      "pid": 3816,
+      "ppid": 3756,
+      "pgid": 3816,
+      "state": "Ss"
+    },
+    {
+      "pid": 3825,
+      "ppid": 3756,
+      "pgid": 3825,
+      "state": "Rs"
+    },
+    {
+      "pid": 3832,
+      "ppid": 3756,
+      "pgid": 3756,
+      "state": "R"
+    },
+    {
+      "pid": 3847,
+      "ppid": 3756,
+      "pgid": 3756,
+      "state": "R"
+    },
+    {
+      "pid": 3858,
+      "ppid": 3756,
+      "pgid": 3756,
+      "state": "R"
+    },
+    {
+      "pid": 3869,
+      "ppid": 3756,
+      "pgid": 3869,
+      "state": "Ss"
+    },
+    {
+      "pid": 3879,
+      "ppid": 3756,
+      "pgid": 3879,
+      "state": "Rs"
+    },
+    {
+      "pid": 3901,
+      "ppid": 3756,
+      "pgid": 3756,
+      "state": "R"
+    },
+    {
+      "pid": 3908,
+      "ppid": 3756,
+      "pgid": 3756,
+      "state": "R"
+    },
+    {
+      "pid": 3915,
+      "ppid": 3756,
+      "pgid": 3756,
+      "state": "R"
+    },
+    {
+      "pid": 3923,
+      "ppid": 3756,
+      "pgid": 3756,
+      "state": "R"
+    },
+    {
+      "pid": 3928,
+      "ppid": 3756,
+      "pgid": 3928,
+      "state": "Ss"
+    },
+    {
+      "pid": 3935,
+      "ppid": 3756,
+      "pgid": 3935,
+      "state": "Ss"
+    },
+    {
+      "pid": 3942,
+      "ppid": 3756,
+      "pgid": 3942,
+      "state": "Ss"
+    },
+    {
+      "pid": 3948,
+      "ppid": 3756,
+      "pgid": 3756,
+      "state": "R"
+    },
+    {
+      "pid": 3955,
+      "ppid": 3756,
+      "pgid": 3756,
+      "state": "R"
+    },
+    {
+      "pid": 3962,
+      "ppid": 3756,
+      "pgid": 3756,
+      "state": "R"
+    },
+    {
+      "pid": 3969,
+      "ppid": 3756,
+      "pgid": 3756,
+      "state": "R"
+    },
+    {
+      "pid": 3977,
+      "ppid": 3756,
+      "pgid": 3977,
+      "state": "Rs"
+    }
+  ],
+  "observed_groups": [
+    3756,
+    3809,
+    3816,
+    3825,
+    3869,
+    3879,
+    3928,
+    3935,
+    3942,
+    3977
+  ],
+  "final_members": [],
+  "helper_sha256": "b2b5e5d13bf6d3e92f9e23193ec516d86b1f54547783fb5c53ce2fbbf6dadf73"
+}

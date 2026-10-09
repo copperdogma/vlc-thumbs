@@ -1,0 +1,11 @@
+make: `test_src_preparser_thumbnail_to_files' is up to date.
+  CC       src/preparser/thumbnail.o
+/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-candidate/extras/package/macosx/../../../test/src/preparser/thumbnail.c:466:52: warning: comparison of integers of different signs: 'enum vlc_thumbnailer_format' and 'const int' [-Wsign-compare]
+  466 |             assert(copy.req.outputs.data[0].format == formats[i]);
+      |                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^  ~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/assert.h:72:25: note: expanded from macro 'assert'
+   72 |     (__builtin_expect(!(e), 0) ? __assert_rtn(__func__, __ASSERT_FILE_NAME, __LINE__, #e) : (void)0)
+      |                         ^
+1 warning generated.
+  CCLD     test_src_preparser_thumbnail
+clang: warning: argument unused during compilation: '-fcx-limited-range' [-Wunused-command-line-argument]

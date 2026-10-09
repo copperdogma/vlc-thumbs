@@ -1,0 +1,112 @@
+{
+  "status": "passed_wrapper_validation_readiness_held",
+  "recorded_at_utc": "2026-10-07T00:47:23.595915+00:00",
+  "scope": "Wrapper-only native outcome reconciliation. This receipt summarizes the already executed passing checker; no repeated runtime or wrapper check. No final readiness or freeze claim.",
+  "checker": {
+    "script": "docs/evidence/story-005/public-package-wrapper-check.py",
+    "sha256": "91979ce4988b3d04e4700f241db986ca1bef58eb96111e9991687eb683a8ea53",
+    "command": "python3 docs/evidence/story-005/public-package-wrapper-check.py > docs/evidence/story-005/native-outcome-wrapper-update-001.log",
+    "exit_code": 0,
+    "log": "docs/evidence/story-005/native-outcome-wrapper-update-001.log",
+    "log_sha256": "4a41857010599072537f82b3d7f460b973eed8fd451ec0ea99d8fe9d03a4d06d"
+  },
+  "validation_result": {
+    "status": "passed",
+    "checks": [
+      "59 frozen source hashes/sizes",
+      "13 artifact hashes/sizes",
+      "series order",
+      "relative wrapper links",
+      "complete artifact private/binary marker scan",
+      "Git identity and approval precision",
+      "two PNG copies/source hashes and public fixture hash; scoped screenshot limits",
+      "20MiB storage cap",
+      "0000/0001/0003 lineage unchanged"
+    ],
+    "source_tree": "cc0ec69e8be5ba2e60ccae6ea095b471b500a6ff",
+    "manifest_sha256": "4f091a23217974e80f7950bf9ee64b3a1242c67ffcfbcc7b451d5159cd48b380",
+    "artifact_bytes": 4278792,
+    "artifact_files": [
+      {
+        "file": "0000-source-header-distribution.patch",
+        "bytes": 4732,
+        "sha256": "70da9e24f27de04128c59b1484379d1d9813f7e1af04d3792e971a07a24cd57e"
+      },
+      {
+        "file": "0001-contrib-matroska-identity-and-admission.patch",
+        "bytes": 13511,
+        "sha256": "27772936e6068efe11bd44dd6265cd1fb61114dfd8aa7cd9ba693c609e54abf1"
+      },
+      {
+        "file": "0002-timeline-helper-build-package-and-tests.patch",
+        "bytes": 187209,
+        "sha256": "b2661e2a585ed4f543c97ba0f50ce401637dbc1b8404fe85572cf866a8f6875e"
+      },
+      {
+        "file": "0003-macosx-timeline-context-service-and-hover.patch",
+        "bytes": 304953,
+        "sha256": "ef9ad2f01482a06798495284c138b448637f91c417f467b2bd7a1c3fec2d7151"
+      },
+      {
+        "file": "README.md",
+        "bytes": 13575,
+        "sha256": "e7a2a941a995b2037c8a95fd88cdd1c90b895153c2d9e15c1265e4c4fcaccd43"
+      },
+      {
+        "file": "contribution-description-draft.md",
+        "bytes": 6677,
+        "sha256": "8931d63689e69110191a265fdc4400102129a64803bfe32b22bad49c4011ff7e"
+      },
+      {
+        "file": "demonstration/README.md",
+        "bytes": 3692,
+        "sha256": "58180470b0b37095332c20530459637ba246f8288ed6049e5faf497db2a24e80"
+      },
+      {
+        "file": "demonstration/custom-fullscreen-hover.png",
+        "bytes": 3512667,
+        "sha256": "3b11c683299899abbf8d6ff640456853afa7e83ec06ab40147e8f3116106abd1"
+      },
+      {
+        "file": "demonstration/detached-hover.png",
+        "bytes": 192239,
+        "sha256": "d32dd707d09bfd70731c2b0438d1e4c8c83f04dbe4391ed3d1be2cb100bc5050"
+      },
+      {
+        "file": "demonstration/provenance.json",
+        "bytes": 4418,
+        "sha256": "b02db1dcb018664eb4bedd8a325da56ae705cfe82ef09a706c26669a586459dc"
+      },
+      {
+        "file": "manifest.json",
+        "bytes": 31632,
+        "sha256": "4f091a23217974e80f7950bf9ee64b3a1242c67ffcfbcc7b451d5159cd48b380"
+      },
+      {
+        "file": "proposed-commit-messages.md",
+        "bytes": 3294,
+        "sha256": "7758e8763cfb587644d27cd7704d0a30e80d2ac304fc60030e5ad2d7b1b6a5d3"
+      },
+      {
+        "file": "series",
+        "bytes": 193,
+        "sha256": "db71116d7a68e3319f7fe0a220a17327c3bbb116c98253d29bdc28d688930d4f"
+      }
+    ]
+  },
+  "previous_manifest_sha256": "82f760a39c06af8fdcad0ae6488038be26616aadd78bc2ef19a83a7a96e16d25",
+  "evidence_inputs": [
+    {
+      "file": "work/story005-native-edge-execution002/closeout-receipt.json",
+      "sha256": "769e21caee3073b04ccbaca3a3368f191c85810772f3fa4704782a0b8c78a4bc"
+    },
+    {
+      "file": "work/story005-native-edge-execution002/handoff.json",
+      "sha256": "f1fbc25cc7302feccb90e8276e8f03649b495b0230b3da05b14ee4b16edf3e4f"
+    }
+  ],
+  "source_and_protected_artifacts": "59 source files, four source patches and two original PNG copies unchanged; revision10 source tree retained.",
+  "native_scope": "Ordinary control preservation qualified in the combined recorded scope, including later custom click/drag, continued playback and Escape/main reparent. Earlier four-surface visible hover remains qualified. Immediate main RC and detached projection assertions are invalid or uncalibrated, not demonstrated regressions. Precise detached drag/held-state has no fresh proof. Actual VoiceOver activation/navigation unavailable; OFF restored.",
+  "readiness": "MATERIAL HOLD: candidate shutdown SIGSEGV unresolved; 133.332 ms candidate screen PTS gap disclosed without causal or uninterrupted-video claim; remaining reader/native checks and final review open.",
+  "conservative_storage_peak_bytes": 18646792
+}

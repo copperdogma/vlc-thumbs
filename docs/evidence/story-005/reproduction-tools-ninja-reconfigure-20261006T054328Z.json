@@ -1,0 +1,18 @@
+{
+  "stage": "tools-ninja-reconfigure",
+  "command": [
+    "bash",
+    "-c",
+    "export SDKROOT=$(xcrun --sdk macosx --show-sdk-path); export CMAKE_APPLE_SILICON_PROCESSOR=arm64; cmake -S work/upstream/vlc-master-story005-reproduction/extras/tools/ninja -B work/upstream/vlc-master-story005-reproduction/extras/tools/ninja/vlc_build -DCMAKE_INSTALL_PREFIX=\"$PWD/work/upstream/vlc-master-story005-reproduction/extras/tools/build\" -DBUILD_TESTING=OFF -DCMAKE_OSX_ARCHITECTURES=arm64 -DCMAKE_APPLE_SILICON_PROCESSOR=arm64"
+  ],
+  "cwd": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs",
+  "initial_free_bytes": 23536291840,
+  "floor_bytes": 1073741824,
+  "time_limit_seconds": 120,
+  "status": "succeeded",
+  "pid": 74552,
+  "elapsed_seconds": 4.0,
+  "minimum_free_bytes": 23534190592,
+  "exit_code": 0,
+  "final_free_bytes": 23535583232
+}

@@ -1,0 +1,32 @@
+{
+  "archive": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-reproduction/vlc-4.0.0-dev.tar.xz",
+  "scope": "same-directory/relative quoted headers included by archived source; not full conditional dependency proof",
+  "missing_headers": {
+    "modules/audio_output/apple/avaudiosession_common.h": [
+      "modules/audio_output/apple/audiounit_ios.m",
+      "modules/audio_output/apple/avaudiosession_common.m",
+      "modules/audio_output/apple/avsamplebuffer.m"
+    ],
+    "modules/audio_output/apple/channel_layout.h": [
+      "modules/audio_output/apple/avsamplebuffer.m",
+      "modules/audio_output/apple/channel_layout.c",
+      "modules/audio_output/apple/coreaudio_common.c"
+    ],
+    "modules/misc/medialibrary/LazyPreparser.h": [
+      "modules/misc/medialibrary/fs/fs.h",
+      "modules/misc/medialibrary/medialibrary.h"
+    ],
+    "modules/video_output/apple/VLCDrawable.h": [
+      "modules/video_output/apple/VLCPictureInPictureController.m",
+      "modules/video_output/apple/VLCSampleBufferDisplay.m"
+    ],
+    "modules/video_output/apple/vlc_pip_controller.h": [
+      "modules/video_output/apple/VLCPictureInPictureController.m",
+      "modules/video_output/apple/VLCSampleBufferDisplay.m"
+    ],
+    "modules/video_output/win32/sensors.h": [
+      "modules/video_output/win32/events.c",
+      "modules/video_output/win32/sensors.cpp"
+    ]
+  }
+}

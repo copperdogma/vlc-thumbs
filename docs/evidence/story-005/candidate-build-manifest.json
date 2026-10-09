@@ -1,0 +1,58 @@
+{
+  "source_pin": "2e358f3098c2f2b7621d1dc568de8b61ad786322",
+  "source_diff_sha256": "7fbe053beb59309761a487777886acae9c7bd77b44ef5b8576ceed58ec9f5a74",
+  "candidate_product_inputs": {
+    "src/posix/process.c": "2f777b8c4930bd11187491921a6f2b56061bb2de058528fe861a88f08192e501",
+    "include/vlc_process.h": "56c0262e33d3129444597650de71c9b74b496e2d23b8bae0535ad0b31df2bbbb",
+    "test/Makefile.am": "1f856406c9e31880556d9267b427ec283b3eb583c2a4a51ff55f5ad77bd3b30a",
+    "test/src/meson.build": "0bac81b330dbf284eb7f42f8490d1d44005c6dc1bffed25ac305151c545fd500",
+    "test/src/misc/process.c": "a2ac9ae837852c970ce58621a456130c33bbeb8a0a4d3d7567e24923a2679daf"
+  },
+  "product_inputs_unchanged_since_build": true,
+  "app": "work/story005-master-candidate/VLC.app",
+  "version": "VLC version 4.0.0-dev Otto Chriek (2e358f3)\nCompiled by cam on mac.lan (Oct  5 2026 20:30:24)\nCompiler: Apple clang version 21.0.0 (clang-2100.3.34.2)\nThis program comes with NO WARRANTY, to the extent permitted by law.\nYou may redistribute it under the terms of the GNU General Public License;\nsee the file named COPYING for details.\nWritten by the VideoLAN team; see the AUTHORS file.\n",
+  "outputs": {
+    "Contents/MacOS/VLC": {
+      "bytes": 56512,
+      "sha256": "3d88791dc9e7b3b6085f4a9d7c8555eb77e085accea1ff8d84f782a0fed7b605"
+    },
+    "Contents/Info.plist": {
+      "bytes": 14593,
+      "sha256": "e4317d0774cc2609b1b922698504f122fe7f2b3c24365202bd7c23d947f0bb23"
+    },
+    "Contents/Frameworks/libvlccore.9.dylib": {
+      "bytes": 2729488,
+      "sha256": "28fa8e3668c18f1d3cae72eac81ef3e40b219144a96fc7525f5b6feac587d2d8"
+    },
+    "Contents/Frameworks/libvlc.12.dylib": {
+      "bytes": 240000,
+      "sha256": "a2fe0a3ed4f596f94717e505031452bccc574a297553e295197b9edb4db8c76b"
+    },
+    "Contents/Frameworks/plugins/libavcodec_plugin.dylib": {
+      "bytes": 19319328,
+      "sha256": "aa42b3ad0386c6ac293f48590d2061c54457074019eabb72e66d27005be01e63"
+    },
+    "Contents/Frameworks/plugins/libmp4_plugin.dylib": {
+      "bytes": 318960,
+      "sha256": "78f2a6751c8d7295dc425d4c5a3899d459d918feaa0cfcb476c471bc75cb369f"
+    },
+    "Contents/Frameworks/plugins/libncurses_plugin.dylib": {
+      "bytes": 410848,
+      "sha256": "517e8b2b0aa03c9d04879a139c4bca6afa5a019cb129ee9bd8d194fe02b2a842"
+    },
+    "Contents/Frameworks/plugins/plugins.dat": {
+      "bytes": 291372,
+      "sha256": "1844bc03f9b46f4d500a7ad7821e88f7acac397a3ca46af471186c7ccb6c33a7"
+    }
+  },
+  "dynamic_linkage_checked_files": 395,
+  "nonportable_dynamic_linkage": [],
+  "linkage_receipt": "work/story005-scout/candidate-app-linkage.txt",
+  "build_receipt": "docs/evidence/story-005/candidate-build-20261006T022828Z.json",
+  "check_compile_receipt": "docs/evidence/story-005/candidate-build-20261006T023446Z.json",
+  "xctest_receipt": "docs/evidence/story-005/candidate-build-20261006T023542Z.json",
+  "registered_process_receipt": "docs/evidence/story-005/process-candidate-registered-20261006T023110Z.json",
+  "qualification": "Independent arm64 app/core build and registered regression; native GUI proof, Intel/older OS, Meson execution and public binary compliance separate.",
+  "xctest_executed": 253,
+  "xctest_failures": 0
+}

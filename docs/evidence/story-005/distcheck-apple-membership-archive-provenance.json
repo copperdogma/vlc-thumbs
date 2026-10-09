@@ -1,0 +1,9 @@
+{
+  "archive": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/distcheck-apple-membership-vlc-4.0.0-dev.tar.xz",
+  "bytes": 30155072,
+  "sha256": "dde0c5c5490265d99f7b0f27af4ae1d6fa815a109f2522a0818fd78b04b16978",
+  "failed_run": "reproduction-distcheck-20261006T072024Z.json",
+  "apple_membership": "All4 existing Apple header bytes verified",
+  "failure": "Selected medialibrary source includes absent LazyPreparser.h",
+  "preservation": "APFS clone, hash equality verified"
+}

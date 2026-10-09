@@ -1,0 +1,18 @@
+{
+  "utc": "20261006T064514Z",
+  "previous_tree": "02772c6469196f2de3476c5f57bb7cd0526e904a",
+  "final_tree": "1a567b8705d3f744afc2b873458a5e8af02f7a7b",
+  "matched_source_files": 56,
+  "public_manifest_sha256": "01f6f913137ea79e5a79165cc1b04289275ad5115eb0dccb776d79ed1906cf82",
+  "changed_source_paths": [
+    "modules/gui/macosx/tests/VLCThumbnailServiceTest.m"
+  ],
+  "delta_sha256": "8edc33e356d28c738d765e263209858e14b0016a37e0612c534c3272458bcad9",
+  "temporary_index": "work/story005-scout/public-revision6-index-20261006T064514Z",
+  "cached_apply_logs": [
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/patches/vlc-master/feature-series/0001-contrib-matroska-identity-and-admission.patch:10: trailing whitespace.\n \n/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/patches/vlc-master/feature-series/0001-contrib-matroska-identity-and-admission.patch:18: trailing whitespace.\n \n/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/patches/vlc-master/feature-series/0001-contrib-matroska-identity-and-admission.patch:27: trailing whitespace.\n \n/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/patches/vlc-master/feature-series/0001-contrib-matroska-identity-and-admission.patch:32: trailing whitespace.\n \n/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/patches/vlc-master/feature-series/0001-contrib-matroska-identity-and-admission.patch:75: trailing whitespace.\n \nwarning: squelched 8 whitespace errors\nwarning: 13 lines add whitespace errors.\n",
+    "",
+    ""
+  ],
+  "scope": "Final tree derived solely from exact publicseries applied to pinnedbase in own temporaryindex, then exact test-only delta applied to existing independent source. No production rewrite/rebuild, no reused external mutable objects."
+}

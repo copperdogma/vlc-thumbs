@@ -1,0 +1,19 @@
+{
+  "stage": "smoke",
+  "command": [
+    "/bin/bash",
+    "work/story005-scout/reproduction-distcheck-gnu-sed-vlcpath-frozen.sh",
+    "--preflight"
+  ],
+  "cwd": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs",
+  "initial_free_bytes": 9255964672,
+  "stage_preflight_gib": 1.5,
+  "floor_bytes": 1073741824,
+  "time_limit_seconds": 60,
+  "status": "succeeded",
+  "pid": 52818,
+  "elapsed_seconds": 2.0,
+  "minimum_free_bytes": 9255956480,
+  "exit_code": 0,
+  "final_free_bytes": 8974168064
+}

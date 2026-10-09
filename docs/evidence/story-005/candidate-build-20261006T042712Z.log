@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/feature-packaged-helper-smoke.py", line 20, in <module>
+    assert newline and reply['ok'] and reply['type'] == 'image'
+                                       ~~~~~^^^^^^^^
+KeyError: 'type'

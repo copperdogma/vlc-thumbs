@@ -1,0 +1,109 @@
+{
+  "probe_source_sha256": "7250c98f562dc890a8f828a2c0dfa22a82e90af2921cdb06de05b1ef6604b3e4",
+  "probe_binary_sha256": "681693622cc4ee9ce14a8dd33c01c028c24396b9506295321395d6fc88fc4c80",
+  "candidate_core_sha256": "d9901cfb98f17ec4eff691aac484fa98867460d9864a0b1cab997c9d7ae61c43",
+  "candidate_preparser_sha256": "3627f0ee12674a61cadfecec890e4e5d11a2b95fcd01aec082aa05f11e0154ef",
+  "env": {
+    "DYLD_LIBRARY_PATH": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/src/.libs:/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/lib/.libs",
+    "VLC_LIB_PATH": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/modules",
+    "VLC_PLUGIN_PATH": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/modules/.libs"
+  },
+  "commands": [
+    {
+      "command": [
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-orientation-normalize-diagnostic/preparser-normalize-probe",
+        "internal",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-fixtures/rotation.mp4",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-orientation-normalize-diagnostic/rotation-internal",
+        "4125000",
+        "3",
+        "precise"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-orientation-normalize-diagnostic/preparser-normalize-probe",
+        "external",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-fixtures/rotation.mp4",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-orientation-normalize-diagnostic/rotation-external",
+        "4125000",
+        "3",
+        "precise"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "source_sha256": "3d0b1c8cd478b3760a4e5cfff48d7f94607543922dcf10ffa0ab1068259159fd",
+  "binary_sha256": "220b67f888e70fd9df55e1609d127eab49c2593930e79916da0b4518894d7193",
+  "scope": "Ignored standalone caller uses native image_Convert before export; product source unchanged",
+  "candidate_core_observed_sha256": "d9901cfb98f17ec4eff691aac484fa98867460d9864a0b1cab997c9d7ae61c43",
+  "candidate_core_source_picture_sha256": "b8bf7b22839f514880c4df4dd783849b0287b3dbbe15d93dc9e757b401f582a5",
+  "timestamp_utc": "2026-10-06T02:48:44.309693+00:00",
+  "pixel_results": [
+    {
+      "file": "work/story005-orientation-normalize-diagnostic/rotation-external-000.rgba",
+      "sha256": "6b11ec391679eaca56213ee42b97d0b652db19b6b2e64982eeefd4389760e810",
+      "bytes": 72720,
+      "rgb_mae": {
+        "display-fit-display-reference.rgba": 12.153538687202053,
+        "display-fit-unrotated-reference.rgba": 128.92022368903557,
+        "rotation-correct-reference.rgba": 12.153538687202053
+      }
+    },
+    {
+      "file": "work/story005-orientation-normalize-diagnostic/rotation-external-001.rgba",
+      "sha256": "6b11ec391679eaca56213ee42b97d0b652db19b6b2e64982eeefd4389760e810",
+      "bytes": 72720,
+      "rgb_mae": {
+        "display-fit-display-reference.rgba": 12.153538687202053,
+        "display-fit-unrotated-reference.rgba": 128.92022368903557,
+        "rotation-correct-reference.rgba": 12.153538687202053
+      }
+    },
+    {
+      "file": "work/story005-orientation-normalize-diagnostic/rotation-external-002.rgba",
+      "sha256": "6b11ec391679eaca56213ee42b97d0b652db19b6b2e64982eeefd4389760e810",
+      "bytes": 72720,
+      "rgb_mae": {
+        "display-fit-display-reference.rgba": 12.153538687202053,
+        "display-fit-unrotated-reference.rgba": 128.92022368903557,
+        "rotation-correct-reference.rgba": 12.153538687202053
+      }
+    },
+    {
+      "file": "work/story005-orientation-normalize-diagnostic/rotation-internal-000.rgba",
+      "sha256": "6b11ec391679eaca56213ee42b97d0b652db19b6b2e64982eeefd4389760e810",
+      "bytes": 72720,
+      "rgb_mae": {
+        "display-fit-display-reference.rgba": 12.153538687202053,
+        "display-fit-unrotated-reference.rgba": 128.92022368903557,
+        "rotation-correct-reference.rgba": 12.153538687202053
+      }
+    },
+    {
+      "file": "work/story005-orientation-normalize-diagnostic/rotation-internal-001.rgba",
+      "sha256": "6b11ec391679eaca56213ee42b97d0b652db19b6b2e64982eeefd4389760e810",
+      "bytes": 72720,
+      "rgb_mae": {
+        "display-fit-display-reference.rgba": 12.153538687202053,
+        "display-fit-unrotated-reference.rgba": 128.92022368903557,
+        "rotation-correct-reference.rgba": 12.153538687202053
+      }
+    },
+    {
+      "file": "work/story005-orientation-normalize-diagnostic/rotation-internal-002.rgba",
+      "sha256": "6b11ec391679eaca56213ee42b97d0b652db19b6b2e64982eeefd4389760e810",
+      "bytes": 72720,
+      "rgb_mae": {
+        "display-fit-display-reference.rgba": 12.153538687202053,
+        "display-fit-unrotated-reference.rgba": 128.92022368903557,
+        "rotation-correct-reference.rgba": 12.153538687202053
+      }
+    }
+  ],
+  "dyld_runtime_proof": {
+    "internal": "work/story005-orientation-normalize-diagnostic/internal.stderr.log",
+    "external": "work/story005-orientation-normalize-diagnostic/external.stderr.log"
+  }
+}

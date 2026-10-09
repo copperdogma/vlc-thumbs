@@ -1,0 +1,18 @@
+{
+  "stage": "service-faults",
+  "command": [
+    "bash",
+    "-c",
+    "export SDKROOT=$(xcrun --sdk macosx --show-sdk-path); make -C work/story005-master-candidate/modules -j4 check-timeline-service-faults"
+  ],
+  "cwd": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs",
+  "initial_free_bytes": 21944340480,
+  "floor_bytes": 1073741824,
+  "time_limit_seconds": 90,
+  "status": "failed",
+  "pid": 48998,
+  "elapsed_seconds": 4.0,
+  "minimum_free_bytes": 21943926784,
+  "exit_code": 2,
+  "final_free_bytes": 21940752384
+}

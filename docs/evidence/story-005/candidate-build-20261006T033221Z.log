@@ -1,0 +1,40 @@
+/Applications/Xcode.app/Contents/Developer/usr/bin/make  all-am
+  CC       libvlc_la-audio.lo
+  CC       libvlc_la-video.lo
+  CC       libvlc_la-media.lo
+  CC       libvlc_la-media_track.lo
+  CC       libvlc_la-media_player.lo
+  CC       libvlc_la-media_list.lo
+  CC       libvlc_la-media_list_player.lo
+  CC       libvlc_la-media_discoverer.lo
+  CC       libvlc_la-parser.lo
+  GEN      libvlc.pc
+  CCLD     libvlc.la
+ld: warning: double slash removed from -dylib_install_name (//lib/libvlc.12.dylib)
+config.status: creating lib/libvlc.pc
+  CC       preparser/vlc_preparser_static-cmdline.o
+  CC       preparser/vlc_preparser_static-main.o
+  CCLD     vlc-preparser-static
+clang: warning: argument unused during compilation: '-fcx-limited-range' [-Wunused-command-line-argument]
+  CC       codec/avcodec/libavcodec_plugin_la-video.lo
+  CC       codec/avcodec/libavcodec_plugin_la-subtitle.lo
+  CC       codec/avcodec/libavcodec_plugin_la-audio.lo
+  CC       codec/avcodec/libavcodec_plugin_la-va.lo
+  CC       codec/avcodec/libavcodec_plugin_la-avcodec.lo
+  CC       codec/avcodec/libavcodec_plugin_la-encoder.lo
+  CC       demux/avformat/libavcodec_plugin_la-demux.lo
+  CC       access/libavcodec_plugin_la-avio.lo
+  CC       packetizer/libavcodec_plugin_la-avparser.lo
+  CC       demux/avformat/libavcodec_plugin_la-mux.lo
+  CC       codec/avcodec/libavcodec_common_la-fourcc.lo
+  CC       codec/avcodec/libavcodec_common_la-chroma.lo
+  CC       video_chroma/libswscale_plugin_la-swscale.lo
+  CC       codec/avcodec/libswscale_plugin_la-chroma.lo
+  CC       misc/preparser_serializer/json/libpreparserserializer_json_plugin_la-serializer.lo
+  CC       misc/preparser_serializer/json/libpreparserserializer_json_plugin_la-fromjson.lo
+  CC       misc/preparser_serializer/json/libpreparserserializer_json_plugin_la-tojson.lo
+  CCLD     libvlc_json.la
+  CCLD     libavcodec_common.la
+  CCLD     libswscale_plugin.la
+  CCLD     libavcodec_plugin.la
+  CCLD     libpreparserserializer_json_plugin.la

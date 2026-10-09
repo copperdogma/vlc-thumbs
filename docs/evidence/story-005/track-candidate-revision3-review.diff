@@ -1,0 +1,51 @@
+--- a/modules/misc/preparser_serializer/json/fromjson.c
++++ b/modules/misc/preparser_serializer/json/fromjson.c
+@@ -1311,7 +1311,7 @@
+ 
+     json_object_to_enum(obj, "format", &out->format, &err,
+                         VLC_THUMBNAILER_FORMAT_PNG,
+-                        VLC_THUMBNAILER_FORMAT_JPEG);
++                        VLC_THUMBNAILER_FORMAT_ARGB);
+     json_object_to_int(obj, "width", &out->width, &err);
+     json_object_to_int(obj, "height", &out->height, &err);
+     json_object_to_boolean(obj, "crop", &out->crop, &err);
+--- a/test/src/preparser/thumbnail.c
++++ b/test/src/preparser/thumbnail.c
+@@ -440,6 +440,37 @@
+         }
+         vlc_preparser_msg_Clean(&req);
+     }
++
++    /* Raw formats are public output kinds and must survive external transport.
++     * Exercise both range boundaries and reject values outside the schema. */
++    static const int formats[] = {
++        VLC_THUMBNAILER_FORMAT_PNG, VLC_THUMBNAILER_FORMAT_RGBA,
++        VLC_THUMBNAILER_FORMAT_ARGB, VLC_THUMBNAILER_FORMAT_PNG - 1,
++        VLC_THUMBNAILER_FORMAT_ARGB + 1,
++    };
++    for (size_t i = 0; i < ARRAY_SIZE(formats); ++i) {
++        struct vlc_preparser_msg req, copy;
++        vlc_preparser_msg_Init(&req, VLC_PREPARSER_MSG_TYPE_REQ,
++                               VLC_PREPARSER_MSG_REQ_TYPE_THUMBNAIL_TO_FILES);
++        req.req.uri = strdup("mock://video_track_count=2");
++        assert(req.req.uri != NULL);
++        struct vlc_thumbnailer_output out = {
++            .format = formats[i], .file_path = "/tmp/transport-only.rgba",
++            .creat_mode = 0600,
++        };
++        assert(vlc_vector_push(&req.req.outputs, out));
++        int ret = track_roundtrip(obj, &req, &copy, 0);
++        if (i < 3) {
++            assert(ret == VLC_SUCCESS);
++            assert(copy.req.outputs.size == 1);
++            assert(copy.req.outputs.data[0].format == formats[i]);
++        } else {
++            assert(ret != VLC_SUCCESS);
++            assert(copy.req.outputs.size == 0 && copy.req.outputs_path.size == 0);
++        }
++        vlc_preparser_msg_Clean(&copy);
++        vlc_preparser_msg_Clean(&req);
++    }
+ }
+ 
+ int main( void )

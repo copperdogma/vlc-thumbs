@@ -1,0 +1,23 @@
+ cd /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-candidate/extras/package/macosx/../../.. && /bin/sh /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-candidate/autotools/missing automake-1.18 --foreign modules/Makefile
+ cd .. && /bin/sh ./config.status modules/Makefile depfiles
+config.status: creating modules/Makefile
+config.status: executing depfiles commands
+  OBJC     gui/macosx/tests/VLCMacOSXTests-VLCThumbnailCacheTest.o
+  OBJC     gui/macosx/timeline/VLCMacOSXTests-VLCTimelinePlayerContextTest.o
+  OBJC     gui/macosx/timeline/VLCMacOSXTests-VLCTimelineContext.o
+  OBJC     gui/macosx/playqueue/VLCMacOSXTests-VLCPlayerController.o
+  OBJC     gui/macosx/playqueue/VLCMacOSXTests-VLCPlayerTitle.o
+  OBJC     gui/macosx/playqueue/VLCMacOSXTests-VLCPlayerChapter.o
+  GEN      VLCMacOSXTests
+  GEN      VLCMacOSXTests.xctest
+libtool: warning: '../lib/libvlc.la' has not been installed in '//lib'
+libtool: warning: '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/src/libvlccore.la' has not been installed in '//lib'
+libtool: warning: '../src/libvlccore.la' has not been installed in '//lib'
+libtool: install: /usr/local/bin/ginstall -c .libs/VLCMacOSXTests /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/modules/VLCMacOSXTests.xctest/Contents/MacOS/VLCMacOSXTests
+/usr/bin/xcrun xctest -XCTest VLCTimelinePlayerContextTest /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/modules/VLCMacOSXTests.xctest
+Test Suite 'Selected tests' started at 2026-10-05 23:59:47.134.
+Test Suite 'VLCMacOSXTests.xctest' started at 2026-10-05 23:59:47.135.
+Test Suite 'VLCTimelinePlayerContextTest' started at 2026-10-05 23:59:47.135.
+Test Case '-[VLCTimelinePlayerContextTest testSameURIReopenAdvancesRealEpochBeforeMainNotification]' started.
+Assertion failed: (param != NULL), function config_GetInt, file core.c, line 90.
+make: *** [check-timeline-player-context] Abort trap: 6

@@ -1,0 +1,9 @@
+libtool: link: xcrun clang -std=c11 -DHAVE_CONFIG_H -D_GNU_SOURCE -Wall -Wextra -Werror -DTOP_BUILDDIR=\"/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline\" -DTOP_SRCDIR=\"/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-candidate\" -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline -I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-candidate/include work/upstream/vlc-master-story005-candidate/test/src/misc/process.c work/upstream/vlc-master-story005-candidate/src/posix/process.c -o /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-process-candidate-diagnostic/.libs/process-test  /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/src/.libs/libvlccore.dylib -L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/aarch64-apple-darwin19/lib /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/aarch64-apple-darwin19/lib/libiconv.a -lm
+work/upstream/vlc-master-story005-candidate/test/src/misc/process.c:90:5: error: call to undeclared function 'vlc_sem_destroy'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+   90 |     vlc_sem_destroy(&reader.started);
+      |     ^
+work/upstream/vlc-master-story005-candidate/test/src/misc/process.c:90:5: note: did you mean 'vlc_timer_destroy'?
+/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-candidate/include/vlc_threads.h:900:14: note: 'vlc_timer_destroy' declared here
+  900 | VLC_API void vlc_timer_destroy(vlc_timer_t timer);
+      |              ^
+1 error generated.

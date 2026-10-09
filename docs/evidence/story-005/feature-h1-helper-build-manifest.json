@@ -1,0 +1,24 @@
+{
+  "stage": "Normal H1 helper built, basic checks pass; admission/customAVIO qualification pending",
+  "build_receipt": "docs/evidence/story-005/candidate-build-20261006T035359Z.json",
+  "contrib_receipt": "docs/evidence/story-005/feature-h1-contrib-build-manifest.json",
+  "binary": "work/story005-master-candidate/bin/vlc-timeline-preview",
+  "binary_sha256": "b2b5e5d13bf6d3e92f9e23193ec516d86b1f54547783fb5c53ce2fbbf6dadf73",
+  "bytes": 20236808,
+  "dynamic_linkage": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/bin/vlc-timeline-preview:\n\t/System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox (compatibility version 1.0.0, current version 1000.0.0)\n\t/System/Library/Frameworks/VideoToolbox.framework/Versions/A/VideoToolbox (compatibility version 1.0.0, current version 3350.77.5)\n\t/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 5027.0.69)\n\t/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia (compatibility version 1.0.0, current version 3350.77.5)\n\t/System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo (compatibility version 1.2.0, current version 758.27.0)\n\t/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices (compatibility version 1.0.0, current version 1226.0.0)\n\t/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1359.0.0)\n",
+  "build_version": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/bin/vlc-timeline-preview:\nLoad command 10\n      cmd LC_BUILD_VERSION\n  cmdsize 32\n platform MACOS\n    minos 11.0\n      sdk 27.0\n   ntools 1\n     tool LD\n  version 27037.1\n",
+  "source_hashes": {
+    "bin/timeline-preview/timeline-preview.c": "61fa2c51d2dd62a0bd7ea7d5b07744a166725a6dac0e5eb0fb6292bf4b604e0f",
+    "bin/timeline-preview/PROTOCOL.md": "30063a4f71a945238d5e34515514f2fdf35355f436c7bf5ffaaff53fcbb5e708",
+    "bin/timeline-preview/test.py": "dd42b041891b84e347fb6253259f6c2bb4a7781d91398e98546d16d9f4ce1414",
+    "bin/timeline-preview/Makefile.am": "fbbde90a867bc0e585097d5633802b750810a0cb4008055e28193ceb691b7264",
+    "configure.ac": "9dd8d65a1a272dcf919b85bc6ed5c3180ff48fba7ccfa339096777aae74c974d",
+    "contrib/src/ffmpeg/rules.mak": "c3f3f5c5b54e93de3b3a954431809edc7a965691f1f7a411b56e941b83421028",
+    "contrib/src/ffmpeg/matroska-flat-timeline.patch": "abd605f770de85f739929c5d333bd45e8d35075b2b69720cfaecbdc0d278450e"
+  },
+  "basic_checks": {
+    "count": 13,
+    "pass": true
+  },
+  "scope": "No native interaction, oldOS/Intel, fullpackage or H1behavior qualification claimed."
+}

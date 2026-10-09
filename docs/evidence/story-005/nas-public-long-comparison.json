@@ -1,0 +1,69 @@
+{
+  "timestamp_utc": "2026-10-06T05:43:40Z",
+  "public_fixture_sha256": "a2f2d8f8b0432c84c33c6cd3d2fa81777a9c8c5911d851be8d116bbf92d5a26a",
+  "public_fixture_manifest_sha256": "4713dabb6676b09e0d1bd062c29d5a8323a98857019c3612e98ab9bf257a8cc3",
+  "helper_hashes": {
+    "prior": "6d90de5bded764f4471d7c70db86fe62da1df72685493d7e93720ab418880483",
+    "current": "b2b5e5d13bf6d3e92f9e23193ec516d86b1f54547783fb5c53ce2fbbf6dadf73"
+  },
+  "rows": 12,
+  "requests": 36,
+  "matched_pixel_actualtime_replies": 18,
+  "complete": true,
+  "minimum_free_bytes": 26772115456,
+  "nas_preserved": true,
+  "owned_process_group_members_after": [],
+  "raw_results_sha256": "5f34eb104e0f5cb37205e9e84da21deebf1c4d8da47130fb674f2bae4e6c91b7",
+  "readiness_ms": {
+    "local": {
+      "prior": [
+        19.27,
+        7.293,
+        7.421
+      ],
+      "current": [
+        19.121,
+        8.09,
+        9.782
+      ]
+    },
+    "NAS": {
+      "prior": [
+        26.519,
+        37.092,
+        19.854
+      ],
+      "current": [
+        37.264,
+        19.696,
+        46.349
+      ]
+    }
+  },
+  "ready_current": {
+    "version": 4,
+    "type": "ready",
+    "ok": true,
+    "duration_us": 300000000,
+    "bytes_read": 187393,
+    "read_calls": 304,
+    "seek_calls": 304,
+    "open_count": 1,
+    "operation_us": 2960,
+    "video_input_id": 1,
+    "video_count": 1,
+    "mapping": "matroska-track-number-flat-v1",
+    "video_track_number": 1,
+    "flat_scan_bytes": 154625,
+    "flat_scan_reads": 303,
+    "flat_scan_seeks": 304,
+    "flat_scan_nodes": 312,
+    "pixel_sha256": null
+  },
+  "all_open_count_one": true,
+  "request_ms_range": [
+    3.757624996069353,
+    8.124749998387415
+  ],
+  "scope": "Warm descriptive3pairs; local/NASfiles copied and hashed before measurement; no cacheflush/coldNAS/p95/nativeUIproof. Sharedhostbuildworkuncontrolled; no ownedGUI active."
+}

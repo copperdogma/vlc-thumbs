@@ -1,0 +1,76 @@
+diff --git a/modules/audio_output/Makefile.am b/modules/audio_output/Makefile.am
+index 291c409..962cef9 100644
+--- a/modules/audio_output/Makefile.am
++++ b/modules/audio_output/Makefile.am
+@@ -148,18 +148,22 @@ aout_PLUGINS += libwaveout_plugin.la
+ endif
+ 
+ libavsamplebuffer_plugin_la_SOURCES = audio_output/apple/avsamplebuffer.m \
+-	audio_output/apple/channel_layout.c
++	audio_output/apple/channel_layout.c audio_output/apple/channel_layout.h
+ if HAVE_IOS
+-libavsamplebuffer_plugin_la_SOURCES += audio_output/apple/avaudiosession_common.m
++libavsamplebuffer_plugin_la_SOURCES += audio_output/apple/avaudiosession_common.m \
++	audio_output/apple/avaudiosession_common.h
+ endif
+ if HAVE_TVOS
+-libavsamplebuffer_plugin_la_SOURCES += audio_output/apple/avaudiosession_common.m
++libavsamplebuffer_plugin_la_SOURCES += audio_output/apple/avaudiosession_common.m \
++	audio_output/apple/avaudiosession_common.h
+ endif
+ if HAVE_XROS
+-libavsamplebuffer_plugin_la_SOURCES += audio_output/apple/avaudiosession_common.m
++libavsamplebuffer_plugin_la_SOURCES += audio_output/apple/avaudiosession_common.m \
++	audio_output/apple/avaudiosession_common.h
+ endif
+ if HAVE_WATCHOS
+-libavsamplebuffer_plugin_la_SOURCES += audio_output/apple/avaudiosession_common.m
++libavsamplebuffer_plugin_la_SOURCES += audio_output/apple/avaudiosession_common.m \
++	audio_output/apple/avaudiosession_common.h
+ endif
+ libavsamplebuffer_plugin_la_LDFLAGS = $(AM_LDFLAGS) \
+ 	-Wl,-framework,CoreMedia,-framework,Foundation,-framework,AVFoundation
+@@ -167,7 +171,7 @@ libavsamplebuffer_plugin_la_OBJCFLAGS = $(AM_OBJCFLAGS) -fobjc-arc
+ 
+ libauhal_plugin_la_SOURCES = audio_output/apple/auhal.c \
+ 	audio_output/apple/coreaudio_common.c audio_output/apple/coreaudio_common.h \
+-	audio_output/apple/channel_layout.c
++	audio_output/apple/channel_layout.c audio_output/apple/channel_layout.h
+ 
+ libauhal_plugin_la_LDFLAGS = $(AM_LDFLAGS) $(aout_RPATH) \
+ 	-Wl,-framework,CoreAudio,-framework,AudioUnit,-framework,AudioToolbox,-framework,CoreServices
+@@ -176,7 +180,8 @@ aout_PLUGINS += libauhal_plugin.la libavsamplebuffer_plugin.la
+ endif
+ libaudiounit_ios_plugin_la_SOURCES = audio_output/apple/audiounit_ios.m \
+ 	audio_output/apple/coreaudio_common.c audio_output/apple/coreaudio_common.h \
+-	audio_output/apple/channel_layout.c audio_output/apple/avaudiosession_common.m
++	audio_output/apple/channel_layout.c audio_output/apple/channel_layout.h \
++	audio_output/apple/avaudiosession_common.m audio_output/apple/avaudiosession_common.h
+ libaudiounit_ios_plugin_la_LDFLAGS = $(AM_LDFLAGS) $(aout_RPATH) \
+ 	-Wl,-framework,Foundation,-framework,CoreAudio,-framework,AudioToolbox,-framework,UIKit,-framework,AVFoundation
+ if HAVE_IOS_OR_TVOS
+diff --git a/modules/video_output/Makefile.am b/modules/video_output/Makefile.am
+index 4488d6b..f274a87 100644
+--- a/modules/video_output/Makefile.am
++++ b/modules/video_output/Makefile.am
+@@ -90,7 +90,9 @@ endif
+ 
+ if HAVE_DARWIN
+ if !HAVE_WATCHOS
+-libsamplebufferdisplay_plugin_la_SOURCES = video_output/apple/VLCSampleBufferDisplay.m codec/vt_utils.c codec/vt_utils.h
++libsamplebufferdisplay_plugin_la_SOURCES = video_output/apple/VLCSampleBufferDisplay.m \
++	video_output/apple/VLCDrawable.h video_output/apple/vlc_pip_controller.h \
++	codec/vt_utils.c codec/vt_utils.h
+ libsamplebufferdisplay_plugin_la_OBJCFLAGS = $(AM_OBJCFLAGS) -fobjc-arc
+ if HAVE_OSX
+ libsamplebufferdisplay_plugin_la_LDFLAGS = $(AM_LDFLAGS) $(vout_RPATH) \
+@@ -104,7 +106,8 @@ endif
+ endif
+ 
+ if HAVE_IOS_OR_TVOS
+-libpictureinpicturecontroller_plugin_la_SOURCES = video_output/apple/VLCPictureInPictureController.m
++libpictureinpicturecontroller_plugin_la_SOURCES = video_output/apple/VLCPictureInPictureController.m \
++	video_output/apple/VLCDrawable.h video_output/apple/vlc_pip_controller.h
+ libpictureinpicturecontroller_plugin_la_OBJCFLAGS = $(AM_OBJCFLAGS) -fobjc-arc
+ libpictureinpicturecontroller_plugin_la_LDFLAGS = $(AM_LDFLAGS) $(vout_RPATH) \
+ 	-Wl,-framework,AVFoundation,-framework,Foundation,-framework,AVKit,-framework,UIKit,-framework,QuartzCore,-framework,CoreMedia

@@ -1,0 +1,19 @@
+{
+  "stage": "cachegen",
+  "command": [
+    "bash",
+    "-c",
+    "export DYLD_FRAMEWORK_PATH=\"$PWD/work/story005-master-candidate/contrib/aarch64-apple-darwin19/Frameworks\"; export DYLD_LIBRARY_PATH=\"$PWD/work/story005-master-candidate/src/.libs:$PWD/work/story005-master-candidate/lib/.libs\"; work/story005-master-candidate/bin/.libs/vlc-cache-gen \"$PWD/work/story005-master-candidate/modules\"; strings -a work/story005-master-candidate/modules/plugins.dat | rg macosx-control-itunes"
+  ],
+  "cwd": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs",
+  "initial_free_bytes": 5071069184,
+  "stage_preflight_gib": 1.5,
+  "floor_bytes": 1073741824,
+  "time_limit_seconds": 120,
+  "status": "succeeded",
+  "pid": 97594,
+  "elapsed_seconds": 4.0,
+  "minimum_free_bytes": 5052690432,
+  "exit_code": 0,
+  "final_free_bytes": 5051473920
+}

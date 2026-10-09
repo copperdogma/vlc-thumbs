@@ -1,0 +1,75 @@
+{
+  "scope": "Unchanged master native baseline wrapper setup; actual UI proof blocked",
+  "source_pin": "2e358f3098c2f2b7621d1dc568de8b61ad786322",
+  "original_manifest_checks": {
+    "Contents/MacOS/VLC": {
+      "expected": "ef15c7ca6ba1a6bb5af9c5f36a9976f81b6f4d6f1677b64ac108dccc46b7148f",
+      "actual": "ef15c7ca6ba1a6bb5af9c5f36a9976f81b6f4d6f1677b64ac108dccc46b7148f",
+      "unchanged": true
+    },
+    "Contents/Info.plist": {
+      "expected": "e4317d0774cc2609b1b922698504f122fe7f2b3c24365202bd7c23d947f0bb23",
+      "actual": "e4317d0774cc2609b1b922698504f122fe7f2b3c24365202bd7c23d947f0bb23",
+      "unchanged": true
+    },
+    "Contents/Frameworks/libvlccore.9.dylib": {
+      "expected": "6306df4a270eef77bf0cb346bdc01d773faedaf65f40be2f8b4c0a5ff8ec542e",
+      "actual": "6306df4a270eef77bf0cb346bdc01d773faedaf65f40be2f8b4c0a5ff8ec542e",
+      "unchanged": true
+    },
+    "Contents/Frameworks/libvlc.12.dylib": {
+      "expected": "8d78827e86b8f85ba6e5a15f1ecfc8eb6f75f97a684ffece8266d6cb704fcff0",
+      "actual": "8d78827e86b8f85ba6e5a15f1ecfc8eb6f75f97a684ffece8266d6cb704fcff0",
+      "unchanged": true
+    },
+    "Contents/Frameworks/plugins/libavcodec_plugin.dylib": {
+      "expected": "08d354f0d30a3e8b5983a069302142d407cf70df60d642d7c933b05cfacfb56a",
+      "actual": "08d354f0d30a3e8b5983a069302142d407cf70df60d642d7c933b05cfacfb56a",
+      "unchanged": true
+    },
+    "Contents/Frameworks/plugins/libmp4_plugin.dylib": {
+      "expected": "e3e6c93b38481284849489f95988dd3c2c093e4a68567764b3bf1c6af0dae3d8",
+      "actual": "e3e6c93b38481284849489f95988dd3c2c093e4a68567764b3bf1c6af0dae3d8",
+      "unchanged": true
+    },
+    "Contents/Frameworks/plugins/libncurses_plugin.dylib": {
+      "expected": "15ef14e9c4ce6e3cbd5c2aac55f0d7c9710e92e8513d1154f4619932b6844549",
+      "actual": "15ef14e9c4ce6e3cbd5c2aac55f0d7c9710e92e8513d1154f4619932b6844549",
+      "unchanged": true
+    },
+    "Contents/Frameworks/plugins/plugins.dat": {
+      "expected": "530f6307356e93b13682f67242e37f693210d97f245908f0b63c3f94aa5591d8",
+      "actual": "530f6307356e93b13682f67242e37f693210d97f245908f0b63c3f94aa5591d8",
+      "unchanged": true
+    }
+  },
+  "wrapper_bundle_id": "org.videolan.vlc.story005.nativebaseline",
+  "wrapper_changes": [
+    {
+      "path": "Contents/Info.plist",
+      "original_sha256": "e4317d0774cc2609b1b922698504f122fe7f2b3c24365202bd7c23d947f0bb23",
+      "clone_sha256": "da1c93f071a1a4182c6601e83ee614938b99f8d81d41a0818706b1cb2a2bde89"
+    },
+    {
+      "path": "Contents/MacOS/VLC",
+      "original_sha256": "ef15c7ca6ba1a6bb5af9c5f36a9976f81b6f4d6f1677b64ac108dccc46b7148f",
+      "clone_sha256": "6361185f24c89d5833e2b6ae122dbbcd6c0bb8f69645122c77a5d46230741c1a"
+    }
+  ],
+  "signature_verify": 0,
+  "source_edits": false,
+  "fixture_manifest_sha256": "6ce708b4728090bd799adb5ac66048a817b9dc48acff8b7e84bd55d6c5c20aab",
+  "memory_used": "MEMORY.md:114-122 confirmed old native evidence distinct from current proof",
+  "user_preview_pid_alive": true,
+  "native_gui": {
+    "four_surfaces": "not acquired",
+    "pointer_hover": "not acquired",
+    "seek_fade_reparent": "not acquired",
+    "keyboard_accessibility": "not acquired",
+    "VoiceOver": "not attempted",
+    "blocker": "Cua reports Mac locked; automatic unlock failed"
+  },
+  "launch_001": "work/story005-native-baseline/launch-001-session.json",
+  "launch_002": "work/story005-native-baseline/session.json",
+  "free_bytes": 3796865024
+}

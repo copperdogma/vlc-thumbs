@@ -1,0 +1,35 @@
+{
+  "utc": "2026-10-06T06:19:58Z",
+  "pin": "2e358f3098c2f2b7621d1dc568de8b61ad786322",
+  "previous_tree": "dc28a08ab00aa6d4c43b6e5681dfe673cee72a70",
+  "final_tree": "8ec1cdec6939c67eeb6bef0ff1bb035c168d0592",
+  "manifest_sha256": "7f2e091eae0378fdf6caa53e552b98b803538a7243bd177181c6457b0533a2a7",
+  "steps": [
+    {
+      "action": "reverse",
+      "path": "work/story005-scout/reproduction-original-part3.patch",
+      "sha256": "efb963f03f00682cfa2eb530163e658ad59a14ea55d69aa14292956df2f2cf3b",
+      "output": ""
+    },
+    {
+      "action": "reverse",
+      "path": "work/story005-scout/reproduction-original-part2.patch",
+      "sha256": "a936177b071894a9d888d6f3aec9466e0efc8b1e8075912455641e9c06608d59",
+      "output": ""
+    },
+    {
+      "action": "apply",
+      "path": "patches/vlc-master/feature-series/0002-timeline-helper-build-package-and-tests.patch",
+      "sha256": "4ba2d1feab93031a98ffdcdb0b4b8df866e07d2d1fcc0b1f0a725450c243a635",
+      "output": ""
+    },
+    {
+      "action": "apply",
+      "path": "patches/vlc-master/feature-series/0003-macosx-timeline-context-service-and-hover.patch",
+      "sha256": "4912c5e546e870bddcf1532494b74e151f16105785a7ff7b0889925d46c44924",
+      "output": ""
+    }
+  ],
+  "matched_files": 55,
+  "scope": "Exact reverse-only replacement of public part2/part3; no resets or clean; all fresh compiled objects and independent contrib retained."
+}

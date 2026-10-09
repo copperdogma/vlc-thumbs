@@ -1,0 +1,171 @@
+Setting base environment
+Using VLC root dir /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-reproduction, build triplet aarch64-apple-darwin19 and host triplet aarch64-apple-darwin19
+autoconf not found
+automake not found
+m4 incompatible version (expected 1.4.16, got 1.4.6)
+libtool not found
+ant not found
+bison incompatible version (expected 3.0.0, got 2.3)
+nasm not found
+gettext not found
+help2man not found
+meson not found
+ninja missing jobserver support
+To-be-built packages: configguess autoconf automake m4 libtool ant bison nasm gettext meson ninja
+# CONFIGGUESS_URL=https://git.savannah.gnu.org/gitweb/?p=config.git;a=blob_plain;f=config.guess;hb=428664896cf9e92d264976a960c76660938dffce
+# CONFIGSUB_URL=https://git.savannah.gnu.org/gitweb/?p=config.git;a=blob_plain;f=config.sub;hb=428664896cf9e92d264976a960c76660938dffce
+rm -f -R m4 m4-1.4.21  && tar xfo m4-1.4.21.tar.gz 
+rm -f -R libtool libtool-2.6.2  && tar xfo libtool-2.6.2.tar.gz 
+rm -f -R ant apache-ant-1.9.7  && tar xfo apache-ant-1.9.7.tar.bz2 
+rm -f -R nasm nasm-2.16.03  && tar xfo nasm-2.16.03.tar.gz 
+rm -f -R gettext gettext-0.26  && tar xfo gettext-0.26.tar.gz 
+rm -f -R meson meson-1.12.0  && tar xfo meson-1.12.0.tar.gz 
+cp -f /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-reproduction/extras/tools/config.guess-428664896cf9e92d264976a960c76660938dffce config.guess
+Available in the system
+Available in the system
+touch .tar
+Available in the system
+touch .cmake
+touch .pkg-config
+cp -f /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-reproduction/extras/tools/config.sub-428664896cf9e92d264976a960c76660938dffce config.sub
+rm -f -R help2man help2man-1.47.6  && tar xfo help2man-1.47.6.tar.xz 
+rm -f -R bison bison-3.8.2  && tar xfo bison-3.8.2.tar.xz 
+rm -f -R ninja ninja-1.13.2.g7659b.kitware.jobserver-pipe-1  && tar xfo ninja-1.13.2.g7659b.kitware.jobserver-pipe-1.tar.gz 
+# install in a dummy autoconf so that VLC contribs pick it
+install -d           "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-reproduction/extras/tools/build/share/autoconf-vlc/build-aux"
+install config.guess "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-reproduction/extras/tools/build/share/autoconf-vlc/build-aux"
+install config.sub   "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-reproduction/extras/tools/build/share/autoconf-vlc/build-aux"
+touch .buildconfigguess
+touch .configguess
+rm -f -R autoconf autoconf-2.73  && tar xfo autoconf-2.73.tar.gz 
+rm -f -R automake automake-1.18.1  && tar xfo automake-1.18.1.tar.gz 
+mv help2man-1.47.6 help2man && touch help2man
+cd help2man; ./configure --prefix=/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-reproduction/extras/tools/build
+mv ninja-1.13.2.g7659b.kitware.jobserver-pipe-1 ninja && touch ninja
+cmake -S ninja -B ninja/vlc_build -DCMAKE_INSTALL_PREFIX:STRING=/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-reproduction/extras/tools/build -DBUILD_TESTING=OFF
+(cd libtool-2.6.2 && chmod u+w build-aux/ltmain.sh)
+(cd libtool-2.6.2 && patch -p1) < /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-reproduction/extras/tools/libtool-2.4.7-bitcode.patch
+patching file 'build-aux/ltmain.in'
+(cd libtool-2.6.2 && patch -p1) < /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-reproduction/extras/tools/libtool-2.4.7-lpthread.patch
+mv autoconf-2.73 autoconf && touch autoconf
+patching file 'build-aux/ltmain.in'
+patching file 'm4/libtool.m4'
+(cd libtool-2.6.2 && patch -p1) < /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-reproduction/extras/tools/libtool-2.6.2-embed-bitcode.patch
+patching file 'build-aux/ltmain.in'
+patching file 'm4/libtool.m4'
+(cd libtool-2.6.2 && patch -p1) < /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-reproduction/extras/tools/libtool-2.5.4-ltmain.in-reference-MAGIC_EXE-in-the-main.patch
+patching file 'build-aux/ltmain.in'
+(cd libtool-2.6.2 && patch -p1) < /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-reproduction/extras/tools/libtool-2.5.4-libtool.m4-respect-the-provided-LTCFLAGS-LTCC-during.patch
+patching file 'm4/libtool.m4'
+mv libtool-2.6.2 libtool && touch libtool
+mv nasm-2.16.03 nasm && touch nasm
+cd nasm; ./configure --prefix=/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-reproduction/extras/tools/build
+checking for perl... perl
+checking for module Locale::gettext... no
+checking for msgfmt... no
+checking for gcc... /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang
+(cd automake-1.18.1 && patch -p1) < /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-reproduction/extras/tools/automake-disable-documentation.patch
+patching file Makefile.am
+(cd automake-1.18.1 && patch -p1) < /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-reproduction/extras/tools/automake-clang.patch
+patching file 'lib/depcomp'
+patching file 'm4/depend.m4'
+mv automake-1.18.1 automake && touch automake
+mv bison-3.8.2 bison && touch bison
+cd bison; ./configure --prefix=/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-reproduction/extras/tools/build
+checking whether the C compiler works... mv m4-1.4.21 m4 && touch m4
+cd m4; ./configure --prefix=/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-reproduction/extras/tools/build
+no
+configure: error: in `/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-reproduction/extras/tools/help2man':
+configure: error: C compiler cannot create executables
+See `config.log' for more details
+make: *** [.buildhelp2man] Error 77
+make: *** Waiting for unfinished jobs....
+checking build system type... aarch64-apple-darwin27.0.0
+checking host system type... aarch64-apple-darwin27.0.0
+checking for gcc... /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang
+checking whether the C compiler works... no
+configure: error: in `/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-reproduction/extras/tools/nasm':
+configure: error: C compiler cannot create executables
+See `config.log' for more details
+checking for a BSD-compatible install... /usr/local/bin/ginstall -c
+checking whether build environment is sane... make: *** [.buildnasm] Error 77
+yes
+checking for a BSD-compatible install... checking for a race-free mkdir -p... /usr/local/bin/gmkdir -p
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking whether make sets $(MAKE)... /usr/local/bin/ginstall -c
+checking whether sleep supports fractional seconds... yes
+checking filesystem timestamp resolution... yes
+checking whether make supports nested variables... yes
+checking whether make supports nested variables... (cached) yes
+checking for gcc... /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang
+checking whether the C compiler works... no
+configure: error: in `/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-reproduction/extras/tools/bison':
+configure: error: C compiler cannot create executables
+See `config.log' for more details
+-- The CXX compiler identification is AppleClang 21.0.0.21000334
+mv apache-ant-1.9.7 ant && touch ant
+make: *** [.buildbison] Error 77
+mv meson-1.12.0 meson && touch meson
+2
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /usr/local/bin/gmkdir -p
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking xargs -n works... yes
+-- Detecting CXX compiler ABI info
+checking whether UID '501' is supported by ustar format... yes
+checking whether GID '20' is supported by ustar format... yes
+checking how to create a ustar tar archive... gnutar
+checking for gcc... /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang
+checking whether the C compiler works... no
+configure: error: in '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-reproduction/extras/tools/m4':
+configure: error: C compiler cannot create executables
+See 'config.log' for more details
+make: *** [.buildm4] Error 77
+(cd gettext-0.26 && patch -p1) < /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-reproduction/extras/tools/gettext-no-iconv.patch
+patching file 'libtextstyle/lib/iconv-ostream.c'
+mv gettext-0.26 gettext && touch gettext
+-- Detecting CXX compiler ABI info - failed
+-- Check for working CXX compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++
+-- Check for working CXX compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ - broken
+CMake Error at /usr/local/share/cmake/Modules/CMakeTestCXXCompiler.cmake:73 (message):
+  The C++ compiler
+
+    "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++"
+
+  is not able to compile a simple test program.
+
+  It fails with the following output:
+
+    Change Dir: '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-reproduction/extras/tools/ninja/vlc_build/CMakeFiles/CMakeScratch/TryCompile-Wq0L8X'
+    
+    Run Build Command(s): /usr/local/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_9c2be/fast
+    /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_9c2be.dir/build.make CMakeFiles/cmTC_9c2be.dir/build
+    Building CXX object CMakeFiles/cmTC_9c2be.dir/testCXXCompiler.cxx.o
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++   -arch x86_64 -MD -MT CMakeFiles/cmTC_9c2be.dir/testCXXCompiler.cxx.o -MF CMakeFiles/cmTC_9c2be.dir/testCXXCompiler.cxx.o.d -o CMakeFiles/cmTC_9c2be.dir/testCXXCompiler.cxx.o -c /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-reproduction/extras/tools/ninja/vlc_build/CMakeFiles/CMakeScratch/TryCompile-Wq0L8X/testCXXCompiler.cxx
+    Linking CXX executable cmTC_9c2be
+    /usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9c2be.dir/link.txt --verbose=1
+    ld: library 'c++' not found
+    clang++: error: linker command failed with exit code 1 (use -v to see invocation)
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++  -arch x86_64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_9c2be.dir/testCXXCompiler.cxx.o -o cmTC_9c2be
+    make[2]: *** [cmTC_9c2be] Error 1
+    make[1]: *** [cmTC_9c2be/fast] Error 2
+    
+    
+
+
+
+  CMake will not be able to correctly generate this project.
+Call Stack (most recent call first):
+  CMakeLists.txt:9 (project)
+
+
+-- Configuring incomplete, errors occurred!
+make: *** [.buildninja] Error 1

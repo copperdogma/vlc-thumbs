@@ -207,7 +207,7 @@
     {
       "id": "005",
       "title": "Story 005 — Open-source contribution (Story 002b)",
-      "status": "Pending",
+      "status": "In Progress",
       "priority": "High",
       "path": "docs/stories/story-005-open-source-contribution.md",
       "ideal_refs": [
@@ -227,6 +227,7 @@
         "004"
       ],
       "decision_refs": [
+        "docs/decisions/adr-004-upstream-preview-integration/adr.md",
         "docs/research/upstream-contribution-scout.md",
         "docs/decisions/adr-001-media-metadata-storage/adr.md",
         "docs/decisions/adr-002-native-thumbnail-services/adr.md",
@@ -307,10 +308,10 @@
     "exists": true,
     "active_focus": {
       "story_id": "005",
-      "status": "pending",
-      "summary": "Story002b/005 upstream contribution is next; Story003 bookmarks waits behind it.",
-      "reason": "Cam requested investigation, upstream-quality improvement and submission/review before bookmarks; current turn is scout and story planning only.",
-      "current_command": "Planning complete; await Cam's request to start Phase1. Preserve the qualified local app and scoped evidence; no implementation, maintainer contact or submission in the planning turn."
+      "status": "in-progress",
+      "summary": "Current source10 matched playback qualification PASS across three60s pairs (retained004pair1 and prospective005pairs2/3), actual capturedaudio continuous and allnativevideo/audio losseszero. Source72/apps preserved; VoiceOver ON restored. Ordinarymainreader proof legitimately inherited; autonomousreader route stopped. Final29-artifact reviewer-copy checker PASS; Phases1/2 complete at disclosed bounded scope, whole story in-progress and Phase3 untouched.",
+      "reason": "Cam now authorizes finishing investigation and improvement with SOL6.1 medium builders, halting ready to submit. Existing macOS MR7493 and shared preview design29393 require architecture-fit review.",
+      "current_command": "Owner accepted the separate qualified test app and explicitly authorized project-repository finish-and-push. Land validated Phases1/2 and exact source10 reviewer package; whole Story005 stays in-progress. Phase3 upstream contact/submission awaits separate authorization. Reuse unchanged passing product evidence; prior goal usage retained."
     },
     "categories": [
       {
@@ -390,7 +391,7 @@
           "005"
         ],
         "eval_refs": [],
-        "note": "Local source/build/dependency provenance recorded. Story005 now owns upstream standards, integration, source contribution and review; initial scout only, no readiness or acceptance claim. Public binary packaging remains deferred."
+        "note": "Source10 freeze72, full normal checks, helper77, complete conventional distcheck and qualified019 package stand. Fresh three-pair playback qualification passes at bounded scope; final thirteen-patch reviewer-copy checker PASS. Ordinary main reader inheritance is justified. Platform limits, preview-visible reader coverage and user-deferred shutdown cause remain disclosed."
       }
     ],
     "planning_inputs": [

@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-helper9-proof/h1-io-probe/test-io",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-admission-fixtures002/flat-two-hours-1200-clusters.mkv",
+    "47"
+  ],
+  "binary_sha256": "bd024a439a0a5421b9c5bc009af3a4ea59a253f6910f7da4edc18b664895b00a",
+  "fixture_sha256": "4a2355ecf6551a265aee936f5ef0a475de0e2517b96208bb24ab05502e2a4da8",
+  "segment_data_offset": 47,
+  "returncode": 0,
+  "timeout": false,
+  "elapsed_seconds": 0.47253900000214344,
+  "final_members": [],
+  "sanitizer_env": {
+    "ASAN_OPTIONS": "halt_on_error=1:detect_leaks=0",
+    "UBSAN_OPTIONS": "halt_on_error=1:print_stacktrace=1"
+  }
+}

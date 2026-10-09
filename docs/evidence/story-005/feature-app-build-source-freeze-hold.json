@@ -1,0 +1,9 @@
+{
+  "build_receipt": "docs/evidence/story-005/candidate-build-20261006T033704Z.json",
+  "pid": 27296,
+  "action": "SIGSTOP owned build group awaiting root-requested context/UI repair freeze",
+  "utc": "2026-10-06T03:38:04Z",
+  "monitor": "Independent1GiBguard continues; baseline untouched",
+  "cancelled_utc": "2026-10-06T03:41:25Z",
+  "cancelled_action": "Root-authorized SIGTERM then SIGCONT of owned stopped build group; fresh official build after all freezes"
+}

@@ -1,0 +1,7 @@
+0001-build-order-macosx-install-and-clean-vtutils.patch
+0002-clock-preserve-observed-system-origin.patch
+0003-tests-select-gnutls-for-pem-trust-fixture.patch
+0004-opengl-initialize-legacy-version-fallback.patch
+0005-macosx-release-caller-owned-media-source.patch
+0006-macosx-retire-playback-ended-timer-during-termination.patch
+0007-macosx-fence-video-window-callback-lifetime.patch

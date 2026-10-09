@@ -1,0 +1,14 @@
+{
+  "observed_at_unix": 1791268571.790875,
+  "root": "/Users/cam/Library/Caches/org.videolan.vlc.story005.nativecandidate/TimelineThumbnails",
+  "records": [
+    {
+      "file": "431624f651f41c0818789205bba88c8c754b3ab9d29e390ac7a4bd0bddf01efa.json",
+      "mtime": 1791268528.302504,
+      "version": 5,
+      "samples": 7,
+      "targets": 7
+    }
+  ],
+  "payload_files": 7
+}

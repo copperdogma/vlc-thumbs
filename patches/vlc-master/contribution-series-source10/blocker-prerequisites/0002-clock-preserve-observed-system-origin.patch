@@ -1,0 +1,33 @@
+diff --git a/src/clock/clock.c b/src/clock/clock.c
+index bb137d67f97cdb1d7aa62d035b43cf1c7264448a..6209755f66beba9b4c6252e6070560c6207d1a4b 100644
+--- a/src/clock/clock.c
++++ b/src/clock/clock.c
+@@ -230,8 +230,8 @@ static vlc_tick_t ComputeOffset(vlc_clock_main_t *main,
+                           vlc_tick_t ts,
+                           double rate)
+ {
+-    vlc_tick_t start_stream = ctx->start_time.stream - VLC_TICK_0;
+-    vlc_tick_t start_system = ctx->start_time.system - VLC_TICK_0;
++    vlc_tick_t start_stream = ctx->start_time.stream;
++    vlc_tick_t start_system = ctx->start_time.system;
+     if (main->first_pcr.system != VLC_TICK_INVALID)
+         start_stream = start_system = 0;
+ 
+diff --git a/test/src/clock/clock.c b/test/src/clock/clock.c
+index d1c9644bcd6bd1225e72f74a736ba3c4d2b90069..f23ccc5fab620a77106fc33ab04975e524e0364a 100644
+--- a/test/src/clock/clock.c
++++ b/test/src/clock/clock.c
+@@ -636,6 +636,13 @@ static void drift_update(const struct clock_ctx *ctx, size_t index,
+     /* The master can't drift */
+     assert(drift == VLC_TICK_INVALID);
+ 
++    /* Converting the point just observed by the master must be exact. */
++    vlc_clock_Lock(ctx->slave);
++    vlc_tick_t converted = vlc_clock_ConvertToSystem(ctx->slave, *system,
++                                                   stream, 1.0f, NULL);
++    vlc_clock_Unlock(ctx->slave);
++    assert(converted == *system);
++
+     *system += scenario->stream_increment;
+ 
+     /* Simulate 1us drift every stream_increment */

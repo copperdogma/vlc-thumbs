@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "receipts": [
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/docs/evidence/story-005/isolated-candidate008.json",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/docs/evidence/story-005/isolated-candidate009.json",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/docs/evidence/story-005/isolated-candidate010.json"
+  ],
+  "elapsed_seconds": 5.278,
+  "free_bytes_before": 51371577344,
+  "free_bytes_after": 51347906560,
+  "minimum_free_bytes": 51347906560,
+  "additional_storage_budget_bytes": 536870912,
+  "apfs_conservative_bound_bytes": 269398495,
+  "no_launch_or_registration": true
+}

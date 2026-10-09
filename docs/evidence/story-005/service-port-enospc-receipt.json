@@ -1,0 +1,30 @@
+{
+  "source_root": "work/upstream/vlc-master-story005-candidate",
+  "source_pin": "2e358f3098c2f2b7621d1dc568de8b61ad786322",
+  "source_hashes": {
+    "modules/gui/macosx/tests/VLCThumbnailCacheTest.m": "09a9aa16cde2471569c39d95425ee15243525c0a1b4d8651f40aaa636c1669a0",
+    "bin/timeline-preview/tests/README.md": "a160c03628a05cb6cf06d9a69e3a56cf3f7cf9cb90ed76ab4968c0efddb8d8e1"
+  },
+  "selector": "VLCThumbnailCacheTest/testOwnedVolumeENOSPCRAMAndRecovery",
+  "controller": "work/story005-cache-enospc-proof/controller.py",
+  "controller_sha256": "314c76b36666ccd884221823e23ad95398283614303eee4f0c1e27fa30be5984",
+  "compile_diagnostic": "work/story005-service-diagnostic/compile-009.stderr.log",
+  "runtime_status": "Passed actual native selector, not skipped; errno28 on owned20MiB HFS; zero failures0.031seconds; exactdevice detached and image preserved",
+  "setup_failure_receipt": "work/story005-cache-enospc-proof/20261006T060042Z/receipt.json",
+  "controller_receipt": "work/story005-cache-enospc-proof/20261006T060056Z/receipt.json",
+  "normal_compile_receipt": "docs/evidence/story-005/candidate-build-20261006T055932Z.json",
+  "normal_runtime_receipt": "docs/evidence/story-005/feature-cache-actual-enospc-20261006T060156Z.json",
+  "normal_runtime_log": "docs/evidence/story-005/feature-cache-actual-enospc-20261006T060156Z.log",
+  "observed": {
+    "errno": 28,
+    "filler_bytes": 20185088,
+    "filesystem_bytes": 20930560,
+    "minimum_controller_workspace_free_bytes": 4782833664,
+    "ram_fallback": true,
+    "seed_reopen": true,
+    "disk_recovery": true,
+    "detached": true,
+    "image_preserved": true
+  },
+  "atomic_interruption_scope": "Inherited safe publication ordering and partial-inventory reopen; no literal kill or powerloss test"
+}

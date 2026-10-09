@@ -1,0 +1,320 @@
+{
+  "scope": "normal build/test only; no installed app or GUI qualification",
+  "runs": [
+    {
+      "name": "native-build",
+      "argv": [
+        "make",
+        "-C",
+        "work/story005-master-candidate/modules",
+        "-j4",
+        "V=1",
+        "libmacosx_plugin.la",
+        "VLCMacOSXTests.xctest",
+        "VLCTimelineContextTests.xctest",
+        "VLCTimelineHoverReentrancyTests.xctest"
+      ],
+      "cwd": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs",
+      "exit_code": 2,
+      "timed_out": false,
+      "seconds": 3.484,
+      "log": "work/story005-review-validation-001/native-build.log",
+      "log_sha256": "8b73f6630423a7402ec4a6bb7a74530e5b184526bf287ef9541e9540b42d64f7",
+      "free_before_bytes": 20363067392,
+      "free_after_bytes": 20362981376
+    },
+    {
+      "name": "native-build-existing-tools",
+      "argv": [
+        "make",
+        "-C",
+        "work/story005-master-candidate/modules",
+        "-j4",
+        "V=1",
+        "libmacosx_plugin.la",
+        "VLCMacOSXTests.xctest",
+        "VLCTimelineContextTests.xctest",
+        "VLCTimelineHoverReentrancyTests.xctest"
+      ],
+      "cwd": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs",
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 13.909,
+      "log": "work/story005-review-validation-001/native-build-existing-tools.log",
+      "log_sha256": "8df13c1f43489f89709d94c84ad168fbd04b5536863dedfbf7874e9b94fadc13",
+      "free_before_bytes": 20057636864,
+      "free_after_bytes": 20001316864
+    },
+    {
+      "name": "native-new-selector",
+      "argv": [
+        "xcrun",
+        "xctest",
+        "-XCTest",
+        "VLCThumbnailServiceTest/testTerminalCompletionCanRequestAnotherHover",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/modules/VLCMacOSXTests.xctest"
+      ],
+      "cwd": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs",
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 0.837,
+      "log": "work/story005-review-validation-001/native-new-selector.log",
+      "log_sha256": "c8f033fa90dcff8a4f56c57b9fe7d4cfe30791393527fa4a7943794d9d89709d",
+      "free_before_bytes": 20001304576,
+      "free_after_bytes": 20001095680
+    },
+    {
+      "name": "counterfactual-compile",
+      "argv": [
+        "/bin/bash",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-review-validation-001/counterfactual-compile.sh"
+      ],
+      "cwd": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/modules",
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 0.369,
+      "log": "work/story005-review-validation-001/counterfactual-compile.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "free_before_bytes": 20000432128,
+      "free_after_bytes": 19999424512
+    },
+    {
+      "name": "counterfactual-link",
+      "argv": [
+        "/bin/bash",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-review-validation-001/counterfactual-link.sh"
+      ],
+      "cwd": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/modules",
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 0.371,
+      "log": "work/story005-review-validation-001/counterfactual-link.log",
+      "log_sha256": "939e7ed8e8c8d17cc70ca79f8aa0991bf720e50b6fd27e64bd18f541d032e230",
+      "free_before_bytes": 19999424512,
+      "free_after_bytes": 19995303936
+    },
+    {
+      "name": "counterfactual-new-selector",
+      "argv": [
+        "xcrun",
+        "xctest",
+        "-XCTest",
+        "VLCThumbnailServiceTest/testTerminalCompletionCanRequestAnotherHover",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-review-validation-001/OriginalServiceTests.xctest"
+      ],
+      "cwd": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs",
+      "exit_code": 1,
+      "timed_out": false,
+      "seconds": 5.383,
+      "log": "work/story005-review-validation-001/counterfactual-new-selector.log",
+      "log_sha256": "83c2217edd810aa1654e399fc37e7d15fa1f1baa9534dbc99ac007b412f4b1df",
+      "free_before_bytes": 19992256512,
+      "free_after_bytes": 19957780480
+    },
+    {
+      "name": "helper-build",
+      "argv": [
+        "make",
+        "-C",
+        "work/story005-master-candidate/bin",
+        "-j4",
+        "V=1",
+        "vlc-timeline-preview"
+      ],
+      "cwd": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs",
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 0.766,
+      "log": "work/story005-review-validation-001/helper-build.log",
+      "log_sha256": "c84aacea65cac6cc586014bcbb6dad043db695fbd3f9522b641fa09c84bde965",
+      "free_before_bytes": 19961360384,
+      "free_after_bytes": 19961036800
+    },
+    {
+      "name": "helper-basic",
+      "argv": [
+        "make",
+        "-C",
+        "work/story005-master-candidate/bin",
+        "check-timeline-preview"
+      ],
+      "cwd": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs",
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 1.13,
+      "log": "work/story005-review-validation-001/helper-basic.log",
+      "log_sha256": "40a9fa9c7d797f1fae404deb317beb7262d2b9ec341f51eee3dd68ea7267d219",
+      "free_before_bytes": 19961032704,
+      "free_after_bytes": 19961004032
+    },
+    {
+      "name": "helper-full",
+      "argv": [
+        "python3",
+        "work/upstream/vlc-master-story005-candidate/bin/timeline-preview/test.py",
+        "--helper",
+        "work/story005-master-candidate/bin/vlc-timeline-preview",
+        "--fixtures",
+        "work/story005-master-reproduction/independent-fixtures/media",
+        "--trim-fixtures",
+        "work/story005-master-reproduction/independent-fixtures/media",
+        "--identity-fixtures",
+        "work/story005-master-reproduction/independent-fixtures/identity",
+        "--admission-fixtures",
+        "work/story005-master-reproduction/independent-fixtures/admission"
+      ],
+      "cwd": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs",
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 4.582,
+      "log": "work/story005-review-validation-001/helper-full.log",
+      "log_sha256": "d93543562408f295c9efe1f99b5be73d34147fe23c55bf861d2824505234c8dc",
+      "free_before_bytes": 19961004032,
+      "free_after_bytes": 19970592768
+    },
+    {
+      "name": "native-registered",
+      "argv": [
+        "make",
+        "-C",
+        "work/story005-master-candidate/modules",
+        "-j4",
+        "check-macosx"
+      ],
+      "cwd": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs",
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 121.935,
+      "log": "work/story005-review-validation-001/native-registered.log",
+      "log_sha256": "aa3e5663fbee02f3474b43a8d0f2dd4e510edfd9c080d403d4b3038d97ce904d",
+      "free_before_bytes": 20001095680,
+      "free_after_bytes": 19967057920
+    }
+  ],
+  "environment_obstacle": {
+    "class": "missing configured build tool path",
+    "detail": "Candidate extras/tools/build/bin exists but has no automake; first make exited2 before compilation",
+    "existing_tools": "work/upstream/vlc-master-story005/extras/tools/build/bin",
+    "proposed_resolution": "Use existing pinned normal tool path without installing or changing source"
+  },
+  "tool_environment": {
+    "SDKROOT": "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk",
+    "tools_path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/bin",
+    "automake_version": "GNU automake 1.18.1",
+    "automake_sha256": "132f0cdbfca1c32baf73450fd72aa86a239d8c06474f98b38f82addf1cf0ba00",
+    "correction_authorized_by_root": true
+  },
+  "helper_suite": {
+    "count": 77,
+    "pass": true,
+    "outer_exit_code": 0
+  },
+  "helper_counterfactual_reuse": {
+    "receipt": "work/story005-review-helper-test-fix/counterfactual-results.json",
+    "sha256": "1435c57d551ef865501c014587b6891efa72c1e12bfa7c4e4af7de225d262bcf",
+    "old_accepted_all_three_errors_only_workers": true,
+    "new_rejected_all_three": "Expected successful image reply",
+    "scope": "AST extracted old/new trim blocks with actual fake worker subprocesses; no real media helper executed for this counterfactual"
+  },
+  "counterfactual": {
+    "selector": "VLCThumbnailServiceTest/testTerminalCompletionCanRequestAnotherHover",
+    "fixed_exit_code": 0,
+    "original_exit_code": 1,
+    "original_expected_failure": "Asynchronous wait exceeded5s with reentrant hover image expectation unfulfilled",
+    "original_tests": 1,
+    "original_failures": 1,
+    "source_mutation": false,
+    "object_swap_in_live_candidate": false,
+    "method": "Exact emitted normal compiler/link shell recipes reused; source/output/dependency outputs and service-object input changed in ignored scratch only"
+  },
+  "custom_avio_reuse": {
+    "rerun": false,
+    "reason": "Verified helperC diff only removes dead Selection.requested field/initializer and parses the two already-NUL-terminated request tokens directly instead of snprintf copies. No Guard, custom AVIO, admission parser, read/seek, or FFmpeg change. Fresh helper77 covers request parser; previous custom AVIO evidence remains scoped to unchanged I/O implementation."
+  },
+  "changed_source_hashes": [
+    {
+      "path": "modules/gui/macosx/tests/VLCTimelineHoverTest.m",
+      "original_sha256": "310b616ceea66eda8ef8703706b68599b8586ba5097d4b05e3e9677e7e4a9812",
+      "candidate_sha256": "7fbea0b5c5144bc291c358ed6eeeb35dcbb7fe2f036468d789c50c085b643207"
+    },
+    {
+      "path": "modules/gui/macosx/tests/Makefile.am",
+      "original_sha256": "fe199564f7be3514bec3b0c81304dcb31cb4c0de8f754fe29629b53a99fb7271",
+      "candidate_sha256": "43484c53ec9163cc5a031177e6aec4e9b5e3ecc514dd13c731720f93eced4695"
+    },
+    {
+      "path": "modules/gui/macosx/tests/VLCThumbnailServiceTest.m",
+      "original_sha256": "2e8840b8177d1824e12d658dffbc93cd8e8c506f4d8feb29d5c86b6f60e874fe",
+      "candidate_sha256": "e5f342fd311e74c3bca84e7e41c948b97d41672760b65a1cf8e40fcd2d0936e0"
+    },
+    {
+      "path": "modules/gui/macosx/timeline/VLCThumbnailService.m",
+      "original_sha256": "2f39645a0783fcb53a19e77dfe6b3117eb2a91fd570d80fb208be52337629343",
+      "candidate_sha256": "4194b294155e7f7a1c5435d5217ae2dfdfd411090b15a9914f3638eb395095e4"
+    },
+    {
+      "path": "bin/timeline-preview/timeline-preview.c",
+      "original_sha256": "61fa2c51d2dd62a0bd7ea7d5b07744a166725a6dac0e5eb0fb6292bf4b604e0f",
+      "candidate_sha256": "bcbcdcdb46b17028ce1a41d0626cb8c0396a3efeedf86ea2e756a255e2c29643"
+    },
+    {
+      "path": "bin/timeline-preview/test.py",
+      "original_sha256": "dd42b041891b84e347fb6253259f6c2bb4a7781d91398e98546d16d9f4ce1414",
+      "candidate_sha256": "b06465555eea09dfc17d18f8695a9c52f4cf3ecec22259199f092339df07f24f"
+    }
+  ],
+  "native_suite": {
+    "outer_exit_code": 0,
+    "started": 284,
+    "unique_started": 284,
+    "passed": 283,
+    "skipped": 1,
+    "skip_selectors": [
+      "VLCThumbnailCacheTest testOwnedVolumeENOSPCRAMAndRecovery"
+    ],
+    "failed": 0,
+    "bundle_summaries": [
+      [
+        "VLCMacOSXTests.xctest",
+        "passed",
+        "266",
+        "1",
+        "0"
+      ],
+      [
+        "VLCTimelineContextTests.xctest",
+        "passed",
+        "7",
+        "",
+        "0"
+      ],
+      [
+        "VLCTimelineHoverReentrancyTests.xctest",
+        "passed",
+        "11",
+        "",
+        "0"
+      ]
+    ]
+  },
+  "status": "passed scoped builds and tests; original counterfactual expected failure",
+  "qualifications": {
+    "normal_module_built": true,
+    "normal_helper_built": true,
+    "app_packaged": false,
+    "installed_apps_touched": false,
+    "new_app_runtime_qualified": false,
+    "native_GUI_executed": false,
+    "source_and_live_objects_not_swapped": true,
+    "prior_distcheck_shutdown_reader_platform_limits_unchanged": true
+  },
+  "artifacts": {
+    "work/story005-master-candidate/bin/vlc-timeline-preview": "567a6a4c5ebcd70fa6b59c1848685a5d46ab818ee3d93f6e3512c13e84c48382",
+    "work/story005-master-candidate/modules/.libs/libmacosx_plugin.dylib": "d436c80cdcbaf7ca5931492d628344d2d095fb7437b4c0ffae1583457e142765",
+    "work/story005-master-candidate/modules/VLCMacOSXTests.xctest/Contents/MacOS/VLCMacOSXTests": "c2446e9db861fdbf59610e97dd1534f2fe7c839e4db89b2e081d5d951b8c5b23",
+    "work/story005-review-validation-001/OriginalServiceTests.xctest/Contents/MacOS/VLCMacOSXTests": "982c8d63aa261eb2781bd7ad07802466b5225fa7148a4e875789158751fe2935"
+  },
+  "owned_processes_remaining": [],
+  "final_free_bytes": 19958628352,
+  "owned_process_cleanup": "All finite owned subprocesses exited; no termination required; scratch logs/bundles retained"
+}

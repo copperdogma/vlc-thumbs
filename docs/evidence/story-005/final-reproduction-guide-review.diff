@@ -1,0 +1,105 @@
+--- a/bin/timeline-preview/README.md
++++ b/bin/timeline-preview/README.md
+@@ -122,8 +122,71 @@
+ component and the `AM_PATH_LIBGCRYPT` macro in `ACLOCAL_PATH`. Archive downloads may
+ use exact-source mirrors only with upstream checksum validation. Monitor available
+ writable space with a 1GiB reserve and bound subprocess groups; Finder purgeable
+-space is not guaranteed headroom. This independent route is pending execution.
+-Existing normal-contrib proof is separate from its eventual clean result.
++space is not guaranteed headroom. The independent checkout, fresh host tools,
++verified remaining-contrib archive and normal patched FFmpeg build were executed
++on native arm64. Its helper passed 77 fixture checks and the custom-AVIO probe.
++The final app compile/package/sign log completed; the artifact (997 files and
++10 symlinks) passed deep strict signature/component verification. Its outer launcher nevertheless
++exited 1 after an executing local script was modified; that failure is preserved,
++and this is not a claim that one clean end-to-end launcher exited successfully.
++The final normal registered XCTest run counted 288 tests, with one explicit optional
++owned-volume ENOSPC skip and zero failures. The separate owned-volume selector
++had already demonstrated literal ENOSPC, RAM fallback and recovery.
++
++### Conventional distribution check
++
++The pinned distribution hook requires GNU sed's in-place/change-command syntax;
++macOS BSD sed does not accept it. GNU sed 4.10 was source-built in an owned prefix,
++verified against the [primary release announcement](https://lists.gnu.org/archive/html/info-gnu/2026-04/msg00009.html).
++An equivalent local host-tool setup, from the patched source root, is:
++
++```sh
++sed_host=$(mktemp -d "$vlc_source/../vlc-sed-host.XXXXXX")
++curl --fail --location --max-time 60 --max-filesize 4000000 \
++  --output "$sed_host/sed-4.10.tar.gz" \
++  https://mirrors.kernel.org/gnu/sed/sed-4.10.tar.gz
++expected=4d179ffaf92ec4dcec541f7c032be1c3b9a1856f4970adb95a505221702f5277
++actual=$(shasum -a 256 "$sed_host/sed-4.10.tar.gz" | awk '{print $1}')
++test "$actual" = "$expected"
++tar -xzf "$sed_host/sed-4.10.tar.gz" -C "$sed_host"
++(cd "$sed_host/sed-4.10" && ./configure --prefix="$sed_host/prefix" \
++  --disable-nls && make -j4 && make install)
++export VLC_PATH="$sed_host/prefix/bin:$VLC_PATH"
++cd "$vlc_source"
++vlcSetBaseEnvironment # reconstructs PATH from VLC_PATH, not the previous PATH
++sed --version # verify GNU sed remains selected after the official environment
++export GIT_CEILING_DIRECTORIES="$vlc_output"
++make -C "$vlc_output" -j4 distcheck \
++  DISTCHECK_CONFIGURE_FLAGS="--host=$HOST_TRIPLET --build=$BUILD_TRIPLET --with-contrib=$vlc_output/contrib/$HOST_TRIPLET --disable-macosx"
++```
++
++The scoped [Git discovery ceiling](https://git-scm.com/docs/git/2.45.1.html)
++prevents an extracted archive from discovering an ancestor checkout and replacing
++its shipped revision. The real source checkout remains identifiable; no source
++permission or revision rule is changed. Use `set -eo pipefail`, not `set -u`, when
++sourcing the official environment because it expects optional unset variables.
++The separate leading source-header distribution patch lists five existing headers
++omitted by the pinned archive manifests; it changes no runtime code.
++
++The guarded conventional run passed archive membership/bytes, minimal configure,
++platform compilation and linking, then failed during runtime tests. The main test
++directory reported 92 tests: 80 pass, five skip, seven fail. Failures were clock
++drift, decoder subpicture, SPU creation, TLS certificate/handshake, unavailable BMP
++encoding, OpenGL operation and CVPX conversion. Relevant source/test bytes remain
++identical to the pin; causes are not all established. A bounded untouched-master
++normal-configuration comparison reproduced the clock drift_72 and TLS tls.c:188
++failures. That full baseline configuration differs from minimal distcheck, and the
++selected TLS client cause remains unproven. Upstream minimal flags disable
++avcodec/swscale, and this profile separately disables the helper and macOS GUI.
++Install/installcheck/uninstall/DESTDIR cleanup/redist/distclean stages were not
++reached: conventional distcheck is not qualified. No tests were disabled to force
++a pass. This remains separate from the feature-enabled app/helper/XCTest proofs.
++
++Preserved failures include the initial unset-variable launcher, BSD sed hook,
++pre-environment PATH placement, ancestor Git revision discovery and missing Apple/
++medialibrary archive headers. Generated gettext translation deltas and failed
++archives are preserved separately from the proposed source series. Host fixes and
++manifest prerequisites do not erase that execution history.
+ 
+ Optional `extras/package/macosx/build.sh -a aarch64 -c -x -j4 -C build-macosx`
+ rebuilds all selected contrib sources; that stronger dependency closure remains
+@@ -190,9 +253,11 @@
+ Admission conservatively excludes ordered editions, Prev/NextUID/chapter links,
+ SegmentFamily, unknown-sized nested elements/Clusters and incomplete/malformed/
+ multiple-Segment layouts. An unknown-sized Segment is bounded to file end. Some
+-valid layouts remain unavailable; see [PROTOCOL.md](PROTOCOL.md). Two legal generated
+-warm NAS layouts passed 72 requests/36 exact paired images and times, with one open
+-per helper. Current ready times were approximately 23–86ms; warmth was uncontrolled.
++valid layouts remain unavailable; see [PROTOCOL.md](PROTOCOL.md). The current warm NAS
++repeat uses the portable five-minute, 300-Cluster fixture: 36 requests/18 paired
++images retain exact pixels and actual sample times. The older 72-request/36-pair
++comparison with tiny 1200-Cluster and recipe-incomplete 228-Cluster media is
++supplementary. Warmth was uncontrolled; AVIO counts are not network round trips.
+ Cold/stalled NAS, larger sources and native acceptance remain unqualified.
+ 
+ XCTest covers cache/service/context and isolated hover source behavior; headless
+@@ -201,8 +266,11 @@
+ preferences, delayed context/reopen races, source mutation/stalled NAS/provisional
+ expiry, corruption/eviction and matched baseline playback/control overhead.
+ Intel, older supported macOS, exhaustive formats and universal latency remain
+-unqualified. Clean reproduction, public source/license inventory and exact final
+-diff review remain required. No ready-to-submit or upstream-acceptance claim is made.
++unqualified. Current physical native acceptance is held while the Mac is locked;
++headless tests do not qualify physical pointer, reader or matched playback/control
++behavior. Conventional distcheck remains incomplete; final attribution and source/
++license review remain separate gates. No ready-to-submit or upstream-acceptance
++claim is made.
+ 
+ The registered macOS XCTest bundles generate the normal build-tree plugin cache
+ after building the GUI module, using the uninstalled cache generator and scoped

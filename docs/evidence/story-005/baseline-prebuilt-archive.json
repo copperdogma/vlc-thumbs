@@ -1,0 +1,9 @@
+{
+  "source_pin": "2e358f3098c2f2b7621d1dc568de8b61ad786322",
+  "contrib_recipe_pin": "15b71e3fa6d49ed2845dfb1324760984eae6101c",
+  "official_url": "https://artifacts.videolan.org/vlc/macos-arm64/vlc-contrib-aarch64-apple-darwin19-15b71e3fa6d49ed2845dfb1324760984eae6101c.tar.zst",
+  "archive": "work/story005-master-baseline/contrib/contrib-aarch64-apple-darwin19/vlc-contrib-aarch64-apple-darwin19-latest.tar.zst",
+  "bytes": 216247250,
+  "sha512": "46ff351556f8b9f54e9d550a987621e6bf3c005fb9d00922befc538b9ae1ba5628d238ff5c1defecdc81ff3cfe386db0442a0a45050f4462545f01ef89399d57",
+  "qualification": "Official CI-derived artifact fetched/extracted through pinned prebuilt recipe; digest records acquisition, not separate publisher signature or independent source-contrib rebuild."
+}

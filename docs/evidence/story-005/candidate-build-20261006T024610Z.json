@@ -1,0 +1,52 @@
+{
+  "source_pin": "2e358f3098c2f2b7621d1dc568de8b61ad786322",
+  "source": "work/upstream/vlc-master-story005-candidate",
+  "output": "work/story005-master-candidate",
+  "command": [
+    "make",
+    "-C",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/modules",
+    "-j4",
+    "libmp4_plugin.la"
+  ],
+  "cwd": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs",
+  "environment_overrides": {
+    "VLC_PATH": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/bin:/opt/homebrew/opt/python@3.14/bin:/usr/local/bin",
+    "PKG_CONFIG_LIBDIR": "/nonexistent/story005-pkgconfig-isolation",
+    "PKG_CONFIG_PATH": "",
+    "ACLOCAL_PATH": "/usr/local/share/aclocal",
+    "VLC_FORCE_KERNELVERSION": "19",
+    "VLC_PREBUILT_CONTRIBS_URL": "https://artifacts.videolan.org/vlc/macos-arm64/vlc-contrib-aarch64-apple-darwin19-15b71e3fa6d49ed2845dfb1324760984eae6101c.tar.zst",
+    "NCURSES_LIBS": "-L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/contrib/aarch64-apple-darwin19/lib -lncursesw",
+    "SDKROOT": "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk"
+  },
+  "host_arch": "arm64",
+  "initial_free_bytes": 4529762304,
+  "disk_stop_floor_bytes": 1073741824,
+  "status": "succeeded",
+  "log": "docs/evidence/story-005/candidate-build-20261006T024610Z.log",
+  "source_hashes": {
+    "extras/package/macosx/build.sh": "30f1c4a98fa015c442689ab195f394fd9ce1ff75d355a35d6589027556867b2b",
+    "extras/package/macosx/env.build.sh": "08feac636d8eb778bd4f6738ffca5bc4bd6f03c6006aef520733d4f6d031be15",
+    "extras/tools/packages.mak": "ae3dfcd9d6ddc6e25e76ba5e63cc52ba91912ca6bb82772d92bb445ba79a1fc4",
+    "contrib/src/main.mak": "95119bbb9f3171a71bd20159fb894bc315b99ef39f2db6c2af81adef6f31e053"
+  },
+  "source_status": " M include/vlc_process.h\n M modules/demux/mp4/mp4.c\n M src/misc/picture.c\n M src/posix/process.c\n M test/Makefile.am\n M test/src/meson.build\n M test/src/misc/image.c\n?? test/src/misc/process.c\n",
+  "source_diff_sha256": "43af3f4d56588963738df7611ab648c2bb32a75be6bbb6d16df15d7cbbb4447c",
+  "candidate_product_inputs": {
+    "include/vlc_process.h": "56c0262e33d3129444597650de71c9b74b496e2d23b8bae0535ad0b31df2bbbb",
+    "modules/demux/mp4/mp4.c": "e9c27e09211c3aa29fac7c295ffacbcf79929d60393d8f0035c9fcbb1ae46fbf",
+    "src/misc/picture.c": "b8bf7b22839f514880c4df4dd783849b0287b3dbbe15d93dc9e757b401f582a5",
+    "src/posix/process.c": "2f777b8c4930bd11187491921a6f2b56061bb2de058528fe861a88f08192e501",
+    "test/Makefile.am": "1f856406c9e31880556d9267b427ec283b3eb583c2a4a51ff55f5ad77bd3b30a",
+    "test/src/meson.build": "0bac81b330dbf284eb7f42f8490d1d44005c6dc1bffed25ac305151c545fd500",
+    "test/src/misc/image.c": "5df565faa6162879e4dfdf6b9799c56ce379b04632504c752e1045a251ed14fd",
+    "test/src/misc/process.c": "a2ac9ae837852c970ce58621a456130c33bbeb8a0a4d3d7567e24923a2679daf"
+  },
+  "elapsed_seconds": 6.1,
+  "minimum_free_bytes": 4529082368,
+  "pid": 14317,
+  "exit_code": 0,
+  "final_free_bytes": 4522811392,
+  "preservation": "No deletion or cleanup performed. Existing builds/apps untouched."
+}

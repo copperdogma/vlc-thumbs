@@ -1,0 +1,17 @@
+Setting base environment
+Using VLC root dir /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-reproduction, build triplet aarch64-apple-darwin19 and host triplet aarch64-apple-darwin19
+standard.mp4 589343
+standard.mkv 586906
+long-gop.mp4 347708
+vfr.mkv 221328
+positive-start.mkv 346247
+edit-offset.mp4 577963
+rotation.mp4 347708
+sar.mp4 358900
+two-tracks.mkv 14948
+negative-ctts.mp4 347712
+nonkeyframe-trim.mp4 347708
+negative-ctts-trim.mp4 347712
+Total output bytes: 6807391
+{"cases": 6, "output": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-reproduction/independent-fixtures/identity"}
+{"cases": 38, "media_bytes": 1845558, "output": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-reproduction/independent-fixtures/admission", "generator_sha256": "92be89ff835bfdb8eaddac8cef634e2a9d58aa69b750d035b1979db563add3a4"}

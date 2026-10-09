@@ -1,0 +1,13 @@
+{
+  "sha256": {
+    "tests/story-005/mp4_packet_probe.c": "b38f66f12a9dee04566f1bbb3aae0728a5c4954f748dffc59feb44525dbd108b",
+    "tests/story-005/mp4_generate_fixtures.py": "f4fb0a7d5dc5405d6b6cd311abb3156cfa16e1b647ed65d416af6732d5273067",
+    "tests/story-005/mp4_compare_packets.py": "7603e98c83efa8318ca77683e67ee4cfcb3b21ae6200971277e22f059da1840a",
+    "work/story005-scout/.libs/mp4-packet-probe": "9c1e6e4608d2bfaa669763ce176f640e8d8846393e5266a159a03a84854662df",
+    "work/story005-scout/.libs/mp4-packet-probe-candidate": "3999dddde9d9cbdf63bb0be69573c5ed7660b33e4ef260b105d3f630aa006422"
+  },
+  "packet_results": "work/story005-mp4-packets001/results.json",
+  "packet_provenance": "work/story005-mp4-packets001/provenance.json",
+  "fixture_manifest": "work/story005-mp4-fixtures001/manifest.json",
+  "stop_reason": "candidate trim callback outside edit and export failure; negative CTTS timeline mismatch remains"
+}

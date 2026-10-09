@@ -1,0 +1,21 @@
+{
+  "binary": "work/story005-master-candidate/bin/vlc-timeline-preview",
+  "binary_sha256": "6d90de5bded764f4471d7c70db86fe62da1df72685493d7e93720ab418880483",
+  "source_freeze": "helper-protocol4-source-freeze.json",
+  "normal_dependency_manifest": "feature-contrib-build-manifest.json",
+  "command": [
+    "python3",
+    "work/upstream/vlc-master-story005-candidate/bin/timeline-preview/test.py",
+    "--helper",
+    "work/story005-master-candidate/bin/vlc-timeline-preview",
+    "--fixtures",
+    "work/story005-fixtures",
+    "--trim-fixtures",
+    "work/story005-mp4-fixtures001",
+    "--identity-fixtures",
+    "work/story005-feature-dependency-fixtures002"
+  ],
+  "pass": true,
+  "count": 39,
+  "scope": "Normal source-built contrib target; same frozen39 helper checks. H1 ordered-edition admission remains open; no source edits."
+}

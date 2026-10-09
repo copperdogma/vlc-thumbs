@@ -1,0 +1,2 @@
+  CC       misc/preparser_serializer/json/libpreparserserializer_json_plugin_la-fromjson.lo
+  CCLD     libpreparserserializer_json_plugin.la

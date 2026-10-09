@@ -1,0 +1,12 @@
+{
+  "action": "Exact generated-only inverse of verified preserved gzip, no generic restore/clean",
+  "preservation_receipt": "distcheck-generated-po-preservation.json",
+  "delta_sha256": "6897944f15e36fee8a37de30ec91db33ef0db76d345ca79947c941a9e5313ddc",
+  "path_count": 99,
+  "all_current_bytes_matched_generated_hashes_before_inverse": true,
+  "all_restored_bytes_matched_index_hashes": true,
+  "index_tree_before": "c545256d9ca20aed8e75a57f9fdb76091ddecf9d",
+  "index_tree_after": "c545256d9ca20aed8e75a57f9fdb76091ddecf9d",
+  "no_unstaged_tracked_source_dirt": true,
+  "failed_archives_logs_preserved": true
+}

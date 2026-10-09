@@ -1,0 +1,34 @@
+ cd /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-candidate/extras/package/macosx/../../.. && /bin/sh /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-candidate/autotools/missing automake-1.18 --foreign modules/Makefile
+ cd .. && /bin/sh ./config.status modules/Makefile depfiles
+config.status: creating modules/Makefile
+config.status: executing depfiles commands
+  OBJC     gui/macosx/timeline/VLCTimelineContextTests-VLCTimelineContext.o
+  OBJC     gui/macosx/timeline/VLCTimelineContextTests-VLCTimelineContextTests.o
+  GEN      VLCTimelineContextTests
+  GEN      VLCTimelineContextTests.xctest
+libtool: warning: '../src/libvlccore.la' has not been installed in '//lib'
+libtool: install: /usr/local/bin/ginstall -c .libs/VLCTimelineContextTests /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/modules/VLCTimelineContextTests.xctest/Contents/MacOS/VLCTimelineContextTests
+/bin/sh -c 'exec "/Applications/Xcode.app/Contents/Developer/usr/bin/xctest" "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/modules/$(basename "$1")"' xctest VLCTimelineContextTests.xctest
+Test Suite 'All tests' started at 2026-10-05 21:42:27.336.
+Test Suite 'VLCTimelineContextTests.xctest' started at 2026-10-05 21:42:27.336.
+Test Suite 'VLCTimelineContextTests' started at 2026-10-05 21:42:27.336.
+Test Case '-[VLCTimelineContextTests testConfigurationNotificationRefreshesEffectivePreferenceOnce]' started.
+Test Case '-[VLCTimelineContextTests testConfigurationNotificationRefreshesEffectivePreferenceOnce]' passed (0.000 seconds).
+Test Case '-[VLCTimelineContextTests testOwnedStringsAndEachSelectionComponentInvalidates]' started.
+Test Case '-[VLCTimelineContextTests testOwnedStringsAndEachSelectionComponentInvalidates]' passed (0.000 seconds).
+Test Case '-[VLCTimelineContextTests testPreferenceUsesEffectiveValueAndTerminationCannotRestart]' started.
+Test Case '-[VLCTimelineContextTests testPreferenceUsesEffectiveValueAndTerminationCannotRestart]' passed (0.000 seconds).
+Test Case '-[VLCTimelineContextTests testReentrantObserverReadsSnapshotDuringToggleAndDirectShutdown]' started.
+Test Case '-[VLCTimelineContextTests testReentrantObserverReadsSnapshotDuringToggleAndDirectShutdown]' passed (0.000 seconds).
+Test Case '-[VLCTimelineContextTests testSameURIEventAndDelayedNotificationUseLatestSnapshot]' started.
+Test Case '-[VLCTimelineContextTests testSameURIEventAndDelayedNotificationUseLatestSnapshot]' passed (0.000 seconds).
+Test Case '-[VLCTimelineContextTests testSourceEpochDetectsSameURIReopenBeforeMainNotification]' started.
+Test Case '-[VLCTimelineContextTests testSourceEpochDetectsSameURIReopenBeforeMainNotification]' passed (0.000 seconds).
+Test Case '-[VLCTimelineContextTests testUnchangedPointerChecksCannotRenewPreparation]' started.
+Test Case '-[VLCTimelineContextTests testUnchangedPointerChecksCannotRenewPreparation]' passed (0.000 seconds).
+Test Suite 'VLCTimelineContextTests' passed at 2026-10-05 21:42:27.338.
+	 Executed 7 tests, with 0 failures (0 unexpected) in 0.002 (0.002) seconds
+Test Suite 'VLCTimelineContextTests.xctest' passed at 2026-10-05 21:42:27.338.
+	 Executed 7 tests, with 0 failures (0 unexpected) in 0.002 (0.002) seconds
+Test Suite 'All tests' passed at 2026-10-05 21:42:27.338.
+	 Executed 7 tests, with 0 failures (0 unexpected) in 0.002 (0.003) seconds

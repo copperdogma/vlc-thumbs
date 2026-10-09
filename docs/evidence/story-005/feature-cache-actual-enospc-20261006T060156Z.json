@@ -1,0 +1,27 @@
+{
+  "command": [
+    "xcrun",
+    "xctest",
+    "-XCTest",
+    "VLCThumbnailCacheTest/testOwnedVolumeENOSPCRAMAndRecovery",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/modules/VLCMacOSXTests.xctest"
+  ],
+  "environment": {
+    "VLC_THUMBNAIL_ENOSPC_ROOT": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-cache-enospc-proof/20261006T060056Z/mount",
+    "VLC_THUMBNAIL_ENOSPC_DEVICE": "/dev/disk6s1",
+    "VLC_THUMBNAIL_ENOSPC_NONCE": "d45736bbadb447239c4a204a95acf767",
+    "VLC_THUMBNAIL_ENOSPC_WORKSPACE": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs"
+  },
+  "ready": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-cache-enospc-proof/ready.json",
+  "floor_bytes": 1073741824,
+  "time_limit_seconds": 90,
+  "initial_free_bytes": 4881813504,
+  "status": "passed",
+  "pid": 72453,
+  "exit_code": 0,
+  "elapsed_seconds": 1.01,
+  "minimum_free_bytes": 4881797120,
+  "final_free_bytes": 5006786560,
+  "log": "docs/evidence/story-005/feature-cache-actual-enospc-20261006T060156Z.log",
+  "bundle_sha256": "a9c2adb0b59cf0103ef0e83979f9c1080890e85882253582dde5cd94293efd99"
+}

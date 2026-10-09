@@ -1,0 +1,96 @@
+{
+  "scope": "Screenshots of actual visible native preview rendering only; not a recording or full native/performance/reader acceptance",
+  "source_base": "2e358f3098c2f2b7621d1dc568de8b61ad786322",
+  "source_series_tree": "cc0ec69e8be5ba2e60ccae6ea095b471b500a6ff",
+  "candidate": "candidate007",
+  "isolation": {
+    "bundle_identifier": "org.videolan.vlc.story005.nativecandidate.discriminator007",
+    "metadata_only_clone": true,
+    "files": 997,
+    "symlinks": 10,
+    "changed_files": [
+      "Contents/Info.plist",
+      "Contents/MacOS/VLC"
+    ],
+    "all_other_files_and_symlinks_equal": true,
+    "all_main_loadable_sections_equal": true,
+    "main_text_sha256": "e466c3872433bb228ab04d555d607d83acf1f2ee7479728cf5b1c1be86fae309",
+    "source_main_sha256": "11ae9ae1be3000ea2a4cdb7e7a57269b8532a2a2c1cae29ea7a45c58a80547ee",
+    "clone_main_sha256": "4f0c2c60935c5a986079862dfeacb553029c315eae99311eacf318a9b51a8663",
+    "gui_sha256": "0f417376de68ac8e2fbfcde0d95f52ce90ab0a17f0b3bb055864e1386a337052",
+    "helper_sha256": "5f5142d4f6bc268fa3cb6c51aa8842df0fd6700ebaef9ffbef4c9163e8e8e1a6",
+    "owned_fresh_profile_and_cache": true
+  },
+  "fixture": {
+    "name": "long-preparation.mp4 (copied unchanged as public-main.mp4)",
+    "bytes": 14704138,
+    "sha256": "c5dfcf4a710b8db66e5032a06b862da8dcc0e09df00c4a3597b5c0f0ea7b9e8a",
+    "original_generator_sha256": "8f1574da92ba62c1da44abb3e38156f24a37406bc3d1f0a2c2eaffdbf9c3516d",
+    "current_generator_sha256": "7122c3a80b4f6ade690b47e8854a57d84bdda8684d144ea7e6a6dd4c274f00ec",
+    "original_generation_manifest_sha256": "4713dabb6676b09e0d1bd062c29d5a8323a98857019c3612e98ab9bf257a8cc3",
+    "tool": "FFmpeg/ffprobe8.0; Apple clang16.0.0",
+    "source": "FFmpeg testsrc2 320x180 at24fps for300s; generated440Hz/48000Hz ALAC",
+    "font": "FFmpeg built-in VGA16 via avpriv_vga16_font_get(); no external font or drawtext",
+    "expected_sample_seconds": 150.0,
+    "expected_frame": 3600,
+    "regeneration_identical_bytes_asserted": false
+  },
+  "screenshots": [
+    {
+      "file": "custom-fullscreen-hover.png",
+      "bytes": 3512667,
+      "sha256": "3b11c683299899abbf8d6ff640456853afa7e83ec06ab40147e8f3116106abd1",
+      "original_sha256": "3b11c683299899abbf8d6ff640456853afa7e83ec06ab40147e8f3116106abd1",
+      "copy": "unchanged original screenshot; no image editing"
+    },
+    {
+      "file": "detached-hover.png",
+      "bytes": 192239,
+      "sha256": "d32dd707d09bfd70731c2b0438d1e4c8c83f04dbe4391ed3d1be2cb100bc5050",
+      "original_sha256": "d32dd707d09bfd70731c2b0438d1e4c8c83f04dbe4391ed3d1be2cb100bc5050",
+      "copy": "unchanged original screenshot; no image editing"
+    }
+  ],
+  "visible_surfaces": {
+    "included": [
+      "custom fullscreen",
+      "detached controls"
+    ],
+    "additional_actual_acquisition_not_included": [
+      "main controls",
+      "native fullscreen"
+    ],
+    "scope": "Actual four-surface rendering acquisition is recorded; these two public screenshots illustrate custom/detached. Additional receipts remain local."
+  },
+  "remaining_gates": [
+    "complete native/control/reader acceptance",
+    "freshness/restart reuse qualification",
+    "matched playback/performance acceptance",
+    "final maintainer/package review"
+  ],
+  "production_build_tree": "8ec1cdec6939c67eeb6bef0ff1bb035c168d0592",
+  "source_series_tree_meaning": "Historical revision10 59-file source freeze; not the current package tree or a claim the screenshot app compiled all59files",
+  "runtime_source_equivalence": {
+    "captured_build_evidence": "feature-duration-fixed-original-app-manifest.json",
+    "captured_build_evidence_sha256": "8dc0b44fdc9412698ace1c327dd2fcd7a118e4f16451d4e29a10ed0c8a49ca46",
+    "isolation_evidence": "isolated-candidate007.json",
+    "isolation_evidence_sha256": "4a591f6396174db914517afa7658811b20a5e92dd9b13a2526af0828b3a0632b",
+    "captured_source_manifest_sha256": "7f2e091eae0378fdf6caa53e552b98b803538a7243bd177181c6457b0533a2a7",
+    "later_changed_paths": [
+      "bin/timeline-preview/README.md",
+      "modules/audio_output/Makefile.am",
+      "modules/gui/macosx/tests/VLCLibraryDataTypesIntegrationTestSupport.m",
+      "modules/gui/macosx/tests/VLCThumbnailServiceTest.m",
+      "modules/misc/Makefile.am",
+      "modules/video_output/Makefile.am"
+    ],
+    "meaning": "Historical correspondence through revision10 only: later source changes were tests, distribution source lists and helper README; production runtime source hashes were unchanged through that freeze",
+    "current_source_changes": {
+      "production_paths": [
+        "bin/timeline-preview/timeline-preview.c",
+        "modules/gui/macosx/timeline/VLCThumbnailService.m"
+      ],
+      "qualification": "Fresh normal helper/plugin builds and headless helper/native tests only; no new app packaging or GUI qualification. These changes are not present in the screenshot runtime"
+    }
+  }
+}

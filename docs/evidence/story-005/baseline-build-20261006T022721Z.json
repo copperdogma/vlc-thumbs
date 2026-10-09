@@ -1,0 +1,40 @@
+{
+  "source_pin": "2e358f3098c2f2b7621d1dc568de8b61ad786322",
+  "source": "work/upstream/vlc-master-story005",
+  "output": "work/story005-master-baseline",
+  "command": [
+    "make",
+    "-C",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/modules",
+    "-j4",
+    "check-macosx"
+  ],
+  "cwd": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs",
+  "environment_overrides": {
+    "VLC_PATH": "/opt/homebrew/opt/python@3.14/bin:/usr/local/bin",
+    "PKG_CONFIG_LIBDIR": "/nonexistent/story005-pkgconfig-isolation",
+    "PKG_CONFIG_PATH": "",
+    "ACLOCAL_PATH": "/usr/local/share/aclocal",
+    "VLC_FORCE_KERNELVERSION": "19",
+    "VLC_PREBUILT_CONTRIBS_URL": "https://artifacts.videolan.org/vlc/macos-arm64/vlc-contrib-aarch64-apple-darwin19-15b71e3fa6d49ed2845dfb1324760984eae6101c.tar.zst",
+    "NCURSES_LIBS": "-L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/aarch64-apple-darwin19/lib -lncursesw",
+    "SDKROOT": "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk"
+  },
+  "host_arch": "arm64",
+  "initial_free_bytes": 7642927104,
+  "disk_stop_floor_bytes": 1073741824,
+  "status": "succeeded",
+  "log": "docs/evidence/story-005/baseline-build-20261006T022721Z.log",
+  "source_hashes": {
+    "extras/package/macosx/build.sh": "30f1c4a98fa015c442689ab195f394fd9ce1ff75d355a35d6589027556867b2b",
+    "extras/package/macosx/env.build.sh": "08feac636d8eb778bd4f6738ffca5bc4bd6f03c6006aef520733d4f6d031be15",
+    "extras/tools/packages.mak": "ae3dfcd9d6ddc6e25e76ba5e63cc52ba91912ca6bb82772d92bb445ba79a1fc4",
+    "contrib/src/main.mak": "95119bbb9f3171a71bd20159fb894bc315b99ef39f2db6c2af81adef6f31e053"
+  },
+  "elapsed_seconds": 8.0,
+  "minimum_free_bytes": 7636226048,
+  "pid": 74977,
+  "exit_code": 0,
+  "final_free_bytes": 7561936896,
+  "preservation": "No deletion or cleanup performed. Existing builds/apps untouched."
+}

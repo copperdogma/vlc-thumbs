@@ -1,0 +1,36 @@
+--- a/bin/timeline-preview/README.md
++++ b/bin/timeline-preview/README.md
+@@ -258,19 +258,23 @@
+ images retain exact pixels and actual sample times. The older 72-request/36-pair
+ comparison with tiny 1200-Cluster and recipe-incomplete 228-Cluster media is
+ supplementary. Warmth was uncontrolled; AVIO counts are not network round trips.
+-Cold/stalled NAS, larger sources and native acceptance remain unqualified.
++Warm fixture results do not establish cold/stalled NAS or larger-source cost.
++Use separately bounded trials for those conditions.
+ 
+ XCTest covers cache/service/context and isolated hover source behavior; headless
+-slider doubles create no window. Native gates still include all four control
+-surfaces, physical hover/fades/drag/reparenting, keyboard/scroll/reader, saved/CLI
+-preferences, delayed context/reopen races, source mutation/stalled NAS/provisional
+-expiry, corruption/eviction and matched baseline playback/control overhead.
++slider doubles create no window. For native verification, exercise all four
++control surfaces: physical hover/fades/drag/reparenting, keyboard/scroll/reader,
++saved/CLI preferences, delayed context/reopen races, source mutation/stalled NAS/
++provisional expiry, corruption/eviction and matched baseline playback/control
++workloads. Record exact source/app/helper hashes, media identity, observed sample
++time and trial scope. Headless tests do not qualify physical pointer, reader or
++matched playback/control behavior; retain separate native observations and
++matched measurements for those claims.
++
+ Intel, older supported macOS, exhaustive formats and universal latency remain
+-unqualified. Current physical native acceptance is held while the Mac is locked;
+-headless tests do not qualify physical pointer, reader or matched playback/control
+-behavior. Conventional distcheck remains incomplete; final attribution and source/
+-license review remain separate gates. No ready-to-submit or upstream-acceptance
+-claim is made.
++unqualified. Keep conventional distcheck results separate from feature-enabled
++native evidence, and review attribution and source/license scope before submission.
++No ready-to-submit or upstream-acceptance claim is made.
+ 
+ The registered macOS XCTest bundles generate the normal build-tree plugin cache
+ after building the GUI module, using the uninstalled cache generator and scoped

@@ -1,0 +1,31 @@
+ cd /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-candidate/extras/package/macosx/../../.. && /bin/sh /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-candidate/autotools/missing automake-1.18 --foreign modules/Makefile
+ cd .. && /bin/sh ./config.status modules/Makefile depfiles
+config.status: creating modules/Makefile
+config.status: executing depfiles commands
+  OBJC     gui/macosx/timeline/VLCMacOSXTests-VLCTimelinePlayerContextTest.o
+  OBJC     gui/macosx/views/libmacosx_plugin_la-VLCPlaybackProgressSlider.lo
+  GEN      VLCMacOSXTests
+  OBJCLD   libmacosx_plugin.la
+ cd /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-candidate/extras/package/macosx/../../.. && /bin/sh /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-candidate/autotools/missing automake-1.18 --foreign bin/Makefile
+ cd .. && /bin/sh ./config.status bin/Makefile depfiles
+config.status: creating bin/Makefile
+config.status: executing depfiles commands
+make[1]: `vlc-cache-gen' is up to date.
+  GEN      VLCMacOSXTests.xctest
+libtool: warning: '../lib/libvlc.la' has not been installed in '//lib'
+libtool: warning: '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/src/libvlccore.la' has not been installed in '//lib'
+libtool: warning: '../src/libvlccore.la' has not been installed in '//lib'
+libtool: install: /usr/local/bin/ginstall -c .libs/VLCMacOSXTests /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/modules/VLCMacOSXTests.xctest/Contents/MacOS/VLCMacOSXTests
+VLC_PLUGIN_PATH="/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/modules" /usr/bin/xcrun xctest -XCTest VLCTimelinePlayerContextTest /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/modules/VLCMacOSXTests.xctest
+Test Suite 'Selected tests' started at 2026-10-06 00:17:41.701.
+Test Suite 'VLCMacOSXTests.xctest' started at 2026-10-06 00:17:41.702.
+Test Suite 'VLCTimelinePlayerContextTest' started at 2026-10-06 00:17:41.702.
+Test Case '-[VLCTimelinePlayerContextTest testSameURIReopenAdvancesRealEpochBeforeMainNotification]' started.
+[000000778489ca00] main audio output error: no suitable audio output module
+Test Case '-[VLCTimelinePlayerContextTest testSameURIReopenAdvancesRealEpochBeforeMainNotification]' passed (0.009 seconds).
+Test Suite 'VLCTimelinePlayerContextTest' passed at 2026-10-06 00:17:41.712.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.009 (0.009) seconds
+Test Suite 'VLCMacOSXTests.xctest' passed at 2026-10-06 00:17:41.712.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.009 (0.009) seconds
+Test Suite 'Selected tests' passed at 2026-10-06 00:17:41.712.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.009 (0.010) seconds

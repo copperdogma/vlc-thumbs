@@ -1,0 +1,1 @@
+Assertion failed: (pic->format.orientation == fmt.orientation), function TestPictureOrientation, file contract.c, line 29.

@@ -1,0 +1,48 @@
+[
+  {
+    "transform": "clock",
+    "command": [
+      "ffmpeg",
+      "-v",
+      "error",
+      "-noautorotate",
+      "-i",
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-fixtures/rotation.mp4",
+      "-vf",
+      "select=eq(n\\,0),scale=180:101:flags=bilinear:in_color_matrix=bt601:in_range=tv:out_range=pc,transpose=clock",
+      "-frames:v",
+      "1",
+      "-pix_fmt",
+      "rgba",
+      "-f",
+      "rawvideo",
+      "work/story005-helper9-proof/rotation-order-oracle/clock.rgba"
+    ],
+    "mae": 221.99688302163548,
+    "max": 255,
+    "bytes": 72720
+  },
+  {
+    "transform": "cclock",
+    "command": [
+      "ffmpeg",
+      "-v",
+      "error",
+      "-noautorotate",
+      "-i",
+      "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-fixtures/rotation.mp4",
+      "-vf",
+      "select=eq(n\\,0),scale=180:101:flags=bilinear:in_color_matrix=bt601:in_range=tv:out_range=pc,transpose=cclock",
+      "-frames:v",
+      "1",
+      "-pix_fmt",
+      "rgba",
+      "-f",
+      "rawvideo",
+      "work/story005-helper9-proof/rotation-order-oracle/cclock.rgba"
+    ],
+    "mae": 0.8334800146681335,
+    "max": 5,
+    "bytes": 72720
+  }
+]

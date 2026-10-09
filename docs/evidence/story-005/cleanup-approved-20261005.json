@@ -1,0 +1,864 @@
+{
+  "utc_started": "2026-10-06T05:05:53.468347+00:00",
+  "authorization": "Cam explicitly approved exactly these 10 dirs and two unmounted fault images; cleanup only. No other paths, applications, downloads, worktrees, processes or goal changes.",
+  "status": "completed",
+  "targets": [
+    {
+      "absolute_path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/extras/tools/protobuf",
+      "project_relative_path": "work/build/vlc-source/extras/tools/protobuf",
+      "kind": "directory",
+      "allocated_kib": 347460,
+      "before_exists": true,
+      "sha256": null,
+      "after_exists": false,
+      "outcome": "deleted"
+    },
+    {
+      "absolute_path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/extras/tools/gettext",
+      "project_relative_path": "work/build/vlc-source/extras/tools/gettext",
+      "kind": "directory",
+      "allocated_kib": 216160,
+      "before_exists": true,
+      "sha256": null,
+      "after_exists": false,
+      "outcome": "deleted"
+    },
+    {
+      "absolute_path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/extras/tools/bison",
+      "project_relative_path": "work/build/vlc-source/extras/tools/bison",
+      "kind": "directory",
+      "allocated_kib": 55952,
+      "before_exists": true,
+      "sha256": null,
+      "after_exists": false,
+      "outcome": "deleted"
+    },
+    {
+      "absolute_path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/mysofa",
+      "project_relative_path": "work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/mysofa",
+      "kind": "directory",
+      "allocated_kib": 247352,
+      "before_exists": true,
+      "sha256": null,
+      "after_exists": false,
+      "outcome": "deleted"
+    },
+    {
+      "absolute_path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/gettext",
+      "project_relative_path": "work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/gettext",
+      "kind": "directory",
+      "allocated_kib": 242400,
+      "before_exists": true,
+      "sha256": null,
+      "after_exists": false,
+      "outcome": "deleted"
+    },
+    {
+      "absolute_path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/harfbuzz",
+      "project_relative_path": "work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/harfbuzz",
+      "kind": "directory",
+      "allocated_kib": 112588,
+      "before_exists": true,
+      "sha256": null,
+      "after_exists": false,
+      "outcome": "deleted"
+    },
+    {
+      "absolute_path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/gnutls",
+      "project_relative_path": "work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/gnutls",
+      "kind": "directory",
+      "allocated_kib": 100176,
+      "before_exists": true,
+      "sha256": null,
+      "after_exists": false,
+      "outcome": "deleted"
+    },
+    {
+      "absolute_path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/libxml2",
+      "project_relative_path": "work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/libxml2",
+      "kind": "directory",
+      "allocated_kib": 56536,
+      "before_exists": true,
+      "sha256": null,
+      "after_exists": false,
+      "outcome": "deleted"
+    },
+    {
+      "absolute_path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-arm64/vlc_install_dir",
+      "project_relative_path": "work/build/vlc-arm64/vlc_install_dir",
+      "kind": "directory",
+      "allocated_kib": 163956,
+      "before_exists": true,
+      "sha256": null,
+      "after_exists": false,
+      "outcome": "deleted"
+    },
+    {
+      "absolute_path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/macos-install",
+      "project_relative_path": "work/story005-master-candidate/macos-install",
+      "kind": "directory",
+      "allocated_kib": 203676,
+      "before_exists": true,
+      "sha256": null,
+      "after_exists": false,
+      "outcome": "deleted"
+    },
+    {
+      "absolute_path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/cache-faults/20261004T074040-738952/bounded-enospc.dmg",
+      "project_relative_path": "work/validation/story002/cache-faults/20261004T074040-738952/bounded-enospc.dmg",
+      "kind": "file",
+      "allocated_kib": 20480,
+      "before_exists": true,
+      "sha256": "f2dc26c4b306a2aa983624e307e74baa212a3374837d666814e7af0199276d6a",
+      "after_exists": false,
+      "outcome": "deleted"
+    },
+    {
+      "absolute_path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/validation/story002/cache-faults/20261004T074153-411223/bounded-enospc.dmg",
+      "project_relative_path": "work/validation/story002/cache-faults/20261004T074153-411223/bounded-enospc.dmg",
+      "kind": "file",
+      "allocated_kib": 20480,
+      "before_exists": true,
+      "sha256": "22af06bc20e58fd6e3a0d3596c08a2976bd7660e52aa56712a51e97d0c1f1a2d",
+      "after_exists": false,
+      "outcome": "deleted"
+    }
+  ],
+  "preflight": {
+    "root_realpath": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs",
+    "no_symlink_targets_or_ancestors": true,
+    "no_open_file_consumers": true,
+    "retained_prefix_independence": true,
+    "installed_and_candidate_app_stage_independence": true,
+    "fault_images_unmounted": true
+  },
+  "protected_before_sha256": {
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/ffmpeg/vlc_build/config.h": "ceb6f6d8a2f16adac72dc851d7c2675a73cb45b3bf40f88ce66d231bbdd89a2b",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/thumbnail-libavformat/libavformat.a": "93d8acfd4368bb6e0ea9e82a3b8cc5c0a27d1624cb6859bc4e8534c04d035d34",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/extras/tools/build/bin/protoc": "ada97cf0b4afc48210a19091d9f08fa39c0f50c886fe1456dc163ddb7ab04599",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/VLC.app/Contents/MacOS/vlc-timeline-preview": "5f5142d4f6bc268fa3cb6c51aa8842df0fd6700ebaef9ffbef4c9163e8e8e1a6",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/VLC.app/Contents/MacOS/VLC": "ef15c7ca6ba1a6bb5af9c5f36a9976f81b6f4d6f1677b64ac108dccc46b7148f",
+    "/Users/cam/Applications/VLC Timeline Preview.app/Contents/MacOS/plugins/libmacosx_plugin.dylib": "4ee53e757ac1f6e29c58d7377a1945bb666a06d0df42df0ac1ccca7260f7a6c5",
+    "/Users/cam/Applications/VLC Timeline Preview.app/Contents/MacOS/vlc-thumbnail-helper": "ae7795d6fe67d64f2d770a1f75d7db6302f6d22fedf20cd448a604a5b575d07e"
+  },
+  "preserved_directory": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-cleanup-preserved-20261005",
+  "preserved_files": [
+    {
+      "path": "work/story005-cleanup-preserved-20261005/old-source-tracked.diff",
+      "bytes": 13852,
+      "sha256": "95782041f07edb463d25de4c636db9e6c8ed6f5a465c0c006f617db81e164b3a",
+      "reason": "Dirty source checkout itself retained; redundant tracked-delta recovery"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/old-source-status.txt",
+      "bytes": 994,
+      "sha256": "c414ff4a37561c6e7ba346760afb7c58c7f8bf65ca2398ff6ab0e7777c03aa90",
+      "reason": "Untracked feature sources remain outside approved targets"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/configs/0/config.log",
+      "bytes": 77843,
+      "sha256": "00e42b89e777635ec3b6ae1d27c1d0f4e267cac02e8d48ad2beded388f26401a",
+      "reason": "Configuration/version recovery, not compiled artifacts"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/configs/0/config.status",
+      "bytes": 77174,
+      "sha256": "2785baa7160fa709fc1789b9dfb19b31a2d1408a6d788fccacb5b8fa1a78dda6",
+      "reason": "Configuration/version recovery, not compiled artifacts"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/configs/0/config.h",
+      "bytes": 4155,
+      "sha256": "189b6124893863f88cd019fa62e8bb0e652fdddac9dc95b9c864b13df7c8de82",
+      "reason": "Configuration/version recovery, not compiled artifacts"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/configs/1/config.log",
+      "bytes": 12806,
+      "sha256": "4e6cc715e02569dcdc260848cbb996677174845cef2707211238ce5d95a50015",
+      "reason": "Configuration/version recovery, not compiled artifacts"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/configs/1/config.status",
+      "bytes": 27743,
+      "sha256": "1af08935b69c834a98580e838896f7aab45475aff0586d82a9ec62eb4ebbd3de",
+      "reason": "Configuration/version recovery, not compiled artifacts"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/configs/2/config.log",
+      "bytes": 804062,
+      "sha256": "3173888c8a0bba926674307b8fd44b1a4a24f62a49f02261ba29b14768d42cf4",
+      "reason": "Configuration/version recovery, not compiled artifacts"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/configs/2/config.status",
+      "bytes": 104555,
+      "sha256": "7e4629c1b93c0fbb849072b3e1ab21174ec5521793d353d79fc49ebeddef9089",
+      "reason": "Configuration/version recovery, not compiled artifacts"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/configs/3/CMakeLists.txt",
+      "bytes": 4729,
+      "sha256": "1f11fcff81b53cf200cfb9b7c31d4226d0fa4e4753d4254bc8e3f882dea0d3d7",
+      "reason": "Configuration/version recovery, not compiled artifacts"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/configs/3/params.json",
+      "bytes": 175,
+      "sha256": "2310c6935505cb25d26b480c769bfbff6be27eb5e5df39ca3d762b205deaeccb",
+      "reason": "Configuration/version recovery, not compiled artifacts"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/configs/3/vlc_build/CMakeCache.txt",
+      "bytes": 22923,
+      "sha256": "1e796b98478861d7bab18537748f28183cd30b9324d4ca55aec90f4c40b2b310",
+      "reason": "Configuration/version recovery, not compiled artifacts"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/configs/4/vlc_build/config.log",
+      "bytes": 22542,
+      "sha256": "0c785f56a6ce182737747c0283cf82297b9f10eb2c88714bd056fb02077fd4ac",
+      "reason": "Configuration/version recovery, not compiled artifacts"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/configs/4/vlc_build/config.status",
+      "bytes": 35367,
+      "sha256": "06d4ac3ed9c4b8fa3ec71b1f603a1fbf769a46a4015c46c3d174b98b6b590733",
+      "reason": "Configuration/version recovery, not compiled artifacts"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/configs/5/CMakeLists.txt",
+      "bytes": 45904,
+      "sha256": "6919c54c0ae1074e4acc807fed469741606622dcdc2ad61dc92d11463a8c4235",
+      "reason": "Configuration/version recovery, not compiled artifacts"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/configs/5/build/config.h",
+      "bytes": 747,
+      "sha256": "96982df2c6c078a579306c2fca6968dc7c432fd9e3bd545a59ae44c83d992e06",
+      "reason": "Configuration/version recovery, not compiled artifacts"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/configs/6/vlc_build/config.log",
+      "bytes": 2947483,
+      "sha256": "ba41d27a71a8e693ab68ebcb2c0023b65025a9220221e8dbb4d8bd54f44fc363",
+      "reason": "Configuration/version recovery, not compiled artifacts"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/configs/6/vlc_build/config.status",
+      "bytes": 243436,
+      "sha256": "ab9be0eaf48ba9931439f9a26986a4c749d9a51df7f8818f7da1184e3312880b",
+      "reason": "Configuration/version recovery, not compiled artifacts"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/configs/6/vlc_build/config.h",
+      "bytes": 136611,
+      "sha256": "2ae70d42dfadda254fdf6198312fbb7fa709de899df903ce3cb82103081ce4b7",
+      "reason": "Configuration/version recovery, not compiled artifacts"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/configs/7/CMakeLists.txt",
+      "bytes": 28157,
+      "sha256": "08a481ebead27f659482cc42ef8770d393dd25f4a65c99b7b5bcd83d74e21f47",
+      "reason": "Configuration/version recovery, not compiled artifacts"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/configs/7/vlc_build/config.h",
+      "bytes": 1032,
+      "sha256": "228e323cb7da0a849854d8ec4e6a6924ab8c0c7ce5066cd82b2abab65b7e2d62",
+      "reason": "Configuration/version recovery, not compiled artifacts"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/configs/7/vlc_build/CMakeCache.txt",
+      "bytes": 24192,
+      "sha256": "2a663958a0f016681ae7962fcc790a125be9fb696de33284f67e8e39889a9fc1",
+      "reason": "Configuration/version recovery, not compiled artifacts"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/source-deltas/0/src/google/protobuf/generated_message_table_driven.h",
+      "bytes": 8645,
+      "sha256": "16d03c6f796b054817899ad0279f6d444eddf8fae1479e4fcf062c4345544feb",
+      "reason": "Extracted source differs from retained verified archive; includes recipe patches/generated source"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/source-deltas/1/libtextstyle/lib/iconv-ostream.c",
+      "bytes": 10840,
+      "sha256": "412494038ba08f83ec5800e1cf5b595a0df361ecaa35f3d46c93fcb15feac76e",
+      "reason": "Extracted source differs from retained verified archive; includes recipe patches/generated source"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/source-deltas/4/gettext-runtime/Makefile.in",
+      "bytes": 120069,
+      "sha256": "52f72ec124562636fcc28a89b96ac09832fa4423ecfcf7890ddea671e99d09d4",
+      "reason": "Extracted source differs from retained verified archive; includes recipe patches/generated source"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/source-deltas/4/build-aux/config.guess",
+      "bytes": 49348,
+      "sha256": "af8a1922c9b3c240bf2119d4ec0965a0b5ec36b1016017ba66db44b3b53e9cea",
+      "reason": "Extracted source differs from retained verified archive; includes recipe patches/generated source"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/source-deltas/4/build-aux/config.sub",
+      "bytes": 35276,
+      "sha256": "d611751fba98e807c9684d253bb02aa73d6825fe0e0b9ae3cbf258a59171c9b0",
+      "reason": "Extracted source differs from retained verified archive; includes recipe patches/generated source"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/source-deltas/4/configure",
+      "bytes": 148233,
+      "sha256": "624470e6784e1eee8d28bae9f6907f07b1455bfc317d157792bc9c802b2d7fea",
+      "reason": "Extracted source differs from retained verified archive; includes recipe patches/generated source"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/source-deltas/5/src/hb.hh",
+      "bytes": 19060,
+      "sha256": "75b709cb9d8cf56c70897f9e673c2a4f6ea221bc79a593d7553edc02af03abfc",
+      "reason": "Extracted source differs from retained verified archive; includes recipe patches/generated source"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/source-deltas/5/util/meson.build",
+      "bytes": 6955,
+      "sha256": "bb0acde5855e0467c37bdfbc43a71a39109d54a0e2873a8ba2827361259e9d1e",
+      "reason": "Extracted source differs from retained verified archive; includes recipe patches/generated source"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/source-deltas/6/build-aux/config.guess",
+      "bytes": 49348,
+      "sha256": "af8a1922c9b3c240bf2119d4ec0965a0b5ec36b1016017ba66db44b3b53e9cea",
+      "reason": "Extracted source differs from retained verified archive; includes recipe patches/generated source"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/source-deltas/6/build-aux/config.sub",
+      "bytes": 35276,
+      "sha256": "d611751fba98e807c9684d253bb02aa73d6825fe0e0b9ae3cbf258a59171c9b0",
+      "reason": "Extracted source differs from retained verified archive; includes recipe patches/generated source"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/source-deltas/6/gl/canonicalize-lgpl.c",
+      "bytes": 14852,
+      "sha256": "e93526be09ecc67da1bbfb99780d470ae0ebc065df3461870875972e47203e5d",
+      "reason": "Extracted source differs from retained verified archive; includes recipe patches/generated source"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/source-deltas/6/gl/fcntl.c",
+      "bytes": 19844,
+      "sha256": "d9d11f57debe9106ec0063a711e93e8d8e56d2feb2b28363dc661971c9d8abf7",
+      "reason": "Extracted source differs from retained verified archive; includes recipe patches/generated source"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/source-deltas/6/gl/stat.c",
+      "bytes": 15343,
+      "sha256": "bf8f4b0e80394371a81d69cc588770513abc1bffb20b0b860a4795432f0f8835",
+      "reason": "Extracted source differs from retained verified archive; includes recipe patches/generated source"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/source-deltas/6/lib/crau/crau.h",
+      "bytes": 8483,
+      "sha256": "cd92c7f18163725927b8e822e9e03af96aaefb83f1a3aaf86d82c545dea5b545",
+      "reason": "Extracted source differs from retained verified archive; includes recipe patches/generated source"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/source-deltas/6/lib/gnutls.pc.in",
+      "bytes": 842,
+      "sha256": "1be5c51495df152eeea8ac900c283c179efbb10aa9672c9a7993906930475253",
+      "reason": "Extracted source differs from retained verified archive; includes recipe patches/generated source"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/source-deltas/6/lib/includes/gnutls/gnutls.h.in",
+      "bytes": 147444,
+      "sha256": "4812b208f9488aaad2660213ce81857b2b936b8417fe6e11639129e81b176fe7",
+      "reason": "Extracted source differs from retained verified archive; includes recipe patches/generated source"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/source-deltas/7/libxml-2.0.pc.in",
+      "bytes": 378,
+      "sha256": "88064460299616ea24f341f6a0276a0b5ba03e2b3b9960ae2b41bcedeb0babf5",
+      "reason": "Extracted source differs from retained verified archive; includes recipe patches/generated source"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/source-deltas/7/globals.c",
+      "bytes": 28622,
+      "sha256": "0f8f80f16b74f21e2b72d0f2d752e312f65ea9a317441db01b5658eb1174c608",
+      "reason": "Extracted source differs from retained verified archive; includes recipe patches/generated source"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/CODE_OF_CONDUCT.md",
+      "bytes": 3382,
+      "sha256": "0b1cc5632bd439b25dfa47cf5ebc6f231d6f136b5c152e823ee628145e71311e",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/CMakeLists.txt",
+      "bytes": 4729,
+      "sha256": "1f11fcff81b53cf200cfb9b7c31d4226d0fa4e4753d4254bc8e3f882dea0d3d7",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/LICENSE",
+      "bytes": 1453,
+      "sha256": "9c8713ccc5d6d93d20c7a1cfcb876e64baf551bfbe67faa4e60d39cda9ffd023",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/symonics-mysofa.png",
+      "bytes": 7264,
+      "sha256": "b0a15ef97ee39e5a7f20c43d790f150acacfe866084f5b9461a58b1baff98d17",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/params.json",
+      "bytes": 175,
+      "sha256": "2310c6935505cb25d26b480c769bfbff6be27eb5e5df39ca3d762b205deaeccb",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/README.md",
+      "bytes": 7053,
+      "sha256": "b58e521bcf7fa9807aa4c22895a93660eec8b29515a8684f45e30e19dc3870b5",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/libmysofa.pc.cmake",
+      "bytes": 301,
+      "sha256": "ef7b8fcedeb9b7faf1399badc24b5ade2edf60717a41fc9920fa9ef1695aeed2",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/.project",
+      "bytes": 762,
+      "sha256": "3576ffaea96c483f45fb59095e628664d1bdb4af7bffb7e086f3a4cfe97047f5",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/.cproject",
+      "bytes": 5755,
+      "sha256": "3d8c8b0aff69f4438c30052186bc392bfe1ca964fe97e94cccca45b72ddd8e7a",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/SECURITY.md",
+      "bytes": 1642,
+      "sha256": "c774e7be6266590d16b594bde0c3887c5227c78478b7e7c8822c49ae753eb3dc",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/cmake/FindCUnit.cmake",
+      "bytes": 1336,
+      "sha256": "1d27e39d1fa006162f1e7c64ef864ef4c3515dfbfbadcda8da2c148c2fa0fe1d",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/windows/libmysofa.vcxproj",
+      "bytes": 9648,
+      "sha256": "986384ac4fb6a84763c7d9c87605b247386f798d21c09eec2b00f96127817fc8",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/windows/libmysofa.sln",
+      "bytes": 1271,
+      "sha256": "fe761177a078191801ebdd17e4fb4b7515807db68879f7e7e007d3011f561b62",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/windows/config.h.sln",
+      "bytes": 207,
+      "sha256": "0164fa5c70c7eb570d7e4c58739ca02db245048792796b5ebef66d1fc4415b30",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/windows/libmysofa.vcxproj.filters",
+      "bytes": 3583,
+      "sha256": "7a89c03d7b2608d56be861b499579dbc8e50612573901e5f3b96c2a4429e514a",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/share/MIT_KEMAR_normal_pinna.sofa",
+      "bytes": 1173158,
+      "sha256": "2768ac841213a7ae11d1ea7fd0f25a69b39216102dc5dd913ea6ba0f0dc57e28",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/src/.dir-locals.el",
+      "bytes": 100,
+      "sha256": "3dd54fd8258cfabc91253f74f909c544e1f67ce833b64add186799fb5e2522e0",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/src/CMakeLists.txt",
+      "bytes": 6168,
+      "sha256": "07fb0dce8e8b38ed9ce8aaa3f93d060d657559928f978cb4261855a41e6b9884",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/src/config.h",
+      "bytes": 304,
+      "sha256": "57df821dbdf607b8c232a3823f5bf71a6a177c10a95eff3046235f0e776d1681",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/src/config.h.in",
+      "bytes": 307,
+      "sha256": "e150f64e99faa0ac5f66320baed6475a9e74464df554d532a06b649a9bd969dd",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/src/hdf/btree.c",
+      "bytes": 13552,
+      "sha256": "9cdab2769fc080e0198c6b47d1976c2886aa349958dabcfecc757121dbaab1d8",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/src/hdf/reader.h",
+      "bytes": 4337,
+      "sha256": "e0b258f36f830b05990ce871def27d1a8ab9daf484bb35b37d66b4f9d4dd2381",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/src/hdf/superblock.c",
+      "bytes": 7470,
+      "sha256": "e7b98abe25ad57db0d917cd88201721a7070e8a69b9d31818663d5e8ff3c23f1",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/src/hdf/gcol.c",
+      "bytes": 3579,
+      "sha256": "bff1243cb549f7907c7d51873c343f9e35e2f203ca2425769fcb228d5fc5cb37",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/src/hdf/fractalhead.c",
+      "bytes": 22764,
+      "sha256": "c31d66cb232df01e0add7a226edc44d0270b3b11580fc6f3d4204492e0854882",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/src/hdf/gunzip.c",
+      "bytes": 686,
+      "sha256": "c40914a880b7ca3fb2fcff5b4be5eb639ba41c995a73fb634e0a786f66c9cad7",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/src/hdf/dataobject.c",
+      "bytes": 38778,
+      "sha256": "80f0356f8a10c479189a88b4695693ccdad4cdaa7c2f551775f7fa6ddbea92a5",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/src/resampler/stack_alloc.h",
+      "bytes": 3523,
+      "sha256": "ff8acaf32db44c102238278f7d394899e4701e4a1a822938a6f134253eaf2707",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/src/resampler/speex_resampler.h",
+      "bytes": 14246,
+      "sha256": "ced479f7a027e2601c2c0ec129ba280d56e0021b0aa65f2e6f51e767efb3c622",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/src/resampler/speex_resampler.c",
+      "bytes": 27827,
+      "sha256": "1952bea036eff35fbd757a9c273ce0d26ebb3481b9bde3209811ed3d3ea8255a",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/src/resampler/arch.h",
+      "bytes": 4894,
+      "sha256": "5e0e48b294e8a25884c39e6290199cd0df2e9ff5962347b8b738a0c7b0dc155e",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/src/hrtf/minphase.c",
+      "bytes": 2316,
+      "sha256": "46f839d071f585f395890041def7e1599ee95e30367998637f935e06fe04f7a2",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/src/hrtf/mysofa.h",
+      "bytes": 6641,
+      "sha256": "ad2d635d037b4b3c1766eb630b07f1067e08c6772557d3a89e93b1e03561cd29",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/src/hrtf/interpolate.c",
+      "bytes": 4403,
+      "sha256": "a554ad7b3c25f9d2a685b60e1fe9887b6167f9e81e4e114c570c5a51fbce7e44",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/src/hrtf/kdtree.h",
+      "bytes": 2024,
+      "sha256": "76375b37d4f28cae42ed05cd11a7a6e92635ea0c2387518d5479ed8d9d761d64",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/src/hrtf/lookup.c",
+      "bytes": 3014,
+      "sha256": "2b2bcdb4f1d2c3c0004239a45693c9e9a061cdd85438f7c0027dbdad706e65e1",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/src/hrtf/tools.c",
+      "bytes": 3826,
+      "sha256": "55238724d257d3221c6c16bfcf62d6990c176b248ad81786e0f100e172f4fa22",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/src/hrtf/mysofa_export.h",
+      "bytes": 971,
+      "sha256": "7fba89f1693e9c0e087d0edc1b505ad20c2e814d85aa5dfcd4fec7c66afe2ffd",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/src/hrtf/easy.c",
+      "bytes": 6712,
+      "sha256": "98ae4ca0971781f7d7161c6058ba44a6e677889628f432e14e1e51568f6b21ae",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/src/hrtf/check.c",
+      "bytes": 8025,
+      "sha256": "8ff22eaf5ff2824eafa5bf292b50232c57be928f65fce9d8d492258f5a3ff290",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/src/hrtf/reader.c",
+      "bytes": 9538,
+      "sha256": "cf7df1c376380f809e49f259a9773da6c8b46f3d3d0633a28678d8c5635b4d1a",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/src/hrtf/resample.c",
+      "bytes": 2325,
+      "sha256": "57e3bf5ec4c1f3555415a7e37fccd753a9cd6d9e50c3873e5e3afd51cd528ef0",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/src/hrtf/mysofa_export.h.in",
+      "bytes": 101,
+      "sha256": "252c2d96cc07bb3f5d9964b5a0fa0e818dc572b8f55f9443df3a9010ac53b937",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/src/hrtf/tools.h",
+      "bytes": 1456,
+      "sha256": "2fb4fa5f73609ab963fbd5c94f24fd2411d45ebec138b4af48d82ba75b3fb59e",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/src/hrtf/kdtree.c",
+      "bytes": 7698,
+      "sha256": "85c37d31b681e5c672691068703eaaa96268f83cc6dfc7be8d39324784e108c7",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/src/hrtf/spherical.c",
+      "bytes": 1299,
+      "sha256": "f670e0b200f9781d1378b01c7d9940f2ac985bc7096d0ee8c252f549c16e0846",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/src/hrtf/cache.c",
+      "bytes": 2621,
+      "sha256": "49860ee1bf7b7b9db0264a2f6b8aacae7b207704430bf6b21d48af7ec8d9eeb6",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/src/hrtf/neighbors.c",
+      "bytes": 4717,
+      "sha256": "1e0228bf33a72c83666514a075c44d4048b41f50594485645c39fee219c2ce71",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/src/hrtf/loudness.c",
+      "bytes": 1379,
+      "sha256": "53b53df72907014467e45e915532e4a8c841a98b34036d0c22c000543495b816",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/windows/testApp/testApp.sln",
+      "bytes": 1267,
+      "sha256": "1edcbe9e3b138c3f2559a9c4ba785574c90903060d6cb0fea33e6a472878078a",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/windows/testApp/stdafx.h",
+      "bytes": 305,
+      "sha256": "e0b7e3cb5ebcf09cd29d4b879c5e72928bddd0b00a49e38d8bc9bf3a32f9eb63",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/windows/testApp/testApp.m",
+      "bytes": 380,
+      "sha256": "a4db5892b628e0973fde08ba2a0eeb90a173ae356ab95956b26be342ec381402",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/windows/testApp/testApp.cpp",
+      "bytes": 2575,
+      "sha256": "0ccd608cc36e52018005908b93f22d6e6f756b1922339c7e5c471f3e57dbd1be",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/windows/testApp/targetver.h",
+      "bytes": 306,
+      "sha256": "7f988ed4cd4fe1acdede1f014931a08c508cc82f9407bc2b869ec2195c10c9c9",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/windows/testApp/testApp.vcxproj",
+      "bytes": 8805,
+      "sha256": "79ebb963f8b275273396d69a6e3be9dfd5bbcf3f79ec4039c82edacc357601fb",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/windows/testApp/stdafx.cpp",
+      "bytes": 298,
+      "sha256": "3c7213756183a4d4daf6f0fec6b36387c2eb9dcf6964aed616026a5d5826376f",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/windows/testApp/testApp.vcxproj.filters",
+      "bytes": 1236,
+      "sha256": "0813c363003ce8b57f7d731913cf3ccd77ee46612c759a6b744d6935b55a115e",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/windows/third-party/sys/time.h",
+      "bytes": 62,
+      "sha256": "f19043254e00a23dee7e016103a9287004093ebb52daa7ff35d85f1df8827aa2",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/windows/third-party/sys/LICENSE",
+      "bytes": 7991,
+      "sha256": "818fd40b46dfbe838f4dc0957bfe44afc4b35d450237723b82d793a0403f3c77",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/windows/third-party/sys/times.h",
+      "bytes": 920,
+      "sha256": "d38edc49e26736a11ca733cdd7cd973e83db0e89f5d7410671ce3120dda3d498",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/windows/third-party/sys/time.cpp",
+      "bytes": 416,
+      "sha256": "cf97dd41730a02e0f5c48ff08f88bb57609ba36b79cff83bccda4041ed9bddc9",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/windows/third-party/zlib-1.2.11/LICENSE",
+      "bytes": 66,
+      "sha256": "05b547d6a157efb1659997b605b63cd36f2e3f30d167b5a6826ecdde052d154f",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/windows/third-party/zlib-1.2.11/bin/zlib.dll",
+      "bytes": 125440,
+      "sha256": "2f283bd71051eaa65adff69af2986d8e890e3a08936bb4daa0a3ec9c8e13c8e7",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/windows/third-party/zlib-1.2.11/include/zlib.h",
+      "bytes": 96239,
+      "sha256": "4ddc82b4af931ab55f44d977bde81bfbc4151b5dcdccc03142831a301b5ec3c8",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/windows/third-party/zlib-1.2.11/include/zconf.h",
+      "bytes": 16349,
+      "sha256": "5c8098a90ef72f07d2336388cbab04254927d6273e9539a8fcdc04e305faf5ef",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/windows/third-party/zlib-1.2.11/lib/zlibstaticd.lib",
+      "bytes": 291506,
+      "sha256": "490aa46736c52f8f147c5ac24086a7def4108ad47667065ccbdc60254800e39d",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/windows/third-party/zlib-1.2.11/lib/zlib.lib",
+      "bytes": 16228,
+      "sha256": "82660e7c50b9b75d8a1a6f8163df4fdda82b538c0d04bdc0beb307b23d267cc8",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/windows/third-party/zlib-1.2.11/lib/zlibstatic.lib",
+      "bytes": 339518,
+      "sha256": "4b515c81b90ee61fac76c959dd9ef0399072120e725e97f35af40e6809e0ec61",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    },
+    {
+      "path": "work/story005-cleanup-preserved-20261005/mysofa-source/windows/third-party/zlib-1.2.11/lib/zlib.pdb",
+      "bytes": 643072,
+      "sha256": "e49624e5dd6d861a6d4b9bd1aacabaa62c684b34023f42deb8944c06831ea852",
+      "reason": "Archive absent: exact small source/code/license retained; large test assets approved for disposal"
+    }
+  ],
+  "archive_comparison": [
+    {
+      "target": "work/build/vlc-source/extras/tools/protobuf",
+      "retained_archive": "work/build/vlc-source/extras/tools/protobuf-3.4.1.tar.gz",
+      "archive_sha256": "2bb34b4a8211a30d12ef29fd8660995023d119c99fbab2e5fe46f17528c9cc78",
+      "changed_source_files_saved": 1
+    },
+    {
+      "target": "work/build/vlc-source/extras/tools/gettext",
+      "retained_archive": "work/build/vlc-source/extras/tools/gettext-0.22.tar.gz",
+      "archive_sha256": "49f089be11b490170bbf09ed2f51e5f5177f55be4cc66504a5861820e0fb06ab",
+      "changed_source_files_saved": 1
+    },
+    {
+      "target": "work/build/vlc-source/extras/tools/bison",
+      "retained_archive": "work/build/vlc-source/extras/tools/bison-3.8.2.tar.xz",
+      "archive_sha256": "9bba0214ccf7f1079c5d59210045227bcf619519840ebfa80cd3849cff5a5bf2",
+      "changed_source_files_saved": 0
+    },
+    {
+      "target": "work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/gettext",
+      "retained_archive": "work/build/vlc-source/contrib/tarballs/gettext-0.26.tar.xz",
+      "archive_sha256": "d1fb86e260cfe7da6031f94d2e44c0da55903dbae0a2fa0fae78c91ae1b56f00",
+      "changed_source_files_saved": 4
+    },
+    {
+      "target": "work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/harfbuzz",
+      "retained_archive": "work/build/vlc-source/contrib/tarballs/harfbuzz-14.2.1.tar.xz",
+      "archive_sha256": "a54a5d8e9380a41fbb762ce367bcbf7704792dfca0d93f1bbca86c5a57902e0e",
+      "changed_source_files_saved": 2
+    },
+    {
+      "target": "work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/gnutls",
+      "retained_archive": "work/build/vlc-source/contrib/tarballs/gnutls-3.8.13.tar.xz",
+      "archive_sha256": "ffed8ec1bf09c2426d4f14aae377de4753b53e537d685e604e99a8b16ca9c97e",
+      "changed_source_files_saved": 8
+    },
+    {
+      "target": "work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/libxml2",
+      "retained_archive": "work/build/vlc-source/contrib/tarballs/libxml2-2.15.3.tar.xz",
+      "archive_sha256": "78262a6e7ac170d6528ebfe2efccdf220191a5af6a6cd61ea4a9a9a5042c7a07",
+      "changed_source_files_saved": 2
+    }
+  ],
+  "preservation_bytes": 8347639,
+  "preservation_boundary": "All finished apps, installed preview, dirty source checkouts, installed tool/contrib prefixes, old FFmpeg/config and private libavformat, Story005 baseline/candidate/helper/evidence, archives and fault-test logs retained. Only approved generated trees and exact unmounted synthetic images removed.",
+  "before_free_bytes": 4111212544,
+  "nominal_target_allocated_bytes": 1830109184,
+  "after_free_bytes": 5957795840,
+  "observed_available_bytes_delta": 1846583296,
+  "protected_after_sha256": {
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/contrib/contrib-aarch64-apple-darwin27/ffmpeg/vlc_build/config.h": "ceb6f6d8a2f16adac72dc851d7c2675a73cb45b3bf40f88ce66d231bbdd89a2b",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/thumbnail-libavformat/libavformat.a": "93d8acfd4368bb6e0ea9e82a3b8cc5c0a27d1624cb6859bc4e8534c04d035d34",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/build/vlc-source/extras/tools/build/bin/protoc": "ada97cf0b4afc48210a19091d9f08fa39c0f50c886fe1456dc163ddb7ab04599",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/VLC.app/Contents/MacOS/vlc-timeline-preview": "5f5142d4f6bc268fa3cb6c51aa8842df0fd6700ebaef9ffbef4c9163e8e8e1a6",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/VLC.app/Contents/MacOS/VLC": "ef15c7ca6ba1a6bb5af9c5f36a9976f81b6f4d6f1677b64ac108dccc46b7148f",
+    "/Users/cam/Applications/VLC Timeline Preview.app/Contents/MacOS/plugins/libmacosx_plugin.dylib": "4ee53e757ac1f6e29c58d7377a1945bb666a06d0df42df0ac1ccca7260f7a6c5",
+    "/Users/cam/Applications/VLC Timeline Preview.app/Contents/MacOS/vlc-thumbnail-helper": "ae7795d6fe67d64f2d770a1f75d7db6302f6d22fedf20cd448a604a5b575d07e"
+  },
+  "protected_hashes_unchanged": true,
+  "utc_completed": "2026-10-06T05:06:04.572076+00:00",
+  "reclaim_interpretation": "Observed free-space delta includes APFS shared-block/purgeable effects and concurrent host changes; nominal du allocation is not guaranteed reclaimed blocks.",
+  "process_app_changes": "None: no process stops, launches, native tests, builds, installed/source app changes, goal changes or metadata changes."
+}

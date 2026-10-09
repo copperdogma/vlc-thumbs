@@ -1,0 +1,2 @@
+child_ready pid=18236 pgid=18235 ignores_sigterm=1
+child_sigterm_ignored

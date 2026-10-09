@@ -1,0 +1,698 @@
+Setting base environment
+Using VLC root dir /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-reproduction, build triplet aarch64-apple-darwin19 and host triplet aarch64-apple-darwin19
+make[1]: `vlc-cache-gen' is up to date.
+Test Suite 'All tests' started at 2026-10-06 00:47:54.792.
+Test Suite 'VLCMacOSXTests.xctest' started at 2026-10-06 00:47:54.793.
+Test Suite 'NSStringHelpersTest' started at 2026-10-06 00:47:54.793.
+Test Case '-[NSStringHelpersTest testBase64EncodingAndDecoding]' started.
+Test Case '-[NSStringHelpersTest testBase64EncodingAndDecoding]' passed (0.001 seconds).
+Test Case '-[NSStringHelpersTest testCocoaKeyToVLC]' started.
+Test Case '-[NSStringHelpersTest testCocoaKeyToVLC]' passed (0.000 seconds).
+Test Case '-[NSStringHelpersTest testCStringConversion]' started.
+Test Case '-[NSStringHelpersTest testCStringConversion]' passed (0.000 seconds).
+Test Case '-[NSStringHelpersTest testDurationFormatting]' started.
+Test Case '-[NSStringHelpersTest testDurationFormatting]' passed (0.000 seconds).
+Test Case '-[NSStringHelpersTest testExtensionsArrayFromVLCStyleString]' started.
+Test Case '-[NSStringHelpersTest testExtensionsArrayFromVLCStyleString]' passed (0.000 seconds).
+Test Case '-[NSStringHelpersTest testFlagEmojiStringForCountryCode]' started.
+Test Case '-[NSStringHelpersTest testFlagEmojiStringForCountryCode]' passed (0.000 seconds).
+Test Case '-[NSStringHelpersTest testNilSafeStringComparison]' started.
+Test Case '-[NSStringHelpersTest testNilSafeStringComparison]' passed (0.000 seconds).
+Test Case '-[NSStringHelpersTest testOSXStringKeyToString]' started.
+Test Case '-[NSStringHelpersTest testOSXStringKeyToString]' passed (0.000 seconds).
+Test Case '-[NSStringHelpersTest testStringWithIncrementedTrailingNumber]' started.
+Test Case '-[NSStringHelpersTest testStringWithIncrementedTrailingNumber]' passed (0.001 seconds).
+Test Case '-[NSStringHelpersTest testStringWrapping]' started.
+Test Case '-[NSStringHelpersTest testStringWrapping]' passed (0.036 seconds).
+Test Case '-[NSStringHelpersTest testTimeFormatting]' started.
+Test Case '-[NSStringHelpersTest testTimeFormatting]' passed (0.000 seconds).
+Test Case '-[NSStringHelpersTest testTimeInSecondsFromStringWithColons]' started.
+Test Case '-[NSStringHelpersTest testTimeInSecondsFromStringWithColons]' passed (0.000 seconds).
+Test Case '-[NSStringHelpersTest testVLCKeyToString]' started.
+Test Case '-[NSStringHelpersTest testVLCKeyToString]' passed (0.000 seconds).
+Test Case '-[NSStringHelpersTest testVLCModifiersToCocoa]' started.
+Test Case '-[NSStringHelpersTest testVLCModifiersToCocoa]' passed (0.000 seconds).
+Test Case '-[NSStringHelpersTest testVolumeHelpersForTemporaryDirectories]' started.
+Test Case '-[NSStringHelpersTest testVolumeHelpersForTemporaryDirectories]' passed (0.003 seconds).
+Test Suite 'NSStringHelpersTest' passed at 2026-10-06 00:47:54.836.
+	 Executed 15 tests, with 0 failures (0 unexpected) in 0.043 (0.044) seconds
+Test Suite 'VLCHexNumberFormatterTest' started at 2026-10-06 00:47:54.836.
+Test Case '-[VLCHexNumberFormatterTest testGetObjectValue]' started.
+Test Case '-[VLCHexNumberFormatterTest testGetObjectValue]' passed (0.000 seconds).
+Test Case '-[VLCHexNumberFormatterTest testStringForObjectValue]' started.
+Test Case '-[VLCHexNumberFormatterTest testStringForObjectValue]' passed (0.000 seconds).
+Test Suite 'VLCHexNumberFormatterTest' passed at 2026-10-06 00:47:54.837.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'VLCInputItemTest' started at 2026-10-06 00:47:54.837.
+Test Case '-[VLCInputItemTest testCancelParsingWithoutParser]' started.
+Test Case '-[VLCInputItemTest testCancelParsingWithoutParser]' passed (0.001 seconds).
+Test Case '-[VLCInputItemTest testCommonInputItemData]' started.
+Test Case '-[VLCInputItemTest testCommonInputItemData]' passed (0.000 seconds).
+Test Case '-[VLCInputItemTest testCommonInputItemDataMarksEveryDifferingStringProperty]' started.
+Test Case '-[VLCInputItemTest testCommonInputItemDataMarksEveryDifferingStringProperty]' passed (0.000 seconds).
+Test Case '-[VLCInputItemTest testDefaultValuesAndTitleFallback]' started.
+Test Case '-[VLCInputItemTest testDefaultValuesAndTitleFallback]' passed (0.000 seconds).
+Test Case '-[VLCInputItemTest testInitializationMapsCoreProperties]' started.
+Test Case '-[VLCInputItemTest testInitializationMapsCoreProperties]' passed (0.000 seconds).
+Test Case '-[VLCInputItemTest testLocalFileOperationsUseTheirApplicationServices]' started.
+Test Case '-[VLCInputItemTest testLocalFileOperationsUseTheirApplicationServices]' passed (0.000 seconds).
+Test Case '-[VLCInputItemTest testLocalThumbnailCompletes]' started.
+Test Case '-[VLCInputItemTest testLocalThumbnailCompletes]' passed (0.001 seconds).
+Test Case '-[VLCInputItemTest testMalformedLocalURIProducesNoFinderTags]' started.
+Test Case '-[VLCInputItemTest testMalformedLocalURIProducesNoFinderTags]' passed (0.000 seconds).
+Test Case '-[VLCInputItemTest testMetadataSettersUpdateCoreItem]' started.
+Test Case '-[VLCInputItemTest testMetadataSettersUpdateCoreItem]' passed (0.000 seconds).
+Test Case '-[VLCInputItemTest testMissingURIShortCircuitsLocalOperations]' started.
+Test Case '-[VLCInputItemTest testMissingURIShortCircuitsLocalOperations]' passed (0.000 seconds).
+Test Case '-[VLCInputItemTest testParsingEndedPostsSuccessAndFailureNotifications]' started.
+Test Case '-[VLCInputItemTest testParsingEndedPostsSuccessAndFailureNotifications]' passed (0.000 seconds).
+Test Case '-[VLCInputItemTest testRejectsNilInputItem]' started.
+Test Case '-[VLCInputItemTest testRejectsNilInputItem]' passed (0.000 seconds).
+Test Case '-[VLCInputItemTest testStreamAndArtworkState]' started.
+Test Case '-[VLCInputItemTest testStreamAndArtworkState]' passed (0.000 seconds).
+Test Case '-[VLCInputItemTest testStreamThumbnailCompletesWithoutImage]' started.
+Test Case '-[VLCInputItemTest testStreamThumbnailCompletesWithoutImage]' passed (0.000 seconds).
+Test Case '-[VLCInputItemTest testSubtreeReplacementPostsNotifications]' started.
+Test Case '-[VLCInputItemTest testSubtreeReplacementPostsNotifications]' passed (0.000 seconds).
+Test Case '-[VLCInputItemTest testURLFactoryAndRadioCountryCode]' started.
+Test Case '-[VLCInputItemTest testURLFactoryAndRadioCountryCode]' passed (0.000 seconds).
+Test Case '-[VLCInputItemTest testWritingMetadataForStreamFailsWithoutTouchingTheFilesystem]' started.
+Test Case '-[VLCInputItemTest testWritingMetadataForStreamFailsWithoutTouchingTheFilesystem]' passed (0.000 seconds).
+Test Suite 'VLCInputItemTest' passed at 2026-10-06 00:47:54.840.
+	 Executed 17 tests, with 0 failures (0 unexpected) in 0.002 (0.003) seconds
+Test Suite 'VLCInputNodeTest' started at 2026-10-06 00:47:54.840.
+Test Case '-[VLCInputNodeTest testChildrenAreCachedUntilCleared]' started.
+Test Case '-[VLCInputNodeTest testChildrenAreCachedUntilCleared]' passed (0.000 seconds).
+Test Case '-[VLCInputNodeTest testLeafNodeWithAnInputItemHasNoChildren]' started.
+Test Case '-[VLCInputNodeTest testLeafNodeWithAnInputItemHasNoChildren]' passed (0.000 seconds).
+Test Case '-[VLCInputNodeTest testMalformedNodeWithMissingChildrenArrayDoesNotCrash]' started.
+Test Case '-[VLCInputNodeTest testMalformedNodeWithMissingChildrenArrayDoesNotCrash]' passed (0.000 seconds).
+Test Case '-[VLCInputNodeTest testMalformedNodeWithNullChildSlotIsWrappedSafely]' started.
+Test Case '-[VLCInputNodeTest testMalformedNodeWithNullChildSlotIsWrappedSafely]' passed (0.000 seconds).
+Test Case '-[VLCInputNodeTest testNestedNodesAreWrappedRecursively]' started.
+Test Case '-[VLCInputNodeTest testNestedNodesAreWrappedRecursively]' passed (0.000 seconds).
+Test Case '-[VLCInputNodeTest testNilNodeHasEmptyState]' started.
+Test Case '-[VLCInputNodeTest testNilNodeHasEmptyState]' passed (0.000 seconds).
+Test Case '-[VLCInputNodeTest testNodeWithoutAnInputItem]' started.
+Test Case '-[VLCInputNodeTest testNodeWithoutAnInputItem]' passed (0.000 seconds).
+Test Case '-[VLCInputNodeTest testRootAndChildrenMapToInputItems]' started.
+Test Case '-[VLCInputNodeTest testRootAndChildrenMapToInputItems]' passed (0.000 seconds).
+Test Suite 'VLCInputNodeTest' passed at 2026-10-06 00:47:54.840.
+	 Executed 8 tests, with 0 failures (0 unexpected) in 0.001 (0.001) seconds
+Test Suite 'VLCLibraryDataTypesIntegrationTest' started at 2026-10-06 00:47:54.840.
+[000000016b618a60] main generic error: cannot load plug-in /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-reproduction/modules/.libs/libmacosx_plugin.dylib: dlopen(/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-reproduction/modules/.libs/libmacosx_plugin.dylib, 0x0001): Library not loaded: @rpath/Sparkle.framework/Versions/B/Sparkle
+  Referenced from: <80430294-B5F2-3483-9A64-B591F6B32FD4> /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-reproduction/modules/.libs/libmacosx_plugin.dylib
+  Reason: tried: '/usr/lib/swift/Sparkle.framework/Versions/B/Sparkle' (no such file, not in dyld cache), '/System/Volumes/Preboot/Cryptexes/OS/usr/lib/swift/Sparkle.framework/Versions/B/Sparkle' (no such file), '/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/Sparkle.framework/Versions/B/Sparkle' (no such file), '/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks/Sparkle.framework/Versions/B/Sparkle' (no such file), '/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/Sparkle.framework/Versions/B/Sparkle' (no such file), '/Applications/Xcode.app/Contents/Sparkle.framework/Versions/B/Sparkle' (no such file)
+[00000075e0eac1e0] bonjour services discovery: starting discovery
+[00000075e0eac240] upnp services discovery: Initializing libupnp on 'en0' interface
+[00000075e0eac2a0] main services discovery error: cannot join multicast group: Invalid argument
+[00000075e0eac2a0] main services discovery error: cannot join multicast group: Can't assign requested address
+[00000075e0eac2a0] main services discovery error: cannot join multicast group: Invalid argument
+[00000075e0eac2a0] main services discovery error: cannot join multicast group: Invalid argument
+[00000075e0eac2a0] main services discovery error: cannot join multicast group: Invalid argument
+[00000075e0eac2a0] main services discovery error: cannot join multicast group: Invalid argument
+[00000075e0eac2a0] main services discovery error: cannot join multicast group: Invalid argument
+[00000075e0eac2a0] main services discovery error: cannot join multicast group: Invalid argument
+[00000075e0eac2a0] main services discovery error: cannot join multicast group: Address family not supported by protocol family
+[00000075e0eac2a0] main services discovery error: cannot join multicast group: Invalid argument
+[00000075e0eac2a0] main services discovery error: cannot join multicast group: Can't assign requested address
+[00000075e0eac2a0] main services discovery error: cannot join multicast group: Can't assign requested address
+[00000075e0eac2a0] main services discovery error: cannot join multicast group: Can't assign requested address
+[00000075e0eac2a0] main services discovery error: cannot join multicast group: Can't assign requested address
+[00000075e0eac2a0] main services discovery error: cannot join multicast group: Can't assign requested address
+[00000075e0eac2a0] main services discovery error: cannot join multicast group: Can't assign requested address
+[00000075e0eac2a0] main services discovery error: cannot join multicast group: Can't assign requested address
+[00000075e0eac2a0] main services discovery error: cannot join multicast group: Can't assign requested address
+[00000075e0eac2a0] main services discovery error: cannot join multicast group: Can't assign requested address
+[00000075e0eac2a0] main services discovery error: cannot join multicast group: Can't assign requested address
+[00000075e0eac2a0] main services discovery error: cannot join multicast group: Can't assign requested address
+[00000075e0eac2a0] main services discovery error: cannot join multicast group: Can't assign requested address
+Test Case '-[VLCLibraryDataTypesIntegrationTest testAlbumAlbumsRelationshipContainsTheAlbum]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testAlbumAlbumsRelationshipContainsTheAlbum]' passed (2.336 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testAlbumArtistsRelationshipResolvesThePersistedArtist]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testAlbumArtistsRelationshipResolvesThePersistedArtist]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testAlbumFactoryRejectsUnknownLibraryID]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testAlbumFactoryRejectsUnknownLibraryID]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testAlbumFactoryResolvesPersistedAlbum]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testAlbumFactoryResolvesPersistedAlbum]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testAlbumGenresRelationshipContainsThePersistedGenre]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testAlbumGenresRelationshipContainsThePersistedGenre]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testAlbumMediaItemsRelationshipContainsTheAlbumTrack]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testAlbumMediaItemsRelationshipContainsTheAlbumTrack]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testAlbumMoveToTrashMovesFetchedMediaItems]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testAlbumMoveToTrashMovesFetchedMediaItems]' passed (0.001 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testAlbumPrimaryActionableDetailResolvesItsArtist]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testAlbumPrimaryActionableDetailResolvesItsArtist]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testAlbumSecondaryActionableDetailResolvesItsGenre]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testAlbumSecondaryActionableDetailResolvesItsGenre]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testAlbumSecondaryDetailUsesGenre]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testAlbumSecondaryDetailUsesGenre]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testAlbumToggleFavoritePersistsThroughMediaLibrary]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testAlbumToggleFavoritePersistsThroughMediaLibrary]' passed (0.001 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testAlbumTrackSecondaryDetailUsesGenre]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testAlbumTrackSecondaryDetailUsesGenre]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testArtistAlbumsRelationshipContainsTheAlbum]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testArtistAlbumsRelationshipContainsTheAlbum]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testArtistArtistsRelationshipContainsTheArtist]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testArtistArtistsRelationshipContainsTheArtist]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testArtistEnumerationTraversesAlbumTracks]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testArtistEnumerationTraversesAlbumTracks]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testArtistFactoryRejectsUnknownLibraryID]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testArtistFactoryRejectsUnknownLibraryID]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testArtistFactoryResolvesUnknownArtist]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testArtistFactoryResolvesUnknownArtist]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testArtistFactoryResolvesVariousArtists]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testArtistFactoryResolvesVariousArtists]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testArtistGenresRelationshipContainsTheGenre]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testArtistGenresRelationshipContainsTheGenre]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testArtistIterationTraversesAlbumTracks]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testArtistIterationTraversesAlbumTracks]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testArtistMediaItemsRelationshipContainsTheAlbumTrack]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testArtistMediaItemsRelationshipContainsTheAlbumTrack]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testArtistMoveToTrashMovesFetchedMediaItems]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testArtistMoveToTrashMovesFetchedMediaItems]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testArtistSecondaryActionableDetailResolvesItsGenre]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testArtistSecondaryActionableDetailResolvesItsGenre]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testArtistSecondaryDetailUsesGenre]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testArtistSecondaryDetailUsesGenre]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testArtistToggleFavoritePersistsThroughMediaLibrary]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testArtistToggleFavoritePersistsThroughMediaLibrary]' passed (0.001 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testDeletedPlaylistIsNotReturnedByFactory]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testDeletedPlaylistIsNotReturnedByFactory]' passed (0.001 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testExternalURLInitializerCreatesPersistedMediaItem]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testExternalURLInitializerCreatesPersistedMediaItem]' passed (0.002 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testExternalURLInitializerRejectsNilURL]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testExternalURLInitializerRejectsNilURL]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testFileBackedPlaylistMoveToTrashFailureDeletesPlaylist]' started.
+2026-10-06 00:47:58.515 xctest[17253:7856248] Failed to move playlist file to trash: Error Domain=NSCocoaErrorDomain Code=512 "The file couldn’t be saved."
+2026-10-06 00:47:58.515 xctest[17253:7856248] Successfully deleted playlist Integration Playlist with ID 2 from media library
+Test Case '-[VLCLibraryDataTypesIntegrationTest testFileBackedPlaylistMoveToTrashFailureDeletesPlaylist]' passed (0.002 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testGenreAlbumsRelationshipContainsThePersistedAlbum]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testGenreAlbumsRelationshipContainsThePersistedAlbum]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testGenreArtistsRelationshipContainsThePersistedArtist]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testGenreArtistsRelationshipContainsThePersistedArtist]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testGenreFactoryRejectsUnknownLibraryID]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testGenreFactoryRejectsUnknownLibraryID]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testGenreFactoryResolvesPersistedGenre]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testGenreFactoryResolvesPersistedGenre]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testGenreGenresRelationshipContainsTheGenre]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testGenreGenresRelationshipContainsTheGenre]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testGenreMediaItemsRelationshipContainsTheAlbumTrack]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testGenreMediaItemsRelationshipContainsTheAlbumTrack]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testGenreMoveToTrashMovesFetchedMediaItems]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testGenreMoveToTrashMovesFetchedMediaItems]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testGenreToggleFavoritePersistsThroughMediaLibrary]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testGenreToggleFavoritePersistsThroughMediaLibrary]' passed (0.001 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testGroupFactoryRejectsUnknownLibraryID]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testGroupFactoryRejectsUnknownLibraryID]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testGroupFactoryResolvesPersistedGroup]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testGroupFactoryResolvesPersistedGroup]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testGroupFirstMediaItemMatchesItsMediaItemsRelationship]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testGroupFirstMediaItemMatchesItsMediaItemsRelationship]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testGroupMediaItemsRelationshipContainsThePersistedEpisode]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testGroupMediaItemsRelationshipContainsThePersistedEpisode]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testGroupMoveToTrashMovesFetchedMediaItems]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testGroupMoveToTrashMovesFetchedMediaItems]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testGroupToggleFavoritePersistsThroughMediaLibrary]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testGroupToggleFavoritePersistsThroughMediaLibrary]' passed (0.001 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemAudioDelayPreferencePersistsThroughMediaLibrary]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemAudioDelayPreferencePersistsThroughMediaLibrary]' passed (0.002 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemAudioTrackPreferencePersistsThroughMediaLibrary]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemAudioTrackPreferencePersistsThroughMediaLibrary]' passed (0.001 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemChapterPreferencePersistsThroughMediaLibrary]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemChapterPreferencePersistsThroughMediaLibrary]' passed (0.001 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemCropPreferencePersistsThroughMediaLibrary]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemCropPreferencePersistsThroughMediaLibrary]' passed (0.001 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemDeinterlacePreferencePersistsThroughMediaLibrary]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemDeinterlacePreferencePersistsThroughMediaLibrary]' passed (0.001 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemExposesPersistedInputItem]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemExposesPersistedInputItem]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemFactoryRejectsUnknownLibraryID]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemFactoryRejectsUnknownLibraryID]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemFactoryRejectsUnknownURL]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemFactoryRejectsUnknownURL]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemFactoryResolvesPersistedExternalMedia]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemFactoryResolvesPersistedExternalMedia]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemFactoryResolvesPersistedExternalMediaByURL]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemFactoryResolvesPersistedExternalMediaByURL]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemFavoritePersistsThroughMediaLibrary]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemFavoritePersistsThroughMediaLibrary]' passed (0.001 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemGainPreferencePersistsThroughMediaLibrary]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemGainPreferencePersistsThroughMediaLibrary]' passed (0.001 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemInitializerMapsPersistedMedia]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemInitializerMapsPersistedMedia]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemPlaybackRateRoundTripsThroughMediaLibrary]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemPlaybackRateRoundTripsThroughMediaLibrary]' passed (0.001 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemProgramPreferencePersistsThroughMediaLibrary]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemProgramPreferencePersistsThroughMediaLibrary]' passed (0.001 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemRatingPersistsIndependentlyPerMediaItem]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemRatingPersistsIndependentlyPerMediaItem]' passed (0.002 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemRatingRoundTripsThroughMediaLibrary]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemRatingRoundTripsThroughMediaLibrary]' passed (0.001 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemsFromPasteboardDataRoundTripsPersistedItem]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemsFromPasteboardDataRoundTripsPersistedItem]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemStringPlaybackPreferenceRoundTripsThroughMediaLibrary]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemStringPlaybackPreferenceRoundTripsThroughMediaLibrary]' passed (0.002 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemSubtitleDelayPreferencePersistsThroughMediaLibrary]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemSubtitleDelayPreferencePersistsThroughMediaLibrary]' passed (0.001 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemSubtitleTrackPreferencePersistsThroughMediaLibrary]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemSubtitleTrackPreferencePersistsThroughMediaLibrary]' passed (0.001 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemTitlePreferencePersistsThroughMediaLibrary]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemTitlePreferencePersistsThroughMediaLibrary]' passed (0.001 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemVideoFiltersPreferencePersistsThroughMediaLibrary]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemVideoFiltersPreferencePersistsThroughMediaLibrary]' passed (0.001 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemVideoTrackPreferencePersistsThroughMediaLibrary]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemVideoTrackPreferencePersistsThroughMediaLibrary]' passed (0.001 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemZoomPreferencePersistsThroughMediaLibrary]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMediaItemZoomPreferencePersistsThroughMediaLibrary]' passed (0.001 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMissingFileBackedPlaylistMoveToTrashDeletesPlaylist]' started.
+2026-10-06 00:47:58.539 xctest[17253:7856248] Playlist file does not exist: /var/folders/8f/3nlcf3sj1s5bbk1g_3dt3djm0000gn/T/vlc-datatypes-missing-playlist.m3u
+2026-10-06 00:47:58.540 xctest[17253:7856248] Successfully deleted playlist Integration Playlist with ID 3 from media library
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMissingFileBackedPlaylistMoveToTrashDeletesPlaylist]' passed (0.001 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMovieFavoritePersistsThroughMediaLibrary]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMovieFavoritePersistsThroughMediaLibrary]' passed (0.012 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMovieFirstMediaItemMatchesItsMediaItemsRelationship]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMovieFirstMediaItemMatchesItsMediaItemsRelationship]' passed (0.002 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMovieMapsPersistedSummaryAndIMDbID]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMovieMapsPersistedSummaryAndIMDbID]' passed (0.002 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMovieMediaItemHasMovieSubtypeAndEntity]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMovieMediaItemHasMovieSubtypeAndEntity]' passed (0.002 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMovieMediaItemsRelationshipContainsThePersistedMovie]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMovieMediaItemsRelationshipContainsThePersistedMovie]' passed (0.002 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMovieMoveToTrashMovesItsMediaItem]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMovieMoveToTrashMovesItsMediaItem]' passed (0.002 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMovieRevealInFinderUsesItsMediaItem]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testMovieRevealInFinderUsesItsMediaItem]' passed (0.002 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testNonFileBackedPlaylistMoveToTrashDeletesPlaylist]' started.
+2026-10-06 00:47:58.566 xctest[17253:7856248] Successfully deleted playlist Integration Playlist with ID 4 from media library
+Test Case '-[VLCLibraryDataTypesIntegrationTest testNonFileBackedPlaylistMoveToTrashDeletesPlaylist]' passed (0.001 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testNonFileMRLPlaylistMoveToTrashDeletesPlaylist]' started.
+2026-10-06 00:47:58.566 xctest[17253:7856248] Playlist Integration Playlist is not file-backed or is a dir (?)
+2026-10-06 00:47:58.567 xctest[17253:7856248] Successfully deleted playlist Integration Playlist with ID 5 from media library
+Test Case '-[VLCLibraryDataTypesIntegrationTest testNonFileMRLPlaylistMoveToTrashDeletesPlaylist]' passed (0.001 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testPlaylistAppendInvalidatesCachedMediaItems]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testPlaylistAppendInvalidatesCachedMediaItems]' passed (0.001 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testPlaylistAppendMedia]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testPlaylistAppendMedia]' passed (0.002 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testPlaylistAppendPersistsMediaCount]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testPlaylistAppendPersistsMediaCount]' passed (0.001 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testPlaylistAppendPreservesMediaOrder]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testPlaylistAppendPreservesMediaOrder]' passed (0.003 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testPlaylistFactoryRejectsUnknownLibraryID]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testPlaylistFactoryRejectsUnknownLibraryID]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testPlaylistFactoryResolvesPersistedPlaylist]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testPlaylistFactoryResolvesPersistedPlaylist]' passed (0.001 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testPlaylistFavoriteRoundTripsThroughMediaLibrary]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testPlaylistFavoriteRoundTripsThroughMediaLibrary]' passed (0.003 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testPlaylistRemovalFoldsConsecutivePositions]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testPlaylistRemovalFoldsConsecutivePositions]' passed (0.011 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testPlaylistRemovalIgnoresOutOfRangePositions]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testPlaylistRemovalIgnoresOutOfRangePositions]' passed (0.003 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testPlaylistRemovalSupportsUnsortedNonContiguousPositions]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testPlaylistRemovalSupportsUnsortedNonContiguousPositions]' passed (0.012 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testPlaylistRemovalTreatsDuplicatePositionsAsOneSelection]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testPlaylistRemovalTreatsDuplicatePositionsAsOneSelection]' passed (0.007 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testPlaylistRemovalWithNoPositionsLeavesMediaUnchanged]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testPlaylistRemovalWithNoPositionsLeavesMediaUnchanged]' passed (0.002 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testPlaylistRemoveMediaInvalidatesCachedMediaItems]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testPlaylistRemoveMediaInvalidatesCachedMediaItems]' passed (0.003 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testPlaylistRenamePersistsThroughMediaLibrary]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testPlaylistRenamePersistsThroughMediaLibrary]' passed (0.002 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testShowEpisodeInputItemContainsShowName]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testShowEpisodeInputItemContainsShowName]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testShowEpisodePrimaryDetailUsesShowName]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testShowEpisodePrimaryDetailUsesShowName]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testShowEpisodesRelationshipContainsThePersistedEpisode]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testShowEpisodesRelationshipContainsThePersistedEpisode]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testShowFactoryRejectsUnknownLibraryID]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testShowFactoryRejectsUnknownLibraryID]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testShowFactoryResolvesPersistedShow]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testShowFactoryResolvesPersistedShow]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testShowFactoryResolvesUnknownShow]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testShowFactoryResolvesUnknownShow]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testShowMediaItemsRelationshipAliasesEpisodes]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testShowMediaItemsRelationshipAliasesEpisodes]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testShowMoveToTrashMovesFetchedEpisodes]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testShowMoveToTrashMovesFetchedEpisodes]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testShowToggleFavoritePersistsThroughMediaLibrary]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testShowToggleFavoritePersistsThroughMediaLibrary]' passed (0.003 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testStreamURLInitializerCreatesPersistedStream]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testStreamURLInitializerCreatesPersistedStream]' passed (0.003 seconds).
+Test Case '-[VLCLibraryDataTypesIntegrationTest testStreamURLInitializerRejectsNilURL]' started.
+Test Case '-[VLCLibraryDataTypesIntegrationTest testStreamURLInitializerRejectsNilURL]' passed (0.000 seconds).
+[00000075e0eac1e0] bonjour services discovery: stopped discovery
+Test Suite 'VLCLibraryDataTypesIntegrationTest' passed at 2026-10-06 00:47:59.933.
+	 Executed 103 tests, with 0 failures (0 unexpected) in 2.458 (5.092) seconds
+Test Suite 'VLCLibraryDataTypesTest' started at 2026-10-06 00:47:59.933.
+Test Case '-[VLCLibraryDataTypesTest testAlbumProperties]' started.
+Test Case '-[VLCLibraryDataTypesTest testAlbumProperties]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testAlbumTrackPrimaryDetailFallsBackForMissingArtistName]' started.
+Test Case '-[VLCLibraryDataTypesTest testAlbumTrackPrimaryDetailFallsBackForMissingArtistName]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testAlbumTrackPrimaryDetailUsesArtistName]' started.
+Test Case '-[VLCLibraryDataTypesTest testAlbumTrackPrimaryDetailUsesArtistName]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testAlbumTrackSecondaryDetailFallsBackToInputItemDateWithoutGenre]' started.
+Test Case '-[VLCLibraryDataTypesTest testAlbumTrackSecondaryDetailFallsBackToInputItemDateWithoutGenre]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testArtistDisplayStringFallsBackForMissingName]' started.
+Test Case '-[VLCLibraryDataTypesTest testArtistDisplayStringFallsBackForMissingName]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testArtistDurationStringUsesSingularForms]' started.
+Test Case '-[VLCLibraryDataTypesTest testArtistDurationStringUsesSingularForms]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testArtistEnumerationStopsAcrossMultipleAlbums]' started.
+Test Case '-[VLCLibraryDataTypesTest testArtistEnumerationStopsAcrossMultipleAlbums]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testArtistEnumerationTraversesMultipleAlbums]' started.
+Test Case '-[VLCLibraryDataTypesTest testArtistEnumerationTraversesMultipleAlbums]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testArtistProperties]' started.
+Test Case '-[VLCLibraryDataTypesTest testArtistProperties]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testAudioTrackHasNoResolutionLabel]' started.
+Test Case '-[VLCLibraryDataTypesTest testAudioTrackHasNoResolutionLabel]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testDummyItemEnumeratesItsChildren]' started.
+Test Case '-[VLCLibraryDataTypesTest testDummyItemEnumeratesItsChildren]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testDummyItemIteratesItsChildren]' started.
+Test Case '-[VLCLibraryDataTypesTest testDummyItemIteratesItsChildren]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testDummyItemMoveToTrashMovesAllChildMediaItems]' started.
+Test Case '-[VLCLibraryDataTypesTest testDummyItemMoveToTrashMovesAllChildMediaItems]' passed (0.002 seconds).
+Test Case '-[VLCLibraryDataTypesTest testDummyItemMoveToTrashMovesChildMediaItems]' started.
+Test Case '-[VLCLibraryDataTypesTest testDummyItemMoveToTrashMovesChildMediaItems]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testDummyItemRevealInFinderUsesFirstChildFile]' started.
+Test Case '-[VLCLibraryDataTypesTest testDummyItemRevealInFinderUsesFirstChildFile]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testDummyItemStoresItsChildren]' started.
+Test Case '-[VLCLibraryDataTypesTest testDummyItemStoresItsChildren]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testEmptyAlbumHasSafeDefaults]' started.
+Test Case '-[VLCLibraryDataTypesTest testEmptyAlbumHasSafeDefaults]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testEmptyArtistHasSafeDefaults]' started.
+Test Case '-[VLCLibraryDataTypesTest testEmptyArtistHasSafeDefaults]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testEmptyDummyItemCannotSetFavorite]' started.
+Test Case '-[VLCLibraryDataTypesTest testEmptyDummyItemCannotSetFavorite]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testEmptyDummyItemDefaults]' started.
+Test Case '-[VLCLibraryDataTypesTest testEmptyDummyItemDefaults]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testEmptyDummyItemRevealInFinderDoesNothing]' started.
+Test Case '-[VLCLibraryDataTypesTest testEmptyDummyItemRevealInFinderDoesNothing]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testEmptyGenreHasSafeDefaults]' started.
+Test Case '-[VLCLibraryDataTypesTest testEmptyGenreHasSafeDefaults]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testEmptyGroupHasNoMediaItems]' started.
+Test Case '-[VLCLibraryDataTypesTest testEmptyGroupHasNoMediaItems]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testEmptyPlaylistDefaults]' started.
+Test Case '-[VLCLibraryDataTypesTest testEmptyPlaylistDefaults]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testEntryPointEmptyDefaults]' started.
+Test Case '-[VLCLibraryDataTypesTest testEntryPointEmptyDefaults]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testEntryPointProperties]' started.
+Test Case '-[VLCLibraryDataTypesTest testEntryPointProperties]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testFileBackedPlaylistMoveToTrashInvokesFileManager]' started.
+2026-10-06 00:47:59.938 xctest[17253:7856248] Successfully moved playlist file vlc-datatypes-move-playlist-to-trash.m3u to trash
+Test Case '-[VLCLibraryDataTypesTest testFileBackedPlaylistMoveToTrashInvokesFileManager]' passed (0.001 seconds).
+Test Case '-[VLCLibraryDataTypesTest testFileMapsFields]' started.
+Test Case '-[VLCLibraryDataTypesTest testFileMapsFields]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testFileReadableTypes]' started.
+Test Case '-[VLCLibraryDataTypesTest testFileReadableTypes]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testGenreAlbumEnumerationTraversesAlbumsInOrder]' started.
+Test Case '-[VLCLibraryDataTypesTest testGenreAlbumEnumerationTraversesAlbumsInOrder]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testGenreArtistEnumerationTraversesArtistsInOrder]' started.
+Test Case '-[VLCLibraryDataTypesTest testGenreArtistEnumerationTraversesArtistsInOrder]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testGenreDefaultEnumerationUsesAlbumOrdering]' started.
+Test Case '-[VLCLibraryDataTypesTest testGenreDefaultEnumerationUsesAlbumOrdering]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testGenreDurationStringUsesSingularForm]' started.
+Test Case '-[VLCLibraryDataTypesTest testGenreDurationStringUsesSingularForm]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testGenreEnumerationStopsThroughNestedRelationships]' started.
+Test Case '-[VLCLibraryDataTypesTest testGenreEnumerationStopsThroughNestedRelationships]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testGenreProperties]' started.
+Test Case '-[VLCLibraryDataTypesTest testGenreProperties]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testGroupDisplayStringFallsBackForMissingName]' started.
+Test Case '-[VLCLibraryDataTypesTest testGroupDisplayStringFallsBackForMissingName]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testGroupFavoriteIsFalseWhenMediaItemsAreMixed]' started.
+Test Case '-[VLCLibraryDataTypesTest testGroupFavoriteIsFalseWhenMediaItemsAreMixed]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testGroupFavoriteIsTrueWhenEveryMediaItemIsFavorited]' started.
+Test Case '-[VLCLibraryDataTypesTest testGroupFavoriteIsTrueWhenEveryMediaItemIsFavorited]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testGroupPresentCounts]' started.
+Test Case '-[VLCLibraryDataTypesTest testGroupPresentCounts]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testGroupPrimaryDetailStringUsesSingularForm]' started.
+Test Case '-[VLCLibraryDataTypesTest testGroupPrimaryDetailStringUsesSingularForm]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testGroupProperties]' started.
+Test Case '-[VLCLibraryDataTypesTest testGroupProperties]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testMediaItemActionableDetailsDependOnSubtype]' started.
+Test Case '-[VLCLibraryDataTypesTest testMediaItemActionableDetailsDependOnSubtype]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testMediaItemCollections]' started.
+Test Case '-[VLCLibraryDataTypesTest testMediaItemCollections]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testMediaItemDisplayStringFallsBackForMissingTitle]' started.
+Test Case '-[VLCLibraryDataTypesTest testMediaItemDisplayStringFallsBackForMissingTitle]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testMediaItemEnumeratesItself]' started.
+Test Case '-[VLCLibraryDataTypesTest testMediaItemEnumeratesItself]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testMediaItemIteratesItself]' started.
+Test Case '-[VLCLibraryDataTypesTest testMediaItemIteratesItself]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testMediaItemMapsAlbumTrackFields]' started.
+Test Case '-[VLCLibraryDataTypesTest testMediaItemMapsAlbumTrackFields]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testMediaItemMapsCommonFields]' started.
+Test Case '-[VLCLibraryDataTypesTest testMediaItemMapsCommonFields]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testMediaItemMapsFilesAndTracks]' started.
+Test Case '-[VLCLibraryDataTypesTest testMediaItemMapsFilesAndTracks]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testMediaItemMapsMovieFields]' started.
+Test Case '-[VLCLibraryDataTypesTest testMediaItemMapsMovieFields]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testMediaItemMapsShowEpisodeFields]' started.
+Test Case '-[VLCLibraryDataTypesTest testMediaItemMapsShowEpisodeFields]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testMediaItemMapsUnknownSubtype]' started.
+Test Case '-[VLCLibraryDataTypesTest testMediaItemMapsUnknownSubtype]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testMediaItemMoveToTrashContinuesAfterPartialFailure]' started.
+Test Case '-[VLCLibraryDataTypesTest testMediaItemMoveToTrashContinuesAfterPartialFailure]' passed (0.001 seconds).
+Test Case '-[VLCLibraryDataTypesTest testMediaItemMoveToTrashReloadsWhenTrashFails]' started.
+Test Case '-[VLCLibraryDataTypesTest testMediaItemMoveToTrashReloadsWhenTrashFails]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testMediaItemMoveToTrashTrashesEveryFile]' started.
+Test Case '-[VLCLibraryDataTypesTest testMediaItemMoveToTrashTrashesEveryFile]' passed (0.001 seconds).
+Test Case '-[VLCLibraryDataTypesTest testMediaItemMoveToTrashTrashesFilesAndReloadsLibrary]' started.
+Test Case '-[VLCLibraryDataTypesTest testMediaItemMoveToTrashTrashesFilesAndReloadsLibrary]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testMediaItemPrimaryDetailFallsBackToDuration]' started.
+Test Case '-[VLCLibraryDataTypesTest testMediaItemPrimaryDetailFallsBackToDuration]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testMediaItemReadableMediaType]' started.
+Test Case '-[VLCLibraryDataTypesTest testMediaItemReadableMediaType]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testMediaItemRevealInFinderSelectsFirstFile]' started.
+Test Case '-[VLCLibraryDataTypesTest testMediaItemRevealInFinderSelectsFirstFile]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testMediaItemRevealInFinderWithoutFilesDoesNothing]' started.
+Test Case '-[VLCLibraryDataTypesTest testMediaItemRevealInFinderWithoutFilesDoesNothing]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testMediaItemSecondaryDetailUsesInputItemDate]' started.
+Test Case '-[VLCLibraryDataTypesTest testMediaItemSecondaryDetailUsesInputItemDate]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testMediaItemSecureCoding]' started.
+Test Case '-[VLCLibraryDataTypesTest testMediaItemSecureCoding]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testMediaItemsFromPasteboardDataRejectsMalformedData]' started.
+2026-10-06 00:47:59.943 xctest[17253:7856248] Failed to unarchive MediaLibrary Item drag payload: Error Domain=NSCocoaErrorDomain Code=4864 "*** -[NSKeyedUnarchiver _initForReadingFromData:error:throwLegacyExceptions:]: incomprehensible archive (0x6e, 0x6f, 0x74, 0x20, 0x61, 0x20, 0x6b, 0x65)" UserInfo={NSDebugDescription=*** -[NSKeyedUnarchiver _initForReadingFromData:error:throwLegacyExceptions:]: incomprehensible archive (0x6e, 0x6f, 0x74, 0x20, 0x61, 0x20, 0x6b, 0x65)}
+Test Case '-[VLCLibraryDataTypesTest testMediaItemsFromPasteboardDataRejectsMalformedData]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testMediaItemsFromPasteboardDataRejectsUnexpectedArchiveRoot]' started.
+2026-10-06 00:47:59.945 xctest[17253:7856248] Failed to unarchive MediaLibrary Item drag payload: Error Domain=NSCocoaErrorDomain Code=4864 "value for key 'root' was of unexpected class 'NSDictionary' (0x2046365c0) [/System/Library/Frameworks/CoreFoundation.framework].
+Allowed classes are:
+ {(
+    "'VLCMediaLibraryMediaItem' (0x107f230d8) [/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-reproduction/modules/VLCMacOSXTests.xctest]",
+    "'NSArray' (0x204636778) [/System/Library/Frameworks/CoreFoundation.framework]"
+)}" UserInfo={NSDebugDescription=value for key 'root' was of unexpected class 'NSDictionary' (0x2046365c0) [/System/Library/Frameworks/CoreFoundation.framework].
+Allowed classes are:
+ {(
+    "'VLCMediaLibraryMediaItem' (0x107f230d8) [/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-reproduction/modules/VLCMacOSXTests.xctest]",
+    "'NSArray' (0x204636778) [/System/Library/Frameworks/CoreFoundation.framework]"
+)}}
+Test Case '-[VLCLibraryDataTypesTest testMediaItemsFromPasteboardDataRejectsUnexpectedArchiveRoot]' passed (0.002 seconds).
+Test Case '-[VLCLibraryDataTypesTest testMovieDisplayStringUsesTitle]' started.
+Test Case '-[VLCLibraryDataTypesTest testMovieDisplayStringUsesTitle]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testMovieEmptyDefaults]' started.
+Test Case '-[VLCLibraryDataTypesTest testMovieEmptyDefaults]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testMoviePrimaryDetailFallsBackForEmptyDirector]' started.
+Test Case '-[VLCLibraryDataTypesTest testMoviePrimaryDetailFallsBackForEmptyDirector]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testMoviePrimaryDetailUsesDirector]' started.
+Test Case '-[VLCLibraryDataTypesTest testMoviePrimaryDetailUsesDirector]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testPlaylistIsFileBackedOnlyForExistingLocalFiles]' started.
+Test Case '-[VLCLibraryDataTypesTest testPlaylistIsFileBackedOnlyForExistingLocalFiles]' passed (0.001 seconds).
+Test Case '-[VLCLibraryDataTypesTest testPlaylistMapsArtworkAndCreationDate]' started.
+Test Case '-[VLCLibraryDataTypesTest testPlaylistMapsArtworkAndCreationDate]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testPlaylistMapsPresentCounts]' started.
+Test Case '-[VLCLibraryDataTypesTest testPlaylistMapsPresentCounts]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testPlaylistPrimaryDetailStringUsesSingularForm]' started.
+Test Case '-[VLCLibraryDataTypesTest testPlaylistPrimaryDetailStringUsesSingularForm]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testPlaylistProperties]' started.
+Test Case '-[VLCLibraryDataTypesTest testPlaylistProperties]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testPlaylistRejectsRenameToEmptyName]' started.
+Test Case '-[VLCLibraryDataTypesTest testPlaylistRejectsRenameToEmptyName]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testPlaylistRevealInFinder]' started.
+Test Case '-[VLCLibraryDataTypesTest testPlaylistRevealInFinder]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testPlaylistRevealInFinderWithMalformedMRLDoesNothing]' started.
+Test Case '-[VLCLibraryDataTypesTest testPlaylistRevealInFinderWithMalformedMRLDoesNothing]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testPlaylistRevealInFinderWithoutMRLDoesNothing]' started.
+Test Case '-[VLCLibraryDataTypesTest testPlaylistRevealInFinderWithoutMRLDoesNothing]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testReadOnlyPlaylistRejectsAppendingMedia]' started.
+Test Case '-[VLCLibraryDataTypesTest testReadOnlyPlaylistRejectsAppendingMedia]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testReadOnlyPlaylistRejectsRename]' started.
+Test Case '-[VLCLibraryDataTypesTest testReadOnlyPlaylistRejectsRename]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testShowEmptyDefaults]' started.
+Test Case '-[VLCLibraryDataTypesTest testShowEmptyDefaults]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testShowEpisodeMapsFields]' started.
+Test Case '-[VLCLibraryDataTypesTest testShowEpisodeMapsFields]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testShowEpisodePrimaryDetailFallsBackToDurationWithoutShowName]' started.
+Test Case '-[VLCLibraryDataTypesTest testShowEpisodePrimaryDetailFallsBackToDurationWithoutShowName]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testShowEpisodePrimaryDetailUsesShowName]' started.
+Test Case '-[VLCLibraryDataTypesTest testShowEpisodePrimaryDetailUsesShowName]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testShowEpisodeSecondaryDetailUsesEpisodeNumbers]' started.
+Test Case '-[VLCLibraryDataTypesTest testShowEpisodeSecondaryDetailUsesEpisodeNumbers]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testShowFavoriteIsFalseWhenEpisodesAreMixed]' started.
+Test Case '-[VLCLibraryDataTypesTest testShowFavoriteIsFalseWhenEpisodesAreMixed]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testShowFavoriteIsTrueWhenEveryEpisodeIsFavorited]' started.
+Test Case '-[VLCLibraryDataTypesTest testShowFavoriteIsTrueWhenEveryEpisodeIsFavorited]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testShowPrimaryDetailStringUsesSingularForms]' started.
+Test Case '-[VLCLibraryDataTypesTest testShowPrimaryDetailStringUsesSingularForms]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testShowProperties]' started.
+Test Case '-[VLCLibraryDataTypesTest testShowProperties]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testTrackMapsFields]' started.
+Test Case '-[VLCLibraryDataTypesTest testTrackMapsFields]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testTrackReadableCodecNames]' started.
+Test Case '-[VLCLibraryDataTypesTest testTrackReadableCodecNames]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testTrackReadableTypes]' started.
+Test Case '-[VLCLibraryDataTypesTest testTrackReadableTypes]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testTrackResolutionLabels]' started.
+Test Case '-[VLCLibraryDataTypesTest testTrackResolutionLabels]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testVideoTrackMapsVideoFields]' started.
+Test Case '-[VLCLibraryDataTypesTest testVideoTrackMapsVideoFields]' passed (0.000 seconds).
+Test Case '-[VLCLibraryDataTypesTest testWritablePlaylistRejectsAppendingNoMedia]' started.
+Test Case '-[VLCLibraryDataTypesTest testWritablePlaylistRejectsAppendingNoMedia]' passed (0.000 seconds).
+Test Suite 'VLCLibraryDataTypesTest' passed at 2026-10-06 00:47:59.950.
+	 Executed 94 tests, with 0 failures (0 unexpected) in 0.014 (0.017) seconds
+Test Suite 'VLCLogMessageTest' started at 2026-10-06 00:47:59.950.
+Test Case '-[VLCLogMessageTest testEmptyMessage]' started.
+Test Case '-[VLCLogMessageTest testEmptyMessage]' passed (0.000 seconds).
+Test Case '-[VLCLogMessageTest testFactoryMethod]' started.
+Test Case '-[VLCLogMessageTest testFactoryMethod]' passed (0.000 seconds).
+Test Case '-[VLCLogMessageTest testMessageProperties]' started.
+Test Case '-[VLCLogMessageTest testMessageProperties]' passed (0.000 seconds).
+Test Case '-[VLCLogMessageTest testRejectsMissingMessageOrLogInfo]' started.
+Test Case '-[VLCLogMessageTest testRejectsMissingMessageOrLogInfo]' passed (0.000 seconds).
+Test Case '-[VLCLogMessageTest testTypeNames]' started.
+Test Case '-[VLCLogMessageTest testTypeNames]' passed (0.000 seconds).
+Test Suite 'VLCLogMessageTest' passed at 2026-10-06 00:47:59.950.
+	 Executed 5 tests, with 0 failures (0 unexpected) in 0.001 (0.001) seconds
+Test Suite 'VLCPositionFormatterTest' started at 2026-10-06 00:47:59.950.
+Test Case '-[VLCPositionFormatterTest testExpectedExceptionAssertion]' started.
+Test Case '-[VLCPositionFormatterTest testExpectedExceptionAssertion]' passed (0.001 seconds).
+Test Case '-[VLCPositionFormatterTest testGetObjectValue]' started.
+Test Case '-[VLCPositionFormatterTest testGetObjectValue]' passed (0.000 seconds).
+Test Case '-[VLCPositionFormatterTest testPartialStringValidation]' started.
+Test Case '-[VLCPositionFormatterTest testPartialStringValidation]' passed (0.000 seconds).
+Test Case '-[VLCPositionFormatterTest testStringForObjectValue]' started.
+Test Case '-[VLCPositionFormatterTest testStringForObjectValue]' passed (0.000 seconds).
+Test Suite 'VLCPositionFormatterTest' passed at 2026-10-06 00:47:59.951.
+	 Executed 4 tests, with 0 failures (0 unexpected) in 0.001 (0.001) seconds
+Test Suite 'VLCThumbnailCacheTest' started at 2026-10-06 00:47:59.951.
+Test Case '-[VLCThumbnailCacheTest testCacheContracts]' started.
+Test Case '-[VLCThumbnailCacheTest testCacheContracts]' passed (14.797 seconds).
+Test Case '-[VLCThumbnailCacheTest testOwnedVolumeENOSPCRAMAndRecovery]' started.
+/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-reproduction/extras/package/macosx/../../../modules/gui/macosx/tests/VLCThumbnailCacheTest.m:798: -[VLCThumbnailCacheTest testOwnedVolumeENOSPCRAMAndRecovery] : Test skipped: (mount.length == 0) is true - Requires an explicitly owned constrained test volume
+Test Case '-[VLCThumbnailCacheTest testOwnedVolumeENOSPCRAMAndRecovery]' skipped (0.001 seconds).
+Test Suite 'VLCThumbnailCacheTest' passed at 2026-10-06 00:48:14.749.
+	 Executed 2 tests, with 1 test skipped and 0 failures (0 unexpected) in 14.798 (14.798) seconds
+Test Suite 'VLCThumbnailSchedulerTest' started at 2026-10-06 00:48:14.749.
+Test Case '-[VLCThumbnailSchedulerTest testSchedulerContracts]' started.
+Test Case '-[VLCThumbnailSchedulerTest testSchedulerContracts]' passed (0.005 seconds).
+Test Suite 'VLCThumbnailSchedulerTest' passed at 2026-10-06 00:48:14.754.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.005 (0.005) seconds
+Test Suite 'VLCThumbnailServiceTest' started at 2026-10-06 00:48:14.754.
+Test Case '-[VLCThumbnailServiceTest testCertifiedSelectionMapping]' started.
+Test Case '-[VLCThumbnailServiceTest testCertifiedSelectionMapping]' passed (0.000 seconds).
+Test Case '-[VLCThumbnailServiceTest testChannelOverflowNeverProducesImage]' started.
+Test Case '-[VLCThumbnailServiceTest testChannelOverflowNeverProducesImage]' passed (0.124 seconds).
+Test Case '-[VLCThumbnailServiceTest testFinitePreparationBecomesQuiescent]' started.
+Test Case '-[VLCThumbnailServiceTest testFinitePreparationBecomesQuiescent]' passed (3.737 seconds).
+Test Case '-[VLCThumbnailServiceTest testHungWorkerPIDDisappearsBeforeRecovery]' started.
+Test Case '-[VLCThumbnailServiceTest testHungWorkerPIDDisappearsBeforeRecovery]' passed (15.107 seconds).
+Test Case '-[VLCThumbnailServiceTest testIncompleteContextsNeverLaunchWorker]' started.
+Test Case '-[VLCThumbnailServiceTest testIncompleteContextsNeverLaunchWorker]' passed (0.000 seconds).
+Test Case '-[VLCThumbnailServiceTest testQueuedValidationDoesNotExtendProvisionalDeadline]' started.
+Test Case '-[VLCThumbnailServiceTest testQueuedValidationDoesNotExtendProvisionalDeadline]' passed (16.143 seconds).
+Test Case '-[VLCThumbnailServiceTest testServiceContracts]' started.
+Test Case '-[VLCThumbnailServiceTest testServiceContracts]' passed (61.296 seconds).
+Test Case '-[VLCThumbnailServiceTest testWorkerCommandDeadlineAndPartialWrites]' started.
+Test Case '-[VLCThumbnailServiceTest testWorkerCommandDeadlineAndPartialWrites]' passed (0.988 seconds).
+Test Suite 'VLCThumbnailServiceTest' passed at 2026-10-06 00:49:52.151.
+	 Executed 8 tests, with 0 failures (0 unexpected) in 97.396 (97.397) seconds
+Test Suite 'VLCTimeFormatterTest' started at 2026-10-06 00:49:52.151.
+Test Case '-[VLCTimeFormatterTest testGetObjectValueFromHoursMinutesAndSeconds]' started.
+Test Case '-[VLCTimeFormatterTest testGetObjectValueFromHoursMinutesAndSeconds]' passed (0.000 seconds).
+Test Case '-[VLCTimeFormatterTest testGetObjectValueFromMinutesAndSeconds]' started.
+Test Case '-[VLCTimeFormatterTest testGetObjectValueFromMinutesAndSeconds]' passed (0.000 seconds).
+Test Case '-[VLCTimeFormatterTest testGetObjectValueFromSeconds]' started.
+Test Case '-[VLCTimeFormatterTest testGetObjectValueFromSeconds]' passed (0.000 seconds).
+Test Case '-[VLCTimeFormatterTest testGetObjectValueRejectsInvalidComponentCount]' started.
+Test Case '-[VLCTimeFormatterTest testGetObjectValueRejectsInvalidComponentCount]' passed (0.000 seconds).
+Test Case '-[VLCTimeFormatterTest testStringForObjectValue]' started.
+Test Case '-[VLCTimeFormatterTest testStringForObjectValue]' passed (0.000 seconds).
+Test Suite 'VLCTimeFormatterTest' passed at 2026-10-06 00:49:52.152.
+	 Executed 5 tests, with 0 failures (0 unexpected) in 0.000 (0.001) seconds
+Test Suite 'VLCTimelineHoverTest' started at 2026-10-06 00:49:52.152.
+Test Case '-[VLCTimelineHoverTest testCenteredBandUsesBarAndClipsItsHorizontalRange]' started.
+Test Case '-[VLCTimelineHoverTest testCenteredBandUsesBarAndClipsItsHorizontalRange]' passed (0.000 seconds).
+Test Case '-[VLCTimelineHoverTest testDelayedPresentationRequiresBothRequestAndContextGeneration]' started.
+Test Case '-[VLCTimelineHoverTest testDelayedPresentationRequiresBothRequestAndContextGeneration]' passed (0.000 seconds).
+Test Case '-[VLCTimelineHoverTest testDirectParentConversionAndClippingPreserveSeekFrame]' started.
+Test Case '-[VLCTimelineHoverTest testDirectParentConversionAndClippingPreserveSeekFrame]' passed (0.005 seconds).
+Test Case '-[VLCTimelineHoverTest testPointerFractionUsesActualBarAndClampsEndpoints]' started.
+Test Case '-[VLCTimelineHoverTest testPointerFractionUsesActualBarAndClampsEndpoints]' passed (0.000 seconds).
+Test Suite 'VLCTimelineHoverTest' passed at 2026-10-06 00:49:52.157.
+	 Executed 4 tests, with 0 failures (0 unexpected) in 0.005 (0.005) seconds
+Test Suite 'VLCTimelinePlayerContextTest' started at 2026-10-06 00:49:52.157.
+Test Case '-[VLCTimelinePlayerContextTest testSameURIReopenAdvancesRealEpochBeforeMainNotification]' started.
+[00000075e15e0280] main audio output error: no suitable audio output module
+Test Case '-[VLCTimelinePlayerContextTest testSameURIReopenAdvancesRealEpochBeforeMainNotification]' passed (0.018 seconds).
+Test Suite 'VLCTimelinePlayerContextTest' passed at 2026-10-06 00:49:52.175.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.018 (0.018) seconds
+Test Suite 'VLCMacOSXTests.xctest' passed at 2026-10-06 00:49:52.175.
+	 Executed 269 tests, with 1 test skipped and 0 failures (0 unexpected) in 114.741 (117.382) seconds
+Test Suite 'All tests' passed at 2026-10-06 00:49:52.175.
+	 Executed 269 tests, with 1 test skipped and 0 failures (0 unexpected) in 114.741 (117.383) seconds
+Test Suite 'All tests' started at 2026-10-06 00:49:52.313.
+Test Suite 'VLCTimelineContextTests.xctest' started at 2026-10-06 00:49:52.314.
+Test Suite 'VLCTimelineContextTests' started at 2026-10-06 00:49:52.314.
+Test Case '-[VLCTimelineContextTests testConfigurationNotificationRefreshesEffectivePreferenceOnce]' started.
+Test Case '-[VLCTimelineContextTests testConfigurationNotificationRefreshesEffectivePreferenceOnce]' passed (0.001 seconds).
+Test Case '-[VLCTimelineContextTests testOwnedStringsAndEachSelectionComponentInvalidates]' started.
+Test Case '-[VLCTimelineContextTests testOwnedStringsAndEachSelectionComponentInvalidates]' passed (0.000 seconds).
+Test Case '-[VLCTimelineContextTests testPreferenceUsesEffectiveValueAndTerminationCannotRestart]' started.
+Test Case '-[VLCTimelineContextTests testPreferenceUsesEffectiveValueAndTerminationCannotRestart]' passed (0.000 seconds).
+Test Case '-[VLCTimelineContextTests testReentrantObserverReadsSnapshotDuringToggleAndDirectShutdown]' started.
+Test Case '-[VLCTimelineContextTests testReentrantObserverReadsSnapshotDuringToggleAndDirectShutdown]' passed (0.000 seconds).
+Test Case '-[VLCTimelineContextTests testSameURIEventAndDelayedNotificationUseLatestSnapshot]' started.
+Test Case '-[VLCTimelineContextTests testSameURIEventAndDelayedNotificationUseLatestSnapshot]' passed (0.000 seconds).
+Test Case '-[VLCTimelineContextTests testSourceEpochDetectsSameURIReopenBeforeMainNotification]' started.
+Test Case '-[VLCTimelineContextTests testSourceEpochDetectsSameURIReopenBeforeMainNotification]' passed (0.000 seconds).
+Test Case '-[VLCTimelineContextTests testUnchangedPointerChecksCannotRenewPreparation]' started.
+Test Case '-[VLCTimelineContextTests testUnchangedPointerChecksCannotRenewPreparation]' passed (0.000 seconds).
+Test Suite 'VLCTimelineContextTests' passed at 2026-10-06 00:49:52.316.
+	 Executed 7 tests, with 0 failures (0 unexpected) in 0.002 (0.002) seconds
+Test Suite 'VLCTimelineContextTests.xctest' passed at 2026-10-06 00:49:52.316.
+	 Executed 7 tests, with 0 failures (0 unexpected) in 0.002 (0.002) seconds
+Test Suite 'All tests' passed at 2026-10-06 00:49:52.316.
+	 Executed 7 tests, with 0 failures (0 unexpected) in 0.002 (0.003) seconds
+Test Suite 'All tests' started at 2026-10-06 00:49:52.399.
+Test Suite 'VLCTimelineHoverReentrancyTests.xctest' started at 2026-10-06 00:49:52.400.
+Test Suite 'VLCTimelineHoverReentrancyTest' started at 2026-10-06 00:49:52.400.
+Test Case '-[VLCTimelineHoverReentrancyTest testDisabledPreviewUsesFreshPointerTimeWithoutRequest]' started.
+Test Case '-[VLCTimelineHoverReentrancyTest testDisabledPreviewUsesFreshPointerTimeWithoutRequest]' passed (0.004 seconds).
+Test Case '-[VLCTimelineHoverReentrancyTest testDurationChangeRejectsDelayedCompletionEvenWithoutGenerationAnnouncement]' started.
+Test Case '-[VLCTimelineHoverReentrancyTest testDurationChangeRejectsDelayedCompletionEvenWithoutGenerationAnnouncement]' passed (0.065 seconds).
+Test Case '-[VLCTimelineHoverReentrancyTest testFreshDurationRightEdgeKeepsCaptionAndClampsRequest]' started.
+Test Case '-[VLCTimelineHoverReentrancyTest testFreshDurationRightEdgeKeepsCaptionAndClampsRequest]' passed (0.000 seconds).
+Test Case '-[VLCTimelineHoverReentrancyTest testFreshLongerDurationDrivesBothPointerAndActualRequest]' started.
+Test Case '-[VLCTimelineHoverReentrancyTest testFreshLongerDurationDrivesBothPointerAndActualRequest]' passed (0.000 seconds).
+Test Case '-[VLCTimelineHoverReentrancyTest testFreshShorterDurationDrivesBothPointerAndActualRequest]' started.
+Test Case '-[VLCTimelineHoverReentrancyTest testFreshShorterDurationDrivesBothPointerAndActualRequest]' passed (0.000 seconds).
+Test Case '-[VLCTimelineHoverReentrancyTest testMalformedOrIneligibleContextUsesTimeOnlyFallback]' started.
+Test Case '-[VLCTimelineHoverReentrancyTest testMalformedOrIneligibleContextUsesTimeOnlyFallback]' passed (0.000 seconds).
+Test Case '-[VLCTimelineHoverReentrancyTest testSnapshotNotificationInvalidatesCompletionBeforeGuardReadsState]' started.
+Test Case '-[VLCTimelineHoverReentrancyTest testSnapshotNotificationInvalidatesCompletionBeforeGuardReadsState]' passed (0.000 seconds).
+Test Case '-[VLCTimelineHoverReentrancyTest testSnapshotNotificationPrecedesNewHoverPresentation]' started.
+Test Case '-[VLCTimelineHoverReentrancyTest testSnapshotNotificationPrecedesNewHoverPresentation]' passed (0.000 seconds).
+Test Suite 'VLCTimelineHoverReentrancyTest' passed at 2026-10-06 00:49:52.471.
+	 Executed 8 tests, with 0 failures (0 unexpected) in 0.070 (0.070) seconds
+Test Suite 'VLCTimelineHoverTest' started at 2026-10-06 00:49:52.471.
+Test Case '-[VLCTimelineHoverTest testCenteredBandUsesBarAndClipsItsHorizontalRange]' started.
+Test Case '-[VLCTimelineHoverTest testCenteredBandUsesBarAndClipsItsHorizontalRange]' passed (0.000 seconds).
+Test Case '-[VLCTimelineHoverTest testDelayedPresentationRequiresBothRequestAndContextGeneration]' started.
+Test Case '-[VLCTimelineHoverTest testDelayedPresentationRequiresBothRequestAndContextGeneration]' passed (0.000 seconds).
+Test Case '-[VLCTimelineHoverTest testDirectParentConversionAndClippingPreserveSeekFrame]' started.
+Test Case '-[VLCTimelineHoverTest testDirectParentConversionAndClippingPreserveSeekFrame]' passed (0.004 seconds).
+Test Case '-[VLCTimelineHoverTest testPointerFractionUsesActualBarAndClampsEndpoints]' started.
+Test Case '-[VLCTimelineHoverTest testPointerFractionUsesActualBarAndClampsEndpoints]' passed (0.000 seconds).
+Test Suite 'VLCTimelineHoverTest' passed at 2026-10-06 00:49:52.475.
+	 Executed 4 tests, with 0 failures (0 unexpected) in 0.004 (0.004) seconds
+Test Suite 'VLCTimelineHoverReentrancyTests.xctest' passed at 2026-10-06 00:49:52.475.
+	 Executed 12 tests, with 0 failures (0 unexpected) in 0.074 (0.075) seconds
+Test Suite 'All tests' passed at 2026-10-06 00:49:52.475.
+	 Executed 12 tests, with 0 failures (0 unexpected) in 0.074 (0.076) seconds

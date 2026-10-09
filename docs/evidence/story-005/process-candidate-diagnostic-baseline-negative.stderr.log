@@ -1,0 +1,2 @@
+testapi: child ready: pid=76071 pgid=75996 mode=wait
+Assertion failed: (WTERMSIG(status) == SIGKILL), function assert_forced_status, file process.c, line 52.

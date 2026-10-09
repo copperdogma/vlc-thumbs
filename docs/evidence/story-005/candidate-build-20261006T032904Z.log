@@ -1,0 +1,55 @@
+Setting base environment
+Using VLC root dir /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-candidate, build triplet aarch64-apple-darwin19 and host triplet aarch64-apple-darwin19
+Setting libVLC flags
+autoreconf: export WARNINGS=
+autoreconf: Entering directory '.'
+autoreconf: running: autopoint --force
+Copying file po/Makevars.template
+autoreconf: running: aclocal --force -I m4
+autoreconf: configure.ac: tracing
+autoreconf: running: libtoolize --copy --force
+libtoolize: putting auxiliary files in AC_CONFIG_AUX_DIR, 'autotools'.
+libtoolize: copying file 'autotools/ltmain.sh'
+libtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'm4'.
+libtoolize: copying file 'm4/libtool.m4'
+libtoolize: copying file 'm4/ltoptions.m4'
+libtoolize: copying file 'm4/ltsugar.m4'
+libtoolize: copying file 'm4/ltversion.m4'
+libtoolize: copying file 'm4/lt~obsolete.m4'
+autoreconf: configure.ac: not using Intltool
+autoreconf: configure.ac: not using Gtkdoc
+autoreconf: configure.ac: not running autopoint a second time
+autoreconf: running: aclocal --force -I m4
+autoreconf: running: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/bin/autoconf --force
+autoreconf: running: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/bin/autoheader --force
+autoreconf: running: automake --add-missing --copy --force-missing
+configure.ac:55: installing 'autotools/compile'
+configure.ac:46: installing 'autotools/missing'
+bin/timeline-preview/Makefile.am:3: error: cannot apply '+=' because 'pkglibexec_PROGRAMS' is not defined in
+bin/timeline-preview/Makefile.am:3: the following conditions:
+bin/timeline-preview/Makefile.am:3:   BUILD_TIMELINE_PREVIEW and BUILD_VLC and !HAVE_DYNAMIC_PLUGINS and !HAVE_EXTERNAL_PREPARSER
+bin/timeline-preview/Makefile.am:3: either define 'pkglibexec_PROGRAMS' in these conditions, or use
+bin/timeline-preview/Makefile.am:3: '+=' in the same conditions as the definitions.
+bin/Makefile.am:168:   'bin/timeline-preview/Makefile.am' included from here
+bin/timeline-preview/Makefile.am:18: warning: .PHONY was already defined in condition TRUE, which includes condition BUILD_TIMELINE_PREVIEW and BUILD_VLC ...
+bin/Makefile.am:168:   'bin/timeline-preview/Makefile.am' included from here
+bin/Makefile.am:156: ... '.PHONY' previously defined here
+bin/Makefile.am: installing 'autotools/depcomp'
+bin/timeline-preview/Makefile.am:7: warning: variable 'vlc_timeline_preview_SOURCES' is defined but no program or
+bin/timeline-preview/Makefile.am:7: library has 'vlc_timeline_preview' as canonical name (possible typo)
+bin/Makefile.am:168:   'bin/timeline-preview/Makefile.am' included from here
+bin/timeline-preview/Makefile.am:9: warning: variable 'vlc_timeline_preview_LDADD' is defined but no program or
+bin/timeline-preview/Makefile.am:9: library has 'vlc_timeline_preview' as canonical name (possible typo)
+bin/Makefile.am:168:   'bin/timeline-preview/Makefile.am' included from here
+bin/timeline-preview/Makefile.am:10: warning: variable 'vlc_timeline_preview_LDFLAGS' is defined but no program or
+bin/timeline-preview/Makefile.am:10: library has 'vlc_timeline_preview' as canonical name (possible typo)
+bin/Makefile.am:168:   'bin/timeline-preview/Makefile.am' included from here
+modules/gui/macosx/tests/Makefile.am:137: warning: .PHONY was already defined in condition ENABLE_MACOSX_UI and ENABLE_MACOSX_XCTESTS, which is included in condition ENABLE_MACOSX_UI ...
+modules/Makefile.am:76:   'modules/gui/Makefile.am' included from here
+modules/gui/Makefile.am:34:   'modules/gui/macosx/Makefile.am' included from here
+modules/gui/macosx/Makefile.am:903:   'modules/gui/macosx/tests/Makefile.am' included from here
+modules/gui/macosx/tests/Makefile.am:128: ... '.PHONY' previously defined here
+modules/Makefile.am:76:   'modules/gui/Makefile.am' included from here
+modules/gui/Makefile.am:34:   'modules/gui/macosx/Makefile.am' included from here
+modules/gui/macosx/Makefile.am:903:   'modules/gui/macosx/tests/Makefile.am' included from here
+autoreconf: error: automake failed with exit status: 1

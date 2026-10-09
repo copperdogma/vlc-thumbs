@@ -1,0 +1,55 @@
+{
+  "binary": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/.libs/process-probe",
+  "scope": "unchanged VLC process API, POSIX",
+  "outer_timeout_seconds": 8,
+  "launcher_pid": 18231,
+  "launcher_pgid": 18231,
+  "cases": [
+    {
+      "mode": "default",
+      "stdout": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/docs/evidence/story-005/process-probe-runtime-20261006.default.stdout.log",
+      "stderr": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/docs/evidence/story-005/process-probe-runtime-20261006.default.stderr.log",
+      "test_pgid": 18232,
+      "returncode": 0,
+      "outer_timeout": false,
+      "final_members": [],
+      "final_live_members": [],
+      "final_returncode": 0,
+      "elapsed_seconds": 0.3936461249977583,
+      "child_group_verified": true,
+      "termination_begin": true,
+      "termination_return": true,
+      "sigterm_ignored_observed": false,
+      "valid_observation": true
+    },
+    {
+      "mode": "ignore",
+      "stdout": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/docs/evidence/story-005/process-probe-runtime-20261006.ignore.stdout.log",
+      "stderr": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/docs/evidence/story-005/process-probe-runtime-20261006.ignore.stderr.log",
+      "test_pgid": 18235,
+      "outer_timeout": true,
+      "members_at_timeout": [
+        {
+          "pid": 18235,
+          "pgid": 18235,
+          "state": "Ss"
+        },
+        {
+          "pid": 18236,
+          "pgid": 18235,
+          "state": "S"
+        }
+      ],
+      "final_members": [],
+      "final_live_members": [],
+      "final_returncode": -9,
+      "elapsed_seconds": 8.052554665999196,
+      "child_group_verified": true,
+      "termination_begin": true,
+      "termination_return": false,
+      "sigterm_ignored_observed": true,
+      "valid_observation": true
+    }
+  ],
+  "discriminator_observed": true
+}

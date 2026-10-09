@@ -1,0 +1,9 @@
+[000000016eff1ba0] main generic error: cannot load plug-in /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/modules/.libs/libmacosx_plugin.dylib: dlopen(/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/modules/.libs/libmacosx_plugin.dylib, 0x0001): Library not loaded: @rpath/Sparkle.framework/Versions/B/Sparkle
+  Referenced from: <26234FF1-AE4B-31E3-A98A-DFFFAFF9D6CD> /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/modules/.libs/libmacosx_plugin.dylib
+  Reason: no LC_RPATH's found
+[normal]: checking that normal update has a coeff of 1.0f
+normal_check:578: converted=7200000001 == expected_system_end=7200000001
+[lowprecision]: checking that low precision update has a coeff near 1.0f
+[drift_72]: checking that a drift of 72ms in 2h is handled
+Assertion failed: (converted - expected_system_end == scenario->total_drift_duration), function drift_check, file clock.c, line 662.
+FAIL test_src_clock_clock (exit status: 134)

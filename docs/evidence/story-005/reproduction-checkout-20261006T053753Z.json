@@ -1,0 +1,21 @@
+{
+  "stage": "checkout",
+  "command": [
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "--no-checkout",
+    "https://github.com/videolan/vlc.git",
+    "work/upstream/vlc-master-story005-reproduction"
+  ],
+  "cwd": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs",
+  "initial_free_bytes": 27817287680,
+  "floor_bytes": 1073741824,
+  "time_limit_seconds": 600,
+  "status": "succeeded",
+  "pid": 66153,
+  "elapsed_seconds": 18.0,
+  "minimum_free_bytes": 27721605120,
+  "exit_code": 0,
+  "final_free_bytes": 27697999872
+}

@@ -1,0 +1,533 @@
+[\033[1;32mbuild\033[0m] Building VLC for macOS, architecture aarch64 (aka: arm64) on a aarch64 device
+Setting base environment
+Using VLC root dir /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005, build triplet aarch64-apple-darwin27 and host triplet aarch64-apple-darwin27
+[\033[1;32mbuild\033[0m] Checking for python3 ...
+Python 3.14.3
+[\033[1;32mbuild\033[0m] Building in "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs"
+[\033[1;32mbuild\033[0m] Building building tools
+autoconf not found
+automake not found
+m4 incompatible version (expected 1.4.16, got 1.4.6)
+libtool not found
+ant not found
+bison incompatible version (expected 3.0.0, got 2.3)
+nasm not found
+gettext not found
+help2man not found
+meson not found
+ninja missing jobserver support
+To-be-built packages: configguess autoconf automake m4 libtool ant bison nasm gettext meson ninja
+# CONFIGGUESS_URL=https://git.savannah.gnu.org/gitweb/?p=config.git;a=blob_plain;f=config.guess;hb=428664896cf9e92d264976a960c76660938dffce
+# CONFIGSUB_URL=https://git.savannah.gnu.org/gitweb/?p=config.git;a=blob_plain;f=config.sub;hb=428664896cf9e92d264976a960c76660938dffce
+curl -f -L --retry 3 --output "autoconf-2.73.tar.gz" -- "https://downloads.videolan.org/pub/contrib/autoconf/autoconf-2.73.tar.gz" || ( curl -f -L --retry 3 --output "autoconf-2.73.tar.gz" -- "https://ftpmirror.gnu.org/gnu/autoconf/autoconf-2.73.tar.gz" && echo "Please upload this package autoconf-2.73.tar.gz to our FTP" ) && grep autoconf-2.73.tar.gz /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/SHA512SUMS| sha512sum -c /dev/stdin
+curl -f -L --retry 3 --output "m4-1.4.21.tar.gz" -- "https://downloads.videolan.org/pub/contrib/m4/m4-1.4.21.tar.gz" || ( curl -f -L --retry 3 --output "m4-1.4.21.tar.gz" -- "https://ftpmirror.gnu.org/gnu/m4/m4-1.4.21.tar.gz" && echo "Please upload this package m4-1.4.21.tar.gz to our FTP" ) && grep m4-1.4.21.tar.gz /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/SHA512SUMS| sha512sum -c /dev/stdin
+curl -f -L --retry 3 --output "automake-1.18.1.tar.gz" -- "https://downloads.videolan.org/pub/contrib/automake/automake-1.18.1.tar.gz" || ( curl -f -L --retry 3 --output "automake-1.18.1.tar.gz" -- "https://ftpmirror.gnu.org/gnu/automake/automake-1.18.1.tar.gz" && echo "Please upload this package automake-1.18.1.tar.gz to our FTP" ) && grep automake-1.18.1.tar.gz /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/SHA512SUMS| sha512sum -c /dev/stdin
+curl -f -L --retry 3 --output "libtool-2.6.2.tar.gz" -- "https://downloads.videolan.org/pub/contrib/libtool/libtool-2.6.2.tar.gz" || ( curl -f -L --retry 3 --output "libtool-2.6.2.tar.gz" -- "https://ftpmirror.gnu.org/gnu/libtool/libtool-2.6.2.tar.gz" && echo "Please upload this package libtool-2.6.2.tar.gz to our FTP" ) && grep libtool-2.6.2.tar.gz /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/SHA512SUMS| sha512sum -c /dev/stdin
+curl -f -L --retry 3 --output "help2man-1.47.6.tar.xz" -- "https://downloads.videolan.org/pub/contrib/help2man/help2man-1.47.6.tar.xz" || ( curl -f -L --retry 3 --output "help2man-1.47.6.tar.xz" -- "https://ftpmirror.gnu.org/gnu/help2man/help2man-1.47.6.tar.xz" && echo "Please upload this package help2man-1.47.6.tar.xz to our FTP" ) && grep help2man-1.47.6.tar.xz /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/SHA512SUMS| sha512sum -c /dev/stdin
+curl -f -L --retry 3 --output "apache-ant-1.9.7.tar.bz2" -- "https://downloads.videolan.org/pub/contrib/ant/apache-ant-1.9.7.tar.bz2" || ( curl -f -L --retry 3 --output "apache-ant-1.9.7.tar.bz2" -- "https://downloads.apache.org//ant/binaries/apache-ant-1.9.7-bin.tar.bz2" && echo "Please upload this package apache-ant-1.9.7.tar.bz2 to our FTP" ) && grep apache-ant-1.9.7.tar.bz2 /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/SHA512SUMS| sha512sum -c /dev/stdin
+curl -f -L --retry 3 --output "bison-3.8.2.tar.xz" -- "https://downloads.videolan.org/pub/contrib/bison/bison-3.8.2.tar.xz" || ( curl -f -L --retry 3 --output "bison-3.8.2.tar.xz" -- "https://ftpmirror.gnu.org/gnu/bison/bison-3.8.2.tar.xz" && echo "Please upload this package bison-3.8.2.tar.xz to our FTP" ) && grep bison-3.8.2.tar.xz /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/SHA512SUMS| sha512sum -c /dev/stdin
+cp -f /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/config.guess-428664896cf9e92d264976a960c76660938dffce config.guess
+Available in the system
+Available in the system
+touch .tar
+cp -f /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/config.sub-428664896cf9e92d264976a960c76660938dffce config.sub
+touch .pkg-config
+curl -f -L --retry 3 --output "nasm-2.16.03.tar.gz" -- "https://downloads.videolan.org/pub/contrib/nasm/nasm-2.16.03.tar.gz" || ( curl -f -L --retry 3 --output "nasm-2.16.03.tar.gz" -- "https://www.nasm.us/pub/nasm/releasebuilds/2.16.03/nasm-2.16.03.tar.gz" && echo "Please upload this package nasm-2.16.03.tar.gz to our FTP" ) && grep nasm-2.16.03.tar.gz /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/SHA512SUMS| sha512sum -c /dev/stdin
+curl -f -L --retry 3 --output "gettext-0.26.tar.gz" -- "https://downloads.videolan.org/pub/contrib/gettext/gettext-0.26.tar.gz" || ( curl -f -L --retry 3 --output "gettext-0.26.tar.gz" -- "https://ftpmirror.gnu.org/gnu/gettext/gettext-0.26.tar.gz" && echo "Please upload this package gettext-0.26.tar.gz to our FTP" ) && grep gettext-0.26.tar.gz /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/SHA512SUMS| sha512sum -c /dev/stdin
+curl -f -L --retry 3 --output "meson-1.12.0.tar.gz" -- "https://downloads.videolan.org/pub/contrib/meson/meson-1.12.0.tar.gz" || ( curl -f -L --retry 3 --output "meson-1.12.0.tar.gz" -- "https://github.com/mesonbuild/meson/releases/download/1.12.0/meson-1.12.0.tar.gz" && echo "Please upload this package meson-1.12.0.tar.gz to our FTP" ) && grep meson-1.12.0.tar.gz /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/SHA512SUMS| sha512sum -c /dev/stdin
+curl -f -L --retry 3 --output "ninja-1.13.2.g7659b.kitware.jobserver-pipe-1.tar.gz" -- "https://downloads.videolan.org/pub/contrib/ninja/ninja-1.13.2.g7659b.kitware.jobserver-pipe-1.tar.gz" || ( curl -f -L --retry 3 --output "ninja-1.13.2.g7659b.kitware.jobserver-pipe-1.tar.gz" -- "https://github.com/Kitware/ninja/archive/refs/tags/v1.13.2.g7659b.kitware.jobserver-pipe-1.tar.gz" && echo "Please upload this package ninja-1.13.2.g7659b.kitware.jobserver-pipe-1.tar.gz to our FTP" ) && grep ninja-1.13.2.g7659b.kitware.jobserver-pipe-1.tar.gz /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/SHA512SUMS| sha512sum -c /dev/stdin
+# install in a dummy autoconf so that VLC contribs pick it
+Available in the system
+touch .cmake
+install -d           "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/autoconf-vlc/build-aux"
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Uploa  %   Total   d %% Received % X Total  f  e r%% d   Tota TTotal    %   l   oS  t a %% Tl   Avera o  gR ec e Spe%etped   TiRe% cieenmeal t  Totai v l   %e    dRve cR Lefee  % iXdt  ved %fer Sepd  Aver  ac  Tg%X Xfered fierd% Rieeeme     Timve  ed
+   eceSpeeddC  ivedAve r  aTi %m%A gvXurrent
+                           erae Speed   Time    Time     Timge   e Xferd  A   ve r Ti   m0aee   Curre  gnSet
+                   Spee  T   d ime   p   0    0     f      ee e r d    d  Av De rCla oTimDload  Ue install config.guess "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/autoconf-vlc/build-aux"
+p  u loagr e raTime  0e  d  Time     TimSnt
+  d p 0 e  ee       Cu TU i  me 0pload       T d     r    ot   r     T  Ti mentT    0i%ma eTotal    e  
+C  l    % o  u R re  %S p rcent    
+      tal      e          e0 n%i Total    t       v  T T%     R- o e tim   %e  S-ep al         e:  cLn   t e   di-    e   v   T ot    feL% d      Ti-me e Xtff e rd  A   Speal  %  v%te Xf Cud rre   Speee    nrt R De  Dl r:%od
+a 
+  ed-g  R-
+l         adA --:-e v cU     -  epe  r S0 :oaa- d  eilv gc e-pe oiD eS  aedv0  ld   e%o    dedp  ee  T- X-   ota adf: dU er    Upl  Ti0  d  Average Speed p T  im m%l-olao-   e 0 :Xfer  ad d   --  e     0       Time        TSAd   Tim  v  e rp 0e  T   e0nt   i   moTe  a  0    ge S  T pei  T  0ot  a   m 0  ed   Time    Ti tal   Spen l   S p L    0 me    Dime  e    l t o ad  Ueefp   n0         T  0    tLe l0t oCTaduf irt    r   mi Ti   S me    e   Cnte  um ep
+0rren T t0SeeCp
+e      Luota   e l d-
+ d      
+    e0 frre St  - 0 ntp  -    : -  -   0:-C
+ --   :u --  e   n     S p 0  - t   r   e    e  - re :     install config.sub   "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/autoconf-vlc/build-aux"
+  -0    dn:--:-- 0    
+        t   -   
+ -    L   0   e-:           - 0-   00: --  --:    0       D  l-    -oad    ft:  0-0         0       -       0 0    U     p      l  0  -   0   S -oad:- p   ee 0  D -:- d
+  -          T  0 0o    lt 0      o a0  d   a  l  -   D U   S -0pp  e l   :0   ol - n 0-t a    o: d    -a - 0 -d -0   -:    Uplo -:  - -:-- -- - T a0 d   ota   -  : :--- -Lle 0  :f     t --:S  --pen--  :       Dlt  -o- T oad   -  0 0  t U-palS0  oad l  Lep Sp fe  tn  :- T-  :  t o -0 t a S pe ee eld
+-Left d  0 
+     -  -    Sp 0    S 0:  p e0-e 0end  t-: -    0--  0- 
+       :L   000- ef -t:- - -    S-  --:-  - 0 :: -p ee -d - --
+ :- - 0 :0 0 - - -- - :0      :     -0-- 0         0- 0 0 : --     0     0               0    0      0      0 --:- 00-:    -  -- 00- - :--:-- - -        0      0:-:---: ----:-:0-:-- --:--:-- ---:--:--  -   - --:--0:--     0--:--:--     0     0           00      0 --:--:-- --:--:-- --:--:--     0touch .buildconfigguess
+touch .configguess
+  0   153    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+curl: (56) The requested URL returned error: 404
+  0   153    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+curl: (56) The requested URL returned error: 404
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0   153    0     0    0       0   0      0    153  0 --:--:-- --:  --:-- --:--:--     0       0    0     00
+    curl:   0      0 --(56:--:-- --:--:-- --:) The reques--:--     0
+tcurl: (56) Thed URL retue rernedquested URL retur error: 404
+ned error: 404
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                %      Tota       l    %        Received % XfDloerdad  Uplo  Average Speed   Timead       Time     Time Total   S Currentpent    Left  Speed
+     
+            0     0           0     0    0     0      0      0 --:     --:-- -     -:--:-- -- Dload:--:--    Upload   Total   S  pent   0  Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0 4289k    0 16193    0     0  19750      0  0:03:42 --:--:--  0:03:42 19747 16  188k   16 32768    0     0  39944      0  0:00:04 --:--:--  0:00:04 39912  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0    100  188k  100  1 0  88k  0   0       0      0   0         0    0   16   0  4k   0     0       0      0     0 --:--:--   0  0:000      0 :01  --:--:-     0 --- -:---:-:---:-- --: 0:00:01 --   :--:--   0
+--:--  164k
+--:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0help2man-1.47.6.tar.xz: OK
+rm -f -R help2man help2man-1.47.6  && tar xfo help2man-1.47.6.tar.xz 
+mv help2man-1.47.6 help2man && touch help2man
+cd help2man; ./configure --prefix=/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build
+checking for perl... perl
+checking for module Locale::gettext... no
+checking for msgfmt... no
+checking for gcc... /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang
+ 41 2751k   41 1151k    0     0   682k      0  0:00:04  0:00:01  0:00:03  682k 94 1648k   94 1551k    0     0   913k      0  0:00:01  0:00:01 --:--:--  913k100 1648k  100 1648k    0     0   964k      0  0:00:01  0:00:01 --:--:--  964k
+ 20 4289k   20  896k    0     0   523k      0  0:00:08  0:00:01  0:00:07  523kchecking whether the C compiler works... nasm-2.16.03.tar.gz: OK
+ 42 2075k   42  879k    0     0   509k      0  0:00:04  0:00:01  0:00:03  509krm -f -R nasm nasm-2.16.03  && tar xfo nasm-2.16.03.tar.gz 
+ 11 2132k   11  239k    0     0   137k      0  0:00:15  0:00:01  0:00:14  137k  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  5 2320k    5  127k    0     0  74245      0  0:00:32  0:00:01  0:00:31 74219100  6264    0  6264    0     0   5887      0 --:--:--  0:00:01 --:--:--  5887 53 2459k   53 1309k    0     0  1229k      0  0:00:02  0:00:01  0:00:01 1229k  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... mv nasm-2.16.03 nasm && touch nasm
+
+cd nasm; ./configure --prefix=/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build
+checking whether we are cross compiling... 100 2459k  100 2459k    0     0  1802k      0  0:00:01  0:00:01 --:--:-- 3845k
+Please upload this package meson-1.12.0.tar.gz to our FTP
+100 2751k  100 2751k    0     0  1335k      0  0:00:02  0:00:02 --:--:-- 1336k
+meson-1.12.0.tar.gz: OK
+bison-3.8.2.tar.xz: OK
+rm -f -R meson meson-1.12.0  && tar xfo meson-1.12.0.tar.gz 
+rm -f -R bison bison-3.8.2  && tar xfo bison-3.8.2.tar.xz 
+no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang accepts -g... yes
+checking for /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang option to accept ISO C89... 100 2075k  100 2075k    0     0   919k      0  0:00:02  0:00:02 --:--:--  919k
+checking build system type... libtool-2.6.2.tar.gz: OK
+rm -f -R libtool libtool-2.6.2  && tar xfo libtool-2.6.2.tar.gz 
+none needed
+checking for library containing dlsym... aarch64-apple-darwin27.0.0
+checking host system type... aarch64-apple-darwin27.0.0
+checking for gcc... /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang
+100  286k    0  286k    0     0   177k      0 --:--:--  0:00:01 --:--:--  508k
+Please upload this package ninja-1.13.2.g7659b.kitware.jobserver-pipe-1.tar.gz to our FTP
+ninja-1.13.2.g7659b.kitware.jobserver-pipe-1.tar.gz: OK
+rm -f -R ninja ninja-1.13.2.g7659b.kitware.jobserver-pipe-1  && tar xfo ninja-1.13.2.g7659b.kitware.jobserver-pipe-1.tar.gz 
+(cd libtool-2.6.2 && chmod u+w build-aux/ltmain.sh)
+(cd libtool-2.6.2 && patch -p1) < /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/libtool-2.4.7-bitcode.patch
+100 4289k  100 4289k    0     0  1823k      0  0:00:02  0:00:02 --:--:-- 1823k
+patching file 'build-aux/ltmain.in'
+mv ninja-1.13.2.g7659b.kitware.jobserver-pipe-1 ninja && touch ninja
+(cd libtool-2.6.2 && patch -p1) < /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/libtool-2.4.7-lpthread.patch
+checking whether the C compiler works... cmake -S ninja -B ninja/vlc_build -DCMAKE_INSTALL_PREFIX:STRING=/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build -DBUILD_TESTING=OFF
+apache-ant-1.9.7.tar.bz2: OK
+rm -f -R ant apache-ant-1.9.7  && tar xfo apache-ant-1.9.7.tar.bz2 
+patching file 'build-aux/ltmain.in'
+patching file 'm4/libtool.m4'
+(cd libtool-2.6.2 && patch -p1) < /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/libtool-2.6.2-embed-bitcode.patch
+patching file 'build-aux/ltmain.in'
+patching file 'm4/libtool.m4'
+none required
+checking for library containing bindtextdomain... (cd libtool-2.6.2 && patch -p1) < /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/libtool-2.5.4-ltmain.in-reference-MAGIC_EXE-in-the-main.patch
+yes
+checking for C compiler default output file name... a.out
+patching file 'build-aux/ltmain.in'
+checking for suffix of executables... (cd libtool-2.6.2 && patch -p1) < /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/libtool-2.5.4-libtool.m4-respect-the-provided-LTCFLAGS-LTCC-during.patch
+patching file 'm4/libtool.m4'
+100 2132k  100 2132k    0     0   879k      0  0:00:02  0:00:02 --:--:--  879k
+mv libtool-2.6.2 libtool && touch libtool
+autoconf-2.73.tar.gz: OK
+rm -f -R autoconf autoconf-2.73  && tar xfo autoconf-2.73.tar.gz 
+mv bison-3.8.2 bison && touch bison
+cd bison; ./configure --prefix=/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build
+
+checking whether we are cross compiling... mv autoconf-2.73 autoconf && touch autoconf
+no
+checking for a BSD-compatible install... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... /usr/local/bin/ginstall -c
+checking for makeinfo... build-aux/missing makeinfo
+checking for install-info... build-aux/missing install-info
+checking for msgmerge... build-aux/missing msgmerge
+checking for xgettext... build-aux/missing xgettext
+checking for po4a-updatepo... build-aux/missing po4a-updatepo
+checking for po4a-translate... build-aux/missing po4a-translate
+yes
+checking whether /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang accepts -g... configure: creating ./config.status
+yes
+checking for /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang option to enable C11 features... none needed
+checking for stdio.h... checking for a BSD-compatible install...   0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0/usr/local/bin/ginstall -c
+checking whether build environment is sane... yes
+checking for stdlib.h... yes
+checking for a race-free mkdir -p...   0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0yes
+checking for string.h... -- The CXX compiler identification is AppleClang 21.0.0.21000334
+config.status: creating Makefile
+yes
+checking for inttypes.h... /usr/local/bin/gmkdir -p
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking whether make sets $(MAKE)... yes
+checking for stdint.h...  97 2320k   97 2271k    0     0   776k      0  0:00:02  0:00:02 --:--:--  776k100 2320k  100 2320k    0     0   793k      0  0:00:02  0:00:02 --:--:--  793k
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C help2man
+perl help2man.PL 
+yes
+Extracting help2man (with variable substitutions)
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C help2man install
+checking whether make supports nested variables... build-aux/mkinstalldirs /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/bin
+yes
+checking for strings.h... yes
+checking whether make supports nested variables... (cached) yes
+checking for gcc... /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang
+yes
+checking for sys/stat.h... yes
+checking for sys/types.h... automake-1.18.1.tar.gz: OK
+rm -f -R automake automake-1.18.1  && tar xfo automake-1.18.1.tar.gz 
+checking whether the C compiler works... yes
+checking for unistd.h... build-aux/mkinstalldirs /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/lib/help2man
+yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... mkdir /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/lib
+mkdir /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/lib/help2man
+build-aux/mkinstalldirs /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/man/man1
+mkdir /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/man
+mkdir /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/man/man1
+yes
+checking for wchar.h... build-aux/mkinstalldirs /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/info
+mv meson-1.12.0 meson && touch meson
+mkdir /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/info
+mkdir -p /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/bin
+/usr/local/bin/ginstall -c help2man /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/bin
+printf "#!/bin/sh\n\npython3 /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/meson/meson.py \"\$@\"\n" > /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/bin/meson
+chmod +x /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/bin/meson
+touch .buildmeson
+
+checking whether we are cross compiling... yes
+checking for minix/config.h... no
+checking for sys/param.h... /usr/local/bin/ginstall -c -m 644 $(build-aux/find-vpath   help2man.1) /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/man/man1
+yes
+checking whether it is safe to define __EXTENSIONS__... no
+checking for suffix of object files... (cd automake-1.18.1 && patch -p1) < /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/automake-disable-documentation.patch
+patching file Makefile.am
+yes
+checking whether _XOPEN_SOURCE should be defined... o
+checking whether the compiler supports GNU C... (cd automake-1.18.1 && patch -p1) < /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/automake-clang.patch
+patching file 'lib/depcomp'
+patching file 'm4/depend.m4'
+mv automake-1.18.1 automake && touch automake
+yes
+checking whether /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang accepts -g... no
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang accepts -std=c17... yes
+checking for /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang option to enable C11 features... /usr/local/bin/ginstall -c -m 644 $(build-aux/find-vpath   help2man.info) \
+	    /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/info/help2man.info
+yes
+none needed
+checking whether /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang understands -c and -o together... checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang accepts -ggdb3... if test -f /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/info/dir; \
+	then \
+	    build-aux/missing install-info --info-dir=/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/info \
+		/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/share/info/help2man.info; \
+	fi
+touch .buildhelp2man
+touch .help2man
+yes
+checking whether the compiler is clang... yes
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... -- Detecting CXX compiler ABI info
+yes
+checking for compiler option needed when checking for declarations... mv apache-ant-1.9.7 ant && touch ant
+no
+-Werror=implicit-function-declaration
+checking whether make supports the include directive... (mkdir -p /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/bin && cp ant/bin/* /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/bin/)
+checking for size_t... (mkdir -p /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/lib && cp ant/lib/* /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/build/lib/)
+yes (GNU style)
+checking dependency style of /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang... touch .buildant
+yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang accepts -Werror=unknown-warning-option... gcc3
+yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang accepts -fwrapv... checking whether the compiler supports GNU C++... yes
+checking whether /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ accepts -g... yes
+checking for /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ option to enable C++11 features...   0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0none needed
+checking dependency style of /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++...   0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0gcc3
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang accepts -ftrivial-auto-var-init=zero... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang accepts -U__STRICT_ANSI__... yes
+checking for wchar.h... yes
+checking for minix/config.h... yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang accepts -fno-common... no
+checking for locale.h... yes
+checking for suffix of library files... a
+checking whether ln -s works... yes
+checking whether make sets $(MAKE)... yes
+checking for sys/param.h... yes
+checking for a BSD-compatible install... /usr/local/bin/ginstall -c
+checking for a race-free mkdir -p... yes
+checking for sys/socket.h... yes
+checking for stdio_ext.h... /usr/local/bin/gmkdir -p
+checking for nroff... no
+checking for asciidoc... no
+checking for features.h... no
+checking for xmlto... no
+checking for xz... xz
+configure: WARNING: No asciidoc package found, cannot build man pages
+configure: WARNING: No xmlto package found, cannot build man pages
+checking for ar... /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar
+checking for ranlib... /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib
+checking for strip... /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip
+checking for an ANSI C-conforming const... yes
+checking for inline... no
+checking for getopt.h... inline
+checking for C/C++ restrict keyword... -- Detecting CXX compiler ABI info - done
+__restrict__
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang supports variadic macros... -- Check for working CXX compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ - skipped
+yes
+checking for sys/cdefs.h... -- Detecting CXX compile features
+-- Detecting CXX compile features - done
+yes
+checking for sys/time.h... yes
+yes
+checking for iconv.h... checking for string.h... (cached) yes
+checking for stdarg.h... yes
+checking for inttypes.h... (cached) yes
+checking for strings.h... (cached) yes
+checking for _Bool... yes
+checking for limits.h... yes
+checking for crtdefs.h... yes
+checking for stdbool.h that conforms to C99... no
+checking for wctype.h... yes
+checking for threads.h... yes
+checking for stdnoreturn.h... yes
+checking for io.h... no
+checking for math.h... yes
+checking for sys/mman.h... no
+checking for fcntl.h...   0     0    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0yes
+checking for spawn.h... yes
+checking for unistd.h... (cached) yes
+checking for sys/mman.h...   0     0    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0yes
+checking for sys/types.h... (cached) yes
+checking for sys/stat.h... (cached) yes
+checking for sys/resource.h... yes
+checking for sys/ioctl.h... yes
+checking for strcasecmp... yes
+checking for sys/resource.h... yes
+checking for sys/times.h... yes
+checking for stricmp... yes
+checking for sys/wait.h... yes
+checking for termios.h... no
+checking for strncasecmp... yes
+checking for dirent.h... yes
+checking for strnicmp... yes
+checking for xlocale.h... yes
+checking whether it is safe to define __EXTENSIONS__... no
+checking for strsep... yes
+checking whether _XOPEN_SOURCE should be defined... no
+checking build system type... yes
+checking for strnlen... aarch64-apple-darwin27.0.0
+checking host system type... aarch64-apple-darwin27.0.0
+checking how to run the C preprocessor... yes
+checking for strrchrnul... -- IPO / LTO enabled
+-- Performing Test flag_no_deprecated
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -E
+no
+checking for iscntrl... checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for Minix Amsterdam compiler... no
+checking for ar... /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... yes
+checking for isascii... no
+checking for ld used by /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang... /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld
+checking if the linker (/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld) is GNU ld... no
+checking for shared library run path origin... yes
+checking for mempcpy... done
+checking 32-bit host C ABI... no
+checking for ELF binary format... no
+checking for the common suffixes of directories in the library search path... no
+checking for mempset... lib,lib,lib
+checking for libtextstyle... no
+checking for inline... no
+checking for getuid... inline
+checking for tcdrain... yes
+checking for getgid...   0     0    0     0    0     0      0      0 --:--:--  0:00:05 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:05 --:--:--     0yes
+checking for canonicalize_file_name... -- Performing Test flag_no_deprecated - Success
+-- Looking for ppoll
+yes
+checking for getrlimit... no
+yes
+checking for faccessat... checking for realpath... yes
+yes
+checking for canonicalize_file_name... checking for realpath... no
+checking for _fullpath... yes
+checking for lstat... no
+checking for pathconf... yes
+checking for readlinkat... yes
+yes
+checking for _LARGEFILE_SOURCE value needed for large files... checking for _set_invalid_parameter_handler... -- Looking for ppoll - not found
+CMake Warning at CMakeLists.txt:82 (message):
+  re2c 2 or later was not found; changes to src/*.in.cc will not affect your
+  build.
+
+
+no
+checking for fchdir... no
+checking for _fseeki64... yes
+no
+checking for ftruncate... checking for fcntl... yes
+yes
+checking for _chsize... checking for symlink... no
+checking for _chsize_s... yes
+checking for ffsl... yes
+checking for vasnprintf... no
+checking for fileno... no
+checking for snprintf... -- Looking for fork
+yes
+checking for _fileno... yes
+checking for fsync... no
+checking for getpagesize... yes
+checking for microuptime... yes
+checking for working mmap...   0     0    0     0    0     0      0      0 --:--:--  0:00:06 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:06 --:--:--     0no
+checking for nanouptime... no
+checking for getprogname... yes
+checking for getexecname... yes
+checking for getpagesize... (cached) yes
+checking for sysconf... no
+checking for getrusage... -- Looking for fork - found
+-- Looking for pipe
+yes
+checking for access... yes
+checking for gettimeofday... yes
+checking for _access... yes
+checking for iswcntrl... no
+checking for faccessat... yes
+checking for iswblank... yes
+checking for __builtin_expect... yes
+checking for mbsinit... yes
+checking for intrin.h... yes
+checking for mbrtowc... no
+checking for __builtin_clz... yes
+checking for isascii... yes
+checking for __builtin_clzl... yes
+checking for mprotect... -- Looking for pipe - found
+-- Configuring done (5.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/tools/ninja/vlc_build
+cmake --build ninja/vlc_build
+yes
+checking for __builtin_clzll... yes
+checking for obstack_printf... make[1]: warning: jobserver unavailable: using -j1.  Add `+' to parent make rule.
+no
+checking for strerror_r... yes
+checking for _BitScanReverse... no
+checking for _BitScanReverse64... yes
+checking for __xpg_strerror_r... [  2%] Building CXX object CMakeFiles/libninja-re2c.dir/src/depfile_parser.cc.o
+no
+checking for sprintf... no
+checking for pipe... snprintf
+yes
+checking for vsnprintf... checking for pipe2... yes
+checking for posix_spawn_file_actions_addchdir_np... vsnprintf
+checking for strlcpy...   0     0    0     0    0     0      0      0 --:--:--  0:00:07 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:07 --:--:--     0yes
+checking for posix_spawn_file_actions_addchdir... yes
+checking for strrchrnul... (cached) no
+checking for struct _stati64... no
+checking for struct stat... yes
+checking for readlink... yes
+checking for setenv... yes
+checking for stat... [  5%] Building CXX object CMakeFiles/libninja-re2c.dir/src/lexer.cc.o
+yes
+checking for link... yes
+checking for _stati64... yes
+checking for sigaction... no
+checking for fstat... yes
+yes
+checking for _fstati64... checking for sigaltstack... no
+checking for S_ISREG... yes
+checking for siginterrupt... no
+yes
+checking for /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang options needed to detect all undeclared functions... checking for stpncpy... [  5%] Built target libninja-re2c
+none needed
+checking whether strcasecmp is declared... yes
+checking for strndup... [  8%] Building CXX object CMakeFiles/libninja.dir/src/build_log.cc.o
+yes
+checking whether stricmp is declared... yes
+checking for wcwidth... no
+checking whether strncasecmp is declared... yes
+checking for fdopendir... yes
+checking whether strnicmp is declared... no
+checking whether strsep is declared... yes
+checking for mempcpy... yes
+checking whether strlcpy is declared... no
+checking for __fseterr... yes
+checking whether strnlen is declared... no
+checking for fstatat... yes
+checking whether strrchrnul is declared... no
+checking for uintptr_t... yes
+checking for getdelim... [ 11%] Building CXX object CMakeFiles/libninja.dir/src/build.cc.o
+yes
+checking for getdtablesize... yes
+checking whether byte ordering is bigendian...   0     0    0     0    0     0      0      0 --:--:--  0:00:08 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:08 --:--:--     0yes
+checking for openat... no
+checking for endian.h... yes
+checking for catgets... no
+checking for sys/endian.h... yes
+checking for setlocale... yes
+checking for machine/endian.h... yes
+checking for cpu_to_le16... yes
+checking whether pragma GCC diagnostic push works... yes
+checking whether C++ compiler handles -Werror -Wunknown-warning-option... no
+checking for cpu_to_le32... yes
+checking whether C++ compiler handles -fno-exceptions... no
+checking for cpu_to_le64... no
+yes
+checking for __cpu_to_le16... checking whether C++ compiler accepts -std=c++98... no
+checking for __cpu_to_le32... yes
+checking whether C++ compiler accepts -std=c++03... no
+checking for __cpu_to_le64... [ 14%] Building CXX object CMakeFiles/libninja.dir/src/clean.cc.o
+yes
+checking whether C++ compiler accepts -std=c++11... no
+checking for htole16... yes
+checking for htole32... yes
+checking for htole64... yes
+checking for __bswap_16... no
+checking for __bswap_32... no
+[ 17%] Building CXX object CMakeFiles/libninja.dir/src/clparser.cc.o
+checking for __bswap_64... yes
+checking whether C++ compiler accepts -std=c++14... no
+checking for __builtin_bswap16... yes
+checking for __builtin_bswap32...   0    0     0    0    0    0     0      0  0       0     0      0  0            00       --:--:--  0:00:00 --:--:9 --- -:--:--     0 0:00:09 --:--:--     0yes
+checking for __builtin_bswap64... yes
+checking for _byteswap_ushort... [ 20%] Building CXX object CMakeFiles/libninja.dir/src/dyndep.cc.o
+no
+checking for _byteswap_ulong... no
+checking for _byteswap_uint64... no
+checking for __builtin_constant_p... yes
+checking whether C++ compiler accepts -std=c++17... yes
+checking for __builtin_choose_expr... yes
+checking if /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang accepts -Werror=attributes... Terminated: 15
+make: *** [.buildbison] Terminated: 15
+make: *** [.buildnasm] Terminated: 15
+make: *** [gettext-0.26.tar.gz] Terminated: 15
+make: *** [m4-1.4.21.tar.gz] Terminated: 15
+make[3]: *** [CMakeFiles/libninja.dir/src/dyndep.cc.o] Terminated: 15
+Terminated: 15
+make[2]: *** [CMakeFiles/libninja.dir/all] Terminated: 15
+make[1]: *** [all] Terminated: 15
+make: *** [.buildninja] Terminated: 15

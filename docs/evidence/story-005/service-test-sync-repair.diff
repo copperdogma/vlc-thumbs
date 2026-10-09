@@ -1,0 +1,116 @@
+--- a/modules/gui/macosx/tests/VLCThumbnailServiceTest.m
++++ b/modules/gui/macosx/tests/VLCThumbnailServiceTest.m
+@@ -622,7 +622,11 @@
+         @"eligible" : @YES
+     }
+               enabled:YES];
+-    Spin(2.5);
++    double coverageDeadline = Now() + 5;
++    while (
++        ([s.metrics[@"completed"] unsignedIntegerValue] < 7 || [s.metrics[@"active"] boolValue]) &&
++        Now() < coverageDeadline)
++        Spin(.01);
+     Check(@"finite proactive coverage without hover",
+           [s.metrics[@"completed"] intValue] >= 7 && [s.metrics[@"launched"] intValue] == 1,
+           s.metrics);
+@@ -774,53 +778,59 @@
+ 
+ - (void)testWorkerCommandDeadlineAndPartialWrites
+ {
+-    VLCThumbnailWorker *worker = [[VLCThumbnailWorker alloc] initWithHelperPath:@"/unused"];
++    // Published Darwin XNU limits buffered pipes to PIPE_SIZE * 4 (64 KiB).
++    // A 256 KiB no-reader write exceeds that cap even if a full pipe grows.
++    // This is a Darwin fault fixture, not a universal POSIX pipe-capacity claim.
++    // https://github.com/apple-oss-distributions/xnu/blob/main/bsd/kern/sys_pipe.c
++    NSData *blocked = [NSMutableData dataWithLength:256 * 1024];
+     int descriptors[2];
+     XCTAssertEqual(pipe(descriptors), 0);
+-    XCTAssertEqual(fcntl(descriptors[1], F_SETFL, O_NONBLOCK), 0);
+-    uint8_t fill[4096] = {0};
+-    BOOL full = NO;
+-    for (NSUInteger total = 0; total < 1024 * 1024;)
+-    {
+-        ssize_t count = write(descriptors[1], fill, sizeof fill);
+-        if (count < 0 && errno == EAGAIN)
+-        {
+-            full = YES;
+-            break;
+-        }
+-        XCTAssertGreaterThan(count, 0);
+-        if (count <= 0)
+-            break;
+-        total += (NSUInteger)count;
+-    }
+-    XCTAssertTrue(full);
+-    NSData *command = [@"1 1000\n" dataUsingEncoding:NSASCIIStringEncoding];
++    VLCThumbnailWorker *timeoutWorker = [[VLCThumbnailWorker alloc] initWithHelperPath:@"/unused"];
+     double started = Now();
+-    XCTAssertFalse([worker writeCommand:command
+-                             descriptor:descriptors[1]
+-                               deadline:started + .15
+-                                  epoch:0]);
++    XCTAssertFalse([timeoutWorker writeCommand:blocked
++                                    descriptor:descriptors[1]
++                                      deadline:started + .15
++                                         epoch:0]);
+     XCTAssertGreaterThanOrEqual(Now() - started, .10);
+     XCTAssertLessThan(Now() - started, .75);
++    close(descriptors[0]);
++    close(descriptors[1]);
++
++    XCTAssertEqual(pipe(descriptors), 0);
++    VLCThumbnailWorker *cancelWorker = [[VLCThumbnailWorker alloc] initWithHelperPath:@"/unused"];
++    dispatch_semaphore_t invalidated = dispatch_semaphore_create(0);
+     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 50 * NSEC_PER_MSEC),
+                    dispatch_get_global_queue(QOS_CLASS_DEFAULT, 0), ^{
+-                       [worker invalidate];
++                       [cancelWorker invalidate];
++                       dispatch_semaphore_signal(invalidated);
+                    });
+     started = Now();
+-    XCTAssertFalse([worker writeCommand:command
+-                             descriptor:descriptors[1]
+-                               deadline:started + 2
+-                                  epoch:0]);
++    XCTAssertFalse([cancelWorker writeCommand:blocked
++                                   descriptor:descriptors[1]
++                                     deadline:started + 2
++                                        epoch:0]);
+     XCTAssertLessThan(Now() - started, .75);
++    // Join on every outcome before cleanup; later cases use independent epochs.
++    XCTAssertEqual(
++        dispatch_semaphore_wait(invalidated, dispatch_time(DISPATCH_TIME_NOW, 750 * NSEC_PER_MSEC)),
++        0L);
++    close(descriptors[0]);
++    close(descriptors[1]);
++
++    XCTAssertEqual(pipe(descriptors), 0);
++    VLCThumbnailWorker *disconnectedWorker =
++        [[VLCThumbnailWorker alloc] initWithHelperPath:@"/unused"];
++    NSData *command = [@"1 1000\n" dataUsingEncoding:NSASCIIStringEncoding];
+     close(descriptors[0]);
+     // A disconnected reader must fail without global SIGPIPE changes.
+-    XCTAssertFalse([worker writeCommand:command
+-                             descriptor:descriptors[1]
+-                               deadline:Now() + 1
+-                                  epoch:1]);
++    XCTAssertFalse([disconnectedWorker writeCommand:command
++                                         descriptor:descriptors[1]
++                                           deadline:Now() + 1
++                                              epoch:0]);
+     close(descriptors[1]);
+ 
+     XCTAssertEqual(pipe(descriptors), 0);
++    VLCThumbnailWorker *drainWorker = [[VLCThumbnailWorker alloc] initWithHelperPath:@"/unused"];
+     int reader = descriptors[0], writer = descriptors[1];
+     XCTAssertEqual(fcntl(reader, F_SETFL, O_NONBLOCK), 0);
+     NSMutableData *large = [NSMutableData dataWithLength:256 * 1024];
+@@ -842,7 +852,7 @@
+         }
+         [drained fulfill];
+     });
+-    XCTAssertTrue([worker writeCommand:large descriptor:writer deadline:Now() + 2 epoch:1]);
++    XCTAssertTrue([drainWorker writeCommand:large descriptor:writer deadline:Now() + 2 epoch:0]);
+     [self waitForExpectationsWithTimeout:3 handler:nil];
+     XCTAssertEqualObjects(received, large);
+     close(reader);

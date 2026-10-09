@@ -15,3 +15,5 @@
   correspondence and useful disk retention under quota pressure.
 
 Imported skill references to source-project ADR numbers are examples, not local decisions.
+
+- [ADR-004 — Upstream preview integration](adr-004-upstream-preview-integration/adr.md): Accepted technical plan for Story005; retained helper on master through normal FFmpeg9 contrib/build, existing native hover owner and preserved behavioral contracts. Phases1/2 are locally qualified at the disclosed bounded scope in [current source10 verification](../evidence/story-005/current-source10-final-verification.md); no maintainer acceptance claimed.

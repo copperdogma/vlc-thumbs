@@ -1,0 +1,347 @@
+{
+  "scope": "Legal/synthetic test fixture generation only; admission behavior belongs to helper/dependency owners",
+  "base": "2e358f3098c2f2b7621d1dc568de8b61ad786322",
+  "source": "work/upstream/vlc-master-story005-candidate/bin/timeline-preview/tests/generate_admission_fixtures.py",
+  "source_sha256": "0c58262f350ec1552570a6373cac713a7fbe76af685410a19a7d1c3f35989981",
+  "command": [
+    "python3",
+    "work/upstream/vlc-master-story005-candidate/bin/timeline-preview/tests/generate_admission_fixtures.py",
+    "--output",
+    "work/story005-admission-fixtures001"
+  ],
+  "manifest": "work/story005-admission-fixtures001/manifest.json",
+  "manifest_sha256": "e2225aff659750a065f66ca7677c83afdfdd4accc4d5162e3727fc23457cab8c",
+  "case_count": 35,
+  "media_bytes": 1839728,
+  "all_ffprobe_returncode_zero": true,
+  "cases": [
+    {
+      "file": "flat-no-chapters.mkv",
+      "admitted": true,
+      "reason": "complete flat Segment",
+      "validity": "valid",
+      "bytes": 981,
+      "cluster_count": 1,
+      "sha256": "2adcbfc55382354f1ddd46442b99029c19401748258d59d0eecc6a249fbafdbf"
+    },
+    {
+      "file": "flat-own-segment-uid.mkv",
+      "admitted": true,
+      "reason": "own UID is not a link",
+      "validity": "valid",
+      "bytes": 981,
+      "cluster_count": 1,
+      "sha256": "2adcbfc55382354f1ddd46442b99029c19401748258d59d0eecc6a249fbafdbf"
+    },
+    {
+      "file": "flat-simple-chapters.mkv",
+      "admitted": true,
+      "reason": "explicit unordered edition",
+      "validity": "valid",
+      "bytes": 1013,
+      "cluster_count": 1,
+      "sha256": "32db824f0975cc9c1b15001bc5febb79abcf702753e4017c2e2ed445164072a8"
+    },
+    {
+      "file": "flat-default-edition.mkv",
+      "admitted": true,
+      "reason": "absent ordered flag defaults0",
+      "validity": "valid",
+      "bytes": 1009,
+      "cluster_count": 1,
+      "sha256": "fd71c73ee4af4630f516b92ed9455d8870dd1b1f78f785266a22ec8fa899cc11"
+    },
+    {
+      "file": "flat-late-chapters.mkv",
+      "admitted": true,
+      "reason": "late finite unordered Chapters, no index",
+      "validity": "valid",
+      "bytes": 1013,
+      "cluster_count": 1,
+      "sha256": "fa02dcdbde07e0b8e134737c329647bad7dab716a00b8aefaab7933ef1d25228"
+    },
+    {
+      "file": "flat-unknown-segment.mkv",
+      "admitted": true,
+      "reason": "unknown Segment bounded by physical file",
+      "validity": "valid",
+      "bytes": 987,
+      "cluster_count": 1,
+      "sha256": "a12a7422d3f753a56a3105824ca37bfceb60f1ba5cda708c75800db363e36123"
+    },
+    {
+      "file": "ordered-single.mkv",
+      "admitted": false,
+      "reason": "ordered edition",
+      "validity": "valid",
+      "bytes": 1013,
+      "cluster_count": 1,
+      "sha256": "b8b90fee4f75b627c1cf391164000cdf4c742165613aeb7f61baaab0c4696e22"
+    },
+    {
+      "file": "ordered-first-flat-last.mkv",
+      "admitted": false,
+      "reason": "positive ordered evidence cannot be overwritten",
+      "validity": "valid",
+      "bytes": 1040,
+      "cluster_count": 1,
+      "sha256": "4360f26223ab4de6b3abc67cb95d608a9a8b9c111af9a6568e8943fd0ed79096"
+    },
+    {
+      "file": "flat-first-ordered-last.mkv",
+      "admitted": false,
+      "reason": "any ordered edition",
+      "validity": "valid",
+      "bytes": 1040,
+      "cluster_count": 1,
+      "sha256": "a7f83bf3d7e6dd772399be15f82c6c7f2db44e9a0ed34c42f9ac5c350809cd81"
+    },
+    {
+      "file": "ordered-hidden-nondefault.mkv",
+      "admitted": false,
+      "reason": "hidden nondefault ordered edition",
+      "validity": "valid",
+      "bytes": 1048,
+      "cluster_count": 1,
+      "sha256": "2539b47eb5e4d919643e2d9afde7810e2e68bc24341fdbc93cd1706026d1e86e"
+    },
+    {
+      "file": "ordered-duplicate-1-then-0.mkv",
+      "admitted": false,
+      "reason": "repeated non-multiple ordered flag",
+      "validity": "malformed-duplicate-flag",
+      "bytes": 1017,
+      "cluster_count": 1,
+      "sha256": "e65fe19430df10bb9bbb1a746f0496fabe6efc5f4ef76f4d66db18af7939a5f9"
+    },
+    {
+      "file": "ordered-late-no-index.mkv",
+      "admitted": false,
+      "reason": "ordered Chapters after Cluster without SeekHead",
+      "validity": "valid",
+      "bytes": 1013,
+      "cluster_count": 1,
+      "sha256": "b1014e5ba8521bdffea91c8bda8686228128881fbba2274b8fa58ff8836f1089"
+    },
+    {
+      "file": "ordered-late-correct-index.mkv",
+      "admitted": false,
+      "reason": "ordered late Chapters with correct SeekHead",
+      "validity": "valid",
+      "bytes": 1035,
+      "cluster_count": 1,
+      "sha256": "389d1b6419bad4cf0bc3346ef09b352f90c932797378a1894f7960459ffed5c5"
+    },
+    {
+      "file": "ordered-late-incomplete-index.mkv",
+      "admitted": false,
+      "reason": "sparse SeekHead omits Chapters",
+      "validity": "valid",
+      "bytes": 1035,
+      "cluster_count": 1,
+      "sha256": "e2ae047aaadbb0a9f2bc3dfacd25ea3ae6c38c1f1050248302d6dc57ea4efb48"
+    },
+    {
+      "file": "ordered-late-broken-index.mkv",
+      "admitted": false,
+      "reason": "SeekHead position outside Segment",
+      "validity": "malformed-seek-position",
+      "bytes": 1052,
+      "cluster_count": 1,
+      "sha256": "7087a24b9947e23023aca6e08c7eab62dda2e67b789d297e642a0a878dd0229a"
+    },
+    {
+      "file": "flat-bogus-tags.mkv",
+      "admitted": true,
+      "reason": "tags cannot force flat rejection",
+      "validity": "valid",
+      "bytes": 1093,
+      "cluster_count": 1,
+      "sha256": "80c3822ea33075587744d0871f92bfa5d99ac36319182e7f7b8900da78a85643"
+    },
+    {
+      "file": "ordered-bogus-tags.mkv",
+      "admitted": false,
+      "reason": "tags cannot spoof flat admission",
+      "validity": "valid",
+      "bytes": 1122,
+      "cluster_count": 1,
+      "sha256": "9e67397cc35b4d813ca3a9ac5366e6a56618d3b6351d979acb0981e7ebe861da"
+    },
+    {
+      "file": "hard-prev.mkv",
+      "admitted": false,
+      "reason": "link/family presence, linked file not supplied",
+      "validity": "valid",
+      "bytes": 1002,
+      "cluster_count": 1,
+      "sha256": "208d6607505d021e32daa5a238588ec8b2f8867680380ede15b6ca544f8b2a4f"
+    },
+    {
+      "file": "hard-next.mkv",
+      "admitted": false,
+      "reason": "link/family presence, linked file not supplied",
+      "validity": "valid",
+      "bytes": 1002,
+      "cluster_count": 1,
+      "sha256": "f30a77af2b4f5c0b36328b5cb16047cf4abe40ef297f8ece622141b0b5a1b182"
+    },
+    {
+      "file": "hard-prev-next.mkv",
+      "admitted": false,
+      "reason": "link/family presence, linked file not supplied",
+      "validity": "valid",
+      "bytes": 1022,
+      "cluster_count": 1,
+      "sha256": "638b371f6136d57fe5a9a76cdc55ce70ead5a7cbea6c857f61847c7d35f0fb11"
+    },
+    {
+      "file": "segment-family.mkv",
+      "admitted": false,
+      "reason": "link/family presence, linked file not supplied",
+      "validity": "valid",
+      "bytes": 1001,
+      "cluster_count": 1,
+      "sha256": "7957dae0c9b1f6ac8fbce10eb158bd15f5763e3a3d0567c0e848cbcaf766bc0c"
+    },
+    {
+      "file": "hard-prev-late-info.mkv",
+      "admitted": false,
+      "reason": "late Info hard link, no index",
+      "validity": "valid",
+      "bytes": 1002,
+      "cluster_count": 1,
+      "sha256": "37362fe130fff28bd611291c996b6298983b5bad2e2661335527ae4a3bc6d192"
+    },
+    {
+      "file": "medium-unordered.mkv",
+      "admitted": false,
+      "reason": "unordered/nested ChapterSegment link",
+      "validity": "valid",
+      "bytes": 1032,
+      "cluster_count": 1,
+      "sha256": "600cfb5dc72edf64cc1185a021ddd394253cd793c5f7d81436baaeaf6dd0aefb"
+    },
+    {
+      "file": "medium-nested.mkv",
+      "admitted": false,
+      "reason": "unordered/nested ChapterSegment link",
+      "validity": "valid",
+      "bytes": 1048,
+      "cluster_count": 1,
+      "sha256": "d9875742f16cdec612df12aa70121a385647e5a6dd3d089125550b7b4f4b96f2"
+    },
+    {
+      "file": "medium-edition-uid.mkv",
+      "admitted": false,
+      "reason": "unordered/nested ChapterSegment link",
+      "validity": "valid",
+      "bytes": 1036,
+      "cluster_count": 1,
+      "sha256": "3012cdb3942704e57922434305202561efdd61b016cb11d2957788c3718fe558"
+    },
+    {
+      "file": "medium-late.mkv",
+      "admitted": false,
+      "reason": "late nested link without index",
+      "validity": "valid",
+      "bytes": 1048,
+      "cluster_count": 1,
+      "sha256": "a3b5facf96e3d9b15e0ff0a7e58cfe6c7ff38dd6ac7e4efe771ec207935bae89"
+    },
+    {
+      "file": "medium-edition-without-segment.mkv",
+      "admitted": false,
+      "reason": "ChapterSegmentEditionUID requires ChapterSegmentUUID",
+      "validity": "malformed-edition-link",
+      "bytes": 1017,
+      "cluster_count": 1,
+      "sha256": "91116eee0a6cde1f82e4768897d5e859302956ca507b683026720a66b2a837c5"
+    },
+    {
+      "file": "unknown-cluster.mkv",
+      "admitted": false,
+      "reason": "valid streaming layout conservatively unsupported",
+      "validity": "valid",
+      "bytes": 993,
+      "cluster_count": 1,
+      "sha256": "9da90afb6f128bbb9970e1ec4ddfd88722c3f502edd3248526f9217edfd91a15"
+    },
+    {
+      "file": "truncated-chapters.mkv",
+      "admitted": false,
+      "reason": "physical EOF inside finite Chapters/Segment",
+      "validity": "malformed-truncated",
+      "bytes": 1010,
+      "cluster_count": 1,
+      "sha256": "ce08dd989d61de7717ca71f14d03f3abae8e2b39a2f6531d3ac4d2a8f09d5edd"
+    },
+    {
+      "file": "oversize-chapters.mkv",
+      "admitted": false,
+      "reason": "Chapters length exceeds Segment",
+      "validity": "malformed-length",
+      "bytes": 1014,
+      "cluster_count": 1,
+      "sha256": "04720d37bc9442f97e1b16706d139d47662f007d04dbd347d09dd6aadba61d88"
+    },
+    {
+      "file": "zero-vint.mkv",
+      "admitted": false,
+      "reason": "zero EBML ID marker",
+      "validity": "malformed-vint",
+      "bytes": 983,
+      "cluster_count": 1,
+      "sha256": "ea96bfb0e081d15c803f831c7e5fec55ac869bf459108a7e172df24f7dea3492"
+    },
+    {
+      "file": "multiple-segments.mkv",
+      "admitted": false,
+      "reason": "multiple Segment elements outside selected physical Segment",
+      "validity": "unsupported-multiple-segments",
+      "bytes": 1922,
+      "cluster_count": 2,
+      "sha256": "39c1aa42903ebc1c4f85d6ffbcffea192e1244353b6d9ef8c6fa857d78d31eec"
+    },
+    {
+      "file": "flat-two-hours-1200-clusters.mkv",
+      "admitted": true,
+      "reason": "1200 finite Clusters over7200s",
+      "validity": "valid",
+      "bytes": 801904,
+      "cluster_count": 1200,
+      "sha256": "6a960dede226d6ecfa1ec7cf7f7b00e7b22cf5723e005f44fab29556d06918ce"
+    },
+    {
+      "file": "ordered-late-two-hours-1200-clusters.mkv",
+      "admitted": false,
+      "reason": "ordered Chapters only after1200 finite Clusters",
+      "validity": "valid",
+      "bytes": 801936,
+      "cluster_count": 1200,
+      "sha256": "1b13aef73dd9c31fdca4f80ad787de0f5c9755181704cad017543ec2d9c9a932"
+    },
+    {
+      "file": "node-budget-100001-voids.mkv",
+      "admitted": false,
+      "reason": "finite element count exceeds100000 admission budget",
+      "validity": "valid",
+      "bytes": 200984,
+      "cluster_count": 1,
+      "sha256": "c4ca96779d8d07b85c763dfa3871d127e21304aa65a501b80c360f75047ea614"
+    }
+  ],
+  "structural_assertions": "Every valid fixture parses to physical bounds. Admitted cases have exactly1 Segment, no unknown Cluster, no nonzero ordered flag and no links. Correct index points at Chapters; broken position does not. Late Chapters located after first Cluster. Long flat contains exactly1200 timestamps0..7194000ms step6000ms. Malformed bounds/VINT controls fail structural oracle.",
+  "native_observation_receipt": "docs/evidence/story-005/admission-fixtures-native-observations.json",
+  "limits": {
+    "per_file_bytes": 2097152,
+    "media_total_bytes": 16777216,
+    "free_reserve_bytes": 1073741824,
+    "command_timeout_seconds": 30
+  },
+  "sources": [
+    "https://www.matroska.org/technical/elements.html",
+    "https://www.matroska.org/technical/chapters.html",
+    "https://www.matroska.org/technical/notes.html"
+  ]
+}

@@ -1,0 +1,9 @@
+# Independent native test failures: bounded source diagnosis
+
+The quiet independent registered run `reproduction-native-final-20261006T063243Z` failed two service methods (six assertions): finite proactive coverage and command-pipe deadline/partial-write checks. Main bundle269 tests/one explicit optional ENOSPC skip; isolated context7 and hover12 passed. The actual real-controller same-URI epoch test passed after the owning integration fixture restored its environment.
+
+No other owned build, encoder, fixture generator or helper-check job ran concurrently. This does not prove the shared host was idle. The proactive failure still reported six completions/seven worker requests/one active request after the test's fixed2.5-second Spin; the overall method's60.857 seconds is not that assertion deadline. Load causation remains unproven.
+
+The worker and Cfixture source hashes are identical in candidate and independent source: `18f4aa213f2f8823b69a340ef2e3849c6461cd71070332c814fe44f8ed1ec5b7` and `c671a501f3d378d595ebeff255fc9dfd9a7997a22bcf4e3f9d93f242ce9e8374` respectively. Actual command/sanitized environment and binary build context are retained in the run receipt/log.
+
+The [POSIX write contract](https://pubs.opengroup.org/onlinepubs/9690949599/functions/write.html) distinguishes requested size, atomic pipe writes and available capacity. EAGAIN from a4096-byte nonblocking fill does not generally establish that a seven-byte command cannot fit. Here the first command unexpectedly completed in0.012 seconds; it could then outrun the scheduled50ms cancellation, leaving the following epoch1 partial-write test with the wrong initial epoch. This is a hypothesis about fixture preconditions and cascading assertions, not a demonstrated product defect. The service owner has the exact log and proposed bounded discriminator; no local runtime, product change or retry was performed by this lane after the quiet failure.

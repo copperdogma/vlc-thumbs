@@ -1,0 +1,8 @@
+{
+  "receipt": "candidate-build-20261006T042305Z.json",
+  "binary": "work/story005-master-candidate/modules/.libs/libavcodec_plugin.dylib",
+  "sha256": "dfa59bc98064d4c2fde16a1767c04bd27f314f8b37c79e44aa67001b4ece853d",
+  "forced_prerequisite": "codec/avcodec/avcodec.c (-W; no source modification)",
+  "dependency_manifest": "feature-h1-contrib-build-manifest.json",
+  "scope": "normal merged FFmpeg plugin fresh link; default-off playback parity after H1 still separate"
+}

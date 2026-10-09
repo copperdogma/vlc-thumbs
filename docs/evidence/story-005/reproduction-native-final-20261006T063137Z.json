@@ -1,0 +1,19 @@
+{
+  "stage": "native-final",
+  "command": [
+    "bash",
+    "work/story005-scout/reproduction-conventional-transcript.sh",
+    "native-final"
+  ],
+  "cwd": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs",
+  "initial_free_bytes": 10489176064,
+  "stage_preflight_gib": 1.5,
+  "floor_bytes": 1073741824,
+  "time_limit_seconds": 600,
+  "status": "failed",
+  "pid": 56966,
+  "elapsed_seconds": 16.0,
+  "minimum_free_bytes": 9404276736,
+  "exit_code": -15,
+  "final_free_bytes": 9316495360
+}

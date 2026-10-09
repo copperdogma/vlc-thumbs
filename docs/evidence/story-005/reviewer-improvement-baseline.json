@@ -1,0 +1,1200 @@
+{
+  "utc": "2026-10-07T01:35:28.651311+00:00",
+  "status": "passed",
+  "manifest_sha256": "0279ae61e3bb54b0e448a00d61521cf8f51654808f2efc7e578689f633a2dab5",
+  "manifest_revision": 10,
+  "source_tree": "cc0ec69e8be5ba2e60ccae6ea095b471b500a6ff",
+  "base": "2e358f3098c2f2b7621d1dc568de8b61ad786322",
+  "source_file_count": 59,
+  "repos": {
+    "root": {
+      "path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs",
+      "head": {
+        "argv": [
+          "git",
+          "rev-parse",
+          "HEAD"
+        ],
+        "exit_code": 0,
+        "stdout": "36dc5ee87e62dfe5095ac565f9a08c3a0c88a1bb\n",
+        "stderr": ""
+      },
+      "status": {
+        "argv": [
+          "git",
+          "status",
+          "--porcelain=v1",
+          "--untracked-files=all"
+        ],
+        "exit_code": 0,
+        "stdout": " M AGENTS.md\n M docs/decisions/README.md\n M docs/methodology/graph.json\n M docs/methodology/state.yaml\n M docs/plan.md\n M docs/research/upstream-contribution-scout.md\n M docs/spec.md\n M docs/stories.md\n M docs/stories/story-005-open-source-contribution.md\n?? docs/decisions/adr-004-upstream-preview-integration/adr.md\n?? docs/decisions/adr-004-upstream-preview-integration/research/final-synthesis.md\n?? docs/decisions/adr-004-upstream-preview-integration/research/research-prompt.md\n?? docs/evidence/story-005/admission-fixture-generation-002.json\n?? docs/evidence/story-005/admission-fixture-generation.json\n?? docs/evidence/story-005/admission-fixtures-native-observations.json\n?? docs/evidence/story-005/apple-header-distribution-review.diff\n?? docs/evidence/story-005/apple-header-distribution-source-receipt.json\n?? docs/evidence/story-005/apple-header-independent-public-apply.json\n?? docs/evidence/story-005/attribution-wrapper-final-validation.log\n?? docs/evidence/story-005/attribution-wrapper-validation-001.json\n?? docs/evidence/story-005/attribution-wrapper-validation-002.json\n?? docs/evidence/story-005/baseline-bootstrap-diagnosis.md\n?? docs/evidence/story-005/baseline-bootstrap-repair.log\n?? docs/evidence/story-005/baseline-build-20261006T015535Z.json\n?? docs/evidence/story-005/baseline-build-20261006T015535Z.log\n?? docs/evidence/story-005/baseline-build-20261006T015601Z.json\n?? docs/evidence/story-005/baseline-build-20261006T015601Z.log\n?? docs/evidence/story-005/baseline-build-20261006T015951Z.json\n?? docs/evidence/story-005/baseline-build-20261006T015951Z.log\n?? docs/evidence/story-005/baseline-build-20261006T020819Z.json\n?? docs/evidence/story-005/baseline-build-20261006T020819Z.log\n?? docs/evidence/story-005/baseline-build-20261006T021319Z.json\n?? docs/evidence/story-005/baseline-build-20261006T021319Z.log\n?? docs/evidence/story-005/baseline-build-20261006T021453Z.json\n?? docs/evidence/story-005/baseline-build-20261006T021453Z.log\n?? docs/evidence/story-005/baseline-build-20261006T021602Z.json\n?? docs/evidence/story-005/baseline-build-20261006T021602Z.log\n?? docs/evidence/story-005/baseline-build-20261006T022001Z.json\n?? docs/evidence/story-005/baseline-build-20261006T022001Z.log\n?? docs/evidence/story-005/baseline-build-20261006T022526Z.json\n?? docs/evidence/story-005/baseline-build-20261006T022526Z.log\n?? docs/evidence/story-005/baseline-build-20261006T022629Z.json\n?? docs/evidence/story-005/baseline-build-20261006T022629Z.log\n?? docs/evidence/story-005/baseline-build-20261006T022721Z.json\n?? docs/evidence/story-005/baseline-build-20261006T022721Z.log\n?? docs/evidence/story-005/baseline-build-manifest.json\n?? docs/evidence/story-005/baseline-clock-tls-attribution-20261006T074008Z-test_modules_tls-harness.log\n?? docs/evidence/story-005/baseline-clock-tls-attribution-20261006T074008Z-test_modules_tls.log\n?? docs/evidence/story-005/baseline-clock-tls-attribution-20261006T074008Z-test_modules_tls.trs\n?? docs/evidence/story-005/baseline-clock-tls-attribution-20261006T074008Z-test_src_clock_clock-harness.log\n?? docs/evidence/story-005/baseline-clock-tls-attribution-20261006T074008Z-test_src_clock_clock.log\n?? docs/evidence/story-005/baseline-clock-tls-attribution-20261006T074008Z-test_src_clock_clock.trs\n?? docs/evidence/story-005/baseline-clock-tls-attribution-20261006T074008Z.json\n?? docs/evidence/story-005/baseline-clock-tls-attribution-result.md\n?? docs/evidence/story-005/baseline-download-decision.md\n?? docs/evidence/story-005/baseline-metal-prerequisite.md\n?? docs/evidence/story-005/baseline-opengl-attribution-20261006T134341Z-harness.log\n?? docs/evidence/story-005/baseline-opengl-attribution-20261006T134341Z.json\n?? docs/evidence/story-005/baseline-opengl-attribution-plan.json\n?? docs/evidence/story-005/baseline-opengl-attribution-result.md\n?? docs/evidence/story-005/baseline-opengl-planned001.log\n?? docs/evidence/story-005/baseline-opengl-planned001.trs\n?? docs/evidence/story-005/baseline-prebuilt-archive.json\n?? docs/evidence/story-005/baseline-prebuilt-investigation.md\n?? docs/evidence/story-005/baseline-prebuilt-sdk-repair.md\n?? docs/evidence/story-005/baseline-reproduction.md\n?? docs/evidence/story-005/baseline-test-sdk-diagnosis.md\n?? docs/evidence/story-005/baseline-test-sdk-probe.json\n?? docs/evidence/story-005/baseline-tool-download-verification.json\n?? docs/evidence/story-005/candidate-build-20261006T022828Z.json\n?? docs/evidence/story-005/candidate-build-20261006T022828Z.log\n?? docs/evidence/story-005/candidate-build-20261006T023054Z.json\n?? docs/evidence/story-005/candidate-build-20261006T023054Z.log\n?? docs/evidence/story-005/candidate-build-20261006T023446Z.json\n?? docs/evidence/story-005/candidate-build-20261006T023446Z.log\n?? docs/evidence/story-005/candidate-build-20261006T023542Z.json\n?? docs/evidence/story-005/candidate-build-20261006T023542Z.log\n?? docs/evidence/story-005/candidate-build-20261006T024008Z.json\n?? docs/evidence/story-005/candidate-build-20261006T024008Z.log\n?? docs/evidence/story-005/candidate-build-20261006T024126Z.json\n?? docs/evidence/story-005/candidate-build-20261006T024126Z.log\n?? docs/evidence/story-005/candidate-build-20261006T024133Z.json\n?? docs/evidence/story-005/candidate-build-20261006T024133Z.log\n?? docs/evidence/story-005/candidate-build-20261006T024610Z.json\n?? docs/evidence/story-005/candidate-build-20261006T024610Z.log\n?? docs/evidence/story-005/candidate-build-20261006T025838Z.json\n?? docs/evidence/story-005/candidate-build-20261006T025838Z.log\n?? docs/evidence/story-005/candidate-build-20261006T025929Z.json\n?? docs/evidence/story-005/candidate-build-20261006T025929Z.log\n?? docs/evidence/story-005/candidate-build-20261006T030443Z.json\n?? docs/evidence/story-005/candidate-build-20261006T030443Z.log\n?? docs/evidence/story-005/candidate-build-20261006T030450Z.json\n?? docs/evidence/story-005/candidate-build-20261006T030450Z.log\n?? docs/evidence/story-005/candidate-build-20261006T032509Z.json\n?? docs/evidence/story-005/candidate-build-20261006T032509Z.log\n?? docs/evidence/story-005/candidate-build-20261006T032530Z.json\n?? docs/evidence/story-005/candidate-build-20261006T032530Z.log\n?? docs/evidence/story-005/candidate-build-20261006T032904Z.json\n?? docs/evidence/story-005/candidate-build-20261006T032904Z.log\n?? docs/evidence/story-005/candidate-build-20261006T032941Z.json\n?? docs/evidence/story-005/candidate-build-20261006T032941Z.log\n?? docs/evidence/story-005/candidate-build-20261006T033032Z.json\n?? docs/evidence/story-005/candidate-build-20261006T033032Z.log\n?? docs/evidence/story-005/candidate-build-20261006T033139Z.json\n?? docs/evidence/story-005/candidate-build-20261006T033139Z.log\n?? docs/evidence/story-005/candidate-build-20261006T033221Z.json\n?? docs/evidence/story-005/candidate-build-20261006T033221Z.log\n?? docs/evidence/story-005/candidate-build-20261006T033257Z.json\n?? docs/evidence/story-005/candidate-build-20261006T033257Z.log\n?? docs/evidence/story-005/candidate-build-20261006T033512Z.json\n?? docs/evidence/story-005/candidate-build-20261006T033512Z.log\n?? docs/evidence/story-005/candidate-build-20261006T033616Z.json\n?? docs/evidence/story-005/candidate-build-20261006T033616Z.log\n?? docs/evidence/story-005/candidate-build-20261006T033704Z.json\n?? docs/evidence/story-005/candidate-build-20261006T033704Z.log\n?? docs/evidence/story-005/candidate-build-20261006T034218Z.json\n?? docs/evidence/story-005/candidate-build-20261006T034218Z.log\n?? docs/evidence/story-005/candidate-build-20261006T034344Z.json\n?? docs/evidence/story-005/candidate-build-20261006T034344Z.log\n?? docs/evidence/story-005/candidate-build-20261006T035202Z.json\n?? docs/evidence/story-005/candidate-build-20261006T035202Z.log\n?? docs/evidence/story-005/candidate-build-20261006T035359Z.json\n?? docs/evidence/story-005/candidate-build-20261006T035359Z.log\n?? docs/evidence/story-005/candidate-build-20261006T042037Z.json\n?? docs/evidence/story-005/candidate-build-20261006T042037Z.log\n?? docs/evidence/story-005/candidate-build-20261006T042305Z.json\n?? docs/evidence/story-005/candidate-build-20261006T042305Z.log\n?? docs/evidence/story-005/candidate-build-20261006T042325Z.json\n?? docs/evidence/story-005/candidate-build-20261006T042325Z.log\n?? docs/evidence/story-005/candidate-build-20261006T042712Z.json\n?? docs/evidence/story-005/candidate-build-20261006T042712Z.log\n?? docs/evidence/story-005/candidate-build-20261006T042732Z.json\n?? docs/evidence/story-005/candidate-build-20261006T042732Z.log\n?? docs/evidence/story-005/candidate-build-20261006T053219Z.json\n?? docs/evidence/story-005/candidate-build-20261006T053219Z.log\n?? docs/evidence/story-005/candidate-build-20261006T054833Z.json\n?? docs/evidence/story-005/candidate-build-20261006T054833Z.log\n?? docs/evidence/story-005/candidate-build-20261006T055932Z.json\n?? docs/evidence/story-005/candidate-build-20261006T055932Z.log\n?? docs/evidence/story-005/candidate-build-20261006T061726Z.json\n?? docs/evidence/story-005/candidate-build-20261006T061726Z.log\n?? docs/evidence/story-005/candidate-build-20261006T061755Z.json\n?? docs/evidence/story-005/candidate-build-20261006T061755Z.log\n?? docs/evidence/story-005/candidate-build-20261006T061836Z.json\n?? docs/evidence/story-005/candidate-build-20261006T061836Z.log\n?? docs/evidence/story-005/candidate-build-20261006T062106Z.json\n?? docs/evidence/story-005/candidate-build-20261006T062106Z.log\n?? docs/evidence/story-005/candidate-build-manifest.json\n?? docs/evidence/story-005/candidate-mp4-experiment-build-manifest.json\n?? docs/evidence/story-005/candidate-orientation-build-manifest.json\n?? docs/evidence/story-005/candidate-selected-track-build-manifest.json\n?? docs/evidence/story-005/characterization-wrapper-update-001.json\n?? docs/evidence/story-005/characterization-wrapper-update-001.log\n?? docs/evidence/story-005/cleanup-approved-20261005.json\n?? docs/evidence/story-005/current-readiness-ledger.md\n?? docs/evidence/story-005/distcheck-apple-manifest-runner-freeze.json\n?? docs/evidence/story-005/distcheck-apple-membership-archive-provenance.json\n?? docs/evidence/story-005/distcheck-archive-header-failure.md\n?? docs/evidence/story-005/distcheck-failure-source-pin-comparison.json\n?? docs/evidence/story-005/distcheck-final-runner-freeze.json\n?? docs/evidence/story-005/distcheck-final-translation-preservation.json\n?? docs/evidence/story-005/distcheck-first-archive-provenance.json\n?? docs/evidence/story-005/distcheck-generated-po-exact-inverse.json\n?? docs/evidence/story-005/distcheck-generated-po-preservation.json\n?? docs/evidence/story-005/distcheck-git-boundary-archive-provenance.json\n?? docs/evidence/story-005/distcheck-git-containment-research.md\n?? docs/evidence/story-005/distcheck-git-discovery-smoke.json\n?? docs/evidence/story-005/distcheck-gnu-sed-provenance.json\n?? docs/evidence/story-005/distcheck-host-tool-repair.md\n?? docs/evidence/story-005/distcheck-local-header-inventory.json\n?? docs/evidence/story-005/distcheck-preservation-bookend.json\n?? docs/evidence/story-005/distcheck-public-input-inventory.json\n?? docs/evidence/story-005/distcheck-runtime-failure-diagnosis.md\n?? docs/evidence/story-005/distcheck-runtime-failure-preservation.json\n?? docs/evidence/story-005/distcheck-runtime-triage.md\n?? docs/evidence/story-005/distcheck-source-headers-runner-freeze.json\n?? docs/evidence/story-005/feature-app-build-source-freeze-hold.json\n?? docs/evidence/story-005/feature-app-relocation-isolation.json\n?? docs/evidence/story-005/feature-build-disk-preflight-stop.json\n?? docs/evidence/story-005/feature-build-reproduction.md\n?? docs/evidence/story-005/feature-build-review-repair-receipt.json\n?? docs/evidence/story-005/feature-build-review.md\n?? docs/evidence/story-005/feature-build-space-plan.md\n?? docs/evidence/story-005/feature-cache-actual-enospc-20261006T060156Z.json\n?? docs/evidence/story-005/feature-cache-actual-enospc-20261006T060156Z.log\n?? docs/evidence/story-005/feature-cache-actual-enospc-controller.json\n?? docs/evidence/story-005/feature-clean-reproduction-proposal.md\n?? docs/evidence/story-005/feature-context-review.md\n?? docs/evidence/story-005/feature-contrib-build-manifest.json\n?? docs/evidence/story-005/feature-contrib-source-archives.json\n?? docs/evidence/story-005/feature-dependency-baseline-provenance.json\n?? docs/evidence/story-005/feature-dependency-candidate-provenance.json\n?? docs/evidence/story-005/feature-dependency-candidate-results.md\n?? docs/evidence/story-005/feature-dependency-public-fixture-receipt.json\n?? docs/evidence/story-005/feature-dependency-public-long-receipt.json\n?? docs/evidence/story-005/feature-dependency-public-playback-long-receipt.json\n?? docs/evidence/story-005/feature-dependency-public-probe-receipt.json\n?? docs/evidence/story-005/feature-dependency-regression-status.md\n?? docs/evidence/story-005/feature-duration-fixed-app-relocation-isolation.json\n?? docs/evidence/story-005/feature-duration-fixed-original-app-manifest.json\n?? docs/evidence/story-005/feature-final-native-tests.json\n?? docs/evidence/story-005/feature-flat-admission-review.md\n?? docs/evidence/story-005/feature-h1-contrib-build-manifest.json\n?? docs/evidence/story-005/feature-h1-helper-build-manifest.json\n?? docs/evidence/story-005/feature-h1-plugin-relink-manifest.json\n?? docs/evidence/story-005/feature-helper-build-manifest.json\n?? docs/evidence/story-005/feature-helper-review.md\n?? docs/evidence/story-005/feature-independent-final-app-manifest.json\n?? docs/evidence/story-005/feature-independent-final-public-source-confirmation.json\n?? docs/evidence/story-005/feature-independent-final-source-apply.json\n?? docs/evidence/story-005/feature-independent-helper-validation.json\n?? docs/evidence/story-005/feature-independent-immutable-contrib-archives.json\n?? docs/evidence/story-005/feature-independent-revision5-source-apply.json\n?? docs/evidence/story-005/feature-independent-revision6-source-apply.json\n?? docs/evidence/story-005/feature-independent-source-apply.json\n?? docs/evidence/story-005/feature-independent-static-closure.json\n?? docs/evidence/story-005/feature-independent-test-pipe-diagnosis.md\n?? docs/evidence/story-005/feature-native-test-cache-repair.md\n?? docs/evidence/story-005/feature-original-app-manifest.json\n?? docs/evidence/story-005/feature-owned-storage-reclaim-proposal.json\n?? docs/evidence/story-005/feature-packaged-helper-smoke.json\n?? docs/evidence/story-005/feature-port-plan.md\n?? docs/evidence/story-005/feature-real-controller-first-crash.json\n?? docs/evidence/story-005/feature-reproduction-guide-freeze.json\n?? docs/evidence/story-005/feature-reproduction-host-tools-repair.md\n?? docs/evidence/story-005/feature-revision4-native-tests.json\n?? docs/evidence/story-005/feature-runtime-build-manifest.json\n?? docs/evidence/story-005/feature-service-review.md\n?? docs/evidence/story-005/feature-ui-duration-review.md\n?? docs/evidence/story-005/feature-ui-repair-review-hashes.json\n?? docs/evidence/story-005/feature-ui-review-hashes.json\n?? docs/evidence/story-005/feature-ui-review.md\n?? docs/evidence/story-005/final-public-wrapper-validation-001.json\n?? docs/evidence/story-005/final-public-wrapper-validation-001.log\n?? docs/evidence/story-005/final-reproduction-guide-review.diff\n?? docs/evidence/story-005/final-reproduction-guide-source-receipt.json\n?? docs/evidence/story-005/fixture-generation.json\n?? docs/evidence/story-005/helper-flat-custom-io-compile.json\n?? docs/evidence/story-005/helper-flat-custom-io-runtime.json\n?? docs/evidence/story-005/helper-flat-custom-io.stderr\n?? docs/evidence/story-005/helper-flat-custom-io.stdout\n?? docs/evidence/story-005/helper-flat-normal-matrix-launcher.json\n?? docs/evidence/story-005/helper-flat-normal-matrix.json\n?? docs/evidence/story-005/helper-flat-normal-parity.json\n?? docs/evidence/story-005/helper-flat-normal-provenance.json\n?? docs/evidence/story-005/helper-flat-prototype-source-freeze.json\n?? docs/evidence/story-005/helper-flat-runtime-result.md\n?? docs/evidence/story-005/helper-ordered-edition-gate-design.md\n?? docs/evidence/story-005/helper-protocol4-diagnostic-build.json\n?? docs/evidence/story-005/helper-protocol4-focused-tests.json\n?? docs/evidence/story-005/helper-protocol4-normal-focused-tests.json\n?? docs/evidence/story-005/helper-protocol4-normal-test-provenance.json\n?? docs/evidence/story-005/helper-protocol4-source-freeze.json\n?? docs/evidence/story-005/helper9-build-integration-options.md\n?? docs/evidence/story-005/helper9-discriminator-superseded-origin-inference.md\n?? docs/evidence/story-005/helper9-discriminator.md\n?? docs/evidence/story-005/helper9-failed-host-configure.json\n?? docs/evidence/story-005/helper9-failed-strict-patch.json\n?? docs/evidence/story-005/helper9-frame-comparisons.json\n?? docs/evidence/story-005/helper9-matroska-track-number.patch\n?? docs/evidence/story-005/helper9-movie-origin-decision.md\n?? docs/evidence/story-005/helper9-native-mapping.md\n?? docs/evidence/story-005/helper9-origin-interpretation-correction.json\n?? docs/evidence/story-005/helper9-private-build-manifest.json\n?? docs/evidence/story-005/helper9-private-build.json\n?? docs/evidence/story-005/helper9-private-cases.json\n?? docs/evidence/story-005/helper9-private-comparison-summary.json\n?? docs/evidence/story-005/helper9-proof-provenance.json\n?? docs/evidence/story-005/helper9-rotation-order-comparison.json\n?? docs/evidence/story-005/helper9-source-download.json\n?? docs/evidence/story-005/helper9-static-inventory.md\n?? docs/evidence/story-005/helper9-unpatched-build.json\n?? docs/evidence/story-005/helper9-unpatched-cases.json\n?? docs/evidence/story-005/installed-upstream-preview.json\n?? docs/evidence/story-005/isolated-baseline012.json\n?? docs/evidence/story-005/isolated-candidate007.json\n?? docs/evidence/story-005/isolated-candidate008-010-batch.json\n?? docs/evidence/story-005/isolated-candidate008-011-batch.json\n?? docs/evidence/story-005/isolated-candidate008.json\n?? docs/evidence/story-005/isolated-candidate009.json\n?? docs/evidence/story-005/isolated-candidate010.json\n?? docs/evidence/story-005/isolated-candidate011.json\n?? docs/evidence/story-005/isolated-candidate013.json\n?? docs/evidence/story-005/isolated-candidate014.json\n?? docs/evidence/story-005/master-trial-adapter-plan.md\n?? docs/evidence/story-005/medialibrary-header-distribution-review.diff\n?? docs/evidence/story-005/medialibrary-header-distribution-source-receipt.json\n?? docs/evidence/story-005/medialibrary-header-independent-public-apply.json\n?? docs/evidence/story-005/movie-time-contract-gap.md\n?? docs/evidence/story-005/mp4-candidate-plan.md\n?? docs/evidence/story-005/mp4-candidate-results.md\n?? docs/evidence/story-005/mp4-candidate-test-provenance.json\n?? docs/evidence/story-005/nas-admission-comparison.json\n?? docs/evidence/story-005/nas-admission-comparison.md\n?? docs/evidence/story-005/nas-owned-fixture-inventory.md\n?? docs/evidence/story-005/nas-public-long-comparison.json\n?? docs/evidence/story-005/native-acquisition-ledger.md\n?? docs/evidence/story-005/native-baseline-setup.json\n?? docs/evidence/story-005/native-baseline-status.md\n?? docs/evidence/story-005/native-demonstration-final-package-validation.json\n?? docs/evidence/story-005/native-demonstration-final-wrapper-validation.log\n?? docs/evidence/story-005/native-demonstration-package-validation.json\n?? docs/evidence/story-005/native-demonstration-wrapper-validation.log\n?? docs/evidence/story-005/native-edge-closeout-002.md\n?? docs/evidence/story-005/native-outcome-wrapper-update-001.json\n?? docs/evidence/story-005/native-outcome-wrapper-update-001.log\n?? docs/evidence/story-005/native-port-risk-inventory.md\n?? docs/evidence/story-005/orientation-candidate-baseline-link.stderr.log\n?? docs/evidence/story-005/orientation-candidate-baseline-link.stdout.log\n?? docs/evidence/story-005/orientation-candidate-baseline-negative-probe.jsonl\n?? docs/evidence/story-005/orientation-candidate-baseline-negative-runtime.stderr.log\n?? docs/evidence/story-005/orientation-candidate-baseline-negative-runtime.stdout.log\n?? docs/evidence/story-005/orientation-candidate-candidate-link.stderr.log\n?? docs/evidence/story-005/orientation-candidate-candidate-link.stdout.log\n?? docs/evidence/story-005/orientation-candidate-candidate-runtime.stderr.log\n?? docs/evidence/story-005/orientation-candidate-candidate-runtime.stdout.log\n?? docs/evidence/story-005/orientation-candidate-diagnostic.json\n?? docs/evidence/story-005/orientation-candidate-full-image-regression-compile-002.stderr.log\n?? docs/evidence/story-005/orientation-candidate-full-image-regression-compile-002.stdout.log\n?? docs/evidence/story-005/orientation-candidate-full-image-regression-compile.stderr.log\n?? docs/evidence/story-005/orientation-candidate-full-image-regression-compile.stdout.log\n?? docs/evidence/story-005/orientation-candidate-normalization-diagnostic.json\n?? docs/evidence/story-005/orientation-candidate-normalization-scout.md\n?? docs/evidence/story-005/orientation-candidate-probe.jsonl\n?? docs/evidence/story-005/orientation-candidate-review.md\n?? docs/evidence/story-005/phase2-final-validation.md\n?? docs/evidence/story-005/preparser-probe-mp4-candidate.md\n?? docs/evidence/story-005/preparser-probe-orientation-candidate.md\n?? docs/evidence/story-005/preparser-probe-readiness.md\n?? docs/evidence/story-005/preparser-probe-results.md\n?? docs/evidence/story-005/process-candidate-diagnostic-baseline-negative.json\n?? docs/evidence/story-005/process-candidate-diagnostic-baseline-negative.stderr.log\n?? docs/evidence/story-005/process-candidate-diagnostic-baseline-negative.stdout.log\n?? docs/evidence/story-005/process-candidate-diagnostic-build-002.log\n?? docs/evidence/story-005/process-candidate-diagnostic-build-003.json\n?? docs/evidence/story-005/process-candidate-diagnostic-build-003.log\n?? docs/evidence/story-005/process-candidate-diagnostic-build-004.json\n?? docs/evidence/story-005/process-candidate-diagnostic-build-004.log\n?? docs/evidence/story-005/process-candidate-diagnostic-build-005.json\n?? docs/evidence/story-005/process-candidate-diagnostic-build-005.log\n?? docs/evidence/story-005/process-candidate-diagnostic-build-baseline-negative.json\n?? docs/evidence/story-005/process-candidate-diagnostic-build-baseline-negative.log\n?? docs/evidence/story-005/process-candidate-diagnostic-build.log\n?? docs/evidence/story-005/process-candidate-diagnostic-runtime-002.json\n?? docs/evidence/story-005/process-candidate-diagnostic-runtime-002.stderr.log\n?? docs/evidence/story-005/process-candidate-diagnostic-runtime-002.stdout.log\n?? docs/evidence/story-005/process-candidate-diagnostic-runtime-003.json\n?? docs/evidence/story-005/process-candidate-diagnostic-runtime-003.stderr.log\n?? docs/evidence/story-005/process-candidate-diagnostic-runtime-003.stdout.log\n?? docs/evidence/story-005/process-candidate-diagnostic-runtime.json\n?? docs/evidence/story-005/process-candidate-diagnostic-runtime.stderr.log\n?? docs/evidence/story-005/process-candidate-diagnostic-runtime.stdout.log\n?? docs/evidence/story-005/process-candidate-preflight.json\n?? docs/evidence/story-005/process-candidate-registered-20261006T023110Z.json\n?? docs/evidence/story-005/process-candidate-registered-20261006T023110Z.stderr.log\n?? docs/evidence/story-005/process-candidate-registered-20261006T023110Z.stdout.log\n?? docs/evidence/story-005/process-candidate-registered-linkage.json\n?? docs/evidence/story-005/process-candidate-status.md\n?? docs/evidence/story-005/process-probe-build-20261006.log\n?? docs/evidence/story-005/process-probe-build-tagCC-20261006.log\n?? docs/evidence/story-005/process-probe-provenance-20261006.json\n?? docs/evidence/story-005/process-probe-readiness.md\n?? docs/evidence/story-005/process-probe-runtime-20261006.default.stderr.log\n?? docs/evidence/story-005/process-probe-runtime-20261006.default.stdout.log\n?? docs/evidence/story-005/process-probe-runtime-20261006.ignore.stderr.log\n?? docs/evidence/story-005/process-probe-runtime-20261006.ignore.stdout.log\n?? docs/evidence/story-005/process-probe-runtime-20261006.json\n?? docs/evidence/story-005/public-feature-series-review-002.md\n?? docs/evidence/story-005/public-feature-series-review-003.md\n?? docs/evidence/story-005/public-feature-series-review-004.md\n?? docs/evidence/story-005/public-feature-series-review-005.md\n?? docs/evidence/story-005/public-feature-series-review-006.md\n?? docs/evidence/story-005/public-feature-series-review-007.md\n?? docs/evidence/story-005/public-feature-series-review-008.md\n?? docs/evidence/story-005/public-feature-series-review-009.md\n?? docs/evidence/story-005/public-feature-series-review-010.md\n?? docs/evidence/story-005/public-feature-series-validation-001.json\n?? docs/evidence/story-005/public-feature-series-validation-002.json\n?? docs/evidence/story-005/public-feature-series-validation-003.json\n?? docs/evidence/story-005/public-feature-series-validation-004.json\n?? docs/evidence/story-005/public-feature-series-validation-005-before-wording.json\n?? docs/evidence/story-005/public-feature-series-validation-005.json\n?? docs/evidence/story-005/public-feature-series-validation-006.json\n?? docs/evidence/story-005/public-feature-series-validation-007.json\n?? docs/evidence/story-005/public-feature-series-validation-008.json\n?? docs/evidence/story-005/public-feature-series-validation-009.json\n?? docs/evidence/story-005/public-feature-series-validation.json\n?? docs/evidence/story-005/public-package-inventory.md\n?? docs/evidence/story-005/public-package-wrapper-check.py\n?? docs/evidence/story-005/reproduction-app-20261006T055714Z.json\n?? docs/evidence/story-005/reproduction-app-20261006T055714Z.log\n?? docs/evidence/story-005/reproduction-app-final-20261006T062152Z.json\n?? docs/evidence/story-005/reproduction-app-final-20261006T062152Z.log\n?? docs/evidence/story-005/reproduction-cachegen-20261006T061202Z.json\n?? docs/evidence/story-005/reproduction-cachegen-20261006T061202Z.log\n?? docs/evidence/story-005/reproduction-cachegen-20261006T061330Z.json\n?? docs/evidence/story-005/reproduction-cachegen-20261006T061330Z.log\n?? docs/evidence/story-005/reproduction-checkout-20261006T053753Z.json\n?? docs/evidence/story-005/reproduction-checkout-20261006T053753Z.log\n?? docs/evidence/story-005/reproduction-checks-20261006T062812Z.json\n?? docs/evidence/story-005/reproduction-checks-20261006T062812Z.log\n?? docs/evidence/story-005/reproduction-checks-20261006T064522Z.json\n?? docs/evidence/story-005/reproduction-checks-20261006T064522Z.log\n?? docs/evidence/story-005/reproduction-contrib-20261006T055350Z.json\n?? docs/evidence/story-005/reproduction-contrib-20261006T055350Z.log\n?? docs/evidence/story-005/reproduction-distcheck-20261006T065028Z.json\n?? docs/evidence/story-005/reproduction-distcheck-20261006T065028Z.log\n?? docs/evidence/story-005/reproduction-distcheck-20261006T065337Z.json\n?? docs/evidence/story-005/reproduction-distcheck-20261006T065337Z.log\n?? docs/evidence/story-005/reproduction-distcheck-20261006T070447Z.json\n?? docs/evidence/story-005/reproduction-distcheck-20261006T070447Z.log\n?? docs/evidence/story-005/reproduction-distcheck-20261006T070541Z.json\n?? docs/evidence/story-005/reproduction-distcheck-20261006T070541Z.log\n?? docs/evidence/story-005/reproduction-distcheck-20261006T070917Z.json\n?? docs/evidence/story-005/reproduction-distcheck-20261006T070917Z.log\n?? docs/evidence/story-005/reproduction-distcheck-20261006T072024Z.json\n?? docs/evidence/story-005/reproduction-distcheck-20261006T072024Z.log\n?? docs/evidence/story-005/reproduction-distcheck-20261006T072705Z.json\n?? docs/evidence/story-005/reproduction-distcheck-20261006T072705Z.log\n?? docs/evidence/story-005/reproduction-fixtures-20261006T062245Z.json\n?? docs/evidence/story-005/reproduction-fixtures-20261006T062245Z.log\n?? docs/evidence/story-005/reproduction-host-tools-probe-20261006T054941Z.json\n?? docs/evidence/story-005/reproduction-host-tools-probe-20261006T054941Z.log\n?? docs/evidence/story-005/reproduction-io-20261006T062901Z.json\n?? docs/evidence/story-005/reproduction-io-20261006T062901Z.log\n?? docs/evidence/story-005/reproduction-native-final-20261006T063137Z.json\n?? docs/evidence/story-005/reproduction-native-final-20261006T063137Z.log\n?? docs/evidence/story-005/reproduction-native-final-20261006T063243Z.json\n?? docs/evidence/story-005/reproduction-native-final-20261006T063243Z.log\n?? docs/evidence/story-005/reproduction-native-final-20261006T064748Z.json\n?? docs/evidence/story-005/reproduction-native-final-20261006T064748Z.log\n?? docs/evidence/story-005/reproduction-pin-20261006T053817Z.json\n?? docs/evidence/story-005/reproduction-pin-20261006T053817Z.log\n?? docs/evidence/story-005/reproduction-service-faults-20261006T054722Z.json\n?? docs/evidence/story-005/reproduction-service-faults-20261006T054722Z.log\n?? docs/evidence/story-005/reproduction-smoke-20261006T062135Z.json\n?? docs/evidence/story-005/reproduction-smoke-20261006T062135Z.log\n?? docs/evidence/story-005/reproduction-smoke-20261006T070322Z.json\n?? docs/evidence/story-005/reproduction-smoke-20261006T070322Z.log\n?? docs/evidence/story-005/reproduction-smoke-20261006T070532Z.json\n?? docs/evidence/story-005/reproduction-smoke-20261006T070532Z.log\n?? docs/evidence/story-005/reproduction-tools-20261006T053849Z.json\n?? docs/evidence/story-005/reproduction-tools-20261006T053849Z.log\n?? docs/evidence/story-005/reproduction-tools-ninja-reconfigure-20261006T054328Z.json\n?? docs/evidence/story-005/reproduction-tools-ninja-reconfigure-20261006T054328Z.log\n?? docs/evidence/story-005/reproduction-tools-retry-20261006T054357Z.json\n?? docs/evidence/story-005/reproduction-tools-retry-20261006T054357Z.log\n?? docs/evidence/story-005/reviewer-improvement-loop.md\n?? docs/evidence/story-005/revision10-docs-source-validation.json\n?? docs/evidence/story-005/revision10-source-guide-actual.diff\n?? docs/evidence/story-005/revision10-wrapper-validation.log\n?? docs/evidence/story-005/service-native-cache-path-diagnosis.md\n?? docs/evidence/story-005/service-native-cache-path-observation.json\n?? docs/evidence/story-005/service-port-async-failure-diagnosis.md\n?? docs/evidence/story-005/service-port-enospc-receipt.json\n?? docs/evidence/story-005/service-port-fault-coverage-plan.md\n?? docs/evidence/story-005/service-port-fault-coverage-receipt.json\n?? docs/evidence/story-005/service-port-repair-receipt.json\n?? docs/evidence/story-005/service-port-review.md\n?? docs/evidence/story-005/service-port-source-receipt.json\n?? docs/evidence/story-005/service-test-sync-repair-receipt.json\n?? docs/evidence/story-005/service-test-sync-repair-research.md\n?? docs/evidence/story-005/service-test-sync-repair.diff\n?? docs/evidence/story-005/shutdown-baseline-attribution.md\n?? docs/evidence/story-005/storage-cleanup-inventory.md\n?? docs/evidence/story-005/structural-distribution-001.json\n?? docs/evidence/story-005/track-candidate-rev3-thumbnail-20261006T030500Z.json\n?? docs/evidence/story-005/track-candidate-rev3-thumbnail-20261006T030500Z.stderr.log\n?? docs/evidence/story-005/track-candidate-rev3-thumbnail-20261006T030500Z.stdout.log\n?? docs/evidence/story-005/track-candidate-rev3-tofiles-20261006T030503Z.json\n?? docs/evidence/story-005/track-candidate-rev3-tofiles-20261006T030503Z.stderr.log\n?? docs/evidence/story-005/track-candidate-rev3-tofiles-20261006T030503Z.stdout.log\n?? docs/evidence/story-005/track-candidate-review-rejected-revision1.json\n?? docs/evidence/story-005/track-candidate-review-rejected-revision1.patch\n?? docs/evidence/story-005/track-candidate-review.md\n?? docs/evidence/story-005/track-candidate-revision2-before-raw-format-repair.json\n?? docs/evidence/story-005/track-candidate-revision2-before-raw-format-repair.patch\n?? docs/evidence/story-005/track-candidate-revision3-review.diff\n?? docs/evidence/story-005/track-candidate-runtime-revision2.json\n?? docs/evidence/story-005/track-candidate-runtime-revision3-tofiles.json\n?? docs/evidence/story-005/track-candidate-source.json\n?? docs/evidence/story-005/track-candidate-thumbnail-20261006T030025Z.json\n?? docs/evidence/story-005/track-candidate-thumbnail-20261006T030025Z.stderr.log\n?? docs/evidence/story-005/track-candidate-thumbnail-20261006T030025Z.stdout.log\n?? docs/evidence/story-005/track-candidate-tofiles-20261006T030030Z.json\n?? docs/evidence/story-005/track-candidate-tofiles-20261006T030030Z.stderr.log\n?? docs/evidence/story-005/track-candidate-tofiles-20261006T030030Z.stdout.log\n?? docs/evidence/story-005/track-candidate-tofiles-diagnostic-revision2.stderr.log\n?? docs/evidence/story-005/ui-context-duration-candidate.json\n?? docs/evidence/story-005/ui-feature-candidate.json\n?? docs/evidence/story-005/ui-feature-candidate.md\n?? docs/evidence/story-005/verification-plan.md\n?? docs/research/story-005-display-region-capture.md\n?? docs/research/story-005-test-environment-isolation.md\n?? patches/vlc-master/0001-process-force-termination.patch\n?? patches/vlc-master/0002-preparser-selected-video-track.patch\n?? patches/vlc-master/0003-picture-preserve-orientation.patch\n?? patches/vlc-master/experimental/0004-mp4-edit-timeline.patch\n?? patches/vlc-master/feature-series/0000-source-header-distribution.patch\n?? patches/vlc-master/feature-series/0001-contrib-matroska-identity-and-admission.patch\n?? patches/vlc-master/feature-series/0002-timeline-helper-build-package-and-tests.patch\n?? patches/vlc-master/feature-series/0003-macosx-timeline-context-service-and-hover.patch\n?? patches/vlc-master/feature-series/README.md\n?? patches/vlc-master/feature-series/contribution-description-draft.md\n?? patches/vlc-master/feature-series/demonstration/README.md\n?? patches/vlc-master/feature-series/demonstration/custom-fullscreen-hover.png\n?? patches/vlc-master/feature-series/demonstration/detached-hover.png\n?? patches/vlc-master/feature-series/demonstration/provenance.json\n?? patches/vlc-master/feature-series/manifest.json\n?? patches/vlc-master/feature-series/proposed-commit-messages.md\n?? patches/vlc-master/feature-series/series\n?? tests/story-005/FIXTURES.md\n?? tests/story-005/PROCESS-PROBE.md\n?? tests/story-005/README.md\n?? tests/story-005/feature_dependency_fixtures.py\n?? tests/story-005/feature_dependency_playback_probe.c\n?? tests/story-005/feature_dependency_probe.c\n?? tests/story-005/feature_dependency_run.py\n?? tests/story-005/feature_dependency_vlc_packet_probe.c\n?? tests/story-005/generate_fixtures.py\n?? tests/story-005/helper9_build.py\n?? tests/story-005/helper9_cases.py\n?? tests/story-005/helper9_private_avformat.py\n?? tests/story-005/helper9_score.py\n?? tests/story-005/master_control_response_probe.m\n?? tests/story-005/master_control_trial.py\n?? tests/story-005/master_playback_capture.swift\n?? tests/story-005/master_playback_trial.py\n?? tests/story-005/mp4_compare_packets.py\n?? tests/story-005/mp4_generate_fixtures.py\n?? tests/story-005/mp4_packet_probe.c\n?? tests/story-005/nas_admission_trial.py\n?? tests/story-005/native-pointer.m\n?? tests/story-005/native_baseline_session.py\n?? tests/story-005/preparser_probe.c\n?? tests/story-005/process_probe.c\n",
+        "stderr": ""
+      },
+      "diffstat": {
+        "argv": [
+          "git",
+          "diff",
+          "--stat"
+        ],
+        "exit_code": 0,
+        "stdout": " AGENTS.md                                          |   13 +-\n docs/decisions/README.md                           |    2 +\n docs/methodology/graph.json                        |   13 +-\n docs/methodology/state.yaml                        |   10 +-\n docs/plan.md                                       |   26 +-\n docs/research/upstream-contribution-scout.md       |  282 +++++\n docs/spec.md                                       |   14 +-\n docs/stories.md                                    |    2 +-\n docs/stories/story-005-open-source-contribution.md | 1262 ++++++++++++++++++--\n 9 files changed, 1530 insertions(+), 94 deletions(-)\n",
+        "stderr": ""
+      },
+      "cached_diffstat": {
+        "argv": [
+          "git",
+          "diff",
+          "--cached",
+          "--stat"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      "gitdir": {
+        "argv": [
+          "git",
+          "rev-parse",
+          "--absolute-git-dir"
+        ],
+        "exit_code": 0,
+        "stdout": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/.git\n",
+        "stderr": ""
+      },
+      "index_sha256": "8bb5d30e7cfb761e7851b13008ebfdb359e03f9bbceb42cbe30fc19952e6adbb"
+    },
+    "candidate": {
+      "path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-candidate",
+      "head": {
+        "argv": [
+          "git",
+          "rev-parse",
+          "HEAD"
+        ],
+        "exit_code": 0,
+        "stdout": "2e358f3098c2f2b7621d1dc568de8b61ad786322\n",
+        "stderr": ""
+      },
+      "status": {
+        "argv": [
+          "git",
+          "status",
+          "--porcelain=v1",
+          "--untracked-files=all"
+        ],
+        "exit_code": 0,
+        "stdout": " M Makefile.am\n M bin/Makefile.am\n M bin/meson.build\n M bin/preparser/Makefile.am\n M configure.ac\n M contrib/src/ffmpeg/rules.mak\n M extras/package/macosx/codesign.sh\n M extras/package/macosx/package.mak\n M meson_options.txt\n M modules/audio_output/Makefile.am\n M modules/gui/macosx/Makefile.am\n M modules/gui/macosx/UI/SimplePreferences.xib\n M modules/gui/macosx/main/VLCMain.m\n M modules/gui/macosx/main/macosx.m\n M modules/gui/macosx/playqueue/VLCPlayerController.h\n M modules/gui/macosx/playqueue/VLCPlayerController.m\n M modules/gui/macosx/preferences/VLCSimplePrefsController.h\n M modules/gui/macosx/preferences/VLCSimplePrefsController.m\n M modules/gui/macosx/tests/Makefile.am\n M modules/gui/macosx/tests/VLCLibraryDataTypesIntegrationTestSupport.m\n M modules/gui/macosx/views/VLCPlaybackProgressSlider.h\n M modules/gui/macosx/views/VLCPlaybackProgressSlider.m\n M modules/gui/macosx/windows/video/VLCMainVideoViewController.m\n M modules/misc/Makefile.am\n M modules/video_output/Makefile.am\n?? bin/timeline-preview/Makefile.am\n?? bin/timeline-preview/PROTOCOL.md\n?? bin/timeline-preview/README.md\n?? bin/timeline-preview/__pycache__/test.cpython-314.pyc\n?? bin/timeline-preview/test-io.c\n?? bin/timeline-preview/test.py\n?? bin/timeline-preview/tests/README.md\n?? bin/timeline-preview/tests/__pycache__/compare-identity.cpython-314.pyc\n?? bin/timeline-preview/tests/__pycache__/generate_admission_fixtures.cpython-314.pyc\n?? bin/timeline-preview/tests/__pycache__/generate_dependency_fixtures.cpython-314.pyc\n?? bin/timeline-preview/tests/__pycache__/generate_fixtures.cpython-314.pyc\n?? bin/timeline-preview/tests/avformat-identity.c\n?? bin/timeline-preview/tests/compare-identity.py\n?? bin/timeline-preview/tests/generate_admission_fixtures.py\n?? bin/timeline-preview/tests/generate_dependency_fixtures.py\n?? bin/timeline-preview/tests/generate_fixtures.py\n?? bin/timeline-preview/timeline-preview.c\n?? contrib/src/ffmpeg/matroska-flat-timeline.patch\n?? contrib/src/ffmpeg/matroska-track-number.patch\n?? modules/gui/macosx/tests/VLCThumbnailCacheTest.m\n?? modules/gui/macosx/tests/VLCThumbnailSchedulerTest.m\n?? modules/gui/macosx/tests/VLCThumbnailServiceTest.m\n?? modules/gui/macosx/tests/VLCThumbnailTestHelper.c\n?? modules/gui/macosx/tests/VLCTimelineHoverReentrancyTest.m\n?? modules/gui/macosx/tests/VLCTimelineHoverTest.m\n?? modules/gui/macosx/tests/VLCTimelineHoverTestSupport.m\n?? modules/gui/macosx/timeline/VLCThumbnailCache.h\n?? modules/gui/macosx/timeline/VLCThumbnailCache.m\n?? modules/gui/macosx/timeline/VLCThumbnailScheduler.h\n?? modules/gui/macosx/timeline/VLCThumbnailScheduler.m\n?? modules/gui/macosx/timeline/VLCThumbnailService.h\n?? modules/gui/macosx/timeline/VLCThumbnailService.m\n?? modules/gui/macosx/timeline/VLCThumbnailWorker.h\n?? modules/gui/macosx/timeline/VLCThumbnailWorker.m\n?? modules/gui/macosx/timeline/VLCTimelineContext.h\n?? modules/gui/macosx/timeline/VLCTimelineContext.m\n?? modules/gui/macosx/timeline/VLCTimelineContextTestSupport.m\n?? modules/gui/macosx/timeline/VLCTimelineContextTests.m\n?? modules/gui/macosx/timeline/VLCTimelinePlayerContextTest.m\n",
+        "stderr": ""
+      },
+      "diffstat": {
+        "argv": [
+          "git",
+          "diff",
+          "--stat"
+        ],
+        "exit_code": 0,
+        "stdout": " Makefile.am                                        |   1 +\n bin/Makefile.am                                    |   7 +-\n bin/meson.build                                    |  32 ++\n bin/preparser/Makefile.am                          |   4 -\n configure.ac                                       |  18 ++\n contrib/src/ffmpeg/rules.mak                       |   4 +-\n extras/package/macosx/codesign.sh                  |   3 +\n extras/package/macosx/package.mak                  |   3 +\n meson_options.txt                                  |   2 +\n modules/audio_output/Makefile.am                   |  19 +-\n modules/gui/macosx/Makefile.am                     |  12 +\n modules/gui/macosx/UI/SimplePreferences.xib        |  28 +-\n modules/gui/macosx/main/VLCMain.m                  |   6 +\n modules/gui/macosx/main/macosx.m                   |   4 +\n modules/gui/macosx/playqueue/VLCPlayerController.h |   4 +\n modules/gui/macosx/playqueue/VLCPlayerController.m |  66 ++++\n .../macosx/preferences/VLCSimplePrefsController.h  |   1 +\n .../macosx/preferences/VLCSimplePrefsController.m  |   5 +\n modules/gui/macosx/tests/Makefile.am               | 102 ++++++-\n .../VLCLibraryDataTypesIntegrationTestSupport.m    |  51 ++++\n .../gui/macosx/views/VLCPlaybackProgressSlider.h   |  29 ++\n .../gui/macosx/views/VLCPlaybackProgressSlider.m   | 334 +++++++++++++++++++--\n .../windows/video/VLCMainVideoViewController.m     |   4 +\n modules/misc/Makefile.am                           |   1 +\n modules/video_output/Makefile.am                   |   7 +-\n 25 files changed, 691 insertions(+), 56 deletions(-)\n",
+        "stderr": ""
+      },
+      "cached_diffstat": {
+        "argv": [
+          "git",
+          "diff",
+          "--cached",
+          "--stat"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      "gitdir": {
+        "argv": [
+          "git",
+          "rev-parse",
+          "--absolute-git-dir"
+        ],
+        "exit_code": 0,
+        "stdout": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/.git/worktrees/vlc-master-story005-candidate\n",
+        "stderr": ""
+      },
+      "index_sha256": "89f3541234e65d5ff8f9ea6928d78d03b65850b61232ca376416750860d44be6"
+    },
+    "reproduction": {
+      "path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-reproduction",
+      "head": {
+        "argv": [
+          "git",
+          "rev-parse",
+          "HEAD"
+        ],
+        "exit_code": 0,
+        "stdout": "2e358f3098c2f2b7621d1dc568de8b61ad786322\n",
+        "stderr": ""
+      },
+      "status": {
+        "argv": [
+          "git",
+          "status",
+          "--porcelain=v1",
+          "--untracked-files=all"
+        ],
+        "exit_code": 0,
+        "stdout": "M  Makefile.am\nM  bin/Makefile.am\nM  bin/meson.build\nM  bin/preparser/Makefile.am\nA  bin/timeline-preview/Makefile.am\nA  bin/timeline-preview/PROTOCOL.md\nAM bin/timeline-preview/README.md\nA  bin/timeline-preview/test-io.c\nA  bin/timeline-preview/test.py\nA  bin/timeline-preview/tests/README.md\nA  bin/timeline-preview/tests/avformat-identity.c\nA  bin/timeline-preview/tests/compare-identity.py\nA  bin/timeline-preview/tests/generate_admission_fixtures.py\nA  bin/timeline-preview/tests/generate_dependency_fixtures.py\nA  bin/timeline-preview/tests/generate_fixtures.py\nA  bin/timeline-preview/timeline-preview.c\nM  configure.ac\nA  contrib/src/ffmpeg/matroska-flat-timeline.patch\nA  contrib/src/ffmpeg/matroska-track-number.patch\nM  contrib/src/ffmpeg/rules.mak\nM  extras/package/macosx/codesign.sh\nM  extras/package/macosx/package.mak\nM  meson_options.txt\nM  modules/audio_output/Makefile.am\nM  modules/gui/macosx/Makefile.am\nM  modules/gui/macosx/UI/SimplePreferences.xib\nM  modules/gui/macosx/main/VLCMain.m\nM  modules/gui/macosx/main/macosx.m\nM  modules/gui/macosx/playqueue/VLCPlayerController.h\nM  modules/gui/macosx/playqueue/VLCPlayerController.m\nM  modules/gui/macosx/preferences/VLCSimplePrefsController.h\nM  modules/gui/macosx/preferences/VLCSimplePrefsController.m\nM  modules/gui/macosx/tests/Makefile.am\nM  modules/gui/macosx/tests/VLCLibraryDataTypesIntegrationTestSupport.m\nA  modules/gui/macosx/tests/VLCThumbnailCacheTest.m\nA  modules/gui/macosx/tests/VLCThumbnailSchedulerTest.m\nA  modules/gui/macosx/tests/VLCThumbnailServiceTest.m\nA  modules/gui/macosx/tests/VLCThumbnailTestHelper.c\nA  modules/gui/macosx/tests/VLCTimelineHoverReentrancyTest.m\nA  modules/gui/macosx/tests/VLCTimelineHoverTest.m\nA  modules/gui/macosx/tests/VLCTimelineHoverTestSupport.m\nA  modules/gui/macosx/timeline/VLCThumbnailCache.h\nA  modules/gui/macosx/timeline/VLCThumbnailCache.m\nA  modules/gui/macosx/timeline/VLCThumbnailScheduler.h\nA  modules/gui/macosx/timeline/VLCThumbnailScheduler.m\nA  modules/gui/macosx/timeline/VLCThumbnailService.h\nA  modules/gui/macosx/timeline/VLCThumbnailService.m\nA  modules/gui/macosx/timeline/VLCThumbnailWorker.h\nA  modules/gui/macosx/timeline/VLCThumbnailWorker.m\nA  modules/gui/macosx/timeline/VLCTimelineContext.h\nA  modules/gui/macosx/timeline/VLCTimelineContext.m\nA  modules/gui/macosx/timeline/VLCTimelineContextTestSupport.m\nA  modules/gui/macosx/timeline/VLCTimelineContextTests.m\nA  modules/gui/macosx/timeline/VLCTimelinePlayerContextTest.m\nM  modules/gui/macosx/views/VLCPlaybackProgressSlider.h\nM  modules/gui/macosx/views/VLCPlaybackProgressSlider.m\nM  modules/gui/macosx/windows/video/VLCMainVideoViewController.m\nM  modules/misc/Makefile.am\nM  modules/video_output/Makefile.am\n",
+        "stderr": ""
+      },
+      "diffstat": {
+        "argv": [
+          "git",
+          "diff",
+          "--stat"
+        ],
+        "exit_code": 0,
+        "stdout": " bin/timeline-preview/README.md | 24 ++++++++++++++----------\n 1 file changed, 14 insertions(+), 10 deletions(-)\n",
+        "stderr": ""
+      },
+      "cached_diffstat": {
+        "argv": [
+          "git",
+          "diff",
+          "--cached",
+          "--stat"
+        ],
+        "exit_code": 0,
+        "stdout": " Makefile.am                                        |    1 +\n bin/Makefile.am                                    |    7 +-\n bin/meson.build                                    |   32 +\n bin/preparser/Makefile.am                          |    4 -\n bin/timeline-preview/Makefile.am                   |   35 +\n bin/timeline-preview/PROTOCOL.md                   |  100 ++\n bin/timeline-preview/README.md                     |  283 +++++\n bin/timeline-preview/test-io.c                     |  138 ++\n bin/timeline-preview/test.py                       |  206 +++\n bin/timeline-preview/tests/README.md               |  297 +++++\n bin/timeline-preview/tests/avformat-identity.c     |   46 +\n bin/timeline-preview/tests/compare-identity.py     |   76 ++\n .../tests/generate_admission_fixtures.py           |  412 ++++++\n .../tests/generate_dependency_fixtures.py          |  138 ++\n bin/timeline-preview/tests/generate_fixtures.py    |  540 ++++++++\n bin/timeline-preview/timeline-preview.c            | 1320 ++++++++++++++++++++\n configure.ac                                       |   18 +\n contrib/src/ffmpeg/matroska-flat-timeline.patch    |  270 ++++\n contrib/src/ffmpeg/matroska-track-number.patch     |   12 +\n contrib/src/ffmpeg/rules.mak                       |    4 +-\n extras/package/macosx/codesign.sh                  |    3 +\n extras/package/macosx/package.mak                  |    3 +\n meson_options.txt                                  |    2 +\n modules/audio_output/Makefile.am                   |   19 +-\n modules/gui/macosx/Makefile.am                     |   12 +\n modules/gui/macosx/UI/SimplePreferences.xib        |   28 +-\n modules/gui/macosx/main/VLCMain.m                  |    6 +\n modules/gui/macosx/main/macosx.m                   |    4 +\n modules/gui/macosx/playqueue/VLCPlayerController.h |    4 +\n modules/gui/macosx/playqueue/VLCPlayerController.m |   66 +\n .../macosx/preferences/VLCSimplePrefsController.h  |    1 +\n .../macosx/preferences/VLCSimplePrefsController.m  |    5 +\n modules/gui/macosx/tests/Makefile.am               |  102 +-\n .../VLCLibraryDataTypesIntegrationTestSupport.m    |   51 +\n modules/gui/macosx/tests/VLCThumbnailCacheTest.m   |  898 +++++++++++++\n .../gui/macosx/tests/VLCThumbnailSchedulerTest.m   |  116 ++\n modules/gui/macosx/tests/VLCThumbnailServiceTest.m | 1081 ++++++++++++++++\n modules/gui/macosx/tests/VLCThumbnailTestHelper.c  |  207 +++\n .../macosx/tests/VLCTimelineHoverReentrancyTest.m  |  144 +++\n modules/gui/macosx/tests/VLCTimelineHoverTest.m    |   57 +\n .../gui/macosx/tests/VLCTimelineHoverTestSupport.m |   52 +\n modules/gui/macosx/timeline/VLCThumbnailCache.h    |   26 +\n modules/gui/macosx/timeline/VLCThumbnailCache.m    |  500 ++++++++\n .../gui/macosx/timeline/VLCThumbnailScheduler.h    |   22 +\n .../gui/macosx/timeline/VLCThumbnailScheduler.m    |  234 ++++\n modules/gui/macosx/timeline/VLCThumbnailService.h  |   22 +\n modules/gui/macosx/timeline/VLCThumbnailService.m  |  982 +++++++++++++++\n modules/gui/macosx/timeline/VLCThumbnailWorker.h   |   18 +\n modules/gui/macosx/timeline/VLCThumbnailWorker.m   |  396 ++++++\n modules/gui/macosx/timeline/VLCTimelineContext.h   |   15 +\n modules/gui/macosx/timeline/VLCTimelineContext.m   |  168 +++\n .../timeline/VLCTimelineContextTestSupport.m       |   55 +\n .../gui/macosx/timeline/VLCTimelineContextTests.m  |  205 +++\n .../macosx/timeline/VLCTimelinePlayerContextTest.m |  217 ++++\n .../gui/macosx/views/VLCPlaybackProgressSlider.h   |   29 +\n .../gui/macosx/views/VLCPlaybackProgressSlider.m   |  334 ++++-\n .../windows/video/VLCMainVideoViewController.m     |    4 +\n modules/misc/Makefile.am                           |    1 +\n modules/video_output/Makefile.am                   |    7 +-\n 59 files changed, 9979 insertions(+), 56 deletions(-)\n",
+        "stderr": ""
+      },
+      "gitdir": {
+        "argv": [
+          "git",
+          "rev-parse",
+          "--absolute-git-dir"
+        ],
+        "exit_code": 0,
+        "stdout": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-reproduction/.git\n",
+        "stderr": ""
+      },
+      "index_sha256": "1b43d3374542d8e45e305b1d50008b127ad7cd0179ecf5e38cf2ca406bc91215"
+    }
+  },
+  "files": [
+    {
+      "path": "Makefile.am",
+      "bytes": 7094,
+      "expected_sha256": "9399c30643b98b1054c3894f39354ce7f500f53d4a7d993d2928f939c721c4db",
+      "candidate_sha256": "9399c30643b98b1054c3894f39354ce7f500f53d4a7d993d2928f939c721c4db",
+      "reproduction_sha256": "9399c30643b98b1054c3894f39354ce7f500f53d4a7d993d2928f939c721c4db"
+    },
+    {
+      "path": "bin/Makefile.am",
+      "bytes": 4500,
+      "expected_sha256": "468f5f88c7e38b6c7851686cd5006f020e5c79bac7cffc45126c655440ae1a84",
+      "candidate_sha256": "468f5f88c7e38b6c7851686cd5006f020e5c79bac7cffc45126c655440ae1a84",
+      "reproduction_sha256": "468f5f88c7e38b6c7851686cd5006f020e5c79bac7cffc45126c655440ae1a84"
+    },
+    {
+      "path": "bin/meson.build",
+      "bytes": 5486,
+      "expected_sha256": "76f7d8d7ac0dc6a3368325375b21ba80247a2f8b230606482264e1f488ece643",
+      "candidate_sha256": "76f7d8d7ac0dc6a3368325375b21ba80247a2f8b230606482264e1f488ece643",
+      "reproduction_sha256": "76f7d8d7ac0dc6a3368325375b21ba80247a2f8b230606482264e1f488ece643"
+    },
+    {
+      "path": "bin/preparser/Makefile.am",
+      "bytes": 1619,
+      "expected_sha256": "dada2f836625a068ae55e8f2159c9093ea32f2de92374cc2c70172687e12cccf",
+      "candidate_sha256": "dada2f836625a068ae55e8f2159c9093ea32f2de92374cc2c70172687e12cccf",
+      "reproduction_sha256": "dada2f836625a068ae55e8f2159c9093ea32f2de92374cc2c70172687e12cccf"
+    },
+    {
+      "path": "bin/timeline-preview/Makefile.am",
+      "bytes": 1367,
+      "expected_sha256": "b8127423a839e158c689327916f6abe9976738ae9025c39e5f63928390a50b4d",
+      "candidate_sha256": "b8127423a839e158c689327916f6abe9976738ae9025c39e5f63928390a50b4d",
+      "reproduction_sha256": "b8127423a839e158c689327916f6abe9976738ae9025c39e5f63928390a50b4d"
+    },
+    {
+      "path": "bin/timeline-preview/PROTOCOL.md",
+      "bytes": 6227,
+      "expected_sha256": "30063a4f71a945238d5e34515514f2fdf35355f436c7bf5ffaaff53fcbb5e708",
+      "candidate_sha256": "30063a4f71a945238d5e34515514f2fdf35355f436c7bf5ffaaff53fcbb5e708",
+      "reproduction_sha256": "30063a4f71a945238d5e34515514f2fdf35355f436c7bf5ffaaff53fcbb5e708"
+    },
+    {
+      "path": "bin/timeline-preview/README.md",
+      "bytes": 16597,
+      "expected_sha256": "c0a75f2f508066ee4d82daa7f10253c0fa2c498c3d956e0022efdce55cce428f",
+      "candidate_sha256": "c0a75f2f508066ee4d82daa7f10253c0fa2c498c3d956e0022efdce55cce428f",
+      "reproduction_sha256": "c0a75f2f508066ee4d82daa7f10253c0fa2c498c3d956e0022efdce55cce428f"
+    },
+    {
+      "path": "bin/timeline-preview/test-io.c",
+      "bytes": 5335,
+      "expected_sha256": "6521c10f5187a353487bf874f6e0663ff5f155c4da0a9e13d8cb484d7a12dc60",
+      "candidate_sha256": "6521c10f5187a353487bf874f6e0663ff5f155c4da0a9e13d8cb484d7a12dc60",
+      "reproduction_sha256": "6521c10f5187a353487bf874f6e0663ff5f155c4da0a9e13d8cb484d7a12dc60"
+    },
+    {
+      "path": "bin/timeline-preview/test.py",
+      "bytes": 10768,
+      "expected_sha256": "dd42b041891b84e347fb6253259f6c2bb4a7781d91398e98546d16d9f4ce1414",
+      "candidate_sha256": "dd42b041891b84e347fb6253259f6c2bb4a7781d91398e98546d16d9f4ce1414",
+      "reproduction_sha256": "dd42b041891b84e347fb6253259f6c2bb4a7781d91398e98546d16d9f4ce1414"
+    },
+    {
+      "path": "bin/timeline-preview/tests/README.md",
+      "bytes": 17333,
+      "expected_sha256": "c2d32cf067b6fe180d6892eff68989e6dbab72da323eb73c7d6cd42d776f8fc4",
+      "candidate_sha256": "c2d32cf067b6fe180d6892eff68989e6dbab72da323eb73c7d6cd42d776f8fc4",
+      "reproduction_sha256": "c2d32cf067b6fe180d6892eff68989e6dbab72da323eb73c7d6cd42d776f8fc4"
+    },
+    {
+      "path": "bin/timeline-preview/tests/avformat-identity.c",
+      "bytes": 2316,
+      "expected_sha256": "c2d8128e24ee35f3b5ed40325f7b46d0ed69ed6417af23ed2dca06b16684723e",
+      "candidate_sha256": "c2d8128e24ee35f3b5ed40325f7b46d0ed69ed6417af23ed2dca06b16684723e",
+      "reproduction_sha256": "c2d8128e24ee35f3b5ed40325f7b46d0ed69ed6417af23ed2dca06b16684723e"
+    },
+    {
+      "path": "bin/timeline-preview/tests/compare-identity.py",
+      "bytes": 4049,
+      "expected_sha256": "bfe99307ef3e8ea119652a0b18d1c5cc052bd042d46725af13f7abd4eac6db4d",
+      "candidate_sha256": "bfe99307ef3e8ea119652a0b18d1c5cc052bd042d46725af13f7abd4eac6db4d",
+      "reproduction_sha256": "bfe99307ef3e8ea119652a0b18d1c5cc052bd042d46725af13f7abd4eac6db4d"
+    },
+    {
+      "path": "bin/timeline-preview/tests/generate_admission_fixtures.py",
+      "bytes": 23668,
+      "expected_sha256": "92be89ff835bfdb8eaddac8cef634e2a9d58aa69b750d035b1979db563add3a4",
+      "candidate_sha256": "92be89ff835bfdb8eaddac8cef634e2a9d58aa69b750d035b1979db563add3a4",
+      "reproduction_sha256": "92be89ff835bfdb8eaddac8cef634e2a9d58aa69b750d035b1979db563add3a4"
+    },
+    {
+      "path": "bin/timeline-preview/tests/generate_dependency_fixtures.py",
+      "bytes": 6018,
+      "expected_sha256": "f4f081c317799617aeaef3b14018c4b5e98870cb2f23a890f28fe0358db05b8c",
+      "candidate_sha256": "f4f081c317799617aeaef3b14018c4b5e98870cb2f23a890f28fe0358db05b8c",
+      "reproduction_sha256": "f4f081c317799617aeaef3b14018c4b5e98870cb2f23a890f28fe0358db05b8c"
+    },
+    {
+      "path": "bin/timeline-preview/tests/generate_fixtures.py",
+      "bytes": 30369,
+      "expected_sha256": "7122c3a80b4f6ade690b47e8854a57d84bdda8684d144ea7e6a6dd4c274f00ec",
+      "candidate_sha256": "7122c3a80b4f6ade690b47e8854a57d84bdda8684d144ea7e6a6dd4c274f00ec",
+      "reproduction_sha256": "7122c3a80b4f6ade690b47e8854a57d84bdda8684d144ea7e6a6dd4c274f00ec"
+    },
+    {
+      "path": "bin/timeline-preview/timeline-preview.c",
+      "bytes": 49154,
+      "expected_sha256": "61fa2c51d2dd62a0bd7ea7d5b07744a166725a6dac0e5eb0fb6292bf4b604e0f",
+      "candidate_sha256": "61fa2c51d2dd62a0bd7ea7d5b07744a166725a6dac0e5eb0fb6292bf4b604e0f",
+      "reproduction_sha256": "61fa2c51d2dd62a0bd7ea7d5b07744a166725a6dac0e5eb0fb6292bf4b604e0f"
+    },
+    {
+      "path": "configure.ac",
+      "bytes": 168419,
+      "expected_sha256": "9dd8d65a1a272dcf919b85bc6ed5c3180ff48fba7ccfa339096777aae74c974d",
+      "candidate_sha256": "9dd8d65a1a272dcf919b85bc6ed5c3180ff48fba7ccfa339096777aae74c974d",
+      "reproduction_sha256": "9dd8d65a1a272dcf919b85bc6ed5c3180ff48fba7ccfa339096777aae74c974d"
+    },
+    {
+      "path": "contrib/src/ffmpeg/matroska-flat-timeline.patch",
+      "bytes": 11367,
+      "expected_sha256": "abd605f770de85f739929c5d333bd45e8d35075b2b69720cfaecbdc0d278450e",
+      "candidate_sha256": "abd605f770de85f739929c5d333bd45e8d35075b2b69720cfaecbdc0d278450e",
+      "reproduction_sha256": "abd605f770de85f739929c5d333bd45e8d35075b2b69720cfaecbdc0d278450e"
+    },
+    {
+      "path": "contrib/src/ffmpeg/matroska-track-number.patch",
+      "bytes": 406,
+      "expected_sha256": "23baeb78b81fcb51e5068feaba2ad6f8ddfedfc3eb7dd5bca3b7d56df5ce2602",
+      "candidate_sha256": "23baeb78b81fcb51e5068feaba2ad6f8ddfedfc3eb7dd5bca3b7d56df5ce2602",
+      "reproduction_sha256": "23baeb78b81fcb51e5068feaba2ad6f8ddfedfc3eb7dd5bca3b7d56df5ce2602"
+    },
+    {
+      "path": "contrib/src/ffmpeg/rules.mak",
+      "bytes": 6819,
+      "expected_sha256": "c3f3f5c5b54e93de3b3a954431809edc7a965691f1f7a411b56e941b83421028",
+      "candidate_sha256": "c3f3f5c5b54e93de3b3a954431809edc7a965691f1f7a411b56e941b83421028",
+      "reproduction_sha256": "c3f3f5c5b54e93de3b3a954431809edc7a965691f1f7a411b56e941b83421028"
+    },
+    {
+      "path": "extras/package/macosx/codesign.sh",
+      "bytes": 4814,
+      "expected_sha256": "157217d4cb062efb2af688cc0c9c36ef9dfc58b6d0c5c367f524d83bb1de5ea6",
+      "candidate_sha256": "157217d4cb062efb2af688cc0c9c36ef9dfc58b6d0c5c367f524d83bb1de5ea6",
+      "reproduction_sha256": "157217d4cb062efb2af688cc0c9c36ef9dfc58b6d0c5c367f524d83bb1de5ea6"
+    },
+    {
+      "path": "extras/package/macosx/package.mak",
+      "bytes": 8169,
+      "expected_sha256": "4ec3d50726545bbeabf3219a4ccb355f5e3610487873f60a3eeec0b2d6a878db",
+      "candidate_sha256": "4ec3d50726545bbeabf3219a4ccb355f5e3610487873f60a3eeec0b2d6a878db",
+      "reproduction_sha256": "4ec3d50726545bbeabf3219a4ccb355f5e3610487873f60a3eeec0b2d6a878db"
+    },
+    {
+      "path": "meson_options.txt",
+      "bytes": 19396,
+      "expected_sha256": "c48a07be30c3b79a835ec7cc79487472c77026bbfff2885cbe579bcac359a8ef",
+      "candidate_sha256": "c48a07be30c3b79a835ec7cc79487472c77026bbfff2885cbe579bcac359a8ef",
+      "reproduction_sha256": "c48a07be30c3b79a835ec7cc79487472c77026bbfff2885cbe579bcac359a8ef"
+    },
+    {
+      "path": "modules/audio_output/Makefile.am",
+      "bytes": 7053,
+      "expected_sha256": "de9e4602adbaa9838049b1dca5fcc8aa3c1b280ef8b3ec82a0c5200523a211ae",
+      "candidate_sha256": "de9e4602adbaa9838049b1dca5fcc8aa3c1b280ef8b3ec82a0c5200523a211ae",
+      "reproduction_sha256": "de9e4602adbaa9838049b1dca5fcc8aa3c1b280ef8b3ec82a0c5200523a211ae"
+    },
+    {
+      "path": "modules/gui/macosx/Makefile.am",
+      "bytes": 46164,
+      "expected_sha256": "e5246de5d51e44132a6d8e2804ba6b6f7e70924f9f4b8e473f79bbb8cb737480",
+      "candidate_sha256": "e5246de5d51e44132a6d8e2804ba6b6f7e70924f9f4b8e473f79bbb8cb737480",
+      "reproduction_sha256": "e5246de5d51e44132a6d8e2804ba6b6f7e70924f9f4b8e473f79bbb8cb737480"
+    },
+    {
+      "path": "modules/gui/macosx/UI/SimplePreferences.xib",
+      "bytes": 287970,
+      "expected_sha256": "ad1e498b2b543e6812ab23ab196d0936889f8ea000e0bc05a70828d66f1d6bb1",
+      "candidate_sha256": "ad1e498b2b543e6812ab23ab196d0936889f8ea000e0bc05a70828d66f1d6bb1",
+      "reproduction_sha256": "ad1e498b2b543e6812ab23ab196d0936889f8ea000e0bc05a70828d66f1d6bb1"
+    },
+    {
+      "path": "modules/gui/macosx/main/VLCMain.m",
+      "bytes": 18120,
+      "expected_sha256": "a4b6c24610624a551b0d8afbf697bcd3cf2ce0522791c4632fdf753e97194867",
+      "candidate_sha256": "a4b6c24610624a551b0d8afbf697bcd3cf2ce0522791c4632fdf753e97194867",
+      "reproduction_sha256": "a4b6c24610624a551b0d8afbf697bcd3cf2ce0522791c4632fdf753e97194867"
+    },
+    {
+      "path": "modules/gui/macosx/main/macosx.m",
+      "bytes": 10185,
+      "expected_sha256": "b23d0ce0c6e2d23e9865c44597366935e1ec15b0f633a3f13b30307710632428",
+      "candidate_sha256": "b23d0ce0c6e2d23e9865c44597366935e1ec15b0f633a3f13b30307710632428",
+      "reproduction_sha256": "b23d0ce0c6e2d23e9865c44597366935e1ec15b0f633a3f13b30307710632428"
+    },
+    {
+      "path": "modules/gui/macosx/playqueue/VLCPlayerController.h",
+      "bytes": 34890,
+      "expected_sha256": "7594a27881387adb1ee071f3ada089e0f4003805672e4aa91526855b8d3fa2a4",
+      "candidate_sha256": "7594a27881387adb1ee071f3ada089e0f4003805672e4aa91526855b8d3fa2a4",
+      "reproduction_sha256": "7594a27881387adb1ee071f3ada089e0f4003805672e4aa91526855b8d3fa2a4"
+    },
+    {
+      "path": "modules/gui/macosx/playqueue/VLCPlayerController.m",
+      "bytes": 79487,
+      "expected_sha256": "a42a61bc7f2e1ee055f895a72d1534d98da6d9c018819b13190576d0e91f6353",
+      "candidate_sha256": "a42a61bc7f2e1ee055f895a72d1534d98da6d9c018819b13190576d0e91f6353",
+      "reproduction_sha256": "a42a61bc7f2e1ee055f895a72d1534d98da6d9c018819b13190576d0e91f6353"
+    },
+    {
+      "path": "modules/gui/macosx/preferences/VLCSimplePrefsController.h",
+      "bytes": 13786,
+      "expected_sha256": "2aad432fe62778b4275cfff30fd30461e2ef6bdf8e3543120b2aceeb1b7a35b8",
+      "candidate_sha256": "2aad432fe62778b4275cfff30fd30461e2ef6bdf8e3543120b2aceeb1b7a35b8",
+      "reproduction_sha256": "2aad432fe62778b4275cfff30fd30461e2ef6bdf8e3543120b2aceeb1b7a35b8"
+    },
+    {
+      "path": "modules/gui/macosx/preferences/VLCSimplePrefsController.m",
+      "bytes": 71295,
+      "expected_sha256": "7d31ff701c1793c849dc0b0317d5744fcebd93ba102b571484d68c1f38bcf704",
+      "candidate_sha256": "7d31ff701c1793c849dc0b0317d5744fcebd93ba102b571484d68c1f38bcf704",
+      "reproduction_sha256": "7d31ff701c1793c849dc0b0317d5744fcebd93ba102b571484d68c1f38bcf704"
+    },
+    {
+      "path": "modules/gui/macosx/tests/Makefile.am",
+      "bytes": 9396,
+      "expected_sha256": "fe199564f7be3514bec3b0c81304dcb31cb4c0de8f754fe29629b53a99fb7271",
+      "candidate_sha256": "fe199564f7be3514bec3b0c81304dcb31cb4c0de8f754fe29629b53a99fb7271",
+      "reproduction_sha256": "fe199564f7be3514bec3b0c81304dcb31cb4c0de8f754fe29629b53a99fb7271"
+    },
+    {
+      "path": "modules/gui/macosx/tests/VLCLibraryDataTypesIntegrationTestSupport.m",
+      "bytes": 24624,
+      "expected_sha256": "6847913b961fabfb3d03d8144e37c2ecba130893e495e2e0cb7d297f7a349c92",
+      "candidate_sha256": "6847913b961fabfb3d03d8144e37c2ecba130893e495e2e0cb7d297f7a349c92",
+      "reproduction_sha256": "6847913b961fabfb3d03d8144e37c2ecba130893e495e2e0cb7d297f7a349c92"
+    },
+    {
+      "path": "modules/gui/macosx/tests/VLCThumbnailCacheTest.m",
+      "bytes": 49696,
+      "expected_sha256": "09a9aa16cde2471569c39d95425ee15243525c0a1b4d8651f40aaa636c1669a0",
+      "candidate_sha256": "09a9aa16cde2471569c39d95425ee15243525c0a1b4d8651f40aaa636c1669a0",
+      "reproduction_sha256": "09a9aa16cde2471569c39d95425ee15243525c0a1b4d8651f40aaa636c1669a0"
+    },
+    {
+      "path": "modules/gui/macosx/tests/VLCThumbnailSchedulerTest.m",
+      "bytes": 5501,
+      "expected_sha256": "a0cc60c7f761e59761ba225f8ef16f02ffe65552632de045dd70b1eb9aaa7f1e",
+      "candidate_sha256": "a0cc60c7f761e59761ba225f8ef16f02ffe65552632de045dd70b1eb9aaa7f1e",
+      "reproduction_sha256": "a0cc60c7f761e59761ba225f8ef16f02ffe65552632de045dd70b1eb9aaa7f1e"
+    },
+    {
+      "path": "modules/gui/macosx/tests/VLCThumbnailServiceTest.m",
+      "bytes": 48823,
+      "expected_sha256": "2e8840b8177d1824e12d658dffbc93cd8e8c506f4d8feb29d5c86b6f60e874fe",
+      "candidate_sha256": "2e8840b8177d1824e12d658dffbc93cd8e8c506f4d8feb29d5c86b6f60e874fe",
+      "reproduction_sha256": "2e8840b8177d1824e12d658dffbc93cd8e8c506f4d8feb29d5c86b6f60e874fe"
+    },
+    {
+      "path": "modules/gui/macosx/tests/VLCThumbnailTestHelper.c",
+      "bytes": 7074,
+      "expected_sha256": "c671a501f3d378d595ebeff255fc9dfd9a7997a22bcf4e3f9d93f242ce9e8374",
+      "candidate_sha256": "c671a501f3d378d595ebeff255fc9dfd9a7997a22bcf4e3f9d93f242ce9e8374",
+      "reproduction_sha256": "c671a501f3d378d595ebeff255fc9dfd9a7997a22bcf4e3f9d93f242ce9e8374"
+    },
+    {
+      "path": "modules/gui/macosx/tests/VLCTimelineHoverReentrancyTest.m",
+      "bytes": 6880,
+      "expected_sha256": "850dc33a8032b3a7c8fb4329d651ee46a6bd6d24a5b4b7fd8bc1224dd64c3715",
+      "candidate_sha256": "850dc33a8032b3a7c8fb4329d651ee46a6bd6d24a5b4b7fd8bc1224dd64c3715",
+      "reproduction_sha256": "850dc33a8032b3a7c8fb4329d651ee46a6bd6d24a5b4b7fd8bc1224dd64c3715"
+    },
+    {
+      "path": "modules/gui/macosx/tests/VLCTimelineHoverTest.m",
+      "bytes": 3027,
+      "expected_sha256": "310b616ceea66eda8ef8703706b68599b8586ba5097d4b05e3e9677e7e4a9812",
+      "candidate_sha256": "310b616ceea66eda8ef8703706b68599b8586ba5097d4b05e3e9677e7e4a9812",
+      "reproduction_sha256": "310b616ceea66eda8ef8703706b68599b8586ba5097d4b05e3e9677e7e4a9812"
+    },
+    {
+      "path": "modules/gui/macosx/tests/VLCTimelineHoverTestSupport.m",
+      "bytes": 2276,
+      "expected_sha256": "2a242068cc0b32b4e3ee5e94d490e6cf64ae4fe88f040f54317e420327ca07e3",
+      "candidate_sha256": "2a242068cc0b32b4e3ee5e94d490e6cf64ae4fe88f040f54317e420327ca07e3",
+      "reproduction_sha256": "2a242068cc0b32b4e3ee5e94d490e6cf64ae4fe88f040f54317e420327ca07e3"
+    },
+    {
+      "path": "modules/gui/macosx/timeline/VLCThumbnailCache.h",
+      "bytes": 1399,
+      "expected_sha256": "6e529b5db2c69f64276fee828977bab0db512109d1a8ced542ec734138e59640",
+      "candidate_sha256": "6e529b5db2c69f64276fee828977bab0db512109d1a8ced542ec734138e59640",
+      "reproduction_sha256": "6e529b5db2c69f64276fee828977bab0db512109d1a8ced542ec734138e59640"
+    },
+    {
+      "path": "modules/gui/macosx/timeline/VLCThumbnailCache.m",
+      "bytes": 18927,
+      "expected_sha256": "2207283584e23c0c44ec235b89ae3baed676afb11d5d2585d0f2e59b52bb4297",
+      "candidate_sha256": "2207283584e23c0c44ec235b89ae3baed676afb11d5d2585d0f2e59b52bb4297",
+      "reproduction_sha256": "2207283584e23c0c44ec235b89ae3baed676afb11d5d2585d0f2e59b52bb4297"
+    },
+    {
+      "path": "modules/gui/macosx/timeline/VLCThumbnailScheduler.h",
+      "bytes": 1217,
+      "expected_sha256": "3358d1078438a65971e67c116d7f1400c69b8033a700427faf7a480419e3c5ec",
+      "candidate_sha256": "3358d1078438a65971e67c116d7f1400c69b8033a700427faf7a480419e3c5ec",
+      "reproduction_sha256": "3358d1078438a65971e67c116d7f1400c69b8033a700427faf7a480419e3c5ec"
+    },
+    {
+      "path": "modules/gui/macosx/timeline/VLCThumbnailScheduler.m",
+      "bytes": 8605,
+      "expected_sha256": "49b2b4e37b69978c38ef6bd99eba66c65a2a299a4d3f4751bf28a7f3ebcb79e0",
+      "candidate_sha256": "49b2b4e37b69978c38ef6bd99eba66c65a2a299a4d3f4751bf28a7f3ebcb79e0",
+      "reproduction_sha256": "49b2b4e37b69978c38ef6bd99eba66c65a2a299a4d3f4751bf28a7f3ebcb79e0"
+    },
+    {
+      "path": "modules/gui/macosx/timeline/VLCThumbnailService.h",
+      "bytes": 961,
+      "expected_sha256": "77446215166b7a9f1527c92c1380503d6c411666e06b4306b753fa4bee8d1767",
+      "candidate_sha256": "77446215166b7a9f1527c92c1380503d6c411666e06b4306b753fa4bee8d1767",
+      "reproduction_sha256": "77446215166b7a9f1527c92c1380503d6c411666e06b4306b753fa4bee8d1767"
+    },
+    {
+      "path": "modules/gui/macosx/timeline/VLCThumbnailService.m",
+      "bytes": 42398,
+      "expected_sha256": "2f39645a0783fcb53a19e77dfe6b3117eb2a91fd570d80fb208be52337629343",
+      "candidate_sha256": "2f39645a0783fcb53a19e77dfe6b3117eb2a91fd570d80fb208be52337629343",
+      "reproduction_sha256": "2f39645a0783fcb53a19e77dfe6b3117eb2a91fd570d80fb208be52337629343"
+    },
+    {
+      "path": "modules/gui/macosx/timeline/VLCThumbnailWorker.h",
+      "bytes": 808,
+      "expected_sha256": "f39aaaad41e397ddbdf8f7b6e3602fc010404ab62287f4cea72af85328bc6296",
+      "candidate_sha256": "f39aaaad41e397ddbdf8f7b6e3602fc010404ab62287f4cea72af85328bc6296",
+      "reproduction_sha256": "f39aaaad41e397ddbdf8f7b6e3602fc010404ab62287f4cea72af85328bc6296"
+    },
+    {
+      "path": "modules/gui/macosx/timeline/VLCThumbnailWorker.m",
+      "bytes": 14340,
+      "expected_sha256": "18f4aa213f2f8823b69a340ef2e3849c6461cd71070332c814fe44f8ed1ec5b7",
+      "candidate_sha256": "18f4aa213f2f8823b69a340ef2e3849c6461cd71070332c814fe44f8ed1ec5b7",
+      "reproduction_sha256": "18f4aa213f2f8823b69a340ef2e3849c6461cd71070332c814fe44f8ed1ec5b7"
+    },
+    {
+      "path": "modules/gui/macosx/timeline/VLCTimelineContext.h",
+      "bytes": 477,
+      "expected_sha256": "634bdd6e5b3663ae503ec24b8c6b4d7881c63b661088f31390d4f16f2d8d3373",
+      "candidate_sha256": "634bdd6e5b3663ae503ec24b8c6b4d7881c63b661088f31390d4f16f2d8d3373",
+      "reproduction_sha256": "634bdd6e5b3663ae503ec24b8c6b4d7881c63b661088f31390d4f16f2d8d3373"
+    },
+    {
+      "path": "modules/gui/macosx/timeline/VLCTimelineContext.m",
+      "bytes": 6619,
+      "expected_sha256": "152237519a537e2c92e55a6c8b9829dda13f51fc5d55101b8246637c9177ca8f",
+      "candidate_sha256": "152237519a537e2c92e55a6c8b9829dda13f51fc5d55101b8246637c9177ca8f",
+      "reproduction_sha256": "152237519a537e2c92e55a6c8b9829dda13f51fc5d55101b8246637c9177ca8f"
+    },
+    {
+      "path": "modules/gui/macosx/timeline/VLCTimelineContextTestSupport.m",
+      "bytes": 1743,
+      "expected_sha256": "9820fc0f4e0b406ad89989ecd0ec44fc6be8f08a5e4424320713d3a174c54092",
+      "candidate_sha256": "9820fc0f4e0b406ad89989ecd0ec44fc6be8f08a5e4424320713d3a174c54092",
+      "reproduction_sha256": "9820fc0f4e0b406ad89989ecd0ec44fc6be8f08a5e4424320713d3a174c54092"
+    },
+    {
+      "path": "modules/gui/macosx/timeline/VLCTimelineContextTests.m",
+      "bytes": 10639,
+      "expected_sha256": "21c1b5cb71f319102a23241070458871153c1c2f133c6a970f4c0b3920fb9127",
+      "candidate_sha256": "21c1b5cb71f319102a23241070458871153c1c2f133c6a970f4c0b3920fb9127",
+      "reproduction_sha256": "21c1b5cb71f319102a23241070458871153c1c2f133c6a970f4c0b3920fb9127"
+    },
+    {
+      "path": "modules/gui/macosx/timeline/VLCTimelinePlayerContextTest.m",
+      "bytes": 9970,
+      "expected_sha256": "f2abf48c08dbcbc56b7eed82dff443b9857c38675dd1ddc136a1759cc5b957bb",
+      "candidate_sha256": "f2abf48c08dbcbc56b7eed82dff443b9857c38675dd1ddc136a1759cc5b957bb",
+      "reproduction_sha256": "f2abf48c08dbcbc56b7eed82dff443b9857c38675dd1ddc136a1759cc5b957bb"
+    },
+    {
+      "path": "modules/gui/macosx/views/VLCPlaybackProgressSlider.h",
+      "bytes": 2758,
+      "expected_sha256": "2df50c2c4dd2ce5486d228b8b6b4ad3549fe37c70e5adcb3a47e8789cd8e4e63",
+      "candidate_sha256": "2df50c2c4dd2ce5486d228b8b6b4ad3549fe37c70e5adcb3a47e8789cd8e4e63",
+      "reproduction_sha256": "2df50c2c4dd2ce5486d228b8b6b4ad3549fe37c70e5adcb3a47e8789cd8e4e63"
+    },
+    {
+      "path": "modules/gui/macosx/views/VLCPlaybackProgressSlider.m",
+      "bytes": 20348,
+      "expected_sha256": "76289b6be84e615fa8746a5b18a600165b3d6755c7a85b25d7b8b10a4cbbdd10",
+      "candidate_sha256": "76289b6be84e615fa8746a5b18a600165b3d6755c7a85b25d7b8b10a4cbbdd10",
+      "reproduction_sha256": "76289b6be84e615fa8746a5b18a600165b3d6755c7a85b25d7b8b10a4cbbdd10"
+    },
+    {
+      "path": "modules/gui/macosx/windows/video/VLCMainVideoViewController.m",
+      "bytes": 33321,
+      "expected_sha256": "00a1fafd21316101dda91b8bcdf4e00615b7bb14c74269b9959c02019b2ab128",
+      "candidate_sha256": "00a1fafd21316101dda91b8bcdf4e00615b7bb14c74269b9959c02019b2ab128",
+      "reproduction_sha256": "00a1fafd21316101dda91b8bcdf4e00615b7bb14c74269b9959c02019b2ab128"
+    },
+    {
+      "path": "modules/misc/Makefile.am",
+      "bytes": 5407,
+      "expected_sha256": "202f4a95ab9de075df6f64b7ea2bf3dd21a11d795e81544c5a1ff97a721734b0",
+      "candidate_sha256": "202f4a95ab9de075df6f64b7ea2bf3dd21a11d795e81544c5a1ff97a721734b0",
+      "reproduction_sha256": "202f4a95ab9de075df6f64b7ea2bf3dd21a11d795e81544c5a1ff97a721734b0"
+    },
+    {
+      "path": "modules/video_output/Makefile.am",
+      "bytes": 17131,
+      "expected_sha256": "8e2f7181ea2eea363dedcb19a3390c63eb7d7c1b9a322ff247a1be9b573589f9",
+      "candidate_sha256": "8e2f7181ea2eea363dedcb19a3390c63eb7d7c1b9a322ff247a1be9b573589f9",
+      "reproduction_sha256": "8e2f7181ea2eea363dedcb19a3390c63eb7d7c1b9a322ff247a1be9b573589f9"
+    }
+  ],
+  "installed_apps": [
+    {
+      "path": "/Applications/VLC.app",
+      "plist_sha256": "3a2204ec334cc1151057d3066026ae2adbf216a25786792da27521ce995ec6c9",
+      "executable_path": "/Applications/VLC.app/Contents/MacOS/VLC",
+      "executable_sha256": "26a122e5b2e3b3ac31634cbfd671d7c9c4648ba0618931e75424289a9c9b42b2",
+      "bundle_id": "org.videolan.vlc",
+      "version": "3.0.24",
+      "build": "3.0.24",
+      "signature_display": {
+        "argv": [
+          "codesign",
+          "-d",
+          "--verbose=4",
+          "/Applications/VLC.app"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "Executable=/Applications/VLC.app/Contents/MacOS/VLC\nIdentifier=org.videolan.vlc\nFormat=app bundle with Mach-O thin (arm64)\nCodeDirectory v=20500 size=924 flags=0x10000(runtime) hashes=18+7 location=embedded\nVersionPlatform=1\nVersionMin=720896\nVersionSDK=721152\nHash type=sha256 size=32\nCandidateCDHash sha256=1563deeb28ba5b40401ae637cc90d5352868073d\nCandidateCDHashFull sha256=1563deeb28ba5b40401ae637cc90d5352868073d21f9a3f19caebab042e9f2ee\nHash choices=sha256\nCMSDigest=1563deeb28ba5b40401ae637cc90d5352868073d21f9a3f19caebab042e9f2ee\nCMSDigestType=2\nExecutable Segment base=0\nExecutable Segment limit=32768\nExecutable Segment flags=0x1\nPage size=4096\nCDHash=1563deeb28ba5b40401ae637cc90d5352868073d\nSignature size=9036\nAuthority=Developer ID Application: VideoLAN (75GAHG3SZQ)\nAuthority=Developer ID Certification Authority\nAuthority=Apple Root CA\nTimestamp=Sep 17, 2026 at 9:35:43\u202fAM\nInfo.plist entries=41\nTeamIdentifier=75GAHG3SZQ\nRuntime Version=11.1.0\nSealed Resources version=2 rules=13 files=1191\nInternal requirements count=1 size=176\nTotal signatures=1\nChosen signature=1\n"
+      },
+      "signature_verify": {
+        "argv": [
+          "codesign",
+          "--verify",
+          "--deep",
+          "--strict",
+          "/Applications/VLC.app"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "path": "/Users/cam/Applications/VLC Timeline Preview.app",
+      "plist_sha256": "a235bc2bee00e34cd0dc6314dd6affc0e8949c4b4b7c9462d008a53429897956",
+      "executable_path": "/Users/cam/Applications/VLC Timeline Preview.app/Contents/MacOS/VLC",
+      "executable_sha256": "d42c71372532f1e492363b05eda47407722b1a01fc2417f19310423d86a40974",
+      "bundle_id": "org.videolan.vlc-thumbs.preview",
+      "version": "3.0.24",
+      "build": "3.0.24",
+      "signature_display": {
+        "argv": [
+          "codesign",
+          "-d",
+          "--verbose=4",
+          "/Users/cam/Applications/VLC Timeline Preview.app"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "Executable=/Users/cam/Applications/VLC Timeline Preview.app/Contents/MacOS/VLC\nIdentifier=org.videolan.vlc-thumbs.preview\nFormat=app bundle with Mach-O thin (arm64)\nCodeDirectory v=20400 size=344 flags=0x2(adhoc) hashes=4+3 location=embedded\nVersionPlatform=1\nVersionMin=720896\nVersionSDK=1769472\nHash type=sha256 size=32\nCandidateCDHash sha256=521d23834c1663541468f7d7aacc074a6aef36d1\nCandidateCDHashFull sha256=521d23834c1663541468f7d7aacc074a6aef36d1d17b88b77d8de885f8cf2ed8\nHash choices=sha256\nCMSDigest=521d23834c1663541468f7d7aacc074a6aef36d1d17b88b77d8de885f8cf2ed8\nCMSDigestType=2\nExecutable Segment base=0\nExecutable Segment limit=16384\nExecutable Segment flags=0x1\nPage size=16384\nCDHash=521d23834c1663541468f7d7aacc074a6aef36d1\nSignature=adhoc\nInfo.plist entries=42\nTeamIdentifier=not set\nSealed Resources version=2 rules=13 files=1217\nInternal requirements count=0 size=12\nTotal signatures=1\nChosen signature=1\n"
+      },
+      "signature_verify": {
+        "argv": [
+          "codesign",
+          "--verify",
+          "--deep",
+          "--strict",
+          "/Users/cam/Applications/VLC Timeline Preview.app"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "path": "/Users/cam/Applications/VLC Timeline Upstream Preview.app",
+      "plist_sha256": "29ad59b84fc1895da0f3fd8165e1c59601d2af7dea4885393d814db4bf967827",
+      "executable_path": "/Users/cam/Applications/VLC Timeline Upstream Preview.app/Contents/MacOS/VLC",
+      "executable_sha256": "0d4731aa355f1617f92ef19a3a6d2553e490c1dff9676efae3fb465d771e4a02",
+      "bundle_id": "org.videolan.vlc.story005.upstreampreview",
+      "version": "4.0.0-dev",
+      "build": "4.0.0-dev",
+      "signature_display": {
+        "argv": [
+          "codesign",
+          "-d",
+          "--verbose=4",
+          "/Users/cam/Applications/VLC Timeline Upstream Preview.app"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "Executable=/Users/cam/Applications/VLC Timeline Upstream Preview.app/Contents/MacOS/VLC\nIdentifier=org.videolan.vlc.story005.upstreampreview\nFormat=app bundle with Mach-O thin (arm64)\nCodeDirectory v=20400 size=354 flags=0x2(adhoc) hashes=4+3 location=embedded\nVersionPlatform=1\nVersionMin=1769472\nVersionSDK=1769472\nHash type=sha256 size=32\nCandidateCDHash sha256=9d692331610b3949eabf491db33918801d8c73d4\nCandidateCDHashFull sha256=9d692331610b3949eabf491db33918801d8c73d4e35330af78f398f020fd734f\nHash choices=sha256\nCMSDigest=9d692331610b3949eabf491db33918801d8c73d4e35330af78f398f020fd734f\nCMSDigestType=2\nExecutable Segment base=0\nExecutable Segment limit=16384\nExecutable Segment flags=0x1\nPage size=16384\nCDHash=9d692331610b3949eabf491db33918801d8c73d4\nSignature=adhoc\nInfo.plist entries=41\nTeamIdentifier=not set\nSealed Resources version=2 rules=13 files=916\nInternal requirements count=0 size=12\nTotal signatures=1\nChosen signature=1\n"
+      },
+      "signature_verify": {
+        "argv": [
+          "codesign",
+          "--verify",
+          "--deep",
+          "--strict",
+          "/Users/cam/Applications/VLC Timeline Upstream Preview.app"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    }
+  ],
+  "free_before_bytes": 20512997376,
+  "snapshot_path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-review-baseline010",
+  "snapshot_files": [
+    {
+      "path": "patches/vlc-master/feature-series/series",
+      "bytes": 193,
+      "sha256": "db71116d7a68e3319f7fe0a220a17327c3bbb116c98253d29bdc28d688930d4f"
+    },
+    {
+      "path": "patches/vlc-master/feature-series/0001-contrib-matroska-identity-and-admission.patch",
+      "bytes": 13511,
+      "sha256": "27772936e6068efe11bd44dd6265cd1fb61114dfd8aa7cd9ba693c609e54abf1"
+    },
+    {
+      "path": "patches/vlc-master/feature-series/0002-timeline-helper-build-package-and-tests.patch",
+      "bytes": 187209,
+      "sha256": "b2661e2a585ed4f543c97ba0f50ce401637dbc1b8404fe85572cf866a8f6875e"
+    },
+    {
+      "path": "patches/vlc-master/feature-series/proposed-commit-messages.md",
+      "bytes": 3294,
+      "sha256": "7758e8763cfb587644d27cd7704d0a30e80d2ac304fc60030e5ad2d7b1b6a5d3"
+    },
+    {
+      "path": "patches/vlc-master/feature-series/contribution-description-draft.md",
+      "bytes": 7218,
+      "sha256": "a43b16e0ce6c1954374482a5997ba2b088a4fbc4f906bd845eb4dec57f3cce11"
+    },
+    {
+      "path": "patches/vlc-master/feature-series/README.md",
+      "bytes": 13933,
+      "sha256": "643152b8ca0dc44c297faadc789cb68d1a416cc3bacfa2b77543b00a2293f2f6"
+    },
+    {
+      "path": "patches/vlc-master/feature-series/0000-source-header-distribution.patch",
+      "bytes": 4732,
+      "sha256": "70da9e24f27de04128c59b1484379d1d9813f7e1af04d3792e971a07a24cd57e"
+    },
+    {
+      "path": "patches/vlc-master/feature-series/0003-macosx-timeline-context-service-and-hover.patch",
+      "bytes": 304953,
+      "sha256": "ef9ad2f01482a06798495284c138b448637f91c417f467b2bd7a1c3fec2d7151"
+    },
+    {
+      "path": "patches/vlc-master/feature-series/manifest.json",
+      "bytes": 33530,
+      "sha256": "0279ae61e3bb54b0e448a00d61521cf8f51654808f2efc7e578689f633a2dab5"
+    },
+    {
+      "path": "patches/vlc-master/feature-series/demonstration/provenance.json",
+      "bytes": 4418,
+      "sha256": "b02db1dcb018664eb4bedd8a325da56ae705cfe82ef09a706c26669a586459dc"
+    },
+    {
+      "path": "patches/vlc-master/feature-series/demonstration/detached-hover.png",
+      "bytes": 192239,
+      "sha256": "d32dd707d09bfd70731c2b0438d1e4c8c83f04dbe4391ed3d1be2cb100bc5050"
+    },
+    {
+      "path": "patches/vlc-master/feature-series/demonstration/custom-fullscreen-hover.png",
+      "bytes": 3512667,
+      "sha256": "3b11c683299899abbf8d6ff640456853afa7e83ec06ab40147e8f3116106abd1"
+    },
+    {
+      "path": "patches/vlc-master/feature-series/demonstration/README.md",
+      "bytes": 3692,
+      "sha256": "58180470b0b37095332c20530459637ba246f8288ed6049e5faf497db2a24e80"
+    },
+    {
+      "path": "docs/evidence/story-005/revision10-docs-source-validation.json",
+      "bytes": 5238,
+      "sha256": "4b8ca872fa289f2e76acdcc0cafafcc2d07918abac41309d2f92f3305bdf6f1c"
+    },
+    {
+      "path": "docs/evidence/story-005/revision10-source-guide-actual.diff",
+      "bytes": 2369,
+      "sha256": "7c6c75c74049f6e17f95db70486d4f7b193b506091f3d155967e5dc59a38d40f"
+    },
+    {
+      "path": "docs/evidence/story-005/current-readiness-ledger.md",
+      "bytes": 28934,
+      "sha256": "1519f0f9ed0959cf8ba4f18456787922f1191e65650d78687d987e70055ab444"
+    },
+    {
+      "path": "docs/evidence/story-005/phase2-final-validation.md",
+      "bytes": 7384,
+      "sha256": "9db61338cceab1e573c2f3b2fcb22cbdc62be09e998cc7c7880dcc65d956b01d"
+    },
+    {
+      "path": "docs/evidence/story-005/public-feature-series-validation-009.json",
+      "bytes": 9442,
+      "sha256": "1dc335d0c3507672832b7cb622f4fe1205289a98854f1e32188ef5541925d106"
+    },
+    {
+      "path": "source/Makefile.am",
+      "bytes": 7094,
+      "sha256": "9399c30643b98b1054c3894f39354ce7f500f53d4a7d993d2928f939c721c4db"
+    },
+    {
+      "path": "source/bin/Makefile.am",
+      "bytes": 4500,
+      "sha256": "468f5f88c7e38b6c7851686cd5006f020e5c79bac7cffc45126c655440ae1a84"
+    },
+    {
+      "path": "source/bin/meson.build",
+      "bytes": 5486,
+      "sha256": "76f7d8d7ac0dc6a3368325375b21ba80247a2f8b230606482264e1f488ece643"
+    },
+    {
+      "path": "source/bin/preparser/Makefile.am",
+      "bytes": 1619,
+      "sha256": "dada2f836625a068ae55e8f2159c9093ea32f2de92374cc2c70172687e12cccf"
+    },
+    {
+      "path": "source/bin/timeline-preview/Makefile.am",
+      "bytes": 1367,
+      "sha256": "b8127423a839e158c689327916f6abe9976738ae9025c39e5f63928390a50b4d"
+    },
+    {
+      "path": "source/bin/timeline-preview/PROTOCOL.md",
+      "bytes": 6227,
+      "sha256": "30063a4f71a945238d5e34515514f2fdf35355f436c7bf5ffaaff53fcbb5e708"
+    },
+    {
+      "path": "source/bin/timeline-preview/README.md",
+      "bytes": 16597,
+      "sha256": "c0a75f2f508066ee4d82daa7f10253c0fa2c498c3d956e0022efdce55cce428f"
+    },
+    {
+      "path": "source/bin/timeline-preview/test-io.c",
+      "bytes": 5335,
+      "sha256": "6521c10f5187a353487bf874f6e0663ff5f155c4da0a9e13d8cb484d7a12dc60"
+    },
+    {
+      "path": "source/bin/timeline-preview/test.py",
+      "bytes": 10768,
+      "sha256": "dd42b041891b84e347fb6253259f6c2bb4a7781d91398e98546d16d9f4ce1414"
+    },
+    {
+      "path": "source/bin/timeline-preview/tests/README.md",
+      "bytes": 17333,
+      "sha256": "c2d32cf067b6fe180d6892eff68989e6dbab72da323eb73c7d6cd42d776f8fc4"
+    },
+    {
+      "path": "source/bin/timeline-preview/tests/avformat-identity.c",
+      "bytes": 2316,
+      "sha256": "c2d8128e24ee35f3b5ed40325f7b46d0ed69ed6417af23ed2dca06b16684723e"
+    },
+    {
+      "path": "source/bin/timeline-preview/tests/compare-identity.py",
+      "bytes": 4049,
+      "sha256": "bfe99307ef3e8ea119652a0b18d1c5cc052bd042d46725af13f7abd4eac6db4d"
+    },
+    {
+      "path": "source/bin/timeline-preview/tests/generate_admission_fixtures.py",
+      "bytes": 23668,
+      "sha256": "92be89ff835bfdb8eaddac8cef634e2a9d58aa69b750d035b1979db563add3a4"
+    },
+    {
+      "path": "source/bin/timeline-preview/tests/generate_dependency_fixtures.py",
+      "bytes": 6018,
+      "sha256": "f4f081c317799617aeaef3b14018c4b5e98870cb2f23a890f28fe0358db05b8c"
+    },
+    {
+      "path": "source/bin/timeline-preview/tests/generate_fixtures.py",
+      "bytes": 30369,
+      "sha256": "7122c3a80b4f6ade690b47e8854a57d84bdda8684d144ea7e6a6dd4c274f00ec"
+    },
+    {
+      "path": "source/bin/timeline-preview/timeline-preview.c",
+      "bytes": 49154,
+      "sha256": "61fa2c51d2dd62a0bd7ea7d5b07744a166725a6dac0e5eb0fb6292bf4b604e0f"
+    },
+    {
+      "path": "source/configure.ac",
+      "bytes": 168419,
+      "sha256": "9dd8d65a1a272dcf919b85bc6ed5c3180ff48fba7ccfa339096777aae74c974d"
+    },
+    {
+      "path": "source/contrib/src/ffmpeg/matroska-flat-timeline.patch",
+      "bytes": 11367,
+      "sha256": "abd605f770de85f739929c5d333bd45e8d35075b2b69720cfaecbdc0d278450e"
+    },
+    {
+      "path": "source/contrib/src/ffmpeg/matroska-track-number.patch",
+      "bytes": 406,
+      "sha256": "23baeb78b81fcb51e5068feaba2ad6f8ddfedfc3eb7dd5bca3b7d56df5ce2602"
+    },
+    {
+      "path": "source/contrib/src/ffmpeg/rules.mak",
+      "bytes": 6819,
+      "sha256": "c3f3f5c5b54e93de3b3a954431809edc7a965691f1f7a411b56e941b83421028"
+    },
+    {
+      "path": "source/extras/package/macosx/codesign.sh",
+      "bytes": 4814,
+      "sha256": "157217d4cb062efb2af688cc0c9c36ef9dfc58b6d0c5c367f524d83bb1de5ea6"
+    },
+    {
+      "path": "source/extras/package/macosx/package.mak",
+      "bytes": 8169,
+      "sha256": "4ec3d50726545bbeabf3219a4ccb355f5e3610487873f60a3eeec0b2d6a878db"
+    },
+    {
+      "path": "source/meson_options.txt",
+      "bytes": 19396,
+      "sha256": "c48a07be30c3b79a835ec7cc79487472c77026bbfff2885cbe579bcac359a8ef"
+    },
+    {
+      "path": "source/modules/audio_output/Makefile.am",
+      "bytes": 7053,
+      "sha256": "de9e4602adbaa9838049b1dca5fcc8aa3c1b280ef8b3ec82a0c5200523a211ae"
+    },
+    {
+      "path": "source/modules/gui/macosx/Makefile.am",
+      "bytes": 46164,
+      "sha256": "e5246de5d51e44132a6d8e2804ba6b6f7e70924f9f4b8e473f79bbb8cb737480"
+    },
+    {
+      "path": "source/modules/gui/macosx/UI/SimplePreferences.xib",
+      "bytes": 287970,
+      "sha256": "ad1e498b2b543e6812ab23ab196d0936889f8ea000e0bc05a70828d66f1d6bb1"
+    },
+    {
+      "path": "source/modules/gui/macosx/main/VLCMain.m",
+      "bytes": 18120,
+      "sha256": "a4b6c24610624a551b0d8afbf697bcd3cf2ce0522791c4632fdf753e97194867"
+    },
+    {
+      "path": "source/modules/gui/macosx/main/macosx.m",
+      "bytes": 10185,
+      "sha256": "b23d0ce0c6e2d23e9865c44597366935e1ec15b0f633a3f13b30307710632428"
+    },
+    {
+      "path": "source/modules/gui/macosx/playqueue/VLCPlayerController.h",
+      "bytes": 34890,
+      "sha256": "7594a27881387adb1ee071f3ada089e0f4003805672e4aa91526855b8d3fa2a4"
+    },
+    {
+      "path": "source/modules/gui/macosx/playqueue/VLCPlayerController.m",
+      "bytes": 79487,
+      "sha256": "a42a61bc7f2e1ee055f895a72d1534d98da6d9c018819b13190576d0e91f6353"
+    },
+    {
+      "path": "source/modules/gui/macosx/preferences/VLCSimplePrefsController.h",
+      "bytes": 13786,
+      "sha256": "2aad432fe62778b4275cfff30fd30461e2ef6bdf8e3543120b2aceeb1b7a35b8"
+    },
+    {
+      "path": "source/modules/gui/macosx/preferences/VLCSimplePrefsController.m",
+      "bytes": 71295,
+      "sha256": "7d31ff701c1793c849dc0b0317d5744fcebd93ba102b571484d68c1f38bcf704"
+    },
+    {
+      "path": "source/modules/gui/macosx/tests/Makefile.am",
+      "bytes": 9396,
+      "sha256": "fe199564f7be3514bec3b0c81304dcb31cb4c0de8f754fe29629b53a99fb7271"
+    },
+    {
+      "path": "source/modules/gui/macosx/tests/VLCLibraryDataTypesIntegrationTestSupport.m",
+      "bytes": 24624,
+      "sha256": "6847913b961fabfb3d03d8144e37c2ecba130893e495e2e0cb7d297f7a349c92"
+    },
+    {
+      "path": "source/modules/gui/macosx/tests/VLCThumbnailCacheTest.m",
+      "bytes": 49696,
+      "sha256": "09a9aa16cde2471569c39d95425ee15243525c0a1b4d8651f40aaa636c1669a0"
+    },
+    {
+      "path": "source/modules/gui/macosx/tests/VLCThumbnailSchedulerTest.m",
+      "bytes": 5501,
+      "sha256": "a0cc60c7f761e59761ba225f8ef16f02ffe65552632de045dd70b1eb9aaa7f1e"
+    },
+    {
+      "path": "source/modules/gui/macosx/tests/VLCThumbnailServiceTest.m",
+      "bytes": 48823,
+      "sha256": "2e8840b8177d1824e12d658dffbc93cd8e8c506f4d8feb29d5c86b6f60e874fe"
+    },
+    {
+      "path": "source/modules/gui/macosx/tests/VLCThumbnailTestHelper.c",
+      "bytes": 7074,
+      "sha256": "c671a501f3d378d595ebeff255fc9dfd9a7997a22bcf4e3f9d93f242ce9e8374"
+    },
+    {
+      "path": "source/modules/gui/macosx/tests/VLCTimelineHoverReentrancyTest.m",
+      "bytes": 6880,
+      "sha256": "850dc33a8032b3a7c8fb4329d651ee46a6bd6d24a5b4b7fd8bc1224dd64c3715"
+    },
+    {
+      "path": "source/modules/gui/macosx/tests/VLCTimelineHoverTest.m",
+      "bytes": 3027,
+      "sha256": "310b616ceea66eda8ef8703706b68599b8586ba5097d4b05e3e9677e7e4a9812"
+    },
+    {
+      "path": "source/modules/gui/macosx/tests/VLCTimelineHoverTestSupport.m",
+      "bytes": 2276,
+      "sha256": "2a242068cc0b32b4e3ee5e94d490e6cf64ae4fe88f040f54317e420327ca07e3"
+    },
+    {
+      "path": "source/modules/gui/macosx/timeline/VLCThumbnailCache.h",
+      "bytes": 1399,
+      "sha256": "6e529b5db2c69f64276fee828977bab0db512109d1a8ced542ec734138e59640"
+    },
+    {
+      "path": "source/modules/gui/macosx/timeline/VLCThumbnailCache.m",
+      "bytes": 18927,
+      "sha256": "2207283584e23c0c44ec235b89ae3baed676afb11d5d2585d0f2e59b52bb4297"
+    },
+    {
+      "path": "source/modules/gui/macosx/timeline/VLCThumbnailScheduler.h",
+      "bytes": 1217,
+      "sha256": "3358d1078438a65971e67c116d7f1400c69b8033a700427faf7a480419e3c5ec"
+    },
+    {
+      "path": "source/modules/gui/macosx/timeline/VLCThumbnailScheduler.m",
+      "bytes": 8605,
+      "sha256": "49b2b4e37b69978c38ef6bd99eba66c65a2a299a4d3f4751bf28a7f3ebcb79e0"
+    },
+    {
+      "path": "source/modules/gui/macosx/timeline/VLCThumbnailService.h",
+      "bytes": 961,
+      "sha256": "77446215166b7a9f1527c92c1380503d6c411666e06b4306b753fa4bee8d1767"
+    },
+    {
+      "path": "source/modules/gui/macosx/timeline/VLCThumbnailService.m",
+      "bytes": 42398,
+      "sha256": "2f39645a0783fcb53a19e77dfe6b3117eb2a91fd570d80fb208be52337629343"
+    },
+    {
+      "path": "source/modules/gui/macosx/timeline/VLCThumbnailWorker.h",
+      "bytes": 808,
+      "sha256": "f39aaaad41e397ddbdf8f7b6e3602fc010404ab62287f4cea72af85328bc6296"
+    },
+    {
+      "path": "source/modules/gui/macosx/timeline/VLCThumbnailWorker.m",
+      "bytes": 14340,
+      "sha256": "18f4aa213f2f8823b69a340ef2e3849c6461cd71070332c814fe44f8ed1ec5b7"
+    },
+    {
+      "path": "source/modules/gui/macosx/timeline/VLCTimelineContext.h",
+      "bytes": 477,
+      "sha256": "634bdd6e5b3663ae503ec24b8c6b4d7881c63b661088f31390d4f16f2d8d3373"
+    },
+    {
+      "path": "source/modules/gui/macosx/timeline/VLCTimelineContext.m",
+      "bytes": 6619,
+      "sha256": "152237519a537e2c92e55a6c8b9829dda13f51fc5d55101b8246637c9177ca8f"
+    },
+    {
+      "path": "source/modules/gui/macosx/timeline/VLCTimelineContextTestSupport.m",
+      "bytes": 1743,
+      "sha256": "9820fc0f4e0b406ad89989ecd0ec44fc6be8f08a5e4424320713d3a174c54092"
+    },
+    {
+      "path": "source/modules/gui/macosx/timeline/VLCTimelineContextTests.m",
+      "bytes": 10639,
+      "sha256": "21c1b5cb71f319102a23241070458871153c1c2f133c6a970f4c0b3920fb9127"
+    },
+    {
+      "path": "source/modules/gui/macosx/timeline/VLCTimelinePlayerContextTest.m",
+      "bytes": 9970,
+      "sha256": "f2abf48c08dbcbc56b7eed82dff443b9857c38675dd1ddc136a1759cc5b957bb"
+    },
+    {
+      "path": "source/modules/gui/macosx/views/VLCPlaybackProgressSlider.h",
+      "bytes": 2758,
+      "sha256": "2df50c2c4dd2ce5486d228b8b6b4ad3549fe37c70e5adcb3a47e8789cd8e4e63"
+    },
+    {
+      "path": "source/modules/gui/macosx/views/VLCPlaybackProgressSlider.m",
+      "bytes": 20348,
+      "sha256": "76289b6be84e615fa8746a5b18a600165b3d6755c7a85b25d7b8b10a4cbbdd10"
+    },
+    {
+      "path": "source/modules/gui/macosx/windows/video/VLCMainVideoViewController.m",
+      "bytes": 33321,
+      "sha256": "00a1fafd21316101dda91b8bcdf4e00615b7bb14c74269b9959c02019b2ab128"
+    },
+    {
+      "path": "source/modules/misc/Makefile.am",
+      "bytes": 5407,
+      "sha256": "202f4a95ab9de075df6f64b7ea2bf3dd21a11d795e81544c5a1ff97a721734b0"
+    },
+    {
+      "path": "source/modules/video_output/Makefile.am",
+      "bytes": 17131,
+      "sha256": "8e2f7181ea2eea363dedcb19a3390c63eb7d7c1b9a322ff247a1be9b573589f9"
+    }
+  ],
+  "snapshot_logical_bytes": 5669561,
+  "snapshot_method": "APFS cp -c per regular file; no build tree copied",
+  "candidate_and_reproduction_59_hashes_match_manifest": true,
+  "free_after_bytes": 20510416896,
+  "build_inventory": {
+    "candidate_build": {
+      "path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate",
+      "artifacts": {
+        "bin/vlc-timeline-preview": {
+          "allocated_bytes_du": 20238336,
+          "mtime_ns": 1791258882421736094,
+          "sha256": "b2b5e5d13bf6d3e92f9e23193ec516d86b1f54547783fb5c53ce2fbbf6dadf73"
+        },
+        "modules/VLCMacOSXTests.xctest": {
+          "allocated_bytes_du": 3039232,
+          "mtime_ns": 1791267461120570913,
+          "sha256": null
+        },
+        "modules/.libs/libmacosx_plugin.dylib": {
+          "allocated_bytes_du": 4931584,
+          "mtime_ns": 1791267457112100464,
+          "sha256": "096b9e5bd01743c3a78f8a4cc158624e403a8b8d14b6959c1ffdc2071e2ad790"
+        },
+        "VLC.app": {
+          "allocated_bytes_du": 208801792,
+          "mtime_ns": 1791267639023163468,
+          "sha256": null
+        }
+      }
+    },
+    "reproduction_build": {
+      "path": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-reproduction",
+      "artifacts": {
+        "bin/vlc-timeline-preview": {
+          "allocated_bytes_du": 20250624,
+          "mtime_ns": 1791267792411677489,
+          "sha256": "5783e21c3cc0fc18a475a31037cfaadbc80374ad4c910b7495edb72420b5a17f"
+        },
+        "modules/VLCMacOSXTests.xctest": {
+          "allocated_bytes_du": 3039232,
+          "mtime_ns": 1791269131139528848,
+          "sha256": null
+        },
+        "modules/.libs/libmacosx_plugin.dylib": {
+          "allocated_bytes_du": 4935680,
+          "mtime_ns": 1791267791182381646,
+          "sha256": "20f285c400fcd061bd96d501d69df778293a5efaf0f3e53f4ce558dd7152eacc"
+        },
+        "VLC.app": {
+          "allocated_bytes_du": 208842752,
+          "mtime_ns": 1791267989703965478,
+          "sha256": null
+        },
+        "independent-fixtures": {
+          "allocated_bytes_du": 96288768,
+          "mtime_ns": 1791268142044943671,
+          "sha256": null
+        }
+      }
+    }
+  },
+  "commands_for_review_only": {
+    "normal_app": "From candidate source root with normal SDK/tool environment: extras/package/macosx/build.sh -a aarch64 -x -j4 -C \"$PWD/../../story005-master-candidate\"; safer use absolute output path, preserve installed apps. Existing reproduction transcript app stage is a normal-build reference with source/output paths explicitly set.",
+    "incremental_helper": "make -C work/story005-master-candidate/bin -j4 vlc-timeline-preview",
+    "helper_basic": "make -C work/story005-master-candidate/bin check-timeline-preview",
+    "helper_full": "python3 work/upstream/vlc-master-story005-candidate/bin/timeline-preview/test.py --helper work/story005-master-candidate/bin/vlc-timeline-preview --fixtures work/story005-master-reproduction/independent-fixtures/media --trim-fixtures work/story005-master-reproduction/independent-fixtures/media --identity-fixtures work/story005-master-reproduction/independent-fixtures/identity --admission-fixtures work/story005-master-reproduction/independent-fixtures/admission",
+    "native_all": "make -C work/story005-master-candidate/modules -j4 check-macosx",
+    "native_bundle_only": "make -C work/story005-master-candidate/modules -j4 VLCMacOSXTests.xctest",
+    "native_focused": "With SDKROOT and candidate tools PATH: VLC_PLUGIN_PATH=\"$ABS_CANDIDATE_BUILD/modules\" xcrun xctest -XCTest SELECTOR \"$ABS_CANDIDATE_BUILD/modules/VLCMacOSXTests.xctest\"",
+    "custom_avio": "Read-only recipe reference work/story005-scout/reproduction-public-io.sh; compiles ASan/UBSan test-io.c against normal static contrib then runs bounded synthetic MKV.",
+    "normal_contrib": "make -C work/story005-master-candidate/contrib/contrib-aarch64-apple-darwin19 -j4 .ffmpeg; an existing stamp will skip changed inputs unless normal dependency rules invalidate it. Do not blindly delete/invalidate stamps."
+  },
+  "command_source_references": [
+    "work/story005-scout/reproduction-conventional-transcript.sh",
+    "work/story005-scout/reproduction-focused-service.sh",
+    "work/story005-scout/reproduction-public-io.sh",
+    "work/upstream/vlc-master-story005-candidate/bin/timeline-preview/README.md",
+    "work/upstream/vlc-master-story005-candidate/bin/timeline-preview/tests/README.md"
+  ],
+  "rebuild_scope": {
+    "docs_only": "Recheck exact59 source hashes, regenerated public patch/tree/manifest/artifact privacy/links; no runtime rebuild justified by prose alone. Preserve prior runtime qualification scope.",
+    "test_only": "Rebuild affected XCTest bundle or helper test program, run changed/focused tests then proportionate registered suite. No app production rebuild required if production source/dependency hashes unchanged.",
+    "helper_production": "Normal incremental helper build/basic+full77 and custom-AVIO if I/O touched; app package must be rebuilt and signed before new runtime acceptance. Native service contracts needed for protocol/lifetime changes.",
+    "native_production": "Normal module/app rebuild, affected focused XCTest then registered suite; actual native interaction/behavior evidence for user-facing changes. Do not inherit stale performance/native proof across changed paths.",
+    "build_contrib": "Regenerate normal Autotools as needed; recompile affected normal FFmpeg contrib/helper/plugin closure and package; public source/apply/tree and build qualification rerun."
+  },
+  "historical_resource_receipts": [
+    {
+      "receipt": "docs/evidence/story-005/reproduction-native-final-20261006T064748Z.json",
+      "status": "succeeded",
+      "elapsed_seconds": 124.4,
+      "minimum_free_bytes": 10491273216,
+      "initial_free_bytes": 10502643712
+    },
+    {
+      "receipt": "docs/evidence/story-005/reproduction-contrib-20261006T055350Z.json",
+      "status": "succeeded",
+      "elapsed_seconds": 142.3,
+      "minimum_free_bytes": 5586649088,
+      "initial_free_bytes": 6193934336
+    },
+    {
+      "receipt": "docs/evidence/story-005/reproduction-io-20261006T062901Z.json",
+      "status": "succeeded",
+      "elapsed_seconds": 4.0,
+      "minimum_free_bytes": 9876418560,
+      "initial_free_bytes": 9896493056
+    },
+    {
+      "receipt": "docs/evidence/story-005/reproduction-checks-20261006T064522Z.json",
+      "status": "succeeded",
+      "elapsed_seconds": 70.1,
+      "minimum_free_bytes": 10454904832,
+      "initial_free_bytes": 10461052928
+    }
+  ],
+  "resource_limit_note": "Historical elapsed/space are observations, not current guarantees. Enforce1GiB free floor, bounded commands/process groups; no new acquisition/full build planned by inventory.",
+  "no_build_test_native_execution": true,
+  "free_final_bytes": 20452290560
+}

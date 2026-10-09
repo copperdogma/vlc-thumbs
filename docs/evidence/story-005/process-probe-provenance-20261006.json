@@ -1,0 +1,55 @@
+{
+  "recorded_at_utc": "2026-10-06T02:20:40.540161+00:00",
+  "source_revision": "2e358f3098c2f2b7621d1dc568de8b61ad786322",
+  "source_status": "",
+  "build_directory": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline",
+  "build_argv": [
+    "bash",
+    "libtool",
+    "--tag=CC",
+    "--mode=link",
+    "xcrun",
+    "clang",
+    "-std=c11",
+    "-DHAVE_CONFIG_H",
+    "-D_GNU_SOURCE",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline",
+    "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/include",
+    "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005",
+    "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/include",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/tests/story-005/process_probe.c",
+    "src/libvlccore.la",
+    "-o",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/process-probe"
+  ],
+  "build_status": 0,
+  "initial_build_failure": "libtool could not infer tag for xcrun clang; retry added --tag=CC",
+  "runtime_argv": [
+    "python3",
+    "work/story005-scout/run-process-probe.py",
+    "work/story005-scout/.libs/process-probe",
+    "docs/evidence/story-005/process-probe-runtime-20261006.json"
+  ],
+  "runtime_environment": {
+    "DYLD_LIBRARY_PATH": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/src/.libs"
+  },
+  "runtime_status": 0,
+  "hashes_after_run": {
+    "tests/story-005/process_probe.c": "27b76f97ebdce959971f3263d76639d5f96c1700a304aa9653a30c6636e2c8f6",
+    "work/story005-scout/run-process-probe.py": "1ea621a0e154ad797397fc5bd28cd5e9f86f8074fac601c83e38d52931cab8eb",
+    "work/story005-scout/.libs/process-probe": "d41d513da6790335c18c0756dd42c5089a94726452735bfdc2c1f2d775283531",
+    "work/story005-master-baseline/config.h": "b9e9f2a1129f84fa794e4f7c7cea4fc08f551f294bc095963f3d3f90d8d34a16",
+    "work/story005-master-baseline/libtool": "43000212cfde00c0b846ad6ee6e7ad82fd23d5ea7908960be6d9d325e2e5833e",
+    "work/story005-master-baseline/src/libvlccore.la": "2e5c7267064f491a839d01d02a56ecc5f76e9c7e4c30082ee0baef0bc8b80365",
+    "work/story005-master-baseline/src/.libs/libvlccore.9.dylib": "0f1f13f04d346ebf8664c294bc4d7bc55168a4b338652d793216efd65b6a33e8"
+  },
+  "hash_scope": "Post-run snapshots; baseline owner may continue configuring build. No claim hashes were captured prospectively. Core dylib and linked probe preserved unchanged by this task.",
+  "binary_file": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/.libs/process-probe: Mach-O 64-bit executable arm64",
+  "binary_linkage": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/.libs/process-probe:\n\t@rpath/libvlccore.dylib (compatibility version 10.0.0, current version 10.0.0)\n\t/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1359.0.0)",
+  "core_linkage": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/src/.libs/libvlccore.9.dylib:\n\t@rpath/libvlccore.dylib (compatibility version 10.0.0, current version 10.0.0)\n\t/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1359.0.0)\n\t/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation (compatibility version 300.0.0, current version 5027.0.69)\n\t/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices (compatibility version 1.0.0, current version 1226.0.0)\n\t/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 5027.0.69)\n\t/System/Library/Frameworks/CFNetwork.framework/Versions/A/CFNetwork (compatibility version 1.0.0, current version 3896.100.1)\n\t/usr/lib/libobjc.A.dylib (compatibility version 1.0.0, current version 228.0.0)",
+  "compiler": "Apple clang version 21.0.0 (clang-2100.3.34.2)\nTarget: arm64-apple-darwin27.0.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin",
+  "platform": "ProductName:\t\tmacOS\nProductVersion:\t\t27.0\nBuildVersion:\t\t26A428"
+}

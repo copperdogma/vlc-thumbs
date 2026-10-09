@@ -1,0 +1,20 @@
+{
+  "version": "4.10",
+  "primary_announcement": "https://lists.gnu.org/archive/html/info-gnu/2026-04/msg00009.html",
+  "primary_archive": "https://ftp.gnu.org/gnu/sed/sed-4.10.tar.gz",
+  "download_url": "https://mirrors.kernel.org/gnu/sed/sed-4.10.tar.gz",
+  "sha256": "4d179ffaf92ec4dcec541f7c032be1c3b9a1856f4970adb95a505221702f5277",
+  "bytes": 2826040,
+  "verification": "Primary-announcement SHA256 matched exact mirror archive; detached signature not claimed",
+  "prefix": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-gnu-sed/prefix",
+  "binary_sha256": "04301cd770ac0280304980cf87aa38bd663106ff4278088f656cba0295cc89e6",
+  "smoke_receipt": "reproduction-smoke-20261006T070322Z.json",
+  "smoke_status": "passed GNU sed version and exact two-file VLC distribution expression",
+  "retry_runner": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/reproduction-distcheck-gnu-sed-vlcpath-frozen.sh",
+  "retry_runner_sha256": "f3960ab7deae7a8387076fa721f7fb7e82b43684f3e83e71cbaaf2909591f00f",
+  "preflight_receipt": "reproduction-smoke-20261006T070532Z.json",
+  "preflight_status": "passed post-vlcSetBaseEnvironment GNU sed and critical command paths",
+  "path_channel": "VLC_PATH; upstream vlcSetBaseEnvironment reconstructs PATH",
+  "superseded_preflight_failure": "reproduction-distcheck-20261006T070447Z.json",
+  "retry_receipt": "reproduction-distcheck-20261006T070541Z.json"
+}

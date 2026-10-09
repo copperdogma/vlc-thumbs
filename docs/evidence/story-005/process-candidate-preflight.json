@@ -1,0 +1,22 @@
+{
+  "source_revision": "2e358f3098c2f2b7621d1dc568de8b61ad786322",
+  "candidate_files_sha256": {
+    "src/posix/process.c": "2f777b8c4930bd11187491921a6f2b56061bb2de058528fe861a88f08192e501",
+    "include/vlc_process.h": "56c0262e33d3129444597650de71c9b74b496e2d23b8bae0535ad0b31df2bbbb",
+    "test/src/misc/process.c": "a2ac9ae837852c970ce58621a456130c33bbeb8a0a4d3d7567e24923a2679daf",
+    "test/Makefile.am": "1f856406c9e31880556d9267b427ec283b3eb583c2a4a51ff55f5ad77bd3b30a",
+    "test/src/meson.build": "0bac81b330dbf284eb7f42f8490d1d44005c6dc1bffed25ac305151c545fd500"
+  },
+  "patch_sha256": "b4535b569598fb7c8c67e86089415e83fb1b98d81e1b6f40df305af545535106",
+  "patch_apply_check": {
+    "status": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "diagnostic_scope": "Actual candidate POSIX implementation compiled directly into standalone test with unchanged baseline core supplying other VLC functions; this is not a standalone candidate core build or build-registration qualification.",
+  "candidate_diagnostic": "process-candidate-diagnostic-runtime-003.json",
+  "baseline_negative": "process-candidate-diagnostic-baseline-negative.json",
+  "known_separate_issue": "Post-Kill write returns -1/EINVAL22 rather than documentedEPIPE. Exact errno left unchanged and not qualified by this patch, per root scope decision.",
+  "independent_candidate_build": "Pending build owner",
+  "commits_created": false
+}

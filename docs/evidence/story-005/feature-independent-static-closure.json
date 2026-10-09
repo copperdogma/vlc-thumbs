@@ -1,0 +1,14 @@
+{
+  "output": "work/story005-master-reproduction",
+  "ffmpeg_configuration_sha256": "bf43b0fa88c093757e1b7591769df00bcd5f51b9b2289645eab82097dd752e1b",
+  "ffmpeg_config_header_sha256": "28181397046edbae81618be82f5761b4f9be5ba1c0c8edb361e9adb125b294f6",
+  "ffmpeg_license_switches": {
+    "CONFIG_GPL": "0",
+    "CONFIG_VERSION3": "0",
+    "CONFIG_NONFREE": "0"
+  },
+  "normal_static_link_flags": "-L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-reproduction/contrib/aarch64-apple-darwin19/lib -lavformat -lavcodec -framework AudioToolbox -lgsm -lmp3lame -lm -L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-reproduction/contrib/aarch64-apple-darwin19/lib -lopenjp2 -lm -pthread -L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-reproduction/contrib/aarch64-apple-darwin19/lib -lz -framework VideoToolbox -framework CoreFoundation -framework CoreMedia -framework CoreVideo -framework CoreServices -lswscale -lavutil -lm -lz -framework VideoToolbox -pthread -framework CoreFoundation -framework CoreMedia -framework CoreVideo -framework CoreServices",
+  "helper_dynamic_dependencies": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-reproduction/bin/vlc-timeline-preview:\n\t/System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox (compatibility version 1.0.0, current version 1000.0.0)\n\t/System/Library/Frameworks/VideoToolbox.framework/Versions/A/VideoToolbox (compatibility version 1.0.0, current version 3350.77.5)\n\t/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 5027.0.69)\n\t/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia (compatibility version 1.0.0, current version 3350.77.5)\n\t/System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo (compatibility version 1.2.0, current version 758.27.0)\n\t/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices (compatibility version 1.0.0, current version 1226.0.0)\n\t/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1359.0.0)\n",
+  "helper_build_version_commands": "\n  cmdsize 32\n platform 1\n    minos 11.0\n      sdk 27.0\n   ntools 1\n     tool 3\n  version 27037.1\n",
+  "scope": "Actual arm64 helper load-command minimum11.0/SDK27.0; normal recipe requested10.13 but this does not qualify earlier operating systems or Intel. Static dependencies and FFmpeg switches recorded, not a complete redistribution/license conclusion."
+}

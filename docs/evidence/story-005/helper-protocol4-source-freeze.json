@@ -1,0 +1,33 @@
+{
+  "phase": "Source frozen for independent review; normal-contrib reproduction pending",
+  "pin": "2e358f3098c2f2b7621d1dc568de8b61ad786322",
+  "files": {
+    "bin/timeline-preview/timeline-preview.c": "8b6dbe3a28c45bab10d3286e28f119aff79687121fa2ed04ffe25c6a97ce8a82",
+    "bin/timeline-preview/PROTOCOL.md": "97a9fd6748a8c58ef7db513731a42b96af41f4311cb857e185f17fcbb68c470d",
+    "bin/timeline-preview/test.py": "199d1d30e7f72d17dec2699a627ed194b7ff83e315b263cf4370b29b048d580b",
+    "contrib/src/ffmpeg/matroska-track-number.patch": "23baeb78b81fcb51e5068feaba2ad6f8ddfedfc3eb7dd5bca3b7d56df5ce2602"
+  },
+  "diagnostic_binary_sha256": "c94d34260dd55731af563ea43cf4517b8c2e091cd29d57319a55a95a0dca2d57",
+  "focused_command": [
+    "python3",
+    "work/upstream/vlc-master-story005-candidate/bin/timeline-preview/test.py",
+    "--helper",
+    "work/story005-helper9-proof/protocol4-build002/thumbnail-helper",
+    "--fixtures",
+    "work/story005-fixtures",
+    "--trim-fixtures",
+    "work/story005-mp4-fixtures001",
+    "--identity-fixtures",
+    "work/story005-feature-dependency-fixtures002"
+  ],
+  "focused_result": {
+    "pass": true,
+    "count": 39
+  },
+  "disk_free_bytes": 4787871744,
+  "limitations": [
+    "Diagnostic compilation uses isolated copied private archive, not normal-contrib target qualification",
+    "No GUI, NAS, app packaging, installed-app change, contact or submission",
+    "Generated fixture tests rely on separately recorded legal generation; fixture build integration owned by root/review lane"
+  ]
+}

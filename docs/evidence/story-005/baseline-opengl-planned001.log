@@ -1,0 +1,229 @@
+[0000007913005cc0] main libvlc debug: VLC media player - 4.0.0-dev Otto Chriek
+[0000007913005cc0] main libvlc debug: Copyright © 1996-2026 the VideoLAN team
+[0000007913005cc0] main libvlc debug: revision 2e358f3
+[0000007913005cc0] main libvlc debug: configured with /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/package/macosx/../../../configure  '--prefix=/' '--enable-macosx' '--enable-merge-ffmpeg' '--enable-osx-notifications' '--enable-flac' '--enable-theora' '--enable-shout' '--enable-ncurses' '--enable-twolame' '--enable-libass' '--enable-macosx-avfoundation' '--disable-xcb' '--disable-caca' '--disable-pulse' '--disable-vnc' '--without-x' '--build=aarch64-apple-darwin19' '--host=aarch64-apple-darwin19' '--with-contrib=contrib/aarch64-apple-darwin19' '--with-macosx-version-min=10.13' '--with-macosx-sdk=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk' '--enable-extra-checks' 'build_alias=aarch64-apple-darwin19' 'host_alias=aarch64-apple-darwin19' 'CC=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang' 'CFLAGS=-g -arch arm64 -Werror=incompatible-function-pointer-types' 'LDFLAGS=-arch arm64' 'CXX=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++' 'CXXFLAGS=-g -arch arm64 -Werror=incompatible-function-pointer-types' 'OBJC=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang' 'OBJCFLAGS=-g -arch arm64 -Werror=incompatible-function-pointer-types' 'OBJCXX=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++' 'OBJCXXFLAGS=-g -arch arm64 -Werror=incompatible-function-pointer-types' 'PKG_CONFIG_PATH=' 'PKG_CONFIG_LIBDIR=/nonexistent/story005-pkgconfig-isolation' 'NCURSES_LIBS=-L/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/aarch64-apple-darwin19/lib -lncursesw'
+[0000007913005cc0] main libvlc debug: searching plug-in modules
+[0000007913005cc0] main libvlc debug: loading plugins cache file /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/modules/plugins/plugins.dat
+[0000007913005cc0] main libvlc warning: cannot read /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/modules/plugins/plugins.dat: No such file or directory
+[0000007913005cc0] main libvlc debug: recursively browsing `/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/modules/plugins'
+[0000007913005cc0] main libvlc debug: loading plugins cache file /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/modules/plugins.dat
+[0000007913005cc0] main libvlc debug: recursively browsing `/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/modules'
+[000000016d90da50] main generic error: cannot load plug-in /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/modules/.libs/libmacosx_plugin.dylib: dlopen(/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/modules/.libs/libmacosx_plugin.dylib, 0x0001): Library not loaded: @rpath/Sparkle.framework/Versions/B/Sparkle
+  Referenced from: <26234FF1-AE4B-31E3-A98A-DFFFAFF9D6CD> /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/modules/.libs/libmacosx_plugin.dylib
+  Reason: no LC_RPATH's found
+[0000007913005cc0] main libvlc debug: plug-ins loaded: 568 modules
+[000000016d90dee0] main generic debug: looking for logger module matching "any": 3 candidates
+[000000016d90dee0] main generic debug: using logger module "console"
+[000000016d90dee0] main generic debug: looking for tracer module matching "none": 0 candidates
+[000000016d90dee0] main generic debug: no tracer modules matched with name none
+[0000007913005cc0] main libvlc debug: translation test: code is "C"
+[000000016d90de40] main generic debug: looking for keystore module matching "memory": 1 candidates
+[000000016d90de40] main generic debug: using keystore module "memory"
+[0000007913005cc0] main libvlc debug: CPU has capabilities FPU 
+[0000007913005cc0] main libvlc warning: Key "Command+0" bound to multiple actions
+Looking for cap opengl offscreen
+[000000016d90dfd0] main generic debug: looking for decoder device module matching "any": 1 candidates
+[000000016d90dfd0] main generic debug: using decoder device module "videotoolbox"
+[000000016d90dfb0] main generic debug: looking for opengl offscreen module matching "any": 1 candidates
+[000000016d90dfb0] main generic debug: using opengl offscreen module "cvpx_gl"
+[000000016d90dbb0] main generic debug: looking for decoder device module matching "any": 1 candidates
+[000000016d90dbb0] main generic debug: using decoder device module "videotoolbox"
+[000000016d90db90] main generic debug: looking for opengl offscreen module matching "any": 1 candidates
+[000000016d90db90] main generic debug: using opengl offscreen module "cvpx_gl"
+[000000016d90dba0] main generic debug: looking for opengl sw interop module matching "any": 2 candidates
+[000000016d90dba0] main generic debug: using opengl sw interop module "glinterop_sw"
+[000000016d90db20] main generic debug: looking for opengl sampler module matching "any": 1 candidates
+[00000079134b0500] glsampler_builtin gl debug: Initialized libplacebo 4.0.0-dev-39223-g15b71e3fa6 (API v264)
+[00000079134b0500] glsampler_builtin gl debug: Detected OpenGL version strings:
+[00000079134b0500] glsampler_builtin gl debug:     GL_VERSION:  2.1 Metal - 91.7
+[00000079134b0500] glsampler_builtin gl debug:     GL_VENDOR:   Apple
+[00000079134b0500] glsampler_builtin gl debug:     GL_RENDERER: Apple M4 Pro
+[00000079134b0500] glsampler_builtin gl debug:     GL_EXTENSIONS:
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_color_buffer_float
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_depth_buffer_float
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_depth_clamp
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_depth_texture
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_draw_buffers
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_draw_elements_base_vertex
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_draw_instanced
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_fragment_program
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_fragment_program_shadow
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_fragment_shader
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_framebuffer_object
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_framebuffer_sRGB
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_half_float_pixel
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_half_float_vertex
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_imaging
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_instanced_arrays
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_multisample
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_multitexture
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_occlusion_query
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_pixel_buffer_object
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_point_parameters
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_point_sprite
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_provoking_vertex
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_seamless_cube_map
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_shader_objects
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_shader_texture_lod
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_shading_language_100
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_shadow
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_shadow_ambient
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_sync
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_texture_border_clamp
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_texture_compression
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_texture_compression_rgtc
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_texture_cube_map
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_texture_env_add
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_texture_env_combine
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_texture_env_crossbar
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_texture_env_dot3
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_texture_float
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_texture_mirrored_repeat
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_texture_non_power_of_two
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_texture_rectangle
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_texture_rg
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_transpose_matrix
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_vertex_array_bgra
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_vertex_blend
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_vertex_buffer_object
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_vertex_program
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_vertex_shader
+[00000079134b0500] glsampler_builtin gl debug:         GL_ARB_window_pos
+[00000079134b0500] glsampler_builtin gl debug:         GL_EXT_abgr
+[00000079134b0500] glsampler_builtin gl debug:         GL_EXT_bgra
+[00000079134b0500] glsampler_builtin gl debug:         GL_EXT_bindable_uniform
+[00000079134b0500] glsampler_builtin gl debug:         GL_EXT_blend_color
+[00000079134b0500] glsampler_builtin gl debug:         GL_EXT_blend_equation_separate
+[00000079134b0500] glsampler_builtin gl debug:         GL_EXT_blend_func_separate
+[00000079134b0500] glsampler_builtin gl debug:         GL_EXT_blend_minmax
+[00000079134b0500] glsampler_builtin gl debug:         GL_EXT_blend_subtract
+[00000079134b0500] glsampler_builtin gl debug:         GL_EXT_clip_volume_hint
+[00000079134b0500] glsampler_builtin gl debug:         GL_EXT_debug_label
+[00000079134b0500] glsampler_builtin gl debug:         GL_EXT_debug_marker
+[00000079134b0500] glsampler_builtin gl debug:         GL_EXT_draw_buffers2
+[00000079134b0500] glsampler_builtin gl debug:         GL_EXT_draw_range_elements
+[00000079134b0500] glsampler_builtin gl debug:         GL_EXT_fog_coord
+[00000079134b0500] glsampler_builtin gl debug:         GL_EXT_framebuffer_blit
+[00000079134b0500] glsampler_builtin gl debug:         GL_EXT_framebuffer_multisample
+[00000079134b0500] glsampler_builtin gl debug:         GL_EXT_framebuffer_multisample_blit_scaled
+[00000079134b0500] glsampler_builtin gl debug:         GL_EXT_framebuffer_object
+[00000079134b0500] glsampler_builtin gl debug:         GL_EXT_framebuffer_sRGB
+[00000079134b0500] glsampler_builtin gl debug:         GL_EXT_geometry_shader4
+[00000079134b0500] glsampler_builtin gl debug:         GL_EXT_gpu_program_parameters
+[00000079134b0500] glsampler_builtin gl debug:         GL_EXT_gpu_shader4
+[00000079134b0500] glsampler_builtin gl debug:         GL_EXT_multi_draw_arrays
+[00000079134b0500] glsampler_builtin gl debug:         GL_EXT_packed_depth_stencil
+[00000079134b0500] glsampler_builtin gl debug:         GL_EXT_packed_float
+[00000079134b0500] glsampler_builtin gl debug:         GL_EXT_provoking_vertex
+[00000079134b0500] glsampler_builtin gl debug:         GL_EXT_rescale_normal
+[00000079134b0500] glsampler_builtin gl debug:         GL_EXT_secondary_color
+[00000079134b0500] glsampler_builtin gl debug:         GL_EXT_separate_specular_color
+[00000079134b0500] glsampler_builtin gl debug:         GL_EXT_shadow_funcs
+[00000079134b0500] glsampler_builtin gl debug:         GL_EXT_stencil_two_side
+[00000079134b0500] glsampler_builtin gl debug:         GL_EXT_stencil_wrap
+[00000079134b0500] glsampler_builtin gl debug:         GL_EXT_texture_array
+[00000079134b0500] glsampler_builtin gl debug:         GL_EXT_texture_compression_dxt1
+[00000079134b0500] glsampler_builtin gl debug:         GL_EXT_texture_compression_s3tc
+[00000079134b0500] glsampler_builtin gl debug:         GL_EXT_texture_env_add
+[00000079134b0500] glsampler_builtin gl debug:         GL_EXT_texture_filter_anisotropic
+[00000079134b0500] glsampler_builtin gl debug:         GL_EXT_texture_integer
+[00000079134b0500] glsampler_builtin gl debug:         GL_EXT_texture_lod_bias
+[00000079134b0500] glsampler_builtin gl debug:         GL_EXT_texture_rectangle
+[00000079134b0500] glsampler_builtin gl debug:         GL_EXT_texture_shared_exponent
+[00000079134b0500] glsampler_builtin gl debug:         GL_EXT_texture_sRGB
+[00000079134b0500] glsampler_builtin gl debug:         GL_EXT_texture_sRGB_decode
+[00000079134b0500] glsampler_builtin gl debug:         GL_EXT_timer_query
+[00000079134b0500] glsampler_builtin gl debug:         GL_EXT_transform_feedback
+[00000079134b0500] glsampler_builtin gl debug:         GL_EXT_vertex_array_bgra
+[00000079134b0500] glsampler_builtin gl debug:         GL_APPLE_aux_depth_stencil
+[00000079134b0500] glsampler_builtin gl debug:         GL_APPLE_client_storage
+[00000079134b0500] glsampler_builtin gl debug:         GL_APPLE_element_array
+[00000079134b0500] glsampler_builtin gl debug:         GL_APPLE_fence
+[00000079134b0500] glsampler_builtin gl debug:         GL_APPLE_float_pixels
+[00000079134b0500] glsampler_builtin gl debug:         GL_APPLE_flush_buffer_range
+[00000079134b0500] glsampler_builtin gl debug:         GL_APPLE_flush_render
+[00000079134b0500] glsampler_builtin gl debug:         GL_APPLE_packed_pixels
+[00000079134b0500] glsampler_builtin gl debug:         GL_APPLE_pixel_buffer
+[00000079134b0500] glsampler_builtin gl debug:         GL_APPLE_rgb_422
+[00000079134b0500] glsampler_builtin gl debug:         GL_APPLE_row_bytes
+[00000079134b0500] glsampler_builtin gl debug:         GL_APPLE_specular_vector
+[00000079134b0500] glsampler_builtin gl debug:         GL_APPLE_texture_range
+[00000079134b0500] glsampler_builtin gl debug:         GL_APPLE_transform_hint
+[00000079134b0500] glsampler_builtin gl debug:         GL_APPLE_vertex_array_object
+[00000079134b0500] glsampler_builtin gl debug:         GL_APPLE_vertex_point_size
+[00000079134b0500] glsampler_builtin gl debug:         GL_APPLE_vertex_program_evaluators
+[00000079134b0500] glsampler_builtin gl debug:         GL_APPLE_ycbcr_422
+[00000079134b0500] glsampler_builtin gl debug:         GL_ATI_separate_stencil
+[00000079134b0500] glsampler_builtin gl debug:         GL_ATI_texture_env_combine3
+[00000079134b0500] glsampler_builtin gl debug:         GL_ATI_texture_float
+[00000079134b0500] glsampler_builtin gl debug:         GL_IBM_rasterpos_clip
+[00000079134b0500] glsampler_builtin gl debug:         GL_NV_blend_square
+[00000079134b0500] glsampler_builtin gl debug:         GL_NV_conditional_render
+[00000079134b0500] glsampler_builtin gl debug:         GL_NV_depth_clamp
+[00000079134b0500] glsampler_builtin gl debug:         GL_NV_fog_distance
+[00000079134b0500] glsampler_builtin gl debug:         GL_NV_fragment_program_option
+[00000079134b0500] glsampler_builtin gl debug:         GL_NV_fragment_program2
+[00000079134b0500] glsampler_builtin gl debug:         GL_NV_light_max_exponent
+[00000079134b0500] glsampler_builtin gl debug:         GL_NV_texgen_reflection
+[00000079134b0500] glsampler_builtin gl debug:         GL_NV_texture_barrier
+[00000079134b0500] glsampler_builtin gl debug:         GL_NV_vertex_program2_option
+[00000079134b0500] glsampler_builtin gl debug:         GL_NV_vertex_program3
+[00000079134b0500] glsampler_builtin gl debug:         GL_SGI_color_matrix
+[00000079134b0500] glsampler_builtin gl debug:         GL_SGIS_generate_mipmap
+[00000079134b0500] glsampler_builtin gl debug:         GL_SGIS_texture_edge_clamp
+[00000079134b0500] glsampler_builtin gl debug:         GL_SGIS_texture_lod
+[00000079134b0500] glsampler_builtin gl debug:     GL_SHADING_LANGUAGE_VERSION: 1.20
+[00000079134b0500] glsampler_builtin gl debug: GPU information:
+[00000079134b0500] glsampler_builtin gl debug:     GLSL version: 120
+[00000079134b0500] glsampler_builtin gl debug:       subgroup_size:             0
+[00000079134b0500] glsampler_builtin gl debug:       min_gather_offset:         0
+[00000079134b0500] glsampler_builtin gl debug:       max_gather_offset:         0
+[00000079134b0500] glsampler_builtin gl debug:     Limits:
+[00000079134b0500] glsampler_builtin gl debug:       thread_safe:               0
+[00000079134b0500] glsampler_builtin gl debug:       callbacks:                 1
+[00000079134b0500] glsampler_builtin gl debug:       max_buf_size:              18446744073709551615
+[00000079134b0500] glsampler_builtin gl debug:       max_ubo_size:              0
+[00000079134b0500] glsampler_builtin gl debug:       max_ssbo_size:             0
+[00000079134b0500] glsampler_builtin gl debug:       max_vbo_size:              18446744073709551615
+[00000079134b0500] glsampler_builtin gl debug:       max_mapped_size:           0
+[00000079134b0500] glsampler_builtin gl debug:       max_buffer_texels:         0
+[00000079134b0500] glsampler_builtin gl debug:       align_host_ptr:            0
+[00000079134b0500] glsampler_builtin gl debug:       host_cached:               0
+[00000079134b0500] glsampler_builtin gl debug:       max_tex_1d_dim:            16384
+[00000079134b0500] glsampler_builtin gl debug:       max_tex_2d_dim:            16384
+[00000079134b0500] glsampler_builtin gl debug:       max_tex_3d_dim:            2048
+[00000079134b0500] glsampler_builtin gl debug:       blittable_1d_3d:           0
+[00000079134b0500] glsampler_builtin gl debug:       buf_transfer:              1
+[00000079134b0500] glsampler_builtin gl debug:       align_tex_xfer_pitch:      4
+[00000079134b0500] glsampler_builtin gl debug:       align_tex_xfer_offset:     32
+[00000079134b0500] glsampler_builtin gl debug:       max_variable_comps:        4096
+[00000079134b0500] glsampler_builtin gl debug:       max_constants:             0
+[00000079134b0500] glsampler_builtin gl debug:       max_pushc_size:            0
+[00000079134b0500] glsampler_builtin gl debug:       align_vertex_stride:       1
+[00000079134b0500] glsampler_builtin gl debug:       fragment_queues:           1
+[00000079134b0500] glsampler_builtin gl debug:       compute_queues:            0
+[00000079134b0500] glsampler_builtin gl debug: GPU texture formats:
+[00000079134b0500] glsampler_builtin gl debug:     NAME                 TYPE   SIZE COMP CAPS         EMU DEPTH         HOST_BITS     GLSL_TYPE  GLSL_FMT   FOURCC
+[00000079134b0500] glsampler_builtin gl debug:     r8                   UNORM  1    R    S-LRbBV--H-- n   {8  0  0  0 } {8  0  0  0 } float      r8         R8    
+[00000079134b0500] glsampler_builtin gl debug:     rg8                  UNORM  2    RG   S-LRbBV--H-- n   {8  8  0  0 } {8  8  0  0 } vec2       rg8        GR88  
+[00000079134b0500] glsampler_builtin gl debug:     rgba8                UNORM  4    RGBA S-LRbBV--H-- n   {8  8  8  8 } {8  8  8  8 } vec4       rgba8      AB24  
+[00000079134b0500] glsampler_builtin gl debug:     bgra8                UNORM  4    BGRA S-LRbBV--H-- n   {8  8  8  8 } {8  8  8  8 } vec4       rgba8      AR24  
+[00000079134b0500] glsampler_builtin gl debug:     r16                  UNORM  2    R    S-LRbBV--H-- n   {16 0  0  0 } {16 0  0  0 } float      r16        R16   
+[00000079134b0500] glsampler_builtin gl debug:     rg16                 UNORM  4    RG   S-LRbBV--H-- n   {16 16 0  0 } {16 16 0  0 } vec2       rg16       GR32  
+[00000079134b0500] glsampler_builtin gl debug:     rgba16               UNORM  8    RGBA S-LRbBV--H-- n   {16 16 16 16} {16 16 16 16} vec4       rgba16           
+[00000079134b0500] glsampler_builtin gl debug:     rgb8                 UNORM  3    RGB  S-LRbBV--H-- y   {8  8  8  0 } {8  8  8  0 } vec3                  BG24  
+[00000079134b0500] glsampler_builtin gl debug:     rgb16                UNORM  6    RGB  S-LRbBV--H-- y   {16 16 16 0 } {16 16 16 0 } vec3                        
+[00000079134b0500] glsampler_builtin gl debug:     r32f                 FLOAT  4    R    S-LRbBV--H-- y   {32 0  0  0 } {32 0  0  0 } float      r32f             
+[00000079134b0500] glsampler_builtin gl debug:     rg32f                FLOAT  8    RG   S-LRbBV--H-- y   {32 32 0  0 } {32 32 0  0 } vec2       rg32f            
+[00000079134b0500] glsampler_builtin gl debug:     rgb32f               FLOAT  12   RGB  S-LRbBV--H-- y   {32 32 32 0 } {32 32 32 0 } vec3                        
+[00000079134b0500] glsampler_builtin gl debug:     rgba32f              FLOAT  16   RGBA S-LRbBV--H-- y   {32 32 32 32} {32 32 32 32} vec4       rgba32f          
+[00000079134b0500] glsampler_builtin gl debug:     r16f                 FLOAT  4    R    S-LRbB---H-- y   {16 0  0  0 } {32 0  0  0 } float      r16f             
+[00000079134b0500] glsampler_builtin gl debug:     rg16f                FLOAT  8    RG   S-LRbB---H-- y   {16 16 0  0 } {32 32 0  0 } vec2       rg16f            
+[00000079134b0500] glsampler_builtin gl debug:     rgb16f               FLOAT  12   RGB  S-LRbB---H-- y   {16 16 16 0 } {32 32 32 0 } vec3                        
+[00000079134b0500] glsampler_builtin gl debug:     rgba16f              FLOAT  16   RGBA S-LRbB---H-- y   {16 16 16 16} {32 32 32 32} vec4       rgba16f          
+[00000079134b0500] glsampler_builtin gl debug: libplacebo shader: (unknown shader)
+[000000016d90db20] main generic debug: using opengl sampler module "glsampler_builtin"
+[000000016d90db30] main generic debug: looking for opengl filter module matching "renderer": 3 candidates
+[000000016d90db30] main generic debug: using opengl filter module "vout_macosx"
+Assertion failed: (!"GL_INVALID_OPERATION"), function test_opengl_offscreen, file filters.c, line 134.
+FAIL test_modules_video_output_opengl_filters (exit status: 134)

@@ -1,0 +1,310 @@
+{
+  "status": "READY for bounded pre-submission review; Phases1/2 only; no submission",
+  "upstream_base": "2e358f3098c2f2b7621d1dc568de8b61ad786322",
+  "input_feature_tree": "cce7f9917b8dc4d5432e7f83b2c840f8c3c5027b",
+  "resulting_source_tree": "b7c0f24e442c35a57bb108d56b801fd05b624943",
+  "series": [
+    {
+      "file": "0008-macosx-hit-test-autohide-controls-in-local-coordinates.patch",
+      "bytes": 1506,
+      "sha256": "cd5567f6506dcdf2dbbe2e5d363f5e575aca43a128ae3abe317fbae7d7aafa9d",
+      "paths": [
+        "modules/gui/macosx/windows/video/VLCMainVideoViewController.m"
+      ],
+      "additions": 10,
+      "deletions": 4,
+      "before_tree": "ab8a2728d242f8fe6ad3450a2ae39bec7a92a0ec",
+      "after_tree": "ba4e0daa7ae4356b7d5466daea569fdaa3bfbd50",
+      "description": "Controller-owned bottom bar and per-view local-coordinate autohide hit tests; native fade correction unqualified"
+    },
+    {
+      "file": "0001-build-order-macosx-install-and-clean-vtutils.patch",
+      "bytes": 2730,
+      "sha256": "539e603c39b5c15f6192f7a2c74e0665f2f8510f316da29abb390b95b1cf62ec",
+      "paths": [
+        "bin/Makefile.am",
+        "modules/codec/Makefile.am",
+        "modules/gui/macosx/Makefile.am"
+      ],
+      "additions": 21,
+      "deletions": 3,
+      "before_tree": "cce7f9917b8dc4d5432e7f83b2c840f8c3c5027b",
+      "after_tree": "d027fed8ad93cf48b0bfef465da78dc4bc925e33",
+      "description": "macOS transformed install/uninstall, required distribution header, generated nib and vtutils cleanup"
+    },
+    {
+      "file": "0002-clock-preserve-observed-system-origin.patch",
+      "bytes": 1506,
+      "sha256": "cbf661d0c46c8a7ce4bd27c62755c5aa567c2264da2423691c609fdd9445b9c0",
+      "paths": [
+        "src/clock/clock.c",
+        "test/src/clock/clock.c"
+      ],
+      "additions": 9,
+      "deletions": 2,
+      "before_tree": "d027fed8ad93cf48b0bfef465da78dc4bc925e33",
+      "after_tree": "ae22618cace672c7d9391f1abf8d76e9a8a9b336"
+    },
+    {
+      "file": "0003-tests-select-gnutls-for-pem-trust-fixture.patch",
+      "bytes": 1746,
+      "sha256": "8eadd3b7f54bf16acbd2437a33df69063cc5a71c32203d446ebd61485f08cec4",
+      "paths": [
+        "test/modules/misc/tls.c"
+      ],
+      "additions": 36,
+      "deletions": 1,
+      "before_tree": "ae22618cace672c7d9391f1abf8d76e9a8a9b336",
+      "after_tree": "7c118a0acbf104f25e25e2059fdad8721790fa22"
+    },
+    {
+      "file": "0004-opengl-initialize-legacy-version-fallback.patch",
+      "bytes": 630,
+      "sha256": "a5370c1a9aaa5eb78ae3c6c8cc9dee82113b60d3b1b323ae32f024202d54b7f0",
+      "paths": [
+        "modules/video_output/opengl/gl_api.c"
+      ],
+      "additions": 1,
+      "deletions": 1,
+      "before_tree": "7c118a0acbf104f25e25e2059fdad8721790fa22",
+      "after_tree": "b5f7c382da31f066e08b5096bf2a52c976a1010f"
+    },
+    {
+      "file": "0005-macosx-release-caller-owned-media-source.patch",
+      "bytes": 6475,
+      "sha256": "0b3219c9c26591ef297c5414697b0fe8a24e0218d22b8da7b1d49b3ec8cc8ec3",
+      "paths": [
+        "modules/gui/macosx/library/media-source/VLCMediaSourceProvider.m",
+        "test/Makefile.am",
+        "test/src/macosx/media_source_ownership.m"
+      ],
+      "additions": 111,
+      "deletions": 0,
+      "before_tree": "b5f7c382da31f066e08b5096bf2a52c976a1010f",
+      "after_tree": "34cf518810f15f2729aa99b2157bf8f72f5fa469"
+    },
+    {
+      "file": "0006-macosx-retire-playback-ended-timer-during-termination.patch",
+      "bytes": 3750,
+      "sha256": "048f67192da50c7d46fd151b6a741848b849669a538935b026ce77857128e81e",
+      "paths": [
+        "modules/gui/macosx/playqueue/VLCPlayerController.m",
+        "modules/gui/macosx/timeline/VLCTimelinePlayerContextTest.m"
+      ],
+      "additions": 23,
+      "deletions": 1,
+      "before_tree": "34cf518810f15f2729aa99b2157bf8f72f5fa469",
+      "after_tree": "72b186d6c19d86a33a5d19a1ec169c036493df52"
+    },
+    {
+      "file": "0007-macosx-fence-video-window-callback-lifetime.patch",
+      "bytes": 30481,
+      "sha256": "1ff9d62524d08359bdcb95d358921b25cdd1ebc8f8faad31941956fe7e466e87",
+      "paths": [
+        "modules/gui/macosx/tests/Makefile.am",
+        "modules/gui/macosx/tests/VLCVoutLifetimeTestSupport.m",
+        "modules/gui/macosx/tests/VLCVoutLifetimeWiringTest.m",
+        "modules/gui/macosx/windows/video/VLCVideoOutputProvider.m",
+        "modules/gui/macosx/windows/video/VLCVoutView.h",
+        "modules/gui/macosx/windows/video/VLCVoutView.m"
+      ],
+      "additions": 514,
+      "deletions": 52,
+      "description": "Revoke and quiesce queued/in-flight video-window resize lifetime at Disable/Destroy; actual-provider ops regression and normal registration; current combined full gates PASS; normal-Quit observations narrow; historical004 cause deferred",
+      "before_tree": "72b186d6c19d86a33a5d19a1ec169c036493df52",
+      "after_tree": "b7c0f24e442c35a57bb108d56b801fd05b624943"
+    }
+  ],
+  "source_file_count": 19,
+  "files": [
+    {
+      "path": "bin/Makefile.am",
+      "bytes": 4891,
+      "sha256": "0b20a2071ff4667ff0785c0406ac0366633aa84206e3564622832192204e3c61",
+      "git_mode": "100644",
+      "git_blob": "d2e04f1d8c8499b27a39d7e0eafc3600552cf0da"
+    },
+    {
+      "path": "modules/codec/Makefile.am",
+      "bytes": 25460,
+      "sha256": "a2ba013e55fb9722bd43c3cfb9a82a993eca43f4ca8fff1e62f8b37dc7d1e201",
+      "git_mode": "100644",
+      "git_blob": "2733bfb80182dda120996522f80747cf7aa4cdbc"
+    },
+    {
+      "path": "modules/gui/macosx/Makefile.am",
+      "bytes": 46363,
+      "sha256": "1031cb5866f0e97a45e06af9a4ab588d8fc7f1f6d97f7b756e4276a975941fac",
+      "git_mode": "100644",
+      "git_blob": "5e537d3e212e9fed4e401298dc4f53fd2082905d"
+    },
+    {
+      "path": "modules/gui/macosx/library/media-source/VLCMediaSourceProvider.m",
+      "bytes": 4708,
+      "sha256": "db8a4655ece24eab7a3e3a3146f67a5564ad1fc0747514da842fab12f65905b3",
+      "git_mode": "100644",
+      "git_blob": "c75fb831c730e0d6595a429e1aa135a1ee52de75"
+    },
+    {
+      "path": "modules/gui/macosx/playqueue/VLCPlayerController.m",
+      "bytes": 79742,
+      "sha256": "b6880e9a73d91f1e4d5ec289fd92d75dbf7756773b01aa303b09c13bd5080215",
+      "git_mode": "100644",
+      "git_blob": "ed7fc3e6d299a6d57e701fb7a0bd99c382cf9ecf"
+    },
+    {
+      "path": "modules/gui/macosx/tests/Makefile.am",
+      "bytes": 9906,
+      "sha256": "abcfd417a78ed1b37c399889d12f6bc665d09f9bb9df08682889308ec3910f3f",
+      "git_mode": "100644",
+      "git_blob": "7428716703069aa12491570951735685f46678fa"
+    },
+    {
+      "path": "modules/gui/macosx/tests/VLCVoutLifetimeTestSupport.m",
+      "bytes": 1773,
+      "sha256": "d379ee485b6ea4445ca9177d7fef1c4ea071bf1c92a8bd75bda70616dabb497e",
+      "git_mode": "100644",
+      "git_blob": "a29a86690464d33a8419cf726b8f09d826159355"
+    },
+    {
+      "path": "modules/gui/macosx/tests/VLCVoutLifetimeWiringTest.m",
+      "bytes": 6821,
+      "sha256": "834a6d6185d569de4df6ac662d7d71faa10f4dedeb1bc7adff97cc02adb909b5",
+      "git_mode": "100644",
+      "git_blob": "9c85613c7e34accc73063ffced0cb4446b973046"
+    },
+    {
+      "path": "modules/gui/macosx/timeline/VLCTimelinePlayerContextTest.m",
+      "bytes": 10670,
+      "sha256": "c4e21145c5d11776301da8f4456d33513371692abd499b45ad1e973e2469fc00",
+      "git_mode": "100644",
+      "git_blob": "9625387de311fdaf0e78398df30a38a0f373cbbf"
+    },
+    {
+      "path": "modules/gui/macosx/windows/video/VLCMainVideoViewController.m",
+      "bytes": 33633,
+      "sha256": "8ddab46a8ad7d03d7178886679a924646f9f2526af8593342519ee4215d27938",
+      "git_mode": "100644",
+      "git_blob": "76c5f5388578bed3a6ef41948cd067254da041f8"
+    },
+    {
+      "path": "modules/gui/macosx/windows/video/VLCVideoOutputProvider.m",
+      "bytes": 32185,
+      "sha256": "c7337ea6849a7e94054b39c168ce5e8217f2a7a157e4d96e48d85d5750cee9e3",
+      "git_mode": "100644",
+      "git_blob": "b3dac67b748f6bdb55906ac15f7963e576ccf6d1"
+    },
+    {
+      "path": "modules/gui/macosx/windows/video/VLCVoutView.h",
+      "bytes": 2994,
+      "sha256": "aa1e8206efed58b8ac4abc196ace61f1a99efbe0aa7d7163f8164b4a2ae6dce8",
+      "git_mode": "100644",
+      "git_blob": "b57cc57d1000bcc1d07054aac5151a2908e910d5"
+    },
+    {
+      "path": "modules/gui/macosx/windows/video/VLCVoutView.m",
+      "bytes": 15489,
+      "sha256": "73950caa0f430550a2ae311c407a557f582376056b8afd43b740823de82606a5",
+      "git_mode": "100644",
+      "git_blob": "141a87c4087bcf0cde9e095eabaa20dbf957af5a"
+    },
+    {
+      "path": "modules/video_output/opengl/gl_api.c",
+      "bytes": 8419,
+      "sha256": "052adb6ce317fceb5fb3a2c4524243ad1496e72483731541d783a4034bbe5fa1",
+      "git_mode": "100644",
+      "git_blob": "8fe7e6bee366bae6ed46a74666a114b6eb803adf"
+    },
+    {
+      "path": "src/clock/clock.c",
+      "bytes": 46198,
+      "sha256": "e84f58e41347c4e3b648f415937b94eee2af2b49957ef7678e60e7dfd4ba94f2",
+      "git_mode": "100644",
+      "git_blob": "6209755f66beba9b4c6252e6070560c6207d1a4b"
+    },
+    {
+      "path": "test/Makefile.am",
+      "bytes": 27478,
+      "sha256": "2ae439704e0f9b17b3676a147c30caa3b61e277222dec3e46ee490113a2db8cb",
+      "git_mode": "100644",
+      "git_blob": "8c04a8a8cb1c245788b41cdb0f12f2ba1a927585"
+    },
+    {
+      "path": "test/modules/misc/tls.c",
+      "bytes": 9206,
+      "sha256": "dce69d9a6358104bdef2affd3ebdb965190174cad9acd34c7a4f5a241186e454",
+      "git_mode": "100644",
+      "git_blob": "e7f342691936f9a605771c0201e47bf6fb881090"
+    },
+    {
+      "path": "test/src/clock/clock.c",
+      "bytes": 31890,
+      "sha256": "f4643fe8ad8753b9bd054af7658e8c18a0ce40d3c3fb850f2042eb8fe2828960",
+      "git_mode": "100644",
+      "git_blob": "f23ccc5fab620a77106fc33ab04975e524e0364a"
+    },
+    {
+      "path": "test/src/macosx/media_source_ownership.m",
+      "bytes": 4431,
+      "sha256": "24321c001b1471e0fe6781e8854511b199505972f59d6aa663af375b6fe698e3",
+      "git_mode": "100644",
+      "git_blob": "17aa31a8849586ad8ab1bd8b16de87b102a10d32"
+    }
+  ],
+  "source_bytes": 402257,
+  "overlap_with_feature": [
+    "bin/Makefile.am",
+    "modules/gui/macosx/Makefile.am",
+    "modules/gui/macosx/playqueue/VLCPlayerController.m",
+    "modules/gui/macosx/tests/Makefile.am",
+    "modules/gui/macosx/timeline/VLCTimelinePlayerContextTest.m",
+    "modules/gui/macosx/windows/video/VLCMainVideoViewController.m"
+  ],
+  "current_qualification": {
+    "status": "READY for bounded pre-submission review; Phases1/2 only; no submission",
+    "source": "Source10 exact72source and59featuremidpoint, canonical13staticfulltree correspondence PASS; root independently reviewed.",
+    "helper_source_change": "Three named double temporaries remove direct function-result casts; actual target-class diagnostics removed and fresh77 passes; native qualification remains separate.",
+    "normal_package": "PASS official normal package make exit0 and distinct independent normal package qualification; retained isolated package/signature/all398 loadable provenance qualification PASS. Package provenance is separate from the one paused-main physical hover and normalQuit scope recorded under runtime.",
+    "whole_gate": "PASS fresh source10 normal build/fullnormalcheck; compat6pass/core29pass1skip/modules25pass/integration94pass, topGUI PASS. Nested284=283pass1skip overlap registered totals.",
+    "helper": "PASS fresh77 matrix on rebuilt helper349470fe8a47df957b385c1b02894a64f99522453ef1f92859483e57f118fe6a; relocatedhelper PASS sevencommands/twofixture fullheader except operation_us and identicalRGBA; no broader native/codec/format proof.",
+    "distcheck": "PASS exact combined tree complete conventional make distcheck through final distcleancheck; compat6pass/core29pass1skip/modules25pass/integration93pass/topGUI PASS. Nested284=283pass1skip nonadditive. Source72/header989/PO111bytes+modes/nib49 cleanup pass; zero targeted helper cast warnings. Actual read-only preflight forwards ordinary upstream driver argv/status; full public recipe including outer distcheck UNEXECUTED; literal public normal build/check commands passed in stages.",
+    "runtime": "Physical paused main/fullscreen hover remain bounded PASS. Returned-main thumbnail/seekbar persistence is observed; ordinary title/buttons fade. Upstream ordinary fade occurrence is inherited, while current fade cause and broader preview lifecycle remain unknown. Earlier actual main Position-to-Pause/Play reader navigation retains its narrow inherited scope. Current preview-visible/fullscreen VoiceOver is unmeasured; latest practical navigation was inconclusive, with no established defect. Autonomous reader setup stopped.",
+    "shutdown": "Historical004 causality remains user-accepted DEFERRED; prior narrow baseline/candidate Quit observations establish no causal fix/frequency/exoneration.",
+    "platform": "Nativearm64 historical proof only; Intel/oldermacOS/CI unavailable.",
+    "identity": "Public GUIhostrecipe remains UNEXECUTED; actual source9 readonlypreflight\u2192ordinarydriver distinction remains historical.",
+    "warnings": "PASS actual source10 helper compile/link retains -Wbad-function-cast and reports0 targeted warnings; three feature-added diagnostics removed, no universal zero-warning claim.",
+    "submission": "No submission/contact/install/commit/push; Phase3 unauthorized.",
+    "public_host_recipe": "Literal public normal configure/build/prepare/relink and normal check commands PASS in interrupted/staged execution; earlier observer failures preserved. Full public recipe including outer distcheck UNEXECUTED; no uninterrupted fragment PASS.",
+    "performance": "Three current matched60s AB/BA/AB pairs pass bounded playback/preparation/audio/drop/resource qualification. All native frame/audio loss counters are zero; candidate-minus-baseline sampled mean CPU is+1.47/+2.20/+2.29 percentage points and combined sampled maximum RSS is+100.3/+100.6/+97.6MiB. Recorder overhead is measured separately. Complete pair1 was retained across a human-permission pause; the interrupted second pair was excluded and its failed cohort remains failed. System-mixed AAC/PCM continuity, variable-rate capture observations and sampled resources retain their limits; no per-app callback or universal smoothness claim follows.",
+    "readiness": "Bounded pre-submission READY Phases1/2; whole Story InProgress/Phase3 not authorized; no upstream acceptance or submission"
+  },
+  "review_artifacts": [
+    {
+      "file": "README.md",
+      "bytes": 3998,
+      "sha256": "038c5d28b6577ed2b86658bca69e3df6c17b3a5dc2add094135e7a603a5c55a9"
+    },
+    {
+      "file": "series",
+      "bytes": 449,
+      "sha256": "f67496ed82949633837cef69b81108bac38c61644892ebcf13bed93d4053d5a8"
+    }
+  ],
+  "review_revision": 18,
+  "historical_payload_lineage": {
+    "meaning": "Retained source9/stage014 payload and actual gates are historical, not source10 qualification.",
+    "source9_feature_tree": "df515db1658158e742dcc9e5e9600ef9a600a0bd",
+    "source9_combined_tree": "a568215775ffa7ddd6bbad393d466d79ae72e131",
+    "source9_aggregate_sha256": "e7f91b4393358cb5827a566b66332c0cf48d890ba370c9eb11eebaa3ce7afa1c",
+    "source9_F0002_sha256": "5170356114a17af636ba3828958fc7de8246e97f2ba88d2569c6a7e6e6cf57c3",
+    "source8_lineage": {
+      "meaning": "Retained revision13/source8 payload lineage only, not source9 composition identities or current gate proof.",
+      "feature_source_tree": "94a7f24d29860562783da076bdb512d39756c41f",
+      "combined_source_tree": "4ff4b5bc0ec361272b7ad0138d5e67512b952af9",
+      "feature_manifest_sha256": "84a74995e1111c0ee2b19b5e0bce06c5852d341fc65b48afac9b8dd3e1805009",
+      "aggregate_manifest_sha256": "1634718cb15890b0d4ac1bac3a8062bedaa3b93121402cc8fb6b66ba894e7276"
+    }
+  },
+  "new0008_base_tree": "ab8a2728d242f8fe6ad3450a2ae39bec7a92a0ec",
+  "application_note": "Inventory/review order only; actual order is new0008, fivefeature, sevenfollowups in ../contribution-series; feature-created tests prevent contiguous prerequisite-first application."
+}

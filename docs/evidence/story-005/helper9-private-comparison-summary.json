@@ -1,0 +1,42 @@
+{
+  "unchanged_singletrack_results": [
+    {
+      "case": "standard.mp4",
+      "same_images_and_timestamps": true
+    },
+    {
+      "case": "long-gop.mp4",
+      "same_images_and_timestamps": true
+    },
+    {
+      "case": "edit-offset.mp4",
+      "same_images_and_timestamps": true
+    },
+    {
+      "case": "positive-start.mkv",
+      "same_images_and_timestamps": true
+    },
+    {
+      "case": "rotation.mp4",
+      "same_images_and_timestamps": true
+    },
+    {
+      "case": "sar.mp4",
+      "same_images_and_timestamps": true
+    },
+    {
+      "case": "nonkeyframe-trim.mp4",
+      "same_images_and_timestamps": true
+    },
+    {
+      "case": "negative-ctts.mp4",
+      "same_images_and_timestamps": true
+    },
+    {
+      "case": "negative-ctts-trim.mp4",
+      "same_images_and_timestamps": true
+    }
+  ],
+  "all_final_groups_empty": true,
+  "all_without_timeout": true
+}

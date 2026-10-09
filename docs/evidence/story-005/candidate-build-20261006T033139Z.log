@@ -1,0 +1,25 @@
+  OBJC     gui/macosx/library/VLCMacOSXTests-VLCInputItem.o
+  OBJC     gui/macosx/tests/VLCMacOSXTests-VLCThumbnailCacheTest.o
+  OBJC     gui/macosx/tests/VLCMacOSXTests-VLCThumbnailSchedulerTest.o
+  OBJC     gui/macosx/tests/VLCMacOSXTests-VLCThumbnailServiceTest.o
+  OBJC     gui/macosx/tests/VLCMacOSXTests-VLCTimelineHoverTest.o
+  OBJC     gui/macosx/timeline/VLCMacOSXTests-VLCThumbnailCache.o
+  OBJC     gui/macosx/timeline/VLCMacOSXTests-VLCThumbnailScheduler.o
+  OBJC     gui/macosx/timeline/VLCMacOSXTests-VLCThumbnailWorker.o
+  OBJC     gui/macosx/timeline/VLCMacOSXTests-VLCThumbnailService.o
+  CC       gui/macosx/tests/VLCThumbnailTestHelper.o
+  OBJC     gui/macosx/timeline/VLCTimelineContextTests-VLCTimelineContext.o
+  OBJC     gui/macosx/timeline/VLCTimelineContextTests-VLCTimelineContextTests.o
+  OBJC     gui/macosx/timeline/VLCTimelineContextTests-VLCTimelineContextTestSupport.o
+  CCLD     vlc-thumbnail-test-helper
+clang: warning: argument unused during compilation: '-fcx-limited-range' [-Wunused-command-line-argument]
+  GEN      VLCMacOSXTests
+  GEN      VLCTimelineContextTests
+  GEN      VLCMacOSXTests.xctest
+libtool: warning: '../lib/libvlc.la' has not been installed in '//lib'
+libtool: warning: '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/src/libvlccore.la' has not been installed in '//lib'
+libtool: warning: '../src/libvlccore.la' has not been installed in '//lib'
+libtool: install: /usr/local/bin/ginstall -c .libs/VLCMacOSXTests /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/modules/VLCMacOSXTests.xctest/Contents/MacOS/VLCMacOSXTests
+  GEN      VLCTimelineContextTests.xctest
+libtool: warning: '../src/libvlccore.la' has not been installed in '//lib'
+libtool: install: /usr/local/bin/ginstall -c .libs/VLCTimelineContextTests /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/modules/VLCTimelineContextTests.xctest/Contents/MacOS/VLCTimelineContextTests

@@ -1,0 +1,101 @@
+{
+  "status": "passed",
+  "checks": [
+    "59 frozen source hashes/sizes",
+    "13 artifact hashes/sizes",
+    "series order",
+    "relative wrapper links",
+    "complete artifact private/binary marker scan",
+    "Git identity and approval precision",
+    "two PNG copies/source hashes and public fixture hash; scoped screenshot limits",
+    "20MiB storage cap",
+    "0000/0001/0003 lineage unchanged"
+  ],
+  "source_tree": "48a6b53f29d7f99ea410ba0e9d7085f7d9673acb",
+  "manifest_sha256": "61e5379d7b9e2a1e5d7775689a41a2167868cb426037301c44b46f1bfa6375aa",
+  "artifact_bytes": 4271607,
+  "artifact_files": [
+    {
+      "file": "0000-source-header-distribution.patch",
+      "bytes": 4732,
+      "sha256": "70da9e24f27de04128c59b1484379d1d9813f7e1af04d3792e971a07a24cd57e"
+    },
+    {
+      "file": "0001-contrib-matroska-identity-and-admission.patch",
+      "bytes": 13511,
+      "sha256": "27772936e6068efe11bd44dd6265cd1fb61114dfd8aa7cd9ba693c609e54abf1"
+    },
+    {
+      "file": "0002-timeline-helper-build-package-and-tests.patch",
+      "bytes": 186997,
+      "sha256": "e75a22d8720e940016617cffc338390652899945770e78ed1d177c5fe2587b63"
+    },
+    {
+      "file": "0003-macosx-timeline-context-service-and-hover.patch",
+      "bytes": 304953,
+      "sha256": "ef9ad2f01482a06798495284c138b448637f91c417f467b2bd7a1c3fec2d7151"
+    },
+    {
+      "file": "README.md",
+      "bytes": 9759,
+      "sha256": "89c45f934e0df1a103cadf981a4483af3090d8c0bb59e6c2da6ca03d230f695f"
+    },
+    {
+      "file": "contribution-description-draft.md",
+      "bytes": 5339,
+      "sha256": "b9a7f93c7ef9948dc7d6fa912ec45ffab8cb2e153f53138318c307a46de08f96"
+    },
+    {
+      "file": "demonstration/README.md",
+      "bytes": 3691,
+      "sha256": "7554e971245f86941f59b2e24939e07409135e65fe0d3728d348b093e1313162"
+    },
+    {
+      "file": "demonstration/custom-fullscreen-hover.png",
+      "bytes": 3512667,
+      "sha256": "3b11c683299899abbf8d6ff640456853afa7e83ec06ab40147e8f3116106abd1"
+    },
+    {
+      "file": "demonstration/detached-hover.png",
+      "bytes": 192239,
+      "sha256": "d32dd707d09bfd70731c2b0438d1e4c8c83f04dbe4391ed3d1be2cb100bc5050"
+    },
+    {
+      "file": "demonstration/provenance.json",
+      "bytes": 4417,
+      "sha256": "38ad8842ca9cf85f84a0ae0e6c5674eee978f87b4e8e054b78f62c411ea119ee"
+    },
+    {
+      "file": "manifest.json",
+      "bytes": 29815,
+      "sha256": "61e5379d7b9e2a1e5d7775689a41a2167868cb426037301c44b46f1bfa6375aa"
+    },
+    {
+      "file": "proposed-commit-messages.md",
+      "bytes": 3294,
+      "sha256": "7758e8763cfb587644d27cd7704d0a30e80d2ac304fc60030e5ad2d7b1b6a5d3"
+    },
+    {
+      "file": "series",
+      "bytes": 193,
+      "sha256": "db71116d7a68e3319f7fe0a220a17327c3bbb116c98253d29bdc28d688930d4f"
+    }
+  ],
+  "utc": "2026-10-06T13:52:04.406849+00:00",
+  "command": [
+    "python3",
+    "docs/evidence/story-005/public-package-wrapper-check.py"
+  ],
+  "script_sha256": "b0668062ff8ca950541f2e34b4df9ba772cfe33e3e2b9f89bfd841b6974f918f",
+  "exit_code": 0,
+  "log": "docs/evidence/story-005/native-demonstration-final-wrapper-validation.log",
+  "log_sha256": "9ebc923f09d59c4c1f559385081a4321faffbb53467f548fd570f7cd2072a207",
+  "production_build_tree": "8ec1cdec6939c67eeb6bef0ff1bb035c168d0592",
+  "final_source_tree": "48a6b53f29d7f99ea410ba0e9d7085f7d9673acb",
+  "runtime_equivalence": "Six later source paths limited to2testfiles/3distributionlists/helperREADME, verified against captured-source manifest; all other source hashes unchanged",
+  "captured_build_evidence": "docs/evidence/story-005/feature-duration-fixed-original-app-manifest.json",
+  "captured_build_evidence_sha256": "8dc0b44fdc9412698ace1c327dd2fcd7a118e4f16451d4e29a10ed0c8a49ca46",
+  "opengl_evidence": "docs/evidence/story-005/baseline-opengl-attribution-result.md",
+  "opengl_evidence_sha256": "1de38afa6fdb02ab9e27a970b5fd788a20408080d12b69628d3813e457c514ac",
+  "scope": "Wrapper precision only; original PNGs/source/patches unchanged; no new media/runtime acquisition"
+}

@@ -1,0 +1,12 @@
+{
+  "path": "bin/timeline-preview/README.md",
+  "before_sha256": "9e9301e9e5ffbe9665a17806319582693efc64a699dd9a40dad36aef1e536fea",
+  "after_sha256": "649adefe266aead0583863fd378f797faee4c62b9db3759d1ff5b8de66f68287",
+  "source_lines": 283,
+  "scope": "Docs only: executed route, GNU host prerequisite, Git containment, exact partial distcheck and native limits; no runtime/test/build changes",
+  "docs_delta_sha256": "04ab572b28d1dc8b639303c6ded31d092e17e0533b42580e3d2a7e7e7f426d03",
+  "old_bytes_preserved": "work/story005-scout/final-reproduction-guide-before.md",
+  "source_note": "README is a new public feature input in candidate, so ordinary unstaged git diff is empty; exact before/after delta captured separately",
+  "baseline_attribution_receipt": "baseline-clock-tls-attribution-20261006T074008Z.json",
+  "count_wording": "288 counted, one optional skip, zero failures"
+}

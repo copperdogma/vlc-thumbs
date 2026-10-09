@@ -1,0 +1,62 @@
+{
+  "modules/gui/macosx/views/VLCPlaybackProgressSlider.h": {
+    "recorded": "40c9fa508a12e571e4a2a275776ce2cb888f5418f8834b3065939fc3a7ebbbeb",
+    "actual": "40c9fa508a12e571e4a2a275776ce2cb888f5418f8834b3065939fc3a7ebbbeb",
+    "matches": true
+  },
+  "modules/gui/macosx/views/VLCPlaybackProgressSlider.m": {
+    "recorded": "528419b0e863c5a8d5731c18b21c8b7609c13f51acc2b599556a35a0497d22a8",
+    "actual": "528419b0e863c5a8d5731c18b21c8b7609c13f51acc2b599556a35a0497d22a8",
+    "matches": true
+  },
+  "modules/gui/macosx/windows/video/VLCMainVideoViewController.m": {
+    "recorded": "00a1fafd21316101dda91b8bcdf4e00615b7bb14c74269b9959c02019b2ab128",
+    "actual": "00a1fafd21316101dda91b8bcdf4e00615b7bb14c74269b9959c02019b2ab128",
+    "matches": true
+  },
+  "modules/gui/macosx/preferences/VLCSimplePrefsController.h": {
+    "recorded": "2aad432fe62778b4275cfff30fd30461e2ef6bdf8e3543120b2aceeb1b7a35b8",
+    "actual": "2aad432fe62778b4275cfff30fd30461e2ef6bdf8e3543120b2aceeb1b7a35b8",
+    "matches": true
+  },
+  "modules/gui/macosx/preferences/VLCSimplePrefsController.m": {
+    "recorded": "7d31ff701c1793c849dc0b0317d5744fcebd93ba102b571484d68c1f38bcf704",
+    "actual": "7d31ff701c1793c849dc0b0317d5744fcebd93ba102b571484d68c1f38bcf704",
+    "matches": true
+  },
+  "modules/gui/macosx/UI/SimplePreferences.xib": {
+    "recorded": "ad1e498b2b543e6812ab23ab196d0936889f8ea000e0bc05a70828d66f1d6bb1",
+    "actual": "ad1e498b2b543e6812ab23ab196d0936889f8ea000e0bc05a70828d66f1d6bb1",
+    "matches": true
+  },
+  "modules/gui/macosx/main/macosx.m": {
+    "recorded": "b23d0ce0c6e2d23e9865c44597366935e1ec15b0f633a3f13b30307710632428",
+    "actual": "b23d0ce0c6e2d23e9865c44597366935e1ec15b0f633a3f13b30307710632428",
+    "matches": true
+  },
+  "modules/gui/macosx/tests/VLCTimelineHoverTest.m": {
+    "recorded": "93ec2cecedee6f9f72e280ea129d1090460481fc0ca650a0dcaea01ab4e3a16c",
+    "actual": "93ec2cecedee6f9f72e280ea129d1090460481fc0ca650a0dcaea01ab4e3a16c",
+    "matches": true
+  },
+  "modules/gui/macosx/timeline/VLCTimelineContext.m": {
+    "actual": "152237519a537e2c92e55a6c8b9829dda13f51fc5d55101b8246637c9177ca8f",
+    "scope": "dependency read for review"
+  },
+  "modules/gui/macosx/timeline/VLCThumbnailService.m": {
+    "actual": "28783c9310ae523494e9c321fa2ff5fc765e36dc65155ba73e3d1e9c86211894",
+    "scope": "dependency read for review"
+  },
+  "modules/gui/macosx/windows/controlsbar/VLCControlsBarCommon.m": {
+    "actual": "69907c146456c65f7ee4a96e5dbbc2a51420f50a6014db26af19887be94fa5c4",
+    "scope": "dependency read for review"
+  },
+  "modules/gui/macosx/windows/video/VLCVideoWindowCommon.m": {
+    "actual": "094886e3ef69b7873fa3a0001423e43472ca61bf087086da923ec948f30fa1f1",
+    "scope": "dependency read for review"
+  },
+  "modules/gui/macosx/windows/video/VLCVideoOutputProvider.m": {
+    "actual": "1fe27b32bf7ab062cda089503bdbed2a9e3feadbd0902dbd7eec7cfaa8af541a",
+    "scope": "dependency read for review"
+  }
+}

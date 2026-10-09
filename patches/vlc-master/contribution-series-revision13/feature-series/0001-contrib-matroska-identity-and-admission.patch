@@ -1,0 +1,310 @@
+diff --git a/contrib/src/ffmpeg/matroska-flat-timeline.patch b/contrib/src/ffmpeg/matroska-flat-timeline.patch
+new file mode 100644
+index 0000000000000000000000000000000000000000..465e87f08390f64235b875937ed9d52e029d2f5d
+--- /dev/null
++++ b/contrib/src/ffmpeg/matroska-flat-timeline.patch
+@@ -0,0 +1,270 @@
++--- a/libavformat/matroskadec.c
+++++ b/libavformat/matroskadec.c
++@@ -61,6 +61,7 @@
++ 
++ #include "avformat.h"
++ #include "avio_internal.h"
+++#include "url.h"
++ #include "demux.h"
++ #include "dovi_isom.h"
++ #include "internal.h"
++@@ -439,6 +440,11 @@
++ 
++     /* Bandwidth value for WebM DASH Manifest */
++     int bandwidth;
+++
+++    /* Opt-in admission; the ordinary playback demux path is unchanged. */
+++    int flat_timeline, flat_timeline_checked, flat_scanning;
+++    int64_t flat_scan_bytes, flat_scan_reads, flat_scan_seeks, flat_scan_nodes;
+++    uint64_t flat_ordered_value;
++ } MatroskaDemuxContext;
++ 
++ #define CHILD_OF(parent) { .def = { .n = parent } }
++@@ -768,6 +774,42 @@
++     { 0 }   /* We don't want to go back to level 0, so don't add the parent. */
++ };
++ 
+++/* Admission grammar: retain no chapter lists and skip finite media payloads.
+++ * Link element presence is disqualifying even when its target is unavailable. */
+++#define FLAT_PREV_UUID 0x3CB923
+++#define FLAT_NEXT_UUID 0x3EB923
+++#define FLAT_FAMILY 0x4444
+++#define FLAT_CHAPTER_SEGMENT_UUID 0x6E67
+++#define FLAT_CHAPTER_SEGMENT_EDITION_UID 0x6EBC
+++static EbmlSyntax matroska_flat_atom[4];
+++static EbmlSyntax matroska_flat_atom[4] = {
+++    { FLAT_CHAPTER_SEGMENT_UUID, EBML_NONE },
+++    { FLAT_CHAPTER_SEGMENT_EDITION_UID, EBML_NONE },
+++    { MATROSKA_ID_CHAPTERATOM, EBML_NEST, 0, 0, 0, { .n = matroska_flat_atom } },
+++    { 0 }
+++};
+++static EbmlSyntax matroska_flat_edition[] = {
+++    { MATROSKA_ID_EDITIONFLAGORDERED, EBML_UINT, 0, 0,
+++      offsetof(MatroskaDemuxContext, flat_ordered_value) },
+++    { MATROSKA_ID_CHAPTERATOM, EBML_NEST, 0, 0, 0, { .n = matroska_flat_atom } },
+++    { 0 }
+++};
+++static EbmlSyntax matroska_flat_chapters[] = {
+++    { MATROSKA_ID_EDITIONENTRY, EBML_NEST, 0, 0, 0, { .n = matroska_flat_edition } },
+++    { 0 }
+++};
+++static EbmlSyntax matroska_flat_info[] = {
+++    { FLAT_PREV_UUID, EBML_NONE },
+++    { FLAT_NEXT_UUID, EBML_NONE },
+++    { FLAT_FAMILY, EBML_NONE },
+++    { 0 }
+++};
+++static EbmlSyntax matroska_flat_segment[] = {
+++    { MATROSKA_ID_INFO, EBML_NEST, 0, 0, 0, { .n = matroska_flat_info } },
+++    { MATROSKA_ID_CHAPTERS, EBML_NEST, 0, 0, 0, { .n = matroska_flat_chapters } },
+++    { 0 }
+++};
+++
++ static EbmlSyntax matroska_segments[] = {
++     { MATROSKA_ID_SEGMENT, EBML_NEST, 0, 0, 0, { .n = matroska_segment } },
++     { 0 }
++@@ -1280,6 +1322,9 @@
++     MatroskaLevel1Element *level1_elem;
++     MatroskaLevel *level = matroska->num_levels ? &matroska->levels[matroska->num_levels - 1] : NULL;
++ 
+++    if (matroska->flat_scanning && ++matroska->flat_scan_nodes > 100000)
+++        return AVERROR(EFBIG);
+++
++     if (!matroska->current_id) {
++         uint64_t id64;
++         res = ebml_read_num(matroska, pb, 4, &id64, 0);
++@@ -1311,6 +1356,17 @@
++     id = matroska->current_id;
++ 
++     syntax = ebml_parse_id(syntax, id);
+++    if (matroska->flat_scanning) {
+++        /* Any unknown-sized nested element is outside this bounded admission.
+++         * Presence checks occur only in the matching grammar, not Tag strings. */
+++        if (id == MATROSKA_ID_SEGMENT || id == EBML_ID_HEADER)
+++            return AVERROR_INVALIDDATA;
+++        if (syntax->id == FLAT_PREV_UUID || syntax->id == FLAT_NEXT_UUID ||
+++            syntax->id == FLAT_FAMILY || syntax->id == FLAT_CHAPTER_SEGMENT_UUID ||
+++            syntax->id == FLAT_CHAPTER_SEGMENT_EDITION_UID)
+++            return AVERROR_PATCHWELCOME;
+++    }
+++
++     if (!syntax->id && id != EBML_ID_VOID && id != EBML_ID_CRC32) {
++         if (level && level->length == EBML_UNKNOWN_LENGTH) {
++             // Unknown-length levels end when an element from an upper level
++@@ -1364,6 +1420,8 @@
++             return res;
++ 
++         pos_alt += res;
+++        if (matroska->flat_scanning && length == EBML_UNKNOWN_LENGTH)
+++            return AVERROR_PATCHWELCOME;
++ 
++         if (matroska->num_levels > 0) {
++             if (length != EBML_UNKNOWN_LENGTH &&
++@@ -1481,6 +1539,10 @@
++     switch (syntax->type) {
++     case EBML_UINT:
++         res = ebml_read_uint(pb, length, syntax->def.u, data);
+++        /* Reject immediately; a later flat edition cannot overwrite this. */
+++        if (res >= 0 && matroska->flat_scanning &&
+++            id == MATROSKA_ID_EDITIONFLAGORDERED && *(uint64_t *)data)
+++            return AVERROR_PATCHWELCOME;
++         break;
++     case EBML_SINT:
++         res = ebml_read_sint(pb, length, syntax->def.i, data);
++@@ -1582,6 +1644,116 @@
++     }
++ 
++     return level_check;
+++}
+++
+++typedef struct MatroskaFlatIO {
+++    MatroskaDemuxContext *owner;
+++    AVIOContext *source;
+++    int64_t file_size;
+++} MatroskaFlatIO;
+++
+++static int matroska_flat_read(void *opaque, uint8_t *buffer, int size)
+++{
+++    MatroskaFlatIO *io = opaque;
+++    MatroskaDemuxContext *owner = io->owner;
+++    int ret;
+++    if (ff_check_interrupt(&owner->ctx->interrupt_callback))
+++        return AVERROR_EXIT;
+++    if (size < 0 || owner->flat_scan_bytes > 8 * 1024 * 1024 - size)
+++        return AVERROR(EFBIG);
+++    owner->flat_scan_reads++;
+++    ret = io->source->read_packet(io->source->opaque, buffer, size);
+++    if (ret > 0)
+++        owner->flat_scan_bytes += ret;
+++    return ret;
+++}
+++
+++static int64_t matroska_flat_seek(void *opaque, int64_t offset, int whence)
+++{
+++    MatroskaFlatIO *io = opaque;
+++    MatroskaDemuxContext *owner = io->owner;
+++    if (whence == AVSEEK_SIZE)
+++        return io->file_size; /* No physical callback or round trip. */
+++    if (ff_check_interrupt(&owner->ctx->interrupt_callback))
+++        return AVERROR_EXIT;
+++    /* Reserve one physical seek for restoration, including failure paths. */
+++    if (owner->flat_scan_seeks >= 19999)
+++        return AVERROR(EFBIG);
+++    owner->flat_scan_seeks++;
+++    return io->source->seek(io->source->opaque, offset, whence);
+++}
+++
+++static int matroska_check_flat_timeline(MatroskaDemuxContext *owner)
+++{
+++    AVIOContext *source = owner->ctx->pb, *pb = NULL;
+++    AVFormatContext *format = NULL;
+++    MatroskaDemuxContext scan = { 0 };
+++    MatroskaFlatIO io = { .owner = owner, .source = source };
+++    uint8_t *buffer = NULL;
+++    int64_t saved_cursor = source->pos, end, position;
+++    int ret = AVERROR_INVALIDDATA, moved = 0;
+++
+++    if (!(source->seekable & AVIO_SEEKABLE_NORMAL) || source->write_flag ||
+++        !source->read_packet || !source->seek || owner->num_levels != 1)
+++        return AVERROR(ENOSYS);
+++    /* Do not use avio_size: its SEEK_END fallback has an unchecked restore.
+++     * Require the source's size-query contract and restore even on its failure. */
+++    moved = 1;
+++    io.file_size = source->seek(source->opaque, 0, AVSEEK_SIZE);
+++    if (io.file_size <= owner->segment_start || owner->levels[0].start != owner->segment_start)
+++        goto done;
+++    if (owner->levels[0].length == EBML_UNKNOWN_LENGTH)
+++        end = io.file_size;
+++    else {
+++        if (owner->levels[0].length > io.file_size - owner->segment_start)
+++            goto done;
+++        end = owner->segment_start + owner->levels[0].length;
+++        /* Multiple segments or trailing data are outside the admitted subset. */
+++        if (end != io.file_size) { ret = AVERROR_PATCHWELCOME; goto done; }
+++    }
+++    format = avformat_alloc_context();
+++    buffer = av_malloc(512);
+++    if (!format || !buffer) { ret = AVERROR(ENOMEM); goto done; }
+++    pb = avio_alloc_context(buffer, 512, 0, &io, matroska_flat_read, NULL, matroska_flat_seek);
+++    if (!pb) { ret = AVERROR(ENOMEM); goto done; }
+++    buffer = NULL; /* pb owns the allocation; source buffer remains untouched. */
+++    ffiocontext(pb)->short_seek_threshold = 0;
+++    format->pb = pb;
+++    format->interrupt_callback = owner->ctx->interrupt_callback;
+++    scan.ctx = format;
+++    scan.flat_scanning = 1;
+++    scan.num_levels = 1;
+++    scan.levels[0] = (MatroskaLevel) { owner->segment_start, end - owner->segment_start };
+++    moved = 1; /* A failing seek may still disturb the underlying cursor. */
+++    position = avio_seek(pb, owner->segment_start, SEEK_SET);
+++    if (position != owner->segment_start) { ret = AVERROR(EIO); goto done; }
+++    ret = 0;
+++    while (scan.num_levels && ret >= 0) {
+++        position = avio_tell(pb);
+++        ret = ebml_parse(&scan, matroska_flat_segment, &scan);
+++        if (ret >= 0 && avio_tell(pb) <= position && scan.num_levels)
+++            ret = AVERROR_INVALIDDATA;
+++    }
+++    if (ret >= 0 && avio_tell(pb) == end && !scan.num_levels)
+++        ret = 0;
+++    else if (ret >= 0)
+++        ret = AVERROR_INVALIDDATA;
+++ done:
+++    owner->flat_scan_nodes = scan.flat_scan_nodes;
+++    if (moved) {
+++        /* AVSEEK_FORCE does not bypass AVIO's buffer. Restore the physical
+++         * callback cursor to source->pos, preserving every original AVIO field. */
+++        owner->flat_scan_seeks++;
+++        if (source->seek(source->opaque, saved_cursor, SEEK_SET) != saved_cursor)
+++            ret = AVERROR(EIO);
+++    }
+++    if (pb) { av_freep(&pb->buffer); avio_context_free(&pb); }
+++    av_free(buffer);
+++    if (format) format->pb = NULL;
+++    avformat_free_context(format);
+++    if (ret == 0)
+++        owner->flat_timeline_checked = 1;
+++    return ret;
++ }
++ 
++ static void ebml_free(EbmlSyntax *syntax, void *data)
++@@ -3489,6 +3661,11 @@
++     /* Set data_offset as it might be needed later by seek_frame_generic. */
++     if (matroska->current_id == MATROSKA_ID_CLUSTER)
++         si->data_offset = avio_tell(matroska->ctx->pb) - 4;
+++    if (matroska->flat_timeline) {
+++        res = matroska_check_flat_timeline(matroska);
+++        if (res < 0)
+++            return res;
+++    }
++     matroska_execute_seekhead(matroska);
++ 
++     if (!matroska->time_scale)
++@@ -5036,8 +5213,27 @@
++ };
++ #endif
++ 
+++
+++#define MKV_FLAT_OFFSET(x) offsetof(MatroskaDemuxContext, x)
+++static const AVOption matroska_options[] = {
+++    { "flat_timeline", "require complete bounded flat-timeline admission", MKV_FLAT_OFFSET(flat_timeline), AV_OPT_TYPE_BOOL, { .i64 = 0 }, 0, 1, AV_OPT_FLAG_DECODING_PARAM },
+++    { "flat_timeline_checked", "complete flat-timeline admission", MKV_FLAT_OFFSET(flat_timeline_checked), AV_OPT_TYPE_BOOL, { .i64 = 0 }, 0, 1, AV_OPT_FLAG_EXPORT | AV_OPT_FLAG_READONLY },
+++    { "flat_scan_bytes", "admission physical bytes read", MKV_FLAT_OFFSET(flat_scan_bytes), AV_OPT_TYPE_INT64, { .i64 = 0 }, 0, INT64_MAX, AV_OPT_FLAG_EXPORT | AV_OPT_FLAG_READONLY },
+++    { "flat_scan_reads", "admission physical read calls including failures", MKV_FLAT_OFFSET(flat_scan_reads), AV_OPT_TYPE_INT64, { .i64 = 0 }, 0, INT64_MAX, AV_OPT_FLAG_EXPORT | AV_OPT_FLAG_READONLY },
+++    { "flat_scan_seeks", "admission physical seek calls including restore/failures", MKV_FLAT_OFFSET(flat_scan_seeks), AV_OPT_TYPE_INT64, { .i64 = 0 }, 0, INT64_MAX, AV_OPT_FLAG_EXPORT | AV_OPT_FLAG_READONLY },
+++    { "flat_scan_nodes", "admission structural nodes", MKV_FLAT_OFFSET(flat_scan_nodes), AV_OPT_TYPE_INT64, { .i64 = 0 }, 0, INT64_MAX, AV_OPT_FLAG_EXPORT | AV_OPT_FLAG_READONLY },
+++    { NULL }
+++};
+++static const AVClass matroska_class = {
+++    .class_name = "Matroska demuxer",
+++    .item_name = av_default_item_name,
+++    .option = matroska_options,
+++    .version = LIBAVUTIL_VERSION_INT,
+++};
+++
++ const FFInputFormat ff_matroska_demuxer = {
++     .p.name         = "matroska,webm",
+++    .p.priv_class   = &matroska_class,
++     .p.long_name    = NULL_IF_CONFIG_SMALL("Matroska / WebM"),
++     .p.extensions   = "mkv,mk3d,mka,mks,webm",
++     .p.mime_type    = "audio/webm,audio/x-matroska,video/webm,video/x-matroska",
+diff --git a/contrib/src/ffmpeg/matroska-track-number.patch b/contrib/src/ffmpeg/matroska-track-number.patch
+new file mode 100644
+index 0000000000000000000000000000000000000000..b6587b7b4461831ec38e52cd437baad23eabf705
+--- /dev/null
++++ b/contrib/src/ffmpeg/matroska-track-number.patch
+@@ -0,0 +1,12 @@
++--- a/libavformat/matroskadec.c
+++++ b/libavformat/matroskadec.c
++@@ -3253,6 +3253,9 @@
++             av_free(key_id_base64);
++             return AVERROR(ENOMEM);
++         }
+++        /* TrackNumber is the container-specific stream identity. */
+++        st->id = track->num > 0 && track->num <= INT_MAX
+++               ? (int)track->num : -1;
++         par = st->codecpar;
++ 
++         par->codec_id  = codec_id;
+diff --git a/contrib/src/ffmpeg/rules.mak b/contrib/src/ffmpeg/rules.mak
+index 2e2287085f86ad280fc21954c06999eac6652007..d0064340d238a919b10de3a99ca2e015a71a29c9 100644
+--- a/contrib/src/ffmpeg/rules.mak
++++ b/contrib/src/ffmpeg/rules.mak
+@@ -234,8 +234,10 @@ $(TARBALLS)/ffmpeg-$(FFMPEG_VERSION).tar.xz:
+ 
+ .sum-ffmpeg: ffmpeg-$(FFMPEG_VERSION).tar.xz
+ 
+-ffmpeg: ffmpeg-$(FFMPEG_VERSION).tar.xz .sum-ffmpeg
++ffmpeg: ffmpeg-$(FFMPEG_VERSION).tar.xz .sum-ffmpeg $(SRC)/ffmpeg/matroska-track-number.patch $(SRC)/ffmpeg/matroska-flat-timeline.patch
+ 	$(UNPACK)
++	$(APPLY) $(SRC)/ffmpeg/matroska-track-number.patch
++	$(APPLY) $(SRC)/ffmpeg/matroska-flat-timeline.patch
+ 	$(APPLY) $(SRC)/ffmpeg/dxva_vc1_crash.patch
+ 	$(APPLY) $(SRC)/ffmpeg/h264_early_SAR.patch
+ 	$(APPLY) $(SRC)/ffmpeg/0001-avcodec-dxva2-add-support-for-HEVC-RExt-DXVA-profile.patch

@@ -1,0 +1,185 @@
+{
+  "time_utc": "2026-10-06T02:36:35.046912+00:00",
+  "base": "2e358f3098c2f2b7621d1dc568de8b61ad786322",
+  "scope": "Focused diagnostic executable uses unchanged baseline dylib and candidate picture.o; full registered upstream regression not yet executed.",
+  "receipts": [
+    {
+      "name": "candidate-link",
+      "command": [
+        "xcrun",
+        "clang",
+        "-std=gnu11",
+        "-DHAVE_CONFIG_H",
+        "-D_GNU_SOURCE",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline",
+        "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/include",
+        "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-orientation/include",
+        "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-orientation/src",
+        "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/aarch64-apple-darwin19/include",
+        "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-orientation/compat/stdbit",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-orientation-diagnostic/contract.c",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-orientation-diagnostic/picture.o",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/src/.libs/libvlccore.9.dylib",
+        "-Wl,-rpath,/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/src/.libs",
+        "-o",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-orientation-diagnostic/candidate-contract"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "baseline-link",
+      "command": [
+        "xcrun",
+        "clang",
+        "-std=gnu11",
+        "-DHAVE_CONFIG_H",
+        "-D_GNU_SOURCE",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline",
+        "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/include",
+        "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-orientation/include",
+        "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-orientation/src",
+        "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/aarch64-apple-darwin19/include",
+        "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-orientation/compat/stdbit",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-orientation-diagnostic/contract.c",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/src/.libs/libvlccore.9.dylib",
+        "-Wl,-rpath,/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/src/.libs",
+        "-o",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-orientation-diagnostic/baseline-contract"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "full-image-regression-compile",
+      "command": [
+        "xcrun",
+        "clang",
+        "-std=gnu11",
+        "-DHAVE_CONFIG_H",
+        "-D_GNU_SOURCE",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline",
+        "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/include",
+        "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-orientation/include",
+        "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-orientation/src",
+        "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/aarch64-apple-darwin19/include",
+        "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-orientation/compat/stdbit",
+        "-c",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-orientation/test/src/misc/image.c",
+        "-o",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-orientation-diagnostic/image-regression.o"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "In file included from /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-orientation/test/src/misc/image.c:31:\n/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-orientation/test/src/misc/../../libvlc/test.h:68:31: error: use of undeclared identifier 'TOP_BUILDDIR'\n   68 |     setenv(\"VLC_PLUGIN_PATH\", TOP_BUILDDIR\"/modules\", 1);\n      |                               ^~~~~~~~~~~~\n/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-orientation/test/src/misc/../../libvlc/test.h:69:28: error: use of undeclared identifier 'TOP_BUILDDIR'\n   69 |     setenv(\"VLC_LIB_PATH\", TOP_BUILDDIR\"/modules\", 1);\n      |                            ^~~~~~~~~~~~\n2 errors generated.\n"
+    },
+    {
+      "name": "candidate-runtime",
+      "command": [
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-orientation-diagnostic/candidate-contract"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "baseline-negative-runtime",
+      "command": [
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-orientation-diagnostic/baseline-contract"
+      ],
+      "exit_code": -6,
+      "stdout": "",
+      "stderr": "Assertion failed: (pic->format.orientation == fmt.orientation), function TestPictureOrientation, file contract.c, line 29.\n"
+    },
+    {
+      "name": "full-image-regression-compile-002",
+      "command": [
+        "xcrun",
+        "clang",
+        "-std=gnu11",
+        "-DHAVE_CONFIG_H",
+        "-D_GNU_SOURCE",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-DTOP_BUILDDIR=\"/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline\"",
+        "-DTOP_SRCDIR=\"/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-orientation\"",
+        "-DSRCDIR=\"/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-orientation/test\"",
+        "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline",
+        "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/include",
+        "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-orientation/include",
+        "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-orientation/src",
+        "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/aarch64-apple-darwin19/include",
+        "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-orientation/compat/stdbit",
+        "-c",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-orientation/test/src/misc/image.c",
+        "-o",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-orientation-diagnostic/image-regression.o"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "candidate-existing-probe",
+      "compile_command": [
+        "xcrun",
+        "clang",
+        "-std=gnu11",
+        "-DHAVE_CONFIG_H",
+        "-D_GNU_SOURCE",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline",
+        "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/include",
+        "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-orientation/include",
+        "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-orientation/src",
+        "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/contrib/aarch64-apple-darwin19/include",
+        "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-orientation/compat/stdbit",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/picture-orientation-probe.c",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-orientation-diagnostic/picture.o",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/src/.libs/libvlccore.9.dylib",
+        "-Wl,-rpath,/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/src/.libs",
+        "-o",
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-orientation-diagnostic/candidate-probe"
+      ],
+      "run_command": [
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-orientation-diagnostic/candidate-probe"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "baseline-existing-probe",
+      "run_command": [
+        "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-scout/picture-orientation-probe"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "sha256": {
+    "work/story005-orientation-diagnostic/contract.c": "7987a6887f6adb970f0655d78180eeb436ce9e8d49f57ed0accfbb4ec4da36a1",
+    "work/story005-orientation-diagnostic/picture.o": "5f619e2beef25cb89ce89e84d39d074b736faf8d8614dc3f55f23d6d0289211b",
+    "work/upstream/vlc-master-story005-orientation/src/misc/picture.c": "b8bf7b22839f514880c4df4dd783849b0287b3dbbe15d93dc9e757b401f582a5",
+    "work/upstream/vlc-master-story005-orientation/test/src/misc/image.c": "5df565faa6162879e4dfdf6b9799c56ce379b04632504c752e1045a251ed14fd",
+    "work/story005-master-baseline/src/.libs/libvlccore.9.dylib": "c6c4f10547b35391893f37b45779026872938f75eac3b5594d00d6414a67d7a0",
+    "work/story005-orientation-diagnostic/candidate-contract": "199585d7a0df67dd966e509426f3935b334ffd4a18aca8ec9518d61f28de8dbd",
+    "work/story005-orientation-diagnostic/baseline-contract": "a6e7ccd4ef561ed4b9b76af64e2b505350e366c3beaf447c9ff024338b6c1c06",
+    "work/story005-orientation-diagnostic/image-regression.o": "6e76b8fc692df7136dcd2d65eb53068d96c81cb7ba9f902d5992ee354280caf1",
+    "work/story005-scout/picture-orientation-probe.c": "93d25b3149521843da2112ecdbef9a9a71f7af5fbe90e6c79d9f4ff1040243e0",
+    "work/story005-scout/picture-orientation-probe": "911f98f9c239dc8d7efc108e197c304d5ada6da92cce84400c420ef0b27543b4",
+    "work/story005-orientation-diagnostic/candidate-probe": "3e195d9d15842455263019f971b696d634e0294d1fedc9f3039748e852a4468c",
+    "patches/vlc-master/0003-picture-preserve-orientation.patch": "10cd20163e1725af368429a0dff377bc0d538b54aef0e41c80b4a5da532c539e"
+  }
+}

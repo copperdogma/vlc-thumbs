@@ -1,0 +1,3 @@
+libtool: link: unable to infer tagged configuration with compiler.
+libtool: link: Possible use of unsupported compiler.
+libtool:   error: specify a tag with '--tag'. For more information, try 'libtool --help'.

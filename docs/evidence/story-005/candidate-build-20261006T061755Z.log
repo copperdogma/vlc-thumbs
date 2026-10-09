@@ -1,0 +1,45 @@
+  OBJC     gui/macosx/views/VLCTimelineHoverReentrancyTests-VLCPlaybackProgressSlider.o
+  OBJC     gui/macosx/tests/VLCTimelineHoverReentrancyTests-VLCTimelineHoverReentrancyTest.o
+  OBJC     gui/macosx/tests/VLCTimelineHoverReentrancyTests-VLCTimelineHoverTestSupport.o
+make[1]: `vlc-cache-gen' is up to date.
+  GEN      VLCTimelineHoverReentrancyTests
+  GEN      VLCTimelineHoverReentrancyTests.xctest
+libtool: warning: '../src/libvlccore.la' has not been installed in '//lib'
+libtool: install: /usr/local/bin/ginstall -c .libs/VLCTimelineHoverReentrancyTests /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/modules/VLCTimelineHoverReentrancyTests.xctest/Contents/MacOS/VLCTimelineHoverReentrancyTests
+/bin/sh -c 'exec "/Applications/Xcode.app/Contents/Developer/usr/bin/xctest" "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-candidate/modules/$(basename "$1")"' xctest VLCTimelineHoverReentrancyTests.xctest
+Test Suite 'All tests' started at 2026-10-06 00:18:02.935.
+Test Suite 'VLCTimelineHoverReentrancyTests.xctest' started at 2026-10-06 00:18:02.936.
+Test Suite 'VLCTimelineHoverReentrancyTest' started at 2026-10-06 00:18:02.936.
+Test Case '-[VLCTimelineHoverReentrancyTest testDisabledPreviewUsesFreshPointerTimeWithoutRequest]' started.
+Test Case '-[VLCTimelineHoverReentrancyTest testDisabledPreviewUsesFreshPointerTimeWithoutRequest]' passed (0.005 seconds).
+Test Case '-[VLCTimelineHoverReentrancyTest testDurationChangeRejectsDelayedCompletionEvenWithoutGenerationAnnouncement]' started.
+Test Case '-[VLCTimelineHoverReentrancyTest testDurationChangeRejectsDelayedCompletionEvenWithoutGenerationAnnouncement]' passed (0.084 seconds).
+Test Case '-[VLCTimelineHoverReentrancyTest testFreshDurationRightEdgeKeepsCaptionAndClampsRequest]' started.
+Test Case '-[VLCTimelineHoverReentrancyTest testFreshDurationRightEdgeKeepsCaptionAndClampsRequest]' passed (0.000 seconds).
+Test Case '-[VLCTimelineHoverReentrancyTest testFreshLongerDurationDrivesBothPointerAndActualRequest]' started.
+Test Case '-[VLCTimelineHoverReentrancyTest testFreshLongerDurationDrivesBothPointerAndActualRequest]' passed (0.000 seconds).
+Test Case '-[VLCTimelineHoverReentrancyTest testFreshShorterDurationDrivesBothPointerAndActualRequest]' started.
+Test Case '-[VLCTimelineHoverReentrancyTest testFreshShorterDurationDrivesBothPointerAndActualRequest]' passed (0.000 seconds).
+Test Case '-[VLCTimelineHoverReentrancyTest testMalformedOrIneligibleContextUsesTimeOnlyFallback]' started.
+Test Case '-[VLCTimelineHoverReentrancyTest testMalformedOrIneligibleContextUsesTimeOnlyFallback]' passed (0.000 seconds).
+Test Case '-[VLCTimelineHoverReentrancyTest testSnapshotNotificationInvalidatesCompletionBeforeGuardReadsState]' started.
+Test Case '-[VLCTimelineHoverReentrancyTest testSnapshotNotificationInvalidatesCompletionBeforeGuardReadsState]' passed (0.000 seconds).
+Test Case '-[VLCTimelineHoverReentrancyTest testSnapshotNotificationPrecedesNewHoverPresentation]' started.
+Test Case '-[VLCTimelineHoverReentrancyTest testSnapshotNotificationPrecedesNewHoverPresentation]' passed (0.000 seconds).
+Test Suite 'VLCTimelineHoverReentrancyTest' passed at 2026-10-06 00:18:03.026.
+	 Executed 8 tests, with 0 failures (0 unexpected) in 0.090 (0.090) seconds
+Test Suite 'VLCTimelineHoverTest' started at 2026-10-06 00:18:03.026.
+Test Case '-[VLCTimelineHoverTest testCenteredBandUsesBarAndClipsItsHorizontalRange]' started.
+Test Case '-[VLCTimelineHoverTest testCenteredBandUsesBarAndClipsItsHorizontalRange]' passed (0.000 seconds).
+Test Case '-[VLCTimelineHoverTest testDelayedPresentationRequiresBothRequestAndContextGeneration]' started.
+Test Case '-[VLCTimelineHoverTest testDelayedPresentationRequiresBothRequestAndContextGeneration]' passed (0.000 seconds).
+Test Case '-[VLCTimelineHoverTest testDirectParentConversionAndClippingPreserveSeekFrame]' started.
+Test Case '-[VLCTimelineHoverTest testDirectParentConversionAndClippingPreserveSeekFrame]' passed (0.003 seconds).
+Test Case '-[VLCTimelineHoverTest testPointerFractionUsesActualBarAndClampsEndpoints]' started.
+Test Case '-[VLCTimelineHoverTest testPointerFractionUsesActualBarAndClampsEndpoints]' passed (0.000 seconds).
+Test Suite 'VLCTimelineHoverTest' passed at 2026-10-06 00:18:03.030.
+	 Executed 4 tests, with 0 failures (0 unexpected) in 0.004 (0.004) seconds
+Test Suite 'VLCTimelineHoverReentrancyTests.xctest' passed at 2026-10-06 00:18:03.030.
+	 Executed 12 tests, with 0 failures (0 unexpected) in 0.093 (0.094) seconds
+Test Suite 'All tests' passed at 2026-10-06 00:18:03.030.
+	 Executed 12 tests, with 0 failures (0 unexpected) in 0.093 (0.095) seconds

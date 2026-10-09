@@ -1,0 +1,48 @@
+{
+  "stage": "0001 process termination plus 0003 picture orientation; before experimental0004",
+  "source_pin": "2e358f3098c2f2b7621d1dc568de8b61ad786322",
+  "source_diff_sha256": "49ce3a649cc3987b4a475fc61ee2dcbb938d115b0d1dd4281c841dd4e1c7edde",
+  "candidate_product_inputs": {
+    "include/vlc_process.h": "56c0262e33d3129444597650de71c9b74b496e2d23b8bae0535ad0b31df2bbbb",
+    "src/misc/picture.c": "b8bf7b22839f514880c4df4dd783849b0287b3dbbe15d93dc9e757b401f582a5",
+    "src/posix/process.c": "2f777b8c4930bd11187491921a6f2b56061bb2de058528fe861a88f08192e501",
+    "test/Makefile.am": "1f856406c9e31880556d9267b427ec283b3eb583c2a4a51ff55f5ad77bd3b30a",
+    "test/src/meson.build": "0bac81b330dbf284eb7f42f8490d1d44005c6dc1bffed25ac305151c545fd500",
+    "test/src/misc/image.c": "5df565faa6162879e4dfdf6b9799c56ce379b04632504c752e1045a251ed14fd",
+    "test/src/misc/process.c": "a2ac9ae837852c970ce58621a456130c33bbeb8a0a4d3d7567e24923a2679daf"
+  },
+  "build_receipt": "docs/evidence/story-005/candidate-build-20261006T024008Z.json",
+  "image_compile_receipt": "docs/evidence/story-005/candidate-build-20261006T024126Z.json",
+  "image_run_receipt": "docs/evidence/story-005/candidate-build-20261006T024133Z.json",
+  "preserved_pre_orientation_app": "work/story005-scout/candidate-before-orientation.app",
+  "outputs": {
+    "src/.libs/libvlccore.9.dylib": {
+      "bytes": 2745344,
+      "sha256": "d9901cfb98f17ec4eff691aac484fa98867460d9864a0b1cab997c9d7ae61c43"
+    },
+    "bin/vlc-preparser-static": {
+      "bytes": 82920,
+      "sha256": "3627f0ee12674a61cadfecec890e4e5d11a2b95fcd01aec082aa05f11e0154ef"
+    },
+    "modules/.libs/libmp4_plugin.dylib": {
+      "bytes": 320672,
+      "sha256": "1c0e2ebbacfaee897a32ae9c701cf1de1af9ae8938180322beaa137e63a49885"
+    },
+    "test/.libs/test_src_misc_image": {
+      "bytes": 57184,
+      "sha256": "f10317fefcd9e4fcc6504e60fe66c235e575850749215bfeb1c0ce4849d31b1c"
+    },
+    "VLC.app/Contents/Frameworks/libvlccore.9.dylib": {
+      "bytes": 2729488,
+      "sha256": "7a3bb5c066691e342bc69af09e69f8465bda0f249eedf8cc5c69eb85cd9ae37b"
+    },
+    "VLC.app/Contents/MacOS/VLC": {
+      "bytes": 56512,
+      "sha256": "cf0cc765457f6ea8b4eef5333d4df0b20d470a1b2090654800878d14b145d34e"
+    },
+    "VLC.app/Contents/Frameworks/plugins/plugins.dat": {
+      "bytes": 291372,
+      "sha256": "9aa75416e860e01d08069b9ee7fad5828fec346de8d4db436faa756a2328383c"
+    }
+  }
+}

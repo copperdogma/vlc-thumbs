@@ -1,0 +1,21 @@
+  OBJC     gui/macosx/tests/VLCMacOSXTests-VLCThumbnailServiceTest.o
+make[1]: `vlc-cache-gen' is up to date.
+  GEN      VLCMacOSXTests
+  GEN      VLCMacOSXTests.xctest
+libtool: warning: '../lib/libvlc.la' has not been installed in '//lib'
+libtool: warning: '/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-reproduction/src/libvlccore.la' has not been installed in '//lib'
+libtool: warning: '../src/libvlccore.la' has not been installed in '//lib'
+libtool: install: /usr/local/bin/ginstall -c .libs/VLCMacOSXTests /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-reproduction/modules/VLCMacOSXTests.xctest/Contents/MacOS/VLCMacOSXTests
+Test Suite 'Selected tests' started at 2026-10-06 00:45:31.767.
+Test Suite 'VLCMacOSXTests.xctest' started at 2026-10-06 00:45:31.768.
+Test Suite 'VLCThumbnailServiceTest' started at 2026-10-06 00:45:31.768.
+Test Case '-[VLCThumbnailServiceTest testServiceContracts]' started.
+Test Case '-[VLCThumbnailServiceTest testServiceContracts]' passed (59.772 seconds).
+Test Case '-[VLCThumbnailServiceTest testWorkerCommandDeadlineAndPartialWrites]' started.
+Test Case '-[VLCThumbnailServiceTest testWorkerCommandDeadlineAndPartialWrites]' passed (0.872 seconds).
+Test Suite 'VLCThumbnailServiceTest' passed at 2026-10-06 00:46:32.413.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 60.644 (60.644) seconds
+Test Suite 'VLCMacOSXTests.xctest' passed at 2026-10-06 00:46:32.413.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 60.644 (60.645) seconds
+Test Suite 'Selected tests' passed at 2026-10-06 00:46:32.413.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 60.644 (60.645) seconds

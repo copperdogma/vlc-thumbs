@@ -1,0 +1,5 @@
+testapi: child ready: pid=58349 pgid=58195 mode=wait
+testapi: forced termination passed
+testapi: child ready: pid=58354 pgid=58195 mode=wait
+testapi: write after kill errno=22
+Assertion failed: (errno == EPIPE), function main, file process.c, line 99.

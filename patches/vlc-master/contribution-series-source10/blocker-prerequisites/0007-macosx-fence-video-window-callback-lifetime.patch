@@ -1,0 +1,789 @@
+diff --git a/modules/gui/macosx/tests/Makefile.am b/modules/gui/macosx/tests/Makefile.am
+index 236372a136271c11a6870747fdabd463bcf5cc26..7428716703069aa12491570951735685f46678fa 100644
+--- a/modules/gui/macosx/tests/Makefile.am
++++ b/modules/gui/macosx/tests/Makefile.am
+@@ -119,6 +119,19 @@
+ 
+ check-macosx: $(macosx_gui_xctest_bundles)
+ 	$(AM_V_at)VLC_PLUGIN_PATH="$(abs_builddir)"; export VLC_PLUGIN_PATH; result=0; for bundle in $(macosx_gui_xctest_bundles); do $(XCTEST_LOG_COMPILER) $$bundle || result=$$?; done; exit $$result
++
++# Exercise the real provider operations without creating native windows.
++check_PROGRAMS += vlc-vout-lifetime-test
++TESTS += vlc-vout-lifetime-test
++vlc_vout_lifetime_test_SOURCES = \
++ gui/macosx/windows/video/VLCVideoOutputProvider.m \
++ gui/macosx/windows/video/VLCVoutView.m \
++ gui/macosx/tests/VLCVoutLifetimeWiringTest.m \
++ gui/macosx/tests/VLCVoutLifetimeTestSupport.m
++vlc_vout_lifetime_test_CPPFLAGS = $(VLCMacOSXTests_CPPFLAGS)
++vlc_vout_lifetime_test_OBJCFLAGS = $(VLCMacOSXTests_OBJCFLAGS)
++vlc_vout_lifetime_test_LDFLAGS = -Wl,-framework,Cocoa -Wl,-framework,QuartzCore
++vlc_vout_lifetime_test_LDADD = $(top_builddir)/src/libvlccore.la
+ 
+ # Focused context seam keeps its injected stubs separate from service tests.
+ check_PROGRAMS += VLCTimelineContextTests
+diff --git a/modules/gui/macosx/tests/VLCVoutLifetimeTestSupport.m b/modules/gui/macosx/tests/VLCVoutLifetimeTestSupport.m
+new file mode 100644
+index 0000000000000000000000000000000000000000..a29a86690464d33a8419cf726b8f09d826159355 100644
+--- /dev/null
++++ b/modules/gui/macosx/tests/VLCVoutLifetimeTestSupport.m
+@@ -0,0 +1,39 @@
++/* SPDX-License-Identifier: GPL-2.0-or-later */
++/* Link-only shells. No NSWindow is instantiated and no GUI path is simulated. */
++#import "main/VLCMain.h"
++#import "coreinteraction/VLCHotkeysController.h"
++#import "views/VLCFileDragRecognisingView.h"
++#import "windows/video/VLCWindow.h"
++#import "windows/video/VLCVideoWindowCommon.h"
++#import "windows/video/VLCFullVideoViewWindow.h"
++#import "windows/video/VLCAspectRatioRetainingVideoWindow.h"
++#import "library/VLCLibraryWindow.h"
++#import "library/VLCLibraryDataTypes.h"
++#import "os-integration/VLCKeyboardBacklightControl.h"
++NSString *VLCVideoWindowShouldShowFullscreenController=@"VoutLifetimeTestFullscreen";
++NSString * const VLCPlaybackEndViewEnabledKey=@"VoutLifetimeTestEndView";
++const CGFloat VLCVideoWindowCommonMinimalHeight=70;
++const char vlc_module_name[]="vout-lifetime-test";
++intf_thread_t *getIntf(void){return NULL;}
++#pragma clang diagnostic push
++#pragma clang diagnostic ignored "-Wincomplete-implementation"
++#pragma clang diagnostic ignored "-Wprotocol"
++@implementation VLCMain
+++ (instancetype)sharedInstance{return nil;}
++@end
++@implementation VLCHotkeysController
++- (BOOL)handleVideoOutputKeyDown:(id)e forVideoOutput:(vout_thread_t *)v{return NO;}
++- (BOOL)performKeyEquivalent:(NSEvent *)e{return NO;}
++@end
++@implementation VLCFileDragRecognisingView
+++ (BOOL)handlePasteboardFromDragSessionAsPlayQueueItems:(NSPasteboard *)p{return NO;}
++- (void)setupDragRecognition{}
++@end
++@implementation VLCWindow @end
++@implementation VLCVideoWindowCommon @end
++@implementation VLCFullVideoViewWindow @end
++@implementation VLCAspectRatioRetainingVideoWindow @end
++@implementation VLCLibraryWindow @end
++@implementation VLCMediaLibraryMediaItem @end
++@implementation VLCKeyboardBacklightControl @end
++#pragma clang diagnostic pop
+diff --git a/modules/gui/macosx/tests/VLCVoutLifetimeWiringTest.m b/modules/gui/macosx/tests/VLCVoutLifetimeWiringTest.m
+new file mode 100644
+index 0000000000000000000000000000000000000000..9c85613c7e34accc73063ffced0cb4446b973046 100644
+--- /dev/null
++++ b/modules/gui/macosx/tests/VLCVoutLifetimeWiringTest.m
+@@ -0,0 +1,216 @@
++/* SPDX-License-Identifier: GPL-2.0-or-later */
++/* Actual provider/view TUs, actual registered operations. No GUI removal proof. */
++#include <vlc_common.h>
++#include <vlc_tick.h>
++#include <vlc_threads.h>
++#import "windows/video/VLCVoutView.h"
++#import "windows/video/VLCVideoOutputProvider.h"
++#import <objc/runtime.h>
++#include <stdatomic.h>
++#include <stdio.h>
++#include <sched.h>
++
++extern int WindowOpen(vlc_window_t *);
++static VLCVideoOutputProvider *provider;
++static atomic_int failures;
++#define CHECK(x) do { if (!(x)) { fprintf(stderr,"FAIL %d: %s\n",__LINE__,#x); ++failures; } } while(0)
++static dispatch_semaphore_t entered, releaseCallback;
++static bool blockCallback;
++
++struct Owner {
++    atomic_uint calls;
++    atomic_bool retired;
++    unsigned width, height;
++};
++
++static void waitFor(dispatch_semaphore_t s)
++{
++    CHECK(dispatch_semaphore_wait(s, dispatch_time(DISPATCH_TIME_NOW, 2 * NSEC_PER_SEC)) == 0);
++}
++
++static void resized(vlc_window_t *w, unsigned width, unsigned height, vlc_window_ack_cb ack, void *opaque)
++{
++    struct Owner *o = w->owner.sys;
++    fprintf(stdout, "RESIZE width=%u height=%u\n", width, height);
++    CHECK(!atomic_load(&o->retired));
++    CHECK(width == o->width && height == o->height);
++    CHECK(!ack && !opaque);
++    atomic_fetch_add(&o->calls, 1);
++    if (blockCallback) {
++        dispatch_semaphore_signal(entered);
++        waitFor(releaseCallback);
++    }
++}
++
++static const struct vlc_window_callbacks callbacks = { .resized = resized };
++
++static dispatch_queue_t events(VLCVoutView *v)
++{
++    Ivar ivar = class_getInstanceVariable(VLCVoutView.class, "_eventQueue");
++    CHECK(ivar != NULL);
++    if (ivar == NULL)
++        abort();
++    return object_getIvar(v, ivar);
++}
++
++static void bindCurrent(VLCVoutView *v, vlc_window_t *w)
++{
++#ifdef VOUT_LIFETIME_BASELINE
++    v.voutWindow = w;
++#else
++    VLCVoutWindowLifetime *l = (__bridge VLCVoutWindowLifetime *)w->sys;
++    [v bindWindow:w lifetime:l generation:[l activate]];
++#endif
++}
++
++static void openBind(VLCVoutView *v, vlc_window_t *w, struct Owner *o)
++{
++    NSRect backing = [v convertRectToBacking:v.bounds];
++    CHECK(v.bounds.size.width == 320 && v.bounds.size.height == 180);
++    o->width = backing.size.width;
++    o->height = backing.size.height;
++    memset(w, 0, sizeof(*w));
++    w->owner.cbs = &callbacks;
++    w->owner.sys = o;
++    CHECK(WindowOpen(w) == VLC_SUCCESS);
++    CHECK(w->ops && w->ops->disable);
++    CHECK(w->ops->destroy != NULL);
++    bindCurrent(v, w);
++}
++
++static void destroy(vlc_window_t *w)
++{
++    if (w->ops->destroy)
++        w->ops->destroy(w);
++}
++
++static VLCVoutView *newView(void)
++{
++    VLCVoutView *v = [[VLCVoutView alloc] initWithFrame:NSMakeRect(0, 0, 320, 180)];
++    NSRect b = [v convertRectToBacking:v.bounds];
++    fprintf(stdout, "GEOMETRY bounds=%.0fx%.0f backing=%.0fx%.0f\n",
++            v.bounds.size.width, v.bounds.size.height, b.size.width, b.size.height);
++    return v;
++}
++
++static void queuedDestroy(void)
++{
++    int before = failures;
++    struct Owner o = {0};
++    vlc_window_t w;
++    VLCVoutView *v = newView();
++    openBind(v, &w, &o);
++    dispatch_semaphore_t blocked = dispatch_semaphore_create(0), resume = dispatch_semaphore_create(0);
++    dispatch_async(events(v), ^{
++        dispatch_semaphore_signal(blocked);
++        waitFor(resume);
++    });
++    waitFor(blocked);
++    [v layout];
++    destroy(&w);
++    atomic_store(&o.retired, true);
++    dispatch_semaphore_signal(resume);
++    dispatch_sync(events(v), ^{});
++    CHECK(atomic_load(&o.calls) == 0);
++    v.voutWindow = NULL;
++    fprintf(stdout, "CASE queued-destroy failures=%d\n", failures - before);
++}
++
++static void inFlight(bool close)
++{
++    int before = failures;
++    struct Owner o = {0};
++    vlc_window_t w;
++    VLCVoutView *v = newView();
++    openBind(v, &w, &o);
++    entered = dispatch_semaphore_create(0);
++    releaseCallback = dispatch_semaphore_create(0);
++    blockCallback = true;
++    [v layout];
++    waitFor(entered);
++    dispatch_semaphore_t done = dispatch_semaphore_create(0);
++    vlc_window_t *wp = &w;
++#ifndef VOUT_LIFETIME_BASELINE
++    VLCVoutWindowLifetime *life = (__bridge VLCVoutWindowLifetime *)w.sys;
++#endif
++    dispatch_async(dispatch_get_global_queue(QOS_CLASS_DEFAULT, 0), ^{
++        if (close)
++            destroy(wp);
++        else
++            wp->ops->disable(wp);
++        dispatch_semaphore_signal(done);
++    });
++#ifndef VOUT_LIFETIME_BASELINE
++    /* Observe entry into actual revoke, not a signal before calling it. */
++    vlc_tick_t deadline = vlc_tick_now() + VLC_TICK_FROM_SEC(2);
++    while ([life activeGeneration] != 0 && vlc_tick_now() < deadline)
++        sched_yield();
++    CHECK([life activeGeneration] == 0);
++#endif
++    long early = dispatch_semaphore_wait(done, dispatch_time(DISPATCH_TIME_NOW, 100 * NSEC_PER_MSEC));
++    CHECK(early != 0); /* Owner callback remains held; quiescence cannot complete. */
++    dispatch_semaphore_signal(releaseCallback);
++    if (early != 0)
++        waitFor(done);
++    dispatch_sync(events(v), ^{});
++    blockCallback = false;
++    if (!close)
++        destroy(&w);
++    atomic_store(&o.retired, true);
++    [v layout];
++    dispatch_sync(events(v), ^{});
++    CHECK(atomic_load(&o.calls) == 1);
++    v.voutWindow = NULL;
++    fprintf(stdout, "CASE inflight-%s failures=%d\n", close ? "destroy" : "disable", failures - before);
++}
++
++static void rebound(bool reuseAddress)
++{
++    int before = failures;
++    struct Owner first = {0}, second = {0};
++    vlc_window_t w;
++    VLCVoutView *v = newView();
++    openBind(v, &w, &first);
++    dispatch_semaphore_t blocked = dispatch_semaphore_create(0), resume = dispatch_semaphore_create(0);
++    dispatch_async(events(v), ^{
++        dispatch_semaphore_signal(blocked);
++        waitFor(resume);
++    });
++    waitFor(blocked);
++    [v layout];
++    if (reuseAddress) {
++        destroy(&w);
++        openBind(v, &w, &second);
++    } else {
++        w.ops->disable(&w);
++        second.width = first.width;
++        second.height = first.height;
++        w.owner.sys = &second;
++        bindCurrent(v, &w);
++    }
++    [v layout];
++    dispatch_semaphore_signal(resume);
++    dispatch_sync(events(v), ^{});
++    CHECK(atomic_load(&first.calls) == 0);
++    CHECK(atomic_load(&second.calls) == 1);
++    destroy(&w);
++    v.voutWindow = NULL;
++    fprintf(stdout, "CASE %s failures=%d\n", reuseAddress ? "address-reuse" : "disable-rebind", failures - before);
++}
++
++int main(void)
++{
++    @autoreleasepool {
++        CHECK(NSThread.isMainThread);
++        /* Process-lifetime provider; real init installs the normal ops admission.
++         * Nil GUI singleton prevents window creation/removal and media access. */
++        provider = [VLCVideoOutputProvider new];
++        queuedDestroy();
++        inFlight(false);
++        inFlight(true);
++        rebound(false);
++        rebound(true);
++    }
++    fprintf(stdout, "vout wiring total failures=%d\n", failures);
++    return failures ? 1 : 0;
++}
+diff --git a/modules/gui/macosx/windows/video/VLCVideoOutputProvider.m b/modules/gui/macosx/windows/video/VLCVideoOutputProvider.m
+index 1bfe23667e8c460b1da09c5461eaf5fcb1ae2dcb..b3dac67b748f6bdb55906ac15f7963e576ccf6d1 100644
+--- a/modules/gui/macosx/windows/video/VLCVideoOutputProvider.m
++++ b/modules/gui/macosx/windows/video/VLCVideoOutputProvider.m
+@@ -56,6 +56,11 @@
+ NSString * const VLCWindowFloatOnTopChangedNotificationName = @"VLCWindowFloatOnTopChanged";
+ NSString * const VLCWindowFloatOnTopEnabledNotificationKey = @"VLCWindowFloatOnTopEnabled";
+ 
++@interface VLCVideoOutputProvider (WindowLifetime)
++- (BOOL)hasLifetime:(VLCVoutWindowLifetime *)lifetime generation:(uint64_t)generation;
++- (void)removeVoutForLifetime:(VLCVoutWindowLifetime *)lifetime generation:(uint64_t)generation;
++@end
++
+ static int WindowEnable(vlc_window_t *p_wnd, const vlc_window_cfg_t *cfg)
+ {
+     @autoreleasepool {
+@@ -68,18 +73,28 @@
+             return VLC_EGENERIC;
+         }
+ 
++        VLCVoutWindowLifetime *lifetime = (__bridge VLCVoutWindowLifetime *)p_wnd->sys;
++        if ([lifetime activeGeneration] != 0)
++            return VLC_SUCCESS;
+         __block VLCVoutView *videoView = nil;
+-
+         dispatch_sync(dispatch_get_main_queue(), ^{
++            /* Earlier Disable removal precedes this main-queue setup. Balance
++             * the previous native handle only on main, before replacing it. */
++            if (p_wnd->handle.nsobject != NULL) {
++                id oldView = CFBridgingRelease(p_wnd->handle.nsobject);
++                p_wnd->handle.nsobject = NULL;
++                (void)oldView;
++            }
++            [lifetime activate];
+             videoView = [voutProvider setupVoutForWindow:p_wnd
+                              withProposedVideoViewPosition:proposedVideoViewPosition];
++            if (videoView != nil)
++                p_wnd->handle.nsobject = (void *)CFBridgingRetain(videoView);
+         });
+-
+-        // this method is not supposed to fail
+-        assert(videoView != nil);
+-
+-        msg_Dbg(getIntf(), "returning videoview with proposed position x=%i, y=%i, width=%i, height=%i", cfg->x, cfg->y, cfg->width, cfg->height);
+-        p_wnd->handle.nsobject = (void *)CFBridgingRetain(videoView);
++        if (videoView == nil) {
++            [lifetime revokeAndWait];
++            return VLC_EGENERIC;
++        }
+     }
+     if (cfg->is_fullscreen)
+         vlc_window_SetFullScreen(p_wnd, NULL);
+@@ -90,9 +105,11 @@
+ {
+     @autoreleasepool {
+         VLCVideoOutputProvider *voutProvider = VLCMain.sharedInstance.voutProvider;
+-
++        VLCVoutWindowLifetime *lifetime = (__bridge VLCVoutWindowLifetime *)p_wnd->sys;
++        const uint64_t generation = [lifetime activeGeneration];
++        [lifetime revokeAndWait];
+         dispatch_async(dispatch_get_main_queue(), ^{
+-            [voutProvider removeVoutForDisplay:[NSValue valueWithPointer:p_wnd]];
++            [voutProvider removeVoutForLifetime:lifetime generation:generation];
+         });
+     }
+ }
+@@ -103,9 +120,12 @@
+     @autoreleasepool {
+         VLCVideoOutputProvider *voutProvider = VLCMain.sharedInstance.voutProvider;
+ 
++        VLCVoutWindowLifetime *lifetime = (__bridge VLCVoutWindowLifetime *)p_wnd->sys;
++        const uint64_t generation = [lifetime activeGeneration];
+         dispatch_async(dispatch_get_main_queue(), ^{
+-            [voutProvider setNativeVideoSize:NSMakeSize(i_width, i_height)
+-                          forWindow:p_wnd];
++            if ([voutProvider hasLifetime:lifetime generation:generation])
++                [voutProvider setNativeVideoSize:NSMakeSize(i_width, i_height)
++                                      forWindow:lifetime.windowKey.pointerValue];
+         });
+     }
+ }
+@@ -122,8 +142,11 @@
+         if (i_state & VLC_WINDOW_STATE_ABOVE)
+             i_cocoa_level = NSStatusWindowLevel;
+ 
++        VLCVoutWindowLifetime *lifetime = (__bridge VLCVoutWindowLifetime *)p_wnd->sys;
++        const uint64_t generation = [lifetime activeGeneration];
+         dispatch_async(dispatch_get_main_queue(), ^{
+-            [voutProvider setWindowLevel:i_cocoa_level forWindow:p_wnd];
++            if ([voutProvider hasLifetime:lifetime generation:generation])
++                [voutProvider setWindowLevel:i_cocoa_level forWindow:lifetime.windowKey.pointerValue];
+         });
+ 
+     }
+@@ -144,10 +167,13 @@
+     @autoreleasepool {
+         VLCVideoOutputProvider *voutProvider = VLCMain.sharedInstance.voutProvider;
+ 
++        VLCVoutWindowLifetime *lifetime = (__bridge VLCVoutWindowLifetime *)p_wnd->sys;
++        const uint64_t generation = [lifetime activeGeneration];
+         dispatch_async(dispatch_get_main_queue(), ^{
+-            [voutProvider setFullscreen:i_full
+-                          forWindow:p_wnd
+-                          withAnimation:b_animation];
++            if ([voutProvider hasLifetime:lifetime generation:generation])
++                [voutProvider setFullscreen:i_full
++                                  forWindow:lifetime.windowKey.pointerValue
++                              withAnimation:b_animation];
+         });
+     }
+ }
+@@ -160,6 +186,7 @@
+ static atomic_bool b_intf_starting = false;
+ 
+ static const struct vlc_window_operations ops = {
++    .destroy = VLCVoutWindowDestroy,
+     .enable = WindowEnable,
+     .disable = WindowDisable,
+     .resize = WindowResize,
+@@ -175,6 +202,9 @@
+         return VLC_EGENERIC;
+     }
+ 
++    int result = VLCVoutWindowOpen(p_wnd);
++    if (result != VLC_SUCCESS)
++        return result;
+     p_wnd->type = VLC_WINDOW_TYPE_NSOBJECT;
+     p_wnd->ops = &ops;
+     return VLC_SUCCESS;
+@@ -188,8 +218,8 @@
+ {
+     VLC_UNUSED(obj); VLC_UNUSED(psz_var); VLC_UNUSED(oldval);
+     @autoreleasepool {
++        VLCVideoWindowCommon * const videoWindow = (__bridge VLCVideoWindowCommon *)p_data;
+         dispatch_async(dispatch_get_main_queue(), ^{
+-            VLCVideoWindowCommon * const videoWindow = (__bridge VLCVideoWindowCommon *)p_data;
+             NSNotificationCenter * const notificationCenter = NSNotificationCenter.defaultCenter;
+             NSDictionary<NSString *, NSNumber *> * const userInfo = @{
+                 VLCWindowFloatOnTopEnabledNotificationKey: @(newval.b_bool)
+@@ -424,7 +454,8 @@
+     vout_thread_t * const p_vout = (vout_thread_t *)vlc_object_parent(p_wnd);
+     var_AddCallback(p_vout, "video-on-top", WindowFloatOnTop, (__bridge void *)videoWindow);
+     voutView.voutThread = p_vout;
+-    voutView.voutWindow = p_wnd;
++    VLCVoutWindowLifetime *lifetime = (__bridge VLCVoutWindowLifetime *)p_wnd->sys;
++    [voutView bindWindow:p_wnd lifetime:lifetime generation:[lifetime activeGeneration]];
+     videoWindow.hasActiveVideo = YES;
+     if (videoWindow.class == VLCLibraryWindow.class)
+         [(VLCLibraryWindow *)videoWindow enableVideoPlaybackAppearance];
+@@ -458,6 +489,8 @@
+     _playerController = VLCMain.sharedInstance.playQueueController.playerController;
+     VLCVideoWindowCommon *newVideoWindow = [self setupVideoWindow];
+     VLCVoutView *voutView = newVideoWindow.videoViewController.voutView;
++    if (newVideoWindow == nil || voutView == nil)
++        return nil;
+ 
+     BOOL multipleVoutWindows = _voutWindows.count > 0;
+     BOOL videoWallpaper = var_InheritBool(getIntf(), "video-wallpaper") && !multipleVoutWindows;
+@@ -474,29 +507,40 @@
+     return voutView;
+ }
+ 
++- (BOOL)hasLifetime:(VLCVoutWindowLifetime *)lifetime generation:(uint64_t)generation
++{
++    if (lifetime == nil || generation == 0)
++        return NO;
++    VLCVideoWindowCommon *window = [_voutWindows objectForKey:lifetime.windowKey];
++    return generation != 0 && [lifetime activeGeneration] == generation &&
++        [window.videoViewController.voutView isBoundToLifetime:lifetime generation:generation];
++}
++
+ - (void)removeVoutForDisplay:(NSValue *)key
+ {
++    VLCVoutView *view = [[_voutWindows objectForKey:key] videoViewController].voutView;
++    [self removeVoutForLifetime:view.windowLifetime generation:view.windowGeneration];
++}
++
++- (void)removeVoutForLifetime:(VLCVoutWindowLifetime *)lifetime generation:(uint64_t)generation
++{
++    if (lifetime == nil || generation == 0)
++        return;
++    NSValue *key = lifetime.windowKey;
+     VLCVideoWindowCommon * const videoWindow = [_voutWindows objectForKey:key];
+-    if (!videoWindow) {
+-        msg_Err(getIntf(), "Cannot close nonexisting window");
+-        return;
+-    }
+-
+-    vlc_window_t * const p_wnd = (vlc_window_t *)key.pointerValue;
+-    if (p_wnd) {
+-        vout_thread_t * const p_vout = (vout_thread_t *)vlc_object_parent(p_wnd);
+-        if (p_vout) {
+-            var_DelCallback(p_vout, "video-on-top", WindowFloatOnTop, (__bridge void *)videoWindow);
+-        } else {
+-            msg_Warn(getIntf(),
+-                     "Could not get p_vout to unregister WindowFloatOnTop callback for window %p",
+-                     p_wnd);
+-        }
+-    } else {
+-        msg_Warn(getIntf(), "Could not get p_wnd from key to unregister WindowFloatOnTop callback");
+-    }
+-
+-    [videoWindow.videoViewController.voutView releaseVoutThread];
++    VLCVoutView *view = videoWindow.videoViewController.voutView;
++    if (generation == 0 || ![view isBoundToLifetime:lifetime generation:generation])
++        return;
++
++    /* The getter returns an owned hold. Never recover a parent from an opaque
++     * key after asynchronous removal: the C window may already be gone. */
++    vout_thread_t *vout = view.voutThread;
++    view.voutWindow = NULL;
++    if (vout != NULL)
++        var_DelCallback(vout, "video-on-top", WindowFloatOnTop, (__bridge void *)videoWindow);
++    [view releaseVoutThread];
++    if (vout != NULL)
++        vout_Release(vout);
+ 
+     // set active video to no BEFORE closing the window and exiting fullscreen
+     // (avoid stopping playback due to NSWindowWillCloseNotification, preserving fullscreen state)
+@@ -519,7 +563,9 @@
+         && _playerController.playerState == VLC_PLAYER_STATE_STOPPED) {
+         [videoWindow.videoViewController displayPlaybackEndView];
+         videoWindow.videoViewController.endViewDismissHandler = ^{
+-            [self handleVideoCloseForDisplay:key];
++            VLCVideoWindowCommon *current = [self->_voutWindows objectForKey:key];
++            if ([current.videoViewController.voutView isBoundToLifetime:lifetime generation:generation])
++                [self handleVideoCloseForDisplay:key];
+         };
+         if (videoWindow.class == VLCLibraryWindow.class) {
+             b_mainWindowHasVideo = NO;
+@@ -664,9 +710,18 @@
+     }
+ 
+     VLCVideoWindowCommon *o_current_window = nil;
++    VLCVoutWindowLifetime *lifetime = nil;
++    uint64_t generation = 0;
+     if (p_wnd) {
+         o_current_window = [_voutWindows objectForKey:[NSValue valueWithPointer:p_wnd]];
+-    }
++        lifetime = o_current_window.videoViewController.voutView.windowLifetime;
++        generation = o_current_window.videoViewController.voutView.windowGeneration;
++        if (![self hasLifetime:lifetime generation:generation])
++            return;
++    }
++    BOOL (^bindingIsCurrent)(void) = ^BOOL{
++        return lifetime == nil || [self hasLifetime:lifetime generation:generation];
++    };
+ 
+     if (b_nativeFullscreenMode) {
+         if(!o_current_window)
+@@ -679,7 +734,8 @@
+            (!b_fullscreen && [o_current_window fullscreen])) {
+ 
+             dispatch_async(dispatch_get_main_queue(), ^{
+-                [o_current_window toggleFullScreen:self];
++                if (bindingIsCurrent())
++                    [o_current_window toggleFullScreen:self];
+             });
+         }
+     } else {
+@@ -690,13 +746,15 @@
+                 // activate app, as method can also be triggered from outside the app (prevents nasty window layout)
+                 [NSApp activateIgnoringOtherApps:YES];
+                 dispatch_async(dispatch_get_main_queue(), ^{
++                    if (bindingIsCurrent())
+                     [o_current_window enterFullscreenWithAnimation:b_animation];
+                 });
+             }
+         } else {
+             // leaving fullscreen is always allowed
+             dispatch_async(dispatch_get_main_queue(), ^{
+-                [o_current_window leaveFullscreenWithAnimation:YES];
++                if (bindingIsCurrent())
++                    [o_current_window leaveFullscreenWithAnimation:YES];
+             });
+         }
+     }
+diff --git a/modules/gui/macosx/windows/video/VLCVoutView.h b/modules/gui/macosx/windows/video/VLCVoutView.h
+index 008a640c1c5c4e3fda71f70712a0ffccc4414994..b57cc57d1000bcc1d07054aac5151a2908e910d5 100644
+--- a/modules/gui/macosx/windows/video/VLCVoutView.h
++++ b/modules/gui/macosx/windows/video/VLCVoutView.h
+@@ -35,11 +35,35 @@
+ /*****************************************************************************
+  * VLCVoutView interface
+  *****************************************************************************/
++/* One C window owns one lifetime; queued work retains it independently of views.
++ * Owner callbacks must not call window operations (vlc_window_callbacks contract).
++ */
++@interface VLCVoutWindowLifetime : NSObject
++@property (readonly) NSValue *windowKey;
++- (instancetype)initWithWindow:(vlc_window_t *)window;
++- (uint64_t)activeGeneration;
++- (uint64_t)activate;
++- (void)revokeAndWait;
++- (void)invalidate;
++- (void)reportSize:(NSSize)size generation:(uint64_t)generation;
++@end
++
++/* Normal provider ownership boundaries; also exercised by the native harness. */
++int VLCVoutWindowOpen(vlc_window_t *window);
++void VLCVoutWindowDestroy(vlc_window_t *window);
++
+ @interface VLCVoutView : VLCFileDragRecognisingView<VLCDragDropTarget>
+ 
+ @property (readwrite, assign) vout_thread_t *voutThread;
+ @property (readwrite, assign) vlc_window_t *voutWindow;
+ 
++@property (readonly) VLCVoutWindowLifetime *windowLifetime;
++@property (readonly) uint64_t windowGeneration;
++- (void)bindWindow:(vlc_window_t *)window
++         lifetime:(VLCVoutWindowLifetime *)lifetime
++       generation:(uint64_t)generation;
++- (BOOL)isBoundToLifetime:(VLCVoutWindowLifetime *)lifetime generation:(uint64_t)generation;
++/* Clears the matching mouse target before releasing the view-owned vout hold. */
+ - (void)releaseVoutThread;
+ 
+ @end
+diff --git a/modules/gui/macosx/windows/video/VLCVoutView.m b/modules/gui/macosx/windows/video/VLCVoutView.m
+index ff860b441bc624a28b758570ee5d05dd564ab13c..141a87c4087bcf0cde9e095eabaa20dbf957af5a 100644
+--- a/modules/gui/macosx/windows/video/VLCVoutView.m
++++ b/modules/gui/macosx/windows/video/VLCVoutView.m
+@@ -41,6 +41,95 @@
+ #import "windows/video/VLCVideoWindowCommon.h"
+ 
+ #import <vlc_actions.h>
++#include <stdatomic.h>
++
++@interface VLCVoutWindowLifetime ()
++{
++    vlc_window_t *_window;
++    vlc_mutex_t _resizeGate;
++    atomic_uint_fast64_t _generation;
++}
++@end
++
++@implementation VLCVoutWindowLifetime
++- (instancetype)initWithWindow:(vlc_window_t *)window
++{
++    self = [super init];
++    if (self) {
++        _window = window;
++        _windowKey = [NSValue valueWithPointer:window];
++        vlc_mutex_init(&_resizeGate);
++        atomic_init(&_generation, 0);
++    }
++    return self;
++}
++- (uint64_t)activeGeneration
++{
++    const uint64_t generation = atomic_load(&_generation);
++    return (generation & 1) ? generation : 0;
++}
++- (uint64_t)activate
++{
++    uint64_t generation = atomic_load(&_generation);
++    if (!(generation & 1)) {
++        assert(generation < UINT64_MAX - 1);
++        generation = atomic_fetch_add(&_generation, 1) + 1;
++    }
++    return generation;
++}
++- (void)revokeAndWait
++{
++    uint64_t generation = atomic_load(&_generation);
++    if (generation & 1)
++        atomic_fetch_add(&_generation, 1);
++    /* Disable follows display shutdown. Never use the view's mouse mutex here:
++     * its callbacks can enter fullscreen/window operations under window_lock. */
++    vlc_mutex_lock(&_resizeGate);
++    vlc_mutex_unlock(&_resizeGate);
++}
++- (void)invalidate
++{
++    [self revokeAndWait];
++    vlc_mutex_lock(&_resizeGate);
++    _window = NULL;
++    vlc_mutex_unlock(&_resizeGate);
++}
++- (void)reportSize:(NSSize)size generation:(uint64_t)generation
++{
++    vlc_mutex_lock(&_resizeGate);
++    if (_window != NULL && generation != 0 &&
++        generation == [self activeGeneration])
++        vlc_window_ReportSize(_window, size.width, size.height);
++    vlc_mutex_unlock(&_resizeGate);
++}
++@end
++
++int VLCVoutWindowOpen(vlc_window_t *window)
++{
++    VLCVoutWindowLifetime *lifetime = [[VLCVoutWindowLifetime alloc] initWithWindow:window];
++    if (lifetime == nil)
++        return VLC_ENOMEM;
++    window->sys = (void *)CFBridgingRetain(lifetime);
++    window->handle.nsobject = NULL;
++    return VLC_SUCCESS;
++}
++
++void VLCVoutWindowDestroy(vlc_window_t *window)
++{
++    VLCVoutWindowLifetime *lifetime = (__bridge_transfer VLCVoutWindowLifetime *)window->sys;
++    window->sys = NULL;
++    [lifetime invalidate];
++    /* Mouse target was detached before the view released its owned vout hold.
++     * Final vout_Release deletes this C window; never wait on a rebound view. */
++    void *retainedView = window->handle.nsobject;
++    window->handle.nsobject = NULL;
++    if (retainedView != NULL) {
++        dispatch_async(dispatch_get_main_queue(), ^{
++            id view = CFBridgingRelease(retainedView);
++            (void)view;
++        });
++    }
++}
+ 
+ /*****************************************************************************
+  * VLCVoutView implementation
+@@ -57,6 +146,8 @@
+ 
+     vout_thread_t *p_vout;
+     vlc_window_t *_wnd;
++    VLCVoutWindowLifetime *_windowLifetime;
++    uint64_t _windowGeneration;
+     dispatch_queue_t _eventQueue;
+     vlc_mutex_t _mutex;
+     NSTrackingArea *_trackingArea;
+@@ -76,9 +167,10 @@
+     _wnd = NULL;
+     vlc_mutex_unlock(&_mutex);
+ 
+-    if (p_vout) {
+-        vout_Release(p_vout);
+-    }
++    vout_thread_t *vout = p_vout;
++    p_vout = NULL;
++    if (vout != NULL)
++        vout_Release(vout);
+ 
+     [self unregisterDraggedTypes];
+ }
+@@ -114,11 +206,10 @@
+     NSRect bounds = [self convertRectToBacking:self.bounds];
+     // dispatch the event async to prevent potential deadlock 
+     // with video output's RenderPicture's display lock
++    VLCVoutWindowLifetime *lifetime = _windowLifetime;
++    const uint64_t generation = _windowGeneration;
+     dispatch_async(_eventQueue, ^{
+-        if (self->_wnd == NULL) {
+-            return;
+-        }
+-        vlc_window_ReportSize(self->_wnd, bounds.size.width, bounds.size.height);
++        [lifetime reportSize:bounds.size generation:generation];
+     });
+     [super layout];
+ }
+@@ -305,6 +396,25 @@
+ #pragma mark -
+ #pragma mark Handling of vout related actions
+ 
++- (void)bindWindow:(vlc_window_t *)window
++         lifetime:(VLCVoutWindowLifetime *)lifetime
++       generation:(uint64_t)generation
++{
++    assert([NSThread isMainThread]);
++    _windowLifetime = lifetime;
++    _windowGeneration = generation;
++    self.voutWindow = window;
++}
++
++- (BOOL)isBoundToLifetime:(VLCVoutWindowLifetime *)lifetime generation:(uint64_t)generation
++{
++    assert([NSThread isMainThread]);
++    return _windowLifetime == lifetime && _windowGeneration == generation;
++}
++
++- (VLCVoutWindowLifetime *)windowLifetime { return _windowLifetime; }
++- (uint64_t)windowGeneration { return _windowGeneration; }
++
+ - (void)setVoutWindow:(vlc_window_t *)p_wnd
+ {
+     vlc_mutex_lock(&_mutex);
+@@ -340,10 +450,12 @@
+ 
+ - (void)releaseVoutThread
+ {
+-    if (p_vout) {
+-        vout_Release(p_vout);
+-        p_vout = NULL;
+-    }
++    assert([NSThread isMainThread]);
++    self.voutWindow = NULL;
++    vout_thread_t *vout = p_vout;
++    p_vout = NULL;
++    if (vout != NULL)
++        vout_Release(vout);
+ }
+ 
+ #pragma mark -

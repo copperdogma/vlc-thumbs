@@ -1,0 +1,27 @@
+{
+  "argv": [
+    "bash",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/libtool",
+    "--tag=CC",
+    "--mode=link",
+    "xcrun",
+    "clang",
+    "-std=c11",
+    "-DHAVE_CONFIG_H",
+    "-D_GNU_SOURCE",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-DTOP_BUILDDIR=\"/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline\"",
+    "-DTOP_SRCDIR=\"/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-candidate\"",
+    "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline",
+    "-I/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-candidate/include",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-candidate/test/src/misc/process.c",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005-candidate/src/posix/process.c",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/src/libvlccore.la",
+    "-o",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-process-candidate-diagnostic/process-test"
+  ],
+  "status": 0,
+  "scope": "Candidate process implementation compiled directly into diagnostic executable; unchanged baseline core supplies other VLC symbols. Not independent candidate core build."
+}

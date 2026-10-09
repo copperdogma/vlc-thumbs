@@ -1,0 +1,70 @@
+{
+  "status": "planning only; NO OpenGL execution; root/native desktop handoff required",
+  "utc": "2026-10-06T13:32:07.112081+00:00",
+  "source_pin": "2e358f3098c2f2b7621d1dc568de8b61ad786322",
+  "source_status": "",
+  "command": [
+    "/bin/sh",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/autotools/test-driver",
+    "--test-name",
+    "test_modules_video_output_opengl_filters",
+    "--log-file",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/docs/evidence/story-005/baseline-opengl-planned001.log",
+    "--trs-file",
+    "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/docs/evidence/story-005/baseline-opengl-planned001.trs",
+    "--color-tests",
+    "no",
+    "--enable-hard-errors",
+    "yes",
+    "--expect-failure",
+    "no",
+    "--",
+    "./test_modules_video_output_opengl_filters"
+  ],
+  "cwd": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/story005-master-baseline/test",
+  "environment_overrides": {
+    "srcdir": "/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/test"
+  },
+  "unchanged_environment": "No backend/renderer/feature override; retain native default10s test alarm. libtoolwrapper choosesbaselinecorelibs; test_init setsbaselinepluginpaths.",
+  "process_ownership": "new session/process group for this test-driver only;90s outer bound;1GiBfreefloor; SIGTERM thenSIGKILL only ownedgroup onbound; childcore-dump limit0; verifygroup absent.",
+  "failure_log": "work/story005-scout/distcheck-runtime-failures-20261006T072705Z/test_modules_video_output_opengl_filters.log",
+  "failure_log_sha256": "98c86119a09eb30f3b44fed425b91ac3df2598aad43cd6f3de25abbbeb15d89d",
+  "failure_signature": "GL_INVALID_OPERATION at filters.c134 immediately after rendererappend; cvpx_gl offscreen + glsampler_builtin + renderer vout_macosx; AppleGL2.1MetalM4Pro",
+  "binary_hashes": {
+    "work/story005-master-baseline/test/test_modules_video_output_opengl_filters": "55cbf6120f27c253602b54984ebe0ec39746cf561aaa023b396f6524842f01b9",
+    "work/story005-master-baseline/test/.libs/test_modules_video_output_opengl_filters": "d3eaf7cb33101dbc43ac3f2fe8b489ed127e44eca3611ce0909416cb8f56c2e4",
+    "work/story005-master-baseline/src/.libs/libvlccore.9.dylib": "c6c4f10547b35391893f37b45779026872938f75eac3b5594d00d6414a67d7a0",
+    "work/story005-master-baseline/lib/.libs/libvlc.12.dylib": "fb74fde22b5becb4ffcc2554f5ca3236cff363d238f50010bbab419ad76dd484"
+  },
+  "source_comparisons": {
+    "test/modules/video_output/opengl/filters.c": {
+      "pin_sha256": "966757dab0b291bfcc916de07d687e5c4d5773a133c7d07956f2511c963aa751",
+      "reproduction_sha256": "966757dab0b291bfcc916de07d687e5c4d5773a133c7d07956f2511c963aa751",
+      "equal": true
+    },
+    "modules/video_output/opengl/filters.c": {
+      "pin_sha256": "6b6a907b522c7983a28389e86dcae29135419b58dfdf03ef83d081524b8d39b7",
+      "reproduction_sha256": "6b6a907b522c7983a28389e86dcae29135419b58dfdf03ef83d081524b8d39b7",
+      "equal": true
+    },
+    "modules/video_output/opengl/filter.c": {
+      "pin_sha256": "55a0f9e90293edefd7ecf7ac898d89ba127c87c13c356d270312c7e97d568229",
+      "reproduction_sha256": "55a0f9e90293edefd7ecf7ac898d89ba127c87c13c356d270312c7e97d568229",
+      "equal": true
+    },
+    "modules/video_output/opengl/gl_api.c": {
+      "pin_sha256": "92e13f724b8d5503393cc14fb67c7b3da88451f20257632bcc0a65ea361cebdf",
+      "reproduction_sha256": "92e13f724b8d5503393cc14fb67c7b3da88451f20257632bcc0a65ea361cebdf",
+      "equal": true
+    },
+    "modules/video_output/apple/VLCCVOpenGLProvider.m": {
+      "pin_sha256": "2302da7d1430d75d489b7de851899822ff90aeb04344ac2e64fd50ae46f22d61",
+      "reproduction_sha256": "2302da7d1430d75d489b7de851899822ff90aeb04344ac2e64fd50ae46f22d61",
+      "equal": true
+    }
+  },
+  "baseline_configuration": "full macOS + normalcontrib + extra-checks; existing normal arm64 executable; VLC_TEST_OPENGL_API=VLC_OPENGL",
+  "distcheck_configuration": "minimal: disablemacOS/avcodec/avformat/swscale/timeline-preview and otherplugins; test API stillVLC_OPENGL",
+  "display_impact": "No test window creation or pointer/keyboard input is requested; standardcase requests real accelerated3x3offscreen CGL/CoreVideo context and usesGPU. Dynamic moduleloading and driver/session effects remain possible; do not overlap native acquisition.",
+  "interpretation": "SameFAIL supports pre-existingbaseline failure, not exactcause. PASS meansconfiguration-dependent or otherunresolved difference. SKIP/providerfailure is inconclusive. No matchedwhole-build equivalence claim."
+}

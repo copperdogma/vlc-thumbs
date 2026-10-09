@@ -1,0 +1,648 @@
+/Applications/Xcode.app/Contents/Developer/usr/bin/make  check-recursive
+Making check in compat
+/Applications/Xcode.app/Contents/Developer/usr/bin/make  test_heap test_strnstr test_ckd_ckd test_ckd_builtin test_ckd_compat test_clock_nanosleep
+  CC       test/heap.o
+  CC       test/strnstr.o
+  CC       test/ckd_ckd-ckd.o
+  CC       test/ckd_builtin-ckd.o
+/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/package/macosx/../../../compat/test/heap.c:76:13: warning: 'aligned_alloc' is only available on macOS 10.15 or newer [-Wunguarded-availability-new]
+   76 |         p = aligned_alloc(alignv[i], 0);
+      |             ^~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/malloc/_malloc.h:67:35: note: 'aligned_alloc' has been marked as being introduced in macOS 10.15 here, but the deployment target is macOS 10.13.0
+   67 | void * __sized_by_or_null(__size) aligned_alloc(size_t __alignment, size_t __size) __result_use_check __alloc_align(1) __alloc_size(2) _MALLOC_TYPED(malloc_type_aligned_alloc, 2) __OSX_AVAILABLE(10.15) __IOS_AVAILABLE(13.0) __TVOS_AVAILABLE(13.0) __WATCHOS_AVAILABLE(6.0);
+      |                                   ^
+/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/package/macosx/../../../compat/test/heap.c:76:13: note: enclose 'aligned_alloc' in a __builtin_available check to silence this warning
+   76 |         p = aligned_alloc(alignv[i], 0);
+      |             ^~~~~~~~~~~~~               
+/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/package/macosx/../../../compat/test/heap.c:85:18: warning: 'aligned_alloc' is only available on macOS 10.15 or newer [-Wunguarded-availability-new]
+   85 |              p = aligned_alloc(align, size);
+      |                  ^~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/malloc/_malloc.h:67:35: note: 'aligned_alloc' has been marked as being introduced in macOS 10.15 here, but the deployment target is macOS 10.13.0
+   67 | void * __sized_by_or_null(__size) aligned_alloc(size_t __alignment, size_t __size) __result_use_check __alloc_align(1) __alloc_size(2) _MALLOC_TYPED(malloc_type_aligned_alloc, 2) __OSX_AVAILABLE(10.15) __IOS_AVAILABLE(13.0) __TVOS_AVAILABLE(13.0) __WATCHOS_AVAILABLE(6.0);
+      |                                   ^
+/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/package/macosx/../../../compat/test/heap.c:85:18: note: enclose 'aligned_alloc' in a __builtin_available check to silence this warning
+   85 |              p = aligned_alloc(align, size);
+      |                  ^~~~~~~~~~~~~              
+  CC       test/ckd_compat-ckd.o
+  CC       test/clock_nanosleep.o
+2 warnings generated.
+  CCLD     test_strnstr
+  CCLD     test_ckd_ckd
+  CCLD     test_ckd_builtin
+  CCLD     test_ckd_compat
+clang: warning: argument unused during compilation: '-fcx-limited-range' [-Wunused-command-line-argument]
+clang: clang: warning: argument unused during compilation: '-fcx-limited-range' [-Wunused-command-line-argument]
+warning: argument unused during compilation: '-fcx-limited-range' [-Wunused-command-line-argument]
+  CCLD     test_clock_nanosleep
+clang: warning: argument unused during compilation: '-fcx-limited-range' [-Wunused-command-line-argument]
+  CCLD     test_heap
+clang: warning: argument unused during compilation: '-fcx-limited-range' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fcx-limited-range' [-Wunused-command-line-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/make  check-TESTS
+============================================================================
+Testsuite summary for vlc 4.0.0-dev
+============================================================================
+# TOTAL: 0
+# PASS:  0
+# SKIP:  0
+# XFAIL: 0
+# FAIL:  0
+# XPASS: 0
+# ERROR: 0
+============================================================================
+Making check in po
+make[2]: Nothing to be done for `check'.
+Making check in share
+make[2]: Nothing to be done for `check'.
+Making check in src
+  GEN      stamp-revision
+/Applications/Xcode.app/Contents/Developer/usr/bin/make  check-am
+/Applications/Xcode.app/Contents/Developer/usr/bin/make  test_block test_dictionary test_executor test_i18n_atof test_interrupt test_jaro_winkler test_list test_md5 test_objects_cxx test_picture_pool test_sort test_timer test_url test_utf8 test_xmlent test_headers test_mrl_helpers test_arrays test_vector test_shared_data_ptr test_playlist test_randomizer test_media_source test_extensions test_thread test_diffutil test_cpp_list test_input_es_out test_input_clock \
+	  check_headers check_symbols checkheader_vlc_access.h.check checkheader_vlc_actions.h.check checkheader_vlc_addons.h.check checkheader_vlc_ancillary.h.check checkheader_vlc_aout.h.check checkheader_vlc_aout_volume.h.check checkheader_vlc_arrays.h.check checkheader_vlc_atomic.h.check checkheader_vlc_avcodec.h.check checkheader_vlc_bits.h.check checkheader_vlc_block.h.check checkheader_vlc_block_helper.h.check checkheader_vlc_boxes.h.check checkheader_vlc_charset.h.check checkheader_vlc_codec.h.check checkheader_vlc_common.h.check checkheader_vlc_config.h.check checkheader_vlc_config_cat.h.check checkheader_vlc_configuration.h.check checkheader_vlc_cpu.h.check checkheader_vlc_clock.h.check checkheader_vlc_chroma_probe.h.check checkheader_vlc_decoder.h.check checkheader_vlc_demux.h.check checkheader_vlc_dialog.h.check checkheader_vlc_diffutil.h.check checkheader_vlc_epg.h.check checkheader_vlc_es.h.check checkheader_vlc_es_out.h.check checkheader_vlc_executor.h.check checkheader_vlc_filter.h.check checkheader_vlc_fingerprinter.h.check checkheader_vlc_fourcc.h.check checkheader_vlc_frame.h.check checkheader_vlc_fs.h.check checkheader_vlc_gcrypt.h.check checkheader_vlc_hash.h.check checkheader_vlc_http.h.check checkheader_vlc_httpd.h.check checkheader_vlc_image.h.check checkheader_vlc_inhibit.h.check checkheader_vlc_input.h.check checkheader_vlc_input_item.h.check checkheader_vlc_interface.h.check checkheader_vlc_interrupt.h.check checkheader_vlc_keystore.h.check checkheader_vlc_list.h.check checkheader_vlc_media_library.h.check checkheader_vlc_media_source.h.check checkheader_vlc_memstream.h.check checkheader_vlc_messages.h.check checkheader_vlc_tracer.h.check checkheader_vlc_meta.h.check checkheader_vlc_meta_fetcher.h.check checkheader_vlc_mime.h.check checkheader_vlc_modules.h.check checkheader_vlc_mouse.h.check checkheader_vlc_network.h.check checkheader_vlc_objects.h.check checkheader_vlc_opengl.h.check checkheader_vlc_opengl_interop.h.check checkheader_vlc_opengl_filter.h.check checkheader_vlc_opengl_picture.h.check checkheader_vlc_opengl_sampler.h.check checkheader_vlc_picture.h.check checkheader_vlc_picture_fifo.h.check checkheader_vlc_picture_pool.h.check checkheader_vlc_player.h.check checkheader_vlc_playlist.h.check checkheader_vlc_playlist_export.h.check checkheader_vlc_plugin.h.check checkheader_vlc_poll.h.check checkheader_vlc_probe.h.check checkheader_vlc_preparser.h.check checkheader_vlc_process.h.check checkheader_vlc_preparser_ipc.h.check checkheader_vlc_queue.h.check checkheader_vlc_rand.h.check checkheader_vlc_renderer_discovery.h.check checkheader_vlc_replay_gain.h.check checkheader_vlc_services_discovery.h.check checkheader_vlc_sort.h.check checkheader_vlc_sout.h.check checkheader_vlc_spawn.h.check checkheader_vlc_spu.h.check checkheader_vlc_stream.h.check checkheader_vlc_stream_extractor.h.check checkheader_vlc_strings.h.check checkheader_vlc_subpicture.h.check checkheader_vlc_text_style.h.check checkheader_vlc_threads.h.check checkheader_vlc_tick.h.check checkheader_vlc_timestamp_helper.h.check checkheader_vlc_tls.h.check checkheader_vlc_url.h.check checkheader_vlc_variables.h.check checkheader_vlc_vector.h.check checkheader_vlc_video_splitter.h.check checkheader_vlc_viewpoint.h.check checkheader_vlc_vlm.h.check checkheader_vlc_vout.h.check checkheader_vlc_vout_display.h.check checkheader_vlc_vout_osd.h.check checkheader_vlc_window.h.check checkheader_vlc_xlib.h.check checkheader_vlc_xml.h.check checkheader_vlc_cxx_helpers.hpp.check checkheader_vlc_list.hpp.check
+  CC       config/jaro_winkler.o
+  CXX      misc/objects_cxx_test.o
+  CC       misc/objects.o
+  CC       test/picture_pool.o
+In file included from /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/package/macosx/../../../src/misc/objects_cxx_test.cpp:25:
+In file included from ../config.h:896:
+In file included from /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/package/macosx/../../../include/vlc_fixups.h:166:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/c++/v1/stddef.h:30:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/c++/v1/__config:15:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/c++/v1/__configuration/availability.h:204:4: warning: "The selected platform is no longer supported by libc++." [-W#warnings]
+  204 | #  warning "The selected platform is no longer supported by libc++."
+      |    ^
+/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/package/macosx/../../../src/misc/objects.c:207:27: warning: 'vlc_object_hold' is deprecated [-Wdeprecated-declarations]
+  207 |              tab[count] = vlc_object_hold(vlc_externals(priv));
+      |                           ^
+/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/package/macosx/../../../include/vlc_objects.h:204:1: note: 'vlc_object_hold' has been explicitly marked deprecated here
+  204 | VLC_DEPRECATED static inline void *vlc_object_hold(vlc_object_t *o)
+      | ^
+/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/package/macosx/../../../include/vlc_common.h:95:42: note: expanded from macro 'VLC_DEPRECATED'
+   95 | #  define VLC_DEPRECATED  __attribute__((deprecated))
+      |                                          ^
+  CC       test/sort.o
+1 warning generated.
+  CC       test/timer.o
+  CC       test/url.o
+1 warning generated.
+  CC       test/utf8.o
+  CC       test/xmlent.o
+  CC       test/headers.o
+  CC       test/mrl_helpers.o
+  CC       test/arrays.o
+  CC       test/vector.o
+  CXX      test/shared_data_ptr.o
+In file included from /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/package/macosx/../../../src/test/shared_data_ptr.cpp:1:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/c++/v1/cassert:22:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/c++/v1/__config:15:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/c++/v1/__configuration/availability.h:204:4: warning: "The selected platform is no longer supported by libc++." [-W#warnings]
+  204 | #  warning "The selected platform is no longer supported by libc++."
+      |    ^
+  CC       playlist/test_playlist-test.o
+  CC       playlist/test_playlist-content.o
+  CC       playlist/test_playlist-control.o
+  CC       playlist/test_playlist-item.o
+  CC       playlist/test_playlist-notify.o
+  CC       playlist/test_playlist-player.o
+  CC       playlist/test_playlist-playlist.o
+  CC       playlist/test_playlist-preparse.o
+  CC       playlist/test_playlist-randomizer.o
+  CC       playlist/test_playlist-request.o
+  CC       playlist/test_playlist-shuffle.o
+1 warning generated.
+  CC       playlist/test_playlist-sort.o
+  CC       playlist/test_randomizer-randomizer.o
+  CC       media_source/test_media_source-test.o
+  CC       media_source/test_media_source-media_source.o
+  CC       media_source/test_media_source-media_tree.o
+  CC       test/extensions.o
+  CC       test/thread.o
+  CC       test/diffutil.o
+  CXX      test/list_cpp.o
+  CC       input/es_out.o
+In file included from /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/package/macosx/../../../src/test/list_cpp.cpp:25:
+In file included from ../config.h:896:
+In file included from /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/package/macosx/../../../include/vlc_fixups.h:166:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/c++/v1/stddef.h:30:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/c++/v1/__config:15:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/c++/v1/__configuration/availability.h:204:4: warning: "The selected platform is no longer supported by libc++." [-W#warnings]
+  204 | #  warning "The selected platform is no longer supported by libc++."
+      |    ^
+  CC       input/source.o
+  CC       input/item.o
+  CC       clock/clock.o
+1 warning generated.
+  CC       text/strings.o
+  CC       clock/clock_internal.o
+  CC       clock/input_clock.o
+make[4]: Nothing to be done for `/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/package/macosx/../../../src/check_headers'.
+make[4]: Nothing to be done for `/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/package/macosx/../../../src/check_symbols'.
+  CHECK    vlc_access.h
+  CHECK    vlc_actions.h
+/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/package/macosx/../../../src/clock/input_clock.c:463:2: warning: "input_clock_SetJitter needs more work" [-W#warnings]
+  463 | #warning "input_clock_SetJitter needs more work"
+      |  ^
+1 warning generated.
+  CHECK    vlc_addons.h
+  CHECK    vlc_ancillary.h
+  CHECK    vlc_aout.h
+  CHECK    vlc_aout_volume.h
+  CHECK    vlc_arrays.h
+  CHECK    vlc_atomic.h
+  CHECK    vlc_avcodec.h
+  CHECK    vlc_bits.h
+  CHECK    vlc_block.h
+  CHECK    vlc_block_helper.h
+  CHECK    vlc_boxes.h
+  CHECK    vlc_charset.h
+  CHECK    vlc_codec.h
+  CHECK    vlc_common.h
+  CHECK    vlc_config.h
+  CHECK    vlc_config_cat.h
+  CHECK    vlc_configuration.h
+  CHECK    vlc_cpu.h
+  CHECK    vlc_clock.h
+  CHECK    vlc_chroma_probe.h
+  CHECK    vlc_decoder.h
+  CHECK    vlc_demux.h
+  CHECK    vlc_dialog.h
+  CHECK    vlc_diffutil.h
+  CHECK    vlc_epg.h
+  CHECK    vlc_es.h
+  CHECK    vlc_es_out.h
+  CHECK    vlc_executor.h
+  CHECK    vlc_filter.h
+  CHECK    vlc_fingerprinter.h
+  CHECK    vlc_frame.h
+  CHECK    vlc_fourcc.h
+  CHECK    vlc_fs.h
+  CHECK    vlc_gcrypt.h
+  CHECK    vlc_hash.h
+  CHECK    vlc_http.h
+  CHECK    vlc_httpd.h
+  CHECK    vlc_image.h
+  CHECK    vlc_inhibit.h
+  CHECK    vlc_input.h
+  CHECK    vlc_input_item.h
+  CHECK    vlc_interface.h
+  CHECK    vlc_interrupt.h
+  CHECK    vlc_keystore.h
+  CHECK    vlc_list.h
+  CHECK    vlc_media_library.h
+  CHECK    vlc_media_source.h
+  CHECK    vlc_memstream.h
+  CHECK    vlc_messages.h
+  CHECK    vlc_tracer.h
+  CHECK    vlc_meta.h
+  CHECK    vlc_meta_fetcher.h
+  CHECK    vlc_mime.h
+  CHECK    vlc_modules.h
+  CHECK    vlc_mouse.h
+  CHECK    vlc_network.h
+  CHECK    vlc_objects.h
+  CHECK    vlc_opengl.h
+  CHECK    vlc_opengl_interop.h
+  CHECK    vlc_opengl_filter.h
+  CHECK    vlc_opengl_picture.h
+  CHECK    vlc_opengl_sampler.h
+  CHECK    vlc_picture.h
+  CHECK    vlc_picture_fifo.h
+  CHECK    vlc_picture_pool.h
+  CHECK    vlc_playlist.h
+  CHECK    vlc_player.h
+  CHECK    vlc_playlist_export.h
+  CHECK    vlc_plugin.h
+  CHECK    vlc_poll.h
+  CHECK    vlc_probe.h
+  CHECK    vlc_preparser.h
+  CHECK    vlc_process.h
+  CHECK    vlc_preparser_ipc.h
+  CHECK    vlc_queue.h
+  CHECK    vlc_rand.h
+  CHECK    vlc_renderer_discovery.h
+  CHECK    vlc_services_discovery.h
+  CHECK    vlc_replay_gain.h
+  CHECK    vlc_sort.h
+  CHECK    vlc_sout.h
+  CHECK    vlc_spawn.h
+  CHECK    vlc_spu.h
+  CHECK    vlc_stream.h
+  CHECK    vlc_stream_extractor.h
+  CHECK    vlc_strings.h
+  CHECK    vlc_subpicture.h
+  CHECK    vlc_text_style.h
+  CHECK    vlc_threads.h
+  CHECK    vlc_tick.h
+  CHECK    vlc_timestamp_helper.h
+  CHECK    vlc_tls.h
+  CHECK    vlc_url.h
+  CHECK    vlc_variables.h
+  CHECK    vlc_vector.h
+  CHECK    vlc_viewpoint.h
+  CHECK    vlc_video_splitter.h
+  CHECK    vlc_vlm.h
+  CHECK    vlc_vout.h
+  CHECK    vlc_vout_display.h
+  CHECK    vlc_vout_osd.h
+  CHECK    vlc_window.h
+  CHECK    vlc_xlib.h (SKIPPED)
+  CHECK    vlc_xml.h
+  CHECK    vlc_cxx_helpers.hpp
+  CHECK    vlc_list.hpp
+  CC       test/block_test.o
+In file included from checkheader_vlc_cxx_helpers.hpp.check.cpp:1:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/c++/v1/stdbool.h:25:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/c++/v1/__config:15:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/c++/v1/__configuration/availability.h:204:4: warning: "The selected platform is no longer supported by libc++." [-W#warnings]
+  204 | #  warning "The selected platform is no longer supported by libc++."
+      |    ^
+In file included from checkheader_vlc_list.hpp.check.cpp:1:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/c++/v1/stdbool.h:25:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/c++/v1/__config:15:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/c++/v1/__configuration/availability.h:204:4: warning: "The selected platform is no longer supported by libc++." [-W#warnings]
+  204 | #  warning "The selected platform is no   CC       test/dictionary.o
+longer supported by libc++."
+      |    ^
+  CC       test/executor.o
+  CC       test/i18n_atof.o
+1 warning generated.
+/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/package/macosx/../../../src/test/executor.c:178:5: warning: call to 'harmful_delay' declared with 'warning' attribute: use proper event handling instead of short delay [-Wattribute-warning]
+  178 |     vlc_tick_sleep(delay);
+      |     ^
+/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/package/macosx/../../../include/vlc_threads.h:864:42: note: expanded from macro 'vlc_tick_sleep'
+  864 | #define vlc_tick_sleep(d) vlc_tick_sleep(check_delay(d))
+      |                                          ^
+/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/package/macosx/../../../include/vlc_threads.h:848:14: note: expanded from macro 'check_delay'
+  848 |            ? harmful_delay(d) \
+      |              ^
+  CC       test/interrupt.o
+1 warning generated.
+  CC       test/jaro_winkler.o
+  CC       test/list.o
+  CC       test/md5.o
+  CXXLD    test_objects_cxx
+1 warning generated.
+  CCLD     test_picture_pool
+  CCLD     test_sort
+  CCLD     test_timer
+clang++: warning: argument unused during compilation: '-fcx-limited-range' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fcx-limited-range' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fcx-limited-range' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fcx-limited-range' [-Wunused-command-line-argument]
+  CCLD     test_url
+  CCLD     test_utf8
+  CCLD     test_xmlent
+clang: warning: argument unused during compilation: '-fcx-limited-range' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fcx-limited-range' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fcx-limited-range' [-Wunused-command-line-argument]
+  CCLD     test_headers
+  CCLD     test_mrl_helpers
+  CCLD     test_arrays
+  CCLD     test_vector
+clang: clang: warning: argument unused during compilation: '-fcx-limited-range' [-Wunused-command-line-argument]
+warning: argument unused during compilation: '-fcx-limited-range' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fcx-limited-range' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fcx-limited-range' [-Wunused-command-line-argument]
+  CXXLD    test_shared_data_ptr
+  CCLD     test_playlist
+  CCLD     test_randomizer
+  CCLD     test_media_source
+clang: warning: argument unused during compilation: '-fcx-limited-range' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fcx-limited-range' [-Wunused-command-line-argument]
+clang++: warning: argument unused during compilation: '-fcx-limited-range' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fcx-limited-range' [-Wunused-command-line-argument]
+  CCLD     test_thread
+  CCLD     test_extensions
+  CCLD     test_diffutil
+  CXXLD    test_cpp_list
+clang: warning: argument unused during compilation: '-fcx-limited-range' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fcx-limited-range' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fcx-limited-range' [-Wunused-command-line-argument]
+clang++: warning: argument unused during compilation: '-fcx-limited-range' [-Wunused-command-line-argument]
+  CC       input/test/es_out.o
+  CC       clock/test/input_clock.o
+  CCLD     test_block
+  CCLD     test_dictionary
+/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/package/macosx/../../../src/clock/test/input_clock.c:94:35: warning: unused variable 'clock_abort_ops' [-Wunused-const-variable]
+   94 | static const struct vlc_clock_cbs clock_abort_ops =
+      |                                   ^~~~~~~~~~~~~~~
+/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/package/macosx/../../../src/clock/test/input_clock.c:122:35: warning: unused variable 'clock_validate_ops' [-Wunused-const-variable]
+  122 | static const struct vlc_clock_cbs clock_validate_ops =
+      |                                   ^~~~~~~~~~~~~~~~~~
+/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/package/macosx/../../../src/clock/test/input_clock.c:140:35: warning: unused variable 'clock_switch_ops' [-Wunused-const-variable]
+  140 | static const struct vlc_clock_cbs clock_switch_ops = {
+      |                                   ^~~~~~~~~~~~~~~~
+3 warnings generated.
+  CCLD     test_executor
+  CCLD     test_i18n_atof
+clang: warning: argument unused during compilation: '-fcx-limited-range' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fcx-limited-range' [-Wunused-command-line-argument]
+  CCLD     test_interrupt
+  CCLD     test_jaro_winkler
+clang: warning: argument unused during compilation: '-fcx-limited-range' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fcx-limited-range' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fcx-limited-range' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fcx-limited-range' [-Wunused-command-line-argument]
+  CCLD     test_md5
+  CCLD     test_list
+  CCLD     test_input_es_out
+  CCLD     test_input_clock
+clang: warning: argument unused during compilation: '-fcx-limited-range' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fcx-limited-range' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fcx-limited-range' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fcx-limited-range' [-Wunused-command-line-argument]
+/Applications/Xcode.app/Contents/Developer/usr/bin/make  check-TESTS check-local
+  CHECK    vlc_access.h
+  CHECK    vlc_addons.h
+  CHECK    vlc_actions.h
+  CHECK    vlc_ancillary.h
+  CHECK    vlc_aout.h
+  CHECK    vlc_aout_volume.h
+  CHECK    vlc_arrays.h
+  CHECK    vlc_atomic.h
+  CHECK    vlc_avcodec.h
+  CHECK    vlc_bits.h
+  CHECK    vlc_block.h
+  CHECK    vlc_block_helper.h
+  CHECK    vlc_boxes.h
+  CHECK    vlc_charset.h
+  CHECK    vlc_codec.h
+  CHECK    vlc_common.h
+  CHECK    vlc_config.h
+  CHECK    vlc_config_cat.h
+  CHECK    vlc_configuration.h
+  CHECK    vlc_cpu.h
+  CHECK    vlc_clock.h
+  CHECK    vlc_chroma_probe.h
+  CHECK    vlc_decoder.h
+  CHECK    vlc_demux.h
+  CHECK    vlc_dialog.h
+  CHECK    vlc_diffutil.h
+  CHECK    vlc_epg.h
+  CHECK    vlc_es.h
+  CHECK    vlc_es_out.h
+  CHECK    vlc_executor.h
+  CHECK    vlc_filter.h
+  CHECK    vlc_frame.h
+  CHECK    vlc_fingerprinter.h
+  CHECK    vlc_fourcc.h
+  CHECK    vlc_fs.h
+  CHECK    vlc_gcrypt.h
+  CHECK    vlc_hash.h
+  CHECK    vlc_http.h
+  CHECK    vlc_httpd.h
+  CHECK    vlc_image.h
+  CHECK    vlc_inhibit.h
+  CHECK    vlc_input.h
+  CHECK    vlc_input_item.h
+  CHECK    vlc_interface.h
+  CHECK    vlc_interrupt.h
+  CHECK    vlc_keystore.h
+  CHECK    vlc_list.h
+  CHECK    vlc_media_library.h
+  CHECK    vlc_media_source.h
+  CHECK    vlc_memstream.h
+  CHECK    vlc_messages.h
+  CHECK    vlc_tracer.h
+  CHECK    vlc_meta.h
+  CHECK    vlc_meta_fetcher.h
+  CHECK    vlc_mime.h
+  CHECK    vlc_modules.h
+  CHECK    vlc_mouse.h
+  CHECK    vlc_network.h
+  CHECK    vlc_objects.h
+  CHECK    vlc_opengl_interop.h
+  CHECK    vlc_opengl.h
+  CHECK    vlc_opengl_filter.h
+  CHECK    vlc_opengl_picture.h
+  CHECK    vlc_opengl_sampler.h
+  CHECK    vlc_picture.h
+  CHECK    vlc_picture_fifo.h
+  CHECK    vlc_picture_pool.h
+  CHECK    vlc_playlist.h
+  CHECK    vlc_player.h
+  CHECK    vlc_playlist_export.h
+  CHECK    vlc_plugin.h
+  CHECK    vlc_poll.h
+  CHECK    vlc_probe.h
+  CHECK    vlc_preparser.h
+  CHECK    vlc_process.h
+  CHECK    vlc_preparser_ipc.h
+  CHECK    vlc_queue.h
+  CHECK    vlc_rand.h
+  CHECK    vlc_renderer_discovery.h
+  CHECK    vlc_replay_gain.h
+  CHECK    vlc_services_discovery.h
+  CHECK    vlc_sort.h
+  CHECK    vlc_sout.h
+  CHECK    vlc_spawn.h
+  CHECK    vlc_spu.h
+  CHECK    vlc_stream.h
+  CHECK    vlc_stream_extractor.h
+  CHECK    vlc_strings.h
+  CHECK    vlc_subpicture.h
+  CHECK    vlc_threads.h
+  CHECK    vlc_text_style.h
+  CHECK    vlc_tick.h
+  CHECK    vlc_timestamp_helper.h
+  CHECK    vlc_tls.h
+  CHECK    vlc_url.h
+  CHECK    vlc_variables.h
+  CHECK    vlc_vector.h
+  CHECK    vlc_video_splitter.h
+  CHECK    vlc_viewpoint.h
+  CHECK    vlc_vlm.h
+  CHECK    vlc_vout.h
+  CHECK    vlc_vout_display.h
+  CHECK    vlc_vout_osd.h
+  CHECK    vlc_window.h
+  CHECK    vlc_xlib.h (SKIPPED)
+  CHECK    vlc_xml.h
+  CHECK    vlc_cxx_helpers.hpp
+  CHECK    vlc_list.hpp
+for h in `echo  | sed -e s,\.\./include/,,g`; \
+	do \
+		echo grep - "#include <$h>" /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/package/macosx/../../../src/test/headers.c ; \
+		if ! grep -- "#include <$h>" /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/package/macosx/../../../src/test/headers.c ; \
+		then \
+			echo "Header $h not included in test/headers.c!"; \
+			exit 1; \
+		fi ; \
+	done
+/bin/sh /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/package/macosx/../../../src/check_headers ../include/vlc_access.h ../include/vlc_actions.h ../include/vlc_addons.h ../include/vlc_ancillary.h ../include/vlc_aout.h ../include/vlc_aout_volume.h ../include/vlc_arrays.h ../include/vlc_atomic.h ../include/vlc_avcodec.h ../include/vlc_bits.h ../include/vlc_block.h ../include/vlc_block_helper.h ../include/vlc_boxes.h ../include/vlc_charset.h ../include/vlc_codec.h ../include/vlc_common.h ../include/vlc_config.h ../include/vlc_config_cat.h ../include/vlc_configuration.h ../include/vlc_cpu.h ../include/vlc_clock.h ../include/vlc_chroma_probe.h ../include/vlc_decoder.h ../include/vlc_demux.h ../include/vlc_dialog.h ../include/vlc_diffutil.h ../include/vlc_epg.h ../include/vlc_es.h ../include/vlc_es_out.h ../include/vlc_executor.h ../include/vlc_filter.h ../include/vlc_fingerprinter.h ../include/vlc_fourcc.h ../include/vlc_frame.h ../include/vlc_fs.h ../include/vlc_gcrypt.h ../include/vlc_hash.h ../include/vlc_http.h ../include/vlc_httpd.h ../include/vlc_image.h ../include/vlc_inhibit.h ../include/vlc_input.h ../include/vlc_input_item.h ../include/vlc_interface.h ../include/vlc_interrupt.h ../include/vlc_keystore.h ../include/vlc_list.h ../include/vlc_media_library.h ../include/vlc_media_source.h ../include/vlc_memstream.h ../include/vlc_messages.h ../include/vlc_tracer.h ../include/vlc_meta.h ../include/vlc_meta_fetcher.h ../include/vlc_mime.h ../include/vlc_modules.h ../include/vlc_mouse.h ../include/vlc_network.h ../include/vlc_objects.h ../include/vlc_opengl.h ../include/vlc_opengl_interop.h ../include/vlc_opengl_filter.h ../include/vlc_opengl_picture.h ../include/vlc_opengl_sampler.h ../include/vlc_picture.h ../include/vlc_picture_fifo.h ../include/vlc_picture_pool.h ../include/vlc_player.h ../include/vlc_playlist.h ../include/vlc_playlist_export.h ../include/vlc_plugin.h ../include/vlc_poll.h ../include/vlc_probe.h ../include/vlc_preparser.h ../include/vlc_process.h ../include/vlc_preparser_ipc.h ../include/vlc_queue.h ../include/vlc_rand.h ../include/vlc_renderer_discovery.h ../include/vlc_replay_gain.h ../include/vlc_services_discovery.h ../include/vlc_sort.h ../include/vlc_sout.h ../include/vlc_spawn.h ../include/vlc_spu.h ../include/vlc_stream.h ../include/vlc_stream_extractor.h ../include/vlc_strings.h ../include/vlc_subpicture.h ../include/vlc_text_style.h ../include/vlc_threads.h ../include/vlc_tick.h ../include/vlc_timestamp_helper.h ../include/vlc_tls.h ../include/vlc_url.h ../include/vlc_variables.h ../include/vlc_vector.h ../include/vlc_video_splitter.h ../include/vlc_viewpoint.h ../include/vlc_vlm.h ../include/vlc_vout.h ../include/vlc_vout_display.h ../include/vlc_vout_osd.h ../include/vlc_window.h ../include/vlc_xlib.h ../include/vlc_xml.h  ../include/vlc_cxx_helpers.hpp ../include/vlc_list.hpp 
+In file included from checkheader_vlc_list.hpp.check.cpp:1:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/c++/v1/stdbool.h:25:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/c++/v1/__config:15:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/c++/v1/__configuration/availability.h:204:4: warning: "The selected platform is no longer supported by libc++." [-W#warnings]
+In file included from checkheader_vlc_cxx_helpers.hpp.check.cpp:1:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/c++/v1/stdbool.h:25:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/c++/v1/__config:15:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk/usr/include/c++/v1/__configuration/availability.h:204:4: warning: "The selected platform is no longer supported by libc++." [-W#warnings]
+  204 | #  warning "The selected plat  204 | #  warning "The selected platforform is no longer supported by libc++."
+      |    ^
+m is no longer supported by libc++."
+      |    ^
+1 warning generated.
+1 warning generated.
+============================================================================
+Testsuite summary for vlc 4.0.0-dev
+============================================================================
+# TOTAL: 0
+# PASS:  0
+# SKIP:  0
+# XFAIL: 0
+# FAIL:  0
+# XPASS: 0
+# ERROR: 0
+============================================================================
+Looking for private defines in public headers...
+None found.
+Making check in modules
+/Applications/Xcode.app/Contents/Developer/usr/bin/make  check-recursive
+Making check in gui/qt
+  GEN      util/qml.deps
+  GEN      style/qml.deps
+  GEN      widgets/qml.deps
+  GEN      playlist/qml.deps
+  GEN      menus/qml.deps
+  GEN      player/qml.deps
+  GEN      network/qml.deps
+  GEN      playercontrols/qml.deps
+  GEN      maininterface/qml.deps
+  GEN      medialibrary/qml.deps
+  GEN      dialogs/qml.deps
+  GEN      shaders/shaders.deps
+/Applications/Xcode.app/Contents/Developer/usr/bin/make  check-am
+  GEN      widgets/qml.deps
+  GEN      playlist/qml.deps
+  GEN      style/qml.deps
+  GEN      util/qml.deps
+  GEN      menus/qml.deps
+  GEN      network/qml.deps
+  GEN      player/qml.deps
+  GEN      playercontrols/qml.deps
+  GEN      medialibrary/qml.deps
+  GEN      maininterface/qml.deps
+  GEN      shaders/shaders.deps
+  GEN      dialogs/qml.deps
+/Applications/Xcode.app/Contents/Developer/usr/bin/make  
+  GEN      style/qml.deps
+  GEN      playlist/qml.deps
+  GEN      util/qml.deps
+  GEN      widgets/qml.deps
+  GEN      player/qml.deps
+  GEN      menus/qml.deps
+  GEN      playercontrols/qml.deps
+  GEN      network/qml.deps
+  GEN      maininterface/qml.deps
+  GEN      shaders/shaders.deps
+  GEN      dialogs/qml.deps
+  GEN      medialibrary/qml.deps
+/Applications/Xcode.app/Contents/Developer/usr/bin/make  all-am
+  GEN      style/qml.deps
+  GEN      widgets/qml.deps
+  GEN      util/qml.deps
+  GEN      playlist/qml.deps
+  GEN      menus/qml.deps
+  GEN      playercontrols/qml.deps
+  GEN      network/qml.deps
+  GEN      player/qml.deps
+  GEN      maininterface/qml.deps
+  GEN      shaders/shaders.deps
+  GEN      dialogs/qml.deps
+  GEN      medialibrary/qml.deps
+make[7]: Nothing to be done for `all-am'.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make  check-TESTS
+  GEN      style/qml.deps
+  GEN      playlist/qml.deps
+  GEN      util/qml.deps
+  GEN      widgets/qml.deps
+  GEN      player/qml.deps
+  GEN      menus/qml.deps
+  GEN      network/qml.deps
+  GEN      playercontrols/qml.deps
+  GEN      medialibrary/qml.deps
+  GEN      shaders/shaders.deps
+  GEN      maininterface/qml.deps
+  GEN      dialogs/qml.deps
+  GEN      style/qml.deps
+  GEN      util/qml.deps
+  GEN      playlist/qml.deps
+  GEN      widgets/qml.deps
+  GEN      menus/qml.deps
+  GEN      network/qml.deps
+  GEN      player/qml.deps
+  GEN      playercontrols/qml.deps
+  GEN      dialogs/qml.deps
+  GEN      maininterface/qml.deps
+  GEN      shaders/shaders.deps
+  GEN      medialibrary/qml.deps
+============================================================================
+Testsuite summary for vlc 4.0.0-dev
+============================================================================
+# TOTAL: 0
+# PASS:  0
+# SKIP:  0
+# XFAIL: 0
+# FAIL:  0
+# XPASS: 0
+# ERROR: 0
+============================================================================
+Making check in .
+/Applications/Xcode.app/Contents/Developer/usr/bin/make  hpack_test hpackenc_test h2frame_test h2output_test h2conn_test h1conn_test h1chunked_test http_msg_test http_file_test http_tunnel_test rtpfmt_test sdp_test srtp_aes_test srtp_recv_test css_parser_test videotoolbox_dpb_test xiph_test subtitle_plugin_test adaptive_test VLCMacOSXTests  chroma_copy_test libaccesstweaks_plugin.la
+  CC       access/http/hpackenc_test-hpack.o
+  CC       access/http/hpack_test-hpack.o
+  CC       access/http/hpackenc_test-hpackenc.o
+  CC       access/http/h2frame_test.o
+  CC       access/http/hpack.o
+  CC       access/http/hpackenc.o
+  CC       access/http/h2frame.o
+  CC       access/http/h2output_test.o
+  CC       access/http/h2conn_test.o
+  CC       access/http/h1conn_test.o
+  CC       access/http/chunked_test.o
+  CC       access/http/message_test.o
+  CC       access/http/message.o
+  CC       access/http/file_test.o
+  CC       access/http/resource.o
+  CC       access/http/file.o
+  CC       access/http/tunnel_test.o
+  CC       access/rtp/rtpfmt.o
+  CC       access/rtp/sdp.o
+  CC       codec/webvtt/css_parser_test-css_test.o
+  CC       codec/webvtt/css_parser_test-css_parser.o
+  CC       codec/webvtt/css_parser_test-CSSGrammar.o
+  LEX      codec/webvtt/css_parser_test-CSSLexer.c
+codec/webvtt/CSSGrammar.c:1533:9: warning: variable 'cssnerrs' set but not used [-Wunused-but-set-variable]
+ 1533 |     int yynerrs = 0;
+      |         ^
+codec/webvtt/CSSGrammar.c:73:25: note: expanded from macro 'yynerrs'
+   73 | #define yynerrs         cssnerrs
+      |                         ^
+  CC       codec/videotoolbox/videotoolbox_dpb_test-dpb_test.o
+  CC       codec/videotoolbox/videotoolbox_dpb_test-dpb.o
+1 warning generated.
+  CC       demux/xiph_test.o
+  CC       demux/subtitle_plugin_test-subtitle.o
+  OBJC     gui/macosx/extensions/VLCMacOSXTests-VLCHexNumberFormatter.o
+  OBJC     gui/macosx/extensions/VLCMacOSXTests-VLCPositionFormatter.o
+In file included from /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/package/macosx/../../../modules/gui/macosx/extensions/VLCHexNumberFormatter.m:23:
+/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/package/macosx/../../../modules/gui/macosx/extensions/VLCHexNumberFormatter.h:23:9: fatal error: 'Foundation/Foundation.h' file not found
+   23 | #import <Foundation/Foundation.h>
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/package/macosx/../../../modules/gui/macosx/extensions/VLCHexNumberFormatter.h:23:9: note: did not find header 'Foundation.h' in framework 'Foundation' (loaded from '/System/Library/Frameworks')
+1 error generated.
+make[5]: *** [gui/macosx/extensions/VLCMacOSXTests-VLCHexNumberFormatter.o] Error 1
+make[5]: *** Waiting for unfinished jobs....
+In file included from /Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/package/macosx/../../../modules/gui/macosx/extensions/VLCPositionFormatter.m:23:
+/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/package/macosx/../../../modules/gui/macosx/extensions/VLCPositionFormatter.h:23:9: fatal error: 'Foundation/Foundation.h' file not found
+   23 | #import <Foundation/Foundation.h>
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/cam/Documents/Projects/ultima-iv-web/vlc-thumbs/work/upstream/vlc-master-story005/extras/package/macosx/../../../modules/gui/macosx/extensions/VLCPositionFormatter.h:23:9: note: did not find header 'Foundation.h' in framework 'Foundation' (loaded from '/System/Library/Frameworks')
+1 error generated.
+make[5]: *** [gui/macosx/extensions/VLCMacOSXTests-VLCPositionFormatter.o] Error 1
+make[4]: *** [check-am] Error 2
+make[3]: *** [check-recursive] Error 1
+make[2]: *** [check] Error 2
+make[1]: *** [check-recursive] Error 1
+make: *** [check] Error 2

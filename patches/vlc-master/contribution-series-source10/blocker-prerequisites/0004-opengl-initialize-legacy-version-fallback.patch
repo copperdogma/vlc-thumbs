@@ -1,0 +1,13 @@
+diff --git a/modules/video_output/opengl/gl_api.c b/modules/video_output/opengl/gl_api.c
+index d0d391dc215958ba98987e9b7367524da4f9cade..8fe7e6bee366bae6ed46a74666a114b6eb803adf 100644
+--- a/modules/video_output/opengl/gl_api.c
++++ b/modules/video_output/opengl/gl_api.c
+@@ -177,7 +177,7 @@ vlc_gl_api_Init(struct vlc_gl_api *api, vlc_gl_t *gl)
+     GET_PROC_ADDR_OPTIONAL(ClientWaitSync);
+ 
+     GL_ASSERT_NOERROR(&api->vt);
+-    GLint version;
++    GLint version = 2;
+     GLchar *glsl_version;
+     api->vt.GetIntegerv(GL_MAJOR_VERSION, &version);
+     glsl_version = (GLchar *) api->vt.GetString(GL_SHADING_LANGUAGE_VERSION);
