@@ -1,0 +1,76 @@
+{
+  "scope": "file/line compiler diagnostics intersecting committed added/modified lines across collected normal/core/archive logs",
+  "count": 17,
+  "diagnostics": [
+    {
+      "log": "normal-check.log",
+      "diagnostic": "/Users/cam/Documents/Projects/vlc-thumbs/work/story007-refresh-20261030/source/extras/package/macosx/../../../modules/gui/macosx/tests/VLCVoutLifetimeTestSupport.m:37:17: warning: auto property synthesis will not synthesize property 'libraryID' declared in protocol 'VLCMediaLibraryItemProtocol' [-Wobjc-protocol-property-synthesis]"
+    },
+    {
+      "log": "normal-check.log",
+      "diagnostic": "/Users/cam/Documents/Projects/vlc-thumbs/work/story007-refresh-20261030/source/extras/package/macosx/../../../modules/gui/macosx/tests/VLCVoutLifetimeTestSupport.m:37:17: warning: auto property synthesis will not synthesize property 'smallArtworkGenerated' declared in protocol 'VLCMediaLibraryItemProtocol' [-Wobjc-protocol-property-synthesis]"
+    },
+    {
+      "log": "normal-check.log",
+      "diagnostic": "/Users/cam/Documents/Projects/vlc-thumbs/work/story007-refresh-20261030/source/extras/package/macosx/../../../modules/gui/macosx/tests/VLCVoutLifetimeTestSupport.m:37:17: warning: auto property synthesis will not synthesize property 'smallArtworkMRL' declared in protocol 'VLCMediaLibraryItemProtocol' [-Wobjc-protocol-property-synthesis]"
+    },
+    {
+      "log": "normal-check.log",
+      "diagnostic": "/Users/cam/Documents/Projects/vlc-thumbs/work/story007-refresh-20261030/source/extras/package/macosx/../../../modules/gui/macosx/tests/VLCVoutLifetimeTestSupport.m:37:17: warning: auto property synthesis will not synthesize property 'displayString' declared in protocol 'VLCMediaLibraryItemProtocol' [-Wobjc-protocol-property-synthesis]"
+    },
+    {
+      "log": "normal-check.log",
+      "diagnostic": "/Users/cam/Documents/Projects/vlc-thumbs/work/story007-refresh-20261030/source/extras/package/macosx/../../../modules/gui/macosx/tests/VLCVoutLifetimeTestSupport.m:37:17: warning: auto property synthesis will not synthesize property 'isFileBacked' declared in protocol 'VLCMediaLibraryItemProtocol' [-Wobjc-protocol-property-synthesis]"
+    },
+    {
+      "log": "normal-check.log",
+      "diagnostic": "/Users/cam/Documents/Projects/vlc-thumbs/work/story007-refresh-20261030/source/extras/package/macosx/../../../modules/gui/macosx/tests/VLCVoutLifetimeTestSupport.m:37:17: warning: auto property synthesis will not synthesize property 'primaryDetailString' declared in protocol 'VLCMediaLibraryItemProtocol' [-Wobjc-protocol-property-synthesis]"
+    },
+    {
+      "log": "normal-check.log",
+      "diagnostic": "/Users/cam/Documents/Projects/vlc-thumbs/work/story007-refresh-20261030/source/extras/package/macosx/../../../modules/gui/macosx/tests/VLCVoutLifetimeTestSupport.m:37:17: warning: auto property synthesis will not synthesize property 'secondaryDetailString' declared in protocol 'VLCMediaLibraryItemProtocol' [-Wobjc-protocol-property-synthesis]"
+    },
+    {
+      "log": "normal-check.log",
+      "diagnostic": "/Users/cam/Documents/Projects/vlc-thumbs/work/story007-refresh-20261030/source/extras/package/macosx/../../../modules/gui/macosx/tests/VLCVoutLifetimeTestSupport.m:37:17: warning: auto property synthesis will not synthesize property 'durationString' declared in protocol 'VLCMediaLibraryItemProtocol' [-Wobjc-protocol-property-synthesis]"
+    },
+    {
+      "log": "normal-check.log",
+      "diagnostic": "/Users/cam/Documents/Projects/vlc-thumbs/work/story007-refresh-20261030/source/extras/package/macosx/../../../modules/gui/macosx/tests/VLCVoutLifetimeTestSupport.m:37:17: warning: auto property synthesis will not synthesize property 'firstMediaItem' declared in protocol 'VLCMediaLibraryItemProtocol' [-Wobjc-protocol-property-synthesis]"
+    },
+    {
+      "log": "normal-check.log",
+      "diagnostic": "/Users/cam/Documents/Projects/vlc-thumbs/work/story007-refresh-20261030/source/extras/package/macosx/../../../modules/gui/macosx/tests/VLCVoutLifetimeTestSupport.m:37:17: warning: auto property synthesis will not synthesize property 'mediaItems' declared in protocol 'VLCMediaLibraryItemProtocol' [-Wobjc-protocol-property-synthesis]"
+    },
+    {
+      "log": "normal-check.log",
+      "diagnostic": "/Users/cam/Documents/Projects/vlc-thumbs/work/story007-refresh-20261030/source/extras/package/macosx/../../../modules/gui/macosx/tests/VLCVoutLifetimeTestSupport.m:37:17: warning: auto property synthesis will not synthesize property 'primaryActionableDetail' declared in protocol 'VLCMediaLibraryItemProtocol' [-Wobjc-protocol-property-synthesis]"
+    },
+    {
+      "log": "normal-check.log",
+      "diagnostic": "/Users/cam/Documents/Projects/vlc-thumbs/work/story007-refresh-20261030/source/extras/package/macosx/../../../modules/gui/macosx/tests/VLCVoutLifetimeTestSupport.m:37:17: warning: auto property synthesis will not synthesize property 'primaryActionableDetailLibraryItem' declared in protocol 'VLCMediaLibraryItemProtocol' [-Wobjc-protocol-property-synthesis]"
+    },
+    {
+      "log": "normal-check.log",
+      "diagnostic": "/Users/cam/Documents/Projects/vlc-thumbs/work/story007-refresh-20261030/source/extras/package/macosx/../../../modules/gui/macosx/tests/VLCVoutLifetimeTestSupport.m:37:17: warning: auto property synthesis will not synthesize property 'secondaryActionableDetail' declared in protocol 'VLCMediaLibraryItemProtocol' [-Wobjc-protocol-property-synthesis]"
+    },
+    {
+      "log": "normal-check.log",
+      "diagnostic": "/Users/cam/Documents/Projects/vlc-thumbs/work/story007-refresh-20261030/source/extras/package/macosx/../../../modules/gui/macosx/tests/VLCVoutLifetimeTestSupport.m:37:17: warning: auto property synthesis will not synthesize property 'secondaryActionableDetailLibraryItem' declared in protocol 'VLCMediaLibraryItemProtocol' [-Wobjc-protocol-property-synthesis]"
+    },
+    {
+      "log": "normal-check.log",
+      "diagnostic": "/Users/cam/Documents/Projects/vlc-thumbs/work/story007-refresh-20261030/source/extras/package/macosx/../../../modules/gui/macosx/tests/VLCVoutLifetimeTestSupport.m:37:17: warning: auto property synthesis will not synthesize property 'labels' declared in protocol 'VLCMediaLibraryItemProtocol' [-Wobjc-protocol-property-synthesis]"
+    },
+    {
+      "log": "normal-check.log",
+      "diagnostic": "/Users/cam/Documents/Projects/vlc-thumbs/work/story007-refresh-20261030/source/extras/package/macosx/../../../modules/gui/macosx/tests/VLCVoutLifetimeTestSupport.m:37:17: warning: auto property synthesis will not synthesize property 'favorited' declared in protocol 'VLCMediaLibraryItemProtocol' [-Wobjc-protocol-property-synthesis]"
+    },
+    {
+      "log": "normal-check.log",
+      "diagnostic": "/Users/cam/Documents/Projects/vlc-thumbs/work/story007-refresh-20261030/source/extras/package/macosx/../../../modules/gui/macosx/tests/VLCVoutLifetimeTestSupport.m:37:17: warning: class property 'supportsSecureCoding' requires method 'supportsSecureCoding' to be defined - use @dynamic or provide a method implementation in this class implementation [-Wobjc-property-implementation]"
+    }
+  ],
+  "global_link_warning": "upstream configure CFLAGS include -fcx-limited-range; Clang emits unused-command-line-argument during link. Not a warning-free tree.",
+  "inherited_nested_ffmpeg_patch_whitespace_entries": 13
+}

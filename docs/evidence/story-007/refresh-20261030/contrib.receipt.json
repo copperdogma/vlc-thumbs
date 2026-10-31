@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "/bin/bash",
+    "contrib-setup.sh"
+  ],
+  "returncode": 0,
+  "stop_reason": null,
+  "minimum_free": 15907696640
+}

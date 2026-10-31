@@ -1,5 +1,11 @@
 # Changelog
 
+## [Unreleased] — Story007 source refresh and warning closeout
+
+- Reconstructed and rebased the preserved VLC contribution onto October30 master; retained a replay-verified16-patch/70-path successor, current dependency recipe and scoped test-link correction. No merged native macOS hover-thumbnail replacement was found; overlapping MR !7493 remains open.
+- Clarified the intentionally incomplete lifetime-test shells, scoped media-item diagnostics and declared unused window accessors dynamic; affected compilation has zero warnings and all five cases pass, production diagnostics unchanged.
+- Preserved current build/helper/native/core/archive results and original failures, corrected ledger/evidence navigation, and documented the unresolved CLI SAP shutdown gate and disk-blocked pristine control. No full make check/distcheck pass or VideoLAN submission claimed; Story007 stays open.
+
 ## [2026-10-09-02] - Concise upstream review package (Story006)
 
 - Refreshed thirteen current commit messages, compact cover/MR draft and a single validation table. Explained real prerequisite dependencies and kept qualified patch order.

@@ -1,0 +1,100 @@
+{
+  "build_head": "8cd1b7ce65d67886ca5f3afa802fb888226b659e",
+  "export_head": "4dd9f5e20631173cbf1343e6367c4ac4a3a836a9",
+  "build_tree": "330eb90675c4ffe744625c3d65fdbab55895c7c6",
+  "export_tree": "330eb90675c4ffe744625c3d65fdbab55895c7c6",
+  "same_tree": true,
+  "reason": "one authorized F0000 header/Makefile count correction only",
+  "mapping": [
+    {
+      "build_commit": "c86a9695339b7835a97b7377aabb0a462e4dafef",
+      "export_commit": "c86a9695339b7835a97b7377aabb0a462e4dafef",
+      "subject": "macosx: hit-test autohide controls in local coordinates",
+      "message_changed": false
+    },
+    {
+      "build_commit": "55448ec50269955957c6e7bc5531c8bfe1d16be9",
+      "export_commit": "9f069dcecdae67f3bb3d27e333f8eaef3d2af4dd",
+      "subject": "build: distribute existing headers beside their consumers",
+      "message_changed": true
+    },
+    {
+      "build_commit": "6767ed89e480a927b5b7d91d76fe8ff6c4ae7585",
+      "export_commit": "f5b8175e3145e851235c3ef99ced2cad46ee1dd0",
+      "subject": "contrib: expose Matroska identity and bounded flat admission",
+      "message_changed": false
+    },
+    {
+      "build_commit": "912d2801e6fe7fd55e24c50d519146584db94247",
+      "export_commit": "6cdc674e5531b2c60c2cfd28a29830653a04f6a1",
+      "subject": "bin: build and package the timeline preview helper",
+      "message_changed": false
+    },
+    {
+      "build_commit": "b69152dd7c4bfb2f21f9c7fdfecb9a8a3af2aaf2",
+      "export_commit": "6a308edc97820a2e5c4d2af0dc0700790ab24433",
+      "subject": "macosx: add thumbnail service, cache and worker scheduling",
+      "message_changed": false
+    },
+    {
+      "build_commit": "04aa65bcb9b7c83942efaecd107453fee0679bed",
+      "export_commit": "72e0be3f395f7a7a063d6d474cd659d44e68ee2a",
+      "subject": "macosx: integrate player context and timeline hover previews",
+      "message_changed": false
+    },
+    {
+      "build_commit": "4bdffd69258147a5962ad67040040438b5699349",
+      "export_commit": "47a31aca7ea415a30944a17f0b777f516b39a6c8",
+      "subject": "build: order macOS installation and clean generated artifacts",
+      "message_changed": false
+    },
+    {
+      "build_commit": "3672ccf3ad834ffd63cd45455f758161047d102e",
+      "export_commit": "3d49c0c3da806cb554c4b8eb504229df9d88d27d",
+      "subject": "clock: preserve the observed system origin",
+      "message_changed": false
+    },
+    {
+      "build_commit": "7ae6651f13b3bbd997fe8be46a4f3d8fab1b0444",
+      "export_commit": "43756090e5e6b40ddda53331024c22662e7d87f6",
+      "subject": "tests: select GnuTLS for the PEM trust fixture",
+      "message_changed": false
+    },
+    {
+      "build_commit": "6896e88f0936a0263c2c93f036b081d67b4700b8",
+      "export_commit": "08928e377fb58025a2012a664ba4deb8c09b6b0d",
+      "subject": "macosx: release the caller-owned media source",
+      "message_changed": false
+    },
+    {
+      "build_commit": "136ad8cb003ce882efaa5d667486202d489a504b",
+      "export_commit": "2d3b6e7d237db9d3ec71dd0afe2fa63ca6ee1df5",
+      "subject": "macosx: retire the playback-ended timer at termination",
+      "message_changed": false
+    },
+    {
+      "build_commit": "c73c63e4983f130392b655a1ec5ea315025a38aa",
+      "export_commit": "733b4a44b8cbb11f3a7da0ffc7500a28b2b12b47",
+      "subject": "macosx: fence video-window callback lifetime",
+      "message_changed": false
+    },
+    {
+      "build_commit": "a0bd45093c9aa194168779317fe97fd100e77681",
+      "export_commit": "f0d11c5cb9ea93a5525cdf8d74d31b411a78ae57",
+      "subject": "tests: retain Darwin static fixture module tables",
+      "message_changed": false
+    },
+    {
+      "build_commit": "e6e5bff8248b02509063534e28281a0c2d192bdd",
+      "export_commit": "6038784049ca0c57f8dd9dab4559a7ffe4822db2",
+      "subject": "docs: refresh macOS contrib and Metal prerequisites",
+      "message_changed": false
+    },
+    {
+      "build_commit": "8cd1b7ce65d67886ca5f3afa802fb888226b659e",
+      "export_commit": "4dd9f5e20631173cbf1343e6367c4ac4a3a836a9",
+      "subject": "tests: link audio-output decoder test with compatibility helpers",
+      "message_changed": false
+    }
+  ]
+}

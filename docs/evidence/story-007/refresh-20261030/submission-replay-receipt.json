@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "method": "fresh local clone invoked with --shared; Git materialized a separate local object pack, then git am all15 patches in series order; source input unchanged",
+  "base": "5ccc5fa83f287d7ab7cc493f8dc2a31655fd2a09",
+  "actual_head": "3a12bd06c8896a116c18f37ac1ff4d201092a8c7",
+  "expected_tree": "330eb90675c4ffe744625c3d65fdbab55895c7c6",
+  "actual_tree": "330eb90675c4ffe744625c3d65fdbab55895c7c6",
+  "clean": true,
+  "patch_count": 15,
+  "git_am_exit": 0,
+  "initial_receipt_postprocessing_exit": 1,
+  "postprocessing_note": "Initial writer assumed objects/info/alternates existed and raised FileNotFoundError after all patches applied successfully. Corrected receipt from observed final state without reapplying patches."
+}

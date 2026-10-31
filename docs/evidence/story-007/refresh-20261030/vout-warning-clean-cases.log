@@ -1,0 +1,16 @@
+GEOMETRY bounds=320x180 backing=640x360
+CASE queued-destroy failures=0
+GEOMETRY bounds=320x180 backing=640x360
+RESIZE width=640 height=360
+CASE inflight-disable failures=0
+GEOMETRY bounds=320x180 backing=640x360
+RESIZE width=640 height=360
+CASE inflight-destroy failures=0
+GEOMETRY bounds=320x180 backing=640x360
+RESIZE width=640 height=360
+CASE disable-rebind failures=0
+GEOMETRY bounds=320x180 backing=640x360
+RESIZE width=640 height=360
+CASE address-reuse failures=0
+vout wiring total failures=0
+PASS vlc-vout-lifetime-test (exit status: 0)

@@ -1,6 +1,8 @@
 # Initial scout — VLC upstream contribution (Story 002b / 005)
 
-**Current status, 2026-10-07T06:44Z:** Phase1 is complete. Phase2 remains open:
+**Process refresh, 2026-10-09:** [Scout001](../scout/scout-001-vlc-submission-process.md) verifies the official MR route and detailed checklist. Latest master has advanced; application/integration before submission is recommended. Current bounded Phases1/2 product qualification is in [source10 final verification](../evidence/story-005/current-source10-final-verification.md); old open-gate snapshots below remain historical. No upstream submission.
+
+**Historical status, 2026-10-07T06:44Z:** Phase1 is complete. Phase2 remains open:
 normal009 full build/check and fresh016 offline package/relocation pass, but loaded
 normal Quit/current native/reader are unqualified; complete010 distcheck passes through final cleanup. The desktop is currently locked; manual unlock was requested. Public11
 remains unchanged; ignored combined source72 includes separate baseline

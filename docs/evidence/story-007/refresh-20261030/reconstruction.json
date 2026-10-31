@@ -1,0 +1,59 @@
+{
+  "provenance": "New reconstruction commits; original submitted commit objects unavailable",
+  "base": "2e358f3098c2f2b7621d1dc568de8b61ad786322",
+  "tree": "b7c0f24e442c35a57bb108d56b801fd05b624943",
+  "commits": [
+    {
+      "patch": "blocker-prerequisites/0008-macosx-hit-test-autohide-controls-in-local-coordinates.patch",
+      "reconstructed_commit": "1e9a71fff6e5f70c9c6eec5d80754665e65fb0c6"
+    },
+    {
+      "patch": "feature-series/0000-source-header-distribution.patch",
+      "reconstructed_commit": "f6ff680be9c355279b04380d9c9f8397f8a9c39d"
+    },
+    {
+      "patch": "feature-series/0001-contrib-matroska-identity-and-admission.patch",
+      "reconstructed_commit": "92078cc68c50e206ea05dead6c98d10497807d70"
+    },
+    {
+      "patch": "feature-series/0002-timeline-helper-build-package-and-tests.patch",
+      "reconstructed_commit": "8f36f3f415649662f07b848a8aec18d80c0b17a4"
+    },
+    {
+      "patch": "feature-series/0003-macosx-thumbnail-service-cache-worker.patch",
+      "reconstructed_commit": "07378bae68f0d48e65fb56f745e8fadc5e5f8d9a"
+    },
+    {
+      "patch": "feature-series/0004-macosx-timeline-context-and-hover.patch",
+      "reconstructed_commit": "5215b79d73118c62290753a758d52183d46d0023"
+    },
+    {
+      "patch": "blocker-prerequisites/0001-build-order-macosx-install-and-clean-vtutils.patch",
+      "reconstructed_commit": "0605341ea8167ee180a42a336d47567000e1d0ce"
+    },
+    {
+      "patch": "blocker-prerequisites/0002-clock-preserve-observed-system-origin.patch",
+      "reconstructed_commit": "d5f8aad9650219d97949b48a730aed9109744c94"
+    },
+    {
+      "patch": "blocker-prerequisites/0003-tests-select-gnutls-for-pem-trust-fixture.patch",
+      "reconstructed_commit": "a69e0bb9157bb245ea58770bb262451d2fff9ad8"
+    },
+    {
+      "patch": "blocker-prerequisites/0004-opengl-initialize-legacy-version-fallback.patch",
+      "reconstructed_commit": "33722f6d6669512ad7af2fc3544077f12d3520a0"
+    },
+    {
+      "patch": "blocker-prerequisites/0005-macosx-release-caller-owned-media-source.patch",
+      "reconstructed_commit": "cc58ba0a5dbc9aa3a2cfd21e43d8f8d495f85d03"
+    },
+    {
+      "patch": "blocker-prerequisites/0006-macosx-retire-playback-ended-timer-during-termination.patch",
+      "reconstructed_commit": "9641ccac7c28da0fbba189bf1b2f366fdff44873"
+    },
+    {
+      "patch": "blocker-prerequisites/0007-macosx-fence-video-window-callback-lifetime.patch",
+      "reconstructed_commit": "c5685ddb067b16fd81b96ed6acee60cf24fecb84"
+    }
+  ]
+}

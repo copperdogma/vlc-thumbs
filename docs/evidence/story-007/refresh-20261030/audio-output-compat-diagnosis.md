@@ -1,0 +1,11 @@
+# Compatibility objects at an executable/shared-library boundary
+
+The new upstream audio-output decoder test (05189ac4372b40f4ccbc406e28a79410cd487590) directly compiles src/misc/variables.c but its upstream LDADD omits compat/libcompat.la. On this Darwin configuration HAVE_TDESTROY is undefined, so AC_REPLACE_FUNCS chooses the existing compatibility tdestroy implementation. libvlccore links it hidden/private; the test executable cannot resolve that definition through dynamic lookup.
+
+Observed crash: null PC during var_DestroyAll at variables.c419, after stream assertions complete, while calling the tdestroy stub. nm shows the failed executable has an undefined/dynamically-looked-up _tdestroy, while libvlccore has a private definition. The fixture module table is present and exported. Sparkle loader warnings precede the crash but do not establish causality.
+
+Standard solution: link the existing compatibility archive into the executable that directly compiles the compatibility-dependent source. GNU primary references: https://www.gnu.org/software/autoconf/manual/autoconf-2.60/html_node/Generic-Functions.html (AC_REPLACE_FUNCS/AC_LIBOBJ) and https://www.gnu.org/software/automake/manual/automake.pdf (LIBOBJS). Current project convention is ../compat/libcompat.la in test/Makefile.am; no LIBCOMPAT variable exists here.
+
+One first discriminator setup failed to force a relink, so its unchanged executable repeated the crash; preserved separately. After preserving the old wrapper/Mach-O and forcing the ordinary link recipe, the exact isolated test passes with locally defined tdestroy. The same Sparkle warning remains, discriminating it from the null-call cause. No loader environment workaround was applied.
+
+The one-line LDADD correction is committed in 8cd1b7ce65d67886ca5f3afa802fb888226b659e. All96 core registered cases then pass in16.04s. The unchanged598-case macOS suite is not rerun solely for this test-only link correction. No pristine full upstream build was performed; the missing link recipe and directly compiled source are byte-equal to pinned upstream, while the applicable local symbol/stack/probe evidence establishes this defect on the current Darwin configuration.

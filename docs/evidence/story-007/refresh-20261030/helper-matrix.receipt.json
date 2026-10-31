@@ -1,0 +1,12 @@
+{
+  "started_epoch": 1793380244.664536,
+  "finished_epoch": 1793380248.678282,
+  "elapsed_seconds": 4.013747930526733,
+  "argv": [
+    "/bin/bash",
+    "helper-matrix.sh"
+  ],
+  "returncode": 0,
+  "stop_reason": null,
+  "minimum_free": 14454333440
+}

@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "/bin/bash",
+    "normal-build.sh"
+  ],
+  "returncode": 2,
+  "stop_reason": null,
+  "minimum_free": 14913368064
+}

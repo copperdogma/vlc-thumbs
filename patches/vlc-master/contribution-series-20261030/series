@@ -1,0 +1,16 @@
+0001-macosx-hit-test-autohide-controls-in-local-coordinat.patch
+0002-build-distribute-existing-headers-beside-their-consu.patch
+0003-contrib-expose-Matroska-identity-and-bounded-flat-ad.patch
+0004-bin-build-and-package-the-timeline-preview-helper.patch
+0005-macosx-add-thumbnail-service-cache-and-worker-schedu.patch
+0006-macosx-integrate-player-context-and-timeline-hover-p.patch
+0007-build-order-macOS-installation-and-clean-generated-a.patch
+0008-clock-preserve-the-observed-system-origin.patch
+0009-tests-select-GnuTLS-for-the-PEM-trust-fixture.patch
+0010-macosx-release-the-caller-owned-media-source.patch
+0011-macosx-retire-the-playback-ended-timer-at-terminatio.patch
+0012-macosx-fence-video-window-callback-lifetime.patch
+0013-tests-retain-Darwin-static-fixture-module-tables.patch
+0014-docs-refresh-macOS-contrib-and-Metal-prerequisites.patch
+0015-tests-link-audio-output-decoder-test-with-compatibil.patch
+0016-tests-scope-diagnostics-for-the-link-only-GUI-shells.patch

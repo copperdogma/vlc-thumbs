@@ -1,0 +1,12 @@
+{
+  "started_epoch": 1793380349.773796,
+  "finished_epoch": 1793381158.609928,
+  "elapsed_seconds": 808.8361327648163,
+  "argv": [
+    "/bin/bash",
+    "normal-check.sh"
+  ],
+  "returncode": 2,
+  "stop_reason": null,
+  "minimum_free": 11935309824
+}

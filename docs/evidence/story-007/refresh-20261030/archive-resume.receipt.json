@@ -1,0 +1,14 @@
+{
+  "started_epoch": 1793382078.171427,
+  "finished_epoch": 1793382268.844733,
+  "elapsed_seconds": 190.67330694198608,
+  "pid": 32017,
+  "pgid": 32017,
+  "argv": [
+    "/bin/bash",
+    "archive-resume.sh"
+  ],
+  "returncode": 0,
+  "stop_reason": null,
+  "minimum_free": 10732183552
+}

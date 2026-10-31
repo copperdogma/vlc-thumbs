@@ -1,0 +1,41 @@
+From 6038784049ca0c57f8dd9dab4559a7ffe4822db2 Mon Sep 17 00:00:00 2001
+From: Cam Marsollier <cam.marsollier@gmail.com>
+Date: Fri, 30 Oct 2026 10:58:58 -0600
+Subject: [PATCH 14/16] docs: refresh macOS contrib and Metal prerequisites
+
+Pin the current canonical CI contrib artifact and observed SHA512 for the updated medialibrary requirement. Document normal Xcode Metal component installation.
+---
+ bin/timeline-preview/README.md | 9 ++++++---
+ 1 file changed, 6 insertions(+), 3 deletions(-)
+
+diff --git a/bin/timeline-preview/README.md b/bin/timeline-preview/README.md
+index ecf69b61f92477d2c7afd9582e42e6caf9d9c1be..ef4ba77cdf7ecb45a4bcff5ddd6d42fff221eec8 100644
+--- a/bin/timeline-preview/README.md
++++ b/bin/timeline-preview/README.md
+@@ -60,7 +60,10 @@ VLC --no-macosx-timeline-previews
+ 
+ Use the built app's executable. It locates the packaged helper beside itself,
+ never through PATH. Native macOS builds need Xcode/SDK, configured Metal and VLC's
+-normal tools/contrib. The helper defaults on with desktop macOS VLC; configure
++normal tools/contrib. If Xcode reports that the Metal toolchain is missing,
++install its standard component with `xcodebuild -downloadComponent metalToolchain`
++and verify `xcrun --sdk macosx --find metallib` before building.
++The helper defaults on with desktop macOS VLC; configure
+ `--disable-timeline-preview` disables its build. Selected FFmpeg9 libraries require
+ both normal contrib patches: [TrackNumber](../../contrib/src/ffmpeg/matroska-track-number.patch)
+ and [opt-in flat timeline](../../contrib/src/ffmpeg/matroska-flat-timeline.patch).
+@@ -97,9 +100,9 @@ vlcSetContribEnvironment "$MINIMAL_OSX_VERSION"
+ cd "$vlc_output/contrib/contrib-$HOST_TRIPLET"
+ "$vlc_source/contrib/bootstrap" --build="$BUILD_TRIPLET" --host="$HOST_TRIPLET"
+ archive="vlc-contrib-$HOST_TRIPLET-latest.tar.zst"
+-url=https://artifacts.videolan.org/vlc/macos-arm64/vlc-contrib-aarch64-apple-darwin19-15b71e3fa6d49ed2845dfb1324760984eae6101c.tar.zst
++url=https://artifacts.videolan.org/vlc/macos-arm64/vlc-contrib-aarch64-apple-darwin19-e0baa29690f97c5d746643d59358fd6055eda8f6.tar.zst
+ make "$archive" PREBUILT_URL="$url"
+-expected=46ff351556f8b9f54e9d550a987621e6bf3c005fb9d00922befc538b9ae1ba5628d238ff5c1defecdc81ff3cfe386db0442a0a45050f4462545f01ef89399d57
++expected=fd3c257e20c16bcfdcdd732e9abb32205e71d5d190abf12b26a929e4d7e19555ec5b7d73f8799371ecd96c03ab9e39d527b9e36df7da4d91f07083715306de54
+ actual=$(shasum -a 512 "$archive" | awk '{print $1}')
+ test "$actual" = "$expected"
+ make prebuilt PREBUILT_URL="$url"
+-- 
+2.42.0
+

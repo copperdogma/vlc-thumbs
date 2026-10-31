@@ -1,0 +1,12 @@
+{
+  "started_epoch": 1793381326.623256,
+  "finished_epoch": 1793381328.630016,
+  "elapsed_seconds": 2.0067601203918457,
+  "argv": [
+    "/bin/bash",
+    "audio-compat-discriminator.sh"
+  ],
+  "returncode": 0,
+  "stop_reason": null,
+  "minimum_free": 13046374400
+}

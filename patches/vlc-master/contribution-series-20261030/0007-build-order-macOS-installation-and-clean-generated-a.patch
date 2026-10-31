@@ -1,0 +1,83 @@
+From 47a31aca7ea415a30944a17f0b777f516b39a6c8 Mon Sep 17 00:00:00 2001
+From: Cam Marsollier <cam.marsollier@gmail.com>
+Date: Fri, 30 Oct 2026 10:55:35 -0600
+Subject: [PATCH 07/16] build: order macOS installation and clean generated
+ artifacts
+
+Use an install-exec hook for the transformed macOS executable name and remove the
+same installed name at uninstall. Distribute the required private header and
+clean generated nib directories and `libvlc_vtutils.la`. These changes allow
+complete source-archive install/cleanup checks after the feature build-list edits;
+conventional distcheck passes through final cleanup.
+---
+ bin/Makefile.am                | 13 +++++++++++--
+ modules/codec/Makefile.am      |  1 +
+ modules/gui/macosx/Makefile.am | 10 +++++++++-
+ 3 files changed, 21 insertions(+), 3 deletions(-)
+
+diff --git a/bin/Makefile.am b/bin/Makefile.am
+index d5651091afc2b86911c32cf2282b6fd95809ab80..5b919a6bcb7cbbe5fa428f5891f5ffc3a31df92e 100644
+--- a/bin/Makefile.am
++++ b/bin/Makefile.am
+@@ -148,8 +148,17 @@ MOSTLYCLEANFILES = $(noinst_DATA)
+ 
+ if HAVE_OSX
+ if BUILD_VLC
+-install-data-local:
+-	cd "$(DESTDIR)$(bindir)"; mv vlc-osx vlc
++install-exec-hook:
++	@installed_osx=`echo 'vlc-osx' | sed -e '$(transform)' -e 's/$$/$(EXEEXT)/'`; \
++	installed_vlc=`echo 'vlc' | sed -e '$(transform)' -e 's/$$/$(EXEEXT)/'`; \
++	cd "$(DESTDIR)$(bindir)" && \
++	if test "$$installed_osx" != "$$installed_vlc"; then \
++		mv -f "$$installed_osx" "$$installed_vlc"; \
++	fi
++
++uninstall-hook:
++	@installed_vlc=`echo 'vlc' | sed -e '$(transform)' -e 's/$$/$(EXEEXT)/'`; \
++	rm -f "$(DESTDIR)$(bindir)/$$installed_vlc"
+ 
+ endif
+ endif
+diff --git a/modules/codec/Makefile.am b/modules/codec/Makefile.am
+index eb68cda9eb6ca5f058b36d554bb16fa3c929ab34..2733bfb80182dda120996522f80747cf7aa4cdbc 100644
+--- a/modules/codec/Makefile.am
++++ b/modules/codec/Makefile.am
+@@ -689,3 +689,4 @@ noinst_PLUGINS += libhxxxhelper_testdec_plugin.la
+ libvlc_vtutils_la_SOURCES = codec/vt_utils.c codec/vt_utils.h codec/vt_utils_native.m
+ libvlc_vtutils_la_LDFLAGS = -static -no-undefined
+ EXTRA_LTLIBRARIES += libvlc_vtutils.la
++CLEANFILES += libvlc_vtutils.la
+diff --git a/modules/gui/macosx/Makefile.am b/modules/gui/macosx/Makefile.am
+index a8281281498a984eb44847c222f723b9defa6c51..7d515e0f731554c735c578623bd97443752dedac 100644
+--- a/modules/gui/macosx/Makefile.am
++++ b/modules/gui/macosx/Makefile.am
+@@ -583,6 +583,7 @@ libmacosx_plugin_la_SOURCES = \
+ 	gui/macosx/windows/video/VLCFullVideoViewWindow.m \
+ 	gui/macosx/windows/video/VLCMainVideoViewAudioMediaDecorativeView.h \
+ 	gui/macosx/windows/video/VLCMainVideoViewAudioMediaDecorativeView.m \
++	gui/macosx/private/PIPSPI.h \
+ 	gui/macosx/windows/video/VLCMainVideoViewController.h \
+ 	gui/macosx/windows/video/VLCMainVideoViewController.m \
+ 	gui/macosx/windows/video/VLCMainVideoViewOverlayView.h \
+@@ -657,9 +658,16 @@ libmacosx_plugin_la_XIB_SOURCES = \
+ 
+ libmacosx_plugin_la_SOURCES += $(libmacosx_plugin_la_XIB_SOURCES)
+ 
++libmacosx_plugin_la_NIBS = $(libmacosx_plugin_la_XIB_SOURCES:.xib=.nib)
++
+ if ENABLE_MACOSX_UI
+ gui_PLUGINS += libmacosx_plugin.la
+-BUILT_SOURCES += $(libmacosx_plugin_la_XIB_SOURCES:.xib=.nib)
++all-local: $(libmacosx_plugin_la_NIBS)
++
++clean-local: clean-macosx-nibs
++.PHONY: clean-macosx-nibs
++clean-macosx-nibs:
++	$(RM) -r -- $(libmacosx_plugin_la_NIBS)
+ endif
+ 
+ libmacosx_plugin_la_RES = \
+-- 
+2.42.0
+

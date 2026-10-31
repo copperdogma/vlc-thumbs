@@ -1,0 +1,8 @@
+{
+  "status": "BLOCKED_STALLED_HOST",
+  "reason": "owner-approved300s bound on stalled registeredhost1; not a passing test",
+  "guard_elapsed_at_stop": "05:06",
+  "pgid": 83385,
+  "stop_started_epoch": 1793381729.5951319,
+  "stop_finished_epoch": 1793381739.668436
+}

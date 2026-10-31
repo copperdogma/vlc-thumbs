@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "method": "Separate temporary index: read-tree base, git apply --cached all16, write-tree",
+  "base": "5ccc5fa83f287d7ab7cc493f8dc2a31655fd2a09",
+  "final_export_head": "dd50411dad2b8c05144acbf0e7c63fb9150e0120",
+  "expected_tree": "212c081ca9eb566a65b3979d272a788ae52653ea",
+  "replayed_tree": "212c081ca9eb566a65b3979d272a788ae52653ea",
+  "patch_count": 16,
+  "source_clean": true,
+  "final_export_replay_verified": true,
+  "manifest_sha256": "c92e49dd8a97b86e778f8bf2ba3353bb12716a2324ca1f3266a9e7ad9d7999f0"
+}

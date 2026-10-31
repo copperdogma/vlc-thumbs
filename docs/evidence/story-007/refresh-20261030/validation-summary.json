@@ -1,0 +1,384 @@
+{
+  "status": "Local source refresh and bounded qualification complete; registered host shutdown gate blocked; no upstream publication",
+  "base": "5ccc5fa83f287d7ab7cc493f8dc2a31655fd2a09",
+  "head": "4dd9f5e20631173cbf1343e6367c4ac4a3a836a9",
+  "tree": "330eb90675c4ffe744625c3d65fdbab55895c7c6",
+  "patch_count": 15,
+  "source_paths": 70,
+  "source_clean": true,
+  "qualified_source_build_head": "8cd1b7ce65d67886ca5f3afa802fb888226b659e",
+  "qualified_source_build_tree": "330eb90675c4ffe744625c3d65fdbab55895c7c6",
+  "metadata_only_final_rewrite": {
+    "before": "8cd1b7ce65d67886ca5f3afa802fb888226b659e",
+    "after": "4dd9f5e20631173cbf1343e6367c4ac4a3a836a9",
+    "identical_tree": true,
+    "scope": "one F0000 technical body correction to four headers/two Makefiles; no code change or retest"
+  },
+  "app_build": {
+    "head": "e6e5bff8248b02509063534e28281a0c2d192bdd",
+    "tree": "3b08612dc30215464c8fbc78e60c3bcf7217e316",
+    "path": "/Users/cam/Documents/Projects/vlc-thumbs/work/story007-refresh-20261030/source/build-macosx/VLC.app",
+    "content_manifest_sha256": "7f62c2ade90d7107c686ba65b37ca90f18fad3a14679f000395979c59c12eb35",
+    "manifest": "logs/app-content-manifest.json",
+    "codesign": "PASS: conventional make VLC.app codesign.sh deep validation, valid on disk/designated requirement",
+    "subsequent_source_change": "one test/Makefile.am compatibility-link line only; application source unchanged"
+  },
+  "gates": {
+    "reconstruction": {
+      "status": "PASS",
+      "original_october13_commit_objects_available": false,
+      "old_source13_tree_exact": "b7c0f24e442c35a57bb108d56b801fd05b624943",
+      "receipt": "reconstruction.json"
+    },
+    "tools": {
+      "status": "PASS",
+      "exit": 0,
+      "elapsed_seconds": null,
+      "minimum_free_bytes": 17868382208,
+      "receipt": "logs/tools.receipt.json"
+    },
+    "contrib": {
+      "status": "PASS",
+      "exit": 0,
+      "elapsed_seconds": null,
+      "minimum_free_bytes": 15907696640,
+      "receipt": "logs/contrib.receipt.json"
+    },
+    "gnu_sed_first_mirror": {
+      "status": "FAILED",
+      "exit": 28,
+      "elapsed_seconds": null,
+      "minimum_free_bytes": 17874120704,
+      "receipt": "logs/sed.receipt.json"
+    },
+    "gnu_sed_official_source": {
+      "status": "PASS",
+      "exit": 0,
+      "elapsed_seconds": null,
+      "minimum_free_bytes": 16220971008,
+      "receipt": "logs/sed-official-gnu.receipt.json"
+    },
+    "normal_default_dolt_build": {
+      "status": "FAILED",
+      "exit": 2,
+      "elapsed_seconds": null,
+      "minimum_free_bytes": 14913368064,
+      "receipt": "logs/normal-build.receipt.json",
+      "reason": "upstream Dolt wrapper mishandles duplicate OBJCXX/CXX language tags on this toolchain"
+    },
+    "full_gnu_libtool_failing_target": {
+      "status": "PASS",
+      "exit": 0,
+      "elapsed_seconds": 4.021750211715698,
+      "minimum_free_bytes": 14951358464,
+      "receipt": "logs/libtool-target-check.receipt.json"
+    },
+    "normal_build_and_signed_package": {
+      "status": "PASS",
+      "exit": 0,
+      "elapsed_seconds": 170.60630702972412,
+      "minimum_free_bytes": 14012936192,
+      "receipt": "logs/normal-libtool-build.receipt.json",
+      "build_head": "e6e5bff8248b02509063534e28281a0c2d192bdd",
+      "build_tree": "3b08612dc30215464c8fbc78e60c3bcf7217e316",
+      "scope": "incremental continuation with ordinary full GNU libtool; first default failure retained"
+    },
+    "fresh_fixture_generation": {
+      "status": "PASS",
+      "exit": 0,
+      "elapsed_seconds": null,
+      "minimum_free_bytes": 15973060608,
+      "receipt": "logs/fixtures.receipt.json",
+      "provenance": "new current fixtures; no old byte-identity claim",
+      "identity_cases": 6,
+      "admission_cases": 38,
+      "hashes": "logs/fresh-fixture-hashes.json"
+    },
+    "normal_helper_matrix": {
+      "status": "PASS",
+      "exit": 0,
+      "elapsed_seconds": 4.013747930526733,
+      "minimum_free_bytes": 14454333440,
+      "receipt": "logs/helper-matrix.receipt.json",
+      "cases": 77,
+      "results": "logs/helper-matrix-results.json"
+    },
+    "signed_packaged_helper_protocol": {
+      "status": "PASS",
+      "cases": 13,
+      "elapsed_seconds": null,
+      "results": "logs/packaged-helper-protocol-results.json"
+    },
+    "normal_first_full_registered_check": {
+      "status": "FAILED",
+      "exit": 2,
+      "elapsed_seconds": 808.8361327648163,
+      "minimum_free_bytes": 11935309824,
+      "receipt": "logs/normal-check.receipt.json",
+      "groups": [
+        {
+          "total": 6,
+          "pass": 6
+        },
+        {
+          "total": 30,
+          "pass": 29,
+          "skip": 1
+        },
+        {
+          "total": 25,
+          "pass": 25
+        },
+        {
+          "total": 96,
+          "pass": 95,
+          "fail": 1
+        }
+      ],
+      "reason": "new upstream audio-output test missing compatibility archive; null tdestroy call at teardown"
+    },
+    "macos_xctest": {
+      "status": "PASS",
+      "cases": 598,
+      "pass": 597,
+      "skip": 1,
+      "fail": 0,
+      "test_seconds": 703.835,
+      "bundle_wall_seconds": 705.786,
+      "build_head": "e6e5bff8248b02509063534e28281a0c2d192bdd",
+      "context_cases": 7,
+      "context_pass": 7,
+      "hover_reentrancy_cases": 11,
+      "hover_reentrancy_pass": 11
+    },
+    "audio_compat_first_probe_setup": {
+      "status": "FAILED_SETUP",
+      "exit": 139,
+      "elapsed_seconds": 2.0063230991363525,
+      "minimum_free_bytes": 13049278464,
+      "receipt": "logs/audio-compat-discriminator.receipt.json",
+      "reason": "make-W did not relink unchanged binary; no compatibility-fix result"
+    },
+    "audio_compat_focused_relink": {
+      "status": "PASS",
+      "exit": 0,
+      "elapsed_seconds": 2.0067601203918457,
+      "minimum_free_bytes": 13046374400,
+      "receipt": "logs/audio-compat-discriminator002.receipt.json",
+      "scope": "tdestroy now locally defined; same Sparkle warning persists without crash"
+    },
+    "repaired_core_registered_group": {
+      "status": "PASS",
+      "exit": 0,
+      "elapsed_seconds": 16.035892009735107,
+      "minimum_free_bytes": 13046140928,
+      "receipt": "logs/core-check.receipt.json",
+      "cases": 96,
+      "pass_cases": 96,
+      "source_head": "8cd1b7ce65d67886ca5f3afa802fb888226b659e"
+    },
+    "normal_registered_host": {
+      "status": "BLOCKED",
+      "exit": -15,
+      "elapsed_seconds": 306.6364541053772,
+      "minimum_free_bytes": 12750843904,
+      "receipt": "logs/normal-root-check.receipt.json",
+      "cases": 1,
+      "pass_cases": 0,
+      "reason": "stalled registered host cleanup in SAP Close/join through medialibrary0.14.1; no causality baseline or broad repair",
+      "bound": "root-selected300s under owner focused-check scope; actual manual supervisor elapsed306.64s including tool handoff",
+      "stop_receipt": "logs/normal-host-300s-stop.json",
+      "provenance_correction": "logs/host-bound-provenance-correction.md",
+      "owned_process_group_absent": true,
+      "absence_receipt": "logs/normal-host-process-absence.json"
+    },
+    "complete_conventional_distcheck": {
+      "status": "NOT_RUN",
+      "reason": "root selected bounded archive-only proof rather than knowingly repeat598 cases and the same stalled registered host gate; no distcheck PASS claim"
+    },
+    "archive_first_wrapper_attempt": {
+      "status": "FAILED_SETUP",
+      "exit": 2,
+      "elapsed_seconds": 351.371787071228,
+      "minimum_free_bytes": 11415187456,
+      "receipt": "logs/archive-only.receipt.json",
+      "reason": "private wrapper ceiling covered outer only while archive was extracted beside it; ancestor Git discovery attempted read-only revision rewrite"
+    },
+    "readonly_archive_build_and_helper": {
+      "status": "PASS",
+      "exit": 0,
+      "elapsed_seconds": 190.67330694198608,
+      "minimum_free_bytes": 10732183552,
+      "receipt": "logs/archive-resume.receipt.json",
+      "source_head": "8cd1b7ce65d67886ca5f3afa802fb888226b659e",
+      "source_tree": "330eb90675c4ffe744625c3d65fdbab55895c7c6",
+      "cases": 13,
+      "results": "logs/archive-helper-protocol-results.json",
+      "scope": "read-only extracted ordinary make-dist archive, same feature flags, full GNU libtool, build plus registered helper13; no native/core/full check repeated",
+      "active_attempt_seconds": 542.0450940132141,
+      "wall_including_correction_gap_seconds": 616.1240909099579,
+      "root_selected_resume_cap_seconds": 249
+    },
+    "archive_install_uninstall_distclean": {
+      "status": "NOT_RUN",
+      "reason": "optional scope omitted to retain focused archive budget"
+    },
+    "export_git_am_replay": {
+      "status": "PASS",
+      "method": "fresh local clone invoked with --shared; Git materialized a separate local object pack, then git am all15 patches in series order; source input unchanged",
+      "base": "5ccc5fa83f287d7ab7cc493f8dc2a31655fd2a09",
+      "actual_head": "3a12bd06c8896a116c18f37ac1ff4d201092a8c7",
+      "expected_tree": "330eb90675c4ffe744625c3d65fdbab55895c7c6",
+      "actual_tree": "330eb90675c4ffe744625c3d65fdbab55895c7c6",
+      "clean": true,
+      "patch_count": 15,
+      "git_am_exit": 0,
+      "initial_receipt_postprocessing_exit": 1,
+      "postprocessing_note": "Initial writer assumed objects/info/alternates existed and raised FileNotFoundError after all patches applied successfully. Corrected receipt from observed final state without reapplying patches."
+    }
+  },
+  "archive": {
+    "path": "archive001/outer/vlc-4.0.0-dev.tar.xz",
+    "sha256": "fb946ff2fbd151416bb036bb9855c2bd25f4a9119a443ae12badc492c3ea0a1d",
+    "helper_sha256": "63d355307d18783f517dac86785df63a81553ebd64f1af4c0dcafc1f5b97b477",
+    "membership": "logs/archive-source-membership.json",
+    "exact_changed_paths": 67,
+    "changed_paths": 70,
+    "expected_transform": "configure.ac distribution date freeze",
+    "existing_autotools_boundary": [
+      "bin/meson.build",
+      "meson_options.txt"
+    ],
+    "root_meson_also_absent": true,
+    "meson_archive_build_qualified": false
+  },
+  "skipped_or_excluded": [
+    "test_url registered skip retained",
+    "XCTest testOwnedVolumeENOSPCRAMAndRecovery skipped: no explicitly owned constrained test volume",
+    "598 unchanged native cases not rerun solely for the one-line test-only compatibility link correction",
+    "No native hover/playback/VoiceOver/performance campaign; prior limits not resolved",
+    "No pristine full upstream baseline or demonstrated source attribution for the SAP shutdown stall",
+    "Complete conventional distcheck not run; archive build is a distinct bounded gate",
+    "Generated99 PO/POT changes excluded from submission after verified preservation and scoped restore"
+  ],
+  "warnings": {
+    "source_changed_line_compiler_diagnostics": 17,
+    "production_changed_line_compiler_diagnostics": 0,
+    "test_fixture_changed_line_compiler_diagnostics": 17,
+    "receipt": "logs/final-warning-scope.json",
+    "nested_ffmpeg_patch_whitespace_entries": 13,
+    "diff_check_exit": 2,
+    "not_warning_free": true,
+    "global_unused_link_flag": "-fcx-limited-range from upstream configure; upstream SDK deprecations remain"
+  },
+  "preservation": {
+    "generated_translation_receipt": "logs/generated-translation-preservation.json",
+    "count": 99,
+    "tar_readback_verified": true,
+    "source_clean_after": true,
+    "historical_package_unchanged": true
+  },
+  "bindings": {
+    "submission": "submission/manifest.json",
+    "source_provenance": "source-provenance-map.json",
+    "message_equivalence": "final-message-polish-map.json",
+    "fixture_hashes": "logs/fresh-fixture-hashes.json",
+    "helper_dependencies": "logs/helper-dependency-bindings.json"
+  },
+  "external_actions": "No push, MR, email, fork mutation or upstream contribution submission",
+  "freeze": "submission files are final and frozen for root copy",
+  "path_context": {
+    "description": "Original receipt references retain their raw workspace context. This map resolves preserved copies; paths marked raw_workspace_only were not copied. This historical summary qualifies the fifteen-patch stage, before test-shell cleanup.",
+    "raw_workspace_root": "/Users/cam/Documents/Projects/vlc-thumbs/work/story007-refresh-20261030",
+    "preserved_artifact_map": {
+      "logs/app-content-manifest.json": {
+        "preserved": "app-content-manifest.json"
+      },
+      "logs/archive-helper-protocol-results.json": {
+        "preserved": "archive-helper-protocol-results.json"
+      },
+      "logs/archive-only.receipt.json": {
+        "preserved": "archive-only.receipt.json"
+      },
+      "logs/archive-resume.receipt.json": {
+        "preserved": "archive-resume.receipt.json"
+      },
+      "logs/archive-source-membership.json": {
+        "preserved": "archive-source-membership.json"
+      },
+      "logs/audio-compat-discriminator.receipt.json": {
+        "preserved": "audio-compat-discriminator.receipt.json"
+      },
+      "logs/audio-compat-discriminator002.receipt.json": {
+        "preserved": "audio-compat-discriminator002.receipt.json"
+      },
+      "logs/contrib.receipt.json": {
+        "preserved": "contrib.receipt.json"
+      },
+      "logs/core-check.receipt.json": {
+        "preserved": "core-check.receipt.json"
+      },
+      "logs/final-warning-scope.json": {
+        "preserved": "final-warning-scope.json"
+      },
+      "logs/fixtures.receipt.json": {
+        "preserved": "fixtures.receipt.json"
+      },
+      "logs/fresh-fixture-hashes.json": {
+        "preserved": "fresh-fixture-hashes.json"
+      },
+      "logs/generated-translation-preservation.json": {
+        "preserved": "generated-translation-preservation.json"
+      },
+      "logs/helper-dependency-bindings.json": {
+        "preserved": "helper-dependency-bindings.json"
+      },
+      "logs/helper-matrix-results.json": {
+        "preserved": "helper-matrix-results.json"
+      },
+      "logs/helper-matrix.receipt.json": {
+        "preserved": "helper-matrix.receipt.json"
+      },
+      "logs/host-bound-provenance-correction.md": {
+        "preserved": "host-bound-provenance-correction.md"
+      },
+      "logs/libtool-target-check.receipt.json": {
+        "preserved": "libtool-target-check.receipt.json"
+      },
+      "logs/normal-build.receipt.json": {
+        "preserved": "normal-build.receipt.json"
+      },
+      "logs/normal-check.receipt.json": {
+        "preserved": "normal-check.receipt.json"
+      },
+      "logs/normal-host-300s-stop.json": {
+        "preserved": "normal-host-300s-stop.json"
+      },
+      "logs/normal-host-process-absence.json": {
+        "preserved": "normal-host-process-absence.json"
+      },
+      "logs/normal-libtool-build.receipt.json": {
+        "preserved": "normal-libtool-build.receipt.json"
+      },
+      "logs/normal-root-check.receipt.json": {
+        "preserved": "normal-root-check.receipt.json"
+      },
+      "logs/packaged-helper-protocol-results.json": {
+        "preserved": "packaged-helper-protocol-results.json"
+      },
+      "logs/sed-official-gnu.receipt.json": {
+        "preserved": "sed-official-gnu.receipt.json"
+      },
+      "logs/sed.receipt.json": {
+        "preserved": "sed.receipt.json"
+      },
+      "logs/tools.receipt.json": {
+        "preserved": "tools.receipt.json"
+      },
+      "submission/manifest.json": {
+        "preserved": "predecessor-15-manifest.json"
+      }
+    },
+    "current_package_manifest": "../../../../patches/vlc-master/contribution-series-20261030/manifest.json"
+  }
+}

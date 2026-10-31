@@ -1,5 +1,9 @@
 # Implementation plan
 
+Current October 30 work is the [Story007 source refresh](evidence/story-007/upstream-refresh-20261030.md): rebase, fresh build/test checks and competing-feature scout. Prior source10 and October 13 results below remain historical; no upstream MR has been submitted.
+
+**Sole active work, 2026-10-09:** [Story007 — upstream MR and disposition](stories/story-007-vlc-merge-request-disposition.md). Submit, monitor CI/review, respond and revise until VLC explicitly accepts or rejects the contribution. All other repo work is deferred until that outcome; opening an MR or waiting for feedback does not release the hold. Parent005 remains open; no submission/monitoring has started yet.
+
 **Current source10 closeout, 2026-10-09:** Current three-pair playback/audio/drop/resource qualification passes with measured overhead; ordinary main reader proof is legitimately inherited after source comparison. All test processes are closed and VoiceOver is ON. The final 29-artifact reviewer-copy checker passes; Phases1/2 are complete at the disclosed bounded scope and work halts ready for owner review. See [current verification](evidence/story-005/current-source10-final-verification.md). The final local package is `work/story005-current-source10-final-reviewer001/package`; Phase3 is untouched.
 
 **Completed bounded preparation task:** [Story006](stories/story-006-reviewer-package-polish.md),

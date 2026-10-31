@@ -1,0 +1,35 @@
+{
+  "head": "e6e5bff8248b02509063534e28281a0c2d192bdd",
+  "files": [
+    {
+      "path": "source/build-macosx/bin/vlc-timeline-preview",
+      "bytes": 20256728,
+      "sha256": "72d4a49a97a60b7fb4c9e94a0dd7e2b5ad4b5cf0cef76640817bc2c97e26c356"
+    },
+    {
+      "path": "source/build-macosx/VLC.app/Contents/MacOS/vlc-timeline-preview",
+      "bytes": 20139088,
+      "sha256": "07e0c4b2784245ed60d0085dfc71d4fcff327e05164835f392f2b56b7596b7e2"
+    },
+    {
+      "path": "source/build-macosx/contrib/aarch64-apple-darwin19/lib/libavutil.a",
+      "bytes": 4256464,
+      "sha256": "b1ae13cf2a3484d2a578e689302c70df2ae8fb5c487f7381851f87109cc62e92"
+    },
+    {
+      "path": "source/build-macosx/contrib/aarch64-apple-darwin19/lib/libavcodec.a",
+      "bytes": 89773184,
+      "sha256": "d2edc71b3ce9cbdc39316182e3fe26e5ad5a79f929bb28ab40176006098397dc"
+    },
+    {
+      "path": "source/build-macosx/contrib/aarch64-apple-darwin19/lib/libavformat.a",
+      "bytes": 31085912,
+      "sha256": "cbc06736d0159671ff9355404cff426720b9a1996f2b4be0e0b5b869bc2cba9a"
+    },
+    {
+      "path": "source/build-macosx/contrib/aarch64-apple-darwin19/lib/libswscale.a",
+      "bytes": 5976192,
+      "sha256": "24e3ab652ec72de729ecabf70dde7d8f18429901448445abb62a9445a62dfdb3"
+    }
+  ]
+}

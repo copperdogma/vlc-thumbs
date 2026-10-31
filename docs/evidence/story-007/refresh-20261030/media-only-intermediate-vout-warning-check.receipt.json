@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "recorded_utc": "2026-10-31T05:56:47.161308+00:00",
+  "head": "ebb7d94940f3cfc23bea12107998cbf80c382379",
+  "tree": "d94994d93ef664b4cb271da25a73710a8b47baff",
+  "build_script": "../vout-warning-check.sh",
+  "build_exit": 0,
+  "registered_test_exit": 0,
+  "support_TU_recompiled": true,
+  "cases": [
+    "CASE queued-destroy failures=0",
+    "CASE inflight-disable failures=0",
+    "CASE inflight-destroy failures=0",
+    "CASE disable-rebind failures=0",
+    "CASE address-reuse failures=0"
+  ],
+  "targeted_17_property_warnings": 0,
+  "remaining_warnings": [
+    "/Users/cam/Documents/Projects/vlc-thumbs/work/story007-refresh-20261030/source/extras/package/macosx/../../../modules/gui/macosx/windows/video/VLCWindow.h:36:28: warning: auto property synthesis will not synthesize property 'canBecomeKeyWindow' because it is 'readwrite' but it will be synthesized 'readonly' via another property [-Wobjc-property-synthesis]",
+    "/Users/cam/Documents/Projects/vlc-thumbs/work/story007-refresh-20261030/source/extras/package/macosx/../../../modules/gui/macosx/windows/video/VLCWindow.h:37:28: warning: auto property synthesis will not synthesize property 'canBecomeMainWindow' because it is 'readwrite' but it will be synthesized 'readonly' via another property [-Wobjc-property-synthesis]"
+  ],
+  "diagnostic_scope": "Two diagnostics intentionally inapplicable to the link-only class; not a functional behavior fix or warning-free tree claim. Production flags unchanged.",
+  "build_log_sha256": "ba83e1b4ad107b46be1c7790dfcd19a5c22bc2a5bff13ca53eb5e326b3bee46c",
+  "cases_log_sha256": "0eab2acee10fdcaeff0494f964b25deb9cf846c6880e6debc7adff97cf25675a",
+  "manifest_sha256": "dab6f25d318d68e8dc05e611ead5dbeb6246f0f131f9f5f1e8972c0c3befda3b",
+  "final_export_head": "808f9eb793f3ad2525859ddaf31c446bc54da3c4",
+  "final_export_tree": "d94994d93ef664b4cb271da25a73710a8b47baff",
+  "message_only_finalization": {
+    "tested_head": "ebb7d94940f3cfc23bea12107998cbf80c382379",
+    "export_head": "808f9eb793f3ad2525859ddaf31c446bc54da3c4",
+    "tested_tree": "d94994d93ef664b4cb271da25a73710a8b47baff",
+    "export_tree": "d94994d93ef664b4cb271da25a73710a8b47baff",
+    "same_tree": true,
+    "reason": "Wrap final commit body to 72 columns; no source change or retest."
+  }
+}

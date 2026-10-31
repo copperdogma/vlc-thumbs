@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "/bin/bash",
+    "fixtures.sh"
+  ],
+  "returncode": 0,
+  "stop_reason": null,
+  "minimum_free": 15973060608
+}

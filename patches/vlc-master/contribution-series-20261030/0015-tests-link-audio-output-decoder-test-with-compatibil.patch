@@ -1,0 +1,27 @@
+From 4dd9f5e20631173cbf1343e6367c4ac4a3a836a9 Mon Sep 17 00:00:00 2001
+From: Cam Marsollier <cam.marsollier@gmail.com>
+Date: Fri, 30 Oct 2026 11:29:32 -0600
+Subject: [PATCH 15/16] tests: link audio-output decoder test with
+ compatibility helpers
+
+The decoder test compiles variables.c directly and therefore calls tdestroy from the executable. Link libcompat so platforms without a native tdestroy resolve that call locally instead of through the hidden libvlccore implementation.
+---
+ test/Makefile.am | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/test/Makefile.am b/test/Makefile.am
+index 79e95031c78815a89a285a688a432d9be55885ad..41fb5df16a8ddfd3e18131a8517683a0beecbb2e 100644
+--- a/test/Makefile.am
++++ b/test/Makefile.am
+@@ -242,7 +242,7 @@ test_src_audio_output_dec_SOURCES = src/audio_output/dec.c \
+ 	../src/clock/clock.c \
+ 	../src/clock/clock_internal.c
+ test_src_audio_output_dec_CPPFLAGS = $(AM_CPPFLAGS) -I$(top_srcdir)/src
+-test_src_audio_output_dec_LDADD = $(LIBVLCCORE) $(LIBVLC) $(LIBM)
++test_src_audio_output_dec_LDADD = $(LIBVLCCORE) $(LIBVLC) $(LIBM) ../compat/libcompat.la
+ 
+ test_src_clock_clock_SOURCES = src/clock/clock.c \
+ 	../src/clock/clock.c \
+-- 
+2.42.0
+

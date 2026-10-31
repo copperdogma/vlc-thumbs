@@ -1,0 +1,30 @@
+From f0d11c5cb9ea93a5525cdf8d74d31b411a78ae57 Mon Sep 17 00:00:00 2001
+From: Cam Marsollier <cam.marsollier@gmail.com>
+Date: Fri, 30 Oct 2026 10:55:52 -0600
+Subject: [PATCH 13/16] tests: retain Darwin static fixture module tables
+
+Export dynamically discovered fixture module tables on Darwin so linker dead
+stripping retains them for integration tests. Keep production linker flags
+unchanged.
+---
+ test/Makefile.am | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/test/Makefile.am b/test/Makefile.am
+index f8730635a0a80c51d914e29a19772daba371eee4..79e95031c78815a89a285a688a432d9be55885ad 100644
+--- a/test/Makefile.am
++++ b/test/Makefile.am
+@@ -178,6 +178,10 @@ AM_CXXFLAGS = -sMAIN_MODULE=1
+ endif
+ 
+ AM_LDFLAGS = -no-install $(LDFLAGS_vlc)
++if HAVE_DARWIN
++# Keep dynamically discovered fixture tables under linker dead stripping.
++AM_LDFLAGS += -Wl,-exported_symbol,'_vlc_static_modules*'
++endif
+ LIBVLCCORE = -L../src/ -lvlccore
+ LIBVLC = -L../lib -lvlc
+ 
+-- 
+2.42.0
+

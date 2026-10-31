@@ -1,0 +1,254 @@
+{
+  "old_source13_exact_tree": "b7c0f24e442c35a57bb108d56b801fd05b624943",
+  "original_october13_objects_available": false,
+  "commits": [
+    {
+      "patch": "blocker-prerequisites/0008-macosx-hit-test-autohide-controls-in-local-coordinates.patch",
+      "reconstructed_commit": "1e9a71fff6e5f70c9c6eec5d80754665e65fb0c6",
+      "pre_message_rebased_commit": "c86a9695339b7835a97b7377aabb0a462e4dafef",
+      "app_qualified_commit": "c86a9695339b7835a97b7377aabb0a462e4dafef",
+      "export_commit": "c86a9695339b7835a97b7377aabb0a462e4dafef",
+      "old_patch_id": "7736f070a68d36559ee36e79fe8cc1e879f1c3d7",
+      "disposition": "rebased"
+    },
+    {
+      "patch": "feature-series/0000-source-header-distribution.patch",
+      "reconstructed_commit": "f6ff680be9c355279b04380d9c9f8397f8a9c39d",
+      "pre_message_rebased_commit": "55448ec50269955957c6e7bc5531c8bfe1d16be9",
+      "app_qualified_commit": "55448ec50269955957c6e7bc5531c8bfe1d16be9",
+      "export_commit": "9f069dcecdae67f3bb3d27e333f8eaef3d2af4dd",
+      "old_patch_id": "a4b24c0df08a3d4cd32c036217eb92aabdc665b1",
+      "disposition": "rebased"
+    },
+    {
+      "patch": "feature-series/0001-contrib-matroska-identity-and-admission.patch",
+      "reconstructed_commit": "92078cc68c50e206ea05dead6c98d10497807d70",
+      "pre_message_rebased_commit": "6767ed89e480a927b5b7d91d76fe8ff6c4ae7585",
+      "app_qualified_commit": "6767ed89e480a927b5b7d91d76fe8ff6c4ae7585",
+      "export_commit": "f5b8175e3145e851235c3ef99ced2cad46ee1dd0",
+      "old_patch_id": "51475f55b111cae6571de46014d62d51a3a00ac9",
+      "disposition": "rebased"
+    },
+    {
+      "patch": "feature-series/0002-timeline-helper-build-package-and-tests.patch",
+      "reconstructed_commit": "8f36f3f415649662f07b848a8aec18d80c0b17a4",
+      "pre_message_rebased_commit": "912d2801e6fe7fd55e24c50d519146584db94247",
+      "app_qualified_commit": "912d2801e6fe7fd55e24c50d519146584db94247",
+      "export_commit": "6cdc674e5531b2c60c2cfd28a29830653a04f6a1",
+      "old_patch_id": "cd44c84f24a5efb8b15c752cc17d0c5afb4109ab",
+      "disposition": "rebased"
+    },
+    {
+      "patch": "feature-series/0003-macosx-thumbnail-service-cache-worker.patch",
+      "reconstructed_commit": "07378bae68f0d48e65fb56f745e8fadc5e5f8d9a",
+      "pre_message_rebased_commit": "b69152dd7c4bfb2f21f9c7fdfecb9a8a3af2aaf2",
+      "app_qualified_commit": "b69152dd7c4bfb2f21f9c7fdfecb9a8a3af2aaf2",
+      "export_commit": "6a308edc97820a2e5c4d2af0dc0700790ab24433",
+      "old_patch_id": "70654b2d8f62f3a5fedbff7d8fe49410411c0316",
+      "disposition": "rebased"
+    },
+    {
+      "patch": "feature-series/0004-macosx-timeline-context-and-hover.patch",
+      "reconstructed_commit": "5215b79d73118c62290753a758d52183d46d0023",
+      "pre_message_rebased_commit": "04aa65bcb9b7c83942efaecd107453fee0679bed",
+      "app_qualified_commit": "04aa65bcb9b7c83942efaecd107453fee0679bed",
+      "export_commit": "72e0be3f395f7a7a063d6d474cd659d44e68ee2a",
+      "old_patch_id": "122473df235b427968c14d665e4dde9ba42d268f",
+      "disposition": "rebased"
+    },
+    {
+      "patch": "blocker-prerequisites/0001-build-order-macosx-install-and-clean-vtutils.patch",
+      "reconstructed_commit": "0605341ea8167ee180a42a336d47567000e1d0ce",
+      "pre_message_rebased_commit": "4bdffd69258147a5962ad67040040438b5699349",
+      "app_qualified_commit": "4bdffd69258147a5962ad67040040438b5699349",
+      "export_commit": "47a31aca7ea415a30944a17f0b777f516b39a6c8",
+      "old_patch_id": "48628c20dae09fe307f2ff26cba0eb6e84d41c20",
+      "disposition": "rebased"
+    },
+    {
+      "patch": "blocker-prerequisites/0002-clock-preserve-observed-system-origin.patch",
+      "reconstructed_commit": "d5f8aad9650219d97949b48a730aed9109744c94",
+      "pre_message_rebased_commit": "3672ccf3ad834ffd63cd45455f758161047d102e",
+      "app_qualified_commit": "3672ccf3ad834ffd63cd45455f758161047d102e",
+      "export_commit": "3d49c0c3da806cb554c4b8eb504229df9d88d27d",
+      "old_patch_id": "15db10180ae0bc00f8e455cdc14dde09d5364dfe",
+      "disposition": "rebased"
+    },
+    {
+      "patch": "blocker-prerequisites/0003-tests-select-gnutls-for-pem-trust-fixture.patch",
+      "reconstructed_commit": "a69e0bb9157bb245ea58770bb262451d2fff9ad8",
+      "pre_message_rebased_commit": "7ae6651f13b3bbd997fe8be46a4f3d8fab1b0444",
+      "app_qualified_commit": "7ae6651f13b3bbd997fe8be46a4f3d8fab1b0444",
+      "export_commit": "43756090e5e6b40ddda53331024c22662e7d87f6",
+      "old_patch_id": "cd4c6a4298ddfdbaa5170690f2b5d6b0266036dc",
+      "disposition": "rebased"
+    },
+    {
+      "patch": "blocker-prerequisites/0004-opengl-initialize-legacy-version-fallback.patch",
+      "reconstructed_commit": "33722f6d6669512ad7af2fc3544077f12d3520a0",
+      "pre_message_rebased_commit": null,
+      "app_qualified_commit": null,
+      "export_commit": null,
+      "old_patch_id": "ba91a171aa3b8682372459ca05904ac852efac8a",
+      "disposition": "dropped: upstream 1f7b951 initializes version; all consumers test >=3"
+    },
+    {
+      "patch": "blocker-prerequisites/0005-macosx-release-caller-owned-media-source.patch",
+      "reconstructed_commit": "cc58ba0a5dbc9aa3a2cfd21e43d8f8d495f85d03",
+      "pre_message_rebased_commit": "6896e88f0936a0263c2c93f036b081d67b4700b8",
+      "app_qualified_commit": "6896e88f0936a0263c2c93f036b081d67b4700b8",
+      "export_commit": "08928e377fb58025a2012a664ba4deb8c09b6b0d",
+      "old_patch_id": "57f18f202fca0ebc23bee3e04d679b8b022256e4",
+      "disposition": "rebased"
+    },
+    {
+      "patch": "blocker-prerequisites/0006-macosx-retire-playback-ended-timer-during-termination.patch",
+      "reconstructed_commit": "9641ccac7c28da0fbba189bf1b2f366fdff44873",
+      "pre_message_rebased_commit": "136ad8cb003ce882efaa5d667486202d489a504b",
+      "app_qualified_commit": "136ad8cb003ce882efaa5d667486202d489a504b",
+      "export_commit": "2d3b6e7d237db9d3ec71dd0afe2fa63ca6ee1df5",
+      "old_patch_id": "20c01c6d23012b3d431680fbeb54827453de0222",
+      "disposition": "rebased"
+    },
+    {
+      "patch": "blocker-prerequisites/0007-macosx-fence-video-window-callback-lifetime.patch",
+      "reconstructed_commit": "c5685ddb067b16fd81b96ed6acee60cf24fecb84",
+      "pre_message_rebased_commit": "1e62cd6878b07fc25f93decca082ecf726471abd",
+      "app_qualified_commit": "c73c63e4983f130392b655a1ec5ea315025a38aa",
+      "export_commit": "733b4a44b8cbb11f3a7da0ffc7500a28b2b12b47",
+      "old_patch_id": "b0514928cb2d1c8dc24e4022478b39f3bd8271ba",
+      "disposition": "rebased"
+    },
+    {
+      "patch": "documented-four-line-Darwin-successor",
+      "reconstructed_commit": "388e9a7b374c5b9929394ed32d7750854a1fe49a",
+      "pre_message_rebased_commit": "d22e580b13fda1bd1846e34d6b6061ecfeaef4de",
+      "app_qualified_commit": "a0bd45093c9aa194168779317fe97fd100e77681",
+      "export_commit": "f0d11c5cb9ea93a5525cdf8d74d31b411a78ae57",
+      "old_patch_id": "1602682d6013e4ad12cc8ec7e8e3a62b2d694bbb",
+      "disposition": "rebased"
+    }
+  ],
+  "new_successors": [
+    {
+      "build_commit": "e6e5bff8248b02509063534e28281a0c2d192bdd",
+      "export_commit": "6038784049ca0c57f8dd9dab4559a7ffe4822db2",
+      "subject": "docs: refresh macOS contrib and Metal prerequisites",
+      "message_changed": false,
+      "file": "0014-docs-refresh-macOS-contrib-and-Metal-prerequisites.patch",
+      "bytes": 2557,
+      "sha256": "cf96db76eec184004d623eec3d51cb13e7f67101f1c500879e07004bceb912ae",
+      "patch_id": "fc419fd382af2100884fc690ae2b2b922bb2684d"
+    },
+    {
+      "build_commit": "8cd1b7ce65d67886ca5f3afa802fb888226b659e",
+      "export_commit": "4dd9f5e20631173cbf1343e6367c4ac4a3a836a9",
+      "subject": "tests: link audio-output decoder test with compatibility helpers",
+      "message_changed": false,
+      "file": "0015-tests-link-audio-output-decoder-test-with-compatibil.patch",
+      "bytes": 1208,
+      "sha256": "46c2d2dd68f231e21b935386e22c6fc29ac08f3496d8b4160bc5bd0612c7ca5a",
+      "patch_id": "ea755d67d62c04cfac02665a13cef6f73074dae3"
+    }
+  ],
+  "final_message_equivalence": {
+    "build_head": "8cd1b7ce65d67886ca5f3afa802fb888226b659e",
+    "export_head": "4dd9f5e20631173cbf1343e6367c4ac4a3a836a9",
+    "build_tree": "330eb90675c4ffe744625c3d65fdbab55895c7c6",
+    "export_tree": "330eb90675c4ffe744625c3d65fdbab55895c7c6",
+    "same_tree": true,
+    "reason": "one authorized F0000 header/Makefile count correction only",
+    "mapping": [
+      {
+        "build_commit": "c86a9695339b7835a97b7377aabb0a462e4dafef",
+        "export_commit": "c86a9695339b7835a97b7377aabb0a462e4dafef",
+        "subject": "macosx: hit-test autohide controls in local coordinates",
+        "message_changed": false
+      },
+      {
+        "build_commit": "55448ec50269955957c6e7bc5531c8bfe1d16be9",
+        "export_commit": "9f069dcecdae67f3bb3d27e333f8eaef3d2af4dd",
+        "subject": "build: distribute existing headers beside their consumers",
+        "message_changed": true
+      },
+      {
+        "build_commit": "6767ed89e480a927b5b7d91d76fe8ff6c4ae7585",
+        "export_commit": "f5b8175e3145e851235c3ef99ced2cad46ee1dd0",
+        "subject": "contrib: expose Matroska identity and bounded flat admission",
+        "message_changed": false
+      },
+      {
+        "build_commit": "912d2801e6fe7fd55e24c50d519146584db94247",
+        "export_commit": "6cdc674e5531b2c60c2cfd28a29830653a04f6a1",
+        "subject": "bin: build and package the timeline preview helper",
+        "message_changed": false
+      },
+      {
+        "build_commit": "b69152dd7c4bfb2f21f9c7fdfecb9a8a3af2aaf2",
+        "export_commit": "6a308edc97820a2e5c4d2af0dc0700790ab24433",
+        "subject": "macosx: add thumbnail service, cache and worker scheduling",
+        "message_changed": false
+      },
+      {
+        "build_commit": "04aa65bcb9b7c83942efaecd107453fee0679bed",
+        "export_commit": "72e0be3f395f7a7a063d6d474cd659d44e68ee2a",
+        "subject": "macosx: integrate player context and timeline hover previews",
+        "message_changed": false
+      },
+      {
+        "build_commit": "4bdffd69258147a5962ad67040040438b5699349",
+        "export_commit": "47a31aca7ea415a30944a17f0b777f516b39a6c8",
+        "subject": "build: order macOS installation and clean generated artifacts",
+        "message_changed": false
+      },
+      {
+        "build_commit": "3672ccf3ad834ffd63cd45455f758161047d102e",
+        "export_commit": "3d49c0c3da806cb554c4b8eb504229df9d88d27d",
+        "subject": "clock: preserve the observed system origin",
+        "message_changed": false
+      },
+      {
+        "build_commit": "7ae6651f13b3bbd997fe8be46a4f3d8fab1b0444",
+        "export_commit": "43756090e5e6b40ddda53331024c22662e7d87f6",
+        "subject": "tests: select GnuTLS for the PEM trust fixture",
+        "message_changed": false
+      },
+      {
+        "build_commit": "6896e88f0936a0263c2c93f036b081d67b4700b8",
+        "export_commit": "08928e377fb58025a2012a664ba4deb8c09b6b0d",
+        "subject": "macosx: release the caller-owned media source",
+        "message_changed": false
+      },
+      {
+        "build_commit": "136ad8cb003ce882efaa5d667486202d489a504b",
+        "export_commit": "2d3b6e7d237db9d3ec71dd0afe2fa63ca6ee1df5",
+        "subject": "macosx: retire the playback-ended timer at termination",
+        "message_changed": false
+      },
+      {
+        "build_commit": "c73c63e4983f130392b655a1ec5ea315025a38aa",
+        "export_commit": "733b4a44b8cbb11f3a7da0ffc7500a28b2b12b47",
+        "subject": "macosx: fence video-window callback lifetime",
+        "message_changed": false
+      },
+      {
+        "build_commit": "a0bd45093c9aa194168779317fe97fd100e77681",
+        "export_commit": "f0d11c5cb9ea93a5525cdf8d74d31b411a78ae57",
+        "subject": "tests: retain Darwin static fixture module tables",
+        "message_changed": false
+      },
+      {
+        "build_commit": "e6e5bff8248b02509063534e28281a0c2d192bdd",
+        "export_commit": "6038784049ca0c57f8dd9dab4559a7ffe4822db2",
+        "subject": "docs: refresh macOS contrib and Metal prerequisites",
+        "message_changed": false
+      },
+      {
+        "build_commit": "8cd1b7ce65d67886ca5f3afa802fb888226b659e",
+        "export_commit": "4dd9f5e20631173cbf1343e6367c4ac4a3a836a9",
+        "subject": "tests: link audio-output decoder test with compatibility helpers",
+        "message_changed": false
+      }
+    ]
+  }
+}

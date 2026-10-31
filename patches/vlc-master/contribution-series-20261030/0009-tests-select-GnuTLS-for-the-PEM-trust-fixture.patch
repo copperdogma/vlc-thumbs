@@ -1,0 +1,72 @@
+From 43756090e5e6b40ddda53331024c22662e7d87f6 Mon Sep 17 00:00:00 2001
+From: Cam Marsollier <cam.marsollier@gmail.com>
+Date: Fri, 30 Oct 2026 10:55:35 -0600
+Subject: [PATCH 09/16] tests: select GnuTLS for the PEM trust fixture
+
+Create the fixture's client credentials from GnuTLS rather than automatic TLS
+backend selection. Skip when GnuTLS is absent, retain failed-initialization
+handling and the default unknown-certificate phase. This makes the PEM-specific
+registered test exercise its intended backend without changing production TLS
+selection.
+---
+ test/modules/misc/tls.c | 37 ++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 36 insertions(+), 1 deletion(-)
+
+diff --git a/test/modules/misc/tls.c b/test/modules/misc/tls.c
+index 2b73854531f686478310004f1dc6b12a08d988c4..e7f342691936f9a605771c0201e47bf6fb881090 100644
+--- a/test/modules/misc/tls.c
++++ b/test/modules/misc/tls.c
+@@ -123,6 +123,34 @@ static const char *const test_cert_argv[] = {
+ static const char *const alpn[] = { "foo", "bar", NULL };
+ static const char *const alpn_bad[] = { "baz", NULL };
+ 
++/* The PEM trust fixture below configures the GnuTLS credential backend. */
++static vlc_tls_client_t *fixture_ClientCreate(vlc_object_t *obj, bool *missing)
++{
++    module_t **mods = NULL;
++    ssize_t count = vlc_module_match("tls client", "gnutls", true, &mods, NULL);
++    *missing = count == 0;
++    if (count <= 0)
++    {
++        free(mods);
++        return NULL;
++    }
++
++    int (*probe)(vlc_tls_client_t *) = vlc_module_map(obj->logger, mods[0]);
++    free(mods);
++    if (probe == NULL)
++        return NULL;
++
++    vlc_tls_client_t *client = vlc_object_create(obj, sizeof(*client));
++    if (client == NULL)
++        return NULL;
++    if (probe(client) == VLC_SUCCESS)
++        return client;
++
++    /* GnuTLS OpenClient frees failed initialization resources itself. */
++    vlc_object_delete(client);
++    return NULL;
++}
++
+ int main(void)
+ {
+     libvlc_instance_t *vlc;
+@@ -180,7 +208,14 @@ int main(void)
+ 
+     server_creds = vlc_tls_ServerCreate(obj, CERTFILE, NULL);
+     assert(server_creds != NULL);
+-    client_creds = vlc_tls_ClientCreate(obj);
++    bool missing;
++    client_creds = fixture_ClientCreate(obj, &missing);
++    if (missing)
++    {
++        vlc_tls_ServerDelete(server_creds);
++        libvlc_release(vlc);
++        return 77;
++    }
+     assert(client_creds != NULL);
+ 
+     /* Test known certificate */
+-- 
+2.42.0
+

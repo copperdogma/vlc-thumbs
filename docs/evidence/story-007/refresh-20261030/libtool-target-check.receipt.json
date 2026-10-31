@@ -1,0 +1,12 @@
+{
+  "started_epoch": 1793380157.415,
+  "finished_epoch": 1793380161.4367502,
+  "elapsed_seconds": 4.021750211715698,
+  "argv": [
+    "/bin/bash",
+    "libtool-target-check.sh"
+  ],
+  "returncode": 0,
+  "stop_reason": null,
+  "minimum_free": 14951358464
+}

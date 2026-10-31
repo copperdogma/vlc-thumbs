@@ -1,0 +1,14 @@
+{
+  "started_epoch": 1793381652.720642,
+  "finished_epoch": 1793382004.0924292,
+  "elapsed_seconds": 351.371787071228,
+  "pid": 86663,
+  "pgid": 86663,
+  "argv": [
+    "/bin/bash",
+    "archive-only.sh"
+  ],
+  "returncode": 2,
+  "stop_reason": null,
+  "minimum_free": 11415187456
+}

@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "/bin/bash",
+    "sed-setup-official-gnu.sh"
+  ],
+  "returncode": 0,
+  "stop_reason": null,
+  "minimum_free": 16220971008
+}

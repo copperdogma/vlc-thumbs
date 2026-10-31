@@ -1,0 +1,12 @@
+{
+  "started_epoch": 1793380173.088927,
+  "finished_epoch": 1793380343.695233,
+  "elapsed_seconds": 170.60630702972412,
+  "argv": [
+    "/bin/bash",
+    "normal-libtool-build.sh"
+  ],
+  "returncode": 0,
+  "stop_reason": null,
+  "minimum_free": 14012936192
+}

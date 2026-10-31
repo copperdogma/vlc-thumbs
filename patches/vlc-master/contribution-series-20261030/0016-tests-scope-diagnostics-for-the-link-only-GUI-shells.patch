@@ -1,0 +1,47 @@
+From dd50411dad2b8c05144acbf0e7c63fb9150e0120 Mon Sep 17 00:00:00 2001
+From: Cam Marsollier <cam.marsollier@gmail.com>
+Date: Fri, 30 Oct 2026 23:56:25 -0600
+Subject: [PATCH 16/16] tests: scope diagnostics for the link-only GUI shells
+
+The vout lifetime fixture links the real provider and view without
+creating GUI windows. Its nil VLCMain singleton keeps media-library
+removal paths unreachable.
+
+Leave window accessors dynamic instead of implicitly synthesizing them
+against inherited readonly properties. Scope property diagnostics to
+the empty media-item shell, which intentionally implements no protocol
+properties or secure coding. Keep production diagnostics and all five
+lifetime cases unchanged.
+---
+ modules/gui/macosx/tests/VLCVoutLifetimeTestSupport.m | 11 ++++++++++-
+ 1 file changed, 10 insertions(+), 1 deletion(-)
+
+diff --git a/modules/gui/macosx/tests/VLCVoutLifetimeTestSupport.m b/modules/gui/macosx/tests/VLCVoutLifetimeTestSupport.m
+index a29a86690464d33a8419cf726b8f09d826159355..1b049f12f120f06813d99335993a899e107710c3 100644
+--- a/modules/gui/macosx/tests/VLCVoutLifetimeTestSupport.m
++++ b/modules/gui/macosx/tests/VLCVoutLifetimeTestSupport.m
+@@ -29,11 +29,20 @@ intf_thread_t *getIntf(void){return NULL;}
+ + (BOOL)handlePasteboardFromDragSessionAsPlayQueueItems:(NSPasteboard *)p{return NO;}
+ - (void)setupDragRecognition{}
+ @end
+-@implementation VLCWindow @end
++@implementation VLCWindow
++/* No windows are instantiated; leave these accessors unimplemented. */
++@dynamic canBecomeKeyWindow, canBecomeMainWindow;
++@end
+ @implementation VLCVideoWindowCommon @end
+ @implementation VLCFullVideoViewWindow @end
+ @implementation VLCAspectRatioRetainingVideoWindow @end
+ @implementation VLCLibraryWindow @end
++/* Link-only class: the nil GUI singleton keeps media-library paths unreachable.
++ * Protocol properties and secure coding are intentionally not simulated here. */
++#pragma clang diagnostic push
++#pragma clang diagnostic ignored "-Wobjc-protocol-property-synthesis"
++#pragma clang diagnostic ignored "-Wobjc-property-implementation"
+ @implementation VLCMediaLibraryMediaItem @end
++#pragma clang diagnostic pop
+ @implementation VLCKeyboardBacklightControl @end
+ #pragma clang diagnostic pop
+-- 
+2.42.0
+

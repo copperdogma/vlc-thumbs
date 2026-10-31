@@ -1,0 +1,12 @@
+{
+  "started_epoch": 1793381423.808656,
+  "finished_epoch": 1793381730.44511,
+  "elapsed_seconds": 306.6364541053772,
+  "argv": [
+    "/bin/bash",
+    "normal-root-check.sh"
+  ],
+  "returncode": -15,
+  "stop_reason": null,
+  "minimum_free": 12750843904
+}

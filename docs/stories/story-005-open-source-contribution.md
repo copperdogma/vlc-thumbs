@@ -14,6 +14,8 @@ eval_refs: [story-002-preview-capability, story-004-responsive-preview-capabilit
 ---
 # Story 005 — Open-source contribution (Story 002b)
 
+October 30 continuation: [Story007 refresh](../evidence/story-007/upstream-refresh-20261030.md) preserves a current-master successor with fresh bounded checks and an unresolved CLI shutdown gate. Source10 qualification below is historical; no upstream MR has been submitted.
+
 **Status:** In Progress — Phases1/2 complete at the disclosed bounded scope in [current source10 verification](../evidence/story-005/current-source10-final-verification.md). Final reviewer package checker PASS; halt ready for owner review before submission. Platform and preview-visible reader coverage remain unmeasured; shutdown cause remains owner-deferred. Phase3 remains untouched. **Priority:** High.
 **Depends on:** completed Stories 002 and 004. **Precedes:** Story 003 bookmarks.
 
@@ -111,6 +113,13 @@ reproduction. It does not reopen runtime qualification or authorize submission.
   attestations. Review the exact public diff before submission.
 
 ### Phase 3 — Submit and shepherd
+
+**Execution owner:** [Story007](story-007-vlc-merge-request-disposition.md), created
+at Cam's explicit request. Parent stays open until that child records explicit
+upstream acceptance or rejection. All unrelated repo work is deferred meanwhile.
+The child's terminal-disposition rule supersedes the earlier requirement for an
+additional Cam decision merely to record a non-merge rejection; a material scope
+change still requires his decision. No silence/open MR is completion.
 
 - [ ] **Submission:** Open the contribution through VLC's official process against
   the chosen target. Record public URL(s), base/head revisions, dependencies and

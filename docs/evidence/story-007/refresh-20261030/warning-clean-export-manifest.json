@@ -1,0 +1,642 @@
+{
+  "status": "Local reviewable successor source; no upstream publication or acceptance",
+  "base": "5ccc5fa83f287d7ab7cc493f8dc2a31655fd2a09",
+  "head": "dd50411dad2b8c05144acbf0e7c63fb9150e0120",
+  "tree": "212c081ca9eb566a65b3979d272a788ae52653ea",
+  "app_build_head": "e6e5bff8248b02509063534e28281a0c2d192bdd",
+  "app_build_tree": "3b08612dc30215464c8fbc78e60c3bcf7217e316",
+  "patch_count": 16,
+  "source_path_count": 70,
+  "source_clean": true,
+  "provenance": "Reconstructed thirteen tracked source10 patches with exact old combined-tree proof, then documented Darwin successor; original October13 commit objects unavailable. Rebased to pinned current master, dropped upstream-fixed GL patch/already-distributed header, merged tests, added current dependency README and one-line upstream-test compatibility linkage. Build gates precede final message-only count correction.",
+  "patches": [
+    {
+      "commit": "c86a9695339b7835a97b7377aabb0a462e4dafef",
+      "file": "0001-macosx-hit-test-autohide-controls-in-local-coordinat.patch",
+      "bytes": 2353,
+      "sha256": "f1d16a35a6825e2bdb1447e30b673abf5cdef4366774111c85ae3884925d47f2",
+      "patch_id": "7736f070a68d36559ee36e79fe8cc1e879f1c3d7",
+      "preserved_predecessor": {
+        "path": "../submission/0001-macosx-hit-test-autohide-controls-in-local-coordinat.patch",
+        "sha256": "04e75f691162155d35c84eac601c898c90be9da6da875514b1b05e9ffe34f44a",
+        "same_diff": true
+      }
+    },
+    {
+      "commit": "9f069dcecdae67f3bb3d27e333f8eaef3d2af4dd",
+      "file": "0002-build-distribute-existing-headers-beside-their-consu.patch",
+      "bytes": 4910,
+      "sha256": "1435264602b04642d9fde71b08d6cf9d6af9a7fab977ca83f49d7854942ef9ba",
+      "patch_id": "fa36bc217afa9e01f0ce95488c626182fe20e937",
+      "preserved_predecessor": {
+        "path": "../submission/0002-build-distribute-existing-headers-beside-their-consu.patch",
+        "sha256": "a523906e310ea42b16ebbbe639d646ed12d5c62b26a41156efc33fea1e2f4cea",
+        "same_diff": true
+      }
+    },
+    {
+      "commit": "f5b8175e3145e851235c3ef99ced2cad46ee1dd0",
+      "file": "0003-contrib-expose-Matroska-identity-and-bounded-flat-ad.patch",
+      "bytes": 14525,
+      "sha256": "fae44699ff4d6ce59581b364f650a6ee9826c3ae5f3da89983ab509b889d9d54",
+      "patch_id": "51475f55b111cae6571de46014d62d51a3a00ac9",
+      "preserved_predecessor": {
+        "path": "../submission/0003-contrib-expose-Matroska-identity-and-bounded-flat-ad.patch",
+        "sha256": "0eddd8e8dc7ff91f85cdcc973c23422b258820e96c24ca433b248cb774b4e449",
+        "same_diff": true
+      }
+    },
+    {
+      "commit": "6cdc674e5531b2c60c2cfd28a29830653a04f6a1",
+      "file": "0004-bin-build-and-package-the-timeline-preview-helper.patch",
+      "bytes": 190360,
+      "sha256": "bf891f25b753ad02f10e7e0ebaaad6f13de4601f5d21323583768431f3666c85",
+      "patch_id": "cd44c84f24a5efb8b15c752cc17d0c5afb4109ab",
+      "preserved_predecessor": {
+        "path": "../submission/0004-bin-build-and-package-the-timeline-preview-helper.patch",
+        "sha256": "66c7642eeffd4c3d194716a64dcbd489de9ce0a3135df5dfc5ddb89f4b182a73",
+        "same_diff": true
+      }
+    },
+    {
+      "commit": "6a308edc97820a2e5c4d2af0dc0700790ab24433",
+      "file": "0005-macosx-add-thumbnail-service-cache-and-worker-schedu.patch",
+      "bytes": 222815,
+      "sha256": "a8426bdab5f94d59b60ac014d2ee86413f5b91f1b6250e12a1f40331088f7d34",
+      "patch_id": "d6ea2d9fe5a80a4915676f2d41d6e3da28df716e",
+      "preserved_predecessor": {
+        "path": "../submission/0005-macosx-add-thumbnail-service-cache-and-worker-schedu.patch",
+        "sha256": "cfbd1d849cb03ada526c4e73b1196f6c7a9aa7ec7cbf0ab083740b406e3485b9",
+        "same_diff": true
+      }
+    },
+    {
+      "commit": "72e0be3f395f7a7a063d6d474cd659d44e68ee2a",
+      "file": "0006-macosx-integrate-player-context-and-timeline-hover-p.patch",
+      "bytes": 97343,
+      "sha256": "192e20eb01e91fd0a7deb5ea091d0c7e0b6bccecc18d1b0aa078d540c45d2fa1",
+      "patch_id": "425c19b7227aae25a3457b30373d13f84ac0d8a3",
+      "preserved_predecessor": {
+        "path": "../submission/0006-macosx-integrate-player-context-and-timeline-hover-p.patch",
+        "sha256": "d568cddd5d5e80c90295125be39e65ad829fcc31cee06100aefa0ad9a1cc6683",
+        "same_diff": true
+      }
+    },
+    {
+      "commit": "47a31aca7ea415a30944a17f0b777f516b39a6c8",
+      "file": "0007-build-order-macOS-installation-and-clean-generated-a.patch",
+      "bytes": 3373,
+      "sha256": "310816c334378233ac03df180308ce4f1e2af532d2d2fd703d7f9a5fbe3b74a6",
+      "patch_id": "48628c20dae09fe307f2ff26cba0eb6e84d41c20",
+      "preserved_predecessor": {
+        "path": "../submission/0007-build-order-macOS-installation-and-clean-generated-a.patch",
+        "sha256": "4310ff82a1e2ad5fbb83e94ca3b84bd338bc85c7f34bf163ba208d7120a46525",
+        "same_diff": true
+      }
+    },
+    {
+      "commit": "3d49c0c3da806cb554c4b8eb504229df9d88d27d",
+      "file": "0008-clock-preserve-the-observed-system-origin.patch",
+      "bytes": 2190,
+      "sha256": "712eb8d523ce092acd915efc4219dab52dc2442756e4c82ae7b65863dee0d2cc",
+      "patch_id": "15db10180ae0bc00f8e455cdc14dde09d5364dfe",
+      "preserved_predecessor": {
+        "path": "../submission/0008-clock-preserve-the-observed-system-origin.patch",
+        "sha256": "2e5e7fee881f2b18fa3763c8746ce8c3dd8803aa8129a0558ea14df7701f9781",
+        "same_diff": true
+      }
+    },
+    {
+      "commit": "43756090e5e6b40ddda53331024c22662e7d87f6",
+      "file": "0009-tests-select-GnuTLS-for-the-PEM-trust-fixture.patch",
+      "bytes": 2431,
+      "sha256": "1a1f7a7f39525ce9e87e076778b111509cc60cbf34086f4c3ebc7975c216b834",
+      "patch_id": "cd4c6a4298ddfdbaa5170690f2b5d6b0266036dc",
+      "preserved_predecessor": {
+        "path": "../submission/0009-tests-select-GnuTLS-for-the-PEM-trust-fixture.patch",
+        "sha256": "249de8577a607bdb71f17ef46c14bd3eea4913754035c2e0ce714d8583a56678",
+        "same_diff": true
+      }
+    },
+    {
+      "commit": "08928e377fb58025a2012a664ba4deb8c09b6b0d",
+      "file": "0010-macosx-release-the-caller-owned-media-source.patch",
+      "bytes": 7362,
+      "sha256": "fbc403909204ad4c72063a805f40148c6824bf126e8dfdf76ab2ac283612b3a2",
+      "patch_id": "57f18f202fca0ebc23bee3e04d679b8b022256e4",
+      "preserved_predecessor": {
+        "path": "../submission/0010-macosx-release-the-caller-owned-media-source.patch",
+        "sha256": "1965eba2891f1d79d215bcb8c6441a1566a3d7a51b9e019dea7c039c202bd058",
+        "same_diff": true
+      }
+    },
+    {
+      "commit": "2d3b6e7d237db9d3ec71dd0afe2fa63ca6ee1df5",
+      "file": "0011-macosx-retire-the-playback-ended-timer-at-terminatio.patch",
+      "bytes": 4532,
+      "sha256": "4f2eec2e4375a56923720232c9b02eeb03af951ce029569199e8cb682f25b004",
+      "patch_id": "20c01c6d23012b3d431680fbeb54827453de0222",
+      "preserved_predecessor": {
+        "path": "../submission/0011-macosx-retire-the-playback-ended-timer-at-terminatio.patch",
+        "sha256": "6511bbc4237559352da9d79e7baf2e24b1d787f72ea43f3ecd29c20d5ab59d93",
+        "same_diff": true
+      }
+    },
+    {
+      "commit": "733b4a44b8cbb11f3a7da0ffc7500a28b2b12b47",
+      "file": "0012-macosx-fence-video-window-callback-lifetime.patch",
+      "bytes": 32659,
+      "sha256": "4d1ff6317c54b3a08532723e96e0f4c6873c91390d6bc12b7f840500323f18e7",
+      "patch_id": "57df946e609a6a5c319655276084b04c943a2f4d",
+      "preserved_predecessor": {
+        "path": "../submission/0012-macosx-fence-video-window-callback-lifetime.patch",
+        "sha256": "0c1ef21679ddcbabb9b49882f496b32ffe7d0b83a1871fe239f6498d8f53afb0",
+        "same_diff": true
+      }
+    },
+    {
+      "commit": "f0d11c5cb9ea93a5525cdf8d74d31b411a78ae57",
+      "file": "0013-tests-retain-Darwin-static-fixture-module-tables.patch",
+      "bytes": 981,
+      "sha256": "5c626ddebfe46a2e5ce9eb12df7cd20ed43df21e9ddae1221cf17e49d2ae1f24",
+      "patch_id": "1602682d6013e4ad12cc8ec7e8e3a62b2d694bbb",
+      "preserved_predecessor": {
+        "path": "../submission/0013-tests-retain-Darwin-static-fixture-module-tables.patch",
+        "sha256": "f617f4a81d06b4c671407ac7dc42c81fca1ca7ee7b629c9f75aee4e16d61a7a8",
+        "same_diff": true
+      }
+    },
+    {
+      "commit": "6038784049ca0c57f8dd9dab4559a7ffe4822db2",
+      "file": "0014-docs-refresh-macOS-contrib-and-Metal-prerequisites.patch",
+      "bytes": 2557,
+      "sha256": "b7f8ad734537785a80629f118a902e00fe1501cae75259ad70c9feac4bba9af9",
+      "patch_id": "fc419fd382af2100884fc690ae2b2b922bb2684d",
+      "preserved_predecessor": {
+        "path": "../submission/0014-docs-refresh-macOS-contrib-and-Metal-prerequisites.patch",
+        "sha256": "cf96db76eec184004d623eec3d51cb13e7f67101f1c500879e07004bceb912ae",
+        "same_diff": true
+      }
+    },
+    {
+      "commit": "4dd9f5e20631173cbf1343e6367c4ac4a3a836a9",
+      "file": "0015-tests-link-audio-output-decoder-test-with-compatibil.patch",
+      "bytes": 1208,
+      "sha256": "03920b408f86cf41444c385c7afca03fc40815585f9012c8aa884c78f53792be",
+      "patch_id": "ea755d67d62c04cfac02665a13cef6f73074dae3",
+      "preserved_predecessor": {
+        "path": "../submission/0015-tests-link-audio-output-decoder-test-with-compatibil.patch",
+        "sha256": "46c2d2dd68f231e21b935386e22c6fc29ac08f3496d8b4160bc5bd0612c7ca5a",
+        "same_diff": true
+      }
+    },
+    {
+      "commit": "dd50411dad2b8c05144acbf0e7c63fb9150e0120",
+      "file": "0016-tests-scope-diagnostics-for-the-link-only-GUI-shells.patch",
+      "bytes": 2234,
+      "sha256": "fd964a3431eacac4ac9e6b48aaa168dc3ee9bc76e2af5699703f26ee7c9e2f15",
+      "patch_id": "2f4b7002cfb6d2fb83cb9e684d5a30397a403ee0"
+    }
+  ],
+  "files": [
+    {
+      "path": "Makefile.am",
+      "bytes": 7094,
+      "sha256": "9399c30643b98b1054c3894f39354ce7f500f53d4a7d993d2928f939c721c4db",
+      "git_blob": "e158f968e01efd7d775db0004d4f576f172e31fb"
+    },
+    {
+      "path": "bin/Makefile.am",
+      "bytes": 4895,
+      "sha256": "feca0a0bbc6b94d8df362abe6664f09d3d4f8e89849ca31196f6f5405339a623",
+      "git_blob": "5b919a6bcb7cbbe5fa428f5891f5ffc3a31df92e"
+    },
+    {
+      "path": "bin/meson.build",
+      "bytes": 5801,
+      "sha256": "fd5da4b86c2849c88bb767064e3f265a6c2f2a4e17d9d7efe9c53a52614f6927",
+      "git_blob": "e29c4863fdcc3a99572a65f45bcc26f9ea7fa606"
+    },
+    {
+      "path": "bin/preparser/Makefile.am",
+      "bytes": 1619,
+      "sha256": "dada2f836625a068ae55e8f2159c9093ea32f2de92374cc2c70172687e12cccf",
+      "git_blob": "e81f11659d13dc98cb5e9bb10d5717d9a0407c28"
+    },
+    {
+      "path": "bin/timeline-preview/Makefile.am",
+      "bytes": 1367,
+      "sha256": "b8127423a839e158c689327916f6abe9976738ae9025c39e5f63928390a50b4d",
+      "git_blob": "62c3dc795650426c636d70739b216563517b7b0e"
+    },
+    {
+      "path": "bin/timeline-preview/PROTOCOL.md",
+      "bytes": 6227,
+      "sha256": "30063a4f71a945238d5e34515514f2fdf35355f436c7bf5ffaaff53fcbb5e708",
+      "git_blob": "7f3fea2c652360eb052e9b8fbcc3036a08a7828b"
+    },
+    {
+      "path": "bin/timeline-preview/README.md",
+      "bytes": 16799,
+      "sha256": "ca86dbe21058675c1bef14128a254e2e2a4521a358ff40f9d1fddb7b8d0f262f",
+      "git_blob": "ef4ba77cdf7ecb45a4bcff5ddd6d42fff221eec8"
+    },
+    {
+      "path": "bin/timeline-preview/test-io.c",
+      "bytes": 5335,
+      "sha256": "6521c10f5187a353487bf874f6e0663ff5f155c4da0a9e13d8cb484d7a12dc60",
+      "git_blob": "729d0e64f933d70d3fc0ce7b430213b2e0c99bb0"
+    },
+    {
+      "path": "bin/timeline-preview/test.py",
+      "bytes": 11395,
+      "sha256": "b06465555eea09dfc17d18f8695a9c52f4cf3ecec22259199f092339df07f24f",
+      "git_blob": "1c9f36184c8a25284917bbb7871475880945d608"
+    },
+    {
+      "path": "bin/timeline-preview/tests/README.md",
+      "bytes": 17333,
+      "sha256": "c2d32cf067b6fe180d6892eff68989e6dbab72da323eb73c7d6cd42d776f8fc4",
+      "git_blob": "8100c05dccdc80ae6e7e3f4e68454f62ae3514ed"
+    },
+    {
+      "path": "bin/timeline-preview/tests/avformat-identity.c",
+      "bytes": 2316,
+      "sha256": "c2d8128e24ee35f3b5ed40325f7b46d0ed69ed6417af23ed2dca06b16684723e",
+      "git_blob": "ac40dbff68f56a1efcaa855d20faae2827f3ad7c"
+    },
+    {
+      "path": "bin/timeline-preview/tests/compare-identity.py",
+      "bytes": 4049,
+      "sha256": "bfe99307ef3e8ea119652a0b18d1c5cc052bd042d46725af13f7abd4eac6db4d",
+      "git_blob": "75fc1e1b2deb4a0768d76920b1a477af3ed01f88"
+    },
+    {
+      "path": "bin/timeline-preview/tests/generate_admission_fixtures.py",
+      "bytes": 23668,
+      "sha256": "92be89ff835bfdb8eaddac8cef634e2a9d58aa69b750d035b1979db563add3a4",
+      "git_blob": "9f5750ac3e5c24957b37b339bc52ee4d89357192"
+    },
+    {
+      "path": "bin/timeline-preview/tests/generate_dependency_fixtures.py",
+      "bytes": 6018,
+      "sha256": "f4f081c317799617aeaef3b14018c4b5e98870cb2f23a890f28fe0358db05b8c",
+      "git_blob": "6629d7584a23b6b85760fe87f6b40bdb3d0c4d49"
+    },
+    {
+      "path": "bin/timeline-preview/tests/generate_fixtures.py",
+      "bytes": 30369,
+      "sha256": "7122c3a80b4f6ade690b47e8854a57d84bdda8684d144ea7e6a6dd4c274f00ec",
+      "git_blob": "b79fbf1c40bc4f7ef822ee4ef128f9314f88f153"
+    },
+    {
+      "path": "bin/timeline-preview/timeline-preview.c",
+      "bytes": 49077,
+      "sha256": "2731fb92c8df7b8bd8cdf3f0c7f22b912151c701145fec970acb8dfb1236b412",
+      "git_blob": "92bf43f8cd6ef2c390ffa919e29a2e9a27493c4d"
+    },
+    {
+      "path": "configure.ac",
+      "bytes": 169397,
+      "sha256": "becf159554f7a11c7bc49bd1e96b5e0393553ecede6e8d124bf5a4a2264e2812",
+      "git_blob": "07b2679c0b27a0050349ce5b55cbd71f70fb6d9a"
+    },
+    {
+      "path": "contrib/src/ffmpeg/matroska-flat-timeline.patch",
+      "bytes": 11367,
+      "sha256": "abd605f770de85f739929c5d333bd45e8d35075b2b69720cfaecbdc0d278450e",
+      "git_blob": "465e87f08390f64235b875937ed9d52e029d2f5d"
+    },
+    {
+      "path": "contrib/src/ffmpeg/matroska-track-number.patch",
+      "bytes": 406,
+      "sha256": "23baeb78b81fcb51e5068feaba2ad6f8ddfedfc3eb7dd5bca3b7d56df5ce2602",
+      "git_blob": "b6587b7b4461831ec38e52cd437baad23eabf705"
+    },
+    {
+      "path": "contrib/src/ffmpeg/rules.mak",
+      "bytes": 6908,
+      "sha256": "b842e2c464555720e9355dd90a246664e5a2b756e75aea8eeea6608fcf80dabc",
+      "git_blob": "abdb248d719e0af5a3308eb51e27ac518baac373"
+    },
+    {
+      "path": "extras/package/macosx/codesign.sh",
+      "bytes": 4814,
+      "sha256": "157217d4cb062efb2af688cc0c9c36ef9dfc58b6d0c5c367f524d83bb1de5ea6",
+      "git_blob": "cbf30c120fcfbc6f5e03def06b2170dc7ae7ea95"
+    },
+    {
+      "path": "extras/package/macosx/package.mak",
+      "bytes": 8203,
+      "sha256": "cc7deb97f2362304d66a69986f8ca44473ac84e684ff09a3860e8e2c00ebe14e",
+      "git_blob": "c98234966307d1d7ebafe111e986391c54fe60ab"
+    },
+    {
+      "path": "meson_options.txt",
+      "bytes": 19533,
+      "sha256": "84e4a01e990fd1e41afc2a8d711be66a69abea89ac14341ab2073a17d16751cc",
+      "git_blob": "afb88f5e6b03670b8cbae76eb1f9f0ebe3d4db9c"
+    },
+    {
+      "path": "modules/audio_output/Makefile.am",
+      "bytes": 7053,
+      "sha256": "de9e4602adbaa9838049b1dca5fcc8aa3c1b280ef8b3ec82a0c5200523a211ae",
+      "git_blob": "962cef96c47f40198a6cc400b6afe684bb92b5a3"
+    },
+    {
+      "path": "modules/codec/Makefile.am",
+      "bytes": 25460,
+      "sha256": "a2ba013e55fb9722bd43c3cfb9a82a993eca43f4ca8fff1e62f8b37dc7d1e201",
+      "git_blob": "2733bfb80182dda120996522f80747cf7aa4cdbc"
+    },
+    {
+      "path": "modules/gui/macosx/Makefile.am",
+      "bytes": 47890,
+      "sha256": "68a42dc6ccd2af5b32df38708fef14affbe1573df06809a3909c611f18464381",
+      "git_blob": "7d515e0f731554c735c578623bd97443752dedac"
+    },
+    {
+      "path": "modules/gui/macosx/UI/SimplePreferences.xib",
+      "bytes": 287970,
+      "sha256": "ad1e498b2b543e6812ab23ab196d0936889f8ea000e0bc05a70828d66f1d6bb1",
+      "git_blob": "66661897c2dc0edcba2e0b2a51384f9331fd2d27"
+    },
+    {
+      "path": "modules/gui/macosx/library/media-source/VLCMediaSourceProvider.m",
+      "bytes": 4708,
+      "sha256": "db8a4655ece24eab7a3e3a3146f67a5564ad1fc0747514da842fab12f65905b3",
+      "git_blob": "c75fb831c730e0d6595a429e1aa135a1ee52de75"
+    },
+    {
+      "path": "modules/gui/macosx/main/VLCMain.m",
+      "bytes": 18159,
+      "sha256": "bb6ee07c5cc30d0a309b2f8d7c66208c0f31ce469b8eafb98020fb665989744d",
+      "git_blob": "cd32ee63d9495162b68fe408b399f63adf7e88cb"
+    },
+    {
+      "path": "modules/gui/macosx/main/macosx.m",
+      "bytes": 10185,
+      "sha256": "b23d0ce0c6e2d23e9865c44597366935e1ec15b0f633a3f13b30307710632428",
+      "git_blob": "ad4a342322623d62fe9066ca2a43209753159d2f"
+    },
+    {
+      "path": "modules/gui/macosx/playqueue/VLCPlayerController.h",
+      "bytes": 34890,
+      "sha256": "7594a27881387adb1ee071f3ada089e0f4003805672e4aa91526855b8d3fa2a4",
+      "git_blob": "e6a667d1f02142f439dafec72283be46a3320243"
+    },
+    {
+      "path": "modules/gui/macosx/playqueue/VLCPlayerController.m",
+      "bytes": 79742,
+      "sha256": "b6880e9a73d91f1e4d5ec289fd92d75dbf7756773b01aa303b09c13bd5080215",
+      "git_blob": "ed7fc3e6d299a6d57e701fb7a0bd99c382cf9ecf"
+    },
+    {
+      "path": "modules/gui/macosx/preferences/VLCSimplePrefsController.h",
+      "bytes": 13786,
+      "sha256": "2aad432fe62778b4275cfff30fd30461e2ef6bdf8e3543120b2aceeb1b7a35b8",
+      "git_blob": "cd850cd9d253b33e777304fc7a23b23594e3a25e"
+    },
+    {
+      "path": "modules/gui/macosx/preferences/VLCSimplePrefsController.m",
+      "bytes": 71295,
+      "sha256": "7d31ff701c1793c849dc0b0317d5744fcebd93ba102b571484d68c1f38bcf704",
+      "git_blob": "cb0cc50ce1ea97796155ac4496d0656c35c83f57"
+    },
+    {
+      "path": "modules/gui/macosx/tests/Makefile.am",
+      "bytes": 12220,
+      "sha256": "2c91f3f05ccbea56e53180306593ad1393181f751cb529349970312105dd68d8",
+      "git_blob": "1ad964c5007c15e8d1997804a1a9a4f0360200a5"
+    },
+    {
+      "path": "modules/gui/macosx/tests/VLCLibraryDataTypesIntegrationTestSupport.m",
+      "bytes": 52664,
+      "sha256": "b3ca6c0944dc810cd2cf49ec97d73a5746ce0ebd85badddce045165d6217b0b7",
+      "git_blob": "0a67833ed2be7169366500d7b1b5bc9690eb062d"
+    },
+    {
+      "path": "modules/gui/macosx/tests/VLCThumbnailCacheTest.m",
+      "bytes": 49696,
+      "sha256": "09a9aa16cde2471569c39d95425ee15243525c0a1b4d8651f40aaa636c1669a0",
+      "git_blob": "7d08a3828628e40a19c31119777c67ea9402c740"
+    },
+    {
+      "path": "modules/gui/macosx/tests/VLCThumbnailSchedulerTest.m",
+      "bytes": 6707,
+      "sha256": "58c352ca5e0f93b9c035012b9d3d88150fa936f2ce678871b70eecbb2bd6f680",
+      "git_blob": "ae7ca41afbc032465bab36a4424ac49b17d39d04"
+    },
+    {
+      "path": "modules/gui/macosx/tests/VLCThumbnailServiceTest.m",
+      "bytes": 56052,
+      "sha256": "fc69a351d27b4de64676e16c141ff1ea6bf4d73ccc6ed2ff31c6a2909d8e390a",
+      "git_blob": "c11583eb45c9bfc8ff29a81e3105d8b40331037d"
+    },
+    {
+      "path": "modules/gui/macosx/tests/VLCThumbnailTestHelper.c",
+      "bytes": 7074,
+      "sha256": "c671a501f3d378d595ebeff255fc9dfd9a7997a22bcf4e3f9d93f242ce9e8374",
+      "git_blob": "d60b683f04658ea9eca361567c470ebca4d82ad1"
+    },
+    {
+      "path": "modules/gui/macosx/tests/VLCTimelineHoverReentrancyTest.m",
+      "bytes": 6880,
+      "sha256": "850dc33a8032b3a7c8fb4329d651ee46a6bd6d24a5b4b7fd8bc1224dd64c3715",
+      "git_blob": "f73d8b806d0e3a949e0f5509fa080518ea6630a1"
+    },
+    {
+      "path": "modules/gui/macosx/tests/VLCTimelineHoverTest.m",
+      "bytes": 2057,
+      "sha256": "7fbea0b5c5144bc291c358ed6eeeb35dcbb7fe2f036468d789c50c085b643207",
+      "git_blob": "8f7c917a4adf3eb66600e6819f81a128768ad2ef"
+    },
+    {
+      "path": "modules/gui/macosx/tests/VLCTimelineHoverTestSupport.m",
+      "bytes": 2276,
+      "sha256": "2a242068cc0b32b4e3ee5e94d490e6cf64ae4fe88f040f54317e420327ca07e3",
+      "git_blob": "18f9e237833deb85f08df6000179bb5225c3d18e"
+    },
+    {
+      "path": "modules/gui/macosx/tests/VLCVoutLifetimeTestSupport.m",
+      "bytes": 2253,
+      "sha256": "5eb386842be53ab36ce714de1cc5492336b3d75cac5ada334e7ec9bb07d7c448",
+      "git_blob": "1b049f12f120f06813d99335993a899e107710c3"
+    },
+    {
+      "path": "modules/gui/macosx/tests/VLCVoutLifetimeWiringTest.m",
+      "bytes": 6821,
+      "sha256": "834a6d6185d569de4df6ac662d7d71faa10f4dedeb1bc7adff97cc02adb909b5",
+      "git_blob": "9c85613c7e34accc73063ffced0cb4446b973046"
+    },
+    {
+      "path": "modules/gui/macosx/timeline/VLCThumbnailCache.h",
+      "bytes": 1399,
+      "sha256": "6e529b5db2c69f64276fee828977bab0db512109d1a8ced542ec734138e59640",
+      "git_blob": "297f7097e1f2584673841b3d9371b3826f2536ae"
+    },
+    {
+      "path": "modules/gui/macosx/timeline/VLCThumbnailCache.m",
+      "bytes": 18927,
+      "sha256": "2207283584e23c0c44ec235b89ae3baed676afb11d5d2585d0f2e59b52bb4297",
+      "git_blob": "4b03bce9ae4e3964307469390ed5acd969f06b7c"
+    },
+    {
+      "path": "modules/gui/macosx/timeline/VLCThumbnailScheduler.h",
+      "bytes": 1217,
+      "sha256": "3358d1078438a65971e67c116d7f1400c69b8033a700427faf7a480419e3c5ec",
+      "git_blob": "303f68919aa05612487001f43307afc94434dac6"
+    },
+    {
+      "path": "modules/gui/macosx/timeline/VLCThumbnailScheduler.m",
+      "bytes": 8808,
+      "sha256": "cb8f7095c372d6023a4969ed441c43e8e35d435fbbf2e3b8b3c453973a64daed",
+      "git_blob": "74c7dbf04458016d002cc61b131bbb7d8dad89b3"
+    },
+    {
+      "path": "modules/gui/macosx/timeline/VLCThumbnailService.h",
+      "bytes": 961,
+      "sha256": "77446215166b7a9f1527c92c1380503d6c411666e06b4306b753fa4bee8d1767",
+      "git_blob": "de2cfe449467c70a4fd9c7e4d8fb4ad07c40abb3"
+    },
+    {
+      "path": "modules/gui/macosx/timeline/VLCThumbnailService.m",
+      "bytes": 42548,
+      "sha256": "4194b294155e7f7a1c5435d5217ae2dfdfd411090b15a9914f3638eb395095e4",
+      "git_blob": "d5e408faedb9d65ba6aa50d44665861dbdb21297"
+    },
+    {
+      "path": "modules/gui/macosx/timeline/VLCThumbnailWorker.h",
+      "bytes": 808,
+      "sha256": "f39aaaad41e397ddbdf8f7b6e3602fc010404ab62287f4cea72af85328bc6296",
+      "git_blob": "96033924b58e0127a0d651a4180d1f94a0d9c158"
+    },
+    {
+      "path": "modules/gui/macosx/timeline/VLCThumbnailWorker.m",
+      "bytes": 14340,
+      "sha256": "18f4aa213f2f8823b69a340ef2e3849c6461cd71070332c814fe44f8ed1ec5b7",
+      "git_blob": "cfa106678c1089f4199d3d81b467d44419b8aa37"
+    },
+    {
+      "path": "modules/gui/macosx/timeline/VLCTimelineContext.h",
+      "bytes": 477,
+      "sha256": "634bdd6e5b3663ae503ec24b8c6b4d7881c63b661088f31390d4f16f2d8d3373",
+      "git_blob": "1a5d4261fd5153e3e12f4079984882280852dd3f"
+    },
+    {
+      "path": "modules/gui/macosx/timeline/VLCTimelineContext.m",
+      "bytes": 6619,
+      "sha256": "152237519a537e2c92e55a6c8b9829dda13f51fc5d55101b8246637c9177ca8f",
+      "git_blob": "56596cdedd877e01138f3fb1cfe7cd9345542b47"
+    },
+    {
+      "path": "modules/gui/macosx/timeline/VLCTimelineContextTestSupport.m",
+      "bytes": 1743,
+      "sha256": "9820fc0f4e0b406ad89989ecd0ec44fc6be8f08a5e4424320713d3a174c54092",
+      "git_blob": "8086cfaca2c048adefcf72f273f60933b875dbdf"
+    },
+    {
+      "path": "modules/gui/macosx/timeline/VLCTimelineContextTests.m",
+      "bytes": 10639,
+      "sha256": "21c1b5cb71f319102a23241070458871153c1c2f133c6a970f4c0b3920fb9127",
+      "git_blob": "a722ca104603f042bb165172941d148f6d508c17"
+    },
+    {
+      "path": "modules/gui/macosx/timeline/VLCTimelinePlayerContextTest.m",
+      "bytes": 10670,
+      "sha256": "c4e21145c5d11776301da8f4456d33513371692abd499b45ad1e973e2469fc00",
+      "git_blob": "9625387de311fdaf0e78398df30a38a0f373cbbf"
+    },
+    {
+      "path": "modules/gui/macosx/views/VLCPlaybackProgressSlider.h",
+      "bytes": 2758,
+      "sha256": "2df50c2c4dd2ce5486d228b8b6b4ad3549fe37c70e5adcb3a47e8789cd8e4e63",
+      "git_blob": "60118280dfe3c1a03a95e11f711480ba808bcf19"
+    },
+    {
+      "path": "modules/gui/macosx/views/VLCPlaybackProgressSlider.m",
+      "bytes": 20348,
+      "sha256": "76289b6be84e615fa8746a5b18a600165b3d6755c7a85b25d7b8b10a4cbbdd10",
+      "git_blob": "20c415ca522a915540e2fa9ba7d61b8dcdce8b8c"
+    },
+    {
+      "path": "modules/gui/macosx/windows/video/VLCMainVideoViewController.m",
+      "bytes": 33633,
+      "sha256": "8ddab46a8ad7d03d7178886679a924646f9f2526af8593342519ee4215d27938",
+      "git_blob": "76c5f5388578bed3a6ef41948cd067254da041f8"
+    },
+    {
+      "path": "modules/gui/macosx/windows/video/VLCVideoOutputProvider.m",
+      "bytes": 32185,
+      "sha256": "c7337ea6849a7e94054b39c168ce5e8217f2a7a157e4d96e48d85d5750cee9e3",
+      "git_blob": "b3dac67b748f6bdb55906ac15f7963e576ccf6d1"
+    },
+    {
+      "path": "modules/gui/macosx/windows/video/VLCVoutView.h",
+      "bytes": 2994,
+      "sha256": "aa1e8206efed58b8ac4abc196ace61f1a99efbe0aa7d7163f8164b4a2ae6dce8",
+      "git_blob": "b57cc57d1000bcc1d07054aac5151a2908e910d5"
+    },
+    {
+      "path": "modules/gui/macosx/windows/video/VLCVoutView.m",
+      "bytes": 15489,
+      "sha256": "73950caa0f430550a2ae311c407a557f582376056b8afd43b740823de82606a5",
+      "git_blob": "141a87c4087bcf0cde9e095eabaa20dbf957af5a"
+    },
+    {
+      "path": "modules/video_output/Makefile.am",
+      "bytes": 17185,
+      "sha256": "9183f886dfe4d6dda6335a46e84388a2b690571dec5d43f2eaedad2666f7bc60",
+      "git_blob": "fb1e6af9cc34ca66ef72ab7ba5c3c2c9eaa5f079"
+    },
+    {
+      "path": "src/clock/clock.c",
+      "bytes": 46198,
+      "sha256": "e84f58e41347c4e3b648f415937b94eee2af2b49957ef7678e60e7dfd4ba94f2",
+      "git_blob": "6209755f66beba9b4c6252e6070560c6207d1a4b"
+    },
+    {
+      "path": "test/Makefile.am",
+      "bytes": 28379,
+      "sha256": "de1a6d1f4a96f1b17e0f274159212f6765ec4ff4ced2558391bf3dcb6e288028",
+      "git_blob": "41fb5df16a8ddfd3e18131a8517683a0beecbb2e"
+    },
+    {
+      "path": "test/modules/misc/tls.c",
+      "bytes": 9206,
+      "sha256": "dce69d9a6358104bdef2affd3ebdb965190174cad9acd34c7a4f5a241186e454",
+      "git_blob": "e7f342691936f9a605771c0201e47bf6fb881090"
+    },
+    {
+      "path": "test/src/clock/clock.c",
+      "bytes": 31890,
+      "sha256": "f4643fe8ad8753b9bd054af7658e8c18a0ce40d3c3fb850f2042eb8fe2828960",
+      "git_blob": "f23ccc5fab620a77106fc33ab04975e524e0364a"
+    },
+    {
+      "path": "test/src/macosx/media_source_ownership.m",
+      "bytes": 4431,
+      "sha256": "24321c001b1471e0fe6781e8854511b199505972f59d6aa663af375b6fe698e3",
+      "git_blob": "17aa31a8849586ad8ab1bd8b16de87b102a10d32"
+    }
+  ],
+  "predecessor": {
+    "head": "4dd9f5e20631173cbf1343e6367c4ac4a3a836a9",
+    "tree": "330eb90675c4ffe744625c3d65fdbab55895c7c6",
+    "manifest": "../submission/manifest.json",
+    "preserved_unchanged": true
+  },
+  "qualification": {
+    "changed_path": "modules/gui/macosx/tests/VLCVoutLifetimeTestSupport.m",
+    "changed_path_only": [
+      "modules/gui/macosx/tests/VLCVoutLifetimeTestSupport.m"
+    ],
+    "test_source_head": "dd50411dad2b8c05144acbf0e7c63fb9150e0120",
+    "test_source_tree": "212c081ca9eb566a65b3979d272a788ae52653ea",
+    "new_production_changes": false,
+    "compile_test_receipt": "../logs/vout-warning-check.receipt.json",
+    "inherited_artifact_build_head": "e6e5bff8248b02509063534e28281a0c2d192bdd",
+    "inherited_artifact_build_tree": "3b08612dc30215464c8fbc78e60c3bcf7217e316",
+    "scope": "Only test support changed; normal app/archive/helper/native/core evidence inherits predecessor at its reported scope. Fresh affected-TU compile and five registered vout lifetime cases pass. No GUI/performance/full-check rerun."
+  }
+}

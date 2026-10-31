@@ -1,0 +1,5037 @@
+{
+  "app_path": "/Users/cam/Documents/Projects/vlc-thumbs/work/story007-refresh-20261030/source/build-macosx/VLC.app",
+  "manifest_method": "SHA256 of canonical JSON sorted path entries; regular file SHA256 and symlink targets",
+  "manifest_sha256": "7f62c2ade90d7107c686ba65b37ca90f18fad3a14679f000395979c59c12eb35",
+  "file_entries": [
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Autoupdate",
+      "symlink": "Versions/Current/Autoupdate"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Headers",
+      "symlink": "Versions/Current/Headers"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Modules",
+      "symlink": "Versions/Current/Modules"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/PrivateHeaders",
+      "symlink": "Versions/Current/PrivateHeaders"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Resources",
+      "symlink": "Versions/Current/Resources"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Sparkle",
+      "symlink": "Versions/Current/Sparkle"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Updater.app",
+      "symlink": "Versions/Current/Updater.app"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Autoupdate",
+      "bytes": 314144,
+      "sha256": "28b2e13524ded5614437c191e532d35a636d762e14e944f670de2b6921dbd088"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Headers/SPUDownloadData.h",
+      "bytes": 1204,
+      "sha256": "ca14be687ea13dbd6148eb74b53e917a3da44283f3eb0aed9ed2ce06ea08209b"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Headers/SPUStandardUpdaterController.h",
+      "bytes": 5586,
+      "sha256": "964899f86424d74beae6474efc0c450bc26906aebf882f28403477b5835b4a7f"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Headers/SPUStandardUserDriver.h",
+      "bytes": 1293,
+      "sha256": "54fd2f392e9f6585e55cfb96a7b998bec032949f16debe195429fa90785b2fd2"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Headers/SPUStandardUserDriverDelegate.h",
+      "bytes": 9952,
+      "sha256": "635097bddced62fafb4cd539bb2915f634a376f72997668240fc2354765ef884"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Headers/SPUUpdateCheck.h",
+      "bytes": 874,
+      "sha256": "1f7d05da2e466263aefe3e09130e56b2e65b8862579e07b9829c9bf5ed921c03"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Headers/SPUUpdatePermissionRequest.h",
+      "bytes": 1075,
+      "sha256": "86744d60f79a2b4356a0a3d7118b36028c83e90384d021c325627128ce4c6b6e"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Headers/SPUUpdater.h",
+      "bytes": 19886,
+      "sha256": "8019bd557b9aa228d3f64fbc4bd2eaabd2fa0c76733dc016671b94e6491458c5"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Headers/SPUUpdaterDelegate.h",
+      "bytes": 23176,
+      "sha256": "6d43fc879bb9bcc6c353af1c2ab9e8d98db67d1413ace269e48a63dab1d349b7"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Headers/SPUUpdaterSettings.h",
+      "bytes": 2438,
+      "sha256": "1a2606783f9dc56b81217e78bb5d5382b83d94d8eb8ad05510dff8596944eb53"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Headers/SPUUserDriver.h",
+      "bytes": 16392,
+      "sha256": "23ef98fad94654f60e19fdbc77aa2e80db3729002084849efee649edec8538b7"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Headers/SPUUserUpdateState.h",
+      "bytes": 2018,
+      "sha256": "67850a25c5cc17f6d499290888cf83f234e24bc8b9c7508baa8a38b86e1a42f8"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Headers/SUAppcast.h",
+      "bytes": 972,
+      "sha256": "33729480ef9477f9f9b7fad78c563340c5133c303c7caed6e3a4107ee8790e70"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Headers/SUAppcastItem.h",
+      "bytes": 17093,
+      "sha256": "bf3f056733267beef8c9d67613bbfc52520ad570f02804eb2feb447d517df40d"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Headers/SUErrors.h",
+      "bytes": 3114,
+      "sha256": "21d3e87cc6e0231283ec16fde0fb6abdbee400f19f211e1a8d2db3a8ee5b7db6"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Headers/SUExport.h",
+      "bytes": 302,
+      "sha256": "5cef024266c54e12db620f78f4d106860de0fa2a2e230dffdfe04208bb447451"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Headers/SUStandardVersionComparator.h",
+      "bytes": 1845,
+      "sha256": "7d407b9ce721d5c650e741ecb692e77f12ef3b5e18ea8136f72448e8d7208c6c"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Headers/SUUpdatePermissionResponse.h",
+      "bytes": 2491,
+      "sha256": "1d2710a24ff3b9cef4e2535fc069750acafa9e28102c0b237912571b51d3ba4b"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Headers/SUUpdater.h",
+      "bytes": 6874,
+      "sha256": "96f6f598d582ca87c9d17f3ccd7bccb0ae4f057ac6e8fafb854ad8d04de336f6"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Headers/SUUpdaterDelegate.h",
+      "bytes": 13764,
+      "sha256": "a1a08c33fd41ebdd105916d8181d222417f9feda01cdc42afa6a3151106cde36"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Headers/SUVersionComparisonProtocol.h",
+      "bytes": 1011,
+      "sha256": "28bbb424ac7ab81e2b93f61e359fefa3ed09d6a38d0b265004d2103c0f46bdb4"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Headers/SUVersionDisplayProtocol.h",
+      "bytes": 3773,
+      "sha256": "3f23c4fb9bbdbc19714580ee4dd7f73ffc31436ea733c9bb308c3f74e7ab512c"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Headers/Sparkle.h",
+      "bytes": 1170,
+      "sha256": "3a442a32eb22a77bb5a08e61ac678daffdf6c697d33020b82a683baf40228e0c"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Modules/module.modulemap",
+      "bytes": 95,
+      "sha256": "2bcae1eb66d55dc49f58acfe856375a5bbc91c6e83bdb298d19442ae6264cfa6"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Modules/module.private.modulemap",
+      "bytes": 833,
+      "sha256": "db1d60f57b43a9eb17f3550f5720ac53466d4385368670fb5148da5b71f43f3a"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/PrivateHeaders/SPUAppcastItemStateResolver.h",
+      "bytes": 1105,
+      "sha256": "1c3be298008c19757ae3b27083622a005bce809a01f06d2c74f6dea16f3214ee"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/PrivateHeaders/SPUGentleUserDriverReminders.h",
+      "bytes": 475,
+      "sha256": "f56d9d277f16417d79d66a484b4afcfc47c2a9957a8c487adb5c709dad895402"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/PrivateHeaders/SPUInstallationType.h",
+      "bytes": 835,
+      "sha256": "79246726b187840af0e22a7d29a215a376e49c5f1b1f2c2191068463745b2e6a"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/PrivateHeaders/SPUStandardUserDriver+Private.h",
+      "bytes": 1097,
+      "sha256": "acc764e731fe9e6d307fe32dea4d06b451964225c2b2a9745a23f035a9cdeaad"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/PrivateHeaders/SPUUserAgent+Private.h",
+      "bytes": 751,
+      "sha256": "0c3ea7c6aabab32840e41c56bb22cfab4dee4dde3302603b6f4aba9ac1b5850c"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/PrivateHeaders/SUAppcastItem+Private.h",
+      "bytes": 1248,
+      "sha256": "f47ece213f6712861750105cbd365d48ece5abcd6e588512f0caa3ba17f3f56c"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/PrivateHeaders/SUInstallerLauncher+Private.h",
+      "bytes": 1240,
+      "sha256": "cb2e9c465f08ab0309c2bf3a4d2f7c35d9c76ff5a4480694700a22298520dd94"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Resources/Base.lproj/Sparkle.strings",
+      "bytes": 5831,
+      "sha256": "87445c8c10f7410d4de86c16f3b6649c0fd635e01c203e9a48375a787aaaa2bd"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Resources/Info.plist",
+      "bytes": 1359,
+      "sha256": "e0bd946b645c54e3f1bf8b385990b5b1716494f382d55c3939d68716573ca0ac"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Resources/ReleaseNotesColorStyle.css",
+      "bytes": 231,
+      "sha256": "76bd6999758fd8e51d17e6b482db434f9b4768c02b037af6bd2e3a000ce8cbc1"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Resources/SUStatus.nib",
+      "bytes": 13104,
+      "sha256": "430fc4e67f495f49784400231cd28d3e52f4d734acc1608415bd9c5f6f70b3bd"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Resources/SUUpdateAlert.nib",
+      "bytes": 18490,
+      "sha256": "67287ca19f443cd2bd6166f3aa02265183bbef3a12a916a2da2c4b6390c8d0f6"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Resources/SUUpdatePermissionPrompt.nib/keyedobjects-101300.nib",
+      "bytes": 25424,
+      "sha256": "e08d0688455021c52837ae7fdfaf80b0df0a0ced318aa0cb3f9ff370769924db"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Resources/SUUpdatePermissionPrompt.nib/keyedobjects-110000.nib",
+      "bytes": 25390,
+      "sha256": "2e62b9d5a736d53b1eaf217432c4d0ad05217e897787cf1bdf1071ff22308d46"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Resources/ar.lproj/Sparkle.strings",
+      "bytes": 3554,
+      "sha256": "441182787471a3998908044515fe13e92230edaa7e2730638e72a49610f56cba"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Resources/ca.lproj/Sparkle.strings",
+      "bytes": 3501,
+      "sha256": "7ed0d5ca300649a7f13304015008f2dede98ad743a625c17d5a5fedacc1a3b1a"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Resources/cs.lproj/Sparkle.strings",
+      "bytes": 10774,
+      "sha256": "99e66decf9bc46cf5622eead4e65b3b502e3775a4e8e0f03ef1b41683ea8d518"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Resources/da.lproj/Sparkle.strings",
+      "bytes": 4882,
+      "sha256": "8d0ff69b79460185f941372655433bad3934f49e63bef0b4171bd66da71e55f0"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Resources/de.lproj/Sparkle.strings",
+      "bytes": 11648,
+      "sha256": "c7d410cc98ba0764923890ea66ae03bc3b249d4a4463357c002b88d94c43b08f"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Resources/el.lproj/Sparkle.strings",
+      "bytes": 5934,
+      "sha256": "638981a4f095d8b1dabb6230d452e470359711b81803bc5df8c21e1211fd3757"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Resources/es.lproj/Sparkle.strings",
+      "bytes": 7040,
+      "sha256": "30cf2b18d30796961d88da28929d08c62ce45904553d004702877dc7449bf0df"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Resources/fa.lproj/Sparkle.strings",
+      "bytes": 5716,
+      "sha256": "ed9dda9e271f7a97b8a7f327e71a1b6d06e5e061b367e7da3d153e47dc319263"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Resources/fi.lproj/Sparkle.strings",
+      "bytes": 3252,
+      "sha256": "c14af9bac3fce436222a4ea277a7a6c0f9b42b2d84aceea75e758ce7538acae2"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Resources/fr.lproj/Sparkle.strings",
+      "bytes": 7855,
+      "sha256": "3d554dcd167b085e25a75248533f21f389593aeace912ab9952c825ffe141ce1"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Resources/he.lproj/Sparkle.strings",
+      "bytes": 9657,
+      "sha256": "1d795bd7329d04b7ce84b6bdc845f917369e858b2b292f117b89a6666a185723"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Resources/hr.lproj/Sparkle.strings",
+      "bytes": 6367,
+      "sha256": "920041380a08b3ba50d44e8a83f59de551139845a72748d58f2387c65920b33a"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Resources/hu.lproj/Sparkle.strings",
+      "bytes": 4449,
+      "sha256": "cc2a16e4d487c6fab357b4f7d0fbbf7ec882371b2130413ffcb1b69cd540d2cf"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Resources/is.lproj/Sparkle.strings",
+      "bytes": 3954,
+      "sha256": "403feba503410e9455cd0eaafe592a2576eedb24130ccf2cdb13dda4b101f87e"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Resources/it.lproj/Sparkle.strings",
+      "bytes": 10956,
+      "sha256": "56a7445c1b68d76849ac59b98aa5c20c9002d5e07e9f0a2720486160f85b7366"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Resources/ja.lproj/Sparkle.strings",
+      "bytes": 8697,
+      "sha256": "e404910028af70579cfa208bb4fadd9e3592505fc89af208f4071f2309553fb2"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Resources/ko.lproj/Sparkle.strings",
+      "bytes": 7797,
+      "sha256": "a6269eb3f5a07d0c4f5d7467d5065372085aef7484c518a9d784ffd6c8f5aae4"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Resources/nb.lproj/Sparkle.strings",
+      "bytes": 5539,
+      "sha256": "ef6f0dcae90c440b47ece09909e9cdf35f3383f34e72a614c8c5c0752ecbffe0"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Resources/nl.lproj/Sparkle.strings",
+      "bytes": 9574,
+      "sha256": "ca9adf34fb93fe3f394ccc92114bf6a6b1f8a128bb5f362cb9f3247d7c26c77d"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Resources/nn.lproj/Sparkle.strings",
+      "bytes": 5671,
+      "sha256": "1db8c6853a550aa25382da2d55431a1c1d308d6a37676c4f8593cc1633f8a5ae"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Resources/pl.lproj/Sparkle.strings",
+      "bytes": 5453,
+      "sha256": "5c54b3f8e1eb3026e142e710e2167f2f839b73ab5ad7f18719230f33ae682aa9"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Resources/pt-BR.lproj/Sparkle.strings",
+      "bytes": 9976,
+      "sha256": "0292cadc2acfc34875c1e0b54e2d50de3833cd5e20c8660c8effe2b859aac84c"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Resources/pt-PT.lproj/Sparkle.strings",
+      "bytes": 5984,
+      "sha256": "fc958532d26a8e1e74622d3f558fc26a12800e8c49fb614afd0e1883acce4700"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Resources/ro.lproj/Sparkle.strings",
+      "bytes": 6115,
+      "sha256": "b2bf064222c38a3672b01fe09406f799718cb0fc4e715121662639d6fdfea6ed"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Resources/ru.lproj/Sparkle.strings",
+      "bytes": 5784,
+      "sha256": "7193af28eb2a09b9fe7119cf6065a2150c6590971b22f98c56f356cd90851923"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Resources/sk.lproj/Sparkle.strings",
+      "bytes": 5675,
+      "sha256": "e158daaa4f3f91b57cee05ab896f2c1bc467317932cc53bb7c01e7daee9e5238"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Resources/sl.lproj/Sparkle.strings",
+      "bytes": 5646,
+      "sha256": "c62770c604a6c8c89e283357c8b322d8ce6a85f4d85c09002048331f65f8d980"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Resources/sv.lproj/Sparkle.strings",
+      "bytes": 5160,
+      "sha256": "4a21ad5bcf8d836d265710c2e4a0a64f07c9551f1c49694d6734a931d23efd39"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Resources/th.lproj/Sparkle.strings",
+      "bytes": 5339,
+      "sha256": "4b6c8dc2ab69a0425de3aa9dc386c6539348e3983e47aa10f94c17e345a157a5"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Resources/tr.lproj/Sparkle.strings",
+      "bytes": 6183,
+      "sha256": "b040d3f02d341eba047c15dfcafb60406d0847096a94466ecab512dcfb16abb5"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Resources/uk.lproj/Sparkle.strings",
+      "bytes": 5842,
+      "sha256": "ff44d58635b3e8409d54b42b72c876a43e17fa98f6ea96b32583b9e88c747ab6"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Resources/zh_CN.lproj/Sparkle.strings",
+      "bytes": 7475,
+      "sha256": "e7f543b92977e9abc907241c411d8db0f59c4fee480859b3e88e4b495e0976c8"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Resources/zh_HK.lproj/Sparkle.strings",
+      "bytes": 6469,
+      "sha256": "3fc210132f33d89af3d25d27c7ea19426cf6d304be50254538456e0ec4fb7858"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Resources/zh_TW.lproj/Sparkle.strings",
+      "bytes": 7625,
+      "sha256": "76321e1dd844c9b6568cb4af7c63bb57d9d1b700109aeedd7e5721d78727b12d"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Sparkle",
+      "bytes": 399872,
+      "sha256": "1b424be459ce879399c33ab559f2b702cd88f6d1b118d04302b29e1186fa0a61"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Updater.app/Contents/Info.plist",
+      "bytes": 2378,
+      "sha256": "4ba256aa944e8788908016a66e43b2bd1bbf8fbc4451f1b18b03c363c3d2dffe"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Updater.app/Contents/MacOS/Updater",
+      "bytes": 108304,
+      "sha256": "1b2ea9a072661f960bd7368d826e75cd69fd1ce6555768940f7079b4c6058c2f"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Updater.app/Contents/PkgInfo",
+      "bytes": 8,
+      "sha256": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Updater.app/Contents/Resources/SUStatus.nib",
+      "bytes": 13104,
+      "sha256": "430fc4e67f495f49784400231cd28d3e52f4d734acc1608415bd9c5f6f70b3bd"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/Updater.app/Contents/_CodeSignature/CodeResources",
+      "bytes": 2446,
+      "sha256": "bed1b22513d512fa7f4616e69f252456ae69ae047463e8adaf0fb899dad3fe04"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/B/_CodeSignature/CodeResources",
+      "bytes": 21582,
+      "sha256": "c1f64ce423aee6a2638a98bbabe5adf10e88e7f61de5076d6097c6458835d924"
+    },
+    {
+      "path": "Contents/Frameworks/Sparkle.framework/Versions/Current",
+      "symlink": "B"
+    },
+    {
+      "path": "Contents/Frameworks/libvlc.12.dylib",
+      "bytes": 239648,
+      "sha256": "254a35d529b409e79cfc0f5f76d3005c31a8d28ea507aeb5b01d7629e7ee7f55"
+    },
+    {
+      "path": "Contents/Frameworks/libvlc.dylib",
+      "symlink": "libvlc.12.dylib"
+    },
+    {
+      "path": "Contents/Frameworks/libvlccore.9.dylib",
+      "bytes": 2706160,
+      "sha256": "236e8d6982c516b47b70e39692d3d96e34e011ca425cb635b9b14ac34dd62779"
+    },
+    {
+      "path": "Contents/Frameworks/libvlccore.dylib",
+      "symlink": "libvlccore.9.dylib"
+    },
+    {
+      "path": "Contents/Frameworks/lua/extensions/VLSub.luac",
+      "bytes": 51948,
+      "sha256": "1e4356df8350f41383171c761912125c01fbaa891292ac5a2fe3a3e21eb69287"
+    },
+    {
+      "path": "Contents/Frameworks/lua/intf/cli.luac",
+      "bytes": 30273,
+      "sha256": "4809c82b45f180f955bbb7584c8c75692e65be720f0b7f645cdb08bb1b9bc82d"
+    },
+    {
+      "path": "Contents/Frameworks/lua/intf/dummy.luac",
+      "bytes": 773,
+      "sha256": "5f3f21271e70f7f3fc6d9691165e321b92912564cf8a1f58036f2902c8afbacd"
+    },
+    {
+      "path": "Contents/Frameworks/lua/intf/dumpmeta.luac",
+      "bytes": 1249,
+      "sha256": "b8c0647d8bb3b3150c72e208707d998af2579809513f4ceebcf0c1dc508267e2"
+    },
+    {
+      "path": "Contents/Frameworks/lua/intf/http.luac",
+      "bytes": 8784,
+      "sha256": "28e3b9566e6eb317ecadb161322498e54b32b6fe4c398f2c7808efa767584120"
+    },
+    {
+      "path": "Contents/Frameworks/lua/intf/luac.luac",
+      "bytes": 1521,
+      "sha256": "bc2048652cf591d08c51a357f5e42df03dea74500f1a582647bc9391744ad2fd"
+    },
+    {
+      "path": "Contents/Frameworks/lua/intf/modules/host.luac",
+      "bytes": 8028,
+      "sha256": "52b3e86baea7927197e5d0a8a2eba24eecccc88914c568b90e9b4dd602a39cb5"
+    },
+    {
+      "path": "Contents/Frameworks/lua/intf/modules/httprequests.luac",
+      "bytes": 11743,
+      "sha256": "52018ebe7d5ea8bf68bd626b7b51baf87872cddcdf7f12ba8c5a4e3ecf425761"
+    },
+    {
+      "path": "Contents/Frameworks/lua/intf/telnet.luac",
+      "bytes": 776,
+      "sha256": "c59874a5e3b16b8d2afbccef0553d3bd5be1d69a76d1532078ea587ba241fe5c"
+    },
+    {
+      "path": "Contents/Frameworks/lua/meta/art/00_musicbrainz.luac",
+      "bytes": 2086,
+      "sha256": "e5a865339c5c17e3e5c03f85607d9bfd60bb77461f2957f09cb25e48b859578e"
+    },
+    {
+      "path": "Contents/Frameworks/lua/meta/art/01_googleimage.luac",
+      "bytes": 1059,
+      "sha256": "eec2c909b8aeebaa9a570751d36325d240ced06644152d87c5185e690933992e"
+    },
+    {
+      "path": "Contents/Frameworks/lua/meta/art/02_frenchtv.luac",
+      "bytes": 3905,
+      "sha256": "0508b09ca0abeaed253ba435cdd8d6b55766ef647fcda81a59f0b997ca4fd0f0"
+    },
+    {
+      "path": "Contents/Frameworks/lua/meta/art/03_lastfm.luac",
+      "bytes": 1178,
+      "sha256": "10b74fbd4b22543042b6d114017f42fd683bc1e9c67260377edc891f39b5f7e4"
+    },
+    {
+      "path": "Contents/Frameworks/lua/meta/reader/filename.luac",
+      "bytes": 957,
+      "sha256": "f1117f488498badc1c74e9c4696a4f23e6a44ac13beead3f8185584568147b34"
+    },
+    {
+      "path": "Contents/Frameworks/lua/modules/common.luac",
+      "bytes": 4990,
+      "sha256": "47209e5fe4c3f038d395d5bfaefed36e12d39573cc96c41bed1895454002743d"
+    },
+    {
+      "path": "Contents/Frameworks/lua/modules/dkjson.luac",
+      "bytes": 18981,
+      "sha256": "d3c75ae62ef2390099469bfdf5bde0e232c25062369fccc21485b37e450f96a1"
+    },
+    {
+      "path": "Contents/Frameworks/lua/modules/sandbox.luac",
+      "bytes": 2682,
+      "sha256": "38b023959273d89eb62a4880bd94556fc1ada63fa0bce94776f10a4e6f854c30"
+    },
+    {
+      "path": "Contents/Frameworks/lua/modules/simplexml.luac",
+      "bytes": 2166,
+      "sha256": "f91b3a8f8b62cbb37a965c5a40652c0f6ee9334af5f7b80675d3cf0271ec9aef"
+    },
+    {
+      "path": "Contents/Frameworks/lua/playlist/anevia_streams.luac",
+      "bytes": 1727,
+      "sha256": "aec85617278ec817dc33ae26c90a77d91108d291e63dba2828b51211598b95c4"
+    },
+    {
+      "path": "Contents/Frameworks/lua/playlist/anevia_xml.luac",
+      "bytes": 1755,
+      "sha256": "bbe19cf9e8145bbdfac12ea0817056bdb126d950ea66322047e9ce2dcf3f6a52"
+    },
+    {
+      "path": "Contents/Frameworks/lua/playlist/bbc_co_uk.luac",
+      "bytes": 889,
+      "sha256": "c107323ef4ac35392df8bd981b8cc06160057dbc2f240ebefc054d37a3e6558d"
+    },
+    {
+      "path": "Contents/Frameworks/lua/playlist/cue.luac",
+      "bytes": 3421,
+      "sha256": "5a4bfc659616711790c655e2fdcd61f5713af461f9ae263d518a59593113743c"
+    },
+    {
+      "path": "Contents/Frameworks/lua/playlist/dailymotion.luac",
+      "bytes": 2701,
+      "sha256": "98d90d2551954bfe863f6a86d1dadcd492a6a09c290552092b04034a617269ee"
+    },
+    {
+      "path": "Contents/Frameworks/lua/playlist/extreme.luac",
+      "bytes": 2165,
+      "sha256": "4883e22ad4fafa9bc6a934965ff4ec7bd87f4233fbf4699472691bfe4083955e"
+    },
+    {
+      "path": "Contents/Frameworks/lua/playlist/france2.luac",
+      "bytes": 1472,
+      "sha256": "e43069f87d1ae5859227804f28d2c6e2367bb1fd82ecfb5a8b6c586e8d9fba94"
+    },
+    {
+      "path": "Contents/Frameworks/lua/playlist/jamendo.luac",
+      "bytes": 2073,
+      "sha256": "9fa4f2bdbb35b79c01b0c47c7650ff18ee35f148539c2d02eb4be8b4ae1d2dd2"
+    },
+    {
+      "path": "Contents/Frameworks/lua/playlist/katsomo.luac",
+      "bytes": 2165,
+      "sha256": "cf5d90bffaf654e12dca619a0a438606defd5bd9cdddf6610f9da77c31d11638"
+    },
+    {
+      "path": "Contents/Frameworks/lua/playlist/koreus.luac",
+      "bytes": 2615,
+      "sha256": "996ad3181f940e316c7ee036de146c6a016199578cf64aed763fab855ec7d6d0"
+    },
+    {
+      "path": "Contents/Frameworks/lua/playlist/lelombrik.luac",
+      "bytes": 1394,
+      "sha256": "5b77d142944b45d44b58ab046f136f07d467837956cad0b4901589998bc577c9"
+    },
+    {
+      "path": "Contents/Frameworks/lua/playlist/mpora.luac",
+      "bytes": 1792,
+      "sha256": "85d80fa70bb1af36e78b351a54168b8b07948379a7739722c83648ea166b8fe5"
+    },
+    {
+      "path": "Contents/Frameworks/lua/playlist/newgrounds.luac",
+      "bytes": 1443,
+      "sha256": "39fc689198790f6d5a1d00df1095c7bda25a46dfd7608e8749318764180d440c"
+    },
+    {
+      "path": "Contents/Frameworks/lua/playlist/pinkbike.luac",
+      "bytes": 1377,
+      "sha256": "88e3abd868c2fb5ac96833d454039dc4ea972b3b51f88fc57f4fa0c37ed57845"
+    },
+    {
+      "path": "Contents/Frameworks/lua/playlist/rockbox_fm_presets.luac",
+      "bytes": 884,
+      "sha256": "8ea75350cc3b8d3c3f339b3f53938e1dc27a99e3188669597946c80c254db888"
+    },
+    {
+      "path": "Contents/Frameworks/lua/playlist/soundcloud.luac",
+      "bytes": 2316,
+      "sha256": "5ec6e4d3a8af28ada3eec9276bac788fed4bc21f1ddfcae530710ed22c45ee7b"
+    },
+    {
+      "path": "Contents/Frameworks/lua/playlist/twitch.luac",
+      "bytes": 3995,
+      "sha256": "8cea66c04fc8a28e895d33c2c8d127998ea6e69af3999a35089cdf689d1ad5ea"
+    },
+    {
+      "path": "Contents/Frameworks/lua/playlist/vimeo.luac",
+      "bytes": 2321,
+      "sha256": "f30ee7b66c3f693f5097427c8b3b1187189fa43ccbb3841ed5a45426c40e2433"
+    },
+    {
+      "path": "Contents/Frameworks/lua/playlist/vocaroo.luac",
+      "bytes": 884,
+      "sha256": "20496498ea6f41bdbd51c3bbfe937fdf8fe0214f8d1a7852e1b3b41bc60fe440"
+    },
+    {
+      "path": "Contents/Frameworks/lua/playlist/zapiks.luac",
+      "bytes": 1889,
+      "sha256": "b7697cc02286fcc3c296a1c6dc251963c85492c230bf4f3018a430346207b2bd"
+    },
+    {
+      "path": "Contents/Frameworks/lua/sd/fmc.luac",
+      "bytes": 1684,
+      "sha256": "72d7166b38fab9c94f9a6ba6fd7897e3de794a507b3f4c926fb57733bba67cf9"
+    },
+    {
+      "path": "Contents/Frameworks/lua/sd/jamendo.luac",
+      "bytes": 4113,
+      "sha256": "06355cfb91881713baf95d5c34fec5f60aaa8d2699c5fea0ae875db118b99834"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libaccess_concat_plugin.dylib",
+      "bytes": 52400,
+      "sha256": "106642f9aab5baa740e984e5a7c8543c79e5637a952fc0eeb4db0f3229689130"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libaccess_http_put_plugin.dylib",
+      "bytes": 130896,
+      "sha256": "55137ebb80e11828c64cf33ca6b2a3546dfe609d8522af1c721350891aa7996d"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libaccess_imem_plugin.dylib",
+      "bytes": 52848,
+      "sha256": "4d060891eb85a621bb9ba3f0591c1be75a59497055e25d3d7f177a14e8030f0f"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libaccess_mms_plugin.dylib",
+      "bytes": 93920,
+      "sha256": "b68b80d1b3ea2f4992d189b58c7084f1c6223962782621918f8baa3d5735b884"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libaccess_output_dummy_plugin.dylib",
+      "bytes": 50944,
+      "sha256": "3c876cbe5022c1153053c262819105fd21affc42792ecd34b55e5c826a963fd9"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libaccess_output_file_plugin.dylib",
+      "bytes": 53376,
+      "sha256": "bf18aaab9368cf6bd90a9c60c4e0402d4bfa7bec29fccdc041c6e4b2bfaf8f87"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libaccess_output_http_plugin.dylib",
+      "bytes": 52960,
+      "sha256": "6b82a3a7287701219c5ac17fa7b8025461b3869262e858fca9afcae248316bf8"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libaccess_output_livehttp_plugin.dylib",
+      "bytes": 796208,
+      "sha256": "5b1bc0e05bc17de938e1c5c6abf7181846338564fd3c6aa5dd0decfe46fdca91"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libaccess_output_rist_plugin.dylib",
+      "bytes": 1898032,
+      "sha256": "65b364eeb3ef931cc89d026ba75e5a7d171e4612849c45606ceb46bfdf86b6bf"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libaccess_output_shout_plugin.dylib",
+      "bytes": 249136,
+      "sha256": "dc64e4c9a1e806893bd7d7308c259e8e8f70c92708e7b5fefe3660a56cdce2df"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libaccess_output_srt_plugin.dylib",
+      "bytes": 2218496,
+      "sha256": "dbb5f21282a92a51e0b589e00ba078628f44fe96db20b186e3f013d250173f5f"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libaccess_srt_plugin.dylib",
+      "bytes": 2236592,
+      "sha256": "dd593051dd7c40b1b6a41413be4d546a0c9132e1650ac06bc6b67d1b2d0e4402"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libadaptive_plugin.dylib",
+      "bytes": 1856464,
+      "sha256": "500f894228ec5b0d05475fc180cbf58e7a20f133b5323a7e6855463a7725f4f4"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libaddonsfsstorage_plugin.dylib",
+      "bytes": 70784,
+      "sha256": "4e1b52c3450f9eb8602cbc8ae529b1dba095ed3a24c965579db10a91ef410bbc"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libaddonsvorepository_plugin.dylib",
+      "bytes": 53168,
+      "sha256": "82618d030dc7bb0f56c22d68f6cefa22d3c6199b42762bcde6ed6b7db2d0423b"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libadf_plugin.dylib",
+      "bytes": 51392,
+      "sha256": "5f9ae18c1f1437853d5802f05b70210786ca2305288f1256d31ee1a9eb3fe7f6"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libadjust_plugin.dylib",
+      "bytes": 70224,
+      "sha256": "f9a636139a683db381caf2964cca8be6a9bb5b946bf3b5a1122ef3abc4e5b512"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libadpcm_plugin.dylib",
+      "bytes": 52432,
+      "sha256": "65c922361d7e143c68be447953f6da31cf9a00adf22b8d963d76807876bb4676"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libadummy_plugin.dylib",
+      "bytes": 51856,
+      "sha256": "2ef3baf90f4a4e758a33dcc9ad35bca90f0b7db44d76a925aed028673cecfbaf"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libaes3_plugin.dylib",
+      "bytes": 52240,
+      "sha256": "7dc81eccd2423cb1fe943a0c4b58873d507135592d268fb3295f45ef99329140"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libafile_plugin.dylib",
+      "bytes": 52096,
+      "sha256": "7241e2933d4213f05fb91995aa9b7ab698945d6199b1bc1c0c544cbbbc22b442"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libaiff_plugin.dylib",
+      "bytes": 53744,
+      "sha256": "b7b7c022a8054a3df64d2d55864ffaae056e21ea68b0cf189658db75a753221d"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libalphamask_plugin.dylib",
+      "bytes": 52528,
+      "sha256": "e7ef197766e7c007135ef133f347a3c7d3a39ea8bc8f0d51038ccbfb437bd62a"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libamem_plugin.dylib",
+      "bytes": 52528,
+      "sha256": "dfc01325e66872c35bb6b13a20f6f77a3ec517c495178b05e301990a7e9d0a64"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libamt_plugin.dylib",
+      "bytes": 70720,
+      "sha256": "80299507e1bf082422c5d5f6d72e4d8d8a6f66bdb6e2baa0e313f2037e78f89c"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libanaglyph_plugin.dylib",
+      "bytes": 51984,
+      "sha256": "dafc84dff38b499610ddfa3fb73d8ab29a51a15d2d62f1d8e54bb218e959d63b"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libantiflicker_plugin.dylib",
+      "bytes": 52208,
+      "sha256": "ed9032a7a1a7896546751482909b125a0ebd4525f6f5a348c69fc7521b81c146"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libaom_plugin.dylib",
+      "bytes": 4715744,
+      "sha256": "2efa6cd5abfe1d1673a8bc177a18866979c76181d7a1f92ef2e88f4e385489b5"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libaraw_plugin.dylib",
+      "bytes": 55520,
+      "sha256": "30dcaa9d1839504fb92f0d7737a1ca9713920e20dd5e624310d58df7bcdc47e9"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libarchive_plugin.dylib",
+      "bytes": 525456,
+      "sha256": "5e5114b2bd4a87cbe7f271cd87aa349c9aea85507a779d390b1c61289339d076"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libaribcaption_plugin.dylib",
+      "bytes": 999360,
+      "sha256": "08abdc3c5415ea490db3abd1f8beca78684b6697cafb33569673378a8b60e0cd"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libaribsub_plugin.dylib",
+      "bytes": 211264,
+      "sha256": "4620fd83a2b2eb62cfb89db5002ca0421b660b6799010616081fb5178f98aed8"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libasf_plugin.dylib",
+      "bytes": 113968,
+      "sha256": "bc3e5d422d754c24d5eb7152e8ff7777951cb9ea2af6c24d8ad660c922c84a73"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libau_plugin.dylib",
+      "bytes": 51472,
+      "sha256": "b82d25caf7abf7291139f8ade580f61062e7cde0375ccbc8aa7d4108662943c1"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libaudio_format_plugin.dylib",
+      "bytes": 53104,
+      "sha256": "6d5e4b875b605417e4ff79aefe3fb4686d50b4c6f17b7301eff24ebea79109fa"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libaudiobargraph_a_plugin.dylib",
+      "bytes": 51760,
+      "sha256": "552468d96758e0e22a8c0662ec14621d477015223423fbd06cc27bb276187ea6"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libaudiobargraph_v_plugin.dylib",
+      "bytes": 54464,
+      "sha256": "5f61b80616c134ecbb32f8996819788c30cd38dd0bbe2c4a571e331733c85ea8"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libaudioscrobbler_plugin.dylib",
+      "bytes": 55472,
+      "sha256": "68e6cfff48e990fd7b81215d56078315f965d32da26d89e159eddbefdf0ee69d"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libaudiotoolboxmidi_plugin.dylib",
+      "bytes": 53504,
+      "sha256": "d30ee75d5214e80453ab4bba02eea94e6051b542249f47ab638fd078992c9937"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libauhal_plugin.dylib",
+      "bytes": 94128,
+      "sha256": "9d0069534e81c68bfc78a17f9ab33b7b88ff619abeea7aefc580d31904655b46"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libavaudiocapture_plugin.dylib",
+      "bytes": 75056,
+      "sha256": "368400b7231850e229e1189345ed46b4d2fc95e802a534dcf80759327cbc9be9"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libavcapture_plugin.dylib",
+      "bytes": 79728,
+      "sha256": "6647820ef57caed8ee74970309c5069457d02a7409d50202024ce1d3709d8272"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libavcodec_plugin.dylib",
+      "bytes": 19077664,
+      "sha256": "ed4753a119ef8e2a3f729f9ab1f1903950c6c5e455a07117707b6b279e8eb1ea"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libavi_plugin.dylib",
+      "bytes": 111088,
+      "sha256": "a2a83afeae70d874af7ffb42445c0127881d0a980c6cc0dd07c081be3a012bfd"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libavsamplebuffer_plugin.dylib",
+      "bytes": 78704,
+      "sha256": "e60467e2f7ddbb75ec904d97e1d2aa43b3ba6dead1bf0c7895181907939b142f"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libball_plugin.dylib",
+      "bytes": 52944,
+      "sha256": "d64032c43e3b824a1e4bbbd915ebd60853d0f4248ebe98bdca531d3731e2d85e"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libblend_plugin.dylib",
+      "bytes": 152176,
+      "sha256": "b0c892839baa6b1d88140dd2a8ab5467aec4d702fe3a3349be69bb87eedec9fe"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libblendbench_plugin.dylib",
+      "bytes": 52560,
+      "sha256": "53090a166714a3438ccf3e0394ea15a5b3d9bcd9f02e80ce7ce28b86f2dbbf64"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libbluescreen_plugin.dylib",
+      "bytes": 52016,
+      "sha256": "0ca3ff30786c94da80e4c31fb173ccf7eebfe89057e0a4a178976003e69b0f6f"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libbluray-awt-j2se-1.4.1.jar",
+      "bytes": 74411,
+      "sha256": "20da3a078e5f44135953897b85c0584233c0c0991f9a26eca87e22256ca7558d"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libbluray-j2se-1.4.1.jar",
+      "bytes": 797317,
+      "sha256": "f1a08873d2c085157d597f30068ed407a4e8550c68c407f6e074b98a488a3bcd"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libbonjour_plugin.dylib",
+      "bytes": 77632,
+      "sha256": "f4002d0b824e98d13d7a2985ac303d8881cffbb167a40ab6a38d3ed4ba2fe7f1"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libcache_read_plugin.dylib",
+      "bytes": 52480,
+      "sha256": "4bcfe3691e7ff06a7b1b7f0625b579826d713d986988c27cd2ea9349702f26e7"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libcaf_plugin.dylib",
+      "bytes": 52832,
+      "sha256": "0fb0abb49d0c7e7d4790e6e2759e60d802110ac3ed26ee82e667186894f52281"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libcanvas_plugin.dylib",
+      "bytes": 52688,
+      "sha256": "8c1e6c8982f03f17d93ae176fe638b64b8b381b0a65788b7c250b11831253a7f"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libcaopengllayer_plugin.dylib",
+      "bytes": 183824,
+      "sha256": "cc3fa31245e922e07b757334fda90ac7ea5249f3148e8ecbf7fbaabe8a3f7853"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libcc_plugin.dylib",
+      "bytes": 90288,
+      "sha256": "c35c7af614fdaf55c8dddb9133d5860674d7b56785b71e942f9e57592673bcfa"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libcdda_plugin.dylib",
+      "bytes": 820608,
+      "sha256": "ab9a010cbb910b0dff67aa9c26d0b71f61a30f0aab652dcfd6dc2c635509fa34"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libcdg_plugin.dylib",
+      "bytes": 51952,
+      "sha256": "23f0e9dace1954b360bd980bbfad84965af1e5bf92fad0db830ede6e5b938e87"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libcenter_plugin.dylib",
+      "bytes": 51136,
+      "sha256": "8901fbc0ec835033a3394f3ec081a635cfb6566f660e218c05d33e3bad466ce5"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libchain_plugin.dylib",
+      "bytes": 55008,
+      "sha256": "0d2199e549c261222d364c13785f880efa65fbc0f976f6a301455238f5a4f520"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libchorus_flanger_plugin.dylib",
+      "bytes": 52096,
+      "sha256": "b73f0cab0473d8081ad820b157f76be8cf7e794181d84ac8191c31b8eed1eaee"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libci_filters_plugin.dylib",
+      "bytes": 77872,
+      "sha256": "afe7658670836f082a100eb6ab33d6811de03c64375806c706c75baae73c1b5a"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libclone_plugin.dylib",
+      "bytes": 51952,
+      "sha256": "5d28ae0fc23c5514a2e98a4399ba68f14f6ddaf0ad6f1dcd78ccdddfb4624449"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libcolorthres_plugin.dylib",
+      "bytes": 52512,
+      "sha256": "2748f50125822ba92785c4e881971a7beb3b365b86ea4e8b61c648a4099e6b3a"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libcompressor_plugin.dylib",
+      "bytes": 53376,
+      "sha256": "83cb7062a40cf818178ff99114fb793a05a9e9445f7238e6ee6d6036d9a1c3cf"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libconsole_logger_plugin.dylib",
+      "bytes": 51744,
+      "sha256": "c98136f9c4b8ad54f8e5f4a2f369c57f5765da42739d6b02f27c44d622ed4d2b"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libcroppadd_plugin.dylib",
+      "bytes": 52016,
+      "sha256": "70185b20f3be7078b4b994c9917e31a31d8d9d03046fb6bc6ee171cd71c76204"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libcvdsub_plugin.dylib",
+      "bytes": 52416,
+      "sha256": "c7be70dba0159f2d77d422d5e9cfbb3406428d82382aaf0ea3389a6916d523a7"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libcvpx_gl_plugin.dylib",
+      "bytes": 76368,
+      "sha256": "d367ea677778466dd5903f1c97b325677ea69d2df1118299fa17e23d3a40c0d8"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libcvpx_plugin.dylib",
+      "bytes": 104512,
+      "sha256": "50147144af74e35cf0a5b7dd7431351921184719ae7ebf2b2026ed7bc67e31ac"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libdata_plugin.dylib",
+      "bytes": 52016,
+      "sha256": "1e7538421940155328cc0dd54652d6eb09e1178ffb8ec45c70a43b11061fa473"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libdav1d_plugin.dylib",
+      "bytes": 1189424,
+      "sha256": "934ac593d42736c7fcaf8e9b430bb446f11ff4b29142aa02d7d42f1ba0b97c2e"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libdcp_plugin.dylib",
+      "bytes": 2311856,
+      "sha256": "3b722ac96b7d259502cf7ac9d6438027f5e0df545cd3d2dbdec955ba9192fd3d"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libddummy_plugin.dylib",
+      "bytes": 51616,
+      "sha256": "e07597d5641d021d4fa38128e62a8f98dc4963ffe95ae70cc08bfc6a996e6d0e"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libdecklink_plugin.dylib",
+      "bytes": 74912,
+      "sha256": "172356cf3229ca6ca47524d04f00c706670eda39fe1490ce07f4af69d2466953"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libdecklinkoutput_plugin.dylib",
+      "bytes": 95808,
+      "sha256": "a973ca21813bd8a4af715c6c06334db7f0822c55dc0044f59c539af74c75f707"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libdecomp_plugin.dylib",
+      "bytes": 53280,
+      "sha256": "4ee0cecedaea4d23ca7fce3dc6a59e2353aa97f3270d8d65a1e73053c74a7ada"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libdeinterlace_aarch64_plugin.dylib",
+      "bytes": 51376,
+      "sha256": "36860f7354180993a66491e2031a73fc589049bc3ec2dd5990981cf80207245a"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libdeinterlace_plugin.dylib",
+      "bytes": 96800,
+      "sha256": "aa02b28c57aafa4423e39e14f4ed2562b7edaa1f05d282792488b67d606946c7"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libdeinterlace_sve_plugin.dylib",
+      "bytes": 51376,
+      "sha256": "bba164c217d1ca2802f16c20e1881543afd838854de06cc1de8eeb0eba0bdc28"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libdemux_cdg_plugin.dylib",
+      "bytes": 51808,
+      "sha256": "c3697cee3ad63d9dd02287efc3a2057f9489550b21c9632c518d098fcb79e2d3"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libdemux_chromecast_plugin.dylib",
+      "bytes": 54128,
+      "sha256": "633c03e7ebae3c890a1847bf3c65f121b7496886a8aa0c36b4c928691aa95e80"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libdemux_stl_plugin.dylib",
+      "bytes": 52352,
+      "sha256": "83c45c16392408071233e4e25b2d3922f38519596138523c5877f9dd72f62739"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libdemuxdump_plugin.dylib",
+      "bytes": 51808,
+      "sha256": "c052b833e525375377a864a7cb83fda000a79c487faefe7bba026a0bde4f178c"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libdirectory_demux_plugin.dylib",
+      "bytes": 51280,
+      "sha256": "839fd90ce6f804ef59a47682d9ea2fbe2ef642661edcc72a33021f135720202b"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libdither_plugin.dylib",
+      "bytes": 69392,
+      "sha256": "ec63ab28c39e86254fe6166839ca76c8e28ff5f4216078f8dfe2f410e1615546"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libdmxmus_plugin.dylib",
+      "bytes": 52496,
+      "sha256": "1a61de4e37fb1514b1136b557cf7dc31a22dda8d3c777633848fe2cba210ea41"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libdolby_surround_decoder_plugin.dylib",
+      "bytes": 51216,
+      "sha256": "e9a92979397f1ddc2b1454ca3352193251356aaccdf8330351b1cc6318c75ff9"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libdummy_plugin.dylib",
+      "bytes": 50832,
+      "sha256": "ed10de6d70b5115d442a032dad735012ed38c7ae0ed90d4f03438142ff84260b"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libdvbsub_plugin.dylib",
+      "bytes": 121888,
+      "sha256": "f18651a7bf69d8e646dc6926f23adaa69f88c6ef13ab02c76f0534e3e072ecf0"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libdvdnav_plugin.dylib",
+      "bytes": 264880,
+      "sha256": "58d00a29a0386e0b082fbe2909ca863092c8ab478086f74494cf73e4cb9ec08c"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libdvdread_plugin.dylib",
+      "bytes": 217472,
+      "sha256": "a00e80c961fc5925920f1273c0341b1afbf03ec938d6926959f8172eda73731c"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libdynamicoverlay_plugin.dylib",
+      "bytes": 76240,
+      "sha256": "5adbd97eaaedb365bcd2f211d729aabcb9073d782e5609f51feb9e82c96318ee"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libebur128_plugin.dylib",
+      "bytes": 72208,
+      "sha256": "e2db34d94558460c0c6869ed05cce660c36c8cb0927eedab2e971cae7b81d470"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libedgedetection_plugin.dylib",
+      "bytes": 52128,
+      "sha256": "f31625337f5a5316f09ab3a6a875ac89fe2418059013c14a6795bcf3ed0162b3"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libedummy_plugin.dylib",
+      "bytes": 51216,
+      "sha256": "6e7febea351412af960e2918552465e56d26d7803a114a6a6933aade20ae21da"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libequalizer_plugin.dylib",
+      "bytes": 52960,
+      "sha256": "2925ffa7fb680dc94546466174af7fb4e9de5cf3b98b7e05fcd2c0c63c97ec21"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/liberase_plugin.dylib",
+      "bytes": 52768,
+      "sha256": "307327ec25c09d86f5bd4f52c3db256f29454cf3855f5d3537d9526dd22792a2"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libes_plugin.dylib",
+      "bytes": 91888,
+      "sha256": "9fbc910696286839e3432c65b63f6db2b89d3b3554fefe43b2efef15cc04a221"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libexpander_plugin.dylib",
+      "bytes": 53376,
+      "sha256": "c0a7b16180850ac9936de56866f5fa764c6a0f7556b829a123caa2ac8be663a6"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libexport_plugin.dylib",
+      "bytes": 53648,
+      "sha256": "b0d0accbfe2093692619b7142186d137375228e31109606fbe2d223a7212f4a2"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libextract_plugin.dylib",
+      "bytes": 52672,
+      "sha256": "2a91ca7714ad6210403a066606b742ce02ac6620696a4621d61dbd2fedc99b1a"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libfaad_plugin.dylib",
+      "bytes": 365136,
+      "sha256": "75bc8e1b943a21a62cf718a7ffd331a8bd90252d534c135b16d0e3934953e014"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libfile_keystore_plugin.dylib",
+      "bytes": 53424,
+      "sha256": "605294b064f856688aaa36740b12f37f4f8e974363c9412fa6ea727e2c04597e"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libfile_logger_plugin.dylib",
+      "bytes": 52416,
+      "sha256": "94bf4d4fc33b2b453b8274f4ec57da4ea255fe6c9c735a36268f01839223b4e1"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libfilesystem_plugin.dylib",
+      "bytes": 54384,
+      "sha256": "6f73e21558a9a7400ed37fed98f2ef98aa871bc5b4f5ada01d4373f540f3f821"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libfingerprinter_plugin.dylib",
+      "bytes": 77072,
+      "sha256": "e4785b853f70e5d6e7fac81c0f06119b20efa6bb0c19c75bc1412e534f0a7fb0"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libflac_plugin.dylib",
+      "bytes": 257312,
+      "sha256": "3aa9cef82029013497eeef5f6d55e7ef7b20a892325fa95d22d5a142689294ee"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libflacsys_plugin.dylib",
+      "bytes": 74048,
+      "sha256": "ea1762bdb05d0502933d0056a009950b230e2c4484119c0d419fe90e0b481f90"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libflaschen_plugin.dylib",
+      "bytes": 51712,
+      "sha256": "24ca7f7943eb9be6f6e9c7e1ed4906299cfcec51015f41138e0d84ec55324259"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libfloat_mixer_plugin.dylib",
+      "bytes": 50992,
+      "sha256": "7c218d94727712e6e9baa7a8d7daa3f8c4a7413bbb8e60a128854a7a24a08852"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libfluidsynth_plugin.dylib",
+      "bytes": 352688,
+      "sha256": "9a583c0456f568b6cfbd9629f2a9091d0f7645a870cb7be74932153609a48201"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libfolder_plugin.dylib",
+      "bytes": 51536,
+      "sha256": "dc634e2fd7f0da678d9c66e0d9dc60634099fa4231b743ed55eff890d85c3f46"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libformatcrop_plugin.dylib",
+      "bytes": 51568,
+      "sha256": "059611db6f55afdab3ed457287dc7e3cffe41bed0eb28e8305145f98801accaf"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libfps_plugin.dylib",
+      "bytes": 52768,
+      "sha256": "ca3ab1e4c5f133e2fc5d3f9c310c39a14ab63372e9c0e704fa52e852ad3aa82b"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libfreetype_plugin.dylib",
+      "bytes": 2028560,
+      "sha256": "df61e3c254799e083ba8d0ccf109be4626c957a69169307b9fc25461ce97ad45"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libfreeze_plugin.dylib",
+      "bytes": 52320,
+      "sha256": "5209c6fd0f406dec77a68932ebc694d9b7410044da99e4c65561f865d1ce2471"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libftp_plugin.dylib",
+      "bytes": 75536,
+      "sha256": "6ba98c1226b09d6de03154b9628a55601814a2c0a7ed88f5477e2ca1b1dc2979"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libg64rtp_plugin.dylib",
+      "bytes": 54320,
+      "sha256": "b201a19e2ad59bde922af966090fc023c7128581e5b2a9d74a22fac9a0880ac6"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libg711_plugin.dylib",
+      "bytes": 69200,
+      "sha256": "74d74cc56008e27c1a2e85b7e55cbfc2e9e415fce51441f4a37a56e20294b5e5"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libgain_plugin.dylib",
+      "bytes": 51440,
+      "sha256": "bddb463dad46e5663a4a7a101bbe5cae650004a1a22fcb6312da500235dca1f6"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libgate_plugin.dylib",
+      "bytes": 51456,
+      "sha256": "b06534eb396a423fc49e3512d11744ff0eb15cae9915395ed6d92a5ec79817fc"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libgaussianblur_plugin.dylib",
+      "bytes": 51856,
+      "sha256": "b301f006ba788b69dff8d7a731809e0d505409ceec28d9fe8a4be46ee40142da"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libgestures_plugin.dylib",
+      "bytes": 54224,
+      "sha256": "0c8dcdcf106518c9a728e1979bb67713c81095decfef3770f5b574dec98a78df"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libgl_plugin.dylib",
+      "bytes": 155056,
+      "sha256": "e0d61b9ca3f245ce5c9b363224f3c0d5530b59ad84218140a0dfd2e695440214"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libgladjust_plugin.dylib",
+      "bytes": 72064,
+      "sha256": "7f69d4f7432e796b492eacf50421c94afd943ced0266f4e6fa0a2e42dcb2dfa6"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libglblend_plugin.dylib",
+      "bytes": 71312,
+      "sha256": "1c200474ff4e0bfa4c231cefd1a8307728670a4b5e6bbc8138d6cdfd6d7bd0e1"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libglfilter_draw_plugin.dylib",
+      "bytes": 71456,
+      "sha256": "efdf9efd42fc780592dea2a146664f4ea4546c021032d08da589b25afcc888ef"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libglinterop_cvpx_plugin.dylib",
+      "bytes": 53952,
+      "sha256": "9c6b1567ec26172fc516ee4ac657e521735f40b48a5518ee6450f52988879956"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libglinterop_sw_plugin.dylib",
+      "bytes": 75968,
+      "sha256": "94b7ae2eda51e4e75bccc69b4c8024b3048299731adc931bc952c58740810090"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libglsampler_builtin_plugin.dylib",
+      "bytes": 369600,
+      "sha256": "b59f8490fae8401d180d6cb51f61e9ca0630828c0034179281b336045c6393cb"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libgme_plugin.dylib",
+      "bytes": 360176,
+      "sha256": "e9578ba4dae829f55204062352f275c8c91891feaafc33bbfb1867dc4cd927d2"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libgnutls_plugin.dylib",
+      "bytes": 3064112,
+      "sha256": "a16b961ce068dd87d19be851812fc4087882127a7df226e9d4d2ad7dd86dc43d"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libgoom_plugin.dylib",
+      "bytes": 199952,
+      "sha256": "8abf8259944ca225eb5f4a7552a9bff87e6e919f691ed740418863a2718e2385"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libgopher_plugin.dylib",
+      "bytes": 51776,
+      "sha256": "33194c9063c41ec40541d926d80d6f76faafc107821ac798ab25ae4d368c4390"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libgradfun_plugin.dylib",
+      "bytes": 53216,
+      "sha256": "2e4a797f9b20ddd62d58532b9a24ed5b57a201946c9efdd45adf9fc78b894a41"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libgradient_plugin.dylib",
+      "bytes": 52688,
+      "sha256": "ede5874b7268fb7ef7719ea719fa7dcfbe2db74da2118744603b48af08360191"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libgrain_plugin.dylib",
+      "bytes": 52624,
+      "sha256": "ce5ab11e9d30e78ab70b94c56ad6fbfbe7b5da0cf1332b0ee6867873dea9d3b6"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libgrey_yuv_plugin.dylib",
+      "bytes": 51776,
+      "sha256": "c33dfeef794bb83b22bbedb076984f6847b77ee6654355ffdaa4a38748313fa7"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libh26x_plugin.dylib",
+      "bytes": 52816,
+      "sha256": "de1bc46aa0022d3f9b4627f280b5d5ecd6734b3c83cb44714d4dcd325d4e0f55"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libhds_plugin.dylib",
+      "bytes": 71440,
+      "sha256": "6b71c4531d152f843c91c5bfdc566e00e2d999f798198b458873063e29059cc1"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libheadphone_channel_mixer_plugin.dylib",
+      "bytes": 51696,
+      "sha256": "296200d02fedc256b4aa6f7b12a3498eb335103d69d0855cd34d4922eb6d7631"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libhotkeys_plugin.dylib",
+      "bytes": 81552,
+      "sha256": "a6dcbab574a48836961a0fff0f1b3e1b7a91c14d9e761c43abd0f46f7ffed60c"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libhqdn3d_plugin.dylib",
+      "bytes": 52976,
+      "sha256": "220e7f269bf40d952850f13db721655477086398a7dd089627efff6f01391ba3"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libhttp_plugin.dylib",
+      "bytes": 71248,
+      "sha256": "b38816ade980d2689ceec787a353f91098b7387665b0d52aa84a9ca980d09484"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libhttps_plugin.dylib",
+      "bytes": 151904,
+      "sha256": "9587e174a8c45e83cf95ce749b68106ffbeea825abf5343f863233457c300989"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libhx_plugin.dylib",
+      "bytes": 52224,
+      "sha256": "c2ece152f444ba56179b77f8f8860057e3d4ec2ffe63feaa4bd54042e9938b4a"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libi420_nv12_plugin.dylib",
+      "bytes": 57408,
+      "sha256": "010f41eaa704604a4ccd7a6f7d4a23363c55c9ddc3c5d645221b0b71a03e0150"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libi420_rgb_plugin.dylib",
+      "bytes": 70224,
+      "sha256": "03c8926b4a966a910f060585221f690eee4832a5c21fa71e6a63e9a746c3bdb5"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libi422_i420_plugin.dylib",
+      "bytes": 52096,
+      "sha256": "5807be61b8e97d81ed84295b2ce28515ff1f518b7630605a4a0383a912792158"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libidummy_plugin.dylib",
+      "bytes": 51888,
+      "sha256": "bab9644ca2a318f8549f0ed5ac3f4c07dd3b5e1b0ae6a7f80ee4b33b4363cebb"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libimage_plugin.dylib",
+      "bytes": 71200,
+      "sha256": "f35fa624260d746ea8db047bf8e0927774a2a869354ab7be9bfeb51b109e2b7b"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libimem_plugin.dylib",
+      "bytes": 51456,
+      "sha256": "40ebb5166437cb4ce99e393f40d97326a955dfb27a648b91a194df41ad2d91f1"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libinflate_plugin.dylib",
+      "bytes": 71712,
+      "sha256": "085ac1ac9cba1f19b9d6d69513fc644c1e24024022f36726c9c1515f59c99f16"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libinteger_mixer_plugin.dylib",
+      "bytes": 51088,
+      "sha256": "5517d7fed6597bb4f48915160afc15d02c97e057bad4dd7684a20533c7bca84b"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libinvert_plugin.dylib",
+      "bytes": 51616,
+      "sha256": "c08d1466b4c1ee0410abfeebd20c1c04baa7734e4fee6122ca1f061aec1023f2"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libiokit_inhibit_plugin.dylib",
+      "bytes": 51488,
+      "sha256": "3b92776b43a7e4e5597857daa214751cbecb3814a1c7f0c7a724ba59c9fd9fa6"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libjpeg_plugin.dylib",
+      "bytes": 706880,
+      "sha256": "47215b72da54e50c1885a90193d13e653cef8fd395350e0cbddc9eda72d60813"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libjson_tracer_plugin.dylib",
+      "bytes": 52304,
+      "sha256": "72e6c22ca7b2d4525adf843d797ee138234cae3a0352bbcbaa47c86def6b81c8"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libkaraoke_plugin.dylib",
+      "bytes": 51056,
+      "sha256": "844af9d22fda67bfa8f769c2c43ddd9a0227213ce4888ef69733a27be62a4df0"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libkate_plugin.dylib",
+      "bytes": 101264,
+      "sha256": "47d8dce21185692e71f37744ba8c640ab2f7ec0fa711aea5a65998508a6fcbe7"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libkeychain_plugin.dylib",
+      "bytes": 73616,
+      "sha256": "29b7cd2c5e22646674751de8acef46eeeaa9d48e78602f1e474d465eb66703e5"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/liblibass_plugin.dylib",
+      "bytes": 3154272,
+      "sha256": "dba32a6c63da4251deb8c0ec046726afee30a804cb5e772beeb12335b5492c61"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/liblibbluray_plugin.dylib",
+      "bytes": 1534192,
+      "sha256": "85f5bfe0719927f726385c17b499c5ec2a22ef9abd3db240dcfc7e13ebe8e841"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/liblimiter_plugin.dylib",
+      "bytes": 53360,
+      "sha256": "024aaa81a67ea096a21c03d2aad12f55719c0f34c462037ec47dc9ebcdc1ae57"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/liblive555_plugin.dylib",
+      "bytes": 390672,
+      "sha256": "7ef8870b8f1c37446aa9d37ab81baabba8fbee859c21e886515c5ca3d3a0b966"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/liblogo_plugin.dylib",
+      "bytes": 53824,
+      "sha256": "dba6997f255ef0774045a25a6ae16c978ac4ea297e457a589873c9a09af98ad7"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/liblpcm_plugin.dylib",
+      "bytes": 54528,
+      "sha256": "2232a2608d9aed78d8498b1ee40489ea3195af08a0d002d4da2c6e74c10c72ea"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/liblua_plugin.dylib",
+      "bytes": 538112,
+      "sha256": "c3c40ea0e9c7a7193da40f1d420badf25762756c6a9f3e843c7716bc0660cad9"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libmacosx_dialogs_plugin.dylib",
+      "bytes": 53648,
+      "sha256": "b15aeb0ac8492d34b6ccc7dbfa62f622d8d7f44bfee83073b402db41f3a5b37e"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libmacosx_plugin.dylib",
+      "bytes": 4767040,
+      "sha256": "5b776b66c63975a75562a06e50d5c7c44230958c156399ccf161cd206fe92331"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libmad_plugin.dylib",
+      "bytes": 175728,
+      "sha256": "638fa720d75a128263936f9990126ebb31cb2fd7c16dc73028574729605bcb34"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libmagnify_plugin.dylib",
+      "bytes": 52320,
+      "sha256": "826ed863a80f55fa2f7dc22bf897468ed389a0673a0359aae4802f9f5ed5f014"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libmarq_plugin.dylib",
+      "bytes": 53120,
+      "sha256": "6f0e7997f2fa1e2336cd5f964da1dc751d75726ec82032e5e02701050e966092"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libmedialibrary_plugin.dylib",
+      "bytes": 4381984,
+      "sha256": "faaa2e125337b1a158f66f87ade7f4c6e9857e6a2de4004af525421adf4bd0ce"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libmemory_keystore_plugin.dylib",
+      "bytes": 52464,
+      "sha256": "bc3c2d35d42da8e9b8a598ccc4997f8d49792e39a131bd51050b9f3519ba4f13"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libmirror_plugin.dylib",
+      "bytes": 52400,
+      "sha256": "85af5b110d63951c1e526300bf2ad7ace7be7545766e3bae923585baa09c389c"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libmjpeg_plugin.dylib",
+      "bytes": 52976,
+      "sha256": "a83f2c42775f82f8d3cacfd7a8d417fc63cef4c1e4cab18aa7326d7a374bdf2a"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libmkv_plugin.dylib",
+      "bytes": 1373744,
+      "sha256": "b483034767e102aec35ed307a558adeb502fda9922eb69d7e48014aab8a77714"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libmod_plugin.dylib",
+      "bytes": 516112,
+      "sha256": "4ec746194001d67ca0be2d783797f6287b29d473aced25f56085cafe330b9603"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libmono_plugin.dylib",
+      "bytes": 51760,
+      "sha256": "244be81390db8753766bcc15db70680cde3a422a63e330780b6bc796d40ddfe3"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libmosaic_plugin.dylib",
+      "bytes": 69552,
+      "sha256": "dc161e18707d6b7f0b076edde5563c8220fe72c67735fce4f89aa745b43bbd09"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libmotionblur_plugin.dylib",
+      "bytes": 52320,
+      "sha256": "fa0a4ed0fb7b4ded3dc65a08ffa693ee0234cf634a4965f6153a8eb53e9e3b36"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libmotiondetect_plugin.dylib",
+      "bytes": 52048,
+      "sha256": "73909003609688c7d06bf2f78fb871d9e05d30c48e27abe4895e22d6160bea91"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libmp4_plugin.dylib",
+      "bytes": 315808,
+      "sha256": "73bc3ba4a50658e084d8b442cef42b4168bac55743bfd25f1310c9f539b60eba"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libmpg123_plugin.dylib",
+      "bytes": 306912,
+      "sha256": "3bc02c10a959fea14f12862058d8ced3f5b092b5559101fc022671d87defeed3"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libmpgv_plugin.dylib",
+      "bytes": 51696,
+      "sha256": "17b0729df57b60b7d8273df5aa76179e6f43ad77562ffae2df421fd557bd0484"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libmux_asf_plugin.dylib",
+      "bytes": 71280,
+      "sha256": "4ab0b958668c7d1a340702903be906772a77998e238e2384e4cd3c4bb38aa3df"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libmux_avi_plugin.dylib",
+      "bytes": 69184,
+      "sha256": "31ba904bebbdc17281c65b0fb428344fd7accd509124e5a9ec33a6d31574857a"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libmux_dummy_plugin.dylib",
+      "bytes": 51760,
+      "sha256": "345dc9fdc286ad15c534f1699c1424e5e5f7476da91735e52cf28d973c87a091"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libmux_mp4_plugin.dylib",
+      "bytes": 275984,
+      "sha256": "818e9e6e3d6227d9d0c97e2036f2e30f3937c1e93bd5b313de41aaa1e92312de"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libmux_mpjpeg_plugin.dylib",
+      "bytes": 51840,
+      "sha256": "ea898c67c794d5b003d850fb0fbb12a0f68a2cd3b79f9e54ce50aa92c4784b84"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libmux_ogg_plugin.dylib",
+      "bytes": 88176,
+      "sha256": "52bbb76900bc597fdc0f41d95d92193840db4841c93a86b894c30e9932ea2965"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libmux_ps_plugin.dylib",
+      "bytes": 86448,
+      "sha256": "93d8ffb250961caaf49d553d9350a68378485dac9dc7efc8955e4367c97dfeca"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libmux_ts_plugin.dylib",
+      "bytes": 149280,
+      "sha256": "8032edb0d0d035e992354dcaa3b3633a733505391315de863235584819574ca0"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libmux_wav_plugin.dylib",
+      "bytes": 52096,
+      "sha256": "72ab33f1bcba0c5d1b24d9d88d2b8934cc98e6c5cd0e0008704e2a62fdc98927"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libncurses_plugin.dylib",
+      "bytes": 270896,
+      "sha256": "5433941c61274806464428d52e1fc59c75875334bba7299dd0cb86ebb77fcc96"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libnfs_plugin.dylib",
+      "bytes": 199440,
+      "sha256": "9eeee55c76664e7ee969e6b9b5f6e0eb6c1db87488b386d5faa7e0cb4776ba2d"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libnoidea_plugin.dylib",
+      "bytes": 72048,
+      "sha256": "88509f12df50bd8b718728a8a0731137ba5ae6ba31d809aeb1d5cea03dcf0d65"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libnormvol_plugin.dylib",
+      "bytes": 51536,
+      "sha256": "23bef4d4dda9e3f355bb5749f6ca2b193a3d1e10c0fa5f26991a14d05137c743"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libnoseek_plugin.dylib",
+      "bytes": 51184,
+      "sha256": "0bd22081b33c5bd07f70369c65361357ca8291f112a9d64f98168b83150a67b7"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libnsspeechsynthesizer_plugin.dylib",
+      "bytes": 52400,
+      "sha256": "bfef5741061a9d9c031df9f23e8cc54183b574182faeee07a3562aab7565f959"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libnsv_plugin.dylib",
+      "bytes": 52112,
+      "sha256": "179b0912cedf6cefa2b432b26ec9eff5b768d937f2d6251e6a6aab21d4b6ef54"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libnuv_plugin.dylib",
+      "bytes": 52832,
+      "sha256": "3fd94b49ca1c3203f1fdae6a03db44ab2443658713fa446a72899eb3140b67da"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libogg_plugin.dylib",
+      "bytes": 245440,
+      "sha256": "dabdd4ad8a49402b7e660abf491648aab871067df6a98eb98e61ab6f782b5130"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/liboggspots_plugin.dylib",
+      "bytes": 52544,
+      "sha256": "a2182b959164ea3bd3a2741f5b02537b44de222eebc31a0def8b58df092f31ab"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/liboldmovie_plugin.dylib",
+      "bytes": 53120,
+      "sha256": "482fcb6874c5f5510feeb5598a3dbe545eb085b8cc1e118f77f25c94e8cff425"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libopenapv_plugin.dylib",
+      "bytes": 96816,
+      "sha256": "c4127e2a53575427c2f85657fa390140ff75a2547487b86246fa16916002fc20"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libopencv_example_plugin.dylib",
+      "bytes": 1485184,
+      "sha256": "76d5072935da4bec6de2c9cce9e0a7a44f741b84970a24c5da20fa227ded4d68"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libopencv_wrapper_plugin.dylib",
+      "bytes": 212304,
+      "sha256": "bf26f0afeddf046b63f2ff08ac64ebc68d9d3dbd0326cb0fa6404516175aea20"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libopengl_filter_plugin.dylib",
+      "bytes": 96960,
+      "sha256": "98c1d48f3241f917fc5153805fac97dfd02051ea579a8c799469f3d350da3c54"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libopus_plugin.dylib",
+      "bytes": 520688,
+      "sha256": "e9df426f974835e7afb9e7dbd1e0fa6f30ecc777a234f7cd5b5f49b3e575cc94"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/liborient_plugin.dylib",
+      "bytes": 53984,
+      "sha256": "0f54a5cb07b14f4a89649958e9a0f81f7a540d37c1175ce5b065c20a3ec5762f"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libosx_notifications_plugin.dylib",
+      "bytes": 75120,
+      "sha256": "94100514fa178ddb8506ffb8dc20ded6c152d9b7e3c907986c57d24d09c7e213"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libpacketizer_a52_plugin.dylib",
+      "bytes": 52496,
+      "sha256": "15a32db7788af76393344ff6d76782f365539c33d4c6c2cb513a55ab817c79c8"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libpacketizer_av1_plugin.dylib",
+      "bytes": 70288,
+      "sha256": "b97f7e6aa053a642c0657873e43f5d5fbaf747bf84c43d61d0158534a0dc8dc4"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libpacketizer_copy_plugin.dylib",
+      "bytes": 51904,
+      "sha256": "80b3853abce6ca9a893913f93abb284f452c6eb2b7562f1fa2372f4fa525db34"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libpacketizer_dts_plugin.dylib",
+      "bytes": 69376,
+      "sha256": "22a90dee9e4e09998c43efbec79254ecfc8075ca037dcfff5e4ebdce35038f90"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libpacketizer_flac_plugin.dylib",
+      "bytes": 52720,
+      "sha256": "5a73d2b38d5fa2d7d6532b0df6ad340389d1971b50d381075907f34eb2263f01"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libpacketizer_h264_plugin.dylib",
+      "bytes": 97072,
+      "sha256": "0fc1772f9994d4feb36af9e7256e8798d5455ca7cb98d26064cdcd90fa32172e"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libpacketizer_h266_plugin.dylib",
+      "bytes": 129248,
+      "sha256": "a3b23067c2e9ca9f38b150206c9c6bbebacdff5ae8ee236872274a7e911ceec5"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libpacketizer_hevc_plugin.dylib",
+      "bytes": 112704,
+      "sha256": "a0498052e7391e7ecc8435d7126bd86dfebc930caf424ac3fc9357e09ab683e1"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libpacketizer_mjpeg_plugin.dylib",
+      "bytes": 52432,
+      "sha256": "bb375f6486897451522d9e26a7c0d5d2f4ed32efaf66b10b4da32a0a34b2423e"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libpacketizer_mlp_plugin.dylib",
+      "bytes": 68544,
+      "sha256": "7b451a414da685e628efaa927955c1cf3ff9347de2f7be4106e2d91e0eff8d13"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libpacketizer_mpeg4audio_plugin.dylib",
+      "bytes": 69856,
+      "sha256": "86662c37a069f83baaed4561386d32ccb9f51cdca39687f36c920343993a9150"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libpacketizer_mpeg4video_plugin.dylib",
+      "bytes": 69600,
+      "sha256": "a3f20ea988ffb8e61d3584a2ac5a695a64b4af2e458cb566cd6a1a93d94ded21"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libpacketizer_mpegaudio_plugin.dylib",
+      "bytes": 52032,
+      "sha256": "051e3af4f0902ac82d317afd17f35acdb5584b6a6e195006603917779ded0304"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libpacketizer_mpegvideo_plugin.dylib",
+      "bytes": 70992,
+      "sha256": "2c87ce6c2400249dd02913714fa2196631b673e448fc0cb629a7700eb26df4e8"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libpacketizer_vc1_plugin.dylib",
+      "bytes": 71024,
+      "sha256": "0c249d67ed3161de874c04bd692750edbb9da7fb74de36571797f4ce4c88e6aa"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libparam_eq_plugin.dylib",
+      "bytes": 51328,
+      "sha256": "05fbf1bf4f053c042f00ec39a666a635122da7980dcf69d0270f59902feeb768"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libpl_scale_plugin.dylib",
+      "bytes": 556928,
+      "sha256": "bd1bc85b1569cbc2e47877766cd1c5b3e6ee8fd2ec58524e4ad5e429ba84b2e9"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libplacebo_gl_plugin.dylib",
+      "bytes": 245648,
+      "sha256": "a81eec358c8610e1ca09a358532c24396b9de69dd43014f7f41bd113e267fd5f"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libplacebo_plugin.dylib",
+      "bytes": 430976,
+      "sha256": "401524966b6079f32e97c4078dc052efe784015f4a13c015e0f8195ac9b311dc"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libplaylist_plugin.dylib",
+      "bytes": 135040,
+      "sha256": "4299e06db143b29b2355ddf4b16f6c1d2381164daf35443ee9803f64a8529569"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libpng_plugin.dylib",
+      "bytes": 238096,
+      "sha256": "9eef6c73758116702a1d309ef3b7eaa23c3a09a72e2a09d1b38272d54612fbb9"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libpodcast_plugin.dylib",
+      "bytes": 53088,
+      "sha256": "3cce3aac736b05223272c3b76bc77e36643c26e108b427b47df93af21c95a21c"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libposterize_plugin.dylib",
+      "bytes": 52480,
+      "sha256": "b569fe6ee60b7b61b591d3ba54287aeeafc4315492a9fabae6918ad12096dfe5"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libpostproc_plugin.dylib",
+      "bytes": 111104,
+      "sha256": "00189f300185751089c4393a9799a5aa4e404da8cd224431e913f8a1d1505cce"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libprefetch_plugin.dylib",
+      "bytes": 53856,
+      "sha256": "e882b7ec0a88210c321a60345399838ac57cfc85cfab518ce8746aead7eeb296"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libpreparserserializer_json_plugin.dylib",
+      "bytes": 173520,
+      "sha256": "4b0edace9fbcacaa7eefe81886ee50d5e40d3d656acb087dbf222e01ae7b0e2c"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libps_plugin.dylib",
+      "bytes": 71024,
+      "sha256": "e3c3738a533cb4808803f293af8887938f2da8dba29b2ba97475e91cf2052019"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libpsmf_plugin.dylib",
+      "bytes": 72288,
+      "sha256": "ae65996d4287c471420d72526d33c1131eaaff9657cb205a8e0606553b2445c7"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libpsychedelic_plugin.dylib",
+      "bytes": 52064,
+      "sha256": "cd158e47192bb773ea5614133c9a4d6f002afb687cd54c7a644153391197ef69"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libpuzzle_plugin.dylib",
+      "bytes": 92352,
+      "sha256": "1a11f3f2732976e473c41e6be38c38b584f869e6b31c0ea35638a55be6a5e64e"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libpva_plugin.dylib",
+      "bytes": 52560,
+      "sha256": "3db27056770969666226b26085ff5b1fe76cf873b4b6c5a4692e776da90495fc"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libradio_plugin.dylib",
+      "bytes": 53376,
+      "sha256": "d731ec2ef665e933f730ccc2e4656aa862ca438c68e0943f29dada3d8f9adb89"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/librawaud_plugin.dylib",
+      "bytes": 51936,
+      "sha256": "a13992e0c96beaa9c9cbe983059317427e6b820eb990ad9775106bafe26cf6ac"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/librawdv_plugin.dylib",
+      "bytes": 52016,
+      "sha256": "cb92420106dd2fdea3eb211da487eaf99c0f4d02efa9ac2fdb7eaa346c377ab2"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/librawvid_plugin.dylib",
+      "bytes": 53376,
+      "sha256": "e2436e1e355fa8f161af88641f74aa1ef7553e4793010aee6d3c199fe2c82981"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/librawvideo_plugin.dylib",
+      "bytes": 52544,
+      "sha256": "5f5e040447122212e2381d03e2d4513a3b65fade58fe68b6bc5451dbf355f370"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/librc_plugin.dylib",
+      "bytes": 103824,
+      "sha256": "b02e07b2c5d1a719d4fd5bc1bfec7dea1275651d2e910437dea3c7c3f9ccca5f"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/librecord_plugin.dylib",
+      "bytes": 52336,
+      "sha256": "11ec2358b207e57ea5e92ce96b921b061132d59ae228cf2728ea3f33d2c56b58"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libremap_plugin.dylib",
+      "bytes": 53504,
+      "sha256": "18698a4847c15edb64e7768f3ec59fa39d8f23b51b0a75ece35d053374f02dc8"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libripple_plugin.dylib",
+      "bytes": 51824,
+      "sha256": "39b3d91bb09950b3f811c5572929fca8bcd319c14d19924554b7a857af99dfc3"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/librist_plugin.dylib",
+      "bytes": 1898688,
+      "sha256": "3f3567a06091a824a27ce50076f00572b9cf5922027f3e692730b6c831b1fc76"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/librnnoise_plugin.dylib",
+      "bytes": 171952,
+      "sha256": "6d8e9b72459887abcd6d06f2658d925d86b17723313864254722713e0abeb11e"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/librotate_plugin.dylib",
+      "bytes": 53616,
+      "sha256": "15da68f8bc294a756588394643ab4840e89fe74ba395ace1ab2d19fd636b500d"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/librss_plugin.dylib",
+      "bytes": 70448,
+      "sha256": "04286ffe80dbf77b051e417ec070ef1675a0b4b55e09eef1893e85ecb9fc581d"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/librtp_ac3_plugin.dylib",
+      "bytes": 52736,
+      "sha256": "219b664eb09a07671d0cb5c8e160475c1fed0dd41c8a1fa63bb9dd9606650389"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/librtp_h264_plugin.dylib",
+      "bytes": 53008,
+      "sha256": "d2adc62766fb46584fca5b590c0887a67fadae58fef8503570c88fa7ff65084e"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/librtp_h265_plugin.dylib",
+      "bytes": 53008,
+      "sha256": "f755f8de5e8134d9adf02149eb8c787c47e0de935c4b0d354c7fe89b7b61789f"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/librtp_mpeg12_plugin.dylib",
+      "bytes": 53824,
+      "sha256": "71180ebb8f0f1e07bbcde9f12e33549c19d68a0729ea2a1811a03573d61af00d"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/librtp_mpeg4_plugin.dylib",
+      "bytes": 70064,
+      "sha256": "f15da4effab797ad38cd92803544caab59967bd92dbe6947d0aeb00f95317aa4"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/librtp_opus_plugin.dylib",
+      "bytes": 51696,
+      "sha256": "415bc5eb139b0e6cf774e3b801504cc069b529a5916eca4cd66c05fd80e5a1a0"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/librtp_pcm_plugin.dylib",
+      "bytes": 53232,
+      "sha256": "9b699a060fb309956478fff0a01fc09a1587ee9fefd4531b4f34d7a7a5c01c57"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/librtp_plugin.dylib",
+      "bytes": 821872,
+      "sha256": "45fbfd3dd3ea84d1d0f879ed0ece8ef564204c9d91ca2a2c3dbbd297dfea10de"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/librtp_raw_plugin.dylib",
+      "bytes": 52192,
+      "sha256": "960fb5bd819db3fee721168e6584110853434ba7153786cabf2f5d1662663183"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/librtp_rawvid_plugin.dylib",
+      "bytes": 55232,
+      "sha256": "2af793362776f8a051b11cb13a10c602aac5f06a1751c1511d56c093d06035ca"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/librtp_xiph_plugin.dylib",
+      "bytes": 52256,
+      "sha256": "6cce19032f857d355217f80fa345047485c9db85c80b435c6f210a76d40046a6"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/librtpvideo_plugin.dylib",
+      "bytes": 50992,
+      "sha256": "2824cec1b869555d49ae75b69e6904db107bab4fd2c064cedd48083f2cab3bbf"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/librv32_plugin.dylib",
+      "bytes": 51520,
+      "sha256": "410c955fb5f2c40a62fbcb6a2b2f715c3b72ddb528abf2f1edf3c9e7a7552cd2"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libsamplebufferdisplay_plugin.dylib",
+      "bytes": 117216,
+      "sha256": "4b03eab4f62037e0818731795dc43d4992b19c3627eded50c88d6847e6faba9e"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libsamplerate_plugin.dylib",
+      "bytes": 1539232,
+      "sha256": "b1c5f4f68c3113938b9937c4c8aa4fbb226a1db40ff19b3438eb7d46085476af"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libsap_plugin.dylib",
+      "bytes": 93168,
+      "sha256": "3bebc9904e0bda95387827546888e9354102f6b7a77bc6fd5bbac60af2f1516a"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libsatip_plugin.dylib",
+      "bytes": 55072,
+      "sha256": "f1618f5902a1425c942554be1624c02d189e66f809871f4aaee8ee93be0fae5d"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libscale_plugin.dylib",
+      "bytes": 51456,
+      "sha256": "63c488cc4060bc4b95158fba0981769d411be9f9a3b794e28b84bdbec49661e5"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libscaletempo_pitch_plugin.dylib",
+      "bytes": 53408,
+      "sha256": "56f96e02ebb4be5778d77bfb1f881a76d376780e07047f1706ab590868dd22dd"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libscaletempo_plugin.dylib",
+      "bytes": 52032,
+      "sha256": "d56918b0127522307ee433accf734cc2c9be2327dec7d91d85ed41f81c89796b"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libscene_plugin.dylib",
+      "bytes": 52576,
+      "sha256": "965fdda8b9009850c643a49cf5109c258aa584209bcd7e480079525aa3718b9d"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libscreen_plugin.dylib",
+      "bytes": 70448,
+      "sha256": "d4ffbca7060e7a83ee6d6da0d63654cd9e2646ee4b968881bb4578665cfd5c35"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libscte18_plugin.dylib",
+      "bytes": 53840,
+      "sha256": "35b4c7abce821ed117e863147b6d5d2360e740838f39165695a73e89f6984a9b"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libscte27_plugin.dylib",
+      "bytes": 52624,
+      "sha256": "1b92d8e393c9953fe17468f351b30b5416b78fa5cf1dc84364d570d4b7a0b5dc"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libsdp_plugin.dylib",
+      "bytes": 51216,
+      "sha256": "eb4a679c8ef6a7b3615146cc65c482feff30acfd6f728259a8b4cb2c3aea6c48"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libsecuretransport_plugin.dylib",
+      "bytes": 73904,
+      "sha256": "155aee4cf5d4941d994f73f52f007e746fecd9b0a10878150dfbeb16dafac117"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libsepia_plugin.dylib",
+      "bytes": 52304,
+      "sha256": "0ec2c2b486b3563d6352c7583c9e0e720e34ae4c4453d7810d25cbacc00cc79c"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libsftp_plugin.dylib",
+      "bytes": 934400,
+      "sha256": "ac791295ac2d741f910076ba00a8de9da2c1e443d635110bd8b1213c7b14e931"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libsharpen_plugin.dylib",
+      "bytes": 52320,
+      "sha256": "b611243c9e3c863fb695157cb8a47b8e8ffdb5c3fa4774cdbefd59ac03a59ab5"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libshm_plugin.dylib",
+      "bytes": 52624,
+      "sha256": "24ae88692c32d2b21d562063be22f1e0ccc06258ef49af873a49be20be72c124"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libsid_plugin.dylib",
+      "bytes": 433872,
+      "sha256": "82b4cfe6742781cf329fca7fbf577ad637b4e9a0613be35463a0b99f8fe050af"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libsimple_channel_mixer_plugin.dylib",
+      "bytes": 52608,
+      "sha256": "608b5dfde5fdab642d521c5e75b2c5fb2a697bbd05c39e520656bf2d48f2531e"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libskins2_plugin.dylib",
+      "bytes": 1856448,
+      "sha256": "25edea4197b7dbcbd393f0551c0bac2c49686de9795fd6b8173bcbd1c43620be"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libskiptags_plugin.dylib",
+      "bytes": 52144,
+      "sha256": "8a5b726a4c181db9ba1e9e57ced0f8f85da2f1fa0796f7a7418e24fa7c7f4fca"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libsmb2_plugin.dylib",
+      "bytes": 257024,
+      "sha256": "1a5bac284740fa05b388a89e5537cc608a86d8784039feeecbbec3ea50f17e79"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libsmf_plugin.dylib",
+      "bytes": 52992,
+      "sha256": "82e727bf3d8ccb84bf157de16ead43fd73a8fdbacd45057f8a7fa8aeb908b18d"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libsoxr_plugin.dylib",
+      "bytes": 477824,
+      "sha256": "377e96491478d401a6f036d0902b4d18fcae0d511cf34364a53ffb049ccb9a3e"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libspatialaudio_plugin.dylib",
+      "bytes": 213584,
+      "sha256": "d6615e6788b961e3bc88b714877b2269f7a4f5f40a3b28f5f199e74c71b6a7f0"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libspatializer_plugin.dylib",
+      "bytes": 57200,
+      "sha256": "b9ca87bbaf1048a08725c5e0ebcc0a68fb421bab9b3d0db2735498092ba61001"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libspdif_plugin.dylib",
+      "bytes": 51344,
+      "sha256": "32c1b604fe6213f0cd444556640d38192c5a2513f1b09f04be9f450dc3d1c093"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libspeex_plugin.dylib",
+      "bytes": 210208,
+      "sha256": "e9c0a4693a843708a7e20e825d7237168f5762764a0110864c8065a6170a7f1d"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libspeex_resampler_plugin.dylib",
+      "bytes": 70800,
+      "sha256": "d42dcc79ad5a1291c2633c05d4ad8a174e100c1887e52aca671269388656854a"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libspudec_plugin.dylib",
+      "bytes": 69776,
+      "sha256": "6784c53820940edf0e067abced88267819ebed087fd287f1dae02cd5d152bfb2"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libstats_plugin.dylib",
+      "bytes": 52928,
+      "sha256": "71827e4aa38cdaa03227efa3a51043adc6cd4a4238b0f5e3ec3753253413037c"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libstereo_widen_plugin.dylib",
+      "bytes": 52208,
+      "sha256": "9a5b5419a852ef6496f240a81386502d378d7a9d8cf903b87d94aef432124b6f"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libstereopan_plugin.dylib",
+      "bytes": 51792,
+      "sha256": "37dab2532ca7e9f04ff5d8cf1c53fbbedcf38fe4a0ecfb8cfadc8b2933d91b9a"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libstl_plugin.dylib",
+      "bytes": 52912,
+      "sha256": "cac46a209be680ae630e39937fdd430774bdebe29a465e2513c895b13bf21528"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libstream_out_autodel_plugin.dylib",
+      "bytes": 52032,
+      "sha256": "3d181ade84a6f1ac30a9cefcd17ebc9801644db41c4214541e005dbb1e0ec4b9"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libstream_out_bridge_plugin.dylib",
+      "bytes": 53248,
+      "sha256": "e80298b388616be6b44120dc361271ddb8eb16fdbc835d2871d9936bdb7688d8"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libstream_out_chromaprint_plugin.dylib",
+      "bytes": 105616,
+      "sha256": "e8e15d99b6a8119dd7fd522ccc6e088eee40cc2c77e58a91b7cb5c8249af1e6a"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libstream_out_chromecast_plugin.dylib",
+      "bytes": 276224,
+      "sha256": "01c97d216d272577df0a61ed1266cd29ba4d5c64995bca30c258e9b46d207254"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libstream_out_cycle_plugin.dylib",
+      "bytes": 52704,
+      "sha256": "917af53fca42e8dde23b13b4df98445bbfe6676a8ca213571b74c61f77389ca6"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libstream_out_delay_plugin.dylib",
+      "bytes": 51856,
+      "sha256": "81dd84acb28f28892d6e2e19c4cd8470981375a8016db43603e74e306a21e8da"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libstream_out_display_plugin.dylib",
+      "bytes": 52800,
+      "sha256": "e9bc29a1fa4b95abf2faffdbcc2c369e061773e045e9ab098bfb02187852393b"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libstream_out_dummy_plugin.dylib",
+      "bytes": 51232,
+      "sha256": "9c4bab3fce1ea19c93430e9ecb30b1142a44df3765c35c5c83d1fde707443379"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libstream_out_duplicate_plugin.dylib",
+      "bytes": 53968,
+      "sha256": "90969223d2007c90a68195943da027b2dfae15dbbb8d7aebf37a81a9584f07a1"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libstream_out_es_plugin.dylib",
+      "bytes": 52800,
+      "sha256": "a28305a4644f3a9140d26dc076567e3056fd789b4b81d8eb2f39e87d6fee8aae"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libstream_out_gather_plugin.dylib",
+      "bytes": 51696,
+      "sha256": "a7852b7ea0b88de54880bee9ee1558980669ae420eb082bf334793ded20b08be"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libstream_out_hls_plugin.dylib",
+      "bytes": 96576,
+      "sha256": "5d6066c825a69200860eff0784f888cafc427e5ffefd2a3f0c95cbbcd422052c"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libstream_out_mosaic_bridge_plugin.dylib",
+      "bytes": 56224,
+      "sha256": "0e46923a00b10d48149e91f1a0b65e825e9110de3c21374742324558ff4e5b16"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libstream_out_record_plugin.dylib",
+      "bytes": 69760,
+      "sha256": "0fcd621e88bd78951d0732d3a38bdd1c2f99198802b81c5cb834e1b8f6730eb5"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libstream_out_rtp_plugin.dylib",
+      "bytes": 861888,
+      "sha256": "b52ffd7525c87027807ea48bd3ab2ee17a281b7c7032b014e403b7d93cf0e36a"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libstream_out_sdi_plugin.dylib",
+      "bytes": 194512,
+      "sha256": "4ec355ceace8995d670f401e68beda175c395d7cfa005e48859fd11ce6455f87"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libstream_out_setid_plugin.dylib",
+      "bytes": 52160,
+      "sha256": "e267cc2147ff7828cdbd5f8d3e0bcf573f8447bb198e1c9b2704fa2861d2a2d8"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libstream_out_smem_plugin.dylib",
+      "bytes": 52368,
+      "sha256": "3da2a28d2fdd43008eb2e2d7ce183aeeb8af61e3728cfccc57a9402889d4469d"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libstream_out_standard_plugin.dylib",
+      "bytes": 52672,
+      "sha256": "7e5dde4b7a8578e56111437886d7448189df60b5ce641644f45c87f026dbb679"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libstream_out_stats_plugin.dylib",
+      "bytes": 53120,
+      "sha256": "c49c72217a8a07f25bce39c46038f9d98e424da8aa23c3f5880ddf8cb700bb56"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libstream_out_trace_plugin.dylib",
+      "bytes": 52480,
+      "sha256": "6b3e6c9db5357327f0c04fdfc926644b3f7e6981776ac0841688ef10eccf43a6"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libstream_out_transcode_plugin.dylib",
+      "bytes": 105440,
+      "sha256": "24e4663a3eeb29dc8392e5e2607e9ef1de1b3a4a4f4a9b58aaa03956671102f1"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libstream_out_udp_plugin.dylib",
+      "bytes": 54560,
+      "sha256": "9f9d6498abc383e2f969bece8dc34160f1f9d4ade6ea28cf1ed0863ed50a4637"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libsubsdec_plugin.dylib",
+      "bytes": 71312,
+      "sha256": "12a47f0a480e34450b169be141c56bd61e94fa9b4c7a89262bf007c6bbb4324d"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libsubsdelay_plugin.dylib",
+      "bytes": 53136,
+      "sha256": "520a3d2b2e970bd39b5f9f03d9e97f647d5be859bbfd46dc197798054c73f80e"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libsubstx3g_plugin.dylib",
+      "bytes": 53600,
+      "sha256": "dea0b8204fd4be013a9b1ae8566591bec06cea8ee898c06e3431dcf8c89fb016"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libsubsusf_plugin.dylib",
+      "bytes": 71152,
+      "sha256": "37cb1c591c3975312bfa701fd08b3f4d41b93228e1bee5d7022feeaa1f45fd38"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libsubtitle_plugin.dylib",
+      "bytes": 74064,
+      "sha256": "b4c7d624cfaed0e5fc545f3f3bf765a7934b6134d2eafd839c5b22d593d7b9fa"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libsvcdsub_plugin.dylib",
+      "bytes": 52512,
+      "sha256": "abbcf77a860c7f4c23d641c8fe3b8e98d8532c63d121e0a93ec759cc3ac1afb6"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libswscale_plugin.dylib",
+      "bytes": 1230560,
+      "sha256": "1f457af809cce712bb2abb2ca914277d298b374628f21b960f19a65adc12c38a"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libsyslog_plugin.dylib",
+      "bytes": 51872,
+      "sha256": "e67d2f95444545f46c51fd7f1fc149c5c444e631f7a02731640be22a1c47c8ca"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libt140_plugin.dylib",
+      "bytes": 51152,
+      "sha256": "c2734bbd4f83402b8e8f392a130cbb4a9008b078a6eccb51d2cdd3a8e2e24ff2"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libtaglib_plugin.dylib",
+      "bytes": 1334384,
+      "sha256": "c1807c5fc2c40285aeff67c101ad86c369d2c51db11b84d1da4f7c821e0d74f7"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libtcp_plugin.dylib",
+      "bytes": 51456,
+      "sha256": "4472a25db80c24693862613238cbe447e5da04c62597b4bf63c24794763bd981"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libtdummy_plugin.dylib",
+      "bytes": 50944,
+      "sha256": "31fd55b05521129235c9f968bc304c5cdad8dc81279d178bc10114ca6c1e84f5"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libtelx_plugin.dylib",
+      "bytes": 52416,
+      "sha256": "8f3a8f2b8593dd8fe6eb9587d43b5bbbd4ed16ac1c0f9fc44d0e9991ad9e6df6"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libtextst_plugin.dylib",
+      "bytes": 52848,
+      "sha256": "deb156cb15e90d5d77586ec872f94b42a5e13fcf3be87f5f570af723beaf4cbe"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libtheora_plugin.dylib",
+      "bytes": 262848,
+      "sha256": "e9bb5fef2df6942ffb6565bc39e0ec0f3ffcefe859bb07f7a54a5ae70e9cc416"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libtimecode_plugin.dylib",
+      "bytes": 52064,
+      "sha256": "c8c265747c100aa35b0157d8e6fa03291b2b1e5d56343c33432c294645dabf52"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libtospdif_plugin.dylib",
+      "bytes": 72784,
+      "sha256": "c79545f132ccf56ac66ab4d7794b2dc39d7e25e7eeec9969f7ac545c5fc44c89"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libtransform_plugin.dylib",
+      "bytes": 51488,
+      "sha256": "1a226028cc12e672129c02ea95b2b4d88bef5b9d74f1d56a82c7ac1b9bc3e46e"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libtrivial_channel_mixer_plugin.dylib",
+      "bytes": 52816,
+      "sha256": "93800b9de41c424cef5f2ae711fa4fc166c4b541eaf54af4c44bf5ec3c64f6db"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libts_plugin.dylib",
+      "bytes": 372928,
+      "sha256": "05b919af21457de19d92fc73478cd93b3c0c4f6d61f41de025fea489c612c0f5"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libtta_plugin.dylib",
+      "bytes": 52160,
+      "sha256": "f052f4f34cba96242466e341ca9ff0e48009633a7a5ac9da495940ce9ae20cb5"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libttml_plugin.dylib",
+      "bytes": 95664,
+      "sha256": "1a2e23e674b4f81273efc9ff2a9fbcb84d50289013f19946d335b13d80d5efc5"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libtwolame_plugin.dylib",
+      "bytes": 183072,
+      "sha256": "b12943979db14d3bf7f516c01376cf7a7a9d21de61292a6c2177e033d6142d3a"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libty_plugin.dylib",
+      "bytes": 71072,
+      "sha256": "a1aa9285b7c37060a90f514ff43bed47c763da9bc246ac5f2eae9ceeb7e47d57"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libudp_plugin.dylib",
+      "bytes": 51648,
+      "sha256": "68ae154c46188bb7cf1b40623ec37e187312a10d0814d3427935bfd67c195826"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libugly_resampler_plugin.dylib",
+      "bytes": 51296,
+      "sha256": "7d52ed466ff414ce2d80100117301c140d38c80da2bd2de5b77964291138f168"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libuleaddvaudio_plugin.dylib",
+      "bytes": 51744,
+      "sha256": "320160466cd5cf1bae729b49de66fc06f2a309738eb2a2a196867a98618a4163"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libupnp_plugin.dylib",
+      "bytes": 651680,
+      "sha256": "5c0192b05288ad6b6c19397e81e7c0901901eb11fd45990964c7f9d836af4e96"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libvc1_plugin.dylib",
+      "bytes": 51968,
+      "sha256": "e66393914af4e5102105f92baebf376b0916ab12168d0acec33dfb930df5c395"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libvcd_plugin.dylib",
+      "bytes": 71280,
+      "sha256": "268a9b07526ab24bd510e4991b1f7b4195c15a04e4ff6703d47cb21e96c71384"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libvdr_plugin.dylib",
+      "bytes": 54400,
+      "sha256": "0ef9a93b138e57e9ff5061ff73a5ba02c557fe6f9e76c46c569ad1119beb9d7e"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libvdummy_plugin.dylib",
+      "bytes": 51568,
+      "sha256": "32b5044547179fd165781d6daed9eb0d17cd61e53b45973c84b66aab2ec3d45c"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libvgl_plugin.dylib",
+      "bytes": 52224,
+      "sha256": "053494405d43ff281ce11a5a856d510927d3c9b1c3d8464f2c54d80ea68b6114"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libvhs_plugin.dylib",
+      "bytes": 52544,
+      "sha256": "292d101d0bfcec676da15947d07e9a1455fb82fc0f8fee5912604dc46bb9c097"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libvideo_splitter_plugin.dylib",
+      "bytes": 53664,
+      "sha256": "eea8ca3141bd69b57b923ffdb328d3daa98a748d408d057e4ad0ae79bd799e89"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libvideotoolbox_enc_plugin.dylib",
+      "bytes": 72512,
+      "sha256": "c1c75b5673b735b838cb5016d4f5fcf0cb8b401e62df523aced789a1eb7d41a7"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libvideotoolbox_plugin.dylib",
+      "bytes": 206448,
+      "sha256": "7a6301344da59fd16e789daf849bdefb6f9e96502004cdc7e0dd4d52df76be74"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libvisual_plugin.dylib",
+      "bytes": 73152,
+      "sha256": "51209373de077ada5cad7c1ec567749506131ef899452ab1af1de231be69a756"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libvmem_plugin.dylib",
+      "bytes": 51968,
+      "sha256": "5b35a9d1aec8664ac8eab4c8aa80ce688e7c28848102266b51a2a1a0067da806"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libvobsub_plugin.dylib",
+      "bytes": 53120,
+      "sha256": "608942a5966710e0af0627251c3f939f915ca2a4d1894515e6d922260a7f1343"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libvoc_plugin.dylib",
+      "bytes": 52416,
+      "sha256": "9893f32229c61cc21664be7a572f260ae2d49519b524d38975ae26e3a5e5948f"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libvorbis_plugin.dylib",
+      "bytes": 940672,
+      "sha256": "bb7e3cf2c355f739a344af2d9239bb0b737f729e842c0005b1777f89d369b5d5"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libvout_macosx_plugin.dylib",
+      "bytes": 178720,
+      "sha256": "6cc82d6ff6a242bf936975d09be6d85e3f4c8f9af7100489cdf0ec6f27b4d9d9"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libvpx_alpha_plugin.dylib",
+      "bytes": 57344,
+      "sha256": "3e27d568b917de15c3482896e61bf2593d876cdaba5378b680633a68bcc9de38"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libvpx_plugin.dylib",
+      "bytes": 2594944,
+      "sha256": "c5f14ddf3f83dd1183e35ac47acf0c05b608219c05594735e5557e2f35639dbe"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libwall_plugin.dylib",
+      "bytes": 52288,
+      "sha256": "be13f03699de1946401ade93d82650406aed1b83b1963bf635786783ccd87b59"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libwav_plugin.dylib",
+      "bytes": 53408,
+      "sha256": "1186ad136d49189e000c25aec558a4d0e3281456a1b6fef09e792e594e45c31f"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libwave_plugin.dylib",
+      "bytes": 51792,
+      "sha256": "e532c858aa6b717c4bec5ce6a37d27152660d51d78fed9378d935abd9cb87d70"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libwdummy_plugin.dylib",
+      "bytes": 51024,
+      "sha256": "bb62572cdc62a357275417925f644a0dfd3719465d479efe9497d49fcd94f6ab"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libwebdav_plugin.dylib",
+      "bytes": 132064,
+      "sha256": "2b2f1b7377e5449027d22875f076a210dddece6c36f54fb0aa55c0bcff33edab"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libwebvtt_plugin.dylib",
+      "bytes": 153008,
+      "sha256": "ffeaba39369d183a63f695e6960b00937fb28e30fb00c7e7dd5151460641646a"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libwextern_plugin.dylib",
+      "bytes": 51520,
+      "sha256": "fb3f6818df179172898bf22f4ca50ec15634e421430edcfb66ad65bea05504a1"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libwindow_macosx_plugin.dylib",
+      "bytes": 106208,
+      "sha256": "752f4d93ad066051779a42c34d5060d5bba81b7db28ee62c263f0d3892460d7d"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libx26410b_plugin.dylib",
+      "bytes": 1502960,
+      "sha256": "a29242e9c900e0a9a146b566b57c9827c07eedf824a5f29ab3660a43a2d3a411"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libx264_plugin.dylib",
+      "bytes": 1502928,
+      "sha256": "66b51be5482561e312449c24f2b5b2c4d29475d95aa6a2404a98a34ac7c1f04f"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libx265_plugin.dylib",
+      "bytes": 3313456,
+      "sha256": "a9e37a932c49af2724385da7b65e24c2d58cb0566d98177799b446daae018734"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libxa_plugin.dylib",
+      "bytes": 51664,
+      "sha256": "2dac78455470a8b6a09fa75b57a3c54fac553fca82e678ce8f5afd0f5ac74a98"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libxml_plugin.dylib",
+      "bytes": 371520,
+      "sha256": "f9e0e7e80f368fbd72dba7e812564c1a8396172fbe6e9d653da95dc60de198cf"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libytdl_plugin.dylib",
+      "bytes": 75584,
+      "sha256": "bf7cbddae9399fa285ad5569ab82588330669c6e73e90e17548ed9a31ada7b8c"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libyuv_plugin.dylib",
+      "bytes": 51664,
+      "sha256": "5c4d95871888356a4b91139c4f522aa4895aa5d71de9cdee2f3891e517b72389"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libyuvp_plugin.dylib",
+      "bytes": 52176,
+      "sha256": "639b4680f8a36447261c70f54237ba6156763b5542b971e4ce840f558df0345b"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libyuy2_i420_plugin.dylib",
+      "bytes": 51920,
+      "sha256": "21a80fb26ec3db0ecf76d85522c9a13315dc856d217b7f1cbb5099323f3362b1"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libyuy2_i422_plugin.dylib",
+      "bytes": 51920,
+      "sha256": "380d362cab75f49be4ca6576705b9ead644a510cc9287d9dba3f1697d2a5941b"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/libzvbi_plugin.dylib",
+      "bytes": 1225360,
+      "sha256": "2b3ec199bfcee9f8908b9eb1fb75e9a409e5375da474175a4d93c94363bf6f1d"
+    },
+    {
+      "path": "Contents/Frameworks/plugins/plugins.dat",
+      "bytes": 291560,
+      "sha256": "2905524319ab8e7dd9c2eba3261c990dd75da8d308d78b139895eabd145f5246"
+    },
+    {
+      "path": "Contents/Info.plist",
+      "bytes": 14593,
+      "sha256": "e4317d0774cc2609b1b922698504f122fe7f2b3c24365202bd7c23d947f0bb23"
+    },
+    {
+      "path": "Contents/MacOS/VLC",
+      "bytes": 56496,
+      "sha256": "f2db23e869b1d8adbc3b5f8070ae543416d6340178ff5d3632f24ea32291d997"
+    },
+    {
+      "path": "Contents/MacOS/vlc-preparser",
+      "bytes": 82448,
+      "sha256": "5b02dd5b18b06ceabdb8c0725dd493ec497abbf19062169c8448518319aa2d68"
+    },
+    {
+      "path": "Contents/MacOS/vlc-timeline-preview",
+      "bytes": 20139088,
+      "sha256": "07e0c4b2784245ed60d0085dfc71d4fcff327e05164835f392f2b56b7596b7e2"
+    },
+    {
+      "path": "Contents/PkgInfo",
+      "bytes": 8,
+      "sha256": "da369ede056a09ab52e12bad300cf83db13265d6997a92f00c866df922781f63"
+    },
+    {
+      "path": "Contents/Resources/Assets.car",
+      "bytes": 32216,
+      "sha256": "0aab2c236e0d89a77245eada54f375b5eef3458073e6f74c97b01c5112493511"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/About.nib",
+      "bytes": 22392,
+      "sha256": "b1576243c2c8ebe8fabdf84b283320e7b561e0ec39a1e3a1c6455cf7d74be4bb"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/AddonManager.nib",
+      "bytes": 24657,
+      "sha256": "9edca85bbb0cc758ff7426469085a6b821f0d116645baf6c5897b01051230da5"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/AudioEffects.nib",
+      "bytes": 77688,
+      "sha256": "929a97331a3f56560281eccf04c74d6f1b508a423a8fb06e6f7db1f98ecf2283"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/Bookmarks.nib/keyedobjects-101300.nib",
+      "bytes": 14172,
+      "sha256": "3d373c0539d2b32d09b39570a63020ab2104da9b722e403ffeefd5f3e2dcd115"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/Bookmarks.nib/keyedobjects-110000.nib",
+      "bytes": 14146,
+      "sha256": "b0cb2bdf2686fa2295a892e5839ed96a0a39837bb3aa036227bcea5537189250"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/ConvertAndSave.nib",
+      "bytes": 74410,
+      "sha256": "ffd017d319be009ab2d333d3a70814f2fc3488e8e6589bc1f164583c29181a71"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/CoreDialogs.nib",
+      "bytes": 18118,
+      "sha256": "f2e9eb8a9fb3850e817c5036abc40ef6b21e8c72507fe05d6cbdc69dab4695ba"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/ErrorPanel.nib",
+      "bytes": 11783,
+      "sha256": "bd294063a1449169e0f9df50382876a4546fe2c4e8c0dee725c38d0ff7ec4aaf"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/Help.nib",
+      "bytes": 6265,
+      "sha256": "39090163f1a27e313a2e5664dd16565c1bdaa0d2786466b2743b0000dced7cef"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/InfoPlist.strings",
+      "bytes": 852,
+      "sha256": "c402d049b9eee95798b79dc50f5a441d12dd28807d0055f572d7fcd40a9a21f4"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/LogMessageWindow.nib",
+      "bytes": 55411,
+      "sha256": "20d9b94b6affc52b1174c50955796ebff52e70aea81ddc3329887212ebac4dcd"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/MainMenu.nib",
+      "bytes": 55458,
+      "sha256": "71940ffddc15ea290a7480f0ca9ece0343616308c23a956bba7ca70488bca81a"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/Open.nib",
+      "bytes": 106613,
+      "sha256": "33cbf3c90e584613d1d391e05666d92ec8deda1cc5e383cb9b92a8d705dffcf5"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/PlaylistAccessoryView.nib",
+      "bytes": 9964,
+      "sha256": "bd80e1af5255cdc2a780b695e4f479f173a22ed298ab69da24ea0baee507566e"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/PopupPanel.nib",
+      "bytes": 11896,
+      "sha256": "6e4bbbeefc73e1871dbd07a66301bf9ffb20a1886dee0846349185ff579b04bf"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/Preferences.nib",
+      "bytes": 15189,
+      "sha256": "d83a1437e308e3be442e634fe38a03b07b63ff6f91f698698504642fb99a768e"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/ResumeDialog.nib",
+      "bytes": 12404,
+      "sha256": "f1eb347cd312a10738f5c9d7dda57ee5d32b8d78fe95840bb5e49c810ec87f2f"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/SimplePreferences.nib/keyedobjects-101300.nib",
+      "bytes": 133979,
+      "sha256": "cb672b55f59e4202e234135f1530e206b3955dcb426101dd947d59b82593375d"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/SimplePreferences.nib/keyedobjects-110000.nib",
+      "bytes": 133954,
+      "sha256": "95d4fdaa8e10e6b7819d622edb7cf72ff960391cedb8069588da1ff82b3a7493"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/StreamOutput.nib",
+      "bytes": 37895,
+      "sha256": "a2f8e7d5d0e1235e4f14f91cd3bacd68ee0653a078fb9f5799a3216a7aa24639"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/SyncTracks.nib",
+      "bytes": 23496,
+      "sha256": "3a179603b060e278e33db7cfadcb05c27f766d27c130ee34dcc65c8ac9a34fc2"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/TextfieldPanel.nib",
+      "bytes": 10738,
+      "sha256": "5285bc9097c90bd71a7ef3cbba5aba2d13f1b7c3727b7f4cffd913404557262e"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/TimeSelectionPanel.nib",
+      "bytes": 19399,
+      "sha256": "0540406a2c3ccea3a9cf70135a6652e6e64d2f2e9f0ba4f870c6441da141cdd4"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/VLCClassicMainVideoView.nib/keyedobjects-101300.nib",
+      "bytes": 32185,
+      "sha256": "71e1fce4af26c765439b109f8529d8b62c3858c14367300d334ea9dedaa0e065"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/VLCClassicMainVideoView.nib/keyedobjects.nib",
+      "bytes": 41834,
+      "sha256": "f5c29bf53f1e293784e154db3dd6adcb3be790e7ea886dcef4f6841937e7cc0a"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/VLCCustomCropARPanel.nib",
+      "bytes": 11635,
+      "sha256": "1c36c5ee0aa7b2f65a5abc10d6956ed10a7517402c7e4efac70658ee6fa9599a"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/VLCDetachedAudioWindow.nib",
+      "bytes": 23437,
+      "sha256": "060133f3f1c343a00fb11b7858700ea77b1b618d020b9d53df49c3e4dfc7725e"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/VLCFullScreenPanel.nib/keyedobjects-101300.nib",
+      "bytes": 22074,
+      "sha256": "ad0c4b73f53d7ccbc8011b1d6a877eb378cc6f707b88417e43a4f45ea737d567"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/VLCFullScreenPanel.nib/keyedobjects.nib",
+      "bytes": 27573,
+      "sha256": "5897278e192b399e0478382df1a0dfae935dd60868b4ccd570e13dc3e7fb7328"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/VLCInformationWindow.nib",
+      "bytes": 77503,
+      "sha256": "d70af3744bba3a2aa4f620fbe8b0283e5a40b4f180ea6b4bb0d4d61e798c300c"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/VLCLibraryAlbumTableCellView.nib",
+      "bytes": 17323,
+      "sha256": "4f6676bc5b6747da9ea43e5deb46c44b2dd78e32d152337fa757deeed8fa696c"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/VLCLibraryCarouselCollectionViewItem.nib",
+      "bytes": 14410,
+      "sha256": "ef5242a192532f5aa775287c6177868191e5ccdde57cd27d3adf4e9076db22c2"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/VLCLibraryCollectionViewAudioGroupSupplementaryDetailView.nib/keyedobjects-101300.nib",
+      "bytes": 15717,
+      "sha256": "02d1b22629143939ff6c12901ecf42e416b54f806451bba70ceef0be15069e62"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/VLCLibraryCollectionViewAudioGroupSupplementaryDetailView.nib/keyedobjects-110000.nib",
+      "bytes": 15717,
+      "sha256": "6d1ff8da6562749feaaf7a8648cfc6660cb415c2c3d3f258c9c850e981e9a6d9"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/VLCLibraryCollectionViewMediaItemListSupplementaryDetailView.nib/keyedobjects-101300.nib",
+      "bytes": 24497,
+      "sha256": "66b29d1d5607dddf19db6ec6284b6ec2a16df6ebc509b0cf906990f66ee7a8b0"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/VLCLibraryCollectionViewMediaItemListSupplementaryDetailView.nib/keyedobjects-110000.nib",
+      "bytes": 24497,
+      "sha256": "278d1502b510c596c563616ded8e4a83fcd4fed24d13d87cc67869c6c4fb88c6"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/VLCLibraryCollectionViewMediaItemSupplementaryDetailView.nib",
+      "bytes": 33775,
+      "sha256": "43519c3a914caa29bdc6dfd1f7022697b6f96f5cdeb607f9404e9af48b3bbcfe"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/VLCLibraryHeroView.nib",
+      "bytes": 15818,
+      "sha256": "dcf94766b03177b606b2d5b9933e1371c4458c638770d354f9c0893fb9391ac6"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/VLCLibraryHomeViewActionsView.nib",
+      "bytes": 15500,
+      "sha256": "ae08b81e8e25f1f8a0130d2583a0716dd6cf4a11b5dfd875732ca5f19d7ff71c"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/VLCLibrarySongTableCellView.nib",
+      "bytes": 13745,
+      "sha256": "1ac601e6dc9214cf1b725fb944ca3c1e855e3899700abc9ac6e8ac960bd4923a"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/VLCLibraryTableCellView.nib",
+      "bytes": 12277,
+      "sha256": "a5a73afb191a7bcfd76f05c808290a90c34d8d6b00a09cabd352cc308d23e731"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/VLCLibraryVideoTableCellView.nib",
+      "bytes": 11762,
+      "sha256": "2a4665a55f038156f97654c261d715a0caaa7ac0bc1b2f11da9d08c5818eaa7d"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/VLCLibraryWindow.nib/keyedobjects-101300.nib",
+      "bytes": 205707,
+      "sha256": "5bf6433545cb203bcb9241997b3cc879703199474bcad77c3459cb7290ed87fe"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/VLCLibraryWindow.nib/keyedobjects-110000.nib",
+      "bytes": 205736,
+      "sha256": "9e7c8f34495dd2d0afb869e92248f90d33070704cbd604f02ff686b9b85e549c"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/VLCLibraryWindowChaptersView.nib/keyedobjects-101300.nib",
+      "bytes": 26740,
+      "sha256": "b51aed2e84e1b4b74188dc1143dd028a15b422d10591ee96dca1093c156efcd5"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/VLCLibraryWindowChaptersView.nib/keyedobjects-110000.nib",
+      "bytes": 26717,
+      "sha256": "83fffe03143c5c6769042e66027844b804ec396ac2dde34a1552c2bec1b7b319"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/VLCLibraryWindowNavigationSidebarView.nib/keyedobjects-101300.nib",
+      "bytes": 31218,
+      "sha256": "6ccef48e403e2089be7e74a4c30b3b02edb3a65c1060382829a1d79259af8ab3"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/VLCLibraryWindowNavigationSidebarView.nib/keyedobjects-110000.nib",
+      "bytes": 31115,
+      "sha256": "6b588d107966ea6d5d43fc25af2793c10ee88006ee43614640afe4ce9fc400f2"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/VLCLibraryWindowPlayQueueView.nib/keyedobjects-101300.nib",
+      "bytes": 27840,
+      "sha256": "1f395de7fdcf541e372207086bbbb6c3c2854eba6c40dfb01f5d3f688828649a"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/VLCLibraryWindowPlayQueueView.nib/keyedobjects-110000.nib",
+      "bytes": 27821,
+      "sha256": "28b9b277a26bd1839420118224eaac83f57b62ad6bb41ed64a322b1a53b88bdb"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/VLCLibraryWindowSidebarRootView.nib",
+      "bytes": 3464,
+      "sha256": "2273ac2de8c1d3b598af8485aa43c54fa1822761af63a870ba87c8faa141963c"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/VLCLibraryWindowTitlesView.nib/keyedobjects-101300.nib",
+      "bytes": 26732,
+      "sha256": "09df4e8cbe8fe78f75dd75aabd210af063b1f4fedc976d16429d55a6f0bdabe0"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/VLCLibraryWindowTitlesView.nib/keyedobjects-110000.nib",
+      "bytes": 26709,
+      "sha256": "3cd11a627a914eda6a5bb9313e57b860bfc150cb1efc98583bbc36d665927e5c"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/VLCMainVideoView.nib/keyedobjects-101300.nib",
+      "bytes": 37735,
+      "sha256": "bd02ac27e30487322cff484f1e39e866ca56c22ddbfc0d2b6c9907acb86d8931"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/VLCMainVideoView.nib/keyedobjects.nib",
+      "bytes": 49651,
+      "sha256": "94243e6660218acf935b7a67ed8a162c1a9a10434da27a55219f1092b21ccfcf"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/VLCMainVideoViewAudioMediaDecorativeView.nib/keyedobjects-101300.nib",
+      "bytes": 25083,
+      "sha256": "32d8b10a4a6497fa750b72329a15eb411813ae4b4393abf3e9831524c544d3a9"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/VLCMainVideoViewAudioMediaDecorativeView.nib/keyedobjects-101400.nib",
+      "bytes": 25083,
+      "sha256": "5a458060154791a9f2cdda0cde5b0add24fba8f63ea15f9e7bce7ab34d836eaa"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/VLCMainVideoViewAudioMediaDecorativeView.nib/keyedobjects-110000.nib",
+      "bytes": 25059,
+      "sha256": "f5f8eee3ea1c71f494d8f0484e4dff6d3f760a5527862b21686a535c187abbfb"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/VLCMainVideoViewAudioMediaDecorativeView.nib/keyedobjects.nib",
+      "bytes": 30253,
+      "sha256": "f6ff7375ab2bcba7917034dc29cb903833c86a9f42c027451c09cf143cdafc54"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/VLCMediaItemCollectionViewItem.nib",
+      "bytes": 17009,
+      "sha256": "04ba6661e4c58619f4b0a7c149f63291a08543c9d5afe2c79aab16c32bce7f5b"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/VLCMediaSourceDeviceCollectionViewItem.nib",
+      "bytes": 8067,
+      "sha256": "da6ed8722398129451edf15ccfa2e4eca91e6899ebbb1a3268e01301fd3a8400"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/VLCPlayQueueTableCellView.nib",
+      "bytes": 12119,
+      "sha256": "d255857e54f155cf9338bc39f84ee86e4eea614acb3ebd25bd4d61d3d59bba9c"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/VLCPlaybackEndView.nib/keyedobjects-101300.nib",
+      "bytes": 12638,
+      "sha256": "436b6ab639ccf215570c81ac084871baf303b49b44a906d2bf0e393edfd47aca"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/VLCPlaybackEndView.nib/keyedobjects-101400.nib",
+      "bytes": 12638,
+      "sha256": "e665d50fec69505c3f5f54ef624ce1c0fed3281009aa85a70741a7cf67dd0546"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/VLCStatusBarIconMainMenu.nib",
+      "bytes": 18825,
+      "sha256": "5c3ac7df6c6c54e2c142e309dbad7008b97d5a61f739d1071608b985fa8c1d48"
+    },
+    {
+      "path": "Contents/Resources/Base.lproj/VideoEffects.nib",
+      "bytes": 97815,
+      "sha256": "e4d7afcf225cb2037eeafec33686cd47148b6c28b6b748bd329d0f86cdcc3391"
+    },
+    {
+      "path": "Contents/Resources/README",
+      "bytes": 234,
+      "sha256": "10359c0b7c6fa981d3f6b1a1bddef0a65f22508d4911bca8638bfdf0a372a1c3"
+    },
+    {
+      "path": "Contents/Resources/Shaders.metallib",
+      "bytes": 8670,
+      "sha256": "1dc1cb1e0fa557d9127e379a31e5557ed966dff079942bc45f720b8f082138db"
+    },
+    {
+      "path": "Contents/Resources/VLC-Xmas.icns",
+      "bytes": 377742,
+      "sha256": "36103feaa9dd0b8528ae331dd2f513238cbaf6a0b8b4b4191f22aecab84542a8"
+    },
+    {
+      "path": "Contents/Resources/VLC.icns",
+      "bytes": 675685,
+      "sha256": "abe9538ba353c1e2aa34bc50b52c94645b473b28ca79581bc58e2209a4767a5b"
+    },
+    {
+      "path": "Contents/Resources/VLCAudioCone.png",
+      "bytes": 4577,
+      "sha256": "c320755f329d21b6cfe44f02d5d7672ff88190b50bdcc2c4076de2b8c88b90f0"
+    },
+    {
+      "path": "Contents/Resources/VLCBackwardTemplate.pdf",
+      "bytes": 5425,
+      "sha256": "217d0cc1679f12b6bef4af1d2f6a44e2c62ffbe0982b069d64c889028184bce0"
+    },
+    {
+      "path": "Contents/Resources/VLCClearLogTemplate.pdf",
+      "bytes": 6334,
+      "sha256": "3d083efd3ffff84bdfeda14784c766f50b25903a73ec6d34460ea4a3696f6ddf"
+    },
+    {
+      "path": "Contents/Resources/VLCForwardTemplate.pdf",
+      "bytes": 5424,
+      "sha256": "a5d6a4082c2005520a4bb8cb496943f320d2d432f256d56cdd74bd12ec973fa6"
+    },
+    {
+      "path": "Contents/Resources/VLCFullscreenOffTemplate.pdf",
+      "bytes": 5515,
+      "sha256": "7b753be179a310549d996d14bfbbe1e23516e94d97bc413c21d5f0efbad3aa96"
+    },
+    {
+      "path": "Contents/Resources/VLCFullscreenOnTemplate.pdf",
+      "bytes": 5720,
+      "sha256": "df51f2bd6606b9a0d25d2a3e2cdffa4b99caf29cdefab862e35a8b9e79bb6148"
+    },
+    {
+      "path": "Contents/Resources/VLCHotkeysCone.png",
+      "bytes": 5139,
+      "sha256": "bc08a5cc034f1a928164419a8823fd18f51455313c259b30a6250175b9db47aa"
+    },
+    {
+      "path": "Contents/Resources/VLCInputCone.png",
+      "bytes": 4759,
+      "sha256": "b6a85a905864c824f41c6c191290c4e4e9780a2837b190a902e9fcf7406e3c89"
+    },
+    {
+      "path": "Contents/Resources/VLCInterfaceCone.png",
+      "bytes": 3908,
+      "sha256": "e2b332a2a07dd70b140ac162cdf7c95c02603f7efc6cbef107d7e51b21610afc"
+    },
+    {
+      "path": "Contents/Resources/VLCNextTemplate.pdf",
+      "bytes": 3086,
+      "sha256": "ce199fc7e531595763676c79c811b9bddffe9db9d2975ece09771d557996b148"
+    },
+    {
+      "path": "Contents/Resources/VLCPauseTemplate.pdf",
+      "bytes": 3036,
+      "sha256": "0663cc4a3f92f89d00e922a6ce2ec35b5cec9eb3bd498b31cdc1ccff4a5b0139"
+    },
+    {
+      "path": "Contents/Resources/VLCPlayTemplate.pdf",
+      "bytes": 5399,
+      "sha256": "747e79dd3c91fa3bf7bed50d01001960e823d53eda4c45bcc15e49ed163442f7"
+    },
+    {
+      "path": "Contents/Resources/VLCPreviousTemplate.pdf",
+      "bytes": 3094,
+      "sha256": "9d8a47b4c0e0dc19b7a888e12bdc336c33924b7ee25c4914e534ff75099d2cbc"
+    },
+    {
+      "path": "Contents/Resources/VLCSaveTemplate.pdf",
+      "bytes": 6310,
+      "sha256": "e2da8987d967bb580c28caed0fb761dd9ca282014c2cf27b3357e16bef0affa5"
+    },
+    {
+      "path": "Contents/Resources/VLCShuffleTemplate.pdf",
+      "bytes": 3516,
+      "sha256": "554c45caadf47210f229f31c628263a4eaf5afa1fe28c331a5d930b300aa2000"
+    },
+    {
+      "path": "Contents/Resources/VLCStatusBarIcon.pdf",
+      "bytes": 6398,
+      "sha256": "704f2724169f4ece58ce9dd99fb81bedab3b1a23d23a264d822a3bc087582a6b"
+    },
+    {
+      "path": "Contents/Resources/VLCSubtitleCone.png",
+      "bytes": 4002,
+      "sha256": "b3773e8acad07b89bd0ea768e547cfeb86883c33b135558975a8c32aba06719e"
+    },
+    {
+      "path": "Contents/Resources/VLCVideoCone.png",
+      "bytes": 4734,
+      "sha256": "1060910a64f6d8b0ddd94fdf8f79d8fe9891e5540929fccbf54d532944e826a9"
+    },
+    {
+      "path": "Contents/Resources/VLCVolumeOffTemplate.pdf",
+      "bytes": 5428,
+      "sha256": "37950b709ddb96cdb843cb57d2403d7f113b7c45ca0be1fc40cb7ff54286f8bb"
+    },
+    {
+      "path": "Contents/Resources/VLCVolumeOnTemplate.pdf",
+      "bytes": 5472,
+      "sha256": "37b3d5d797e057f6d490a1d6fa1355f47fad754a8e1dbdfe44c54fb4a16752ea"
+    },
+    {
+      "path": "Contents/Resources/aiff.icns",
+      "bytes": 102425,
+      "sha256": "8a66a472d23900c5e5644629859318e40a1d6c91f06fc0ab9de2fbf21ec7e1b7"
+    },
+    {
+      "path": "Contents/Resources/album.png",
+      "bytes": 3508,
+      "sha256": "39b72b20cdb551c981ed39471a58334a71596f82c1bc090bb011812de5b96cbd"
+    },
+    {
+      "path": "Contents/Resources/album@2x.png",
+      "bytes": 9182,
+      "sha256": "fcf3283fa3495df0a0d445e91a5c2a119a329f59df3e2279e710f8c8fa7b82e6"
+    },
+    {
+      "path": "Contents/Resources/ar.lproj/InfoPlist.strings",
+      "bytes": 1110,
+      "sha256": "333cb47f68f824b06c346686fba3be0d1aeeae0ffdd2dfcd05c11634dcecc81c"
+    },
+    {
+      "path": "Contents/Resources/artist.png",
+      "bytes": 10445,
+      "sha256": "16e35e811f9dbeb759893b8d38c2e07fbf6ec21ff5f4e016e6b1dc5a1cd79a9b"
+    },
+    {
+      "path": "Contents/Resources/artist@2x.png",
+      "bytes": 26092,
+      "sha256": "02eecae7aa843ff761c5d11714b9b90bf246a9b09b55eff3412e5c62f9ecc0d7"
+    },
+    {
+      "path": "Contents/Resources/audio.icns",
+      "bytes": 99452,
+      "sha256": "100d192d171f8e6a0e2c6610af6d9b33b593a6abea94bf343dba0bbfa4a73b91"
+    },
+    {
+      "path": "Contents/Resources/avi.icns",
+      "bytes": 118595,
+      "sha256": "93c4d6155934ffc91b9e5e6bdced938bc6d76c8d2d8326d7564b5973107cfce1"
+    },
+    {
+      "path": "Contents/Resources/backward-3btns-pressed.png",
+      "bytes": 260,
+      "sha256": "a7fceb27dac82fb54698be468aeb2557db4d38a6332f7ebd1c6ff6ba0e04172a"
+    },
+    {
+      "path": "Contents/Resources/backward-3btns-pressed@2x.png",
+      "bytes": 433,
+      "sha256": "1bffb8cd3287fba0c7a32cda9b5c852b03c66981774fbedf331dd013f5570a6d"
+    },
+    {
+      "path": "Contents/Resources/backward-3btns.png",
+      "bytes": 245,
+      "sha256": "942c46cb53890564f6d9abfcf97feb983f4033ae978e58185762819eb47ee23d"
+    },
+    {
+      "path": "Contents/Resources/backward-3btns@2x.png",
+      "bytes": 413,
+      "sha256": "c2a239ddeedeefe452bd1269dbcf59b5859638a007712fb3fc9f5438b45c6279"
+    },
+    {
+      "path": "Contents/Resources/backward-6btns-pressed.png",
+      "bytes": 170,
+      "sha256": "cecee9a8292042b9fcd21842f57676a9438b387f5f623e5ea4127fb1d121a4ec"
+    },
+    {
+      "path": "Contents/Resources/backward-6btns-pressed@2x.png",
+      "bytes": 244,
+      "sha256": "c45bd5b62254f44cb149a508620fc978eadead5526da93cb9a0c214ff26a110c"
+    },
+    {
+      "path": "Contents/Resources/backward-6btns.png",
+      "bytes": 164,
+      "sha256": "c8548aca3257e5016b89196340fbf25afc1e1ac1b83c1d247449a520cba6b56b"
+    },
+    {
+      "path": "Contents/Resources/backward-6btns@2x.png",
+      "bytes": 240,
+      "sha256": "eb1f4dcc6f40eadab254eaf54de49667fecab15ea28cd2b63804f006e1759328"
+    },
+    {
+      "path": "Contents/Resources/bg.lproj/InfoPlist.strings",
+      "bytes": 1367,
+      "sha256": "3121eda1b60e3d39de704a39d47a653569414885401d475bbfa6f937a5bc1edb"
+    },
+    {
+      "path": "Contents/Resources/bw-Music.png",
+      "bytes": 593,
+      "sha256": "58d834c51d21efa6f97eb5648773e00e78a33c659af2c4504003801bf941cea1"
+    },
+    {
+      "path": "Contents/Resources/bw-Music@2x.png",
+      "bytes": 1066,
+      "sha256": "4f50baec6e46d05d13a89cc15cad08534f9d238b1e43c8b3e453d9a02ce53084"
+    },
+    {
+      "path": "Contents/Resources/bw-Music@3x.png",
+      "bytes": 1568,
+      "sha256": "f3bdec934b35c64ec53c0364627c5ed995999c8cd0f133c20bc945b522d949aa"
+    },
+    {
+      "path": "Contents/Resources/bw-Podcast.png",
+      "bytes": 1146,
+      "sha256": "84505974dd7dddfb7672dc9a804f946e50aa9dedcaaaf19748172894ab229049"
+    },
+    {
+      "path": "Contents/Resources/bw-Podcast@1,5x.svg",
+      "bytes": 1316,
+      "sha256": "c33228d6ffcfb4b258e7171426a3bf930d8bc9e9149307b3c49e5683aedc6809"
+    },
+    {
+      "path": "Contents/Resources/bw-Podcast@2x.png",
+      "bytes": 2206,
+      "sha256": "891bf4f41f4a5401e3c40620f100063ca2e0107b674d274a18118ace6619f491"
+    },
+    {
+      "path": "Contents/Resources/bw-Podcast@3x.png",
+      "bytes": 3413,
+      "sha256": "b0c2d892fcaced890d32413f81e4001d05ca5783db2e46e38d18b96e6d70afbf"
+    },
+    {
+      "path": "Contents/Resources/bw-Server1.png",
+      "bytes": 652,
+      "sha256": "a9eb4e822fb7f578599f6a6e995d98a48cdaf1fbb6be631dff441e911e453ac2"
+    },
+    {
+      "path": "Contents/Resources/bw-Server1@2x.png",
+      "bytes": 1298,
+      "sha256": "1ca69affa800e925b6f66185d4b2f12dcea2d193624f9aecbdd7a4636cf69e85"
+    },
+    {
+      "path": "Contents/Resources/bw-Server1@3x.png",
+      "bytes": 1922,
+      "sha256": "26dbe6543d29982ade023ebbd0473d7430672946b3caf31ca366618acfb4b536"
+    },
+    {
+      "path": "Contents/Resources/bw-blu-ray.png",
+      "bytes": 1113,
+      "sha256": "595f055f843ae2a34757077e4b0acb7725483cbde8b655404be442b4f3845363"
+    },
+    {
+      "path": "Contents/Resources/bw-blu-ray@2x.png",
+      "bytes": 2492,
+      "sha256": "b1180804641c1e7c0f99e443428716278cbac60bb52154769bc775ad29e2268f"
+    },
+    {
+      "path": "Contents/Resources/bw-blu-ray@3x.png",
+      "bytes": 3918,
+      "sha256": "24dd045d24badc6bd355887b3693e7c9d9d1828e9e8e6929d5a9348dc423b648"
+    },
+    {
+      "path": "Contents/Resources/bw-home.png",
+      "bytes": 1102,
+      "sha256": "3892c71650a8fff4df908c0cacf8731108b660a1eab0fa0e3443f8bb0b57cf7f"
+    },
+    {
+      "path": "Contents/Resources/bw-home@2x.png",
+      "bytes": 2100,
+      "sha256": "8daf8820a6be462611872ba63e659a39320156b484c0dec7a07aabb157fb30f7"
+    },
+    {
+      "path": "Contents/Resources/bw-home@3x.png",
+      "bytes": 3213,
+      "sha256": "38637bb1c90ce54897c11fc6109f20656db273adfcac4b199d1294c64c33bb44"
+    },
+    {
+      "path": "Contents/Resources/bw-phone.png",
+      "bytes": 233,
+      "sha256": "127658195a9fa66166b92f279091fbd234da08c00166e87328887b66302964dd"
+    },
+    {
+      "path": "Contents/Resources/bw-phone@2x.png",
+      "bytes": 426,
+      "sha256": "77cd91a479aa4749c17ab9b7fed4862fca88464e3c9836bab559dd5966297d61"
+    },
+    {
+      "path": "Contents/Resources/bw-phone@3x.png",
+      "bytes": 710,
+      "sha256": "120ac52bffcfeb92dd88b28e4956cf38ce944ca8bc54aa3c91f30024783e5f73"
+    },
+    {
+      "path": "Contents/Resources/bw-server2.png",
+      "bytes": 655,
+      "sha256": "3d8c58471e9bee20cc77db6eafbd7d2a58d25e8ed76d8f0e325f90b756eac4ad"
+    },
+    {
+      "path": "Contents/Resources/bw-server2@2x.png",
+      "bytes": 1313,
+      "sha256": "fe1b0b6db0d60a3b61da242b01063a6d81f0a5d1f384c1659f7e6ced40aebb43"
+    },
+    {
+      "path": "Contents/Resources/bw-server2@3x.png",
+      "bytes": 1947,
+      "sha256": "2bc32653bcda0d1ec13ca4b6ea5a87f83ddae2b67cb2131c0b60cbb4bc9b3dfd"
+    },
+    {
+      "path": "Contents/Resources/bw-usb1.png",
+      "bytes": 275,
+      "sha256": "68782637b8feb7821248b8ffe7f6af1fa5847dddcc9fa996f5b524d51b73dd0e"
+    },
+    {
+      "path": "Contents/Resources/bw-usb1@2x.png",
+      "bytes": 459,
+      "sha256": "c4fb05ca61d6623975ea567058d59b4af7090d11799e07dfb1b252975b58eeaa"
+    },
+    {
+      "path": "Contents/Resources/bw-usb1@3x.png",
+      "bytes": 711,
+      "sha256": "d76a86cb1658b8ce74f2635b192873d09689fbf76f0b13aba1db147498f921ff"
+    },
+    {
+      "path": "Contents/Resources/bw-usb2.png",
+      "bytes": 272,
+      "sha256": "873029fffedde0c3bfc3c13f6c4ec89c894bc087fc90d6f19c6edcc772f3f207"
+    },
+    {
+      "path": "Contents/Resources/bw-usb2@2x.png",
+      "bytes": 460,
+      "sha256": "219b3dd9fc0d2fe917cc896a4ff6236dc37eba2d23235b4fb60120b55ee276c1"
+    },
+    {
+      "path": "Contents/Resources/bw-usb2@3x.png",
+      "bytes": 700,
+      "sha256": "5c650e9d1fec6f29e8c5ba04a8a182f40da12f1e5ff61660af610c7cd09988a5"
+    },
+    {
+      "path": "Contents/Resources/bw-video.png",
+      "bytes": 1180,
+      "sha256": "ab6e6268881b8a1a043cf66eca9ae59bfe9ea050a89a4587d93ca79d27d55765"
+    },
+    {
+      "path": "Contents/Resources/bw-video@2x.png",
+      "bytes": 2325,
+      "sha256": "9a47a57ec738242040a0abd6c168a184bcdc042725f241e7e3164ff57a21a798"
+    },
+    {
+      "path": "Contents/Resources/bw-video@3x.png",
+      "bytes": 3772,
+      "sha256": "f7d45b98773e7e222787ffef54f6a24ceb03bbe2d6fa4928a31bb511bd0cee56"
+    },
+    {
+      "path": "Contents/Resources/ca.lproj/InfoPlist.strings",
+      "bytes": 923,
+      "sha256": "7e2b400a165e1cd76eed6eb675c41aa379d3ab16977ce722fe74d6f693cab8f6"
+    },
+    {
+      "path": "Contents/Resources/cs.lproj/InfoPlist.strings",
+      "bytes": 914,
+      "sha256": "5b775b2503cd2673a150683ee33c8eb598dea709bfffc63d2f3041ebb338be37"
+    },
+    {
+      "path": "Contents/Resources/de.lproj/InfoPlist.strings",
+      "bytes": 910,
+      "sha256": "6890c18c8f21b6edb95c41eade28457df77fbef21d3ec048fb46ca9e6388ffe5"
+    },
+    {
+      "path": "Contents/Resources/dsa_pub.pem",
+      "bytes": 1178,
+      "sha256": "d0d48fc20287a155b1f676a2066965dccd1bfb89f74a1ac1f4cc0018616699b1"
+    },
+    {
+      "path": "Contents/Resources/effects-double-buttons-pressed.png",
+      "bytes": 215,
+      "sha256": "5fffaaf85ce13ae566047162600b958632690cecc1ab91a6663cd0d5b61ebb3c"
+    },
+    {
+      "path": "Contents/Resources/effects-double-buttons-pressed@2x.png",
+      "bytes": 339,
+      "sha256": "2475cc99171f9bb232157f5e9153e2dbac1b62a6a8a6675aaf8f36fe391b7214"
+    },
+    {
+      "path": "Contents/Resources/effects-double-buttons.png",
+      "bytes": 196,
+      "sha256": "ece247bc77628390752109e931ef2306fe5d550f82eb615e06560f56b936da7e"
+    },
+    {
+      "path": "Contents/Resources/effects-double-buttons@2x.png",
+      "bytes": 321,
+      "sha256": "591763e454a86b8ae33e7bcc73d719a0863e9dbde98dbf3d477294352a412574"
+    },
+    {
+      "path": "Contents/Resources/effects-one-button-pressed.png",
+      "bytes": 258,
+      "sha256": "3a86e2887c9c07ec5d1fc1c95c7758fa413ddd8fa0b0df265f64ae57c4d54bf8"
+    },
+    {
+      "path": "Contents/Resources/effects-one-button-pressed@2x.png",
+      "bytes": 442,
+      "sha256": "390f5c75a3844518837812d8b6403d9e9fac0cbdb7f70713a02337f39f5b4463"
+    },
+    {
+      "path": "Contents/Resources/effects-one-button.png",
+      "bytes": 234,
+      "sha256": "5813dd89bb8d76042e40d84f93453f1fa6709a4ad9d27c0c29df3f42e446cf0a"
+    },
+    {
+      "path": "Contents/Resources/effects-one-button@2x.png",
+      "bytes": 418,
+      "sha256": "8b72e421986a9ce92bfecd4dcc7a3d06efdfac2c23909c9ef43050e08d5ade6b"
+    },
+    {
+      "path": "Contents/Resources/el.lproj/InfoPlist.strings",
+      "bytes": 1570,
+      "sha256": "ced0ab1c142cdaefe6dcb988cefc4fac58506ed093e94c65e65d501d2b263ede"
+    },
+    {
+      "path": "Contents/Resources/ellipsis.png",
+      "bytes": 136,
+      "sha256": "a9384aabb22e8f9be85a2f0a8d0a6d3a388681850ac45ce99412ba1a80a75bd0"
+    },
+    {
+      "path": "Contents/Resources/ellipsis@2x.png",
+      "bytes": 170,
+      "sha256": "821ebc3862ad33e3a637ee8f77f3dbb37f577bb24d9b57b1b327964db07ac737"
+    },
+    {
+      "path": "Contents/Resources/es.lproj/InfoPlist.strings",
+      "bytes": 855,
+      "sha256": "9d7b0f96caeb81d33082884d677919fe53f8739a644724e8246b90f3039ac771"
+    },
+    {
+      "path": "Contents/Resources/flv.icns",
+      "bytes": 117770,
+      "sha256": "0b3b58b6142a922aa4fd5530de52b7aecea222a6fb7a1c863499bb3cef3def04"
+    },
+    {
+      "path": "Contents/Resources/forward-3btns-pressed.png",
+      "bytes": 244,
+      "sha256": "7f3c502b4db38850f715a6bf16f379e471f1be199b9b85a7eb3860138b4f735c"
+    },
+    {
+      "path": "Contents/Resources/forward-3btns-pressed@2x.png",
+      "bytes": 424,
+      "sha256": "8da712cc0d97fda9bc7585248d70564d0bd4766bba905757cd133b262a474644"
+    },
+    {
+      "path": "Contents/Resources/forward-3btns.png",
+      "bytes": 230,
+      "sha256": "452196ae3dd5fb9bb74b23a3dba55e36c88770fdd7d56ba1123574ee33493e81"
+    },
+    {
+      "path": "Contents/Resources/forward-3btns@2x.png",
+      "bytes": 403,
+      "sha256": "f635e821114d91c03f3162be31aaa044b782fa37b98fe0195d7a6ba6e750fede"
+    },
+    {
+      "path": "Contents/Resources/forward-6btns-pressed.png",
+      "bytes": 157,
+      "sha256": "0c15fc0b93d8683c4fb226b27c57814bb59e4fdbde8bc3758223b844cb22a0a0"
+    },
+    {
+      "path": "Contents/Resources/forward-6btns-pressed@2x.png",
+      "bytes": 227,
+      "sha256": "7946534dbbc77b97cafcb09a4b8e9c35d582d393b9c38b9a408b85a19ba866df"
+    },
+    {
+      "path": "Contents/Resources/forward-6btns.png",
+      "bytes": 155,
+      "sha256": "275b135a78724760144558a443e570d7609c8fd637db049255e985ce56e16201"
+    },
+    {
+      "path": "Contents/Resources/forward-6btns@2x.png",
+      "bytes": 227,
+      "sha256": "b00041430966dea8e96797b44dfe6cba576761fec8f918c1a2ca9a0d54936f15"
+    },
+    {
+      "path": "Contents/Resources/fr.lproj/InfoPlist.strings",
+      "bytes": 973,
+      "sha256": "e0e26e0768420bf714a6197b75cfae916d329135335ad3712e3b12766a28055f"
+    },
+    {
+      "path": "Contents/Resources/fullscreen-double-buttons-pressed.png",
+      "bytes": 323,
+      "sha256": "c4934961f79131a79ac6a8cee29f020334646a79a3f51f8e287cfc21d5a6b92e"
+    },
+    {
+      "path": "Contents/Resources/fullscreen-double-buttons-pressed@2x.png",
+      "bytes": 536,
+      "sha256": "00c25860eec040ab02e5001f6f89ff3e34d9899d840ec2718b77608540af65d2"
+    },
+    {
+      "path": "Contents/Resources/fullscreen-double-buttons.png",
+      "bytes": 302,
+      "sha256": "cf79acc3e00c476c85c114fce33bafbe8c12872b2ab214fb26a521267d61ff9e"
+    },
+    {
+      "path": "Contents/Resources/fullscreen-double-buttons@2x.png",
+      "bytes": 519,
+      "sha256": "f6c7b0ed755b5eb05e57e37f596fb6ebb0c291523ecd96c2b05107618d16ac49"
+    },
+    {
+      "path": "Contents/Resources/fullscreen-one-button-pressed.png",
+      "bytes": 359,
+      "sha256": "446f36c9ec1893dc6429796817973ba117dd1294e23b460284aa04f2c9320972"
+    },
+    {
+      "path": "Contents/Resources/fullscreen-one-button-pressed@2x.png",
+      "bytes": 629,
+      "sha256": "f4458c5f840db23c354ef84117999b24963f6135caec458485fc6369e171f191"
+    },
+    {
+      "path": "Contents/Resources/fullscreen-one-button.png",
+      "bytes": 333,
+      "sha256": "adfcf994b215add694bf8f5fcd1a3767cfe1ddc04c7aaf2084d98899a530b703"
+    },
+    {
+      "path": "Contents/Resources/fullscreen-one-button@2x.png",
+      "bytes": 604,
+      "sha256": "30601ec672532fcd7d564fe39cec39b4840e7a1a6b2e25b83019e53f369ecb7e"
+    },
+    {
+      "path": "Contents/Resources/generic.icns",
+      "bytes": 88709,
+      "sha256": "f51c205fa01a30f159bc65a7c190610912567db81ea0cf1665f045c1a7478ae6"
+    },
+    {
+      "path": "Contents/Resources/gl.lproj/InfoPlist.strings",
+      "bytes": 880,
+      "sha256": "a79f498be890a81536e4bf0ee6c8fd4eb3718f428bc023c83cfe21f2361430ed"
+    },
+    {
+      "path": "Contents/Resources/he.lproj/InfoPlist.strings",
+      "bytes": 1032,
+      "sha256": "cd7165d95489e5d382f34e0e256384b786a3829c59be78aca71c525d337341ff"
+    },
+    {
+      "path": "Contents/Resources/hu.lproj/InfoPlist.strings",
+      "bytes": 964,
+      "sha256": "eb7c9acbb9ac14296da77ea8e434579a28a2d2db77f1160767a35a74da5e22c9"
+    },
+    {
+      "path": "Contents/Resources/it.lproj/InfoPlist.strings",
+      "bytes": 910,
+      "sha256": "1c6e688706232d7450eca971ea74cd8a866eacbd7c419138166428da735e9352"
+    },
+    {
+      "path": "Contents/Resources/ja.lproj/InfoPlist.strings",
+      "bytes": 1213,
+      "sha256": "ef126ebcb796d8da53d594b27e171b6531e3e3d635cea6720c85ac52cffca164"
+    },
+    {
+      "path": "Contents/Resources/libraryPlay.png",
+      "bytes": 1710,
+      "sha256": "eafd46e9a7c3729c9daaec501c6beea07e225afd21008b341157ee83648d4474"
+    },
+    {
+      "path": "Contents/Resources/libraryPlay@2x.png",
+      "bytes": 2245,
+      "sha256": "bbe92a950a489060b43808ffbc980979c131f326a42ca23c72e46211da73e694"
+    },
+    {
+      "path": "Contents/Resources/lv.lproj/InfoPlist.strings",
+      "bytes": 888,
+      "sha256": "8e8a1a885806927233452c4baa096993583aa352f70d73215d8ddcf7727c8775"
+    },
+    {
+      "path": "Contents/Resources/m4a.icns",
+      "bytes": 103683,
+      "sha256": "5600dbc7c233ca5ef5b13d9004135498e8c754c1f76aef6f431a66269e112a78"
+    },
+    {
+      "path": "Contents/Resources/m4v.icns",
+      "bytes": 119701,
+      "sha256": "1ceb203fa333f4d9a89ad116921946e9013766821ecce6b80f4d4bf617ff5f13"
+    },
+    {
+      "path": "Contents/Resources/mkv.icns",
+      "bytes": 120072,
+      "sha256": "dd46385df5b0c88ea7a37177d67fa493e41fa1e324e3d65d1e107eff63378300"
+    },
+    {
+      "path": "Contents/Resources/mov.icns",
+      "bytes": 120399,
+      "sha256": "1a49120af09256209878dd13d9f2ae078e7179cc689f7155daa6267f2d35b4ef"
+    },
+    {
+      "path": "Contents/Resources/movie.icns",
+      "bytes": 114498,
+      "sha256": "bac211913058b25e392ae9c2196910773afa7f0b57463b5ea69deacdce7f9b93"
+    },
+    {
+      "path": "Contents/Resources/mp3.icns",
+      "bytes": 103514,
+      "sha256": "2c97ff58fd839fbf78fcb237276171b04576a5fbd826365a9574c3e9ab13825f"
+    },
+    {
+      "path": "Contents/Resources/mpeg.icns",
+      "bytes": 120375,
+      "sha256": "7e2fc6544910011ec08a931a026de64a565d04b15fb9e97e0d1e569e1fcb7d01"
+    },
+    {
+      "path": "Contents/Resources/next-6btns-pressed.png",
+      "bytes": 254,
+      "sha256": "a04106ef227757e56b728cd6e59b865ddb7b1a9c1691eae5119dc2efaff9baf7"
+    },
+    {
+      "path": "Contents/Resources/next-6btns-pressed@2x.png",
+      "bytes": 432,
+      "sha256": "f9ba847e614233eff8fce3b471de621d41a4a9a224c7a15fa439d23020bd89a9"
+    },
+    {
+      "path": "Contents/Resources/next-6btns.png",
+      "bytes": 234,
+      "sha256": "a6b12c7c81c637e3a6a4dc2b5dccc85f80159189ac2e3544dbc93d0dbac08488"
+    },
+    {
+      "path": "Contents/Resources/next-6btns@2x.png",
+      "bytes": 409,
+      "sha256": "5295fcbc6bbbc327a330cd8f938d23562f1cdd70cbf6ee52d1ad179195f7e52c"
+    },
+    {
+      "path": "Contents/Resources/nl.lproj/InfoPlist.strings",
+      "bytes": 866,
+      "sha256": "f9361c8ecee1143c28dcecfd87f83498f24957e969d04d6e9d82576f1f96d5c3"
+    },
+    {
+      "path": "Contents/Resources/noart.png",
+      "bytes": 15346,
+      "sha256": "1103a607e6b4daa78fb9549ee86fbe8e99907656ab2460309fcefefc4c66cd5c"
+    },
+    {
+      "path": "Contents/Resources/note.png",
+      "bytes": 267,
+      "sha256": "91047c4dc7c6241cb13bd8ddeb9fff44b84931490360422d020b11cb69b2fc26"
+    },
+    {
+      "path": "Contents/Resources/note@2x.png",
+      "bytes": 400,
+      "sha256": "c33790aff8c16e4264557680160e2076b32c23d8097f8328eb59a015a12ce562"
+    },
+    {
+      "path": "Contents/Resources/ogg.icns",
+      "bytes": 104305,
+      "sha256": "fcaa3033def092d50d83602569f7038181e174bd6d6935e484b423e824228bdc"
+    },
+    {
+      "path": "Contents/Resources/pause-pressed.png",
+      "bytes": 111,
+      "sha256": "fa08742143d9963c4097a03f0d3470014b60c55aa9109572fd8cba404b58fe7d"
+    },
+    {
+      "path": "Contents/Resources/pause-pressed@2x.png",
+      "bytes": 130,
+      "sha256": "5559319c38a9eb913947f4560eb91960a9506510ae6869349bef6add4f157c33"
+    },
+    {
+      "path": "Contents/Resources/pause.png",
+      "bytes": 111,
+      "sha256": "ff3c150c44319d03e0277f29d20d7b5a96d6c928109578a71a3ad29cfdd40207"
+    },
+    {
+      "path": "Contents/Resources/pause@2x.png",
+      "bytes": 130,
+      "sha256": "cf7e19f4fa0c2345f58abadd1c91b6acd2079ff453f6510880fdc4618e84aa91"
+    },
+    {
+      "path": "Contents/Resources/pl.lproj/InfoPlist.strings",
+      "bytes": 987,
+      "sha256": "dd4493f9241eed077d0866752f0e8fd58561f7decd7f76d6fa754b73019aa9a5"
+    },
+    {
+      "path": "Contents/Resources/placeholder-group2.pdf",
+      "bytes": 6278,
+      "sha256": "6f6442c53dcd7a8045455affe81e3c1f22ec02ca973f9d1bd21f81270d5da7f6"
+    },
+    {
+      "path": "Contents/Resources/placeholder-group2.png",
+      "bytes": 575,
+      "sha256": "8cd1af4432b00edadacdd911ebc11cc25f44ffcb8c4001e228d61102d290748f"
+    },
+    {
+      "path": "Contents/Resources/placeholder-group2.svg",
+      "bytes": 1316,
+      "sha256": "e823816634d94b8b322505fd0aa0253ec681bb45e3b7ef3ddd08185a8d890bf7"
+    },
+    {
+      "path": "Contents/Resources/placeholder-group2@2x.png",
+      "bytes": 930,
+      "sha256": "3771cf53f8e5b3c9760835f2ba76ad5aa8abee60e9a771d252d2a8c1d36dbbd0"
+    },
+    {
+      "path": "Contents/Resources/placeholder-music.pdf",
+      "bytes": 5928,
+      "sha256": "334b56a9513711e287a72af14232a595b6c7cb3be563290eaeab58598aa96e19"
+    },
+    {
+      "path": "Contents/Resources/placeholder-music.png",
+      "bytes": 292,
+      "sha256": "ac3f060399c64c90c1e84c21b94bc5fd54375c60ce653b184a087883422286e0"
+    },
+    {
+      "path": "Contents/Resources/placeholder-music.svg",
+      "bytes": 648,
+      "sha256": "68cfb45d0e55630645fc8a57cad42c90a4b37b0d2d510521e86b29c92730a263"
+    },
+    {
+      "path": "Contents/Resources/placeholder-music@2x.png",
+      "bytes": 383,
+      "sha256": "66d4c3eeeb74a81b9ba21c928494e71ab08083bdc9a1209f715697537498520a"
+    },
+    {
+      "path": "Contents/Resources/placeholder-video.pdf",
+      "bytes": 6157,
+      "sha256": "82e9158b2947da970986c1b1981b3334393bb8de706376aace4624627046871d"
+    },
+    {
+      "path": "Contents/Resources/placeholder-video.png",
+      "bytes": 364,
+      "sha256": "5f9e5683fa6acc69e59ad0b0d4381189942797b50d9c57a084d903c69eb3ed8f"
+    },
+    {
+      "path": "Contents/Resources/placeholder-video.svg",
+      "bytes": 960,
+      "sha256": "71fabc8f367012bcf554a80376bd3645f8feb53be6104cf7e19f36425db8494e"
+    },
+    {
+      "path": "Contents/Resources/placeholder-video@2x.png",
+      "bytes": 592,
+      "sha256": "8dc063dc9d0a55831de20dee472e0b4da1440fccd2bb37de3a4b51feccb01a99"
+    },
+    {
+      "path": "Contents/Resources/play-pressed.png",
+      "bytes": 193,
+      "sha256": "1280bf2bdde4fe79b6ef86f68ed5f578adf230e3d010b92bf9c980718ea7d61d"
+    },
+    {
+      "path": "Contents/Resources/play-pressed@2x.png",
+      "bytes": 323,
+      "sha256": "bb7c8224f582a7e0fc78c316a37637cb108241c1ee1f8e04908d56591c0ff76a"
+    },
+    {
+      "path": "Contents/Resources/play.png",
+      "bytes": 188,
+      "sha256": "9763b515d9da707702e7faf448cd769d3d96be340e9fe8dd6bb872f3b89e1fbf"
+    },
+    {
+      "path": "Contents/Resources/play@2x.png",
+      "bytes": 316,
+      "sha256": "877a5a4e54eb8e196aaeab0f5c276fe8da678869f1e212f1d8ef538e74a2578c"
+    },
+    {
+      "path": "Contents/Resources/playlist-1btn-pressed.png",
+      "bytes": 243,
+      "sha256": "aee94b0c573d0f7ff3f81ceda7ea7918d09ecc2974e09bb556d41e159a157ff6"
+    },
+    {
+      "path": "Contents/Resources/playlist-1btn-pressed@2x.png",
+      "bytes": 430,
+      "sha256": "0c54c5a87efb767ec0889332b78299be4b0511303b2bbde9246b4acf8aadf46e"
+    },
+    {
+      "path": "Contents/Resources/playlist-1btn.png",
+      "bytes": 221,
+      "sha256": "f723c5c2a90cbc60a3eac235de4f983a351c8d54a967a1e3ca3b4b3183381737"
+    },
+    {
+      "path": "Contents/Resources/playlist-1btn@2x.png",
+      "bytes": 406,
+      "sha256": "55b9c782aa83c185ec6cd5225cd7bce3df400f4fece5ae481f5339cf43218842"
+    },
+    {
+      "path": "Contents/Resources/playlist-btn-pressed.png",
+      "bytes": 200,
+      "sha256": "4a9a9586e523d69aca8d8a39ee07ecf8734f5a0fb38078d72599fb4fef17c537"
+    },
+    {
+      "path": "Contents/Resources/playlist-btn-pressed@2x.png",
+      "bytes": 324,
+      "sha256": "6674ae8ceb7887fb512917c713cbc930e292703e4ff286ac879836757bcfff22"
+    },
+    {
+      "path": "Contents/Resources/playlist-btn.png",
+      "bytes": 186,
+      "sha256": "713272bbcc083d96de6e4e23ad9698c4bc913a7d4583497d64ff74a3889c9b4b"
+    },
+    {
+      "path": "Contents/Resources/playlist-btn@2x.png",
+      "bytes": 305,
+      "sha256": "6924b565df8423759fa528b9529d4d7e6d92e967b818cb83ee6546b8942634bc"
+    },
+    {
+      "path": "Contents/Resources/playlist.icns",
+      "bytes": 89668,
+      "sha256": "ceaefc90b9225fd054ebc8911d0ac908aee97e0f42c4e18e4dcf47c61b5f1e27"
+    },
+    {
+      "path": "Contents/Resources/previous-6btns-pressed.png",
+      "bytes": 268,
+      "sha256": "068128d801682b4dc48c541ffa070cafb46e2415d01ecb9b60afa944902391a2"
+    },
+    {
+      "path": "Contents/Resources/previous-6btns-pressed@2x.png",
+      "bytes": 440,
+      "sha256": "84d16dc0287becd005a73e25d33ae50eeb1941f5c7202e8f3b9cca075d16b35b"
+    },
+    {
+      "path": "Contents/Resources/previous-6btns.png",
+      "bytes": 250,
+      "sha256": "180ede8992f6db0b4b9c05c438595c924515fc6352101c74fe07b3c8e81a3ebb"
+    },
+    {
+      "path": "Contents/Resources/previous-6btns@2x.png",
+      "bytes": 420,
+      "sha256": "bf100d90ebfa50cd84ad1a608b708e1ef56242f70f20c574b19f661d45ceaf61"
+    },
+    {
+      "path": "Contents/Resources/pt-BR.lproj/InfoPlist.strings",
+      "bytes": 911,
+      "sha256": "d2e4e809ac9b8c9eb781cd0c887386b25b211344dcbc327f53c8dfae47116cc7"
+    },
+    {
+      "path": "Contents/Resources/pt-PT.lproj/InfoPlist.strings",
+      "bytes": 968,
+      "sha256": "89c1889e8d034cba85d87462506515f3f0aca974e00ed1f06bf1b71c5e5b6297"
+    },
+    {
+      "path": "Contents/Resources/repeat-all-pressed.png",
+      "bytes": 357,
+      "sha256": "61746c9ed7f83e6d0060dc89c17229812c429f785107450598db549dc2b8a2c1"
+    },
+    {
+      "path": "Contents/Resources/repeat-all-pressed@2x.png",
+      "bytes": 643,
+      "sha256": "560dd6b63e9f39f6343630018a6266963c06885046c01f0d12de4f259a900aaf"
+    },
+    {
+      "path": "Contents/Resources/repeat-all.png",
+      "bytes": 344,
+      "sha256": "f09819095b0094ed96ffd0e4119ce19f1c37f6feb288bacd4c0a32ab8ae6b964"
+    },
+    {
+      "path": "Contents/Resources/repeat-all@2x.png",
+      "bytes": 609,
+      "sha256": "0a45d0fcae64598a54dc027a5946bb5ffe97befb55ba4e5a5cad9c0b6fed1a29"
+    },
+    {
+      "path": "Contents/Resources/repeat-one-pressed.png",
+      "bytes": 376,
+      "sha256": "950bcb50e1e4156908b53c06244875c19ade4d2ee942a592bb208dca48a37dc5"
+    },
+    {
+      "path": "Contents/Resources/repeat-one-pressed@2x.png",
+      "bytes": 686,
+      "sha256": "c17fd72d83bb87e1a13448dcf87ec83495463e5271b3df1816c326d74ef1480e"
+    },
+    {
+      "path": "Contents/Resources/repeat-one.png",
+      "bytes": 362,
+      "sha256": "9fb17ec4f13377dbf3a2fce37fb54f738adc4bbed3afbf1cc98d9669bd45ae0f"
+    },
+    {
+      "path": "Contents/Resources/repeat-one@2x.png",
+      "bytes": 667,
+      "sha256": "d7af03c50543df3ce26d683420d9b8ea1e6b9f296987a5c1c72c1c2571044ee2"
+    },
+    {
+      "path": "Contents/Resources/repeat-pressed.png",
+      "bytes": 346,
+      "sha256": "4c5374e82e82265137178d38dd1a1f61b35d4c8b5aa5a61f90b4050d6c84f2fd"
+    },
+    {
+      "path": "Contents/Resources/repeat-pressed@2x.png",
+      "bytes": 614,
+      "sha256": "d2a7d7e6f90645350ba578cd460fa278f49b75534b09f0fa6d77a5ea079fbc03"
+    },
+    {
+      "path": "Contents/Resources/repeat.png",
+      "bytes": 339,
+      "sha256": "fab8bc8ddcd9d4722514613c054f603728b633cc311c355b8b35b160c5b9c837"
+    },
+    {
+      "path": "Contents/Resources/repeat@2x.png",
+      "bytes": 605,
+      "sha256": "fcb4b731c693c66d1b11d7dfdb97107b6e5ff3244cede0d23ae57309f932681e"
+    },
+    {
+      "path": "Contents/Resources/repeatAll.png",
+      "bytes": 1982,
+      "sha256": "28003682bc81bcacf9edb974cafa5878b4a2b81eea1998338838c4e12131c42f"
+    },
+    {
+      "path": "Contents/Resources/repeatAll@2x.png",
+      "bytes": 3189,
+      "sha256": "2fec25aa6c23a567d35877b030e2e090cba5d248b4abd6f4a4d6215e888d7830"
+    },
+    {
+      "path": "Contents/Resources/repeatOff.png",
+      "bytes": 318,
+      "sha256": "60594f3227c8e48ebee0d03349718d18a7814ba49941c5b9fc63e27a3ae7b0a0"
+    },
+    {
+      "path": "Contents/Resources/repeatOff@2x.png",
+      "bytes": 465,
+      "sha256": "95ec96dc16765030fa31765827c5b3e46e368f386ac82cf4b724aca5925ea9d6"
+    },
+    {
+      "path": "Contents/Resources/repeatOne.png",
+      "bytes": 407,
+      "sha256": "364fd8386f692027c9e781ac433b882bfd73f71a119b5b358c2202470d3aa99a"
+    },
+    {
+      "path": "Contents/Resources/repeatOne@2x.png",
+      "bytes": 661,
+      "sha256": "0926c629ed6878969e18f3c445a0ef7f191e846eddc59f86016669e2dd7cc0d6"
+    },
+    {
+      "path": "Contents/Resources/rm.icns",
+      "bytes": 118350,
+      "sha256": "64db3e929af14784e679eb04ca001419864256481729c20b69a1b65fab6278a5"
+    },
+    {
+      "path": "Contents/Resources/share/hrtfs/dodeca_and_7channel_3DSL_HRTF.sofa",
+      "bytes": 92388,
+      "sha256": "05ca927052cf83663b29546b06998b03ea7fbcd288f7c99e7af8b215ac77ec4e"
+    },
+    {
+      "path": "Contents/Resources/share/locale/ach/LC_MESSAGES/vlc.mo",
+      "bytes": 48512,
+      "sha256": "164b97e60db70c34d4475a861a5cfd897ac61c29ee8f888bbb5428d14fe591cc"
+    },
+    {
+      "path": "Contents/Resources/share/locale/af/LC_MESSAGES/vlc.mo",
+      "bytes": 105705,
+      "sha256": "9632837fd35a027153d184fa48c8467660dbebe83b459b80df02ed9f23178148"
+    },
+    {
+      "path": "Contents/Resources/share/locale/am/LC_MESSAGES/vlc.mo",
+      "bytes": 62933,
+      "sha256": "9aba2c87cbf6f0b8515aa68d0694b9b1b348b2c88dc4dc68bccd9107ef9f6a67"
+    },
+    {
+      "path": "Contents/Resources/share/locale/an/LC_MESSAGES/vlc.mo",
+      "bytes": 407328,
+      "sha256": "a9e1670669f5b5aeb1c53f39bc99a3c5ceae4aaeb7ae4308543cf18219db919c"
+    },
+    {
+      "path": "Contents/Resources/share/locale/ar/LC_MESSAGES/vlc.mo",
+      "bytes": 324387,
+      "sha256": "7b132bf8daae28cea984a6d3251c3d68505348fed78c63e78315686278573d4d"
+    },
+    {
+      "path": "Contents/Resources/share/locale/as/LC_MESSAGES/vlc.mo",
+      "bytes": 813472,
+      "sha256": "dc8b18a96a5d25e36c4d561319d37cf550093b47d5540123f3c46d21d6e90f1a"
+    },
+    {
+      "path": "Contents/Resources/share/locale/ast/LC_MESSAGES/vlc.mo",
+      "bytes": 405874,
+      "sha256": "ed0764e325566d419c5816410a8b9c5848e18e60007fcb3d873a33ce95032348"
+    },
+    {
+      "path": "Contents/Resources/share/locale/az/LC_MESSAGES/vlc.mo",
+      "bytes": 8867,
+      "sha256": "229651c50315332dfaf8f684a8a1548e75e8ae21717e1dfce3fe97a74864fd41"
+    },
+    {
+      "path": "Contents/Resources/share/locale/be/LC_MESSAGES/vlc.mo",
+      "bytes": 640200,
+      "sha256": "df266210d7ce0c0636d39562afeb2a1beea6c4ee5626425c1be4631cc1ebb63b"
+    },
+    {
+      "path": "Contents/Resources/share/locale/bg/LC_MESSAGES/vlc.mo",
+      "bytes": 543267,
+      "sha256": "e36e3e9211b92d98a7f0b85a3a7f2f3b790c4c575eced50fbb571406d3c76731"
+    },
+    {
+      "path": "Contents/Resources/share/locale/bn/LC_MESSAGES/vlc.mo",
+      "bytes": 571996,
+      "sha256": "48c0ecda74bfbf3bbf8e668770693e388926c7788c6457ce2664dff8356dad08"
+    },
+    {
+      "path": "Contents/Resources/share/locale/bn_IN/LC_MESSAGES/vlc.mo",
+      "bytes": 682523,
+      "sha256": "cab0bf636f6ef56a8f5d6c6bfcb37f3258da8d31a23c295dca0ce5faee984dd1"
+    },
+    {
+      "path": "Contents/Resources/share/locale/br/LC_MESSAGES/vlc.mo",
+      "bytes": 95351,
+      "sha256": "d84d7e7d30a5caab7311748d1b9585e3c4fc60b5d7d0721a696919c91db8c4da"
+    },
+    {
+      "path": "Contents/Resources/share/locale/brx/LC_MESSAGES/vlc.mo",
+      "bytes": 807203,
+      "sha256": "dcbe055726b3c96a4a8a7146b0d5e4c6ea5aae01464c64c1c4bed8fe1828f201"
+    },
+    {
+      "path": "Contents/Resources/share/locale/bs/LC_MESSAGES/vlc.mo",
+      "bytes": 162437,
+      "sha256": "2de1c81a005f2f883ea323c87ec7c5c6114efbd9075783168a147569ee41df7e"
+    },
+    {
+      "path": "Contents/Resources/share/locale/ca/LC_MESSAGES/vlc.mo",
+      "bytes": 541620,
+      "sha256": "3c3a54b7d8fc8349a61ee0a2aa607bddb9aab5da79723acf0008787e04581eef"
+    },
+    {
+      "path": "Contents/Resources/share/locale/cgg/LC_MESSAGES/vlc.mo",
+      "bytes": 35052,
+      "sha256": "9c3f48b0abb0c0009ffcb82e95483152f04c5de8dbe26476d424eb4f9454d7d0"
+    },
+    {
+      "path": "Contents/Resources/share/locale/ckb/LC_MESSAGES/vlc.mo",
+      "bytes": 79539,
+      "sha256": "feb37dca49024f8ae054655f7e8b63415a9ce7371c50c0269d647cc5023f0203"
+    },
+    {
+      "path": "Contents/Resources/share/locale/co/LC_MESSAGES/vlc.mo",
+      "bytes": 170210,
+      "sha256": "ebe499750a3723a36e6c94947ba42c7d2c143ebc1ad620c1cef7cd7e9647183f"
+    },
+    {
+      "path": "Contents/Resources/share/locale/cs/LC_MESSAGES/vlc.mo",
+      "bytes": 247881,
+      "sha256": "bae20d665467bf21e5ef5aa8d4b518e9a83febcba09d1c1037ff9f10450d6794"
+    },
+    {
+      "path": "Contents/Resources/share/locale/cy/LC_MESSAGES/vlc.mo",
+      "bytes": 275042,
+      "sha256": "1a7408b90d0cf6ff66dcab494aecbdd3b7c6a09ec2605f0c290514cba980c527"
+    },
+    {
+      "path": "Contents/Resources/share/locale/da/LC_MESSAGES/vlc.mo",
+      "bytes": 524027,
+      "sha256": "608ebe67d2ecf5409b2503a42f3153a7647c551343f6f8335053eb73a75bcb0b"
+    },
+    {
+      "path": "Contents/Resources/share/locale/de/LC_MESSAGES/vlc.mo",
+      "bytes": 543470,
+      "sha256": "1c22817f40c8360ae2be1b13eb1d8665b353551c59c0a4cf6ab9b6de3f5529e6"
+    },
+    {
+      "path": "Contents/Resources/share/locale/el/LC_MESSAGES/vlc.mo",
+      "bytes": 747008,
+      "sha256": "0605912f57667e8a8bc967e6f01861fbcab72588211176876d818d5cff2b432d"
+    },
+    {
+      "path": "Contents/Resources/share/locale/en_GB/LC_MESSAGES/vlc.mo",
+      "bytes": 53291,
+      "sha256": "1deca7c1b10ddb5ed7fb6ec1da1c7538f2706cef8808444c35e3e8c78dbd879a"
+    },
+    {
+      "path": "Contents/Resources/share/locale/es/LC_MESSAGES/vlc.mo",
+      "bytes": 543778,
+      "sha256": "cd2291f63e23842f2c177c5fe464de60a6aecfe2e77f2656372dcd95f8407d35"
+    },
+    {
+      "path": "Contents/Resources/share/locale/et/LC_MESSAGES/vlc.mo",
+      "bytes": 404073,
+      "sha256": "380a4a27e8fb7f9b7a26708864634ffc365169712e7e07e5761995565175bb32"
+    },
+    {
+      "path": "Contents/Resources/share/locale/eu/LC_MESSAGES/vlc.mo",
+      "bytes": 545412,
+      "sha256": "63c32c919e3cd3779b350a4ea79063e1807bef07a2226043972c004c787ed8b5"
+    },
+    {
+      "path": "Contents/Resources/share/locale/fa/LC_MESSAGES/vlc.mo",
+      "bytes": 164065,
+      "sha256": "05c40c9363745f71dcf289d0a452052b49e06f67019e0b81d57f95d546306fc3"
+    },
+    {
+      "path": "Contents/Resources/share/locale/ff/LC_MESSAGES/vlc.mo",
+      "bytes": 74474,
+      "sha256": "2d1fc38ec9b048fe4742e576e94d43109222c097ad9826e584b7bd64cea81152"
+    },
+    {
+      "path": "Contents/Resources/share/locale/fi/LC_MESSAGES/vlc.mo",
+      "bytes": 498757,
+      "sha256": "4b3aa0786821469b732274afcc373e3964033d986ab02ba90f0a217e850320f4"
+    },
+    {
+      "path": "Contents/Resources/share/locale/fr/LC_MESSAGES/vlc.mo",
+      "bytes": 543800,
+      "sha256": "271c664692e3bafc16cde74567d2a149a3f25b266dedde364296dfcb2844ae23"
+    },
+    {
+      "path": "Contents/Resources/share/locale/fur/LC_MESSAGES/vlc.mo",
+      "bytes": 34975,
+      "sha256": "71aad3a54a248d3805e58481a809dcc9cec97b97a6619b235a711a238b22fcb2"
+    },
+    {
+      "path": "Contents/Resources/share/locale/fy/LC_MESSAGES/vlc.mo",
+      "bytes": 524833,
+      "sha256": "f6fcafa169c749317aad193075cf7122d219d327d551600ca090583100d24ecb"
+    },
+    {
+      "path": "Contents/Resources/share/locale/ga/LC_MESSAGES/vlc.mo",
+      "bytes": 151405,
+      "sha256": "7c8491ea672d673ca546f8aeecab65d328b171921388ccdd57d5b5dc9086e84f"
+    },
+    {
+      "path": "Contents/Resources/share/locale/gd/LC_MESSAGES/vlc.mo",
+      "bytes": 173407,
+      "sha256": "9e3b50db0fad057d6b27476b47003f64c10a89a6a62430989cfa1f67ac4f2220"
+    },
+    {
+      "path": "Contents/Resources/share/locale/gl/LC_MESSAGES/vlc.mo",
+      "bytes": 533743,
+      "sha256": "281e46f5a94c557e7ee62bcf076f07ec7cfce830b4f7e3f56f2d46e5682ee919"
+    },
+    {
+      "path": "Contents/Resources/share/locale/gu/LC_MESSAGES/vlc.mo",
+      "bytes": 786040,
+      "sha256": "07731258c755e5e6f9b0708d9a3831c01b1f2d45a0067ad6f4fa9240904b81d0"
+    },
+    {
+      "path": "Contents/Resources/share/locale/he/LC_MESSAGES/vlc.mo",
+      "bytes": 375708,
+      "sha256": "d92ee4adbec1f3b7e32b7c9dbeafb9ff94825b3e118b4bd7112ee582495a88b6"
+    },
+    {
+      "path": "Contents/Resources/share/locale/hi/LC_MESSAGES/vlc.mo",
+      "bytes": 130186,
+      "sha256": "3957064f9ddf49e3d7c9dc6a167ec49a830e4105e47e324d37dff9170dbed151"
+    },
+    {
+      "path": "Contents/Resources/share/locale/hr/LC_MESSAGES/vlc.mo",
+      "bytes": 480633,
+      "sha256": "69d31742b5accb9c5ea1658b71faee520b8efd1a02eccf6d376a376fabc6440a"
+    },
+    {
+      "path": "Contents/Resources/share/locale/hu/LC_MESSAGES/vlc.mo",
+      "bytes": 553679,
+      "sha256": "ea080e8b16d37e28178bf0b8a3cacf78341eb319221e34c3e273d7b55c296c35"
+    },
+    {
+      "path": "Contents/Resources/share/locale/hy/LC_MESSAGES/vlc.mo",
+      "bytes": 125932,
+      "sha256": "031508683311a3e7bb328692bb177e96bfccb36fca02461714ab4d2e44487ded"
+    },
+    {
+      "path": "Contents/Resources/share/locale/ia/LC_MESSAGES/vlc.mo",
+      "bytes": 10923,
+      "sha256": "8e0bcca291535f88aef652a87d7d5f38b4a7cffd18a12af30777a535e77b433c"
+    },
+    {
+      "path": "Contents/Resources/share/locale/id/LC_MESSAGES/vlc.mo",
+      "bytes": 372283,
+      "sha256": "9bb4b4389d354ebba955d8d080664d9f64579e3b40c07c4f578992747c35c63f"
+    },
+    {
+      "path": "Contents/Resources/share/locale/is/LC_MESSAGES/vlc.mo",
+      "bytes": 216254,
+      "sha256": "ddaebe55b9d8d5d0e787eff1e840a0b2c0bdb0fd583023b0d932e3e3be134d18"
+    },
+    {
+      "path": "Contents/Resources/share/locale/it/LC_MESSAGES/vlc.mo",
+      "bytes": 545922,
+      "sha256": "c82938e55952862be82aecfe6c283342fe5b7fa33aa13c1aaea98b71d97a8c3a"
+    },
+    {
+      "path": "Contents/Resources/share/locale/ja/LC_MESSAGES/vlc.mo",
+      "bytes": 604398,
+      "sha256": "70e73756f80a03d1575ff5deb42d78eb0f6b16f27e8e4eaad9c6965b9d6ce657"
+    },
+    {
+      "path": "Contents/Resources/share/locale/ka/LC_MESSAGES/vlc.mo",
+      "bytes": 53385,
+      "sha256": "d20e310c0799f25cfe846e83f34bd86281f3aa5512b12265ad91dece82a40ef8"
+    },
+    {
+      "path": "Contents/Resources/share/locale/kk/LC_MESSAGES/vlc.mo",
+      "bytes": 229442,
+      "sha256": "71be2af610485ee2b9ba2fe68e20eb85084892264c60503a0d28c6b36edd7d4c"
+    },
+    {
+      "path": "Contents/Resources/share/locale/km/LC_MESSAGES/vlc.mo",
+      "bytes": 861025,
+      "sha256": "1ad5587968506669a6154b82a558781045c2dcb800d428a2a7b0ac9bbac8dd32"
+    },
+    {
+      "path": "Contents/Resources/share/locale/kn/LC_MESSAGES/vlc.mo",
+      "bytes": 716757,
+      "sha256": "6fe8f271b05ec74379bf9e45686455d399d1d496894430d73b69f02ca0d82ed5"
+    },
+    {
+      "path": "Contents/Resources/share/locale/ko/LC_MESSAGES/vlc.mo",
+      "bytes": 547994,
+      "sha256": "5f3d51d84a187e7a94d9583445f46db720726c33616648edfca2331b44fb30e7"
+    },
+    {
+      "path": "Contents/Resources/share/locale/ks_IN/LC_MESSAGES/vlc.mo",
+      "bytes": 676688,
+      "sha256": "92faa3d12d186438f1b6da99fb9ac653c9652fc2284490684c4d18b18329c728"
+    },
+    {
+      "path": "Contents/Resources/share/locale/ky/LC_MESSAGES/vlc.mo",
+      "bytes": 37069,
+      "sha256": "8f2b0ef0c2ad8d797c3c27b12243b42139642400046f7b2c6420b6bb829cb609"
+    },
+    {
+      "path": "Contents/Resources/share/locale/lg/LC_MESSAGES/vlc.mo",
+      "bytes": 47496,
+      "sha256": "abc797b6dcee6e58d741d1b356adcc424bf0113f2a36b43ad51611ead476d3f9"
+    },
+    {
+      "path": "Contents/Resources/share/locale/lt/LC_MESSAGES/vlc.mo",
+      "bytes": 310368,
+      "sha256": "49aee5d792ccbab57b95139578d023b5b4f506395993a91ef3bb8434375ab609"
+    },
+    {
+      "path": "Contents/Resources/share/locale/lv/LC_MESSAGES/vlc.mo",
+      "bytes": 546039,
+      "sha256": "db85e0c230d1eeb2a823fe2fe8d2d95d12ceef112e0941e4be49043aa83e2920"
+    },
+    {
+      "path": "Contents/Resources/share/locale/mai/LC_MESSAGES/vlc.mo",
+      "bytes": 799380,
+      "sha256": "1ac63a86210b4e5639b6279f74c62a52c9ef47f035371f33c6d516811dfea6d7"
+    },
+    {
+      "path": "Contents/Resources/share/locale/mk/LC_MESSAGES/vlc.mo",
+      "bytes": 10257,
+      "sha256": "71fdb257d640fa7fe9cfc8320b88722a02ff0d5f5a106b2c93bce7bcf5522afb"
+    },
+    {
+      "path": "Contents/Resources/share/locale/ml/LC_MESSAGES/vlc.mo",
+      "bytes": 985248,
+      "sha256": "7563fa042c0ea58ce987fa8655945be96923b92eb5d618783e85205f95fd9bec"
+    },
+    {
+      "path": "Contents/Resources/share/locale/mn/LC_MESSAGES/vlc.mo",
+      "bytes": 95842,
+      "sha256": "4a707b9a01ba1f3c97d88f49ef845f5782242af7418c01b62940ee6a50871df5"
+    },
+    {
+      "path": "Contents/Resources/share/locale/mr/LC_MESSAGES/vlc.mo",
+      "bytes": 871706,
+      "sha256": "f0ffc124ad04dc6a65328b210b41cd20b155fb03ab49e1b4b201e1d8a6b95ee3"
+    },
+    {
+      "path": "Contents/Resources/share/locale/ms/LC_MESSAGES/vlc.mo",
+      "bytes": 514150,
+      "sha256": "6906ad8d82d818f7fd0ddf35bc1b9042ff7f52907122aca524a3018815d2c9bc"
+    },
+    {
+      "path": "Contents/Resources/share/locale/my/LC_MESSAGES/vlc.mo",
+      "bytes": 14820,
+      "sha256": "6d7400f39b5348e6651cfebeecf431b3fad6f6cde9eda271f3fe020c0d34105f"
+    },
+    {
+      "path": "Contents/Resources/share/locale/nb/LC_MESSAGES/vlc.mo",
+      "bytes": 526315,
+      "sha256": "29e051db76ae2b47ca4b96de6d57106ed013b5ba724cf305cf19aa869a95cf36"
+    },
+    {
+      "path": "Contents/Resources/share/locale/ne/LC_MESSAGES/vlc.mo",
+      "bytes": 329813,
+      "sha256": "95d96423fefb453deb843e478583171460e9203b52b9c6c149745f177f0f450b"
+    },
+    {
+      "path": "Contents/Resources/share/locale/nl/LC_MESSAGES/vlc.mo",
+      "bytes": 530074,
+      "sha256": "78454fdc965dbfef60c11971eb6e361e744d871748c7cd0ad814988ef3d42495"
+    },
+    {
+      "path": "Contents/Resources/share/locale/nn/LC_MESSAGES/vlc.mo",
+      "bytes": 206811,
+      "sha256": "f6256d9288f17605172b3f856f24296da14294a4bd62bcf1472a98038165b891"
+    },
+    {
+      "path": "Contents/Resources/share/locale/oc/LC_MESSAGES/vlc.mo",
+      "bytes": 536673,
+      "sha256": "93a3b6565b3e47579a100203f7afdfcf01e80fd44517f4976931b2de91ee0410"
+    },
+    {
+      "path": "Contents/Resources/share/locale/or/LC_MESSAGES/vlc.mo",
+      "bytes": 24797,
+      "sha256": "04dffeaa0b3005a53b94d512559ee36e80b4ffd70316bbe6c5426bf578fecb22"
+    },
+    {
+      "path": "Contents/Resources/share/locale/pa/LC_MESSAGES/vlc.mo",
+      "bytes": 266659,
+      "sha256": "9295ea0d2977508b9de72b8bfbf74386cdf0e3171d15decf0a3417bdee11504c"
+    },
+    {
+      "path": "Contents/Resources/share/locale/pl/LC_MESSAGES/vlc.mo",
+      "bytes": 541262,
+      "sha256": "119723adc4932999309a0277c0e7763f2b44788724a2a75a4e768128726841a6"
+    },
+    {
+      "path": "Contents/Resources/share/locale/ps/LC_MESSAGES/vlc.mo",
+      "bytes": 38750,
+      "sha256": "eb5cb0dbb96104e40a07b47b1c0b3a2d42a3ee883a2854db3c5b86702e30340a"
+    },
+    {
+      "path": "Contents/Resources/share/locale/pt_BR/LC_MESSAGES/vlc.mo",
+      "bytes": 541638,
+      "sha256": "5fc2b8315e9fc5af5e7af8c96ab6eae8e091d6878ea0efb2ace14f63aa616b56"
+    },
+    {
+      "path": "Contents/Resources/share/locale/pt_PT/LC_MESSAGES/vlc.mo",
+      "bytes": 542621,
+      "sha256": "176936fde7ec9becc7423d9eed11835e1c641b756fb0ba6811b331ea1ad5fac6"
+    },
+    {
+      "path": "Contents/Resources/share/locale/ro/LC_MESSAGES/vlc.mo",
+      "bytes": 381344,
+      "sha256": "5f67a187d048da122c7c3d9a9236d58fe758c88842716103079c81a159842831"
+    },
+    {
+      "path": "Contents/Resources/share/locale/ru/LC_MESSAGES/vlc.mo",
+      "bytes": 687837,
+      "sha256": "8bc14fb6ff008e67a4cf1203fba7502a04392910d2f4c52781ac4d0e465e9756"
+    },
+    {
+      "path": "Contents/Resources/share/locale/si/LC_MESSAGES/vlc.mo",
+      "bytes": 263534,
+      "sha256": "88e55d61619ed624c4e6812a5954aea5990c18fd71f434e2f0d75bfb8daa3701"
+    },
+    {
+      "path": "Contents/Resources/share/locale/sk/LC_MESSAGES/vlc.mo",
+      "bytes": 561305,
+      "sha256": "d06773d30856943532ed1d7b3be1f24c0babed6156969251b6c90151b73d9bbb"
+    },
+    {
+      "path": "Contents/Resources/share/locale/sl/LC_MESSAGES/vlc.mo",
+      "bytes": 523639,
+      "sha256": "03b32e92be17377522ad7f8ed44fa8950f9bbe8d182458115934fa18441619a6"
+    },
+    {
+      "path": "Contents/Resources/share/locale/sq/LC_MESSAGES/vlc.mo",
+      "bytes": 64151,
+      "sha256": "12d015a3b6fef33a8e39b49a2f8cd87b785cf81c1d61680fb45b944ea007ef1a"
+    },
+    {
+      "path": "Contents/Resources/share/locale/sr/LC_MESSAGES/vlc.mo",
+      "bytes": 328780,
+      "sha256": "b27a44a46a9fbf0e71375485e6e46b474e40996385e5c37b52b5138504a1c03a"
+    },
+    {
+      "path": "Contents/Resources/share/locale/sv/LC_MESSAGES/vlc.mo",
+      "bytes": 424972,
+      "sha256": "1436ffe4e5d1ef5d7e396579f2185b06c9200de66af6f1d81a0539ca49418138"
+    },
+    {
+      "path": "Contents/Resources/share/locale/ta/LC_MESSAGES/vlc.mo",
+      "bytes": 143179,
+      "sha256": "37ad8e56bde8d86f3360b9a23636ca4da9da4c7386d2c312458e5e0838505663"
+    },
+    {
+      "path": "Contents/Resources/share/locale/te/LC_MESSAGES/vlc.mo",
+      "bytes": 138592,
+      "sha256": "56b0f26369d11e13b74df1d34c9b4c31171071bda9f4a2f196cc8edf0786cd68"
+    },
+    {
+      "path": "Contents/Resources/share/locale/tet/LC_MESSAGES/vlc.mo",
+      "bytes": 443,
+      "sha256": "d09f01962b049a167e6616610429332cd16b853cbff94d74959ac6fea25fcf8a"
+    },
+    {
+      "path": "Contents/Resources/share/locale/th/LC_MESSAGES/vlc.mo",
+      "bytes": 329374,
+      "sha256": "6daa4cc2adf61528baa642a135c0dd0353e77e240f227991f0ad44719e1836e8"
+    },
+    {
+      "path": "Contents/Resources/share/locale/tl/LC_MESSAGES/vlc.mo",
+      "bytes": 420,
+      "sha256": "e4c859f24d1eeba0fc5d95eba44529aeae544b1cbb3699d148e7da3ec2306a18"
+    },
+    {
+      "path": "Contents/Resources/share/locale/tr/LC_MESSAGES/vlc.mo",
+      "bytes": 550138,
+      "sha256": "9fac0458874c306d29f20913a015182245b269d43d2977916b850fc947c7a4eb"
+    },
+    {
+      "path": "Contents/Resources/share/locale/ug/LC_MESSAGES/vlc.mo",
+      "bytes": 55238,
+      "sha256": "65faa4cb9e0e501fdb53e2ac219b3e626155880fb7f8aa36a4b7ce8c98851e87"
+    },
+    {
+      "path": "Contents/Resources/share/locale/uk/LC_MESSAGES/vlc.mo",
+      "bytes": 695948,
+      "sha256": "f349bdac64ecf4936c4f5e952234d0ad8a95d845e8526985b5eba7c909b7f55c"
+    },
+    {
+      "path": "Contents/Resources/share/locale/uz/LC_MESSAGES/vlc.mo",
+      "bytes": 55022,
+      "sha256": "eef5fe7b725a5c435231f1a6c5c8cb407418b84266f192e905a9720da8dbaef5"
+    },
+    {
+      "path": "Contents/Resources/share/locale/vi/LC_MESSAGES/vlc.mo",
+      "bytes": 482326,
+      "sha256": "b469334dc7f9f26b17629cb13f07d1e02cf93b718be701f77b048ba21f2761ca"
+    },
+    {
+      "path": "Contents/Resources/share/locale/wa/LC_MESSAGES/vlc.mo",
+      "bytes": 257691,
+      "sha256": "8d86111c93635a3b11c48fd87c7d895662dc60cb8ab2488c2160b97250bb92da"
+    },
+    {
+      "path": "Contents/Resources/share/locale/zh_CN/LC_MESSAGES/vlc.mo",
+      "bytes": 492814,
+      "sha256": "1b0d955a3defe267c82fbfeab1d545ab0ac5782483734282f842b506f3b4e7e1"
+    },
+    {
+      "path": "Contents/Resources/share/locale/zh_TW/LC_MESSAGES/vlc.mo",
+      "bytes": 262112,
+      "sha256": "6d68ddf1aa73a3fc45aca9a92eca2c45030647e2883fbce6156eb6936378119a"
+    },
+    {
+      "path": "Contents/Resources/share/locale/zu/LC_MESSAGES/vlc.mo",
+      "bytes": 52918,
+      "sha256": "78073dece47759417b8f5d5d8f27622f776d029e4d2779d5e7536f67acc51a0b"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/css/main.css",
+      "bytes": 3557,
+      "sha256": "f874039c7dacdc4ad658a00625cc0c90676433c2753ed42f271f69b7e3e41154"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/css/mobile.css",
+      "bytes": 3103,
+      "sha256": "c7ae1b59d854d5878bd50bdd949cf74b9e9babf9b673bdae63cb236875f08dc5"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/css/ui-lightness/images/ui-bg_diagonals-thick_18_b81900_40x40.png",
+      "bytes": 201,
+      "sha256": "adb182bf32d80030963bfae7079295b8c35085a85cf5a0fe28046db1b4836e7f"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/css/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png",
+      "bytes": 197,
+      "sha256": "c6133633c005b1c344f4ae682811157a366af0f9f637ee4fb65e896ffbf0d71e"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/css/ui-lightness/images/ui-bg_flat_10_000000_40x100.png",
+      "bytes": 147,
+      "sha256": "61b9e46d291ed3d7800cbc899b7edcb95327d16cd61085bb515381af32bc1469"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/css/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png",
+      "bytes": 103,
+      "sha256": "49d57607054d07581044a39025ea0ff623185d5e8117b7325084db098795298d"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/css/ui-lightness/images/ui-bg_glass_100_fdf5ce_1x400.png",
+      "bytes": 115,
+      "sha256": "1a9cb0100308c590bd17ace4d3541dab56cd982af721d0b2ea67f5d746dcab5f"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/css/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png",
+      "bytes": 95,
+      "sha256": "29043ec911594970261ab6c5e03de903c1161ed13a25a377449c9c3b22134c28"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/css/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png",
+      "bytes": 2627,
+      "sha256": "0307f13b51f07c8d10ede9b29c8f43cb02024fcd2d69f04a26600a4244846ac0"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/css/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png",
+      "bytes": 88,
+      "sha256": "983c3de6adc1d836b26e97bcb87cb29fb5b31b2fc87ae78563bd6e328907667b"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/css/ui-lightness/images/ui-bg_highlight-soft_75_ffe45c_1x100.png",
+      "bytes": 126,
+      "sha256": "46f39d964785147c69c5ef4495977c1285984a1d99aa087d650036ec6bce8234"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/css/ui-lightness/images/ui-icons_222222_256x240.png",
+      "bytes": 4194,
+      "sha256": "7ad54e50835a67efbb2e9694e73d24a5dd9545df297afb1569992e0247acc32c"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/css/ui-lightness/images/ui-icons_228ef1_256x240.png",
+      "bytes": 5103,
+      "sha256": "3d9ef9c36b2407d3766fd183927e2778a1e4abaaf2233910453bafaf76e1f3db"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/css/ui-lightness/images/ui-icons_ef8c08_256x240.png",
+      "bytes": 4194,
+      "sha256": "40a22c997402ddb59e9e344c2d0a8c4cafe64cf4b103584208863eec05dfa897"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/css/ui-lightness/images/ui-icons_ffd27a_256x240.png",
+      "bytes": 4194,
+      "sha256": "1bd643299f5a35060c7057dc76b4a2138cf3723a2ed5f98a25f9c9a954eaced6"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/css/ui-lightness/images/ui-icons_ffffff_256x240.png",
+      "bytes": 4194,
+      "sha256": "fdcb90174d3b2f5cb8b7a4205e60119419c728c1c76e5a2573aaa8058b6dd3a1"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/css/ui-lightness/jquery-ui-1.8.13.custom.css",
+      "bytes": 32987,
+      "sha256": "562c8f2605bd2a94458ecd3f15263e45c1e7bbbf4393a60a700306fca2c78ddf"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/custom.lua",
+      "bytes": 605,
+      "sha256": "2a46752119a520a475cd8838b5fe696f605bd4c779cfd8c9d3161ecfc633b956"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/dialogs/batch_window.html",
+      "bytes": 857,
+      "sha256": "09173bef94ee047c0c5ce61194fff92bbc27a40b61cb24acbf174d85cc69acf4"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/dialogs/browse_window.html",
+      "bytes": 1173,
+      "sha256": "511075dd73133b72d9dd69971a17546581425f56125c9525e94159ba4f02adf1"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/dialogs/create_stream.html",
+      "bytes": 14465,
+      "sha256": "cbb91122e09f203fc8a4f6f795edcf23130e76d4c4cabc3e439e95a03539c774"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/dialogs/equalizer_window.html",
+      "bytes": 1280,
+      "sha256": "cd4c862f5a534446d2d67bb0f97c7b7ded13f59d7fefc8b29ac007c98674d359"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/dialogs/error_window.html",
+      "bytes": 482,
+      "sha256": "654f3a9cfabe5c53fb4f93b30b3ca32bf75cef78ffb229ecab34e4a020b2b3ff"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/dialogs/mosaic_window.html",
+      "bytes": 4932,
+      "sha256": "7608611761223b9eb180bc59541923fd7abeedb2eb21e454cf8b57043c377ee8"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/dialogs/offset_window.html",
+      "bytes": 1863,
+      "sha256": "a413e5cf796fbf6489a526301bfc5481c2b2f0746e15e1126fdba097e92a239d"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/dialogs/stream_config_window.html",
+      "bytes": 1261,
+      "sha256": "dec512af009b76dedbe56454cfb25478c22e26380d36492d9078f58cc7ce0923"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/dialogs/stream_window.html",
+      "bytes": 4153,
+      "sha256": "b19000da04a1b237fa8e0963e6a367c1191229a70fce6bfbc117e0dedaabab88"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/favicon.ico",
+      "bytes": 86358,
+      "sha256": "fd9b5998b98ee0ba86ed7687f215a1cdde90c00b0b1cd11dc83e3614389cb6ad"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/images/Audio-48.png",
+      "bytes": 4675,
+      "sha256": "372b03407e4c070aaf05d9bcf70bc048a2560593b7d3e4c919eda602c1cb5d0b"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/images/Back-48.png",
+      "bytes": 2025,
+      "sha256": "e92c787df1d4c93ea84bfce7cf61448dca2879c4c2b9a9d8ad1e8c80f4001ac8"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/images/Folder-48.png",
+      "bytes": 1353,
+      "sha256": "a5a4ed70d20cefe54e541e15bc007a6d36339fb6b8428806f7b48f846e8b9160"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/images/Other-48.png",
+      "bytes": 2921,
+      "sha256": "48878e2d1d5dcbd686358a180379d61f82aaf862fa2c4030933c1ad4e7299a20"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/images/Video-48.png",
+      "bytes": 5115,
+      "sha256": "aa6039a0466683c195e0d2c4b4bf8602bd2173e955bc8dd39ca793d207985a3a"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/images/buttons.png",
+      "bytes": 11954,
+      "sha256": "c3904f63906db4346d2e0529285397c0ced3dbd5132dba250c3fcb28ed6a96df"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/images/speaker-32.png",
+      "bytes": 942,
+      "sha256": "3c6cf8b87ad6453bf0d0629893cbe4d0196a3b28e9036b7cc6f19c0168325137"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/images/vlc-48.png",
+      "bytes": 15875,
+      "sha256": "731d5a34a98fee76f9e1aacaa524b3e0ed0cf0ecac3e2f9e2703b38c4a4bc518"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/images/vlc16x16.png",
+      "bytes": 606,
+      "sha256": "32030a3d8e8fa75bd89ead94c429f2c3418944d9aa3d1029294b4af99264f5c5"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/index.html",
+      "bytes": 15203,
+      "sha256": "26dfc5f87f6bfd9c3e1ad60debb85860dbbc3e1c64f39e51f354d9978546e90d"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/js/common.js",
+      "bytes": 5102,
+      "sha256": "cc864da5f6da05954d26181127d77dc403f310740a3adab3a48d0aedd62e9511"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/js/controllers.js",
+      "bytes": 23527,
+      "sha256": "17d848692e4df4edec984458f93a8f5f8e4f356e7ac32aebc947e517e69da62a"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/js/jquery.jstree.js",
+      "bytes": 179885,
+      "sha256": "d617f96278f247b8bac0ff0e8365330be9a75b68b860d2b0073edc85cb8dc18f"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/js/ui.js",
+      "bytes": 3648,
+      "sha256": "6eb5bbd2f60bd40ab1630729b89e2078d8d629535aeadd2da307c85d43df5acd"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/mobile.html",
+      "bytes": 5562,
+      "sha256": "a622a2de646531da8df2a1806b80b214e50b23be530d7357d7dc723ae90fe0a0"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/mobile_browse.html",
+      "bytes": 2434,
+      "sha256": "5ed827972834f48b51f72ec074cc1acaabef633477ebdaf5ac81f8531870e824"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/mobile_equalizer.html",
+      "bytes": 2891,
+      "sha256": "b7df8baecb935abb6c984a80e02a90cc3de184676da7564a3dc77ac17921c020"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/mobile_view.html",
+      "bytes": 2829,
+      "sha256": "d91b9296029c98c3758880e7f66daa8727838bf666158f496498be001dd0cbc6"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/requests/README.txt",
+      "bytes": 5128,
+      "sha256": "ef7168947f52edcea4383404dbc9e9e23f046fc9102b58b1e5c58784e09b4577"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/requests/browse.json",
+      "bytes": 1438,
+      "sha256": "82756e7538c248852219b2cd6e5bfd9967847afc0c8d89c663b2198a58cbe725"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/requests/browse.xml",
+      "bytes": 1700,
+      "sha256": "5fb10c8cd593bc110161b6c08f211e791359d64adf525063743feb5f798c18aa"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/requests/playlist.json",
+      "bytes": 1397,
+      "sha256": "ddbb968705ad5c287cf192bbacc102ea7e243ccd77f0116e5ff331837a3af2b6"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/requests/playlist.xml",
+      "bytes": 2239,
+      "sha256": "9833f32461bbfbd84f7e73fc9fb55511a8c57322969fc485d1647933c0bc88dd"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/requests/playlist_jstree.xml",
+      "bytes": 1863,
+      "sha256": "6b48090b4490bd21fbb08940d3be1b0839e954030e342b83c4007136d7030e29"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/requests/rd.json",
+      "bytes": 1295,
+      "sha256": "29cfa493c066544c9578ab31359871db2b551fe055e5731e78a88114f07afb16"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/requests/rd.xml",
+      "bytes": 1314,
+      "sha256": "668c5a34eea9b7ec69419c3c7d8bb503b65f4fc2218466697255a329b50fa67d"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/requests/status.json",
+      "bytes": 1440,
+      "sha256": "a0742096ca150198577f26ace46ba6297b8fb8083da5188cff3a40c427bcca6d"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/requests/status.xml",
+      "bytes": 2601,
+      "sha256": "0c8e68487043baf2a438fb7c9c1319011389f3b5d62633dfcb357f5bc2cf0bf1"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/requests/vlm.xml",
+      "bytes": 4422,
+      "sha256": "0190b9de1fe23c0e2485549db61a9e2c87bb361e38f646a68f069562ac980ed2"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/requests/vlm_cmd.xml",
+      "bytes": 1417,
+      "sha256": "2659d80f474347f08ac54e5c762479b719797ce803ae73e67563d6fb044b13f8"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/view.html",
+      "bytes": 3549,
+      "sha256": "f6379b2459f8d50b7ebaf445467a250b9beebddc6ebcd3ec2c55d4546187a197"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/vlm.html",
+      "bytes": 1817,
+      "sha256": "698bfc8fb7ee7727e67dab88aec9c9bb549cf0f58f298a47b8d65242c6bec023"
+    },
+    {
+      "path": "Contents/Resources/share/lua/http/vlm_export.html",
+      "bytes": 296,
+      "sha256": "e9d61afaf8a15edfdcc8ba29c62bca5e61268bfedf0f8a79c30d38bbe9f559bc"
+    },
+    {
+      "path": "Contents/Resources/share/skins2/default.vlt",
+      "bytes": 162760,
+      "sha256": "fddad34d55e150598b0c3a225223cba1e733478a33069e436d5b06363c48e496"
+    },
+    {
+      "path": "Contents/Resources/share/skins2/fonts/FreeSans.ttf",
+      "bytes": 256627,
+      "sha256": "3259367eaba45a032d6445acb8640b94540140f13b8ab90654d6d3f06032b812"
+    },
+    {
+      "path": "Contents/Resources/share/skins2/fonts/FreeSansBold.ttf",
+      "bytes": 64228,
+      "sha256": "42f28331af81b901b0045ad1af5eb2353d599afde497dbab7e6f80d7a3e3b2c6"
+    },
+    {
+      "path": "Contents/Resources/share/skins2/skin.catalog",
+      "bytes": 167,
+      "sha256": "70dc25de57e7c3df2b4d90ef3b148439d8d5988c17ca29ce306a5b9557ff2249"
+    },
+    {
+      "path": "Contents/Resources/share/skins2/skin.dtd",
+      "bytes": 10662,
+      "sha256": "fdab95160faa87af249dbf244d4177690359038d648b058d8c68d4fbda0c55be"
+    },
+    {
+      "path": "Contents/Resources/share/skins2/winamp2.xml",
+      "bytes": 31847,
+      "sha256": "58088e1a7634ec8116c921501d7d6588126c80c050aada41b4858bbfd2f0ec72"
+    },
+    {
+      "path": "Contents/Resources/share/upnp_server/ConnectionManager.xml",
+      "bytes": 4853,
+      "sha256": "56290236f7aef1b961ddc12511fe470b6aabf734a17ede2683a6469ba0db4179"
+    },
+    {
+      "path": "Contents/Resources/share/upnp_server/ContentDirectory.xml",
+      "bytes": 7565,
+      "sha256": "f0cda80f11bd9d209f721fe02a79aa5eee38583c4619f39855ada714d9dec995"
+    },
+    {
+      "path": "Contents/Resources/share/upnp_server/X_MS_MediaReceiverRegistrar.xml",
+      "bytes": 2235,
+      "sha256": "85b591e12d78da69417e50977a9518db771790db687398e8f48a4690accb023e"
+    },
+    {
+      "path": "Contents/Resources/share/upnp_server/vlc.png",
+      "bytes": 1510,
+      "sha256": "368a79be97c2ca0fd90703537a07e2fe90e69243ed9285ef0e9fc999c0d6e276"
+    },
+    {
+      "path": "Contents/Resources/share/upnp_server/vlc512x512.png",
+      "bytes": 209829,
+      "sha256": "f06f190233b7ed9f8e60b65ac3367d2f2bc6deec3ba06e1cc22fe574d5daf570"
+    },
+    {
+      "path": "Contents/Resources/shuffle-blue-pressed.png",
+      "bytes": 467,
+      "sha256": "f271654f6912cc5a37f416412bc6fdfe2487bbf4e53ba3f27b860215aade51ab"
+    },
+    {
+      "path": "Contents/Resources/shuffle-blue-pressed@2x.png",
+      "bytes": 856,
+      "sha256": "6aeafe0c0d0a4d5f1076445d800d792e5c61cf8e335fe5792468d171aa138ec6"
+    },
+    {
+      "path": "Contents/Resources/shuffle-blue.png",
+      "bytes": 421,
+      "sha256": "7bd1408991a5849560002d0db48c472e3f716ac61ebeb0e2723560e4774437a5"
+    },
+    {
+      "path": "Contents/Resources/shuffle-blue@2x.png",
+      "bytes": 804,
+      "sha256": "9d95b72874165711c3efa7d6e892a131f0dcab51fd54e9eab4df604faaf7d8b9"
+    },
+    {
+      "path": "Contents/Resources/shuffle-pressed.png",
+      "bytes": 452,
+      "sha256": "87d32af26f5624843e7e2cfe592e7642f0b40f6ab9a1e2c750b306e807452cee"
+    },
+    {
+      "path": "Contents/Resources/shuffle-pressed@2x.png",
+      "bytes": 866,
+      "sha256": "463662a458fdc6846f1f413c7368e26be6534f5ac9b5b962d706f9abbe516af6"
+    },
+    {
+      "path": "Contents/Resources/shuffle.png",
+      "bytes": 428,
+      "sha256": "0b0efff0ef8b31ebb4418504b34d3e9b0b065e9e1d1bd80a3986d7414812f840"
+    },
+    {
+      "path": "Contents/Resources/shuffle@2x.png",
+      "bytes": 839,
+      "sha256": "41e06d98f0650c28976d645526c5ec96fd4598cfa2d40e65e240e9658eb079cb"
+    },
+    {
+      "path": "Contents/Resources/shuffleOff.png",
+      "bytes": 2085,
+      "sha256": "9ddd8639f3dde0c8b25d12cc57c350ec59a6d09ffbcaa9dc5808389a9c8e64e9"
+    },
+    {
+      "path": "Contents/Resources/shuffleOff@2x.png",
+      "bytes": 3889,
+      "sha256": "71b5e49b7f4c98802e0839d8b4804d196f4532321b89ba6bae757c254ae924d0"
+    },
+    {
+      "path": "Contents/Resources/shuffleOn.png",
+      "bytes": 411,
+      "sha256": "f18f21784f2cebf040f1356677316c0e394c84f9c3924905ce35d1dcfd82b9c0"
+    },
+    {
+      "path": "Contents/Resources/shuffleOn@2x.png",
+      "bytes": 643,
+      "sha256": "a725d667e373453182885fab4c4afec0b377e3cd7a7bfb74a5591144664354d4"
+    },
+    {
+      "path": "Contents/Resources/sidebar-movie.png",
+      "bytes": 101,
+      "sha256": "9892e5125b9ccd4a24a3b69473e3f69c8f239c2b66a377f3b65b93325fccecea"
+    },
+    {
+      "path": "Contents/Resources/sidebar-movie@2x.png",
+      "bytes": 135,
+      "sha256": "d81c1e97191a164308ccf2874ed9825c439f8ef6372f6526ebc7778b53c21482"
+    },
+    {
+      "path": "Contents/Resources/sidebar-music.png",
+      "bytes": 231,
+      "sha256": "e87d7e02186160daf250b7def864b0cdc4f3147cb264ce4dc1393d334f573c4e"
+    },
+    {
+      "path": "Contents/Resources/sidebar-music@2x.png",
+      "bytes": 350,
+      "sha256": "7ef832c2fcdeb588be83880a4a70b0863309236ffa59b5d3081c735a97d28a20"
+    },
+    {
+      "path": "Contents/Resources/sk.lproj/InfoPlist.strings",
+      "bytes": 998,
+      "sha256": "8e1d36cc00c7adbe429b4fc7bb690021653aa55a614c4d2986210e4e54cfb9c7"
+    },
+    {
+      "path": "Contents/Resources/sl.lproj/InfoPlist.strings",
+      "bytes": 868,
+      "sha256": "e7d0eee6c2f3a8e84a63cac057157b17bbcb1ee927b96ebb7ee13d8efd69f7f8"
+    },
+    {
+      "path": "Contents/Resources/stop-pressed.png",
+      "bytes": 240,
+      "sha256": "e12a5d4db7c3914acb9cbd500f20d3afe8ea4811815fea3a5c2e175ba26b31b8"
+    },
+    {
+      "path": "Contents/Resources/stop-pressed@2x.png",
+      "bytes": 427,
+      "sha256": "b86dd46aa0ef1fe6abbcb110c918648cb90a6b39967b39f77411b677d5c7143f"
+    },
+    {
+      "path": "Contents/Resources/stop.png",
+      "bytes": 220,
+      "sha256": "43b173c2dc736e45765dbca2f9af431d7b07f9893a9311f24dc9a0325f28d59f"
+    },
+    {
+      "path": "Contents/Resources/stop@2x.png",
+      "bytes": 403,
+      "sha256": "2508fc60019690f7d1e1b2465573223ed99fe2a066081b8a6d7a634d0cdf1a6b"
+    },
+    {
+      "path": "Contents/Resources/subtitle.icns",
+      "bytes": 84453,
+      "sha256": "7aa90577570bf6cce8f073017d34d725880a3566e4b504552f7c963de2861280"
+    },
+    {
+      "path": "Contents/Resources/sv.lproj/InfoPlist.strings",
+      "bytes": 916,
+      "sha256": "c3d34f68b8e9274323627c369e5714a69f0d6b7b6b023728a7df8a4a6bcfdbcc"
+    },
+    {
+      "path": "Contents/Resources/topbar_background.png",
+      "bytes": 127,
+      "sha256": "64e7935efd64e4ef2c958d703d137f5b701c2b42d9eb0d3eb2fa019e42be4413"
+    },
+    {
+      "path": "Contents/Resources/tr.lproj/InfoPlist.strings",
+      "bytes": 937,
+      "sha256": "96805d415565f9d22126de7a55b273492631be39bc1879a836dd102cf690004e"
+    },
+    {
+      "path": "Contents/Resources/uk.lproj/InfoPlist.strings",
+      "bytes": 1176,
+      "sha256": "e88b6eb9d1ba9dff7f7025e56cfbf3263e19cfa676e504d82f9ba8cbee97276c"
+    },
+    {
+      "path": "Contents/Resources/video.png",
+      "bytes": 2816,
+      "sha256": "e0937f6f2bc6acc257dd660d0ce89be9b5b4e438c62ab5da77945e03f53103a6"
+    },
+    {
+      "path": "Contents/Resources/video@2x.png",
+      "bytes": 6989,
+      "sha256": "93234dee70797b0b0218fff2cf7b4a6c6c0370e9a2ef2547816c6fd962cfcd3e"
+    },
+    {
+      "path": "Contents/Resources/vlc.scriptSuite",
+      "bytes": 2979,
+      "sha256": "11be86af6feebe034bf3496351a56fbe546a730520e6d9c9f0c186d88fdae138"
+    },
+    {
+      "path": "Contents/Resources/vlc.scriptTerminology",
+      "bytes": 4088,
+      "sha256": "e3fa9c75fbc03f2fae025f7a6d480fc6f87197b0846cf876c9f44b36736f0ec9"
+    },
+    {
+      "path": "Contents/Resources/vob.icns",
+      "bytes": 120092,
+      "sha256": "cc54f86f0f3f97390a5eb927fceb1322a78c4cad7cf731fca6a95515f8769641"
+    },
+    {
+      "path": "Contents/Resources/volume-high.png",
+      "bytes": 153,
+      "sha256": "86e39e6e4e563aaa02e1e96806f62145d23e481ae521b7eacbfc81b120488540"
+    },
+    {
+      "path": "Contents/Resources/volume-high@2x.png",
+      "bytes": 216,
+      "sha256": "f851891b5bf8db279e95d404d97474b1053587f7285a5c7492da2f02941fa01b"
+    },
+    {
+      "path": "Contents/Resources/volume-low.png",
+      "bytes": 134,
+      "sha256": "9cb5e33ec83d46e1114cc134e4dfe7b6f48efc54ab3ba8eb5abaac454f480b93"
+    },
+    {
+      "path": "Contents/Resources/volume-low@2x.png",
+      "bytes": 190,
+      "sha256": "379d34bf4bf8a19b9cf214a51ee94f31161b143f292f2c818d02717e3a21e431"
+    },
+    {
+      "path": "Contents/Resources/wav.icns",
+      "bytes": 104419,
+      "sha256": "9a1d0dc3013a4d9ddbb1309683c9e77908d8ba0a39500e62b9b4a1f9ab49bea2"
+    },
+    {
+      "path": "Contents/Resources/window-close-graphite.png",
+      "bytes": 228,
+      "sha256": "c2a4f5edbbbf9b8dfc9d111cb800b1e7d175e919e652f4f6ef81403165e6baf6"
+    },
+    {
+      "path": "Contents/Resources/window-close-graphite@2x.png",
+      "bytes": 381,
+      "sha256": "a0bf81d7c4ade2e48c14e70e71cab94113b650fbfa370e44d2014d1cd52b77af"
+    },
+    {
+      "path": "Contents/Resources/window-close-on-graphite.png",
+      "bytes": 278,
+      "sha256": "831b3e15045d7b59ee24cf248f50d8f5259321ec3f851376e530e2352e9d5aa5"
+    },
+    {
+      "path": "Contents/Resources/window-close-on-graphite@2x.png",
+      "bytes": 441,
+      "sha256": "d1db55b97018da2c8204aeb60b31b2c84a83920e659848c54c0bae68ad803e40"
+    },
+    {
+      "path": "Contents/Resources/window-close-on.png",
+      "bytes": 286,
+      "sha256": "7763956a92e4afd4399851f15864a61e02f6522ff314a1bf6bd7fe1dd4587d48"
+    },
+    {
+      "path": "Contents/Resources/window-close-on@2x.png",
+      "bytes": 477,
+      "sha256": "3434b78681d5c2a9446281a5d61ac483143468480b0076150953859b9e7d7fb3"
+    },
+    {
+      "path": "Contents/Resources/window-close-over-graphite.png",
+      "bytes": 253,
+      "sha256": "25631a5359d31ed934de3b47bfa7c5345a9c8abacec2d46fbf60fbe1c6cfc8eb"
+    },
+    {
+      "path": "Contents/Resources/window-close-over-graphite@2x.png",
+      "bytes": 437,
+      "sha256": "a00680743ce276628cff2adc70d5252819db48018b8f34483f33595025e0d895"
+    },
+    {
+      "path": "Contents/Resources/window-close-over.png",
+      "bytes": 293,
+      "sha256": "1b833624ef22ea83f0958beed60f8f4505a07ddb7cbc46f4056cb76082e6cc25"
+    },
+    {
+      "path": "Contents/Resources/window-close-over@2x.png",
+      "bytes": 449,
+      "sha256": "d3d91da3f903320abc1502a1c5589ea251f01e4e06527d64b268fe8aa3db7ab4"
+    },
+    {
+      "path": "Contents/Resources/window-close.png",
+      "bytes": 248,
+      "sha256": "55815fc6a48f5887663b161741c4674a5b919a5441a7af55868a537723735910"
+    },
+    {
+      "path": "Contents/Resources/window-close@2x.png",
+      "bytes": 379,
+      "sha256": "9f78369163324da258f4d89aff83bcfc94b6b92d435d28a28a39526043851de4"
+    },
+    {
+      "path": "Contents/Resources/wma.icns",
+      "bytes": 104803,
+      "sha256": "e990bf62e2549643f6ad3c7dcbca3b7f9bcef3f1926efc0256c8712fc70a0417"
+    },
+    {
+      "path": "Contents/Resources/wmv.icns",
+      "bytes": 120677,
+      "sha256": "cfab9d0a2468860193c867894b79c94e36d8e098f31968c7769e6279d68b38c6"
+    },
+    {
+      "path": "Contents/Resources/zh-Hans.lproj/InfoPlist.strings",
+      "bytes": 772,
+      "sha256": "590afcba32fd2a857d1b2479d0d9de39a84f631a48c279e0f6715aa8905bb397"
+    },
+    {
+      "path": "Contents/_CodeSignature/CodeResources",
+      "bytes": 239699,
+      "sha256": "0c5efd8fba88d169b9e13209736309e052fb861855010dc4df69e1beff8fdbb8"
+    }
+  ]
+}

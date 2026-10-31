@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "/bin/bash",
+    "sed-setup.sh"
+  ],
+  "returncode": 28,
+  "stop_reason": null,
+  "minimum_free": 17874120704
+}

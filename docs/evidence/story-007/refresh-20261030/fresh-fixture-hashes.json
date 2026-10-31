@@ -1,0 +1,1095 @@
+{
+  "scope": "newly generated current fixtures; no historical byte identity claim",
+  "files": [
+    {
+      "path": "fixtures/admission/flat-bogus-tags.ffprobe.json",
+      "bytes": 2332,
+      "sha256": "921c69272fb56cba4e158af3efbe2cbafc6edd2d89b59d9d40f03c13e8b4c178"
+    },
+    {
+      "path": "fixtures/admission/flat-bogus-tags.ffprobe.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "fixtures/admission/flat-bogus-tags.mkv",
+      "bytes": 1093,
+      "sha256": "2e192ba8f8723f394fe5e2fffb007dcaa2b36b71787e0d37838b6b00256d8a34"
+    },
+    {
+      "path": "fixtures/admission/flat-default-edition.ffprobe.json",
+      "bytes": 2413,
+      "sha256": "8203539fd2fbe882574bb2f6953b3434b8b86874ce7afe8601faffe7ddeeaebf"
+    },
+    {
+      "path": "fixtures/admission/flat-default-edition.ffprobe.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "fixtures/admission/flat-default-edition.mkv",
+      "bytes": 1009,
+      "sha256": "0b70e8d24b533aa3711391357cf72c97c6e00b84cbe117a5569f5cf5849dbc9e"
+    },
+    {
+      "path": "fixtures/admission/flat-first-ordered-last.ffprobe.json",
+      "bytes": 2628,
+      "sha256": "9720a775c649dd27b4185efb5acf95c913606b26118e53b671cc5bdcded1ca81"
+    },
+    {
+      "path": "fixtures/admission/flat-first-ordered-last.ffprobe.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "fixtures/admission/flat-first-ordered-last.mkv",
+      "bytes": 1040,
+      "sha256": "8d53e44cb68ad831c788224588db00a7844bb8a90ffaff75669664af6ca0b293"
+    },
+    {
+      "path": "fixtures/admission/flat-late-chapters.ffprobe.json",
+      "bytes": 2201,
+      "sha256": "e3ab31179a9d03704998852532c10662f6e91b9526e1e43a54a8cd9f89264f1b"
+    },
+    {
+      "path": "fixtures/admission/flat-late-chapters.ffprobe.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "fixtures/admission/flat-late-chapters.mkv",
+      "bytes": 1013,
+      "sha256": "f15980d203c43986cd5cf012353c338f373d7b3d1aa5f3347973167b9f1e49f0"
+    },
+    {
+      "path": "fixtures/admission/flat-no-chapters.ffprobe.json",
+      "bytes": 2198,
+      "sha256": "a1aa54bd429fe2c79473a2ac4ef3e769695c379aa16c2c4321e11480e2e8af96"
+    },
+    {
+      "path": "fixtures/admission/flat-no-chapters.ffprobe.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "fixtures/admission/flat-no-chapters.mkv",
+      "bytes": 981,
+      "sha256": "02b70f427d1f3b42d0fc83dcedaf84602669d5c59e9e3efdac7ff46c67578b29"
+    },
+    {
+      "path": "fixtures/admission/flat-own-segment-uid.ffprobe.json",
+      "bytes": 2202,
+      "sha256": "48a6f02c77aa52bc74419cfe0b677e7d8774b78f2496ba1a38e6c860dc12b311"
+    },
+    {
+      "path": "fixtures/admission/flat-own-segment-uid.ffprobe.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "fixtures/admission/flat-own-segment-uid.mkv",
+      "bytes": 981,
+      "sha256": "02b70f427d1f3b42d0fc83dcedaf84602669d5c59e9e3efdac7ff46c67578b29"
+    },
+    {
+      "path": "fixtures/admission/flat-simple-chapters.ffprobe.json",
+      "bytes": 2413,
+      "sha256": "54133fc9de4bb3a441411682526fa23671d7fa53015cc1fee88d1261b8516caa"
+    },
+    {
+      "path": "fixtures/admission/flat-simple-chapters.ffprobe.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "fixtures/admission/flat-simple-chapters.mkv",
+      "bytes": 1013,
+      "sha256": "7be267e5cc60ae6b0701314c4a5eb0d58f910ba9cda29f92377c89a540ef23f1"
+    },
+    {
+      "path": "fixtures/admission/flat-two-hours-1200-clusters.ffprobe.json",
+      "bytes": 2221,
+      "sha256": "c93f88a2042c3a6786245a402be77def5313ce81def9bd71e03fca7761346971"
+    },
+    {
+      "path": "fixtures/admission/flat-two-hours-1200-clusters.ffprobe.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "fixtures/admission/flat-two-hours-1200-clusters.mkv",
+      "bytes": 801904,
+      "sha256": "24dd32d6645aade232e921d16d3f864207152c9f2b3312491770e99d1241bbf3"
+    },
+    {
+      "path": "fixtures/admission/flat-unknown-segment.ffprobe.json",
+      "bytes": 2202,
+      "sha256": "6d41ad3b1ca2a9ea82037d6486324e45098acce9fd5382eb0dc514bca505da17"
+    },
+    {
+      "path": "fixtures/admission/flat-unknown-segment.ffprobe.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "fixtures/admission/flat-unknown-segment.mkv",
+      "bytes": 987,
+      "sha256": "ee9bcf75f77ee9f59c9710823cbd0cb759ab0118689aea12395958fc074d3462"
+    },
+    {
+      "path": "fixtures/admission/hard-next.ffprobe.json",
+      "bytes": 2192,
+      "sha256": "69a7ddc5ee4a20c79b6ded263584d57b85ea84407184a48b59719c5c6673d068"
+    },
+    {
+      "path": "fixtures/admission/hard-next.ffprobe.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "fixtures/admission/hard-next.mkv",
+      "bytes": 1002,
+      "sha256": "8ad108f21f858f214368dadc9d25776e46b2f6d2ce90339da9d6c2f656aa2dfe"
+    },
+    {
+      "path": "fixtures/admission/hard-prev-late-info.ffprobe.json",
+      "bytes": 1984,
+      "sha256": "dfe3879b25e9c9acc40cb1540ab076f7bbacc18226e6335bd131facc04e7ecac"
+    },
+    {
+      "path": "fixtures/admission/hard-prev-late-info.ffprobe.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "fixtures/admission/hard-prev-late-info.mkv",
+      "bytes": 1002,
+      "sha256": "48f0c36f7309d40f3ea517152bb45fbfc546098a5e3c4cc683bd6d43d60ae4a3"
+    },
+    {
+      "path": "fixtures/admission/hard-prev-next.ffprobe.json",
+      "bytes": 2197,
+      "sha256": "b87635ebbf5d2097b8556310bf8c70fb2250ce448f03a367cf9c902da9f2ab03"
+    },
+    {
+      "path": "fixtures/admission/hard-prev-next.ffprobe.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "fixtures/admission/hard-prev-next.mkv",
+      "bytes": 1022,
+      "sha256": "d0cd5bdb31d226a9f76073895b21290366031c881bf59a44e54f10a8fa2fbb36"
+    },
+    {
+      "path": "fixtures/admission/hard-prev.ffprobe.json",
+      "bytes": 2192,
+      "sha256": "5a80beb94be4d41dc42f1fd95c75b7158ad349d9fceba1ab89f048f7cd49682b"
+    },
+    {
+      "path": "fixtures/admission/hard-prev.ffprobe.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "fixtures/admission/hard-prev.mkv",
+      "bytes": 1002,
+      "sha256": "0cdc17b36fe216be13e3b374775617fbf13ac6fc2cb39703e1125f4ebf5760d4"
+    },
+    {
+      "path": "fixtures/admission/manifest.json",
+      "bytes": 93674,
+      "sha256": "ed4f373436b1c4100cf5a248c9e1b706fc53e33d571bf29d2bc95d40489ca263"
+    },
+    {
+      "path": "fixtures/admission/medium-edition-uid.ffprobe.json",
+      "bytes": 2411,
+      "sha256": "d905846a2d3151aa98d52c917ac260a3284e885631fcffbd4345cf7759831c53"
+    },
+    {
+      "path": "fixtures/admission/medium-edition-uid.ffprobe.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "fixtures/admission/medium-edition-uid.mkv",
+      "bytes": 1036,
+      "sha256": "7b918b6239765d7f95af3336a2412d9db7b7d2d5471bdbd8f14da12a3a2448f1"
+    },
+    {
+      "path": "fixtures/admission/medium-edition-without-segment.ffprobe.json",
+      "bytes": 2423,
+      "sha256": "1f6d0eba65d9a9ed2ef8a886cb67331621644e8bc4d021f38f55c7baecadb58b"
+    },
+    {
+      "path": "fixtures/admission/medium-edition-without-segment.ffprobe.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "fixtures/admission/medium-edition-without-segment.mkv",
+      "bytes": 1017,
+      "sha256": "ed951a850db98ed56cc03dbcabd14b47ab96ce35ca737e8dc4d6a1378ce17676"
+    },
+    {
+      "path": "fixtures/admission/medium-late.ffprobe.json",
+      "bytes": 2194,
+      "sha256": "f10238525b2c3788a0db964f4219fd1a26e4e94acaa29cecce2a4840311c4ea2"
+    },
+    {
+      "path": "fixtures/admission/medium-late.ffprobe.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "fixtures/admission/medium-late.mkv",
+      "bytes": 1048,
+      "sha256": "83f1a83f8e2bde0347f2ee532640a31cb4de70ba22e007f24f79488362852c33"
+    },
+    {
+      "path": "fixtures/admission/medium-nested.ffprobe.json",
+      "bytes": 2406,
+      "sha256": "127c85a96e15745b3481c531d0a1edacefe2062c9cec71e36fa64c1ab4cc3c5e"
+    },
+    {
+      "path": "fixtures/admission/medium-nested.ffprobe.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "fixtures/admission/medium-nested.mkv",
+      "bytes": 1048,
+      "sha256": "e39627d626349fdb8f64e1155a5aaeb67998d87d303bee7def0f8b1604fc9aec"
+    },
+    {
+      "path": "fixtures/admission/medium-unordered.ffprobe.json",
+      "bytes": 2409,
+      "sha256": "d3cf5fe174c16e67ab2624f78281026a283dffe9df4d6a17c82cfc1db306d91a"
+    },
+    {
+      "path": "fixtures/admission/medium-unordered.ffprobe.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "fixtures/admission/medium-unordered.mkv",
+      "bytes": 1032,
+      "sha256": "8124e8f767535a9348a92ac6c58b63293ea65a383ed795935e99f6d6fee12127"
+    },
+    {
+      "path": "fixtures/admission/multiple-segments.ffprobe.json",
+      "bytes": 2200,
+      "sha256": "ee5fa77bf1ed8c500e93e84c19076f49db4870fba2cb914d09546b6ae89fb599"
+    },
+    {
+      "path": "fixtures/admission/multiple-segments.ffprobe.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "fixtures/admission/multiple-segments.mkv",
+      "bytes": 1922,
+      "sha256": "4bc2b4210c0c726f03491e46efcf86abea88d9ee5df644e5caf0d83ac412fed6"
+    },
+    {
+      "path": "fixtures/admission/node-budget-100001-voids.ffprobe.json",
+      "bytes": 2211,
+      "sha256": "b3bebbe5a9ab1da9db0b8e80d56f6a492c08fa36565f714b6431db39f6290bfc"
+    },
+    {
+      "path": "fixtures/admission/node-budget-100001-voids.ffprobe.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "fixtures/admission/node-budget-100001-voids.mkv",
+      "bytes": 200984,
+      "sha256": "e10d0880dbe5d232564165fdfa84cb9761caa84992e7cc37319177a75e946674"
+    },
+    {
+      "path": "fixtures/admission/ordered-bogus-tags.ffprobe.json",
+      "bytes": 2542,
+      "sha256": "a2b3cb2557bde923ee6e38fea94d5ea5c4299811f43007909de3914252f3aa15"
+    },
+    {
+      "path": "fixtures/admission/ordered-bogus-tags.ffprobe.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "fixtures/admission/ordered-bogus-tags.mkv",
+      "bytes": 1122,
+      "sha256": "d961f583c8208c3dc55fbd2172becbd30a97fb18cd960cd6b150ede550cee691"
+    },
+    {
+      "path": "fixtures/admission/ordered-duplicate-1-then-0.ffprobe.json",
+      "bytes": 2419,
+      "sha256": "a5b64134e6e08c3c8f4c808c417bbe6526f60609cad7b9b51cb79ede576fa2cd"
+    },
+    {
+      "path": "fixtures/admission/ordered-duplicate-1-then-0.ffprobe.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "fixtures/admission/ordered-duplicate-1-then-0.mkv",
+      "bytes": 1017,
+      "sha256": "747795af003bcdc75bc3dee512cf853ae67176ca552d64cc846fe21dfe3942c8"
+    },
+    {
+      "path": "fixtures/admission/ordered-first-flat-last.ffprobe.json",
+      "bytes": 2628,
+      "sha256": "47db12aa374852591de6760ab4cffb0459894535f98e93c17a2ab817bd970041"
+    },
+    {
+      "path": "fixtures/admission/ordered-first-flat-last.ffprobe.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "fixtures/admission/ordered-first-flat-last.mkv",
+      "bytes": 1040,
+      "sha256": "c13702981699c19c1ac653a1006d7256a38a7de2dc3e181e9924381ffcbfd325"
+    },
+    {
+      "path": "fixtures/admission/ordered-hidden-nondefault.ffprobe.json",
+      "bytes": 2630,
+      "sha256": "6c06989f5cbda588c09168f137b366fd9e35534475d38fce28ce58b27b429298"
+    },
+    {
+      "path": "fixtures/admission/ordered-hidden-nondefault.ffprobe.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "fixtures/admission/ordered-hidden-nondefault.mkv",
+      "bytes": 1048,
+      "sha256": "ed0d984761ffe5de12d3bda6009dcd29216b1a49cea0e64ab420e6b56d561f1a"
+    },
+    {
+      "path": "fixtures/admission/ordered-late-broken-index.ffprobe.json",
+      "bytes": 2208,
+      "sha256": "dff2c46f55ec653cb08b56cf99fbff758a687f19415888bb68ae7c92cbf776e4"
+    },
+    {
+      "path": "fixtures/admission/ordered-late-broken-index.ffprobe.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "fixtures/admission/ordered-late-broken-index.mkv",
+      "bytes": 1052,
+      "sha256": "e66bc7abec09e2355c323a681b4dd46e83637250f60dd3cc377d84146d008ee3"
+    },
+    {
+      "path": "fixtures/admission/ordered-late-correct-index.ffprobe.json",
+      "bytes": 2419,
+      "sha256": "c726727550e84b277f5b7c8fb5ee9710acbcc5a462e1c314a2dfa3d7a82fac49"
+    },
+    {
+      "path": "fixtures/admission/ordered-late-correct-index.ffprobe.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "fixtures/admission/ordered-late-correct-index.mkv",
+      "bytes": 1035,
+      "sha256": "f3984b998cedc08571a1a36393d4f987d8c57b9f64a6902cfdd210f21f02dfbd"
+    },
+    {
+      "path": "fixtures/admission/ordered-late-incomplete-index.ffprobe.json",
+      "bytes": 2212,
+      "sha256": "da14a3617777304372202d2fad098b205ae29997e98601da75fdd7c105760a38"
+    },
+    {
+      "path": "fixtures/admission/ordered-late-incomplete-index.ffprobe.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "fixtures/admission/ordered-late-incomplete-index.mkv",
+      "bytes": 1035,
+      "sha256": "42b74de98ddaa60a29ec8aecb362ac660e33c702aeba0ac2a8d50b59bdca665b"
+    },
+    {
+      "path": "fixtures/admission/ordered-late-no-index.ffprobe.json",
+      "bytes": 2204,
+      "sha256": "9de0563b23b9f5b53c030353be0d1733ccdff2c5aab2095e30e304a77723c316"
+    },
+    {
+      "path": "fixtures/admission/ordered-late-no-index.ffprobe.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "fixtures/admission/ordered-late-no-index.mkv",
+      "bytes": 1013,
+      "sha256": "7e6c6c361f243e0b5d08d6ef2bcc7f5a1544bdca4bbc5bc0f0964e745308d97a"
+    },
+    {
+      "path": "fixtures/admission/ordered-late-two-hours-1200-clusters.ffprobe.json",
+      "bytes": 2229,
+      "sha256": "31bbe964e0fc1ea94d7a4e5789238dd6763b51a95c54a87019af1a92c5516672"
+    },
+    {
+      "path": "fixtures/admission/ordered-late-two-hours-1200-clusters.ffprobe.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "fixtures/admission/ordered-late-two-hours-1200-clusters.mkv",
+      "bytes": 801936,
+      "sha256": "3abb0dcdda269087abb5bad9e7fbe0ce6bc416d9a30fa07af056f30e34dfa75f"
+    },
+    {
+      "path": "fixtures/admission/ordered-single.ffprobe.json",
+      "bytes": 2407,
+      "sha256": "f8b5dba5afb0bca7a27b489ce6c5ab2db8d2f93e66d96733b616f14ceef0b057"
+    },
+    {
+      "path": "fixtures/admission/ordered-single.ffprobe.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "fixtures/admission/ordered-single.mkv",
+      "bytes": 1013,
+      "sha256": "21dac98a1285c88cda65d60af1ac69a23beae3d515446a402243160d99cd1f68"
+    },
+    {
+      "path": "fixtures/admission/oversize-chapters.ffprobe.json",
+      "bytes": 2200,
+      "sha256": "f003e96c52fe1407354c3cb3c5a61cf9dfe2b1f4bdcf5417e455254e176efd03"
+    },
+    {
+      "path": "fixtures/admission/oversize-chapters.ffprobe.stderr",
+      "bytes": 154,
+      "sha256": "034db642100cd73c1847690311557e7e73924779874d522da1d36da3c49c89be"
+    },
+    {
+      "path": "fixtures/admission/oversize-chapters.mkv",
+      "bytes": 1014,
+      "sha256": "1875cbc5355e0337e47aa8d76058d66eada1d17c0992687c12f38c72d7beb8b6"
+    },
+    {
+      "path": "fixtures/admission/seed-ffmpeg.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "fixtures/admission/seed.mkv",
+      "bytes": 1280,
+      "sha256": "099bcaff11b4e16e48cee050d42113bc84729d19fe9c2210a64fd63fe202d9cf"
+    },
+    {
+      "path": "fixtures/admission/segment-family.ffprobe.json",
+      "bytes": 2197,
+      "sha256": "33a7f4528f9d9e61601c9c8d892910f07255030bb8f43177d82fada291e13ad7"
+    },
+    {
+      "path": "fixtures/admission/segment-family.ffprobe.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "fixtures/admission/segment-family.mkv",
+      "bytes": 1001,
+      "sha256": "dfd156aa2194b3131a029db40f293dc663ced8c2d47f63fe9be2e33e199c3716"
+    },
+    {
+      "path": "fixtures/admission/truncated-chapters.ffprobe.json",
+      "bytes": 2201,
+      "sha256": "309e81a548cb6fc7c3d14bdf47d85b4734816ce7773e5ac53786524be00a4f2c"
+    },
+    {
+      "path": "fixtures/admission/truncated-chapters.ffprobe.stderr",
+      "bytes": 35,
+      "sha256": "d0411183a3efb320d9ed992d57ef805b6ce6f56f2d05479ebabf2e6b52365b56"
+    },
+    {
+      "path": "fixtures/admission/truncated-chapters.mkv",
+      "bytes": 1010,
+      "sha256": "f87d51a3d1cbdaa357771531749fc870377f759064f8e2465bbc35ea239a449a"
+    },
+    {
+      "path": "fixtures/admission/unknown-cluster.ffprobe.json",
+      "bytes": 2197,
+      "sha256": "35687d709a325f98d5268739de8a85d983f0e5f8a938a079c4630683ee2b0c67"
+    },
+    {
+      "path": "fixtures/admission/unknown-cluster.ffprobe.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "fixtures/admission/unknown-cluster.mkv",
+      "bytes": 993,
+      "sha256": "863edbc0d65793f110ac2b8dd9f9bb5b6f6f99618cb1e82ba2d6c5a34f12b78a"
+    },
+    {
+      "path": "fixtures/admission/unknown-first-finite-second-segment.ffprobe.json",
+      "bytes": 2218,
+      "sha256": "8fe5a7fe65b643edd51072f9c601a81c27d3da190732de771fc75c84c4d1b926"
+    },
+    {
+      "path": "fixtures/admission/unknown-first-finite-second-segment.ffprobe.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "fixtures/admission/unknown-first-finite-second-segment.mkv",
+      "bytes": 1928,
+      "sha256": "f8dfb26d6762f1d22e6464660b418e56ac93a7565ac29c1997d23aaefa67a1bc"
+    },
+    {
+      "path": "fixtures/admission/unknown-first-header-finite-second-segment.ffprobe.json",
+      "bytes": 2225,
+      "sha256": "fa4c9ce011180c5212a055a527f9a129cf7f9899cc4a28b5e3e272c5cb6c3f9f"
+    },
+    {
+      "path": "fixtures/admission/unknown-first-header-finite-second-segment.ffprobe.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "fixtures/admission/unknown-first-header-finite-second-segment.mkv",
+      "bytes": 1968,
+      "sha256": "c6d9f5a2afe22b2222e0e087b7096dc1db7fa14294e0d58d0441879c773b8e25"
+    },
+    {
+      "path": "fixtures/admission/unknown-first-unknown-second-segment.ffprobe.json",
+      "bytes": 2219,
+      "sha256": "3c6c5637e3788bd06bb6540802f37cc2ed5fff97fa69b7f7d70358b658b247f0"
+    },
+    {
+      "path": "fixtures/admission/unknown-first-unknown-second-segment.ffprobe.stderr",
+      "bytes": 141,
+      "sha256": "1cb2c344140b77815d20778db2968bc6584f47f2bf25756f9f79d628fc43a1c4"
+    },
+    {
+      "path": "fixtures/admission/unknown-first-unknown-second-segment.mkv",
+      "bytes": 1934,
+      "sha256": "8eb36ff259eb36584ca5cc460006223244b62c804b8dea7c621292a379f8cec4"
+    },
+    {
+      "path": "fixtures/admission/zero-vint.ffprobe.json",
+      "bytes": 2191,
+      "sha256": "1baab5b28ba91e32bc1a62df8feb63b99b9fabab809ff7ebd28fcf38927be3df"
+    },
+    {
+      "path": "fixtures/admission/zero-vint.ffprobe.stderr",
+      "bytes": 97,
+      "sha256": "c408327de926f25ec93faca938b1f93a9493093e42d21ee3b9a72758c5d0fb93"
+    },
+    {
+      "path": "fixtures/admission/zero-vint.mkv",
+      "bytes": 983,
+      "sha256": "1c859bbf597fbdbc6468e780c58181260e0b7ab237478c22dc212c1a07ad39bc"
+    },
+    {
+      "path": "fixtures/identity/cover.png",
+      "bytes": 73,
+      "sha256": "97a3a410c9bca540512251c37ce63982edccbed54c6f2e1d06ec717b9f753e29"
+    },
+    {
+      "path": "fixtures/identity/duplicate.mkv",
+      "bytes": 21830,
+      "sha256": "0949554680493c1420481d8ad3920b201786d44c9cf66f3e3f9cf5922282790d"
+    },
+    {
+      "path": "fixtures/identity/ffmpeg.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "fixtures/identity/int-max.mkv",
+      "bytes": 21929,
+      "sha256": "c1eecbd922fe287a97b7ffd56fa871254fc624d518e7d6ee131ea0d97844af09"
+    },
+    {
+      "path": "fixtures/identity/manifest.json",
+      "bytes": 4161,
+      "sha256": "dcb3f8e1d76d2b63f111666c990f3cd4db007259a90bf436851facbf80911790"
+    },
+    {
+      "path": "fixtures/identity/nonconsecutive.mkv",
+      "bytes": 21830,
+      "sha256": "14381a335c7aebdec66a7923dce70a68ec2baad2b6ed9faff50e7203075c5ade"
+    },
+    {
+      "path": "fixtures/identity/reordered.mkv",
+      "bytes": 21830,
+      "sha256": "4fda9731a7a9e8dddd6ac4b058e1becded2ec5becbfb86a7fc671ae2d37e7ec6"
+    },
+    {
+      "path": "fixtures/identity/seed.mkv",
+      "bytes": 22092,
+      "sha256": "18c4d234f87d23360416230eac8d73cfec3dddb24b0652362ec0ef60a6e54d41"
+    },
+    {
+      "path": "fixtures/identity/subtitle.srt",
+      "bytes": 59,
+      "sha256": "41fd3b6aeb33807595c987964f50bcf56f0cc6e84c871fd4fe03bc5cc8a5299a"
+    },
+    {
+      "path": "fixtures/identity/too-large.mkv",
+      "bytes": 21929,
+      "sha256": "ce848f7ebd3012cbd9401e273c5f6a92e17372c3c8148cb165d602a3b918913a"
+    },
+    {
+      "path": "fixtures/identity/zero.mkv",
+      "bytes": 21830,
+      "sha256": "971c78b03be956b563550db31293afe27e2c96e630d51ab7c3f0f1485c545923"
+    },
+    {
+      "path": "fixtures/media/edit-offset.mp4",
+      "bytes": 577963,
+      "sha256": "387c7688c5e3df3196a6e49af67fd0bffbdee6bc8472a74bca49a89d440bebf1"
+    },
+    {
+      "path": "fixtures/media/edit-offset.mp4.frames.json",
+      "bytes": 89944,
+      "sha256": "c2cb2a39dced69e1e612763f4779458d0a7989cb950b47df31e2d37ef49ae484"
+    },
+    {
+      "path": "fixtures/media/edit-offset.mp4.probe.json",
+      "bytes": 4375,
+      "sha256": "3c3e1638a4f2e4be5f5bccab6ef28121d8872e2065168f2ecd4f9a54e5edb7ab"
+    },
+    {
+      "path": "fixtures/media/edit-offset.mp4.v0.frame000.png",
+      "bytes": 19330,
+      "sha256": "e84f8250203dfd7493e7403e0e68b6a05f916ebd0f4ac30eeb3e393332816f8f"
+    },
+    {
+      "path": "fixtures/media/edit-offset.mp4.v0.frame144.png",
+      "bytes": 27391,
+      "sha256": "a742969805de1daddd162f8744b2d7a9209adfe99b4d63869794e934457b55d3"
+    },
+    {
+      "path": "fixtures/media/edit-offset.mp4.v0.frame287.png",
+      "bytes": 24195,
+      "sha256": "a50fc0369f00d185941befe54e082751c714ab675bffcb5974956920a3939b70"
+    },
+    {
+      "path": "fixtures/media/edit-offset.mp4.v0.framehash",
+      "bytes": 32473,
+      "sha256": "08efb3a7fb08f8060304123ed486723b84edbd473de26a4924170c821b9ca1ff"
+    },
+    {
+      "path": "fixtures/media/long-gop.mp4",
+      "bytes": 347708,
+      "sha256": "0a799a96c129d26170bb5f5195df532eeffd8cd00c34416644d10a08820a6e91"
+    },
+    {
+      "path": "fixtures/media/long-gop.mp4.frames.json",
+      "bytes": 89704,
+      "sha256": "905a3046bf926884d564b9c934a2881410abd6a887293ce0597548f43d7d6a6c"
+    },
+    {
+      "path": "fixtures/media/long-gop.mp4.probe.json",
+      "bytes": 2663,
+      "sha256": "72fd1e54c630b2e975f4795c52ee4005ef5f0688db42f333a2e33013b79532ea"
+    },
+    {
+      "path": "fixtures/media/long-gop.mp4.v0.frame000.png",
+      "bytes": 19330,
+      "sha256": "e84f8250203dfd7493e7403e0e68b6a05f916ebd0f4ac30eeb3e393332816f8f"
+    },
+    {
+      "path": "fixtures/media/long-gop.mp4.v0.frame144.png",
+      "bytes": 27391,
+      "sha256": "a742969805de1daddd162f8744b2d7a9209adfe99b4d63869794e934457b55d3"
+    },
+    {
+      "path": "fixtures/media/long-gop.mp4.v0.frame287.png",
+      "bytes": 24195,
+      "sha256": "a50fc0369f00d185941befe54e082751c714ab675bffcb5974956920a3939b70"
+    },
+    {
+      "path": "fixtures/media/long-gop.mp4.v0.framehash",
+      "bytes": 32473,
+      "sha256": "6a16ad258d8c097b2c0cb554698a853fa3ada7ca97bb6707bbe6d0968a4bd7d0"
+    },
+    {
+      "path": "fixtures/media/manifest.json",
+      "bytes": 78338,
+      "sha256": "1f83bfb2150e99a3933704ba32d0ed462b083417a1619272857ab63656810655"
+    },
+    {
+      "path": "fixtures/media/negative-ctts-trim.mp4",
+      "bytes": 347712,
+      "sha256": "6397c0528f8ecd2d0b0fed3c943980898c169fa1febbedffa16b9bc9d14d6172"
+    },
+    {
+      "path": "fixtures/media/negative-ctts-trim.mp4.frames.json",
+      "bytes": 59497,
+      "sha256": "ce3b6f67e4eaf6e5cfbeb23af961a3ad9a34e5b1032eeda2d94ecdcfc503b2bf"
+    },
+    {
+      "path": "fixtures/media/negative-ctts-trim.mp4.probe.json",
+      "bytes": 2674,
+      "sha256": "35011b4cb05a3b67e6207dfc0ead7b828f92644fe6cbc9cefbc6f68962198111"
+    },
+    {
+      "path": "fixtures/media/negative-ctts-trim.mp4.v0.frame000.png",
+      "bytes": 25082,
+      "sha256": "eef61fdad1d8dfff5cf3890aea054dd10c9f87d8b5ec4cdd3669b9b5f4b75485"
+    },
+    {
+      "path": "fixtures/media/negative-ctts-trim.mp4.v0.frame096.png",
+      "bytes": 25742,
+      "sha256": "75ce76a6d8467060f383a4f15fac6d0144460d57671a7eb5192f8931bb891f10"
+    },
+    {
+      "path": "fixtures/media/negative-ctts-trim.mp4.v0.frame191.png",
+      "bytes": 25122,
+      "sha256": "ffc2d43f8a871725cda9c6150231f2a3cb0ad47eef34d884d19a704bdd0e90e5"
+    },
+    {
+      "path": "fixtures/media/negative-ctts-trim.mp4.v0.framehash",
+      "bytes": 21721,
+      "sha256": "fedc94ea3bafd854266816c3c71d29fde4135933941d6d0118fe08c259b98f32"
+    },
+    {
+      "path": "fixtures/media/negative-ctts.mp4",
+      "bytes": 347712,
+      "sha256": "763d9d707cba371d36e81704868d39e777be136bb8e2d2c86e28c0cd379e5eca"
+    },
+    {
+      "path": "fixtures/media/negative-ctts.mp4.frames.json",
+      "bytes": 89704,
+      "sha256": "905a3046bf926884d564b9c934a2881410abd6a887293ce0597548f43d7d6a6c"
+    },
+    {
+      "path": "fixtures/media/negative-ctts.mp4.probe.json",
+      "bytes": 2672,
+      "sha256": "d57aab311890353b950fed577f98d08b8eba76b05c2d8af4611e04978102923f"
+    },
+    {
+      "path": "fixtures/media/negative-ctts.mp4.v0.frame000.png",
+      "bytes": 19330,
+      "sha256": "e84f8250203dfd7493e7403e0e68b6a05f916ebd0f4ac30eeb3e393332816f8f"
+    },
+    {
+      "path": "fixtures/media/negative-ctts.mp4.v0.frame144.png",
+      "bytes": 27391,
+      "sha256": "a742969805de1daddd162f8744b2d7a9209adfe99b4d63869794e934457b55d3"
+    },
+    {
+      "path": "fixtures/media/negative-ctts.mp4.v0.frame287.png",
+      "bytes": 24195,
+      "sha256": "a50fc0369f00d185941befe54e082751c714ab675bffcb5974956920a3939b70"
+    },
+    {
+      "path": "fixtures/media/negative-ctts.mp4.v0.framehash",
+      "bytes": 32473,
+      "sha256": "6a16ad258d8c097b2c0cb554698a853fa3ada7ca97bb6707bbe6d0968a4bd7d0"
+    },
+    {
+      "path": "fixtures/media/nonkeyframe-trim.mp4",
+      "bytes": 347708,
+      "sha256": "51e6736ac2e1c681ec02ec547c231a2bddebfcbea4a9f7c59bf45bd74c431324"
+    },
+    {
+      "path": "fixtures/media/nonkeyframe-trim.mp4.frames.json",
+      "bytes": 59497,
+      "sha256": "ce3b6f67e4eaf6e5cfbeb23af961a3ad9a34e5b1032eeda2d94ecdcfc503b2bf"
+    },
+    {
+      "path": "fixtures/media/nonkeyframe-trim.mp4.probe.json",
+      "bytes": 2668,
+      "sha256": "99bcf1aab8df628d329d55bc4b4a967cde74d9e649ba172fa7d9b709c98c6c51"
+    },
+    {
+      "path": "fixtures/media/nonkeyframe-trim.mp4.v0.frame000.png",
+      "bytes": 25082,
+      "sha256": "eef61fdad1d8dfff5cf3890aea054dd10c9f87d8b5ec4cdd3669b9b5f4b75485"
+    },
+    {
+      "path": "fixtures/media/nonkeyframe-trim.mp4.v0.frame096.png",
+      "bytes": 25742,
+      "sha256": "75ce76a6d8467060f383a4f15fac6d0144460d57671a7eb5192f8931bb891f10"
+    },
+    {
+      "path": "fixtures/media/nonkeyframe-trim.mp4.v0.frame191.png",
+      "bytes": 25122,
+      "sha256": "ffc2d43f8a871725cda9c6150231f2a3cb0ad47eef34d884d19a704bdd0e90e5"
+    },
+    {
+      "path": "fixtures/media/nonkeyframe-trim.mp4.v0.framehash",
+      "bytes": 21721,
+      "sha256": "fedc94ea3bafd854266816c3c71d29fde4135933941d6d0118fe08c259b98f32"
+    },
+    {
+      "path": "fixtures/media/positive-start.mkv",
+      "bytes": 346247,
+      "sha256": "85fed9d80ea2dd1309138fab4be6c3aa0e7a33eba588c61abbf0b7a50676e45f"
+    },
+    {
+      "path": "fixtures/media/positive-start.mkv.frames.json",
+      "bytes": 89568,
+      "sha256": "a58ac0a8c2b5e33a12cabd179b4663f5e777d715753315d94878c7ef22bc5963"
+    },
+    {
+      "path": "fixtures/media/positive-start.mkv.probe.json",
+      "bytes": 2517,
+      "sha256": "1a335cef0b0ae271f55a11024cf92e5b894b8ac89ee4998567cab5a94e6f5379"
+    },
+    {
+      "path": "fixtures/media/positive-start.mkv.v0.frame000.png",
+      "bytes": 19330,
+      "sha256": "e84f8250203dfd7493e7403e0e68b6a05f916ebd0f4ac30eeb3e393332816f8f"
+    },
+    {
+      "path": "fixtures/media/positive-start.mkv.v0.frame144.png",
+      "bytes": 27391,
+      "sha256": "a742969805de1daddd162f8744b2d7a9209adfe99b4d63869794e934457b55d3"
+    },
+    {
+      "path": "fixtures/media/positive-start.mkv.v0.frame287.png",
+      "bytes": 24195,
+      "sha256": "a50fc0369f00d185941befe54e082751c714ab675bffcb5974956920a3939b70"
+    },
+    {
+      "path": "fixtures/media/positive-start.mkv.v0.framehash",
+      "bytes": 32473,
+      "sha256": "a3985b1d5fd9a0218b9e3b23833a08cdc098e8744962d35dec6f538378982507"
+    },
+    {
+      "path": "fixtures/media/rotation.mp4",
+      "bytes": 347708,
+      "sha256": "5f877209d39a53e581709deed5cd515955719497d4197d4e74c93a6d55223ed2"
+    },
+    {
+      "path": "fixtures/media/rotation.mp4.frames.json",
+      "bytes": 194490,
+      "sha256": "e0827553e9bbcc8ac86b60c936bda6bba7e22f8afdc94ebfbe6e09da53df0521"
+    },
+    {
+      "path": "fixtures/media/rotation.mp4.probe.json",
+      "bytes": 3024,
+      "sha256": "b41fefc898dca939a57515046f03038a3460a1a87099f56ae2b66f631a6c761d"
+    },
+    {
+      "path": "fixtures/media/rotation.mp4.v0.frame000.png",
+      "bytes": 10856,
+      "sha256": "d566d7728d9b413afac81ab0d211a48d66aa0817cc5684dbff4202fbdbf98edc"
+    },
+    {
+      "path": "fixtures/media/rotation.mp4.v0.frame144.png",
+      "bytes": 14327,
+      "sha256": "3afa4603d8a03497a730b46124d6b5a7e03f9328d8bef1da6bf7fe5d68fdfab0"
+    },
+    {
+      "path": "fixtures/media/rotation.mp4.v0.frame287.png",
+      "bytes": 12672,
+      "sha256": "005551418ae810553f8942d79bf30a331acff3455bcfc3bc88b38e66e87b3539"
+    },
+    {
+      "path": "fixtures/media/rotation.mp4.v0.framehash",
+      "bytes": 32473,
+      "sha256": "6a16ad258d8c097b2c0cb554698a853fa3ada7ca97bb6707bbe6d0968a4bd7d0"
+    },
+    {
+      "path": "fixtures/media/sar.mp4",
+      "bytes": 358900,
+      "sha256": "4f925ee5155fcf63ba795240986cb17dad2b8c9eb9fc173a28004aa7e2328af3"
+    },
+    {
+      "path": "fixtures/media/sar.mp4.frames.json",
+      "bytes": 89704,
+      "sha256": "5a2ccf86ca073e2498f66813a0055402c76abad06d12bf35f36d9d7ea3db0202"
+    },
+    {
+      "path": "fixtures/media/sar.mp4.probe.json",
+      "bytes": 2658,
+      "sha256": "e40482fc30f7eb0c1536c8623dea25f6b476487b4c258629c0223ce709298419"
+    },
+    {
+      "path": "fixtures/media/sar.mp4.v0.frame000.png",
+      "bytes": 13488,
+      "sha256": "6628843348348a92badd474804ec152d00dbe269848119d54701362d0785d2b8"
+    },
+    {
+      "path": "fixtures/media/sar.mp4.v0.frame144.png",
+      "bytes": 15352,
+      "sha256": "9db52a10f9359917566a7447ef8912d78b7a38d76621b1920e91db3230e036b1"
+    },
+    {
+      "path": "fixtures/media/sar.mp4.v0.frame287.png",
+      "bytes": 16306,
+      "sha256": "98db0cd1ab1d72b15633a9ab2dfe419cd4a90de9e249246587f2343dd3e92569"
+    },
+    {
+      "path": "fixtures/media/sar.mp4.v0.framehash",
+      "bytes": 32473,
+      "sha256": "932840dac778938d41abd2c6d15cb72ca157cff8e27ce58f62158cd00250970f"
+    },
+    {
+      "path": "fixtures/media/standard.mkv",
+      "bytes": 586906,
+      "sha256": "711ce2dcf2924e72d73124fe0a2a3375ab0b93c4ece9c9761391e8908785826a"
+    },
+    {
+      "path": "fixtures/media/standard.mkv.frames.json",
+      "bytes": 89032,
+      "sha256": "76731e69c197fe97b19457f797c518bfb74187ef6fbc29607ad843f77e60e725"
+    },
+    {
+      "path": "fixtures/media/standard.mkv.probe.json",
+      "bytes": 4068,
+      "sha256": "b471de54cabb6111fea2ce351ed4e2808eb1eefeedb310aafe90754736a2e225"
+    },
+    {
+      "path": "fixtures/media/standard.mkv.v0.frame000.png",
+      "bytes": 19306,
+      "sha256": "2e43bef439a91b7bcf6dfda72a2ef2cae0f35dade2928d2dd3603913e37c6a0f"
+    },
+    {
+      "path": "fixtures/media/standard.mkv.v0.frame144.png",
+      "bytes": 21532,
+      "sha256": "b3bb2683cb5e01a705f32f81f3cbfac015bd38c8e6c5245bbde99bedbcd9915b"
+    },
+    {
+      "path": "fixtures/media/standard.mkv.v0.frame287.png",
+      "bytes": 24192,
+      "sha256": "96b3a041dfaf34f0e40b1532eee91edfb7fef12bed96f9bc7fa66b3f76818ac7"
+    },
+    {
+      "path": "fixtures/media/standard.mkv.v0.framehash",
+      "bytes": 32473,
+      "sha256": "a0565c79d88461230eabcca2845d83c55953c653c6ed1bad021b57a9fb597bb0"
+    },
+    {
+      "path": "fixtures/media/standard.mp4",
+      "bytes": 589343,
+      "sha256": "8bc46b663c6b42269c9f81ea46b50f18833d40f8014a26850ab51c1c534098dc"
+    },
+    {
+      "path": "fixtures/media/standard.mp4.frames.json",
+      "bytes": 89704,
+      "sha256": "5a2ccf86ca073e2498f66813a0055402c76abad06d12bf35f36d9d7ea3db0202"
+    },
+    {
+      "path": "fixtures/media/standard.mp4.probe.json",
+      "bytes": 4368,
+      "sha256": "6f23c8551c89f6433f380f46a1750fe1ae0e146593743003403bf0dc1858433a"
+    },
+    {
+      "path": "fixtures/media/standard.mp4.v0.frame000.png",
+      "bytes": 19306,
+      "sha256": "2e43bef439a91b7bcf6dfda72a2ef2cae0f35dade2928d2dd3603913e37c6a0f"
+    },
+    {
+      "path": "fixtures/media/standard.mp4.v0.frame144.png",
+      "bytes": 21532,
+      "sha256": "b3bb2683cb5e01a705f32f81f3cbfac015bd38c8e6c5245bbde99bedbcd9915b"
+    },
+    {
+      "path": "fixtures/media/standard.mp4.v0.frame287.png",
+      "bytes": 24192,
+      "sha256": "96b3a041dfaf34f0e40b1532eee91edfb7fef12bed96f9bc7fa66b3f76818ac7"
+    },
+    {
+      "path": "fixtures/media/standard.mp4.v0.framehash",
+      "bytes": 32473,
+      "sha256": "a0565c79d88461230eabcca2845d83c55953c653c6ed1bad021b57a9fb597bb0"
+    },
+    {
+      "path": "fixtures/media/tool-stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "fixtures/media/two-tracks.mkv",
+      "bytes": 14948,
+      "sha256": "61cf7e4111fc77efb21b7469e2120ea3d21772ec3305c93f7458e69b68faf2db"
+    },
+    {
+      "path": "fixtures/media/two-tracks.mkv.frames.json",
+      "bytes": 178039,
+      "sha256": "80bff7a78776a7b640b9af1a20a39a778d398cae4a8f311e26ce4168444be0ad"
+    },
+    {
+      "path": "fixtures/media/two-tracks.mkv.probe.json",
+      "bytes": 4261,
+      "sha256": "06327351e044c4ab8c25de5ca78581f9fab8123b7a5ab4d62ddd410fdc9f4853"
+    },
+    {
+      "path": "fixtures/media/two-tracks.mkv.v0.frame000.png",
+      "bytes": 626,
+      "sha256": "fc06a8bc31d48724f2184c7c2dde67de4b06d8dbaa6be9b62d358a5f88ead75c"
+    },
+    {
+      "path": "fixtures/media/two-tracks.mkv.v0.frame144.png",
+      "bytes": 626,
+      "sha256": "fc06a8bc31d48724f2184c7c2dde67de4b06d8dbaa6be9b62d358a5f88ead75c"
+    },
+    {
+      "path": "fixtures/media/two-tracks.mkv.v0.frame287.png",
+      "bytes": 626,
+      "sha256": "fc06a8bc31d48724f2184c7c2dde67de4b06d8dbaa6be9b62d358a5f88ead75c"
+    },
+    {
+      "path": "fixtures/media/two-tracks.mkv.v0.framehash",
+      "bytes": 32473,
+      "sha256": "69c5c30d426a9d3d07ae10e0f8a71c8543a9ef46c5709cc97baca4264c4881e3"
+    },
+    {
+      "path": "fixtures/media/two-tracks.mkv.v1.frame000.png",
+      "bytes": 627,
+      "sha256": "bc7e001bbbb7bf106d3d7c968c6828b75e9ccd285845ac26b822df6396942548"
+    },
+    {
+      "path": "fixtures/media/two-tracks.mkv.v1.frame144.png",
+      "bytes": 627,
+      "sha256": "bc7e001bbbb7bf106d3d7c968c6828b75e9ccd285845ac26b822df6396942548"
+    },
+    {
+      "path": "fixtures/media/two-tracks.mkv.v1.frame287.png",
+      "bytes": 627,
+      "sha256": "bc7e001bbbb7bf106d3d7c968c6828b75e9ccd285845ac26b822df6396942548"
+    },
+    {
+      "path": "fixtures/media/two-tracks.mkv.v1.framehash",
+      "bytes": 32473,
+      "sha256": "c1b0bf2160bde2d34b067b133e9e52a64d9b34508cec57d169e868cfb767046e"
+    },
+    {
+      "path": "fixtures/media/vfr.mkv",
+      "bytes": 221328,
+      "sha256": "b1079219f30c7e9a282fd936f1d3f32b16523f117f0beb0ab57cd0002fcdfb32"
+    },
+    {
+      "path": "fixtures/media/vfr.mkv.frames.json",
+      "bytes": 37186,
+      "sha256": "fe0356e675578ebd9f77b65951b7ae51cc788b0ed62b5d0d48f307588a24e0c3"
+    },
+    {
+      "path": "fixtures/media/vfr.mkv.probe.json",
+      "bytes": 2319,
+      "sha256": "985cb113882f4db6ef3ec45903d46e74323082c384ddab9ace8b6156063f69b0"
+    },
+    {
+      "path": "fixtures/media/vfr.mkv.v0.frame000.png",
+      "bytes": 18564,
+      "sha256": "f0382848e4a1d11c743894ebefa6a2ff7a2f794803639bc900280ee823b6d03b"
+    },
+    {
+      "path": "fixtures/media/vfr.mkv.v0.frame060.png",
+      "bytes": 25082,
+      "sha256": "d5ac0bb2c18fdd513090ed8adb536ac0a9324322bc940b8b1fcaf20cc668b387"
+    },
+    {
+      "path": "fixtures/media/vfr.mkv.v0.frame119.png",
+      "bytes": 22683,
+      "sha256": "9ad43df560c3b65f6043f0adf56a4ae41175125de8a3fbaa811fed13af640386"
+    },
+    {
+      "path": "fixtures/media/vfr.mkv.v0.framehash",
+      "bytes": 13657,
+      "sha256": "440873a4d3b93c3375673791afdddb7bac406827e36b360879c9c82c2598890c"
+    }
+  ]
+}

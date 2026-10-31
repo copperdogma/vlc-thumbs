@@ -1,0 +1,8 @@
+{
+  "argv": [
+    "/bin/bash",
+    "prepare.sh"
+  ],
+  "returncode": 0,
+  "minimum_free": 17868382208
+}

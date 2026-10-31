@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "recorded_utc": "2026-10-31T06:07:30.721314+00:00",
+  "head": "dd50411dad2b8c05144acbf0e7c63fb9150e0120",
+  "tree": "212c081ca9eb566a65b3979d272a788ae52653ea",
+  "build_script": "../vout-warning-check.sh",
+  "build_exit": 0,
+  "registered_test_exit": 0,
+  "support_TU_recompiled": true,
+  "cases": [
+    "CASE queued-destroy failures=0",
+    "CASE inflight-disable failures=0",
+    "CASE inflight-destroy failures=0",
+    "CASE disable-rebind failures=0",
+    "CASE address-reuse failures=0"
+  ],
+  "targeted_19_fixture_warnings": 0,
+  "remaining_warnings": [],
+  "diagnostic_scope": "Window accessors intentionally dynamic in the link-only shell; two media-item property diagnostics intentionally inapplicable to its link-only shell. All 19 fixture-caused warnings absent in fresh affected-TU compile. Production flags unchanged; not a whole-tree warning-free claim.",
+  "build_log_sha256": "96863d10b318198f9d0b172e1d1258b8bc26bb4efacd9bf76b7a2394313883a2",
+  "cases_log_sha256": "0eab2acee10fdcaeff0494f964b25deb9cf846c6880e6debc7adff97cf25675a",
+  "manifest_sha256": "c92e49dd8a97b86e778f8bf2ba3353bb12716a2324ca1f3266a9e7ad9d7999f0",
+  "path_context": {
+    "raw_workspace_root": "/Users/cam/Documents/Projects/vlc-thumbs/work/story007-refresh-20261030",
+    "manifest_matching_recorded_sha256": "warning-clean-export-manifest.json",
+    "promoted_package_manifest": "../../../../patches/vlc-master/contribution-series-20261030/manifest.json",
+    "build_script": "raw workspace vout-warning-check.sh; exact commands recorded in closeout validation"
+  }
+}

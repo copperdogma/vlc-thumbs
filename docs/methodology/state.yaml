@@ -6,11 +6,11 @@ seeded_from:
   current_plan: docs/plan.md
   methodology_source: Board Game Ingester and Ultima IV Web
 active_focus:
-  story_id: "005"
+  story_id: "007"
   status: in-progress
-  summary: Story006 reviewer-package polish is Done with focused gradeA documentation validation; qualified source10 product scope and parent gradeB remain unchanged. Current13 messages, central validation table, dependency rationale and ordinary-first reproduction are validated for project repository landing.
-  reason: Cam requested efficient concrete packaging improvements and excludes unproven reviewer preferences. Parent Story005 still owns actual upstream submission/review.
-  current_command: Child006 goal achieved; Cam explicitly authorizes validated project repository finish-and-push. Retain parent005 InProgress and halt before upstream contact/submission. Reuse product evidence; brief owner-requested app smoke complete.
+  summary: Sole active focus is official VLC MR submission and review through explicit maintainer acceptance or rejection. Current-master successor and bounded qualification are preserved; the contributor fork is ready. Human submission and upstream disposition remain pending.
+  reason: Cam explicitly requests a dedicated external-disposition story and defers all other repository work until VLC accepts or rejects the contribution.
+  current_command: October30 bounded refresh complete. Review preserved 16-patch warning-clean successor and current validation report; registered CLI quit remains blocked, complete distcheck unqualified. Cam must personally submit under VideoLAN AI policy. Fork5493 ready, no MR, monitor paused; no unrelated work.
 planning_inputs:
   - path: docs/idea-intake.md
     status: preserved-intake
@@ -52,9 +52,9 @@ categories:
     title: Project workflow and source obligations
     substrate_status: partial
     phase: climb
-    story_refs: ["001", "002", "003", "005"]
+    story_refs: ["001", "002", "003", "005", "006", "007"]
     eval_refs: []
-    note: Source10 freeze72, full normal checks, helper77, complete conventional distcheck and qualified019 package stand. Fresh three-pair playback qualification passes at bounded scope; final thirteen-patch reviewer-copy checker PASS. Ordinary main reader inheritance is justified. Platform limits, preview-visible reader coverage and user-deferred shutdown cause remain disclosed.
+    note: Historical source10 freeze72, full normal checks, helper77, complete conventional distcheck and qualified019 package stand. Fresh three-pair playback qualification passes at bounded scope; final thirteen-patch reviewer-copy checker PASS. Ordinary main reader inheritance is justified. Platform limits, preview-visible reader coverage and user-deferred shutdown cause remain disclosed.
 runtime:
   status: baseline-available
   reason: Isolated native VLC baseline and feature candidate exist; four-surface hover is visibly demonstrated; Story 002 functional MVP and pragmatic comparison are Done; no Conductor port range needed.

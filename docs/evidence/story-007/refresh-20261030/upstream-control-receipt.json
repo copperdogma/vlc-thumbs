@@ -1,0 +1,124 @@
+{
+  "started_epoch": 1793426272.4195929,
+  "phases": [
+    {
+      "phase": "bootstrap",
+      "status": "PASS",
+      "exit": 0,
+      "elapsed_seconds": 14.037039995193481,
+      "disk_free_bytes": 3505844224,
+      "log": "/Users/cam/Documents/Projects/vlc-thumbs/work/story007-upstream-control-20261030/logs/bootstrap.log"
+    },
+    {
+      "phase": "configure",
+      "status": "PASS",
+      "exit": 0,
+      "elapsed_seconds": 110.23008513450623,
+      "disk_free_bytes": 3078692864,
+      "log": "/Users/cam/Documents/Projects/vlc-thumbs/work/story007-upstream-control-20261030/logs/configure.log"
+    },
+    {
+      "phase": "build",
+      "status": "FAILED",
+      "exit": -15,
+      "elapsed_seconds": 54.11770272254944,
+      "disk_free_bytes": 2845122560,
+      "log": "/Users/cam/Documents/Projects/vlc-thumbs/work/story007-upstream-control-20261030/logs/build.log"
+    },
+    {
+      "phase": "build-retry",
+      "status": "DISK_FLOOR",
+      "exit": -15,
+      "elapsed_seconds": 120.20855808258057,
+      "disk_free_bytes": 2103709696,
+      "log": "/Users/cam/Documents/Projects/vlc-thumbs/work/story007-upstream-control-20261030/logs/build-retry.log"
+    }
+  ],
+  "source_head": "5ccc5fa83f287d7ab7cc493f8dc2a31655fd2a09",
+  "initial_status": "",
+  "dependency_scope": "Pristine pinned VLC source; reuses existing patched FFmpeg 9 and ML 0.14.1 contrib, SDK 27.2, Metal and host tools read-only. Not independent dependency qualification.",
+  "elapsed_seconds": 323.00848412513733,
+  "status": "BLOCKED_DISK_FLOOR_BASELINE_UNQUALIFIED",
+  "final_source_status": "",
+  "config_flags": "--prefix=/ --enable-macosx --enable-merge-ffmpeg --enable-osx-notifications --enable-flac --enable-theora --enable-shout --enable-ncurses --enable-twolame --enable-libass --enable-vpx --enable-macosx-avfoundation --disable-xcb --disable-caca --disable-pulse --disable-vnc --without-x --build=aarch64-apple-darwin19 --host=aarch64-apple-darwin19 --with-contrib=/Users/cam/Documents/Projects/vlc-thumbs/work/story007-refresh-20261030/source/build-macosx/contrib/aarch64-apple-darwin19 --with-macosx-version-min=10.13 --with-macosx-sdk=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk --enable-extra-checks build_alias=aarch64-apple-darwin19 host_alias=aarch64-apple-darwin19 CC=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang 'CFLAGS=-g -arch arm64 -Werror=incompatible-function-pointer-types' 'LDFLAGS=-arch arm64' CXX=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ 'CXXFLAGS=-g -arch arm64 -Werror=incompatible-function-pointer-types' OBJC=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang 'OBJCFLAGS=-g -arch arm64 -Werror=incompatible-function-pointer-types' OBJCXX=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ 'OBJCXXFLAGS=-g -arch arm64 -Werror=incompatible-function-pointer-types' PKG_CONFIG_PATH= PKG_CONFIG_LIBDIR=/nonexistent/vlc-pkgconfig-isolation 'NCURSES_LIBS=-L/Users/cam/Documents/Projects/vlc-thumbs/work/story007-refresh-20261030/source/build-macosx/contrib/aarch64-apple-darwin19/lib -lncursesw'",
+  "build_command_initial": "make -j4 'LIBTOOL=$(top_builddir)/libtool' 'SUBDIRS=compat po share src modules lib bin'",
+  "build_command_retry": "make -j4 'LIBTOOL=$(top_builddir)/libtool'",
+  "initial_build_failure": {
+    "origin": "owned experiment wrapper command",
+    "first_fatal_line": "/bin/sh: line 0: cd: compat: No such file or directory",
+    "cause": "SUBDIRS command-line override propagated recursively",
+    "correction": "Remove SUBDIRS override, one approved ordinary-make retry; no source change"
+  },
+  "runtime": {
+    "status": "NOT_RUN",
+    "command": [
+      "./vlc",
+      "--ignore-config",
+      "--rc-fake-tty",
+      "-vv",
+      "-Irc,oldrc",
+      "vlc://quit"
+    ],
+    "reason": "Build incomplete when available disk crossed required 2 GiB floor",
+    "environment_intended": {
+      "HOME": "/Users/cam",
+      "configuration": "Inherited environment, --ignore-config, no HOME/XDG override"
+    }
+  },
+  "binary_hashes": {},
+  "stack": null,
+  "tracked_changes": [
+    "po/ach.po",
+    "po/af.po",
+    "po/am.po",
+    "po/an.po",
+    "po/ar.po",
+    "po/as.po",
+    "po/ast.po",
+    "po/az.po",
+    "po/be.po",
+    "po/bg.po",
+    "po/bn.po",
+    "po/bn_IN.po",
+    "po/br.po",
+    "po/brx.po",
+    "po/bs.po",
+    "po/ca.po",
+    "po/cgg.po",
+    "po/ckb.po",
+    "po/co.po",
+    "po/cs.po",
+    "po/cy.po",
+    "po/da.po",
+    "po/de.po",
+    "po/el.po",
+    "po/en_GB.po",
+    "po/es.po",
+    "po/et.po",
+    "po/eu.po",
+    "po/fa.po",
+    "po/ff.po",
+    "po/fi.po",
+    "po/fr.po",
+    "po/fur.po",
+    "po/fy.po",
+    "po/ga.po",
+    "po/gd.po",
+    "po/gl.po",
+    "po/gu.po",
+    "po/he.po",
+    "po/hi.po"
+  ],
+  "code_clean_excluding_generated_translations": true,
+  "disk_floor_bytes": 2147483648,
+  "final_disk_free_bytes": 2100559872,
+  "owned_directory_disk_bytes": 1315344384,
+  "conclusion": "No qualified baseline; cannot establish whether SAP shutdown stall is upstream or introduced. Pinned VLC source checkout is clean. Ordinary gettext translation regeneration diff was preserved then restored.",
+  "recommendation": "After separately authorized storage recovery, resume the same pristine ordinary build and run one bounded control. Do not infer upstream attribution from this incomplete build.",
+  "finished_epoch": 1793426595.428077,
+  "generated_translation_changes_preserved_then_restored": true,
+  "path_context": {
+    "raw_workspace_root": "/Users/cam/Documents/Projects/vlc-thumbs/work/story007-upstream-control-20261030",
+    "logs": "Referenced logs and generated translation patch remain only in the owned raw workspace. No runtime comparison occurred."
+  }
+}
